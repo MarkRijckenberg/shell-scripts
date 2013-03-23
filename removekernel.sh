@@ -6,16 +6,16 @@
 # AUTHOR: markrijckenberg@gmail.com
 
 if [[ $1 == "" ]]; then
-echo "List of installed kernel versions:"
+echo "List of currently installed kernel .deb packages:"
 dpkg --list | grep linux-image | grep '^ri' | cut -d" " -f3
 echo "No argument added after removekernel command"
-echo "Please enter kernelversion to remove from your pc (for example: 2.6.24-16) "
+echo "Please enter kernel package to uninstall from your pc (for example: linux-image-extra-3.8.0-030800rc4-generic) "
 read KERNELVERSION
 
-echo "Removing kernelversion $KERNELVERSION"
+echo "Removing kernel package $KERNELVERSION"
 apt-cache search $KERNELVERSION|cut -d" " -f1|xargs sudo apt-get remove -y
 
 else
-echo "Removing kernelversion $1"
+echo "Removing kernel package $1"
 apt-cache search $1|cut -d" " -f1|xargs sudo apt-get remove -y
 fi
