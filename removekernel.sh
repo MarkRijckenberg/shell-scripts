@@ -6,7 +6,7 @@
 
 if [[ $1 == "" ]]; then
 echo "List of installed kernel versions:"
-dpkg --list | grep linux-image | cut -d" " -f3
+dpkg --list | grep linux-image | grep '^ri' | cut -d" " -f3
 echo "No argument added after removekernel command"
 echo "Please enter kernelversion to remove from your pc (for example: 2.6.24-16) "
 read KERNELVERSION
