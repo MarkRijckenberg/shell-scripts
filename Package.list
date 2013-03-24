@@ -3582,3 +3582,9 @@ zenity-common					install
 zip						install
 zlib1g:i386					install
 zlib1g-dev:i386					install
+science-astronomy             install
+celestia  					install
+ifrit  					install
+kstars  					install
+
+
