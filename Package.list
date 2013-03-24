@@ -3586,5 +3586,9 @@ science-astronomy             install
 celestia  					install
 ifrit  					install
 kstars  					install
-
+yorick-cubeview                    install
+planets                 install
+saods9                                               install
+starplot             install
+yorick-spydr                       install
 
