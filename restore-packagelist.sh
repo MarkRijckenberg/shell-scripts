@@ -23,9 +23,10 @@ TARGET6=/media/IOMEGA/media/windowsdata/rsync/
 # not required during restore: sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET6 $SOURCE3
 
 sudo apt-get update
-sudo apt-get install dselect rsync -y
+#sudo apt-get install dselect rsync -y
 #sudo apt-key add $TARGET1/Repo.keys
 sudo apt-key add Repo.keys
 #sudo dpkg --set-selections < $TARGET1/Package.list
-sudo dpkg --set-selections < Package.list
-sudo dselect
+#sudo dpkg --set-selections < Package.list
+#sudo dselect
+sudo apt-get install  `cat  installedpackages`
