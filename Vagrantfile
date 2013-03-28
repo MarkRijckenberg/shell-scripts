@@ -51,14 +51,14 @@ Vagrant::Config.run do |config|
 
   config.vm.share_folder("templates", "/tmp/vagrant-puppet/templates", "templates")
   # Configure our extra puppet modules
-  config.vm.share_folder("modules", "/etc/puppet/modules", "modules")
+  config.vm.share_folder("modules", "/tmp/vagrant-puppet/modules", "modules")
 
   # Puppet master, configured from manifests/base.pp
   config.vm.define :master do |master_config|
     master_config.vm.host_name = "puppet.local"
     master_config.vm.network :hostonly, "10.0.0.10"
     # Configure the Puppet manifests that this VM will serve
-    master_config.vm.share_folder("puppet-master", "/etc/puppet/manifests", "puppet-master")
+    master_config.vm.share_folder("manifests", "/tmp/vagrant-puppet/manifests", "manifests")
 
     master_config.vm.provision :puppet do |p|
       p.manifest_file  = "master.pp"
