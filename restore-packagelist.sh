@@ -46,3 +46,4 @@ echo "http://en.wikipedia.org/wiki/Star_catalogue#Successors_to_USNO-A.2C_USNO-B
 echo "http://www.usno.navy.mil/USNO/astrometry/information/catalog-info/catalog-information-center-1#usnob1"
 echo "http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/icas/fchpix"
 echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astronomie-geodesie-meteorologie-1.html#.UV1dCqA9RZc"
+echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (Word, ODF, hybrid PDF-ODF format, etc...)"
