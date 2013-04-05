@@ -39,9 +39,10 @@ sudo apt-get install  `cat  installedpackages`
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
 
-echo "add these Astronomy bookmarks in all 3 webbrowsers (chromium, firefox, konqueror"
+echo "Please add these Astronomy bookmarks into all 3 webbrowsers (chromium, firefox, konqueror)"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
 echo "http://www.wolframalpha.com/input/?i=astronomy&a=*C.astronomy-_*ExamplePage-"
-echo "http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/icas/fchpix"
 echo "http://en.wikipedia.org/wiki/Star_catalogue#Successors_to_USNO-A.2C_USNO-B.2C_NOMAD.2C_UCAC_and_Others"
+echo "http://www.usno.navy.mil/USNO/astrometry/information/catalog-info/catalog-information-center-1#usnob1"
+echo "http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/icas/fchpix"
 echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astronomie-geodesie-meteorologie-1.html#.UV1dCqA9RZc"
