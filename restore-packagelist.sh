@@ -32,6 +32,8 @@ sudo apt-key add Repo.keys
 #sudo dpkg --set-selections < $TARGET1/Package.list
 #sudo dpkg --set-selections < Package.list
 #sudo dselect
+sudo cp /etc/apt/sources.list  /etc/apt/sources.list.backup
+sudo cp sources.list /etc/apt/sources.list
 sudo add-apt-repository ppa:razor-qt/ppa
 # refresh list of available packages in Ubuntu repositories
 sudo apt-get update
