@@ -1,6 +1,6 @@
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Lubuntu 12.04
-# REQUIRES: Lubuntu 12.04, wget, apt-get
+# REQUIRES: Lubuntu 12.04, wget, apt-get, unp
 # Author: Mark Rijckenberg
 # Copyright (c) 2012-08-12
 # REVISION DATE: 20130408
