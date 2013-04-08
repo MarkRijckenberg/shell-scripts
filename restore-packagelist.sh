@@ -56,7 +56,7 @@ sudo apt-get install opera
 #     ASTRONOMY SECTION                                                                       #
 ###############################################################################################
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
-sudo add-apt-repository ppa:aims/casapy
+sudo add-apt-repository --yes ppa:aims/casapy
 sudo apt-get update
 sudo apt-get install casapy-upstream-binary
 
