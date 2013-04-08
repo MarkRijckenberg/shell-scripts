@@ -89,6 +89,11 @@ echo "Downloading The Sloan Digital Sky Survey catalog"
 wget http://services.google.com/earth/kmz/sdss_query_n.kmz
 echo "kmz file can be opened using Google Earth"
 
+# download Exoplanets
+echo "Downloading Exoplanets"
+wget http://services.google.com/earth/kmz/exo_planets_n.kmz
+echo "kmz file can be opened using Google Earth"
+
 # download Digital Universe and Partiview Resources
 echo "Downloading Digital Universe and Partiview Resources"
 wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
