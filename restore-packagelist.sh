@@ -65,6 +65,9 @@ sudo apt-get install casapy-upstream-binary
 # download Digital Universe and Partiview Resources
 echo "Downloading Digital Universe and Partiview Resources"
 wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
+# download SAOImage DS9
+echo "Downloading SAOImage DS9"
+wget http://hea-www.harvard.edu/RD/ds9/download/linux/ds9.linux.7.1.tar.gz
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
 wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
