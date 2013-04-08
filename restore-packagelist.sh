@@ -26,14 +26,15 @@ TARGET6=/media/IOMEGA/media/windowsdata/rsync/
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET4 $SOURCE2 
 # not required during restore: sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET5 $SOURCE3
 # not required during restore: sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET6 $SOURCE3
-# refresh list of available packages in Ubuntu repositories
-sudo apt-get update
 #sudo apt-get install dselect rsync -y
 #sudo apt-key add $TARGET1/Repo.keys
 sudo apt-key add Repo.keys
 #sudo dpkg --set-selections < $TARGET1/Package.list
 #sudo dpkg --set-selections < Package.list
 #sudo dselect
+sudo add-apt-repository ppa:razor-qt/ppa
+# refresh list of available packages in Ubuntu repositories
+sudo apt-get update
 # install list of packages defined in installedpackages file
 sudo apt-get install  `cat  installedpackages`
 
