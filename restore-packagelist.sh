@@ -69,6 +69,26 @@ echo "Downloading CSC KML Interface to Sky in Google Earth"
 wget http://cxc.harvard.edu/csc/googlecat/cxo_1.2.kml
 echo "kml file can be opened using Google Earth"
 
+# download The Crab Nebula Explodes
+echo "Downloading The Crab Nebula Explodes"
+wget http://services.google.com/earth/kmz/crab_nebula_n.kmz
+echo "kmz file can be opened using Google Earth"
+
+# download Multicolor Galaxies
+echo "Downloading Multicolor Galaxies"
+wget http://services.google.com/earth/kmz/aegis_n.kmz
+echo "kmz file can be opened using Google Earth"
+
+# download Images of Nearby Galaxies from the National Optical Astronomical Observatory
+echo "Downloading Images of Nearby Galaxies from the National Optical Astronomical Observatory"
+wget http://services.google.com/earth/kmz/noao_showcase_n.kmz
+echo "kmz file can be opened using Google Earth"
+
+# download The Sloan Digital Sky Survey catalog
+echo "Downloading The Sloan Digital Sky Survey catalog"
+wget http://services.google.com/earth/kmz/sdss_query_n.kmz
+echo "kmz file can be opened using Google Earth"
+
 # download Digital Universe and Partiview Resources
 echo "Downloading Digital Universe and Partiview Resources"
 wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
