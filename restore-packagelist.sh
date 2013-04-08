@@ -42,12 +42,15 @@ sudo dpkg -i google-earth-stable_current_i386.deb
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
-# Fix the Google Chrome dependencies issue
+# fix the Google Chrome dependencies issue
 sudo apt-get -f install
 # install Opera browser
 wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo apt-get update && sudo apt-get install opera
+# download Digital Universe and Partiview Resources
+echo "Downloading Digital Universe and Partiview Resources"
+wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
