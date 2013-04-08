@@ -36,9 +36,7 @@ sudo apt-key add Repo.keys
 #sudo dselect
 # install list of packages defined in installedpackages file
 sudo apt-get install  `cat  installedpackages`
-# install Google Earth
-wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
-sudo dpkg -i google-earth-stable_current_i386.deb
+
 ###############################################################################################
 #     WEBBROWSERS SECTION                                                                     #
 ###############################################################################################
@@ -61,6 +59,15 @@ sudo apt-get install opera
 sudo add-apt-repository ppa:aims/casapy
 sudo apt-get update
 sudo apt-get install casapy-upstream-binary
+
+# install Google Earth
+wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
+sudo dpkg -i google-earth-stable_current_i386.deb
+
+# download CSC KML Interface to Sky in Google Earth
+echo "Downloading CSC KML Interface to Sky in Google Earth"
+wget http://cxc.harvard.edu/csc/googlecat/cxo_1.2.kml
+echo "kml file can be opened using Google Earth"
 
 # download Digital Universe and Partiview Resources
 echo "Downloading Digital Universe and Partiview Resources"
