@@ -51,6 +51,9 @@ sudo apt-get update && sudo apt-get install opera
 # download Digital Universe and Partiview Resources
 echo "Downloading Digital Universe and Partiview Resources"
 wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
+# download C2A Planetarium Software for Windows platform
+echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
+wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
