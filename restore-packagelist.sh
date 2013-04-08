@@ -49,7 +49,7 @@ wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo apt-get update && sudo apt-get install opera
 
-echo "Please add these Astronomy bookmarks into all 3 webbrowsers (chromium, firefox, konqueror)"
+echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
 echo "http://www.wolframalpha.com/input/?i=astronomy&a=*C.astronomy-_*ExamplePage-"
 echo "http://en.wikipedia.org/wiki/Star_catalogue#Successors_to_USNO-A.2C_USNO-B.2C_NOMAD.2C_UCAC_and_Others"
