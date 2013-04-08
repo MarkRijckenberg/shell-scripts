@@ -39,6 +39,10 @@ sudo apt-get install  `cat  installedpackages`
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
+###############################################################################################
+#     WEBBROWSERS SECTION                                                                     #
+###############################################################################################
+
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
@@ -47,7 +51,17 @@ sudo apt-get -f install
 # install Opera browser
 wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
-sudo apt-get update && sudo apt-get install opera
+sudo apt-get update
+sudo apt-get install opera
+
+###############################################################################################
+#     ASTRONOMY SECTION                                                                       #
+###############################################################################################
+# install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
+sudo add-apt-repository ppa:aims/casapy
+sudo apt-get update
+sudo apt-get install casapy-upstream-binary
+
 # download Digital Universe and Partiview Resources
 echo "Downloading Digital Universe and Partiview Resources"
 wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
