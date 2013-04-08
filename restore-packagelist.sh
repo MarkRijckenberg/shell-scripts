@@ -1,9 +1,10 @@
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Lubuntu 12.04
 # REQUIRES: Lubuntu 12.04 or newer, wget, apt-get
-# Copyright (c) 2012-08-12 - Author: Mark Rijckenberg
-# REVISION DATE: 20130405
-# Updated by: markrijckenberg@gmail.com
+# Author: Mark Rijckenberg
+# Copyright (c) 2012-08-12
+# REVISION DATE: 20130408
+# Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
 
@@ -38,6 +39,11 @@ sudo apt-get install  `cat  installedpackages`
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
+# install Google Chrome browser which has better support for Flash websites (Youtube, ...)
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+sudo dpkg -i google-chrome*.deb
+# Fix the Google Chrome dependencies issue
+sudo apt-get -f install
 
 echo "Please add these Astronomy bookmarks into all 3 webbrowsers (chromium, firefox, konqueror)"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
