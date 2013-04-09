@@ -132,6 +132,8 @@ unp c2a_full_2_0_49.zip
 wine setup.exe
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
+echo "http://arxiv.org/archive/astro-ph"
+echo "http://adsabs.harvard.edu/abstract_service.html"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
 echo "http://www.wolframalpha.com/input/?i=astronomy&a=*C.astronomy-_*ExamplePage-"
 echo "http://en.wikipedia.org/wiki/Star_catalogue#Successors_to_USNO-A.2C_USNO-B.2C_NOMAD.2C_UCAC_and_Others"
