@@ -9,7 +9,7 @@ if [[ $1 == "" ]]; then
 echo "List of currently installed kernel .deb packages:"
 dpkg --list | grep linux-image | egrep '^[r,i]i'  | cut -d" " -f3
 echo "No argument added after removekernel command"
-echo "Please enter kernel package to uninstall from your pc (for example: linux-image-extra-3.8.0-030800rc4-generic) "
+echo "Please enter kernel package to uninstall from your pc (for example: linux-image-3.9.0-030900rc5-generic) "
 read KERNELVERSION
 
 echo "Removing kernel package $KERNELVERSION"
