@@ -119,6 +119,12 @@ echo "Downloading and decompressing Digital Universe and Partiview Resources"
 wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
 unp DUv3_9pview.tgz
 
+# download and decompress Nightshade 
+# Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
+echo "Downloading and decompressing Nightshade"
+wget http://www.nightshadesoftware.org/attachments/download/6/nightshade-11.12.1.tar.gz
+unp nightshade-11.12.1.tar.gz
+
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
 wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
