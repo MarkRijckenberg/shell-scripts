@@ -36,7 +36,6 @@ sudo apt-key add Repo.keys
 #sudo cp /etc/apt/sources.list  /etc/apt/sources.list.backup
 #sudo cp sources.list.12.04 /etc/apt/sources.list
 
-sudo add-apt-repository ppa:razor-qt/ppa
 # refresh list of available packages in Ubuntu repositories
 sudo apt-get update
 # install list of packages defined in installedpackages file
@@ -45,7 +44,16 @@ sudo apt-get install  `cat  installedpackages`
 sudo add-apt-repository ppa:noneed4anick/cuttlefish
 sudo apt-get update
 sudo apt-get install cuttlefish 
-
+# libdvdcss2, to play encrypted DVDs
+sudo apt-get install libdvdcss2 && sudo /usr/share/doc/libdvdread4/./install-css.sh
+# Install Ubuntu Tweak
+sudo add-apt-repository ppa:tualatrix/ppa
+sudo apt-get update
+sudo apt-get install ubuntu-tweak
+# install razor-qt desktop environment
+sudo add-apt-repository ppa:razor-qt/ppa
+sudo apt-get update
+sudo apt-get install razorqt razorqt-desktop
 
 ###############################################################################################
 #     WEBBROWSERS SECTION                                                                     #
