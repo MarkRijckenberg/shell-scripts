@@ -41,6 +41,11 @@ sudo add-apt-repository ppa:razor-qt/ppa
 sudo apt-get update
 # install list of packages defined in installedpackages file
 sudo apt-get install  `cat  installedpackages`
+# Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
+sudo add-apt-repository ppa:noneed4anick/cuttlefish
+sudo apt-get update
+sudo apt-get install cuttlefish 
+
 
 ###############################################################################################
 #     WEBBROWSERS SECTION                                                                     #
