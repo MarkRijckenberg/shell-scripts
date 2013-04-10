@@ -125,9 +125,15 @@ echo "Downloading and decompressing Nightshade"
 wget http://www.nightshadesoftware.org/attachments/download/6/nightshade-11.12.1.tar.gz
 unp nightshade-11.12.1.tar.gz
 
+# download and decompress scisoft utilities
+echo "Downloading and decompressing scisoft utilities"
+wget ftp://ftp.eso.org/scisoft/scisoft7.7.0/linux/fedora11/tar/scisoft-7.7.0.tar.gz
+unp scisoft-7.7.0.tar.gz
+
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
 wget http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
+mv aasguide.pdf American_Astronomical_Society_guidelines.pdf
 
 # download The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii
 echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii"
