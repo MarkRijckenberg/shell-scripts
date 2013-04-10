@@ -134,6 +134,11 @@ echo "Downloading and decompressing Journal of Astronomy and Astrophysics LaTeX-
 wget http://ftp.edpsciences.org/pub/aa/aa-package.tar.gz
 unp aa-package.tar.gz
 
+# download The Not So Short Introduction to LaTeX2 by Tobias Oetiker et alii
+echo "Downloading The Not So Short Introduction to LaTeX2 by Tobias Oetiker et alii"
+wget http://tobi.oetiker.ch/lshort/lshort.pdf
+mv lshort.pdf latex2-not-so-short-introduction.pdf
+
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
 wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
@@ -150,6 +155,7 @@ echo "http://ned.ipac.caltech.edu/"
 echo "http://www.usno.navy.mil/USNO/astrometry/information/catalog-info/catalog-information-center-1#usnob1"
 echo "http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/icas/fchpix"
 echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astronomie-geodesie-meteorologie-1.html#.UV1dCqA9RZc"
+echo "http://www.ctan.org/topic/astronomy"
 echo "Also get MIPAV imaging tool here:  http://mipav.cit.nih.gov/download.php"
 echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
 echo "Use texmaker Ubuntu package to write new Astronomy book"
