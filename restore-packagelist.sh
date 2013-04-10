@@ -160,4 +160,4 @@ echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astro
 echo "http://www.ctan.org/topic/astronomy"
 echo "Also get MIPAV imaging tool here:  http://mipav.cit.nih.gov/download.php"
 echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
-echo "Use texmaker Ubuntu package to write new Astronomy book"
+echo "Use texmaker Ubuntu package with AASTeX special macros (aastex is part of texlive-publishers package) to write new Astronomy book"
