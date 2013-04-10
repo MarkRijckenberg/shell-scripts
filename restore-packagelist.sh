@@ -128,6 +128,7 @@ unp nightshade-11.12.1.tar.gz
 # download Journal of Astronomy and Astrophysics guidelines 
 echo "Downloading Journal of Astronomy and Astrophysics guidelines"
 wget http://www.aanda.org/images/stories/doc/aaguide_v7.0_201001.pdf
+mv aaguide_v7.0_201001.pdf Astronomy-and-Astrophysics-Author-guide-v7.0_201001.pdf
 
 # download Journal of Astronomy and Astrophysics LaTeX-package for articles. 
 echo "Downloading and decompressing Journal of Astronomy and Astrophysics LaTeX-package for articles"
