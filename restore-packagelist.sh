@@ -125,18 +125,12 @@ echo "Downloading and decompressing Nightshade"
 wget http://www.nightshadesoftware.org/attachments/download/6/nightshade-11.12.1.tar.gz
 unp nightshade-11.12.1.tar.gz
 
-# download Journal of Astronomy and Astrophysics guidelines 
-echo "Downloading Journal of Astronomy and Astrophysics guidelines"
-wget http://www.aanda.org/images/stories/doc/aaguide_v7.0_201001.pdf
-mv aaguide_v7.0_201001.pdf Astronomy-and-Astrophysics-Author-guide-v7.0_201001.pdf
+# download American Astronomical Society manuscript preparation guidelines 
+echo "Downloading American Astronomical Society manuscript preparation guidelines"
+wget http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
 
-# download Journal of Astronomy and Astrophysics LaTeX-package for articles. 
-echo "Downloading and decompressing Journal of Astronomy and Astrophysics LaTeX-package for articles"
-wget http://ftp.edpsciences.org/pub/aa/aa-package.tar.gz
-unp aa-package.tar.gz
-
-# download The Not So Short Introduction to LaTeX2 by Tobias Oetiker et alii
-echo "Downloading The Not So Short Introduction to LaTeX2 by Tobias Oetiker et alii"
+# download The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii
+echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii"
 wget http://tobi.oetiker.ch/lshort/lshort.pdf
 mv lshort.pdf latex2-not-so-short-introduction.pdf
 
