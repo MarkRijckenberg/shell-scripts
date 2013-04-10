@@ -3,7 +3,7 @@
 # REQUIRES: Lubuntu 12.04, wget, apt-get, unp, wine
 # Author: Mark Rijckenberg
 # Copyright (c) 2012-08-12
-# REVISION DATE: 20130408
+# REVISION DATE: 20130410
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
@@ -124,6 +124,15 @@ unp DUv3_9pview.tgz
 echo "Downloading and decompressing Nightshade"
 wget http://www.nightshadesoftware.org/attachments/download/6/nightshade-11.12.1.tar.gz
 unp nightshade-11.12.1.tar.gz
+
+# download Journal of Astronomy & Astrophysics guidelines 
+echo "Downloading Journal of Astronomy and Astrophysics guidelines"
+wget http://www.aanda.org/images/stories/doc/aaguide_v7.0_201001.pdf
+
+# Journal of Astronomy & Astrophysics LaTeX-package for articles. 
+echo "Downloading and decompressing Journal of Astronomy and Astrophysics LaTeX-package for articles"
+wget http://ftp.edpsciences.org/pub/aa/aa-package.tar.gz
+unp aa-package.tar.gz
 
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
