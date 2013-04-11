@@ -171,6 +171,7 @@ mv *.km? $KMZ
 mv *gz $TAR
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
+echo "http://www.gmail.com"
 echo "http://arxiv.org/archive/astro-ph"
 echo "http://adsabs.harvard.edu/abstract_service.html"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
