@@ -169,6 +169,7 @@ mv *.pdf $PDF
 mv *.deb $DEB
 mv *.km? $KMZ
 mv *gz $TAR
+rm *.exe
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://www.gmail.com"
