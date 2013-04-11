@@ -20,6 +20,17 @@ TARGET3=/media/SAMSUNG/etc/
 TARGET4=/media/IOMEGA/etc/
 TARGET5=/media/SAMSUNG/media/windowsdata/rsync/
 TARGET6=/media/IOMEGA/media/windowsdata/rsync/
+ZIP=zip/
+TAR=tar/
+PDF=pdf/
+DEB=deb/
+KMZ=kmz/
+mkdir $ZIP
+mkdir $TAR
+mkdir $PDF
+mkdir $DEB
+mkdir $KMZ
+
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET1 $HOME 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET2 $HOME
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET3 $SOURCE2
@@ -135,6 +146,11 @@ echo "Downloading American Astronomical Society manuscript preparation guideline
 wget http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
 mv aasguide.pdf American_Astronomical_Society_guidelines.pdf
 
+# download Users Guide to Writing a Thesis in Physics Astronomy Institute of the University of Bonn
+echo "Downloading Users Guide to Writing a Thesis in Physics Astronomy Institute of the University of Bonn"
+wget http://www-biblio.physik.uni-bonn.de/info/downloads/thesis_guide.pdf
+mv thesis_guide.pdf bonn_thesis_writing_guide_latex_march_31_2013.pdf
+
 # download The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii
 echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii"
 wget http://tobi.oetiker.ch/lshort/lshort.pdf
@@ -145,6 +161,14 @@ echo "Downloading C2A Planetarium Software for Windows platform - use wine appli
 wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
 unp c2a_full_2_0_49.zip
 wine setup.exe
+
+# clean up current directory
+echo "Cleaning up current work directory..."
+mv *.zip $ZIP
+mv *.pdf $PDF
+mv *.deb $DEB
+mv *.km? $KMZ
+mv *gz $TAR
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://arxiv.org/archive/astro-ph"
