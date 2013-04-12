@@ -56,7 +56,8 @@ sudo add-apt-repository ppa:noneed4anick/cuttlefish
 sudo apt-get update
 sudo apt-get install cuttlefish 
 # libdvdcss2, to play encrypted DVDs
-sudo apt-get install libdvdcss2 && sudo /usr/share/doc/libdvdread4/./install-css.sh
+sudo apt-get install libdvdcss2
+sudo /usr/share/doc/libdvdread4/./install-css.sh
 # Install Ubuntu Tweak to easily uninstall old kernel versions
 sudo add-apt-repository ppa:tualatrix/ppa
 sudo apt-get update
