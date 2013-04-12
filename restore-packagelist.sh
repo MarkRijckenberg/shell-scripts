@@ -186,6 +186,7 @@ echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astro
 echo "http://www.ctan.org/topic/astronomy"
 echo "http://en.wikibooks.org/wiki/LaTeX"
 echo "http://www.ottobib.com/"
+echo "http://scholar.google.be"
 echo "http://www.krantenkoppen.be/"
 echo "Also get MIPAV imaging tool here:  http://mipav.cit.nih.gov/download.php"
 echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
