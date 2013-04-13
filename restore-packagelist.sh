@@ -67,8 +67,9 @@ sudo add-apt-repository ppa:razor-qt/ppa
 sudo apt-get update
 sudo apt-get install razorqt razorqt-desktop
 
-# install yEd editor 
+# Install yEd editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
+# Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
 wget http://www.yworks.com/products/yed/demo/yEd-3.10.2_32-bit_setup.sh
 sh yEd-3.10.2_32-bit_setup.sh
 
