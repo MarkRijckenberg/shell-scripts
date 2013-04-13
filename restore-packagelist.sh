@@ -50,7 +50,7 @@ sudo apt-key add Repo.keys
 # refresh list of available packages in Ubuntu repositories
 sudo apt-get update
 # install list of packages defined in installedpackages file
-sudo apt-get install  `cat  installedpackages`
+sudo apt-get install  `cat  installedpackages` -o APT::Install-Suggests="true"
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 sudo add-apt-repository ppa:noneed4anick/cuttlefish
 sudo apt-get update
