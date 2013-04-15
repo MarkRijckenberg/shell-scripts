@@ -148,6 +148,10 @@ echo "Downloading and decompressing scisoft utilities"
 wget ftp://ftp.eso.org/scisoft/scisoft7.7.0/linux/fedora11/tar/scisoft-7.7.0.tar.gz
 unp scisoft-7.7.0.tar.gz
 
+echo "Downloading and installing skychart"
+wget http://sourceforge.net/settings/mirror_choices?projectname=skychart&filename=1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
+sudo dpkg -i skychart_3.8-2450_i386.deb
+
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
 wget http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
