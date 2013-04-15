@@ -150,6 +150,16 @@ echo "Downloading and decompressing scisoft utilities"
 wget ftp://ftp.eso.org/scisoft/scisoft7.7.0/linux/fedora11/tar/scisoft-7.7.0.tar.gz
 unp scisoft-7.7.0.tar.gz
 
+# download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
+echo "Downloading and compiling skyviewer from nasa website"
+wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/skyviewer-1.0.0.tar.gz
+unp skyviewer-1.0.0.tar.gz
+cd skyviewer-1.0.0/
+sudo qmake
+sudo make
+sudo make install
+cd ..
+
 echo "Downloading and installing skychart"
 wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
 sudo dpkg -i skychart_3.8-2450_i386.deb
