@@ -80,7 +80,7 @@ sh yEd-3.10.2_32-bit_setup.sh
 ###############################################################################################
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get -f install
@@ -101,8 +101,8 @@ sudo apt-get update
 sudo apt-get install casapy-upstream-binary
 
 # install Google Earth
-wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
-sudo dpkg -i google-earth-stable_current_i386.deb
+wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+sudo dpkg -i google-earth-stable_current_amd64.deb
 
 # download CSC KML Interface to Sky in Google Earth
 echo "Downloading CSC KML Interface to Sky in Google Earth"
@@ -172,8 +172,8 @@ wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
 unp iraf.lnux.x86.tar.gz
 
 echo "Downloading and installing skychart"
-wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
-sudo dpkg -i skychart_3.8-2450_i386.deb
+wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_amd64.deb
+sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
 
 wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
