@@ -135,6 +135,7 @@ wget http://services.google.com/earth/kmz/exo_planets_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download and decompress SAOImage DS9 software
+echo "Downloading and decompressing  SAOImage DS9 software"
 wget http://hea-www.harvard.edu/RD/ds9/download/linux/ds9.linux.7.1.tar.gz
 unp ds9.linux.7.1.tar.gz
 
@@ -163,6 +164,12 @@ sudo qmake
 sudo make
 sudo make install
 cd ..
+
+# download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
+# software system for the reduction and analysis of astronomical data
+echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
+wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
+unp iraf.lnux.x86.tar.gz
 
 echo "Downloading and installing skychart"
 wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
