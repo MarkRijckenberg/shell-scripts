@@ -271,3 +271,4 @@ echo "Check with book publisher in which format the digitized book needs to be s
 echo "Use texmaker Ubuntu package with AASTeX special macros (aastex is part of texlive-publishers package) to write new Astronomy book"
 echo "get bibliography citations at http://www.ottobib.com  using ISBN number and convert info to bibtex plain text .bib file for use in Latex document"
 echo "get bibliography citations at http://scholar.google.be using full title and author and choose import to bibtex"
+echo "For example use - filetype:pdf author:'h karttunen'  -  as search term in http://scholar.google.be"
