@@ -134,6 +134,10 @@ echo "Downloading Exoplanets"
 wget http://services.google.com/earth/kmz/exo_planets_n.kmz
 echo "kmz file can be opened using Google Earth"
 
+# download and decompress SAOImage DS9 software
+wget http://hea-www.harvard.edu/RD/ds9/download/linux/ds9.linux.7.1.tar.gz
+unp ds9.linux.7.1.tar.gz
+
 # download and decompress Digital Universe and Partiview Resources
 echo "Downloading and decompressing Digital Universe and Partiview Resources"
 wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
