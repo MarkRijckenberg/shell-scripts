@@ -30,6 +30,7 @@ mkdir $TAR
 mkdir $PDF
 mkdir $DEB
 mkdir $KMZ
+mkdir triatlas
 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET1 $HOME 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET2 $HOME
@@ -165,16 +166,35 @@ wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-
 sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
 sudo apt-get -f install
 
-#download Triatlas charts in PDF format
-echo "Downloading Triatlas charts in A4 format for Europe"
+#download Triatlas charts in PDF format from http://www.uv.es/jrtorres/triatlas.html
+echo "Downloading Triatlas charts (from jrtorres) in A4 format for Europe"
 wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
 wget http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
 wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
 wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
 wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
 wget http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
-
-
+wget http://www.uv.es/jrtorres/section_c/C01_001-030.pdf
+wget http://www.uv.es/jrtorres/section_c/C02_031-060.pdf
+wget http://www.uv.es/jrtorres/section_c/C03_061-090.pdf
+wget http://www.uv.es/jrtorres/section_c/C04_091-120.pdf
+wget http://www.uv.es/jrtorres/section_c/C05_121-150.pdf
+wget http://www.uv.es/jrtorres/section_c/C06_151-180.pdf
+wget http://www.uv.es/jrtorres/section_c/C07_181-210.pdf
+wget http://www.uv.es/jrtorres/section_c/C08_211-240.pdf
+wget http://www.uv.es/jrtorres/section_c/C09_241-270.pdf
+wget http://www.uv.es/jrtorres/section_c/C10_271-300.pdf
+wget http://www.uv.es/jrtorres/section_c/C11_301-330.pdf
+wget http://www.uv.es/jrtorres/section_c/C12_331-360.pdf
+wget http://www.uv.es/jrtorres/section_c/C13_361-390.pdf
+wget http://www.uv.es/jrtorres/section_c/C14_391-420.pdf
+wget http://www.uv.es/jrtorres/section_c/C15_421-450.pdf
+wget http://www.uv.es/jrtorres/section_c/C16_451-480.pdf
+wget http://www.uv.es/jrtorres/section_c/C17_481-510.pdf
+wget http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
+wget http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
+wget http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
+mv *.pdf triatlas
 
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
