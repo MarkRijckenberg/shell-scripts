@@ -149,8 +149,32 @@ wget ftp://ftp.eso.org/scisoft/scisoft7.7.0/linux/fedora11/tar/scisoft-7.7.0.tar
 unp scisoft-7.7.0.tar.gz
 
 echo "Downloading and installing skychart"
-wget http://sourceforge.net/settings/mirror_choices?projectname=skychart&filename=1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
+wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
 sudo dpkg -i skychart_3.8-2450_i386.deb
+sudo apt-get -f install
+
+wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
+sudo dpkg -i skychart-data-stars_3.8-2293_all.deb
+sudo apt-get -f install
+
+wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-dso_3.8-2293_all.deb
+sudo dpkg -i skychart-data-dso_3.8-2293_all.deb
+sudo apt-get -f install
+
+wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-pictures_3.1-1466_all.deb
+sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
+sudo apt-get -f install
+
+#download Triatlas charts in PDF format
+echo "Downloading Triatlas charts in A4 format for Europe"
+wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
+wget http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
+wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
+wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
+wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
+wget http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
+
+
 
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
