@@ -5,6 +5,7 @@
 # Copyright (c) 2012-08-12
 # REVISION DATE: 20130410
 # REVISION DATE: 20130415
+# REVISION DATE: 20130416
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
@@ -188,6 +189,10 @@ wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-
 sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
 sudo apt-get -f install
 
+
+###############################################################################################
+#     DOWNLOAD TRIATLAS PDF FILES BEFORE ANY OTHER PDF FILES                                  #
+###############################################################################################
 #download Triatlas charts in PDF format from http://www.uv.es/jrtorres/triatlas.html
 echo "Downloading Triatlas charts (from jrtorres) in A4 format for Europe"
 wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
@@ -217,6 +222,11 @@ wget http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
 wget http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
 wget http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
 mv *.pdf triatlas
+
+# download SAO/NASA ADS Help Pages
+echo "Downloading SAO/NASA ADS Help Pages"
+wget http://adsabs.harvard.edu/abs_doc/help_pages/adshelp.pdf
+mv adshelp.pdf sao_nasa_ads_help_pages_July_9_2012.pdf
 
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
