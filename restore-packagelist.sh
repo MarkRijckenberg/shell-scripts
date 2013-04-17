@@ -82,7 +82,7 @@ wget http://www.yworks.com/products/yed/demo/yEd-3.10.2_32-bit_setup.sh
 sh yEd-3.10.2_32-bit_setup.sh
 
 ###############################################################################################
-#     WEBBROWSERS SECTION                                                                     #
+#     WEBBROWSER SOFTWARE SECTION                                                             #
 ###############################################################################################
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
@@ -99,7 +99,7 @@ sudo apt-get install opera
 sudo apt-get remove java-common
 
 ###############################################################################################
-#     ASTRONOMY SECTION                                                                       #
+#     ASTRONOMY SOFTWARE SECTION                                                              #
 ###############################################################################################
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
 sudo add-apt-repository --yes ppa:aims/casapy
@@ -199,6 +199,11 @@ wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-
 sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
 sudo apt-get -f install
 
+# download C2A Planetarium Software for Windows platform
+echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
+wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
+unp c2a_full_2_0_49.zip
+wine setup.exe
 
 ###############################################################################################
 #     DOWNLOAD TRIATLAS PDF FILES BEFORE ANY OTHER PDF FILES                                  #
@@ -253,20 +258,19 @@ echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et 
 wget http://tobi.oetiker.ch/lshort/lshort.pdf
 mv lshort.pdf latex2-not-so-short-introduction.pdf
 
-# download C2A Planetarium Software for Windows platform
-echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
-wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
-unp c2a_full_2_0_49.zip
-wine setup.exe
-
 # clean up current directory
-echo "Cleaning up current work directory..."
+echo "Performing file cleanup"
 mv *.zip $ZIP
 mv *.pdf $PDF
 mv *.deb $DEB
 mv *.km? $KMZ
 mv *gz $TAR
 rm *.exe
+sudo rm /etc/apt/sources.list.d/*
+
+###############################################################################################
+#     SHOW INTERESTING WEBBROWSER BOOKMARKS                                                   #
+###############################################################################################
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://www.gmail.com"
