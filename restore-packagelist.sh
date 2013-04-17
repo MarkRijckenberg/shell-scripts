@@ -265,10 +265,10 @@ mv *.deb $DEB
 mv *.km? $KMZ
 mv *gz $TAR
 rm *.exe
-sudo rm /etc/apt/sources.list.d/*
 
 # uninstall Java due to all the critical security issues in 2013
 sudo apt-get remove java-common
+sudo rm /etc/apt/sources.list.d/*
 
 ###############################################################################################
 #     SHOW INTERESTING WEBBROWSER BOOKMARKS                                                   #
