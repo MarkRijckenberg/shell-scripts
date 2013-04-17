@@ -69,6 +69,11 @@ sudo apt-get install ubuntu-tweak
 sudo add-apt-repository ppa:razor-qt/ppa
 sudo apt-get update
 sudo apt-get install razorqt razorqt-desktop
+# install TLP - advanced power management command line tool for Linux
+sudo apt-get remove laptop-mode-tools
+sudo add-apt-repository ppa:linrunner/tlp
+sudo apt-get update
+sudo apt-get install tlp tlp-rdw
 
 # Install yEd editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
