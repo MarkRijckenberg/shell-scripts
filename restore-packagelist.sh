@@ -106,6 +106,16 @@ sudo add-apt-repository --yes ppa:aims/casapy
 sudo apt-get update
 sudo apt-get install casapy-upstream-binary
 
+sudo add-apt-repository --yes ppa:olebole/astro-precise
+sudo apt-get update
+sudo apt-get install casacore 
+sudo apt-get install cpl
+sudo apt-get install esorex
+# download and decompress SAOImage DS9 software
+sudo apt-get install saods9 
+sudo apt-get install sextractor 
+
+
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 sudo dpkg -i google-earth-stable_current_amd64.deb
@@ -139,11 +149,6 @@ echo "kmz file can be opened using Google Earth"
 echo "Downloading Exoplanets"
 wget http://services.google.com/earth/kmz/exo_planets_n.kmz
 echo "kmz file can be opened using Google Earth"
-
-# download and decompress SAOImage DS9 software
-echo "Downloading and decompressing  SAOImage DS9 software"
-wget http://hea-www.harvard.edu/RD/ds9/download/linux/ds9.linux.7.1.tar.gz
-unp ds9.linux.7.1.tar.gz
 
 # download and decompress Digital Universe and Partiview Resources
 echo "Downloading and decompressing Digital Universe and Partiview Resources"
