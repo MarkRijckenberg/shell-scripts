@@ -6,6 +6,7 @@
 # REVISION DATE: 20130410
 # REVISION DATE: 20130415
 # REVISION DATE: 20130416
+# REVISION DATE: 20130417
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
