@@ -96,8 +96,6 @@ wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo apt-get update
 sudo apt-get install opera
-# uninstall Java due to all the critical security issues in 2013
-sudo apt-get remove java-common
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
@@ -268,6 +266,9 @@ mv *.km? $KMZ
 mv *gz $TAR
 rm *.exe
 sudo rm /etc/apt/sources.list.d/*
+
+# uninstall Java due to all the critical security issues in 2013
+sudo apt-get remove java-common
 
 ###############################################################################################
 #     SHOW INTERESTING WEBBROWSER BOOKMARKS                                                   #
