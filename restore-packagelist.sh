@@ -280,6 +280,8 @@ rm *.exe
 
 # uninstall Java due to all the critical security issues in 2013
 sudo apt-get remove java-common
+sudo apt-get autoclean
+sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 
 ###############################################################################################
