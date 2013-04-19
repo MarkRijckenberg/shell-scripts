@@ -57,8 +57,6 @@ sudo apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
 sudo apt-get install  `cat  allpackages` -o APT::Install-Suggests="false"
-sudo apt-get install  `cat  basepackages` -o APT::Install-Suggests="false"
-sudo apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 sudo add-apt-repository ppa:noneed4anick/cuttlefish
@@ -91,6 +89,7 @@ sh yEd-3.10.2_32-bit_setup.sh
 #     WEBBROWSER SOFTWARE SECTION                                                             #
 ###############################################################################################
 
+sudo apt-get install  `cat  basepackages` -o APT::Install-Suggests="false"
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
@@ -105,6 +104,9 @@ sudo apt-get install opera
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
 ###############################################################################################
+
+sudo apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
+
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
 sudo add-apt-repository --yes ppa:aims/casapy
 sudo apt-get update
