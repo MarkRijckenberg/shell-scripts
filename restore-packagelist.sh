@@ -62,22 +62,27 @@ sudo apt-get install  `cat  allpackages` -o APT::Install-Suggests="false"
 sudo add-apt-repository ppa:noneed4anick/cuttlefish
 sudo apt-get update
 sudo apt-get install cuttlefish 
-# libdvdcss2, to play encrypted DVDs
-sudo apt-get install libdvdcss2
-sudo /usr/share/doc/libdvdread4/./install-css.sh
+# Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
+sudo apt-add-repository ppa:openshot.developers/ppa
+sudo apt-get update
+sudo apt-get install openshot
 # Install Ubuntu Tweak to easily uninstall old kernel versions
 sudo add-apt-repository ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get install ubuntu-tweak
-# install razor-qt desktop environment
+# Install razor-qt desktop environment
 sudo add-apt-repository ppa:razor-qt/ppa
 sudo apt-get update
 sudo apt-get install razorqt razorqt-desktop
-# install TLP - advanced power management command line tool for Linux
+# Install TLP - advanced power management command line tool for Linux
 sudo apt-get remove laptop-mode-tools
 sudo add-apt-repository ppa:linrunner/tlp
 sudo apt-get update
 sudo apt-get install tlp tlp-rdw
+
+# libdvdcss2, to play encrypted DVDs
+sudo apt-get install libdvdcss2
+sudo /usr/share/doc/libdvdread4/./install-css.sh
 
 # Install yEd editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
