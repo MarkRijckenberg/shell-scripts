@@ -311,6 +311,7 @@ echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astro
 echo "http://en.wikibooks.org/wiki/LaTeX"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
+echo "http://www.youtube.com/"
 echo "http://www.krantenkoppen.be/"
 echo "http://www.economist.com/"
 echo "http://www.wired.com/"
