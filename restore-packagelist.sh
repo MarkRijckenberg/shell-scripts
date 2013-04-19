@@ -79,6 +79,11 @@ sudo apt-get remove laptop-mode-tools
 sudo add-apt-repository ppa:linrunner/tlp
 sudo apt-get update
 sudo apt-get install tlp tlp-rdw
+# install skype
+sudo apt-get purge skype skype-bin
+sudo add-apt-repository ppa:upubuntu-com/chat
+sudo apt-get update
+sudo apt-get install skype
 
 # libdvdcss2, to play encrypted DVDs
 sudo apt-get install libdvdcss2
