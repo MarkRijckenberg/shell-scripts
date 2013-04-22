@@ -65,17 +65,17 @@ sudo apt-get update
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
-sudo apt-get remove cuttlefish
+sudo apt-get --yes --force-yes remove cuttlefish
 sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
 sudo apt-get update
 sudo apt-get --yes --force-yes install cuttlefish 
 # Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
-sudo apt-get remove openshot
+sudo apt-get --yes --force-yes remove openshot
 sudo apt-add-repository --yes ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install openshot
 # Install Ubuntu Tweak to easily uninstall old kernel versions
-sudo apt-get remove ubuntu-tweak
+sudo apt-get --yes --force-yes remove ubuntu-tweak
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install ubuntu-tweak
@@ -84,12 +84,12 @@ sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 # Install TLP - advanced power management command line tool for Linux
-sudo apt-get remove laptop-mode-tools
+sudo apt-get --yes --force-yes remove laptop-mode-tools
 sudo add-apt-repository --yes ppa:linrunner/tlp
 sudo apt-get update
 sudo apt-get --yes --force-yes install tlp tlp-rdw
 # install skype
-sudo apt-get remove skype skype-bin
+sudo apt-get --yes --force-yes remove skype skype-bin
 sudo add-apt-repository --yes ppa:upubuntu-com/chat
 sudo apt-get update
 sudo apt-get --yes --force-yes install skype
@@ -150,7 +150,7 @@ mv *gz $TAR
 rm *.exe
 
 # uninstall Java due to all the critical security issues in 2013
-sudo apt-get remove java-common
+sudo apt-get --yes --force-yes remove java-common
 sudo apt-get autoclean
 sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
