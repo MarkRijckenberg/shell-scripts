@@ -62,37 +62,40 @@ sudo apt-key add Repo.keys
 sudo apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
-# sudo apt-get install  `cat  allpackages` -o APT::Install-Suggests="false"
+# sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
-sudo add-apt-repository ppa:noneed4anick/cuttlefish
+sudo apt-get remove cuttlefish
+sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
 sudo apt-get update
-sudo apt-get install cuttlefish 
+sudo apt-get --yes --force-yes install cuttlefish 
 # Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
-sudo apt-add-repository ppa:openshot.developers/ppa
+sudo apt-get remove openshot
+sudo apt-add-repository --yes ppa:openshot.developers/ppa
 sudo apt-get update
-sudo apt-get install openshot
+sudo apt-get --yes --force-yes install openshot
 # Install Ubuntu Tweak to easily uninstall old kernel versions
-sudo add-apt-repository ppa:tualatrix/ppa
+sudo apt-get remove ubuntu-tweak
+sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
-sudo apt-get install ubuntu-tweak
+sudo apt-get --yes --force-yes install ubuntu-tweak
 # Install razor-qt desktop environment
-sudo add-apt-repository ppa:razor-qt/ppa
+sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
-sudo apt-get install razorqt razorqt-desktop
+sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 # Install TLP - advanced power management command line tool for Linux
 sudo apt-get remove laptop-mode-tools
-sudo add-apt-repository ppa:linrunner/tlp
+sudo add-apt-repository --yes ppa:linrunner/tlp
 sudo apt-get update
-sudo apt-get install tlp tlp-rdw
+sudo apt-get --yes --force-yes install tlp tlp-rdw
 # install skype
-sudo apt-get purge skype skype-bin
+sudo apt-get remove skype skype-bin
 sudo add-apt-repository ppa:upubuntu-com/chat
 sudo apt-get update
-sudo apt-get install skype
+sudo apt-get --yes --force-yes install skype
 
 # libdvdcss2, to play encrypted DVDs
-sudo apt-get install libdvdcss2
+sudo apt-get --yes --force-yes install libdvdcss2
 sudo /usr/share/doc/libdvdread4/./install-css.sh
 
 # Install yEd editor 
@@ -105,7 +108,7 @@ sh $YEDFILENAME
 #     WEBBROWSER SOFTWARE SECTION                                                             #
 ###############################################################################################
 
-sudo apt-get install  `cat  basepackages` -o APT::Install-Suggests="false"
+sudo apt-get --yes --force-yes install  `cat  basepackages` -o APT::Install-Suggests="false"
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
@@ -117,6 +120,7 @@ sudo apt-get -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 sudo dpkg -i google-earth-stable_current_amd64.deb
+sudo apt-get -f install
 else
   # 32-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
@@ -127,13 +131,14 @@ sudo apt-get -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
+sudo apt-get -f install
 fi
 
 # install Opera browser
 wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo apt-get update
-sudo apt-get install opera
+sudo apt-get --yes --force-yes install opera
 
 # clean up current directory
 echo "Performing file cleanup"
@@ -159,16 +164,16 @@ sudo apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
 sudo add-apt-repository --yes ppa:aims/casapy
 sudo apt-get update
-sudo apt-get install casapy-upstream-binary
+sudo apt-get --yes --force-yes install casapy-upstream-binary
 
 sudo add-apt-repository --yes ppa:olebole/astro-precise
 sudo apt-get update
-sudo apt-get install casacore 
-sudo apt-get install cpl
-sudo apt-get install esorex
+sudo apt-get --yes --force-yes install casacore 
+sudo apt-get --yes --force-yes install cpl
+sudo apt-get --yes --force-yes install esorex
 # download and decompress SAOImage DS9 software
-sudo apt-get install saods9 
-sudo apt-get install sextractor 
+sudo apt-get --yes --force-yes install saods9 
+sudo apt-get --yes --force-yes install sextractor 
 
 
 # download CSC KML Interface to Sky in Google Earth
