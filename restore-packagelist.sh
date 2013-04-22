@@ -108,7 +108,7 @@ sh $YEDFILENAME
 #     WEBBROWSER SOFTWARE SECTION                                                             #
 ###############################################################################################
 
-sudo apt-get --yes --force-yes install  `cat  basepackages` -o APT::Install-Suggests="false"
+sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
