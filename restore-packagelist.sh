@@ -3,14 +3,18 @@
 # REQUIRES: Ubuntu 12.04.02 LTS 64-bit (to support UEFI+SecureBoot), wget, apt-get, unp, wine
 # Author: Mark Rijckenberg
 # Copyright (c) 2012-08-12
-# REVISION DATE: 20130410
-# REVISION DATE: 20130415
-# REVISION DATE: 20130416
-# REVISION DATE: 20130417
-# REVISION DATE: 20130419
+# REVISION DATE: 20130422
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
+
+# define filename variables
+YEDFILENAME=yEd-3.10.2_32-bit_setup.sh
+DUFILENAME=DUv3_9pview.tgz
+NIGHTSHADEFILENAME=nightshade-11.12.1.tar.gz
+SCISOFTFILENAME=scisoft-7.7.0.tar.gz
+SKYVIEWERFILENAME=skyviewer-1.0.0
+C2AFILENAME=c2a_full_2_0_49.zip
 
 #define source directories
 HOME=/home/ulysses/
@@ -56,7 +60,7 @@ sudo apt-key add Repo.keys
 sudo apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
-sudo apt-get install  `cat  allpackages` -o APT::Install-Suggests="false"
+# sudo apt-get install  `cat  allpackages` -o APT::Install-Suggests="false"
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 sudo add-apt-repository ppa:noneed4anick/cuttlefish
@@ -92,8 +96,8 @@ sudo /usr/share/doc/libdvdread4/./install-css.sh
 # Install yEd editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
 # Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
-wget http://www.yworks.com/products/yed/demo/yEd-3.10.2_32-bit_setup.sh
-sh yEd-3.10.2_32-bit_setup.sh
+wget http://www.yworks.com/products/yed/demo/$YEDFILENAME
+sh $YEDFILENAME
 
 ###############################################################################################
 #     WEBBROWSER SOFTWARE SECTION                                                             #
@@ -168,25 +172,25 @@ echo "kmz file can be opened using Google Earth"
 
 # download and decompress Digital Universe and Partiview Resources
 echo "Downloading and decompressing Digital Universe and Partiview Resources"
-wget http://haydenplanetarium.org/downloads/universe/linux/DUv3_9pview.tgz
-unp DUv3_9pview.tgz
+wget http://haydenplanetarium.org/downloads/universe/linux/$DUFILENAME
+unp $DUFILENAME
 
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
 echo "Downloading and decompressing Nightshade"
-wget http://www.nightshadesoftware.org/attachments/download/6/nightshade-11.12.1.tar.gz
-unp nightshade-11.12.1.tar.gz
+wget http://www.nightshadesoftware.org/attachments/download/6/$NIGHTSHADEFILENAME
+unp $NIGHTSHADEFILENAME
 
 # download and decompress scisoft utilities
 echo "Downloading and decompressing scisoft utilities"
-wget ftp://ftp.eso.org/scisoft/scisoft7.7.0/linux/fedora11/tar/scisoft-7.7.0.tar.gz
-unp scisoft-7.7.0.tar.gz
+wget ftp://ftp.eso.org/scisoft/scisoft7.7.0/linux/fedora11/tar/$SCISOFTFILENAME
+unp $SCISOFTFILENAME
 
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 echo "Downloading and compiling skyviewer from nasa website"
-wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/skyviewer-1.0.0.tar.gz
-unp skyviewer-1.0.0.tar.gz
-cd skyviewer-1.0.0/
+wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$SKYVIEWERFILENAME.tar.gz
+unp $SKYVIEWERFILENAME.tar.gz
+cd $SKYVIEWERFILENAME
 sudo qmake
 sudo make
 sudo make install
@@ -217,8 +221,8 @@ sudo apt-get -f install
 
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
-wget http://www.astrosurf.com/c2a/english/download/c2a_full_2_0_49.zip
-unp c2a_full_2_0_49.zip
+wget http://www.astrosurf.com/c2a/english/download/$C2AFILENAME
+unp $C2AFILENAME
 wine setup.exe
 
 ###############################################################################################
