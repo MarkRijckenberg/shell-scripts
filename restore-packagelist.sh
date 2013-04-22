@@ -115,6 +115,21 @@ sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/s
 sudo apt-get update
 sudo apt-get install opera
 
+# clean up current directory
+echo "Performing file cleanup"
+mv *.zip $ZIP
+mv *.pdf $PDF
+mv *.deb $DEB
+mv *.km? $KMZ
+mv *gz $TAR
+rm *.exe
+
+# uninstall Java due to all the critical security issues in 2013
+sudo apt-get remove java-common
+sudo apt-get autoclean
+sudo apt-get clean
+sudo rm /etc/apt/sources.list.d/*
+
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
 ###############################################################################################
