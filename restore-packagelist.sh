@@ -116,22 +116,22 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
-sudo apt-get -f install
+sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 sudo dpkg -i google-earth-stable_current_amd64.deb
-sudo apt-get -f install
+sudo apt-get --yes --force-yes -f install
 else
   # 32-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
-sudo apt-get -f install
+sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
-sudo apt-get -f install
+sudo apt-get --yes --force-yes -f install
 fi
 
 # install Opera browser
