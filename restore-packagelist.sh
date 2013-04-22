@@ -8,6 +8,8 @@
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
 
+MACHINE_TYPE=`uname -m`
+
 # define filename variables
 YEDFILENAME=yEd-3.10.2_32-bit_setup.sh
 DUFILENAME=DUv3_9pview.tgz
@@ -104,19 +106,34 @@ sh $YEDFILENAME
 ###############################################################################################
 
 sudo apt-get install  `cat  basepackages` -o APT::Install-Suggests="false"
+
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+  # 64-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get -f install
+# install Google Earth
+wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+sudo dpkg -i google-earth-stable_current_amd64.deb
+else
+  # 32-bit stuff here
+# install Google Chrome browser which has better support for Flash websites (Youtube, ...)
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+sudo dpkg -i google-chrome*.deb
+# fix the Google Chrome dependencies issue
+sudo apt-get -f install
+# install Google Earth
+wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
+sudo dpkg -i google-earth-stable_current_i386.deb
+fi
+
 # install Opera browser
 wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo apt-get update
 sudo apt-get install opera
-# install Google Earth
-wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
-sudo dpkg -i google-earth-stable_current_amd64.deb
 
 # clean up current directory
 echo "Performing file cleanup"
@@ -210,16 +227,31 @@ sudo make
 sudo make install
 cd ..
 
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+  # 64-bit stuff here
+# download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
+# software system for the reduction and analysis of astronomical data
+echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
+wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86_64.tar.gz
+unp iraf.lnux.x86_64.tar.gz
+echo "Downloading and installing skychart"
+wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_amd64.deb
+sudo dpkg -i skychart_3.8-2450_amd64.deb
+sudo apt-get -f install
+
+else
+  # 32-bit stuff here
 # download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
 # software system for the reduction and analysis of astronomical data
 echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
 wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
 unp iraf.lnux.x86.tar.gz
-
 echo "Downloading and installing skychart"
-wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_amd64.deb
-sudo dpkg -i skychart_3.8-2450_amd64.deb
+wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
+sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
+
+fi
 
 wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
 sudo dpkg -i skychart-data-stars_3.8-2293_all.deb
