@@ -90,7 +90,7 @@ sudo apt-get update
 sudo apt-get --yes --force-yes install tlp tlp-rdw
 # install skype
 sudo apt-get remove skype skype-bin
-sudo add-apt-repository ppa:upubuntu-com/chat
+sudo add-apt-repository --yes ppa:upubuntu-com/chat
 sudo apt-get update
 sudo apt-get --yes --force-yes install skype
 
