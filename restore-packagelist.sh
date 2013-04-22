@@ -114,6 +114,9 @@ wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo apt-get update
 sudo apt-get install opera
+# install Google Earth
+wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+sudo dpkg -i google-earth-stable_current_amd64.deb
 
 # clean up current directory
 echo "Performing file cleanup"
@@ -150,10 +153,6 @@ sudo apt-get install esorex
 sudo apt-get install saods9 
 sudo apt-get install sextractor 
 
-
-# install Google Earth
-wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
-sudo dpkg -i google-earth-stable_current_amd64.deb
 
 # download CSC KML Interface to Sky in Google Earth
 echo "Downloading CSC KML Interface to Sky in Google Earth"
