@@ -329,6 +329,8 @@ echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et 
 wget http://tobi.oetiker.ch/lshort/lshort.pdf
 mv lshort.pdf latex2-not-so-short-introduction.pdf
 
+wget http://kelder.zeus.ugent.be/~gaspard/latex/latex-cursus.pdf
+
 # clean up current directory
 echo "Performing file cleanup"
 mv *.zip $ZIP
