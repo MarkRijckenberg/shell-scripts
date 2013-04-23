@@ -367,6 +367,7 @@ echo "http://www.opensourcephysics.org/search/categories.cfm?t=SimSearch"
 # following URL added on April 23, 2013:
 echo "http://astro.unl.edu/naap/"
 echo "http://en.wikibooks.org/wiki/LaTeX"
+echo "http://latex.ugent.be/cursus.php"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
 # following URL added on April 23, 2013:
