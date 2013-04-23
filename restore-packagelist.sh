@@ -362,9 +362,10 @@ echo "http://www.aanda.org/"
 echo "http://www.usno.navy.mil/USNO/astrometry/information/catalog-info/catalog-information-center-1#usnob1"
 echo "http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/icas/fchpix"
 echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astronomie-geodesie-meteorologie-1.html#.UV1dCqA9RZc"
-# echo "http://www.ctan.org/topic/astronomy"
 # following URL (Open Source Physics project containing Java simulations for astronomy) added on April 23, 2013:
 echo "http://www.compadre.org/osp/search/categories.cfm?t=Simulation"
+# following URL added on April 23, 2013:
+echo "http://www.astro.ubc.ca/~scharein/applets/#top"
 echo "http://en.wikibooks.org/wiki/LaTeX"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
