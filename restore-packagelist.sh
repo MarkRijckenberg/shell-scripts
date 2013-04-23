@@ -105,7 +105,7 @@ wget http://www.yworks.com/products/yed/demo/$YEDFILENAME
 sh $YEDFILENAME
 
 ###############################################################################################
-#     WEBBROWSER SOFTWARE SECTION                                                             #
+#     BASE PACKAGES + WEBBROWSER SOFTWARE SECTION                                             #
 ###############################################################################################
 
 sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
@@ -121,6 +121,9 @@ sudo apt-get --yes --force-yes -f install
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 sudo dpkg -i google-earth-stable_current_amd64.deb
 sudo apt-get --yes --force-yes -f install
+# install Teamviewer server + client
+wget http://download.teamviewer.com/download/teamviewer_linux_x64.deb
+sudo dpkg -i teamviewer_linux_x64.deb
 else
   # 32-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
@@ -132,6 +135,9 @@ sudo apt-get --yes --force-yes -f install
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
 sudo apt-get --yes --force-yes -f install
+# install Teamviewer server + client
+wget http://download.teamviewer.com/download/teamviewer_linux.deb
+sudo dpkg -i teamviewer_linux.deb
 fi
 
 # install Opera browser
