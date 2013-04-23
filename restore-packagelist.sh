@@ -364,9 +364,15 @@ echo "http://www.usno.navy.mil/USNO/astrometry/optical-IR-prod/icas/fchpix"
 echo "http://be.kompass.com/live/fr/w2866018/edition-livres/edition-livres-astronomie-geodesie-meteorologie-1.html#.UV1dCqA9RZc"
 # following URL (Open Source Physics project containing Java simulations for astronomy) added on April 23, 2013:
 echo "http://www.opensourcephysics.org/search/categories.cfm?t=SimSearch"
+# following URL added on April 23, 2013:
+echo "http://astro.unl.edu/naap/"
 echo "http://en.wikibooks.org/wiki/LaTeX"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
+# following URL added on April 23, 2013:
+echo "http://www.google.com/mars/"
+# following URL added on April 23, 2013:
+echo "http://www.google.com/moon/"
 echo "http://www.youtube.com/"
 echo "http://www.krantenkoppen.be/"
 echo "http://www.economist.com/"
