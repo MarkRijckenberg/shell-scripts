@@ -363,7 +363,7 @@ sudo rm /etc/apt/sources.list.d/*
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://www.gmail.com"
 echo "http://arxiv.org/list/astro-ph/new"
-# in arxiv.org: click on 'other' next to 'pdf' and choose to 'download source' using the wget command
+# in arxiv.org: click on 'other' next to 'pdf' and choose to 'download source' using the axel command in a Terminal
 # to examine the original .tex file which uses the aastex class
 # decompress the extensionless source file using  the unp command
 echo "http://adsabs.harvard.edu/abstract_service.html"
