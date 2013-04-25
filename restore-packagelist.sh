@@ -363,8 +363,9 @@ sudo rm /etc/apt/sources.list.d/*
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://www.gmail.com"
 echo "http://arxiv.org/list/astro-ph/new"
-# in arxiv.org: click on 'other' next to 'pdf' and choose to 'download source' 
-# to examine the original .tex file using aastex class
+# in arxiv.org: click on 'other' next to 'pdf' and choose to 'download source' using the wget command
+# to examine the original .tex file which uses the aastex class
+# decompress the extensionless source file using  the unp command
 echo "http://adsabs.harvard.edu/abstract_service.html"
 echo "http://ned.ipac.caltech.edu/"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
