@@ -165,6 +165,8 @@ sudo apt-get --yes --force-yes remove mysql-server-core-?.?
 sudo apt-get autoclean
 sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
+grep -v opera /etc/apt/sources.list  > /tmp/sources.list
+sudo cp /tmp/sources.list  /etc/apt/sources.list
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
@@ -357,6 +359,8 @@ sudo apt-get --yes --force-yes remove mysql-server-core-?.?
 sudo apt-get autoclean
 sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
+grep -v opera /etc/apt/sources.list  > /tmp/sources.list
+sudo cp /tmp/sources.list  /etc/apt/sources.list
 
 ###############################################################################################
 #     SHOW INTERESTING WEBBROWSER BOOKMARKS                                                   #
