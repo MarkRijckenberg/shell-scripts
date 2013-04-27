@@ -164,7 +164,7 @@ sudo apt-get --yes --force-yes remove java-common
 sudo apt-get --yes --force-yes remove default-jre
 sudo apt-get --yes --force-yes remove gcj-?.?-jre-headless
 sudo apt-get --yes --force-yes remove openjdk-?-jre-headless
-sudo apt-get --yes --force-yes remove mysql-server-core-?.?
+sudo apt-get remove mysql-server-core-?.?
 sudo apt-get autoclean
 sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
@@ -361,7 +361,7 @@ sudo apt-get --yes --force-yes remove java-common
 sudo apt-get --yes --force-yes remove default-jre
 sudo apt-get --yes --force-yes remove gcj-?.?-jre-headless
 sudo apt-get --yes --force-yes remove openjdk-?-jre-headless
-sudo apt-get --yes --force-yes remove mysql-server-core-?.?
+sudo apt-get remove mysql-server-core-?.?
 sudo apt-get autoclean
 sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
