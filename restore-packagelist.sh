@@ -161,6 +161,9 @@ rm *.exe
 
 # uninstall Java due to all the critical security issues in 2013
 sudo apt-get --yes --force-yes remove java-common
+sudo apt-get --yes --force-yes remove default-jre
+sudo apt-get --yes --force-yes remove gcj-?.?-jre-headless
+sudo apt-get --yes --force-yes remove openjdk-?-jre-headless
 sudo apt-get --yes --force-yes remove mysql-server-core-?.?
 sudo apt-get autoclean
 sudo apt-get clean
@@ -355,6 +358,9 @@ rm *.exe
 
 # uninstall Java due to all the critical security issues in 2013
 sudo apt-get --yes --force-yes remove java-common
+sudo apt-get --yes --force-yes remove default-jre
+sudo apt-get --yes --force-yes remove gcj-?.?-jre-headless
+sudo apt-get --yes --force-yes remove openjdk-?-jre-headless
 sudo apt-get --yes --force-yes remove mysql-server-core-?.?
 sudo apt-get autoclean
 sudo apt-get clean
