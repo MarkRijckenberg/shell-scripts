@@ -93,7 +93,7 @@ sudo apt-get --yes --force-yes install skype
 # install Y PPA Manager
 sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo apt-get update
-sudo apt-get --yes --force-yes  y-ppa-manager
+sudo apt-get --yes --force-yes install  y-ppa-manager
 
 # libdvdcss2, to play encrypted DVDs
 sudo apt-get --yes --force-yes install libdvdcss2
