@@ -58,11 +58,16 @@ sudo apt-key add Repo.keys
 #sudo cp /etc/apt/sources.list  /etc/apt/sources.list.backup
 #sudo cp sources.list.12.04 /etc/apt/sources.list
 
+###############################################################################################
+#     BASE PACKAGES SECTION                                                                   #
+###############################################################################################
+
 # refresh list of available packages in Ubuntu repositories
 sudo apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
+sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
@@ -76,8 +81,6 @@ sudo apt-get --yes --force-yes install openshot
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install ubuntu-tweak
-# Remove razor-qt desktop environment
-sudo apt-get --yes --force-yes remove razorqt razorqt-desktop
 # Install cinnamon desktop environment
 sudo add-apt-repository --yes ppa:gwendal-lebihan-dev/cinnamon-nightly
 sudo apt-get update
@@ -94,22 +97,20 @@ sudo apt-get --yes --force-yes install skype
 sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo apt-get update
 sudo apt-get --yes --force-yes install  y-ppa-manager
+# Remove razor-qt desktop environment
+sudo apt-get --yes --force-yes remove razorqt razorqt-desktop
 
 # libdvdcss2, to play encrypted DVDs
 sudo apt-get --yes --force-yes install libdvdcss2
 sudo /usr/share/doc/libdvdread4/./install-css.sh
 
-# Install yEd editor 
-# (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
-# Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
-wget http://www.yworks.com/products/yed/demo/$YEDFILENAME
-sh $YEDFILENAME
+
 
 ###############################################################################################
-#     BASE PACKAGES + WEBBROWSER SOFTWARE SECTION                                             #
+#     WEBBROWSER SOFTWARE SECTION                                                             #
 ###############################################################################################
 
-sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
+
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
@@ -146,6 +147,12 @@ wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo apt-get update
 sudo apt-get --yes --force-yes install opera
+
+# Install yEd editor 
+# (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
+# Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
+wget http://www.yworks.com/products/yed/demo/$YEDFILENAME
+sh $YEDFILENAME
 
 # clean up current directory
 echo "Performing file cleanup"
