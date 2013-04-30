@@ -396,6 +396,8 @@ echo "http://astro.unl.edu/naap/"
 echo "http://en.wikibooks.org/wiki/LaTeX"
 # following URL added on April 23, 2013:
 echo "http://latex.ugent.be/cursus.php"
+# following URL added on April 30, 2013:
+echo "http://www.texdoc.net/"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
 # following URL added on April 23, 2013:
@@ -415,3 +417,4 @@ echo "Use texmaker Ubuntu package with AASTeX special macros (aastex is part of 
 echo "get bibliography citations at http://www.ottobib.com  using ISBN number and convert info to bibtex plain text .bib file for use in Latex document"
 echo "get bibliography citations at http://scholar.google.be using full title and author and choose import to bibtex"
 echo "For example use - filetype:pdf author:'h karttunen'  -  as search term in http://scholar.google.be"
+echo "Get more information about latex package by using command   texdoc <packagename> , for example: texdoc graphicx"
