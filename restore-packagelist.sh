@@ -148,11 +148,7 @@ sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/s
 sudo apt-get update
 sudo apt-get --yes --force-yes install opera
 
-# Install yEd editor 
-# (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
-# Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
-wget http://www.yworks.com/products/yed/demo/$YEDFILENAME
-sh $YEDFILENAME
+
 
 # clean up current directory
 echo "Performing file cleanup"
@@ -174,6 +170,12 @@ sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 sudo cp /tmp/sources.list  /etc/apt/sources.list
+
+# Install yEd editor 
+# (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
+# Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
+wget http://www.yworks.com/products/yed/demo/$YEDFILENAME
+sh $YEDFILENAME
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
