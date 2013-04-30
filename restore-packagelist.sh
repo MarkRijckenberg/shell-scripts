@@ -81,10 +81,10 @@ sudo apt-get --yes --force-yes install openshot
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install ubuntu-tweak
-# Install cinnamon desktop environment
-sudo add-apt-repository --yes ppa:gwendal-lebihan-dev/cinnamon-nightly
+# Install razorqt desktop environment
+sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
-sudo apt-get --yes --force-yes install cinnamon
+sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 # Install TLP - advanced power management command line tool for Linux
 sudo add-apt-repository --yes ppa:linrunner/tlp
 sudo apt-get update
@@ -97,8 +97,6 @@ sudo apt-get --yes --force-yes install skype
 sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo apt-get update
 sudo apt-get --yes --force-yes install  y-ppa-manager
-# Remove razor-qt desktop environment
-sudo apt-get --yes --force-yes remove razorqt razorqt-desktop
 
 # libdvdcss2, to play encrypted DVDs
 sudo apt-get --yes --force-yes install libdvdcss2
