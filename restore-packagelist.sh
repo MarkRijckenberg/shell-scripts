@@ -263,6 +263,7 @@ echo "Downloading and installing skychart"
 wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_amd64.deb
 sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
+sudo apt-get --purge remove texmaker
 wget http://www.xm1math.net/texmaker/texmaker_ubuntu_12.04_4.0.1_amd64.deb
 sudo dpkg -i texmaker_ubuntu_12.04_4.0.1_amd64.deb
 sudo apt-get -f install
@@ -278,6 +279,7 @@ echo "Downloading and installing skychart"
 wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
 sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
+sudo apt-get --purge remove texmaker
 wget http://www.xm1math.net/texmaker/texmaker_ubuntu_12.04_4.0.1_i386.deb
 sudo dpkg -i texmaker_ubuntu_12.04_4.0.1_i386.deb
 sudo apt-get -f install
