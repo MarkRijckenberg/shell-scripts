@@ -1,3 +1,4 @@
+#!/usr/bin/sh
 # TYPE: Korn Shell script.
 # PURPOSE: This korn shell script allows to easily remove GNU/Linux kernels. The script should be copied to /usr/bin/removekernel and set as executable. It is a poor man's alternative to Ubuntu Tweak.
 # REQUIRES: ksh, Ubuntu 12.04 LTS or newer
