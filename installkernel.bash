@@ -1,6 +1,7 @@
+#!/bin/bash
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily install new GNU/Linux kernels. The script should be copied to /usr/bin/installkernel and set as executable.
-# REQUIRES: ksh, Ubuntu 12.04 LTS or newer
+# REQUIRES: bash, Ubuntu 12.04 LTS or Ubuntu 12.10, not compatible with Ubuntu 13.04
 # Copyright (c) 2012  Savvas Radevic <vicedar@gmail.com>
 # REVISED: 20130323
 # Updated by: markrijckenberg@gmail.com
