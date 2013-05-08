@@ -20,7 +20,7 @@ SKYVIEWERFILENAME=skyviewer-1.0.0
 C2AFILENAME=c2a_full_2_0_49.zip
 
 #define source directories
-HOME=/home/ulysses/
+HOME=$(eval echo ~${SUDO_USER})
 SOURCE2=/etc/
 SOURCE3=/media/windows/rsync/
 
