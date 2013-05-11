@@ -151,6 +151,11 @@ sudo apt-get --yes --force-yes install opera
 sudo -E wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get --quiet update && sudo apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo apt-get --quiet update
 sudo apt-get --yes --force-yes install non-free-codecs libdvdcss
 
+# install Realplayer
+sudo apt-get update && sudo apt-get install lsb
+wget http://client-software.real.com/free/unix/RealPlayer11GOLD.deb
+sudo dpkg -i RealPlayer11GOLD.deb
+
 # clean up current directory
 echo "Performing file cleanup"
 mv *.zip $ZIP
