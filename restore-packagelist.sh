@@ -70,6 +70,15 @@ sudo apt-get update
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
+# Install razorqt desktop environment
+sudo add-apt-repository --yes ppa:razor-qt/ppa
+sudo apt-get update
+sudo apt-get --yes --force-yes install razorqt razorqt-desktop
+# install kde desktop environment
+sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
+sudo apt-get update
+sudo apt-get  --yes --force-yes   install kubuntu-desktop
+
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
 sudo apt-get update
@@ -82,10 +91,7 @@ sudo apt-get --yes --force-yes install openshot
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install ubuntu-tweak
-# Install razorqt desktop environment
-sudo add-apt-repository --yes ppa:razor-qt/ppa
-sudo apt-get update
-sudo apt-get --yes --force-yes install razorqt razorqt-desktop
+
 # Install TLP - advanced power management command line tool for Linux
 sudo add-apt-repository --yes ppa:linrunner/tlp
 sudo apt-get update
@@ -98,10 +104,6 @@ sudo apt-get --yes --force-yes install skype
 sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo apt-get update
 sudo apt-get --yes --force-yes install  y-ppa-manager
-# install kde desktop
-sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
-sudo apt-get update
-sudo apt-get  --yes --force-yes   install kubuntu-desktop
 
 # libdvdcss2, to play encrypted DVDs
 sudo apt-get --yes --force-yes install libdvdcss2
