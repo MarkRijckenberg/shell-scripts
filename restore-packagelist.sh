@@ -98,6 +98,10 @@ sudo apt-get --yes --force-yes install skype
 sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo apt-get update
 sudo apt-get --yes --force-yes install  y-ppa-manager
+# install kde desktop
+sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
+sudo apt-get update
+sudo apt-get  --yes --force-yes   install kubuntu-desktop
 
 # libdvdcss2, to play encrypted DVDs
 sudo apt-get --yes --force-yes install libdvdcss2
