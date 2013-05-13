@@ -426,6 +426,8 @@ echo "http://en.wikibooks.org/wiki/LaTeX"
 echo "http://latex.ugent.be/cursus.php"
 # following URL added on April 30, 2013:
 echo "http://www.texdoc.net/"
+# following URL added on May 13, 2013:
+echo "https://github.com/search?q=documentclass+book+astronomy&nwo=pwl%2Fmaster&search_target=global&type=Code&ref=cmdform"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
 # following URL added on April 23, 2013:
