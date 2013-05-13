@@ -279,8 +279,8 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
 sudo apt-get --purge remove texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/texstudio_2.5.2_amd64.deb
-sudo dpkg -i texstudio_2.5.2_amd64.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_3951_amd64.deb
+sudo dpkg -i texstudio_3951_amd64.deb
 sudo apt-get -f install
 
 else
@@ -295,8 +295,8 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
 sudo apt-get --purge remove texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_2.5.2_i386.deb
-sudo dpkg -i texstudio_2.5.2_i386.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_3951_i386.deb
+sudo dpkg -i texstudio_3951_i386.deb
 sudo apt-get -f install
 
 fi
