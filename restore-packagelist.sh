@@ -75,9 +75,9 @@ sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 # install kde desktop environment
-sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
-sudo apt-get update
-sudo apt-get  --yes --force-yes   install kubuntu-desktop
+#sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
+#sudo apt-get update
+#sudo apt-get  --yes --force-yes   install kubuntu-desktop
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
