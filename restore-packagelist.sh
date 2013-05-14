@@ -362,11 +362,6 @@ echo "Downloading American Astronomical Society manuscript preparation guideline
 wget http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
 mv aasguide.pdf American_Astronomical_Society_guidelines.pdf
 
-# download Users Guide to Writing a Thesis in Physics Astronomy Institute of the University of Bonn
-echo "Downloading Users Guide to Writing a Thesis in Physics Astronomy Institute of the University of Bonn"
-wget http://www-biblio.physik.uni-bonn.de/info/downloads/thesis_guide.pdf
-mv thesis_guide.pdf bonn_thesis_writing_guide_latex_march_31_2013.pdf
-
 # download The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii
 echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii"
 wget http://tobi.oetiker.ch/lshort/lshort.pdf
