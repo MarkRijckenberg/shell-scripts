@@ -428,7 +428,7 @@ echo "http://latex.ugent.be/cursus.php"
 echo "http://www.texdoc.net/"
 # following URL added on May 13, 2013:
 echo "https://github.com/search?q=documentclass+book+astronomy&nwo=pwl%2Fmaster&search_target=global&type=Code&ref=cmdform"
-# following URL added on May 14, 2013:
+# following URL added on May 14, 2013 - very handy when creating latex document in texstudio:
 echo "http://detexify.kirelabs.org/classify.html"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
