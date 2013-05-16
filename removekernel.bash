@@ -8,6 +8,7 @@
 # REVISED: 20130502
 # AUTHOR: markrijckenberg@gmail.com
 
+
 if [[ $1 == "" ]]; then
 echo "List of currently installed kernel .deb packages:"
 dpkg --list | grep linux-image | egrep '^[r,i]i'  | cut -d" " -f3
@@ -17,6 +18,11 @@ read KERNELVERSION
 
 echo "Removing kernel package $KERNELVERSION"
 apt-cache search $KERNELVERSION|cut -d" " -f1|xargs sudo apt-get remove -y
+
+elif [[ $1 == "all" ]]; then
+echo "Removing all previous kernel packages"
+dpkg -l 'linux-*' | grep -v libc| sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
+
 
 else
 echo "Removing kernel package $1"
