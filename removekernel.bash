@@ -8,23 +8,23 @@
 # REVISED: 20130502
 # AUTHOR: markrijckenberg@gmail.com
 
+select CHOICE in list-installed-kernels remove-a-specific-kernel remove-all-previous-kernels quit
+   do
+       case "$CHOICE" in
+     list-installed-kernels)    dpkg --list | grep linux-image | egrep '^[r,i]i'  | cut -d" " -f3
 
-if [[ $1 == "" ]]; then
-echo "List of currently installed kernel .deb packages:"
-dpkg --list | grep linux-image | egrep '^[r,i]i'  | cut -d" " -f3
-echo "No argument added after removekernel command"
-echo "Please enter kernel package to uninstall from your pc (for example: linux-image-3.9.0-030900rc5-generic) "
-read KERNELVERSION
+     ;;
+     remove-a-specific-kernel)  echo "Please enter kernel package to uninstall from your pc (for example: linux-image-3.9.0-030900rc5-generic) "
+                                read KERNELVERSION
+                                apt-cache search $KERNELVERSION|cut -d" " -f1|xargs sudo apt-get remove -y
 
-echo "Removing kernel package $KERNELVERSION"
-apt-cache search $KERNELVERSION|cut -d" " -f1|xargs sudo apt-get remove -y
+     ;;  
+     remove-all-previous-kernels)  dpkg -l 'linux-*' | grep -v libc| sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 
-elif [[ $1 == "all" ]]; then
-echo "Removing all previous kernel packages"
-dpkg -l 'linux-*' | grep -v libc| sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
+     ;; 
+     quit)                         exit
+     ;;
+        esac
 
+   done
 
-else
-echo "Removing kernel package $1"
-apt-cache search $1|cut -d" " -f1|xargs sudo apt-get remove -y
-fi
