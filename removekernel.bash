@@ -5,7 +5,7 @@
 # It is a poor man's alternative to Ubuntu Tweak.
 # REQUIRES: bash, Ubuntu 12.04 LTS or newer
 # REVISED: 20130302
-# REVISED: 20130502
+# REVISED: 20130516
 # AUTHOR: mark rijckenberg at gmail dot com
 
    echo "Please press one of the 4 numbers below and then hit the <ENTER> key to execute"
