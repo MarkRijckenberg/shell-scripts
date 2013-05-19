@@ -70,6 +70,11 @@ sudo apt-get update
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
+# Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
+sudo add-apt-repository ppa:kazam-team/stable-series
+sudo apt-get update
+sudo apt-get --yes --force-yes install kazam
+
 # Install razorqt desktop environment
 sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
