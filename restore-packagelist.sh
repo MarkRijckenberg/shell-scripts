@@ -124,7 +124,7 @@ sudo /usr/share/doc/libdvdread4/./install-css.sh
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
-# install Google Chrome browser which has better support for Flash websites (Youtube, ...)
+# install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
