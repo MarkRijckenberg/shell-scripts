@@ -1,10 +1,11 @@
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
+# and http://treexy.com/products/driver-fusion.aspx for system driver updates
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Ubuntu 12.04.02
 # REQUIRES: Ubuntu 12.04.02 LTS 64-bit (to support UEFI+SecureBoot), wget, apt-get, unp, wine
 # Author: Mark Rijckenberg
 # Copyright (c) 2012-08-12
-# REVISION DATE: 20130430
+# REVISION DATE: 20130521
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
