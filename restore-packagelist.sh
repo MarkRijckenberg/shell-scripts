@@ -103,9 +103,11 @@ sudo add-apt-repository --yes ppa:linrunner/tlp
 sudo apt-get update
 sudo apt-get --yes --force-yes install tlp tlp-rdw
 # install skype
-sudo add-apt-repository --yes ppa:upubuntu-com/chat
-sudo apt-get update
-sudo apt-get --yes --force-yes install skype
+sudo apt-get remove skype skype-bin
+sudo wget http://download.skype.com/linux/skype-ubuntu-precise_4.2.0.11-1_i386.deb
+sudo dpkg -i skype-ubuntu*.deb
+sudo apt-get -f install
+
 # install Y PPA Manager
 sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo apt-get update
