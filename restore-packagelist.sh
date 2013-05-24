@@ -13,6 +13,7 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define filename variables
+SKYPEFILENAME=skype-ubuntu-precise_4.2.0.11-1_i386.deb
 YEDFILENAME=yEd-3.10.2_32-bit_setup.sh
 DUFILENAME=DUv3_9pview.tgz
 NIGHTSHADEFILENAME=nightshade-11.12.1.tar.gz
@@ -104,7 +105,7 @@ sudo apt-get update
 sudo apt-get --yes --force-yes install tlp tlp-rdw
 # install skype
 sudo apt-get remove skype skype-bin
-sudo wget http://download.skype.com/linux/skype-ubuntu-precise_4.2.0.11-1_i386.deb
+sudo wget http://download.skype.com/linux/$SKYPEFILENAME
 sudo dpkg -i skype-ubuntu*.deb
 sudo apt-get -f install
 
