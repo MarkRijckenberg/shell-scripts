@@ -290,7 +290,7 @@ echo "Downloading and installing skychart"
 wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_amd64.deb
 sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
-sudo apt-get --purge remove texmaker
+sudo apt-get --yes --force-yes install  texmaker
 wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/$TEXSTUDIOFILENAME_amd64.deb
 sudo dpkg -i $TEXSTUDIOFILENAME_amd64.deb
 sudo apt-get -f install
@@ -306,7 +306,7 @@ echo "Downloading and installing skychart"
 wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
 sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
-sudo apt-get --purge remove texmaker
+sudo apt-get --yes --force-yes install   texmaker
 wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/$TEXSTUDIOFILENAME_i386.deb
 sudo dpkg -i $TEXSTUDIOFILENAME_i386.deb
 sudo apt-get -f install
