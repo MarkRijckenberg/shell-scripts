@@ -12,9 +12,12 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
 MACHINE_TYPE=`uname -m`
 
-# define filename variables
+# define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
+TEXSTUDIOFILENAME=texstudio_4018
 SKYPEFILENAME=skype-ubuntu-precise_4.2.0.11-1_i386.deb
 YEDFILENAME=yEd-3.10.2_32-bit_setup.sh
+
+# define Astronomy filename variables
 DUFILENAME=DUv3_9pview.tgz
 NIGHTSHADEFILENAME=nightshade-11.12.1.tar.gz
 SCISOFTFILENAME=scisoft-7.7.0.tar.gz
@@ -288,8 +291,8 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
 sudo apt-get --purge remove texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/texstudio_4007M_amd64.deb
-sudo dpkg -i texstudio_4007M_amd64.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/$TEXSTUDIOFILENAME_amd64.deb
+sudo dpkg -i $TEXSTUDIOFILENAME_amd64.deb
 sudo apt-get -f install
 
 else
@@ -304,8 +307,8 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
 sudo apt-get --purge remove texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/texstudio_4007M_i386.deb
-sudo dpkg -i texstudio_4007M_i386.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/$TEXSTUDIOFILENAME_i386.deb
+sudo dpkg -i $TEXSTUDIOFILENAME_i386.deb
 sudo apt-get -f install
 
 fi
