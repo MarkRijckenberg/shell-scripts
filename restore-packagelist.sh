@@ -20,9 +20,10 @@ YEDFILENAME=yEd-3.10.2_32-bit_setup.sh
 # define Astronomy filename variables
 DUFILENAME=DUv3_9pview.tgz
 NIGHTSHADEFILENAME=nightshade-11.12.1.tar.gz
-SCISOFTFILENAME=scisoft-7.7.0.tar.gz
+SCISOFTFILENAME=scisoft-7.7.0
 SKYVIEWERFILENAME=skyviewer-1.0.0
 C2AFILENAME=c2a_full_2_0_49.zip
+AUDELAFILENAME=audela-2.0.0
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
@@ -266,7 +267,7 @@ unp $NIGHTSHADEFILENAME
 
 # download and decompress scisoft utilities
 echo "Downloading and decompressing scisoft utilities"
-wget ftp://ftp.eso.org/scisoft/scisoft7.7.0/linux/fedora11/tar/$SCISOFTFILENAME
+wget ftp://ftp.eso.org/scisoft/$SCISOFTFILENAME/linux/fedora11/tar/$SCISOFTFILENAME.tar.gz
 unp $SCISOFTFILENAME
 
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
@@ -278,6 +279,11 @@ sudo qmake
 sudo make
 sudo make install
 cd ..
+
+# download and install Audela
+echo "Downloading and installing Audela - free and open source astronomy software intended for digital observations"
+wget http://sourceforge.net/projects/audela/files/audela/$AUDELAFILENAME/$AUDELAFILENAME.deb
+sudo dpkg -i  $AUDELAFILENAME.deb
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
