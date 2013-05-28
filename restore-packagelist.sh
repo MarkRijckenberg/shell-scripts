@@ -102,6 +102,10 @@ sudo apt-get --yes --force-yes install openshot
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install ubuntu-tweak
+# Install newest version of VLC player
+sudo add-apt-repository --yes ppa:videolan/stable-daily
+sudo apt-get update
+sudo apt-get --yes --force-yes install vlc
 
 # Install TLP - advanced power management command line tool for Linux
 sudo add-apt-repository --yes ppa:linrunner/tlp
