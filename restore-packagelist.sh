@@ -399,6 +399,10 @@ mv Key_Style_Points_1.0.pdf Springer-book-Key_Style_Points_1.0.pdf
 wget http://www.springer.com/cda/content/document/cda_downloaddocument/svmono.zip
 mv svmono.zip Springer-svmono-monograph-Latex-template.zip
 
+echo "Download awesome professional looking Legrand Orange Book template"
+wget http://www.latextemplates.com/templates/books/2/book_2.zip
+mv book_2.zip Legrand_Orange_Book_template_book_2.zip
+
 # clean up current directory
 echo "Performing file cleanup"
 mv *.zip $ZIP
@@ -455,6 +459,8 @@ echo "http://www.texdoc.net/"
 echo "https://github.com/search?q=documentclass+book+astronomy&nwo=pwl%2Fmaster&search_target=global&type=Code&ref=cmdform"
 # following URL added on May 14, 2013 - very handy when creating latex document in texstudio:
 echo "http://detexify.kirelabs.org/classify.html"
+# following URL added on May 28, 2013 - very handy when creating latex document in texstudio:
+echo "http://www.latextemplates.com/"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
 # following URL added on April 23, 2013:
