@@ -391,6 +391,14 @@ mv lshort.pdf latex2-not-so-short-introduction.pdf
 
 wget http://kelder.zeus.ugent.be/~gaspard/latex/latex-cursus.pdf
 
+echo "Downloading Springer monograph template"
+wget http://www.springer.com/cda/content/document/cda_downloaddocument/manuscript-guidelines-1.0.pdf
+mv manuscript-guidelines-1.0.pdf Springer-book-manuscript-guidelines-1.0.pdf
+wget http://www.springer.com/cda/content/document/cda_downloaddocument/Key_Style_Points_1.0.pdf
+mv Key_Style_Points_1.0.pdf Springer-book-Key_Style_Points_1.0.pdf
+wget http://www.springer.com/cda/content/document/cda_downloaddocument/svmono.zip
+mv svmono.zip Springer-svmono-monograph-Latex-template.zip
+
 # clean up current directory
 echo "Performing file cleanup"
 mv *.zip $ZIP
