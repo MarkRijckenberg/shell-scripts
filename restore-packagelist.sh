@@ -396,6 +396,9 @@ mv lshort.pdf latex2-not-so-short-introduction.pdf
 
 wget http://kelder.zeus.ugent.be/~gaspard/latex/latex-cursus.pdf
 
+wget http://latex-project.org/guides/lc2fr-apb.pdf
+mv lc2fr-apb.pdf‎detecting-solving-latex-issues.pdf
+
 echo "Downloading Springer monograph template"
 wget http://www.springer.com/cda/content/document/cda_downloaddocument/manuscript-guidelines-1.0.pdf
 mv manuscript-guidelines-1.0.pdf Springer-book-manuscript-guidelines-1.0.pdf
