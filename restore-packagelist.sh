@@ -404,13 +404,16 @@ sudo rm /etc/apt/sources.list.d/*
 grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 sudo cp /tmp/sources.list  /etc/apt/sources.list
 
-wget http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
-tar -zxvf simx-2.0.6.tar.gz
-cd simx-2.0.6/
-sudo ./configure
-sudo make
-sudo make install
-cd ..
+# wget http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
+# tar -zxvf simx-2.0.6.tar.gz
+# cd simx-2.0.6/
+# sudo ./configure
+# sudo make
+# sudo make install
+# cd ..
+# compile fails with error configure: error: Problem with readline; run 
+#  configure --help and see --with-readline option
+
 
 # download and decompress Digital Universe and Partiview Resources
 echo "Downloading and decompressing Digital Universe and Partiview Resources"
