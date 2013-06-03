@@ -470,6 +470,8 @@ echo "http://adsabs.harvard.edu/abstract_service.html"
 echo "http://ned.ipac.caltech.edu/"
 # excellent website added to this list on June 3, 2013
 echo "http://www.usvao.org/"
+# excellent website added to this list on June 3, 2013
+echo "http://vao.stsci.edu/portal/Mashup/Clients/Portal/DataDiscovery.html"
 echo "http://en.wikipedia.org/wiki/List_of_nearest_stars"
 echo "http://www.wolframalpha.com/input/?i=astronomy&a=*C.astronomy-_*ExamplePage-"
 echo "http://www.worldwidetelescope.org/webclient/"
