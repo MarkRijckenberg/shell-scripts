@@ -263,31 +263,7 @@ echo "Downloading Exoplanets"
 wget http://services.google.com/earth/kmz/exo_planets_n.kmz
 echo "kmz file can be opened using Google Earth"
 
-# download and decompress Digital Universe and Partiview Resources
-echo "Downloading and decompressing Digital Universe and Partiview Resources"
-wget http://haydenplanetarium.org/downloads/universe/linux/$DUFILENAME
-unp $DUFILENAME
 
-# download and decompress Nightshade 
-# Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
-echo "Downloading and decompressing Nightshade"
-wget http://www.nightshadesoftware.org/attachments/download/6/$NIGHTSHADEFILENAME
-unp $NIGHTSHADEFILENAME
-
-# download and decompress scisoft utilities
-echo "Downloading and decompressing scisoft utilities"
-wget ftp://ftp.eso.org/scisoft/$SCISOFTFILENAME/linux/fedora11/tar/$SCISOFTFILENAME.tar.gz
-unp $SCISOFTFILENAME
-
-# download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
-echo "Downloading and compiling skyviewer from nasa website"
-wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$SKYVIEWERFILENAME.tar.gz
-unp $SKYVIEWERFILENAME.tar.gz
-cd $SKYVIEWERFILENAME
-sudo qmake
-sudo make
-sudo make install
-cd ..
 
 # download and install Audela
 echo "Downloading and installing Audela - free and open source astronomy software intended for digital observations"
@@ -340,11 +316,6 @@ wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-
 sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
 sudo apt-get -f install
 
-# download C2A Planetarium Software for Windows platform
-echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
-wget http://www.astrosurf.com/c2a/english/download/$C2AFILENAME
-unp $C2AFILENAME
-wine setup.exe
 
 ###############################################################################################
 #     DOWNLOAD TRIATLAS PDF FILES BEFORE ANY OTHER PDF FILES                                  #
@@ -432,6 +403,55 @@ sudo apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 sudo cp /tmp/sources.list  /etc/apt/sources.list
+
+wget http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
+tar -zxvf simx-2.0.6.tar.gz
+cd simx-2.0.6/
+sudo ./configure
+sudo make
+sudo make install
+cd ..
+
+# download and decompress Digital Universe and Partiview Resources
+echo "Downloading and decompressing Digital Universe and Partiview Resources"
+wget http://haydenplanetarium.org/downloads/universe/linux/$DUFILENAME
+unp $DUFILENAME
+
+# download and decompress Nightshade 
+# Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
+echo "Downloading and decompressing Nightshade"
+wget http://www.nightshadesoftware.org/attachments/download/6/$NIGHTSHADEFILENAME
+unp $NIGHTSHADEFILENAME
+
+# download and decompress scisoft utilities
+echo "Downloading and decompressing scisoft utilities"
+wget ftp://ftp.eso.org/scisoft/$SCISOFTFILENAME/linux/fedora11/tar/$SCISOFTFILENAME.tar.gz
+unp $SCISOFTFILENAME
+
+# download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
+echo "Downloading and compiling skyviewer from nasa website"
+wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$SKYVIEWERFILENAME.tar.gz
+unp $SKYVIEWERFILENAME.tar.gz
+cd $SKYVIEWERFILENAME
+sudo qmake
+sudo make
+sudo make install
+cd ..
+
+# download C2A Planetarium Software for Windows platform
+echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
+wget http://www.astrosurf.com/c2a/english/download/$C2AFILENAME
+unp $C2AFILENAME
+wine setup.exe
+
+# clean up current directory
+echo "Performing file cleanup"
+mv *.zip $ZIP
+mv *.pdf $PDF
+mv *.deb $DEB
+mv *.km? $KMZ
+mv *gz $TAR
+rm *.exe
 
 ###############################################################################################
 #     SHOW INTERESTING WEBBROWSER BOOKMARKS                                                   #
