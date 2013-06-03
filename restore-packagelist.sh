@@ -475,6 +475,8 @@ echo "http://scholar.google.be"
 echo "http://www.google.com/mars/"
 # following URL added on April 23, 2013:
 echo "http://www.google.com/moon/"
+# following URL added on June 3, 2013:
+echo "http://www.redorbit.com/news/space/"
 echo "http://www.youtube.com/"
 echo "http://www.krantenkoppen.be/"
 echo "http://www.economist.com/"
