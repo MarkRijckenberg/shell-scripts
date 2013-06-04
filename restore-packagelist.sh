@@ -511,6 +511,8 @@ echo "http://www.krantenkoppen.be/"
 echo "http://www.economist.com/"
 echo "http://www.wired.com/"
 echo "http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/"
+# following URL added on June 4, 2013:
+echo "http://svs.gsfc.nasa.gov/"
 echo "http://mipav.cit.nih.gov/download.php"
 echo "http://www.amazon.com"
 echo "https://help.ubuntu.com/community/ExternalGuides"
