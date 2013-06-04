@@ -504,6 +504,8 @@ echo "http://www.google.com/mars/"
 echo "http://www.google.com/moon/"
 # following URL added on June 3, 2013:
 echo "http://www.redorbit.com/news/space/"
+# following URL added on June 4, 2013:
+echo "http://www.intechopen.com/search?q=astronomy"
 echo "http://www.youtube.com/"
 echo "http://www.krantenkoppen.be/"
 echo "http://www.economist.com/"
