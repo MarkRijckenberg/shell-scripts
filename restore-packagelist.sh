@@ -467,6 +467,8 @@ echo "http://arxiv.org/list/astro-ph/new"
 # to examine the original .tex file which uses the aastex class
 # decompress the extensionless source file using  the unp command
 echo "http://adsabs.harvard.edu/abstract_service.html"
+# excellent website added to this list on June 7, 2013
+echo "http://cdsweb.u-strasbg.fr/"
 echo "http://ned.ipac.caltech.edu/"
 # excellent website added to this list on June 3, 2013
 echo "http://www.usvao.org/"
