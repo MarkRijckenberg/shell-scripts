@@ -81,6 +81,13 @@ sudo add-apt-repository ppa:kazam-team/stable-series
 sudo apt-get update
 sudo apt-get --yes --force-yes install kazam
 
+#install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
+sudo add-apt-repository ppa:i-nex-development-team/daily
+sudo add-apt-repository ppa:nemh/gambas3
+sudo apt-get update
+sudo apt-get install  --yes --force-yes  i-nex  
+ 
+
 # Install razorqt desktop environment
 sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
