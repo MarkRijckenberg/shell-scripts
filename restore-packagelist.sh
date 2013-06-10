@@ -13,7 +13,7 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
-TEXSTUDIOFILENAME=texstudio_4031
+TEXSTUDIOFILENAME=texstudio_2.5.2
 SKYPEFILENAME=skype-ubuntu-precise_4.2.0.11-1_i386.deb
 YEDFILENAME=yEd-3.10.2_32-bit_setup.sh
 
