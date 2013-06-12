@@ -469,6 +469,8 @@ rm *.exe
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://www.gmail.com"
+# following URL added on June 12, 2013:
+echo "http://www.google.com/"
 echo "http://arxiv.org/list/astro-ph/new"
 # in arxiv.org: click on 'other' next to 'pdf' and choose to 'download source' using the axel command in a Terminal
 # to examine the original .tex file which uses the aastex class
@@ -517,6 +519,16 @@ echo "http://www.redorbit.com/news/space/"
 echo "http://www.intechopen.com/search?q=astronomy"
 echo "http://www.youtube.com/"
 echo "http://www.krantenkoppen.be/"
+# following URL added on June 12, 2013:
+echo "http://www.krantenkoppen.be/?rub=koppen&cat=wetenschap&taal=EN"
+# following URL added on June 12, 2013:
+echo "http://www.krantenkoppen.be/?rub=koppen&cat=wetenschap&taal=NL"
+# following URL added on June 12, 2013:
+echo "http://aer.aas.org/"
+# following URL added on June 12, 2013:
+echo "http://www.doaj.org/doaj?func=subject&cpId=56&uiLanguage=en"
+# following URL added on June 12, 2013:
+echo "http://www.hindawi.com/journals/aa/contents/"
 echo "http://www.economist.com/"
 echo "http://www.wired.com/"
 echo "http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/"
