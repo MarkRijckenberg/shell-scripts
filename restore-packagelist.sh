@@ -529,6 +529,8 @@ echo "http://aer.aas.org/"
 echo "http://www.doaj.org/doaj?func=subject&cpId=56&uiLanguage=en"
 # following URL added on June 12, 2013:
 echo "http://www.hindawi.com/journals/aa/contents/"
+# following URL added on June 12, 2013:
+echo "http://journals.cambridge.org/action/advanceSearch?jid=PAS&sessionId=70EB679458B99DAEDCA3807566C4DCEC.journals"
 echo "http://www.economist.com/"
 echo "http://www.wired.com/"
 echo "http://heasarc.gsfc.nasa.gov/docs/heasarc/astro-update/"
