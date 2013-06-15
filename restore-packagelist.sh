@@ -463,14 +463,13 @@ mv *.km? $KMZ
 mv *gz $TAR
 rm *.exe
 
+
 ###############################################################################################
 #     SHOW INTERESTING WEBBROWSER BOOKMARKS                                                   #
 ###############################################################################################
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
 echo "http://www.gmail.com"
-# following URL added on June 12, 2013:
-echo "http://www.google.com/"
 echo "http://arxiv.org/list/astro-ph/new"
 # in arxiv.org: click on 'other' next to 'pdf' and choose to 'download source' using the axel command in a Terminal
 # to examine the original .tex file which uses the aastex class
@@ -541,6 +540,17 @@ echo "http://www.amazon.com"
 echo "https://help.ubuntu.com/community/ExternalGuides"
 # following URL added on June 15, 2013:
 echo "http://www.verkeerscentrum.be/"
+
+###############################################################################################
+#     PRISM Break anonymizing websites                                                        #
+###############################################################################################
+# following URL added on June 15, 2013:
+echo "http://prism-break.org/"
+# following URL added on June 15, 2013:
+echo "https://duckduckgo.com"
+# following URL added on June 15, 2013:
+echo "http://www.opennicproject.org/nearest-servers/"
+
 echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
 echo "Use texstudio Ubuntu package with AASTeX special macros (aastex is part of texlive-publishers package)"
 echo "to write new Astronomy book"
