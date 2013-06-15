@@ -539,6 +539,8 @@ echo "http://svs.gsfc.nasa.gov/"
 echo "http://mipav.cit.nih.gov/download.php"
 echo "http://www.amazon.com"
 echo "https://help.ubuntu.com/community/ExternalGuides"
+# following URL added on June 15, 2013:
+echo "http://www.verkeerscentrum.be/"
 echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
 echo "Use texstudio Ubuntu package with AASTeX special macros (aastex is part of texlive-publishers package)"
 echo "to write new Astronomy book"
