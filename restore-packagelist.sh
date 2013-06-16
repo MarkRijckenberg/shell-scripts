@@ -224,6 +224,10 @@ sudo apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 sudo add-apt-repository  --yes ppa:texlive-backports/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes  install texlive biblatex
+
+wget http://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/1.6/binaries/Linux/biber-linux_x86_32.tar.gz
+unp biber-linux_x86_32.tar.gz
+
 
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
 sudo add-apt-repository --yes ppa:aims/casapy
