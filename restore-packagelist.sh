@@ -223,7 +223,7 @@ sudo apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
 sudo add-apt-repository  --yes ppa:texlive-backports/ppa
 sudo apt-get update
-sudo apt-get --yes --force-yes  install texlive
+sudo apt-get --yes --force-yes  install texlive biblatex
 
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
 sudo add-apt-repository --yes ppa:aims/casapy
