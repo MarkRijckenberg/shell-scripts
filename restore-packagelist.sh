@@ -1,8 +1,8 @@
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
 # and http://treexy.com/products/driver-fusion.aspx for system driver updates
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Ubuntu 12.04.02
-# REQUIRES: Ubuntu 12.04.02 LTS 64-bit (to support UEFI+SecureBoot), wget, apt-get, unp, wine
+# PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Ubuntu 12.10
+# REQUIRES: Ubuntu 12.10 LTS 64-bit (to support UEFI+SecureBoot), wget, apt-get, unp, wine, biber, biblatex
 # Author: Mark Rijckenberg
 # Copyright (c) 2012-08-12
 # REVISION DATE: 20130521
@@ -14,7 +14,7 @@ MACHINE_TYPE=`uname -m`
 
 # define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
 TEXSTUDIOFILENAME=texstudio_2.6.0
-SKYPEFILENAME=skype-ubuntu-precise_4.2.0.11-1_i386.deb
+SKYPEFILENAME=skype-ubuntu-quantal_4.2.0.11-1_i386.deb
 YEDFILENAME=yEd-3.10.2_32-bit_setup.sh
 
 # define Astronomy filename variables
@@ -234,7 +234,7 @@ sudo add-apt-repository --yes ppa:aims/casapy
 sudo apt-get update
 sudo apt-get --yes --force-yes install casapy-upstream-binary
 
-sudo add-apt-repository --yes ppa:olebole/astro-precise
+sudo add-apt-repository --yes ppa:olebole/astro-quantal
 sudo apt-get update
 sudo apt-get --yes --force-yes install casacore 
 sudo apt-get --yes --force-yes install cpl
@@ -293,7 +293,7 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
 sudo apt-get --yes --force-yes install  texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/amd64/$TEXSTUDIOFILENAME_amd64.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/$TEXSTUDIOFILENAME_amd64.deb
 sudo dpkg -i $TEXSTUDIOFILENAME_amd64.deb
 sudo apt-get -f install
 
@@ -309,7 +309,7 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
 sudo apt-get --yes --force-yes install   texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.04/i386/$TEXSTUDIOFILENAME_i386.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/$TEXSTUDIOFILENAME_i386.deb
 sudo dpkg -i $TEXSTUDIOFILENAME_i386.deb
 sudo apt-get -f install
 
