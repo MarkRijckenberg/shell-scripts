@@ -7,6 +7,7 @@
 
 while [[ $ACTION -ne 3 ]]; do
   WORKDIR=/tmp
+  name=Rijckenberg.Mark
   tiffname=scannedfile.tiff
   pdfname=scannedfile.pdf
   datepdf=$(date +"%Y_%m_%d_%H_%M_%S")
@@ -119,7 +120,7 @@ rm \.txt
 		    # First create and configure the files ~/.msmtprc  and ~/.mailrc
 		    # The file ~/.msmtprc should contain the line   set sendmail=/usr/bin/msmtp
 		    # Replace emailaddress@somewhere.com with the correct destination Email address
-		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $dateunitedpdf``echo $pdfname` emailaddress@somewhere.com
+		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $name``echo $dateunitedpdf``echo $pdfname` emailaddress@somewhere.com
 		    mkdir `echo $dateunitedpdf`
 		    mv *.pdf `echo $dateunitedpdf`
 	           fi
@@ -129,7 +130,7 @@ rm \.txt
 		    # The file ~/.msmtprc should contain the line   set sendmail=/usr/bin/msmtp
 		    # Replace emailaddress@somewhere.com with the correct destination Email address
 		    mv *.pdf  `echo $dateunitedpdf``echo $pdfname`
-		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $dateunitedpdf``echo $pdfname` emailaddress@somewhere.com
+		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $name``echo $dateunitedpdf``echo $pdfname` emailaddress@somewhere.com
 		    mkdir `echo $dateunitedpdf`
 		    mv *.pdf `echo $dateunitedpdf`
 	           fi
