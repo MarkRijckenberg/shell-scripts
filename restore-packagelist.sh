@@ -554,6 +554,8 @@ echo "https://help.ubuntu.com/community/ExternalGuides"
 echo "http://www.verkeerscentrum.be/"
 # following URL added on June 15, 2013:
 echo "http://offshoreleaks.icij.org/"
+# following URL added on June 15, 2013:
+echo "http://hubblesite.org/"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
