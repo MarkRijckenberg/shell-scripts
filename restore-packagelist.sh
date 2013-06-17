@@ -77,21 +77,27 @@ sudo apt-get update
 sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
 # Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
-sudo add-apt-repository ppa:kazam-team/stable-series
+sudo add-apt-repository --yes ppa:kazam-team/stable-series
 sudo apt-get update
 sudo apt-get --yes --force-yes install kazam
 
+# install Hostshots Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
+sudo apt-add-repository --yes ppa:dhor/myway
+sudo apt-get update
+sudo apt-get --yes --force-yes install hotshots
+
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
-sudo add-apt-repository ppa:i-nex-development-team/daily
+sudo add-apt-repository --yes ppa:i-nex-development-team/daily
 sudo add-apt-repository ppa:nemh/gambas3
 sudo apt-get update
-sudo apt-get install  --yes --force-yes  i-nex  
+sudo apt-get  --yes --force-yes  install i-nex  
  
 
 # Install razorqt desktop environment
 sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install razorqt razorqt-desktop
+
 # install kde desktop environment
 #sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
 #sudo apt-get update
@@ -101,14 +107,17 @@ sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
 sudo apt-get update
 sudo apt-get --yes --force-yes install cuttlefish 
+
 # Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
 sudo apt-add-repository --yes ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install openshot
+
 # Install Ubuntu Tweak to easily uninstall old kernel versions
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install ubuntu-tweak
+
 # Install newest version of VLC player
 sudo add-apt-repository --yes ppa:videolan/stable-daily
 sudo apt-get update
@@ -155,6 +164,7 @@ sudo apt-get --yes --force-yes -f install
 # install Teamviewer server + client
 wget http://download.teamviewer.com/download/teamviewer_linux_x64.deb
 sudo dpkg -i teamviewer_linux_x64.deb
+sudo apt-get --yes --force-yes -f install
 else
   # 32-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
@@ -169,6 +179,7 @@ sudo apt-get --yes --force-yes -f install
 # install Teamviewer server + client
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
+sudo apt-get --yes --force-yes -f install
 fi
 
 # install Opera browser
@@ -223,10 +234,7 @@ sudo apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
 sudo add-apt-repository  --yes ppa:texlive-backports/ppa
 sudo apt-get update
-sudo apt-get --yes --force-yes  install texlive biblatex
-
-wget http://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/1.6/binaries/Linux/biber-linux_x86_32.tar.gz
-unp biber-linux_x86_32.tar.gz
+sudo apt-get --yes --force-yes  install texlive-full biblatex biber
 
 
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
