@@ -556,8 +556,11 @@ echo "http://www.verkeerscentrum.be/"
 echo "http://offshoreleaks.icij.org/"
 # following URL added on June 15, 2013:
 echo "http://hubblesite.org/"
+###########AFTER VISIT TO GERARD ON JUNE 16 2013 ##############################################
 # following URL added on June 17, 2013:
 echo "http://www.newscientist.com/section/space"
+# following URL added on June 18, 2013:
+echo "http://www.bbc.co.uk/science/space/"
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
 ###############################################################################################
