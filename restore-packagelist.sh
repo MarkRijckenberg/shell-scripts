@@ -582,4 +582,6 @@ echo "to write new Astronomy book"
 echo "get bibliography citations at http://www.ottobib.com  using ISBN number and convert info to bibtex plain text .bib file for use in Latex document"
 echo "get bibliography citations at http://scholar.google.be using full title and author and choose import to bibtex"
 echo "For example use - filetype:pdf author:'h karttunen'  -  as search term in http://scholar.google.be"
+echo "For example use - site:arxiv.org intext:"habitable zone" - as search term in http://www.google.be/"
 echo "Get more information about latex package by using command   texdoc <packagename> , for example: texdoc graphicx"
+
