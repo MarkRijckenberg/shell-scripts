@@ -561,6 +561,11 @@ echo "http://hubblesite.org/"
 echo "http://www.newscientist.com/section/space"
 # following URL added on June 18, 2013:
 echo "http://www.bbc.co.uk/science/space/"
+# following URL added on June 26, 2013:
+echo "http://www.eso.org/sci/php/libraries/latest-eso-papers.html"
+# following URL added on June 27, 2013:
+echo "http://www.googleguide.com/advanced_operators_reference.html"
+
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
 ###############################################################################################
