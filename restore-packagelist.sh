@@ -565,6 +565,8 @@ echo "http://www.bbc.co.uk/science/space/"
 echo "http://www.eso.org/sci/php/libraries/latest-eso-papers.html"
 # following URL added on June 27, 2013:
 echo "http://www.googleguide.com/advanced_operators_reference.html"
+# following URL added on June 28, 2013:
+echo "http://spectrum.ieee.org/aerospace/astrophysics"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
