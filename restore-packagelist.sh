@@ -86,6 +86,16 @@ sudo apt-add-repository --yes ppa:dhor/myway
 sudo apt-get update
 sudo apt-get --yes --force-yes install hotshots
 
+# install desurium game client
+sudo apt-add-repository --yes ppa:makson96/desurium
+sudo apt-get update
+sudo apt-get --yes --force-yes install desurium
+
+# install 64-bit compatible Steam client
+wget -c media.steampowered.com/client/installer/steam.deb
+sudo dpkg -i steam.deb
+sudo apt-get  --yes --force-yes  install -f
+
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
 sudo add-apt-repository --yes ppa:i-nex-development-team/daily
 sudo add-apt-repository ppa:nemh/gambas3
