@@ -177,6 +177,10 @@ sudo apt-get --yes --force-yes -f install
 wget http://download.teamviewer.com/download/teamviewer_linux_x64.deb
 sudo dpkg -i teamviewer_linux_x64.deb
 sudo apt-get --yes --force-yes -f install
+# install newest wine version 
+sudo add-apt-repository ppa:ubuntu-wine/ppa 
+sudo apt-get update
+sudo apt-get install wine1.6 winetricks wine1.6-amd64
 else
   # 32-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
@@ -192,6 +196,11 @@ sudo apt-get --yes --force-yes -f install
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo apt-get --yes --force-yes -f install
+# install newest wine version 
+sudo add-apt-repository ppa:ubuntu-wine/ppa 
+sudo apt-get update
+sudo apt-get install wine1.6-i386
+sudo apt-get install wine1.6 winetricks
 fi
 
 # install Opera browser
