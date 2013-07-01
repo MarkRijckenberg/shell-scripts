@@ -588,6 +588,8 @@ echo "http://www.eso.org/sci/php/libraries/latest-eso-papers.html"
 echo "http://www.googleguide.com/advanced_operators_reference.html"
 # following URL added on June 28, 2013:
 echo "http://spectrum.ieee.org/aerospace/astrophysics"
+# following URL added on July 1, 2013:
+echo "http://simbad.u-strasbg.fr/Simbad"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
