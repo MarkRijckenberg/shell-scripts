@@ -590,6 +590,8 @@ echo "http://www.googleguide.com/advanced_operators_reference.html"
 echo "http://spectrum.ieee.org/aerospace/astrophysics"
 # following URL added on July 1, 2013:
 echo "http://simbad.u-strasbg.fr/Simbad"
+# following URL added on July 1, 2013:
+echo "http://science.nasa.gov/science-news/"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
