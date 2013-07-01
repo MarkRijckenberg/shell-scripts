@@ -594,6 +594,8 @@ echo "http://simbad.u-strasbg.fr/Simbad"
 echo "http://science.nasa.gov/science-news/"
 # following URL added on July 1, 2013:
 echo "http://news.discovery.com/space/tags/astrophysics.htm"
+# following URL added on July 1, 2013:
+echo "http://www.oalib.com/ "
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
