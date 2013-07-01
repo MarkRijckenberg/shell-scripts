@@ -592,6 +592,8 @@ echo "http://spectrum.ieee.org/aerospace/astrophysics"
 echo "http://simbad.u-strasbg.fr/Simbad"
 # following URL added on July 1, 2013:
 echo "http://science.nasa.gov/science-news/"
+# following URL added on July 1, 2013:
+echo "http://news.discovery.com/space/tags/astrophysics.htm"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
