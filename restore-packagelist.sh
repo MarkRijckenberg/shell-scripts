@@ -78,15 +78,36 @@ sudo apt-get update
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
+#install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
+sudo add-apt-repository --yes ppa:i-nex-development-team/daily
+sudo add-apt-repository --yes  ppa:nemh/gambas3
+sudo apt-get update
+sudo apt-get  --yes --force-yes  install i-nex 
+
+# Install TLP - advanced power management command line tool for Linux
+sudo add-apt-repository --yes ppa:linrunner/tlp
+sudo apt-get update
+sudo apt-get --yes --force-yes install tlp tlp-rdw
+
 # Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
 sudo add-apt-repository --yes ppa:kazam-team/stable-series
 sudo apt-get update
 sudo apt-get --yes --force-yes install kazam
 
-# install Hostshots Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
+# install hotshots Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
 sudo apt-add-repository --yes ppa:dhor/myway
 sudo apt-get update
 sudo apt-get --yes --force-yes install hotshots
+
+# install kdenlive video editor
+sudo apt-add-repository --yes  ppa:philip5/extra
+sudo apt-get update
+sudo apt-get --yes --force-yes install kdenlive
+
+# Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
+sudo apt-add-repository --yes ppa:openshot.developers/ppa
+sudo apt-get update
+sudo apt-get --yes --force-yes install openshot
 
 # install desurium game client
 sudo apt-add-repository --yes ppa:makson96/desurium
@@ -96,15 +117,8 @@ sudo apt-get --yes --force-yes install desurium
 # install 64-bit compatible Steam client
 wget -c media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
-sudo apt-get  --yes --force-yes  install -f
-
-#install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
-sudo add-apt-repository --yes ppa:i-nex-development-team/daily
-sudo add-apt-repository ppa:nemh/gambas3
-sudo apt-get update
-sudo apt-get  --yes --force-yes  install i-nex  
+sudo apt-get  --yes --force-yes  install -f 
  
-
 # Install razorqt desktop environment
 sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
@@ -120,11 +134,6 @@ sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
 sudo apt-get update
 sudo apt-get --yes --force-yes install cuttlefish 
 
-# Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
-sudo apt-add-repository --yes ppa:openshot.developers/ppa
-sudo apt-get update
-sudo apt-get --yes --force-yes install openshot
-
 # Install Ubuntu Tweak to easily uninstall old kernel versions
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
@@ -135,10 +144,6 @@ sudo add-apt-repository --yes ppa:videolan/stable-daily
 sudo apt-get update
 sudo apt-get --yes --force-yes install vlc
 
-# Install TLP - advanced power management command line tool for Linux
-sudo add-apt-repository --yes ppa:linrunner/tlp
-sudo apt-get update
-sudo apt-get --yes --force-yes install tlp tlp-rdw
 # install skype
 sudo apt-get remove skype skype-bin
 sudo wget http://download.skype.com/linux/$SKYPEFILENAME
