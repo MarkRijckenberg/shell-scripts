@@ -603,6 +603,8 @@ echo "http://news.discovery.com/space/tags/astrophysics.htm"
 echo "http://www.oalib.com/"
 # following URL added on July 5, 2013:
 echo "http://www.ncbi.nlm.nih.gov/pmc/"
+# following URL added on July 10, 2013:
+echo "http://www.capjournal.org/issues/"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
