@@ -11,7 +11,7 @@ while [[ $ACTION -ne 3 ]]; do
   pdfname=scannedfile.pdf
   datepdf=$(date +"%Y_%m_%d_%H_%M_%S")
   dateunitedpdf=$(date +"%Y_%m_%d")
-  pdfquantity=$(ls|grep pdf|wc -l)
+  pdfquantity=$(ls $WORKDIR|grep pdf|wc -l)
   cd $WORKDIR
   echo "Press 1 to scan single document and save it in your work directory as a PDF"
   echo "Press 2 to unite multiple PDF files in your work directory, send united PDF to your Email account, and then archive them"
