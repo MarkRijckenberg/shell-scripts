@@ -16,7 +16,7 @@ MACHINE_TYPE=`uname -m`
 
 # define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
 TEXSTUDIOFILENAME=texstudio_2.6.2
-SKYPEFILENAME=skype-ubuntu-quantal_4.2.0.11-1_i386.deb
+SKYPEFILENAME=skype-ubuntu-precise_4.2.0.11-1_i386.deb
 YEDFILENAME=yEd-3.11_32-bit_setup.sh
 
 # define Astronomy filename variables
