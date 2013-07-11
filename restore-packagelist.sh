@@ -605,6 +605,8 @@ echo "http://www.oalib.com/"
 echo "http://www.ncbi.nlm.nih.gov/pmc/"
 # following URL added on July 10, 2013:
 echo "http://www.capjournal.org/issues/"
+# following URL added on July 11, 2013:
+echo "http://www.nature.com/nature/archive/subject.html?code=34"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
