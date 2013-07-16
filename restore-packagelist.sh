@@ -609,6 +609,8 @@ echo "http://www.capjournal.org/issues/"
 echo "http://www.nature.com/nature/archive/subject.html?code=34"
 # following URL added on July 11, 2013:
 echo "http://www.spacetelescope.org/news/"
+# following URL added on July 16, 2013:
+echo "http://interestingengineering.com/"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
