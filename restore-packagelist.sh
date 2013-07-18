@@ -174,7 +174,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
-# install 4kvideodownloader
+# install 4kvideodownloader - Youtube playlist downloader
 wget http://4kdownload.googlecode.com/files/4kvideodownloader_2.8-1_i386.deb
 sudo dpkg -i 4kvideodownloader_2.8-1_amd64.deb
 sudo apt-get --yes --force-yes -f install
@@ -197,7 +197,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
-# install 4kvideodownloader
+# install 4kvideodownloader - Youtube playlist downloader
 wget http://4kdownload.googlecode.com/files/4kvideodownloader_2.8-1_i386.deb
 sudo dpkg -i 4kvideodownloader_2.8-1_i386.deb
 sudo apt-get --yes --force-yes -f install
