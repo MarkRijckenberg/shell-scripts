@@ -175,7 +175,7 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kvideodownloader - Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/4kvideodownloader_2.8-1_i386.deb
+wget http://4kdownload.googlecode.com/files/4kvideodownloader_2.8-1_amd64.deb
 sudo dpkg -i 4kvideodownloader_2.8-1_amd64.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
