@@ -619,6 +619,8 @@ echo "http://www.nature.com/nature/archive/subject.html?code=34"
 echo "http://www.spacetelescope.org/news/"
 # following URL added on July 16, 2013:
 echo "http://interestingengineering.com/"
+# open-source data analytics / data mining application for Ubuntu - added on July 19, 2013:
+echo "http://orange.biolab.si/"
 
 ###############################################################################################
 #     PRISM Break anonymizing websites                                                        #
