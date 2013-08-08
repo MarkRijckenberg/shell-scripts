@@ -99,6 +99,11 @@ sudo apt-add-repository --yes ppa:dhor/myway
 sudo apt-get update
 sudo apt-get --yes --force-yes install hotshots
 
+# install Final Term - excellent Terminal emulator in  Ubuntu 12.04 / 12.10 / 13.04
+sudo apt-add-repository --yes ppa:finalterm/daily
+sudo apt-get update
+sudo apt-get --yes --force-yes install finalterm
+
 # install kdenlive video editor
 sudo apt-add-repository --yes  ppa:philip5/extra
 sudo apt-get update
