@@ -84,6 +84,11 @@ sudo add-apt-repository --yes  ppa:nemh/gambas3
 sudo apt-get update
 sudo apt-get  --yes --force-yes  install i-nex 
 
+# install google-talkplugin
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/talkplugin/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update
+sudo apt-get  --yes --force-yes  install google-talkplugin
 # Install TLP - advanced power management command line tool for Linux
 sudo add-apt-repository --yes ppa:linrunner/tlp
 sudo apt-get update
