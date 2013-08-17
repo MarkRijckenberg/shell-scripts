@@ -18,7 +18,7 @@ MACHINE_TYPE=`uname -m`
 TEXSTUDIOFILENAME="texstudio_2.6.2"
 SKYPEFILENAME="skype-ubuntu-precise_4.2.0.11-1_i386.deb"
 YEDFILENAME="yEd-3.11_32-bit_setup.sh"
-FOURKFILENAME="4kyoutubetomp3_2.7-1"
+FOURKFILENAME="4kvideodownloader_2.7-1"
 
 # define Astronomy filename variables
 DUFILENAME="DUv3_9pview.tgz"
@@ -157,7 +157,7 @@ sudo apt-get --yes --force-yes install vlc
 
 # install skype
 sudo apt-get remove skype skype-bin
-wget http://download.skype.com/linux/$SKYPEFILENAME
+wget http://download.skype.com/linux/`echo $SKYPEFILENAME`
 sudo dpkg -i skype-ubuntu*.deb
 sudo apt-get -f install
 
@@ -186,8 +186,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/$FOURKFILENAME_amd64.deb
-sudo dpkg -i $FOURKFILENAME_amd64.deb
+wget http://4kdownload.googlecode.com/files/`echo $FOURKFILENAME`_amd64.deb
+sudo dpkg -i `echo $FOURKFILENAME`_amd64.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
@@ -209,8 +209,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/$FOURKFILENAME_i386.deb
-sudo dpkg -i $FOURKFILENAME_i386.deb
+wget http://4kdownload.googlecode.com/files/`echo $FOURKFILENAME`_i386.deb
+sudo dpkg -i `echo $FOURKFILENAME`_i386.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
@@ -267,8 +267,8 @@ sudo cp /tmp/sources.list  /etc/apt/sources.list
 # Install yEd editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
 # Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
-wget http://www.yworks.com/products/yed/demo/$YEDFILENAME
-sh $YEDFILENAME
+wget http://www.yworks.com/products/yed/demo/`echo $YEDFILENAME`
+sh `echo $YEDFILENAME`
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
@@ -331,8 +331,8 @@ echo "kmz file can be opened using Google Earth"
 
 # download and install Audela
 echo "Downloading and installing Audela - free and open source astronomy software intended for digital observations"
-wget http://sourceforge.net/projects/audela/files/audela/$AUDELAFILENAME/$AUDELAFILENAME.deb
-sudo dpkg -i  $AUDELAFILENAME.deb
+wget http://sourceforge.net/projects/audela/files/audela/`echo $AUDELAFILENAME`/`echo $AUDELAFILENAME`.deb
+sudo dpkg -i  `echo $AUDELAFILENAME`.deb
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
@@ -346,8 +346,8 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
 sudo apt-get --yes --force-yes install  texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/$TEXSTUDIOFILENAME_amd64.deb
-sudo dpkg -i $TEXSTUDIOFILENAME_amd64.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/`echo $TEXSTUDIOFILENAME`_amd64.deb
+sudo dpkg -i `echo $TEXSTUDIOFILENAME`_amd64.deb
 sudo apt-get -f install
 
 else
@@ -362,8 +362,8 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
 sudo apt-get --yes --force-yes install   texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/$TEXSTUDIOFILENAME_i386.deb
-sudo dpkg -i $TEXSTUDIOFILENAME_i386.deb
+wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/`echo $TEXSTUDIOFILENAME`_i386.deb
+sudo dpkg -i `echo $TEXSTUDIOFILENAME`_i386.deb
 sudo apt-get -f install
 
 fi
@@ -481,25 +481,25 @@ sudo cp /tmp/sources.list  /etc/apt/sources.list
 
 # download and decompress Digital Universe and Partiview Resources
 echo "Downloading and decompressing Digital Universe and Partiview Resources"
-wget http://haydenplanetarium.org/downloads/universe/linux/$DUFILENAME
-unp $DUFILENAME
+wget http://haydenplanetarium.org/downloads/universe/linux/`echo $DUFILENAME`
+unp `echo $DUFILENAME`
 
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
 echo "Downloading and decompressing Nightshade"
-wget http://www.nightshadesoftware.org/attachments/download/6/$NIGHTSHADEFILENAME
-unp $NIGHTSHADEFILENAME
+wget http://www.nightshadesoftware.org/attachments/download/6/`echo $NIGHTSHADEFILENAME`
+unp `echo $NIGHTSHADEFILENAME`
 
 # download and decompress scisoft utilities
 echo "Downloading and decompressing scisoft utilities"
-wget ftp://ftp.eso.org/scisoft/$SCISOFTFILENAME/linux/fedora11/tar/$SCISOFTFILENAME.tar.gz
-unp $SCISOFTFILENAME
+wget ftp://ftp.eso.org/scisoft/`echo $SCISOFTFILENAME`/linux/fedora11/tar/`echo $SCISOFTFILENAME`.tar.gz
+unp `echo $SCISOFTFILENAME`
 
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 echo "Downloading and compiling skyviewer from nasa website"
-wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$SKYVIEWERFILENAME.tar.gz
-unp $SKYVIEWERFILENAME.tar.gz
-cd $SKYVIEWERFILENAME
+wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/`echo $SKYVIEWERFILENAME`.tar.gz
+unp `echo $SKYVIEWERFILENAME`.tar.gz
+cd `echo $SKYVIEWERFILENAME`
 sudo qmake
 sudo make
 sudo make install
@@ -507,8 +507,8 @@ cd ..
 
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
-wget http://www.astrosurf.com/c2a/english/download/$C2AFILENAME
-unp $C2AFILENAME
+wget http://www.astrosurf.com/c2a/english/download/`echo $C2AFILENAME`
+unp `echo $C2AFILENAME`
 wine setup.exe
 
 # clean up current directory
