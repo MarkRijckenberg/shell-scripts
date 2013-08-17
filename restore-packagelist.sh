@@ -15,18 +15,18 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
-TEXSTUDIOFILENAME=texstudio_2.6.2
-SKYPEFILENAME=skype-ubuntu-precise_4.2.0.11-1_i386.deb
-YEDFILENAME=yEd-3.11_32-bit_setup.sh
-4KFILENAME=4kyoutubetomp3_2.7-1
+TEXSTUDIOFILENAME="texstudio_2.6.2"
+SKYPEFILENAME="skype-ubuntu-precise_4.2.0.11-1_i386.deb"
+YEDFILENAME="yEd-3.11_32-bit_setup.sh"
+FOURKFILENAME="4kyoutubetomp3_2.7-1"
 
 # define Astronomy filename variables
-DUFILENAME=DUv3_9pview.tgz
-NIGHTSHADEFILENAME=nightshade-11.12.1.tar.gz
-SCISOFTFILENAME=scisoft-7.7.0
-SKYVIEWERFILENAME=skyviewer-1.0.0
-C2AFILENAME=c2a_full_2_0_49.zip
-AUDELAFILENAME=audela-2.0.0
+DUFILENAME="DUv3_9pview.tgz"
+NIGHTSHADEFILENAME="nightshade-11.12.1.tar.gz"
+SCISOFTFILENAME="scisoft-7.7.0"
+SKYVIEWERFILENAME="skyviewer-1.0.0"
+C2AFILENAME="c2a_full_2_0_49.zip"
+AUDELAFILENAME="audela-2.0.0"
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
@@ -186,8 +186,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/$4KFILENAME_amd64.deb
-sudo dpkg -i $4KFILENAME_amd64.deb
+wget http://4kdownload.googlecode.com/files/$FOURKFILENAME_amd64.deb
+sudo dpkg -i $FOURKFILENAME_amd64.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
@@ -209,8 +209,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/$4KFILENAME_i386.deb
-sudo dpkg -i $4KFILENAME_i386.deb
+wget http://4kdownload.googlecode.com/files/$FOURKFILENAME_i386.deb
+sudo dpkg -i $FOURKFILENAME_i386.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
