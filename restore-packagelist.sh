@@ -18,6 +18,7 @@ MACHINE_TYPE=`uname -m`
 TEXSTUDIOFILENAME=texstudio_2.6.2
 SKYPEFILENAME=skype-ubuntu-precise_4.2.0.11-1_i386.deb
 YEDFILENAME=yEd-3.11_32-bit_setup.sh
+4KFILENAME=4kyoutubetomp3_2.7-1
 
 # define Astronomy filename variables
 DUFILENAME=DUv3_9pview.tgz
@@ -156,7 +157,7 @@ sudo apt-get --yes --force-yes install vlc
 
 # install skype
 sudo apt-get remove skype skype-bin
-sudo wget http://download.skype.com/linux/$SKYPEFILENAME
+wget http://download.skype.com/linux/$SKYPEFILENAME
 sudo dpkg -i skype-ubuntu*.deb
 sudo apt-get -f install
 
@@ -185,8 +186,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/4kyoutubetomp3_2.7-1_amd64.deb
-sudo dpkg -i 4kyoutubetomp3_2.7-1_amd64.deb
+wget http://4kdownload.googlecode.com/files/$4KFILENAME_amd64.deb
+sudo dpkg -i $4KFILENAME_amd64.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
@@ -208,8 +209,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/4kyoutubetomp3_2.7-1_i386.deb
-sudo dpkg -i 4kyoutubetomp3_2.7-1_i386.deb
+wget http://4kdownload.googlecode.com/files/$4KFILENAME_i386.deb
+sudo dpkg -i $4KFILENAME_i386.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
