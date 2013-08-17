@@ -185,8 +185,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/4kyoutubetomp3_2.3-1_amd64.deb
-sudo dpkg -i 4kyoutubetomp3_2.3-1_amd64.deb
+wget http://4kdownload.googlecode.com/files/4kyoutubetomp3_2.7-1_amd64.deb
+sudo dpkg -i 4kyoutubetomp3_2.7-1_amd64.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
@@ -208,8 +208,8 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/4kyoutubetomp3_2.3-1_i386.deb
-sudo dpkg -i 4kyoutubetomp3_2.3-1_i386.deb
+wget http://4kdownload.googlecode.com/files/4kyoutubetomp3_2.7-1_i386.deb
+sudo dpkg -i 4kyoutubetomp3_2.7-1_i386.deb
 sudo apt-get --yes --force-yes -f install
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
