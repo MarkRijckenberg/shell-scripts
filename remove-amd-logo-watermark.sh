@@ -1,3 +1,4 @@
+#!/bin/sh
 # TYPE: Korn Shell script.
 # PURPOSE: This korn shell script allows to easily remove AMD/ATI Watermark in AMD graphics drivers for Ubuntu 13.04
 # REQUIRES: ksh, Ubuntu 13.04 or newer
@@ -5,7 +6,6 @@
 # AUTHOR: http://www.youtube.com/user/midfingr
 # UPDATED BY: markrijckenberg@gmail.com
 
-#!/bin/sh
 DRIVER=`find /usr/lib -name fglrx_drv.so`
 
 echo "Come on AMD!"
