@@ -369,10 +369,24 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
 wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86_64.tar.gz
 unp iraf.lnux.x86_64.tar.gz
+
 echo "Downloading and installing skychart"
-wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_amd64.deb
-sudo dpkg -i skychart_3.8-2450_amd64.deb
+SKYCHARTREMOTEDIR="http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/"
+url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's/^.*"\([^"]*skychart[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+# Create a temporary directory
+dir=$(mktemp -dt)
+cd "$dir"
+# Download the .deb file
+wget `echo $SKYCHARTREMOTEDIR``echo $url`
+# Install the package
+sudo dpkg -i $url
+# Clean up
+rm $url
+cd
+rm -rf "$dir"
+cd
 sudo apt-get -f install
+
 sudo apt-get --yes --force-yes install  texmaker
 #install texstudio
 TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/"
@@ -398,10 +412,24 @@ else
 echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
 wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
 unp iraf.lnux.x86.tar.gz
+
 echo "Downloading and installing skychart"
-wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/skychart_3.8-2450_i386.deb
-sudo dpkg -i skychart_3.8-2450_i386.deb
+SKYCHARTREMOTEDIR="http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/"
+url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's/^.*"\([^"]*skychart[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+# Create a temporary directory
+dir=$(mktemp -dt)
+cd "$dir"
+# Download the .deb file
+wget `echo $SKYCHARTREMOTEDIR``echo $url`
+# Install the package
+sudo dpkg -i $url
+# Clean up
+rm $url
+cd
+rm -rf "$dir"
+cd
 sudo apt-get -f install
+
 sudo apt-get --yes --force-yes install   texmaker
 #install texstudio
 TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/"
