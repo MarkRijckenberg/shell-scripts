@@ -1,3 +1,4 @@
+#!/bin/bash
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
 # and http://treexy.com/products/driver-fusion.aspx for system driver updates
 # TYPE: Bash Shell script.
