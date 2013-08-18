@@ -346,8 +346,21 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_amd64.deb
 sudo apt-get -f install
 sudo apt-get --yes --force-yes install  texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/`echo $TEXSTUDIOFILENAME`_amd64.deb
-sudo dpkg -i `echo $TEXSTUDIOFILENAME`_amd64.deb
+#install texstudio
+TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/"
+url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
+# Create a temporary directory
+dir=$(mktemp -dt)
+cd "$dir"
+# Download the .deb file
+wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
+# Install the package
+sudo dpkg -i `echo $url`
+# Clean up
+rm `echo $url`
+cd
+rm -rf "$dir"
+cd
 sudo apt-get -f install
 
 else
@@ -362,8 +375,21 @@ wget http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.
 sudo dpkg -i skychart_3.8-2450_i386.deb
 sudo apt-get -f install
 sudo apt-get --yes --force-yes install   texmaker
-wget http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/`echo $TEXSTUDIOFILENAME`_i386.deb
-sudo dpkg -i `echo $TEXSTUDIOFILENAME`_i386.deb
+#install texstudio
+TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/"
+url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
+# Create a temporary directory
+dir=$(mktemp -dt)
+cd "$dir"
+# Download the .deb file
+wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
+# Install the package
+sudo dpkg -i `echo $url`
+# Clean up
+rm `echo $url`
+cd
+rm -rf "$dir"
+cd
 sudo apt-get -f install
 
 fi
