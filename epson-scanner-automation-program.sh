@@ -1,9 +1,9 @@
+#!/bin/ksh
 # TYPE: Korn Shell script.
 # PURPOSE: Scan gray scale documents on Epson scanner to PDF file. Can unite multiple PDF files in work directory, automatically send united PDF to your Email account, and then automatically archive them.
 # REQUIRES: ksh, scanimage, tesseract, msmtp, heirloom-mailx, imagemagick, pdfunite
 # REVISED: 20130301
 # AUTHOR: Mark Rijckenberg
-#!/bin/ksh
 
 while [[ $ACTION -ne 3 ]]; do
   WORKDIR=/tmp
