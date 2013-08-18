@@ -1,3 +1,4 @@
+#!/bin/bash
 #Ubuntu backup script - 2012-08-12 - Mark Rijckenberg - version 1.0
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
