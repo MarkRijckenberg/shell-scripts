@@ -1,3 +1,4 @@
+#!/bin/ksh
 # TYPE: Korn Shell script.
 # PURPOSE: This korn shell script works for Temenos T24 V6 + JBASE 4.1.5.10 and JBASE 4.1.5.22 installs. This script is an ugly hack that is required when you are not allowed
 #  to use deployment tools like puppet or chef and are not allowed to get root access to the AIX server :-)  All the configuration is handled via this file for 	all T24 environments.
@@ -8,7 +9,6 @@
 # REVISED: 20130301
 # AUTHOR: markrijckenberg@gmail.com
 #
-#!/bin/ksh
 
 ##For korn shell (or bash), use trap to set up the shell to catch the error and run a command. The simplest command to run is "exit" or "exit $?" so that the script is aborted. #The following command should be executed somewhere early in the script, and will apply to all following commands (which don't have their exit value checked by inbuilt shell #control structures (if && || ! etc.)
 
