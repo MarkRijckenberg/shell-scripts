@@ -1,3 +1,4 @@
+#!/bin/sh
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily mirror an image. 
 # People will like photo's of themselves more if the image is mirrored.
@@ -5,7 +6,6 @@
 # Copyright (c) 2009  Thomas Bruederli (thomasb), Project leader and head developer of the Roundcube webmail project.
 # REVISED: 20130404
 # Updated by: markrijckenberg@gmail.com
-#!/bin/sh
 
 infile=$1
 outfile=$2
