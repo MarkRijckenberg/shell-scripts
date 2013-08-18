@@ -185,10 +185,25 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
+
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/`echo $FOURKFILENAME`_amd64.deb
-sudo dpkg -i `echo $FOURKFILENAME`_amd64.deb
+# install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
+VIDEODOWNLOADERREMOTEDIR="https://code.google.com/p/4kdownload/"
+url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+# Create a temporary directory
+dir=$(mktemp -dt)
+cd "$dir"
+# Download the .deb file
+wget `echo $url`
+# Install the package
+sudo dpkg -i "${url##*/}"
+# Clean up
+rm "${url##*/}"
+cd
+rm -rf "$dir"
+cd
 sudo apt-get --yes --force-yes -f install
+
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 sudo dpkg -i google-earth-stable_current_amd64.deb
@@ -208,10 +223,25 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo apt-get --yes --force-yes -f install
+
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-wget http://4kdownload.googlecode.com/files/`echo $FOURKFILENAME`_i386.deb
-sudo dpkg -i `echo $FOURKFILENAME`_i386.deb
+# install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
+VIDEODOWNLOADERREMOTEDIR="https://code.google.com/p/4kdownload/"
+url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
+# Create a temporary directory
+dir=$(mktemp -dt)
+cd "$dir"
+# Download the .deb file
+wget `echo $url`
+# Install the package
+sudo dpkg -i "${url##*/}"
+# Clean up
+rm "${url##*/}"
+cd
+rm -rf "$dir"
+cd
 sudo apt-get --yes --force-yes -f install
+
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
