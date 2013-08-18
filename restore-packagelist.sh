@@ -15,10 +15,8 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
-TEXSTUDIOFILENAME="texstudio_2.6.2"
 SKYPEFILENAME="skype-ubuntu-precise_4.2.0.11-1_i386.deb"
 YEDFILENAME="yEd-3.11_32-bit_setup.sh"
-FOURKFILENAME="4kvideodownloader_2.7-1"
 
 # define Astronomy filename variables
 DUFILENAME="DUv3_9pview.tgz"
