@@ -7,8 +7,8 @@
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  7 GB of free disk space in root partition
 # INSTALL DURATION: Around 1h30min
 # Author: Mark Rijckenberg
-# Copyright (c) 2012-08-12
-# REVISION DATE: 20130521
+# Copyright (c) 20120812
+# REVISION DATE: 20130820
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
