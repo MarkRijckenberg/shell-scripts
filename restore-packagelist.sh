@@ -1,6 +1,5 @@
 #!/bin/bash
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
-# and http://treexy.com/products/driver-fusion.aspx for system driver updates
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Ubuntu 12.10
 # REQUIRES: Ubuntu 12.10 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
