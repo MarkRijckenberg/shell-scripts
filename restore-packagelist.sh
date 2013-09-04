@@ -83,6 +83,12 @@ sudo add-apt-repository --yes  ppa:nemh/gambas3
 sudo apt-get update
 sudo apt-get  --yes --force-yes  install i-nex 
 
+#install pipelight which allows to run your favorite Silverlight application directly inside your Linux browser
+sudo apt-add-repository  --yes ppa:ehoover/compholio
+sudo apt-add-repository  --yes ppa:mqchael/pipelight
+sudo apt-get update
+sudo apt-get --yes --force-yes install pipelight
+
 # install google-talkplugin
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb http://dl.google.com/linux/talkplugin/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
