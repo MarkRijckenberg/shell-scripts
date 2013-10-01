@@ -2,7 +2,8 @@
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Ubuntu 12.10
-# REQUIRES: Ubuntu 12.10 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
+# REQUIRES: Lubuntu 12.10 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
+# Do not use Ubuntu's Unity interface, because it causes Teamviewer sessions to slow down due to window animation in Unity
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  7 GB of free disk space in root partition
 # INSTALL DURATION: Around 1h30min
 # Author: Mark Rijckenberg
@@ -76,6 +77,12 @@ sudo apt-get update
 # allpackages = basepackages + astropackages
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
+
+# install Handbrake - open source video transcoder - add Subtitles (VobSub, Closed Captions CEA-608, SSA, SRT)
+sudo add-apt-repository --yes  ppa:stebbins/handbrake-releases
+sudo apt-get update
+sudo apt-get  --yes --force-yes  install handbrake 
+
 
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
 sudo add-apt-repository --yes ppa:i-nex-development-team/daily
