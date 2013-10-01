@@ -122,6 +122,11 @@ sudo apt-add-repository --yes ppa:finalterm/daily
 sudo apt-get update
 sudo apt-get --yes --force-yes install finalterm
 
+# Install newest version of VLC player
+sudo add-apt-repository --yes ppa:videolan/master-daily
+sudo apt-get update
+sudo apt-get --yes --force-yes install vlc
+
 # install kdenlive video editor
 sudo apt-add-repository --yes  ppa:philip5/extra
 sudo apt-get update
@@ -162,11 +167,6 @@ sudo apt-get --yes --force-yes install cuttlefish
 sudo add-apt-repository --yes ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install ubuntu-tweak
-
-# Install newest version of VLC player
-sudo add-apt-repository --yes ppa:videolan/stable-daily
-sudo apt-get update
-sudo apt-get --yes --force-yes install vlc
 
 # install skype
 sudo apt-get remove skype skype-bin
