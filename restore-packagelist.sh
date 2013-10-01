@@ -76,12 +76,13 @@ sudo apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
-sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
-# install Handbrake - open source video transcoder - add Subtitles (VobSub, Closed Captions CEA-608, SSA, SRT)
-sudo add-apt-repository --yes  ppa:stebbins/handbrake-releases
+# Install razorqt desktop environment
+sudo add-apt-repository --yes ppa:razor-qt/ppa
 sudo apt-get update
-sudo apt-get  --yes --force-yes  install handbrake 
+sudo apt-get --yes --force-yes install razorqt razorqt-desktop
+
+sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
 
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
@@ -131,6 +132,11 @@ sudo apt-add-repository --yes ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get --yes --force-yes install openshot
 
+# install Handbrake - open source video transcoder - add Subtitles (VobSub, Closed Captions CEA-608, SSA, SRT)
+sudo add-apt-repository --yes  ppa:stebbins/handbrake-releases
+sudo apt-get update
+sudo apt-get  --yes --force-yes  install handbrake 
+
 # install desurium game client
 sudo apt-add-repository --yes ppa:makson96/desurium
 sudo apt-get update
@@ -141,10 +147,6 @@ wget -c media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
 sudo apt-get  --yes --force-yes  install -f 
  
-# Install razorqt desktop environment
-sudo add-apt-repository --yes ppa:razor-qt/ppa
-sudo apt-get update
-sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 
 # install kde desktop environment
 #sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
