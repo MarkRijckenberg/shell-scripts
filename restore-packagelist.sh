@@ -85,7 +85,7 @@ sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 # Install lxde-qt desktop environment => merge of lxde and razorqt desktops
 sudo add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
 sudo apt-get update
-sudo apt-get  install libfm pcmanfm-qt menu-cache lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
+sudo apt-get  install pcmanfm-qt lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
 
 sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
 
