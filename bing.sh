@@ -62,10 +62,7 @@ Plasma Desktop Shell" windowactivate key ctrl+e key ctrl+w
  
   }
  function razor_wallpaper {
-   gsettings set org.mate.background picture-filename $PICTURE_DIR/$filename
-   pcmanfm -w "$PICTURE_DIR/$filename"
    sed -i -e "s/\(screens\\\\1\\\\desktops\\\\1\\\\wallpaper=\).*/\1${"$PICTURE_DIR/$filename"}/g" ./razor/desktop.conf
-   xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s $PICTURE_DIR/$filename
  }
  
  function usage {
