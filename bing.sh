@@ -60,7 +60,6 @@ Plasma Desktop Shell" windowactivate key ctrl+e key ctrl+w
    enlightenment_remote -desktop-bg-add 0 0 -1 -1 $OUTPUT_DIR/Bing.edj;
  }
  
-  }
  function razor_wallpaper {
    sed -i -e "s/\(screens\\\\1\\\\desktops\\\\1\\\\wallpaper=\).*/\1${"$PICTURE_DIR/$filename"}/g" ./razor/desktop.conf
  }
