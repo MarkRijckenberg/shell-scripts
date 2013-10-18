@@ -180,7 +180,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-tweak
 
 # install skype
-sudo DEBIAN_FRONTEND=noninteractive apt-get remove skype skype-bin
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f remove skype skype-bin
 wget http://download.skype.com/linux/`echo $SKYPEFILENAME`
 sudo dpkg -i skype-ubuntu*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
