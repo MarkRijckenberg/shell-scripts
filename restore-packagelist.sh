@@ -71,6 +71,7 @@ sudo apt-key add Repo.keys
 #     BASE PACKAGES SECTION                                                                   #
 ###############################################################################################
 
+export DEBIAN_FRONTEND=noninteractive
 # refresh list of available packages in Ubuntu repositories
 sudo apt-get update
 # install list of packages defined in packages files
