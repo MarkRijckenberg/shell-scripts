@@ -96,6 +96,11 @@ sudo add-apt-repository --yes  ppa:nemh/gambas3
 sudo apt-get update
 sudo apt-get  --yes --force-yes  install i-nex 
 
+# install Variety - cool wallpaper changer
+sudo add-apt-repository --yes ppa:peterlevi/ppa
+sudo apt-get update
+sudo apt-get  --yes --force-yes  install variety
+
 #install pipelight which allows to run your favorite Silverlight application directly inside your Linux browser
 sudo apt-add-repository  --yes ppa:ehoover/compholio
 sudo apt-add-repository  --yes ppa:mqchael/pipelight
