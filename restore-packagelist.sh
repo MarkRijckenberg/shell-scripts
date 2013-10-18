@@ -237,9 +237,9 @@ wget http://download.teamviewer.com/download/teamviewer_linux_x64.deb
 sudo dpkg -i teamviewer_linux_x64.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install newest wine version 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:ubuntu-wine/ppa 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get install wine1.6 winetricks wine1.6-amd64
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1.6 winetricks wine1.6-amd64
 else
   # 32-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
@@ -275,10 +275,10 @@ wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install newest wine version 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:ubuntu-wine/ppa 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f  ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get install wine1.6-i386
-sudo DEBIAN_FRONTEND=noninteractive apt-get install wine1.6 winetricks
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6-i386
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6 winetricks
 fi
 
 # install Opera browser
@@ -337,11 +337,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install texlive-f
 
 
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:aims/casapy
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes --force-yes  ppa:aims/casapy
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install casapy-upstream-binary
 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:olebole/astro-quantal
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes --force-yes  ppa:olebole/astro-quantal
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install casacore 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cpl
