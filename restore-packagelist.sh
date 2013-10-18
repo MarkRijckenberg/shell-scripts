@@ -85,9 +85,9 @@ sudo apt-get --yes --force-yes install razorqt razorqt-desktop
 # Install lxde-qt desktop environment => merge of lxde and razorqt desktops
 sudo add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
 sudo apt-get update
-sudo apt-get  install pcmanfm-qt lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
+sudo apt-get --yes --force-yes install pcmanfm-qt lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
 
-sudo apt-get  install  `cat  basepackages` -o APT::Install-Suggests="false"
+sudo apt-get --yes --force-yes install   `cat  basepackages` -o APT::Install-Suggests="false"
 
 
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
@@ -161,7 +161,7 @@ sudo apt-get --yes --force-yes install desurium
 # install 64-bit compatible Steam client
 wget -c media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
-sudo apt-get  --yes --force-yes  install -f 
+sudo apt-get --yes --force-yes -f install
  
 
 # install kde desktop environment
@@ -183,7 +183,7 @@ sudo apt-get --yes --force-yes install ubuntu-tweak
 sudo apt-get remove skype skype-bin
 wget http://download.skype.com/linux/`echo $SKYPEFILENAME`
 sudo dpkg -i skype-ubuntu*.deb
-sudo apt-get -f install
+sudo apt-get --yes --force-yes -f install
 
 # install Y PPA Manager
 sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
