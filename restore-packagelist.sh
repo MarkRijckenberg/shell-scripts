@@ -113,6 +113,7 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/talkplugin/deb/ stable main" >>
 sudo apt-get update
 sudo apt-get  --yes --force-yes  install google-talkplugin
 # Install TLP - advanced power management command line tool for Linux
+# TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
 sudo add-apt-repository --yes ppa:linrunner/tlp
 sudo apt-get update
 sudo apt-get --yes --force-yes install tlp tlp-rdw
