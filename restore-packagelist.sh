@@ -71,9 +71,8 @@ sudo apt-key add Repo.keys
 #     BASE PACKAGES SECTION                                                                   #
 ###############################################################################################
 
-export DEBIAN_FRONTEND=noninteractive
 # refresh list of available packages in Ubuntu repositories
-sudo apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
 # sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
