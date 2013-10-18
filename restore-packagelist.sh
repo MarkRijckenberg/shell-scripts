@@ -180,7 +180,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-tweak
 
 # install skype
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f remove skype skype-bin
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove skype skype-bin
 wget http://download.skype.com/linux/`echo $SKYPEFILENAME`
 sudo dpkg -i skype-ubuntu*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -310,8 +310,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-?.?-jre-headless
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?-jre-headless
-sudo DEBIAN_FRONTEND=noninteractive apt-get remove mysql-server-core-?.?
-sudo DEBIAN_FRONTEND=noninteractive apt-get remove unity-lens-shopping
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-shopping
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
