@@ -1,7 +1,7 @@
 #!/bin/bash
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Ubuntu 13.10
+# PURPOSE: This bash shell script allows you to easily restore Lubuntu packages into a clean install of Lubuntu 13.10
 # REQUIRES: Lubuntu 13.10 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
 # Do not use Ubuntu's Unity interface, because it causes Teamviewer sessions to slow down due to window animation in Unity
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  7 GB of free disk space in root partition
