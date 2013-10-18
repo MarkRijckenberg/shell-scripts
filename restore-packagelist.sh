@@ -133,17 +133,24 @@ sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
 
-# Install newest version of VLC player
+# install newest version of VLC player
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc
+
+# install spotify-client - can sync mp3 files between ipod nano 6th gen 
+# and local ext4 directory in Ubuntu 13.10 or higher
+sudo DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install spotify-client
 
 # install kdenlive video editor
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install kdenlive
 
-# Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
+# install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:openshot.developers/ppa
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install openshot
