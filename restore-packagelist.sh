@@ -742,9 +742,11 @@ echo "http://www.spacetelescope.org/news/"
 echo "http://interestingengineering.com/"
 # open-source data analytics / data mining application for Ubuntu - added on July 19, 2013:
 echo "http://orange.biolab.si/"
+# following URL added on October 18, 2013:
+echo "http://www.space.com/"
 
 ###############################################################################################
-#     PRISM Break anonymizing websites                                                        #
+#     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
 ###############################################################################################
 # following URL added on June 15, 2013:
 echo "http://prism-break.org/"
