@@ -2,13 +2,13 @@
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Ubuntu packages into a clean install of Ubuntu 12.10
-# REQUIRES: Lubuntu 12.10 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
+# REQUIRES: Lubuntu 13.10 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
 # Do not use Ubuntu's Unity interface, because it causes Teamviewer sessions to slow down due to window animation in Unity
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  7 GB of free disk space in root partition
 # INSTALL DURATION: Around 1h30min
 # Author: Mark Rijckenberg
 # Copyright (c) 20120812
-# REVISION DATE: 20130820
+# REVISION DATE: 20131018
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
@@ -57,9 +57,9 @@ mkdir triatlas
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET4 $SOURCE2 
 # not required during restore: sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET5 $SOURCE3
 # not required during restore: sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET6 $SOURCE3
-#sudo apt-get install dselect rsync -y
-#sudo apt-key add $TARGET1/Repo.keys
-sudo apt-key add Repo.keys
+#sudo DEBIAN_FRONTEND=noninteractive apt-get install dselect rsync -y
+#sudo DEBIAN_FRONTEND=noninteractive apt-key add $TARGET1/Repo.keys
+sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
 #sudo dpkg --set-selections < $TARGET1/Package.list
 #sudo dpkg --set-selections < Package.list
 #sudo dselect
@@ -75,123 +75,123 @@ sudo apt-key add Repo.keys
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
-# sudo apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 
 # Install razorqt desktop environment
-sudo add-apt-repository --yes ppa:razor-qt/ppa
-sudo apt-get update
-sudo apt-get --yes --force-yes install razorqt razorqt-desktop
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:razor-qt/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install razorqt razorqt-desktop
 
 # Install lxde-qt desktop environment => merge of lxde and razorqt desktops
-sudo add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
-sudo apt-get update
-sudo apt-get --yes --force-yes install pcmanfm-qt lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install pcmanfm-qt lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
 
-sudo apt-get --yes --force-yes install   `cat  basepackages` -o APT::Install-Suggests="false"
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   `cat  basepackages` -o APT::Install-Suggests="false"
 
 
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
-sudo add-apt-repository --yes ppa:i-nex-development-team/daily
-sudo add-apt-repository --yes  ppa:nemh/gambas3
-sudo apt-get update
-sudo apt-get  --yes --force-yes  install i-nex 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:i-nex-development-team/daily
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:nemh/gambas3
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install i-nex 
 
 # install Variety - cool wallpaper changer
-sudo add-apt-repository --yes ppa:peterlevi/ppa
-sudo apt-get update
-sudo apt-get  --yes --force-yes  install variety
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install variety
 
 #install pipelight which allows to run your favorite Silverlight application directly inside your Linux browser
-sudo apt-add-repository  --yes ppa:ehoover/compholio
-sudo apt-add-repository  --yes ppa:mqchael/pipelight
-sudo apt-get update
-sudo apt-get --yes --force-yes install pipelight
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository  --yes ppa:ehoover/compholio
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository  --yes ppa:mqchael/pipelight
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install pipelight
 
 # install google-talkplugin
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo DEBIAN_FRONTEND=noninteractive apt-key add - 
 sudo sh -c 'echo "deb http://dl.google.com/linux/talkplugin/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update
-sudo apt-get  --yes --force-yes  install google-talkplugin
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install google-talkplugin
 # Install TLP - advanced power management command line tool for Linux
 # TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
-sudo add-apt-repository --yes ppa:linrunner/tlp
-sudo apt-get update
-sudo apt-get --yes --force-yes install tlp tlp-rdw
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install tlp tlp-rdw
 
 # Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
-sudo add-apt-repository --yes ppa:kazam-team/stable-series
-sudo apt-get update
-sudo apt-get --yes --force-yes install kazam
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install kazam
 
 # install hotshots Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
-sudo apt-add-repository --yes ppa:dhor/myway
-sudo apt-get update
-sudo apt-get --yes --force-yes install hotshots
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install hotshots
 
 # install Final Term - excellent Terminal emulator in  Ubuntu 12.04 / 12.10 / 13.04
-sudo apt-add-repository --yes ppa:finalterm/daily
-sudo apt-get update
-sudo apt-get --yes --force-yes install finalterm
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
 
 # Install newest version of VLC player
-sudo add-apt-repository --yes ppa:videolan/master-daily
-sudo apt-get update
-sudo apt-get --yes --force-yes install vlc
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc
 
 # install kdenlive video editor
-sudo apt-add-repository --yes  ppa:philip5/extra
-sudo apt-get update
-sudo apt-get --yes --force-yes install kdenlive
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install kdenlive
 
 # Install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
-sudo apt-add-repository --yes ppa:openshot.developers/ppa
-sudo apt-get update
-sudo apt-get --yes --force-yes install openshot
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:openshot.developers/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install openshot
 
 # install Handbrake - open source video transcoder - add Subtitles (VobSub, Closed Captions CEA-608, SSA, SRT)
-sudo add-apt-repository --yes  ppa:stebbins/handbrake-releases
-sudo apt-get update
-sudo apt-get  --yes --force-yes  install handbrake 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:stebbins/handbrake-releases
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install handbrake 
 
 # install desurium game client
-sudo apt-add-repository --yes ppa:makson96/desurium
-sudo apt-get update
-sudo apt-get --yes --force-yes install desurium
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install desurium
 
 # install 64-bit compatible Steam client
 wget -c media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
  
 
 # install kde desktop environment
-#sudo add-apt-repository --yes  ppa:kubuntu-ppa/backports
-#sudo apt-get update
-#sudo apt-get  --yes --force-yes   install kubuntu-desktop
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:kubuntu-ppa/backports
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes   install kubuntu-desktop
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
-sudo add-apt-repository --yes ppa:noneed4anick/cuttlefish
-sudo apt-get update
-sudo apt-get --yes --force-yes install cuttlefish 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noneed4anick/cuttlefish
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cuttlefish 
 
 # Install Ubuntu Tweak to easily uninstall old kernel versions
-sudo add-apt-repository --yes ppa:tualatrix/ppa
-sudo apt-get update
-sudo apt-get --yes --force-yes install ubuntu-tweak
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-tweak
 
 # install skype
-sudo apt-get remove skype skype-bin
+sudo DEBIAN_FRONTEND=noninteractive apt-get remove skype skype-bin
 wget http://download.skype.com/linux/`echo $SKYPEFILENAME`
 sudo dpkg -i skype-ubuntu*.deb
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install Y PPA Manager
-sudo add-apt-repository --yes ppa:webupd8team/y-ppa-manager
-sudo apt-get update
-sudo apt-get --yes --force-yes install  y-ppa-manager
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  y-ppa-manager
 
 # libdvdcss2, to play encrypted DVDs
-sudo apt-get --yes --force-yes install libdvdcss2
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libdvdcss2
 sudo /usr/share/doc/libdvdread4/./install-css.sh
 
 
@@ -208,7 +208,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
@@ -226,27 +226,27 @@ rm "${url##*/}"
 cd
 rm -rf "$dir"
 cd
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 sudo dpkg -i google-earth-stable_current_amd64.deb
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install Teamviewer server + client
 wget http://download.teamviewer.com/download/teamviewer_linux_x64.deb
 sudo dpkg -i teamviewer_linux_x64.deb
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install newest wine version 
-sudo add-apt-repository ppa:ubuntu-wine/ppa 
-sudo apt-get update
-sudo apt-get install wine1.6 winetricks wine1.6-amd64
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:ubuntu-wine/ppa 
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get install wine1.6 winetricks wine1.6-amd64
 else
   # 32-bit stuff here
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
@@ -264,35 +264,35 @@ rm "${url##*/}"
 cd
 rm -rf "$dir"
 cd
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install Google Earth
 wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 sudo dpkg -i google-earth-stable_current_i386.deb
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install Teamviewer server + client
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
-sudo apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install newest wine version 
-sudo add-apt-repository ppa:ubuntu-wine/ppa 
-sudo apt-get update
-sudo apt-get install wine1.6-i386
-sudo apt-get install wine1.6 winetricks
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:ubuntu-wine/ppa 
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get install wine1.6-i386
+sudo DEBIAN_FRONTEND=noninteractive apt-get install wine1.6 winetricks
 fi
 
 # install Opera browser
-wget -O- http://deb.opera.com/archive.key | sudo apt-key add -
+wget -O- http://deb.opera.com/archive.key | sudo DEBIAN_FRONTEND=noninteractive apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
-sudo apt-get update
-sudo apt-get --yes --force-yes install opera
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install opera
 
 # install Multimedia codecs
-sudo -E wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get --quiet update && sudo apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo apt-get --quiet update
-sudo apt-get --yes --force-yes install non-free-codecs libdvdcss
+sudo -E wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update && sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install non-free-codecs libdvdcss
 
 # install Realplayer (latest version is from 2009)
-#sudo apt-get update && sudo apt-get install lsb
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get install lsb
 #wget http://client-software.real.com/free/unix/RealPlayer11GOLD.deb
 #sudo dpkg -i RealPlayer11GOLD.deb
 
@@ -306,14 +306,14 @@ mv *gz $TAR
 rm *.exe
 
 # uninstall Java due to all the critical security issues in 2013
-sudo apt-get --yes --force-yes remove java-common
-sudo apt-get --yes --force-yes remove default-jre
-sudo apt-get --yes --force-yes remove gcj-?.?-jre-headless
-sudo apt-get --yes --force-yes remove openjdk-?-jre-headless
-sudo apt-get remove mysql-server-core-?.?
-sudo apt-get remove unity-lens-shopping
-sudo apt-get autoclean
-sudo apt-get clean
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-?.?-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get remove mysql-server-core-?.?
+sudo DEBIAN_FRONTEND=noninteractive apt-get remove unity-lens-shopping
+sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
+sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 sudo cp /tmp/sources.list  /etc/apt/sources.list
@@ -328,27 +328,27 @@ sh `echo $YEDFILENAME`
 #     ASTRONOMY SOFTWARE SECTION                                                              #
 ###############################################################################################
 
-sudo apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
+sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
-sudo add-apt-repository  --yes ppa:texlive-backports/ppa
-sudo apt-get update
-sudo apt-get --yes --force-yes  install texlive-full biblatex biber
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes ppa:texlive-backports/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install texlive-full biblatex biber
 
 
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
-sudo add-apt-repository --yes ppa:aims/casapy
-sudo apt-get update
-sudo apt-get --yes --force-yes install casapy-upstream-binary
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:aims/casapy
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install casapy-upstream-binary
 
-sudo add-apt-repository --yes ppa:olebole/astro-quantal
-sudo apt-get update
-sudo apt-get --yes --force-yes install casacore 
-sudo apt-get --yes --force-yes install cpl
-sudo apt-get --yes --force-yes install esorex
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:olebole/astro-quantal
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install casacore 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cpl
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install esorex
 # download and decompress SAOImage DS9 software
-sudo apt-get --yes --force-yes install saods9 
-sudo apt-get --yes --force-yes install sextractor 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install saods9 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install sextractor 
 
 
 # download CSC KML Interface to Sky in Google Earth
@@ -411,9 +411,9 @@ rm $url
 cd
 rm -rf "$dir"
 cd
-sudo apt-get -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
-sudo apt-get --yes --force-yes install  texmaker
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  texmaker
 #install texstudio
 TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/"
 url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
@@ -429,7 +429,7 @@ rm `echo $url`
 cd
 rm -rf "$dir"
 cd
-sudo apt-get -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 else
   # 32-bit stuff here
@@ -454,9 +454,9 @@ rm $url
 cd
 rm -rf "$dir"
 cd
-sudo apt-get -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
-sudo apt-get --yes --force-yes install   texmaker
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   texmaker
 #install texstudio
 TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/"
 url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
@@ -472,21 +472,21 @@ rm `echo $url`
 cd
 rm -rf "$dir"
 cd
-sudo apt-get -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 fi
 
 wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
 sudo dpkg -i skychart-data-stars_3.8-2293_all.deb
-sudo apt-get -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-dso_3.8-2293_all.deb
 sudo dpkg -i skychart-data-dso_3.8-2293_all.deb
-sudo apt-get -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-pictures_3.1-1466_all.deb
 sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
-sudo apt-get -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 
 ###############################################################################################
@@ -564,14 +564,14 @@ mv *gz $TAR
 rm *.exe
 
 # uninstall Java due to all the critical security issues in 2013
-sudo apt-get --yes --force-yes remove java-common
-sudo apt-get --yes --force-yes remove default-jre
-sudo apt-get --yes --force-yes remove gcj-?.?-jre-headless
-sudo apt-get --yes --force-yes remove openjdk-?-jre-headless
-sudo apt-get remove mysql-server-core-?.?
-sudo apt-get remove unity-lens-shopping
-sudo apt-get autoclean
-sudo apt-get clean
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-?.?-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get remove mysql-server-core-?.?
+sudo DEBIAN_FRONTEND=noninteractive apt-get remove unity-lens-shopping
+sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
+sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 sudo cp /tmp/sources.list  /etc/apt/sources.list
@@ -761,4 +761,3 @@ echo "get bibliography citations at http://scholar.google.be using full title an
 echo "For example use - filetype:pdf author:'h karttunen'  -  as search term in http://scholar.google.be"
 echo "For example use - site:arxiv.org intext:"habitable zone" - as search term in http://www.google.be/"
 echo "Get more information about latex package by using command   texdoc <packagename> , for example: texdoc graphicx"
-
