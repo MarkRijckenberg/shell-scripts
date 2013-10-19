@@ -143,6 +143,13 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc
 
+
+# install spotify - can sync mp3 files between Ubuntu 13.10 and ipod nano 6th generation
+sudo DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+sudo sh -c 'echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list.d/spotify.list'
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install spotify-client
+
 # install kdenlive video editor
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
