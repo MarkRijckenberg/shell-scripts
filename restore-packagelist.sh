@@ -79,6 +79,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # allpackages = basepackages + astropackages
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 
+# uninstall pulseaudio - pulseaudio can cause skype to manlfunction with loss of mic and sound output
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
+
 # Install razorqt desktop environment
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:razor-qt/ppa
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
