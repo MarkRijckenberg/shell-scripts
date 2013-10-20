@@ -139,9 +139,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
 
 # install newest version of VLC player
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc
 
 
 # install spotify - can sync mp3 files between Ubuntu 13.10 and ipod nano 6th generation
