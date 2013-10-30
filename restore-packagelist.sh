@@ -761,6 +761,10 @@ echo "http://interestingengineering.com/"
 echo "http://orange.biolab.si/"
 # following URL added on October 18, 2013:
 echo "http://www.space.com/"
+# following URL added on October 30, 2013:
+echo "https://github.com/hannorein/open_exoplanet_catalogue/"
+# following URL added on October 30, 2013:
+echo "http://www.dlr.de/dlr/en/desktopdefault.aspx/tabid-10079/"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
