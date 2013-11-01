@@ -101,6 +101,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lub
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install pcmanfm-qt lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
 
+# install base packages using basepackages file
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   `cat  basepackages` -o APT::Install-Suggests="false"
 
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
