@@ -10,7 +10,7 @@
 # INSTALL DURATION: Around 1h30min
 # Author: Mark Rijckenberg
 # Copyright (c) 20120812
-# REVISION DATE: 20131018
+# REVISION DATE: 20131101
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
