@@ -61,7 +61,7 @@ mkdir triatlas
 # not required during restore: sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET6 $SOURCE3
 #sudo DEBIAN_FRONTEND=noninteractive apt-get install dselect rsync -y
 #sudo DEBIAN_FRONTEND=noninteractive apt-key add $TARGET1/Repo.keys
-sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
+# sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
 #sudo dpkg --set-selections < $TARGET1/Package.list
 #sudo dpkg --set-selections < Package.list
 #sudo dselect
@@ -73,7 +73,16 @@ sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
 #     BASE PACKAGES SECTION                                                                   #
 ###############################################################################################
 
+# define aliases in ~/.bashrc file
+echo "alias apti='sudo aptitude update && sudo aptitude install '" >> ~/.bashrc
+echo "alias aptr='sudo aptitude remove '" >> ~/.bashrc
+echo "alias aptp='sudo aptitude purge '" >> ~/.bashrc
+echo "alias aptu='sudo aptitude update'" >> ~/.bashrc
+echo "alias apts='sudo aptitude search '" >> ~/.bashrc
+echo "alias d-u='sudo aptitude update && sudo aptitude dist-upgrade'" >> ~/.bashrc
+
 # refresh list of available packages in Ubuntu repositories
+sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
