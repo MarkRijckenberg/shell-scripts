@@ -102,7 +102,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install pcmanfm-qt lxpanel-qt lxsession lximage-qt  lxinput-qt lxrandr-qt
 
 # install base packages using basepackages file
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   `cat  basepackages` -o APT::Install-Suggests="false"
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install aptitude
+sudo DEBIAN_FRONTEND=noninteractive aptitude --yes --force-yes install   `cat  basepackages` -o APT::Install-Suggests="false"
 
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
 # Flash websites are supported in Lubuntu 13.10 or newer
