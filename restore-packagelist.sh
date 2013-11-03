@@ -780,6 +780,8 @@ echo "https://github.com/hannorein/open_exoplanet_catalogue/"
 echo "http://www.dlr.de/dlr/en/desktopdefault.aspx/tabid-10079/"
 # following URL added on October 30, 2013:
 echo "http://7timer.y234.cn/"
+# following URL added on November, 2013:
+echo "http://news.sciencemag.org/category/space"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
