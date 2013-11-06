@@ -261,8 +261,8 @@ wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_am
 sudo dpkg -i google-earth-stable_current_amd64.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install Teamviewer server + client
-wget http://download.teamviewer.com/download/teamviewer_linux_x64.deb
-sudo dpkg -i teamviewer_linux_x64.deb
+wget http://download.teamviewer.com/download/teamviewer_linux.deb
+sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install newest wine version 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
