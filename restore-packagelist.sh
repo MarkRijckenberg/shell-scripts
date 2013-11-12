@@ -1,6 +1,6 @@
 #!/bin/bash
 # !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
-# !!!!! WINDOWS 8 users should install ninite.com utility, install "Classic Start" Ninite.com utility
+# !!!!! WINDOWS 8 users should install "Classic Start" Ninite.com utility
 # !!!!! and disable Superfetch Windows service to avoid hard disk thrashing and excessive memory use
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Lubuntu packages into a clean install of Lubuntu 13.10
