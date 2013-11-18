@@ -754,7 +754,8 @@ echo "http://www.googleguide.com/advanced_operators_reference.html"
 # following URL added on June 28, 2013:
 echo "http://spectrum.ieee.org/aerospace/astrophysics"
 # following URL added on July 1, 2013:
-echo "http://simbad.u-strasbg.fr/Simbad"
+# info about proper motion of L 726-8 A = “V* BL Cet -- Flare Star” = Luyten 726-8 A
+echo "http://simbad.u-strasbg.fr/simbad/sim-basic?Ident=L+726-8+A&submit=SIMBAD+search"
 # following URL added on July 1, 2013:
 echo "http://science.nasa.gov/science-news/"
 # following URL added on July 1, 2013:
