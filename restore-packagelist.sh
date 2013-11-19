@@ -785,7 +785,11 @@ echo "http://7timer.y234.cn/"
 # following URL added on November 15, 2013:
 echo "http://news.sciencemag.org/category/space"
 # following URL added on November 18, 2013:
+# PPMXL catalog contains largest list of proper motions for 900 million objects
 echo "http://vo.uni-hd.de/ppmxl"
+# following URL added on November 19, 2013:
+# PPMXL catalog contains largest list of proper motions for 900 million objects
+echo "http://vizier.u-strasbg.fr/viz-bin/VizieR?-source=%20PPMXL"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
