@@ -6,5 +6,4 @@
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  10 GB of free disk space in root partition
 # INSTALL DURATION: Around 1h30min
 # Author: Mark Rijckenberg
-# Copyright (c) 20120812
 # REVISION DATE: 20131101
