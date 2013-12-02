@@ -315,6 +315,11 @@ sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/s
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install opera
 
+# Enable and upgrade the open-source graphics drivers for Intel, AMD Radeon, and Nouveau (NVIDIA)
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:oibaf/graphics-drivers
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f dist-upgrade
+
 # OBSOLETE - install Multimedia codecs
 # sudo -E wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update && sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install non-free-codecs libdvdcss
