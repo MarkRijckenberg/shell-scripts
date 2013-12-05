@@ -1,5 +1,6 @@
 #!/bin/bash
-# !!!!! WINDOWS users should use ninite.com for semi-automated Windows application deployments
+# !!!!! WINDOWS users should use ninite.com and avast! Internet Security's Software Updater
+# !!!!! for semi-automated Windows application deployments
 # !!!!! WINDOWS 8 users should install "Classic Start" Ninite.com utility
 # !!!!! and disable Superfetch Windows service to avoid hard disk thrashing and excessive memory use
 # TYPE: Bash Shell script.
