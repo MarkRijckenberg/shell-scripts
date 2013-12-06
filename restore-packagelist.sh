@@ -1,8 +1,10 @@
 #!/bin/bash
-# !!!!! WINDOWS users should use ninite.com and avast! Internet Security's Software Updater
-# !!!!! for semi-automated Windows application deployments
+# !!!!! WINDOWS 8 users should use ninite.com and avast! Internet Security's Software Updater
+# !!!!! for semi-automated Windows application deployments and updates
 # !!!!! WINDOWS 8 users should install "Classic Start" Ninite.com utility
 # !!!!! and disable Superfetch Windows service to avoid hard disk thrashing and excessive memory use
+# !!!!! WINDOWS 8 users should use http://www.pendrivelinux.com/yumi-multiboot-usb-creator/  to
+# !!!!! to add operating systems one by one in a flexible manner onto a multi-boot multi-OS USB stick
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore Lubuntu packages into a clean install of Lubuntu 13.10
 # REQUIRES: Lubuntu 13.10 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
