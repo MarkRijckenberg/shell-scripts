@@ -798,6 +798,8 @@ echo "http://dc.zah.uni-heidelberg.de/ppmxl/q/cone/form"
 # following URL added on November 19, 2013:
 # PPMXL catalog contains largest list of proper motions for 900 million objects
 echo "http://vizier.u-strasbg.fr/viz-bin/VizieR?-source=%20PPMXL"
+# following URL added on December 9, 2013:
+echo "http://www.pnas.org/content/by/section/Astronomy"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
