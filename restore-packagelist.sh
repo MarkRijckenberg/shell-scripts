@@ -108,6 +108,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install pcmanfm-qt
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install aptitude
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
 
+# create symbolic link to wkhtmltopdf in /usr/local/bin after installing base packages
+sudo ln -s /usr/bin/wkhtmltopdf /usr/local/bin/html2pdf
+
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
 # Flash websites are supported in Lubuntu 13.10 or newer
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
