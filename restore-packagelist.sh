@@ -166,6 +166,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
 
+# install Google Music Manager - sync local mp3s in Ubuntu with ios or Android device
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager-beta
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager
+
 # install newest version of VLC player
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
