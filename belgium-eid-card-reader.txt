@@ -5,6 +5,8 @@ Prerequisites: Ubuntu 13.10 64-bit, newest version of Mozilla Firefox, pcscd, de
 
 In a Terminal session, run the following commands:
 
+sudo apt-get update
+sudo apt-get install aptitude
 sudo aptitude update
 sudo aptitude install firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid
 sudo aptitude remove --purge beid*
