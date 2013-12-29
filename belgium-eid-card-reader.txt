@@ -1,0 +1,45 @@
+How to get the eid electronic card reader ACR38U working in Ubuntu 13.10 64-bit
+===============================================================================
+
+Prerequisites: Ubuntu 13.10 64-bit, newest version of Mozilla Firefox, pcscd, default-jre, opensc, libacr38u,  libacr38ucontrol0, libacsccid1, libccid
+
+In a Terminal session, run the following commands:
+
+sudo aptitude update
+sudo aptitude install firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid
+sudo aptitude remove --purge beid*
+wget http://eid.belgium.be/fr/binaries/eid-mw_4%2E0%2E4r1253_amd64_tcm226-178472.deb
+sudo dpkg -i eid-mw_4.0.4r1253_amd64_tcm226-178472.deb
+wget http://eid.belgium.be/fr/binaries/eid-viewer_4%2E0%2E4r146_amd64_tcm226-178482.deb
+sudo dpkg -i eid-viewer_4.0.4r146_amd64_tcm226-178482.deb
+
+Manually set the following values in Mozilla Firefox in about:config
+
+security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
+security.ssl.enable_false_start;true
+security.ssl.renego_unrestricted_hosts;*.be
+
+Manually replace the security.ssl.renego_unrestricted_hosts name
+ certif.belgium.be or *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be !!!
+
+Download root certificates here:
+
+http://repository.eid.belgium.be/certificates.php?cert=Root&lang=en
+
+Import root certificates into Firefox.
+
+Ensure that there are absolutely NO add-ons or plugins installed in Mozilla Firefox.
+Installing the Belgium eid Firefox add-on will NOT work in Linux and only make matters worse!
+
+Disconnect the eid card reader from the PC.
+Reconnect the eid card reader from the PC.
+
+Insert eid card into card reader.
+
+Reboot the PC.
+
+Test eid card reader here:
+
+http://test.eid.belgium.be/
+
+Source: http://wiki.yobi.be/wiki/Belgian_eID
