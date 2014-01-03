@@ -84,6 +84,9 @@ echo "alias aptu='sudo aptitude update'" >> ~/.bashrc
 echo "alias apts='sudo aptitude search '" >> ~/.bashrc
 echo "alias d-u='sudo aptitude update && sudo aptitude dist-upgrade'" >> ~/.bashrc
 
+# turn off apport error/crash reporting
+sudo sed -i s/enabled=1/enabled=0/ /etc/default/apport
+
 # refresh list of available packages in Ubuntu repositories
 sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
