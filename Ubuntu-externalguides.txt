@@ -1,0 +1,87 @@
+||<tablestyle="float:right; font-size:0.9em; width:40%; background:#F1F1ED; margin: 0 0 1em 1em;" style="padding:0.5em;"><<TableOfContents>>||
+
+= Independent guides =
+
+These guides are independently maintained. Much of their content is included in the Ubuntu community help pages, but newer material in these guides may not be.
+ * [[http://ubuntuguide.org|Ubuntuguide]] - Comprehensive guide for Ubuntu, since 2005.
+ * [[http://ubuntuguide.org/wiki/Kubuntuguide|Kubuntuguide]] - Comprehensive guide for Kubuntu, since 2007.
+ * [[http://www.ubuntugeek.com/|Ubuntu Geek]] - a wealth of information, but in blog format
+ * [[http://www.omgubuntu.co.uk/|OMG! Ubuntu]] - news, tips, and reviews in blog format
+ * [[http://www.psychocats.net/ubuntu/index|Psychocats' Ubuntu GNU/Linux Resources]] - a collection of random tutorials for Ubuntu
+ * [[http://ubuntuguide.net/|Ubuntu Sharing]] - tips in blog format
+ * [[http://owlcroft.com/ubuntu/|The Owlcroft Ubuntu Help & Advice Pages]] - from choosing through maintaining
+ * [[http://tldp.org/guides.html | The GNU/Linux Documentation Project Guides]]
+ * [[http://askubuntu.com/questions/36671/how-do-i-pre-install-ubuntu-for-someone-oem-install | How do I pre-install Ubuntu for someone else (= OEM install)?]]
+ * [[http://futurist.se/gldt/ | GNU/Linux Distribution Timeline]]
+ * [[http://ftacademy.org/materials | Free Technology Academy published materials]]
+ * [[http://mylinuxbook.com/category/linux-admin/ | MyLinuxBook - GNU/Linux administration]]
+ * [[http://commons.oreilly.com/wiki/index.php/Ubuntu_Hacks/Getting_Started | O'Reilly Ubuntu Hacks (March 2008) ]]
+ * [[http://www.ict-innovation.fossfa.net/wiki/public-wiki/foss-certification-training-material/lpi-testing-engines | LPI Training Materials and Practice testing engines]]
+ * [[http://fullcirclemagazine.org/ | The Ubuntu Full Circle on line magazine]]
+ * [[http://screencasts.ubuntu.com/ | Ubuntu screencasts]]
+ * [[http://www.howtogeek.com/119219/an-introduction-overview-of-unity-in-ubuntu-12.04-for-beginners-video/ | An Introduction-Overview of Unity in Ubuntu 12.04 for Beginners (Video)]]
+ * [[http://www.scribd.com/doc/8461367/Linux-Console-Commands | Cheat Sheet containing most commonly used commands in GNU/Linux]]
+ * [[http://files.fosswire.com/2007/08/fwunixref.pdf | Second cheat Sheet]]
+ * [[https://nsrc.org/workshops/2013/sanog21-nmm/raw-attachment/wiki/References/ubunturef.pdf | Third cheat sheet]]
+ * [[http://www.tecmint.com/60-commands-of-linux-a-guide-from-newbies-to-system-administrator/ | 60 Linux commands for newbies and system administrators]]
+ * [[http://cgit.freedesktop.org/xorg/lib/libX11/log/nls/en_US.UTF-8/Compose.pre|FreeDesktop]] - Official X.Org compose key sequences. Use this as reference to FreeDesktop (used as the default in many systems).
+ * [[http://www.dmoz.org/Computers/Software/Operating_Systems/Linux/Distributions/Ubuntu/FAQs,_Help,_and_Tutorials/|DMOZ FAQs, Help, and Tutorials]] -- open source directory of wikis and help guides for Ubuntu
+ * [[http://explainshell.com/ | Explain Shell breaks down Linux commands so you can understand them better]]
+ * [[http://www.commandlinefu.com/commands/browse | commandlinefu.com is the place to record those command-line gems that you return to again and again.]]
+ * [[http://steve-parker.org/sh/sh.shtml | Steve Parker's Bourne / Bash shell scripting tutorial]]
+
+
+= Free guides and free manuals for GNU/Linux beginners =
+
+ * [[http://en.wikibooks.org/wiki/Linux_For_Newbies/Command_Line | GNU/Linux for Newbies]]
+ * [[https://help.ubuntu.com/community/gedit | How to use gedit]]
+ * [[https://help.ubuntu.com/community/RootSudo | How to use sudo]]
+ * [[http://www.binarytides.com/apt-get-tutorial-package-management-ubuntu-commandline/ | How to use apt-get package manager on the command line]]
+ * [[http://explainshell.com/ | Explain Shell breaks down Linux commands so you can understand them better]]
+ * [[http://www.linux.org/tutorial/view/beginners-level-course | GNU/Linux beginner level course]]
+ * [[http://www.ee.surrey.ac.uk/Teaching/Unix/ | Teaching UNIX]]
+ * [[http://www.jus.uio.no/sisu/the_cathedral_and_the_bazaar.eric_s_raymond/landscape.a4.pdf | Around 26 pages: The Cathedral and the Bazaar - Eric S. Raymond]]
+ * [[http://manuals.makeuseof.com.s3.amazonaws.com/for-mobile/Ubuntu_Beginners_Guide_-_MakeUseOf.com.pdf | Around 32 pages - Ubuntu_Beginners_Guide_-_MakeUseOf.com.pdf - Courtney Loo]]
+ * [[https://www.dropbox.com/s/8hwe2c3m1hpy3qk/ubuntu-manual.pdf | Around 82 pages - Muktware Ubuntu Manual (12.04)]]
+ * [[http://files.ubuntu-manual.org/manuals/getting-started-with-ubuntu/13.10/en_US/screen/Getting%20Started%20with%20Ubuntu%2013.10.pdf | Around 128 pages: Getting Started with Ubuntu 13.10 - The Ubuntu Manual Team]]
+ * [[http://books.google.com/books?id=kHLlJzI6L20C&printsec=frontcover#v=onepage&q=&f=false | Around 130 pages: Ubuntu 8.04: Ubuntu Pocket Guide and Reference - Keir Thomas]]
+ * [[http://www.linuxtraining.co.uk/download/new_linux_course_modules.pdf | Around 147 pages: GNU/Linux System Administration - training.gbdirect.co.uk]]
+ * [[http://en.flossmanuals.net/_booki/command-line/command-line.pdf | Around 169 pages: Introduction to the Command Line - Free Software Foundation]]
+ * [[http://producingoss.com/en/producingoss.pdf | Around 202 pages: Producing Open Source Software: How to Run a Successful Free Software Project - Karl Fogel]]
+ * [[http://www.jus.uio.no/sisu/free_for_all.peter_wayner/portrait.pdf | Around 230 pages: Free For All - How GNU/Linux and the Free Software Movement Undercut the High Tech Titans - Peter Wayner]]
+ * [[http://shop-download.linupfront.de/cc/lxes-en-manual-cc.pdf | Around 244 pages: GNU/Linux essentials - product of Linup Front GmbH - Tobias Elsner, Thomas Erker, Anselm Lingnau]]
+ * [[http://ftacademy.org/files/materials/fta-m2b-glbasic.pdf | Around 255 pages: GNU/Linux Basic - Joaquín López Sánchez-Montañés, Sofia Belles Ramos, Roger Baig Viñas, Francesc Aulí Llinàs - ftacademy.org]]
+ * [[http://keithcu.com/wordpress/?page_id=407 | Around 303 pages: After the Software Wars - Keith Curtis]]
+ * [[http://twobits.net/pub/Kelty-TwoBits.pdf | Around 396 pages: Two Bits - The cultural significance of free software - by Christopher M. Kelty]]
+ * [[http://downloads.sourceforge.net/project/linuxcommand/TLCL/09.12/TLCL-09.12.pdf | Around 522 pages: The GNU/Linux Command Line - William E. Shotts, Jr. - EXCELLENT GUIDE]]
+ * [[http://www.informit.com/content/images/0131861506/downloads/Harrison_book.pdf | Around 630 pages:  GNU/Linux system administration reference guide - GNU/Linux Quick Fix Notebook - Peter Harrison - EXCELLENT RESOURCE]]
+
+
+= Free books for advanced GNU/Linux system administrators =
+
+ * [[http://www.luga.de/Angebote/Vortraege/DNSSEC_LIT_2012/DNSSEC_LIT_2012.pdf | Around 110 pages: Secure  DNS  with  Unbound  and  DNSSEC-Trigger Implementation  and  Deployment - menandmice.com]]
+ * [[http://www.linuxfromscratch.org/lfs/downloads/development/ | Around 329 pages: GNU/Linux From Scratch PDF - by Gerard Beekmans]]
+ * [[http://ptgmedia.pearsoncmg.com/images/013147751X/downloads/013147751X_book.pdf | Around 456 pages: Self-service GNU/Linux – Mastering the art of problem determination - Mark Wilding and Dan Behman - Bruce Perens' Open Source Series - Publisher: Prentice Hall]]
+ * [[http://ftacademy.org/files/materials/fta-m2-admin_gnulinux-v1.pdf | Around 545 pages: GNU/Linux Advanced Administration - Remo Suppi Boldrito, Josep Jorba Esteve - ftacademy.org]]
+ * [[http://computer4.net/download.php?id=1328 | Around 549 pages - The Art of Unix Programming by Eric Steven Raymond]]
+ * [[http://www.linuxfromscratch.org/blfs/downloads/stable/BLFS-BOOK-7.4-nochunks.html | Around 720 pages: Beyond GNU/Linux From Scratch, written by BLFS Development Team]]
+ * [[http://linux-training.be/downloads/ | Around 737 pages: System administration books written by Paul Cobbaut, a very experienced trainer]]
+ * [[http://ptgmedia.pearsoncmg.com/images/0131408828/downloads/0131408828.pdf | Around 808 pages: Managing GNU/Linux Systems with Webmin: System Administration and Module Development - Jamie Cameron - Bruce Perens' Open Source Series - Publisher: Prentice Hall - EXCELLENT GUIDE]]
+
+
+= Paperback (Not free) =
+
+ * [[http://www.amazon.com/Practical-Commands-Editors-Programming-Edition/dp/013308504X/ref=sr_1_2?ie=UTF8&qid=1353009281&sr=8-2&keywords=Mark+G.+Sobell+ubuntu | Around 1224 pages - A Practical Guide to GNU/Linux Commands, Editors, and Shell Programming (3rd Edition) (Paperback) - Mark G. Sobell]]
+ * [[http://www.amazon.co.uk/Ubuntu-Linux-Toolbox-Commands-Debian/dp/0470082933/ref=tmm_pap_title_0?ie=UTF8&qid=1351677102&sr=8-42 | Around 360 pages: Ubuntu GNU/Linux Toolbox: 1000+ Commands for Ubuntu and Debian Power Users [Paperback] - Christopher Negus & Francois Caen]]
+ * [[http://www.amazon.com/Deploying-Rails-Automate-Deploy-Maintain/dp/1934356956/ref=sr_1_1?ie=UTF8&qid=1363896505&sr=8-1&keywords=deploying+rails | Around 240 pages: Deploying Rails: Automate, Deploy, Scale, Maintain, and Sleep at Night (The Facets of Ruby) (Paperback) - Tom Copeland (Author), Anthony Burns (Author)]]
+
+= GNU/Linux software equivalent to Windows software =
+ 
+ * [[http://alternativeto.net/?platform=linux | Use search bar in top right corner of alternativeto.net website]]
+ * [[http://www.linuxalt.com/ | GNU/Linux Alternative Project - database with Windows software and the GNU/Linux equivalents and alternatives]]
+ * [[http://wiki.linuxquestions.org/wiki/Linux_software_equivalent_to_Windows_software | GNU/Linux software equivalent to Windows software]]
+ * [[http://www.linuxrsp.ru/win-lin-soft/table-eng.html | The table of equivalents / replacements / analogs of Windows software in GNU/Linux]]
+ * [[http://www.osalt.com/ | Open-source as alternative - Find open source software alternatives to well-known commercial software]]
+
+----
+CategoryDocumentation
