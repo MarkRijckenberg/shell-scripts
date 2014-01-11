@@ -9,11 +9,15 @@
 # PURPOSE: This bash shell script allows you to easily restore Lubuntu packages into a clean install of Lubuntu 13.10
 # REQUIRES: Lubuntu 13.10 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
 # Do not use Ubuntu's Unity interface, because it causes Teamviewer sessions to slow down due to window animation in Unity
-# REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  10 GB of free disk space in root partition
-# INSTALL DURATION: Around 1h30min
+# REQUIRED FREE DISKSPACE FOR LINUX MINT 16: 4 GB of free disk space in root partition
+# REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
+# REQUIRED FREE DISKSPACE FOR PPA PACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
+# TOTAL AMOUNT OF REQUIRED DISKSPACE FOR LINUX MINT 16 + BASEPACKAGES + PPA PACKAGES
+# = 4 GB + 1.4 GB + 1.4 GB = 6.8 GB
+# INSTALL DURATION: 20 minutes for install of Linux Mint + 74 minutes for install of base packages and PPA packages
 # Author: Mark Rijckenberg
 # Copyright (c) 20120812
-# REVISION DATE: 20131101
+# REVISION DATE: 20140111
 # Updated by: markrijckenberg at gmail dot com
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
