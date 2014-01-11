@@ -14,6 +14,8 @@
 # REQUIRED FREE DISKSPACE FOR PPA PACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
 # TOTAL AMOUNT OF REQUIRED DISKSPACE FOR LINUX MINT 16 + BASEPACKAGES + PPA PACKAGES
 # = 4 GB + 1.4 GB + 1.4 GB = 6.8 GB
+# COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon, but not
+# in Lubuntu 13.10
 # INSTALL DURATION: 20 minutes for install of Linux Mint + 74 minutes for install of base packages and PPA packages
 # Author: Mark Rijckenberg
 # Copyright (c) 20120812
