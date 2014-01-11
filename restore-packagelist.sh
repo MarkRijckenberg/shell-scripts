@@ -95,7 +95,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 
 # uninstall pulseaudio - pulseaudio can cause skype to malfunction with loss of microphone and sound output
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
+# commented out following line, because it will break bluetooth support in Linux Mint
+# sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 
 # Install razorqt desktop environment
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:razor-qt/ppa
