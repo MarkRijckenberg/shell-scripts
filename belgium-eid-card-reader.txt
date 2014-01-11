@@ -1,5 +1,5 @@
-How to get the eid electronic card reader ACR38U working in Ubuntu 13.10 64-bit
-===============================================================================
+How to get the eid electronic card reader ACR38U working in Ubuntu 13.10 64-bit/Linux Mint 16
+==============================================================================================
 
 Prerequisites: Ubuntu 13.10 64-bit, newest version of Mozilla Firefox, pcscd, default-jre, opensc, libacr38u,  libacr38ucontrol0, libacsccid1, libccid
 
