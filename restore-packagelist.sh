@@ -6,21 +6,24 @@
 # !!!!! WINDOWS 8 users should use http://www.pendrivelinux.com/yumi-multiboot-usb-creator/  to
 # !!!!! to add operating systems one by one in a flexible manner onto a multi-boot multi-OS USB stick
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore Lubuntu packages into a clean install of Lubuntu 13.10
-# REQUIRES: Lubuntu 13.10 64-bit (to support UEFI+SecureBoot+biber+bibtex), wget, apt-get, unp, wine, biber, biblatex
-# Do not use Ubuntu's Unity interface, because it causes Teamviewer sessions to slow down due to window animation in Unity
+# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Linux Mint 16 Cinnamon 64-bit
+# REQUIRES: Linux Mint 16 Cinnamon 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
+#           wget, apt-get, unp, wine, biber, biblatex
+# Use Cinnamon instead of Unity interface, because Unity causes Teamviewer sessions to slow down due to window 
+# animation in Unity
 # REQUIRED FREE DISKSPACE FOR LINUX MINT 16: 4 GB of free disk space in root partition
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
 # REQUIRED FREE DISKSPACE FOR PPA PACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
 # TOTAL AMOUNT OF REQUIRED DISKSPACE FOR LINUX MINT 16 + BASEPACKAGES + PPA PACKAGES
 # = 4 GB + 1.4 GB + 1.4 GB = 6.8 GB
-# COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon, but not
-# in Lubuntu 13.10
+# COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon
+# thanks to cinnamon-bluetooth package, but not in Lubuntu 13.10 Razor-QT desktop
 # INSTALL DURATION: 20 minutes for install of Linux Mint + 74 minutes for install of base packages and PPA packages
 # Author: Mark Rijckenberg
 # Copyright (c) 20120812
-# REVISION DATE: 20140111
+# REVISION DATE: 20140112
 # Updated by: markrijckenberg at gmail dot com
+
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
 
