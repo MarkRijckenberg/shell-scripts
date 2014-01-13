@@ -106,6 +106,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # uninstall pulseaudio - pulseaudio can cause skype to malfunction with loss of microphone and sound output
 # commented out following line, because it will break bluetooth support in Linux Mint
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 
 # Install razorqt desktop environment
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:razor-qt/ppa
@@ -378,6 +379,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?-j
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-shopping
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
@@ -638,6 +640,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?-j
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-shopping
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
