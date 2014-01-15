@@ -743,6 +743,8 @@ echo "http://www.texdoc.net/"
 echo "https://github.com/search?q=documentclass+book+astronomy&nwo=pwl%2Fmaster&search_target=global&type=Code&ref=cmdform"
 # following URL added on May 14, 2013 - very handy when creating latex document in texstudio:
 echo "http://detexify.kirelabs.org/classify.html"
+# following URL added on January 15, 2014:
+echo "http://www.math.toronto.edu/mathit/symbols-letter.pdf"
 # following URL added on May 28, 2013 - very handy when creating latex document in texstudio:
 echo "http://www.latextemplates.com/"
 echo "http://www.ottobib.com/"
@@ -835,6 +837,7 @@ echo "http://dc.zah.uni-heidelberg.de/ppmxl/q/cone/form"
 echo "http://vizier.u-strasbg.fr/viz-bin/VizieR?-source=%20PPMXL"
 # following URL added on December 9, 2013:
 echo "http://www.pnas.org/content/by/section/Astronomy"
+
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
