@@ -844,8 +844,8 @@ echo "http://www.pnas.org/content/by/section/Astronomy"
 ###############################################################################################
 # following URL added on June 15, 2013:
 echo "http://prism-break.org/"
-# following URL added on June 15, 2013:
-echo "https://duckduckgo.com"
+# following URL added on January 21, 2014:
+echo "https://startpage.com/"
 # following URL added on June 15, 2013:
 echo "http://www.opennicproject.org/nearest-servers/"
 
