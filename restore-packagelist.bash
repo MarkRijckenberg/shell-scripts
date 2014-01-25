@@ -837,6 +837,8 @@ echo "http://dc.zah.uni-heidelberg.de/ppmxl/q/cone/form"
 echo "http://vizier.u-strasbg.fr/viz-bin/VizieR?-source=%20PPMXL"
 # following URL added on December 9, 2013:
 echo "http://www.pnas.org/content/by/section/Astronomy"
+# following URL added on January 25, 2014:
+echo "http://science.time.com/category/space-2/"
 
 
 ###############################################################################################
