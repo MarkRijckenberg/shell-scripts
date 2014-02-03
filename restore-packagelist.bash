@@ -131,6 +131,11 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:danielrichter20
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install grub-customizer
 
+# install newest version of Libreoffice
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libreoffice
+
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
 # Flash websites are supported in Lubuntu 13.10 or newer
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
