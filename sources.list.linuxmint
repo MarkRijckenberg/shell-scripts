@@ -4,8 +4,17 @@
 deb http://linuxmint-packages.cu.be petra main upstream import 
 deb http://extra.linuxmint.com petra main #id:linuxmint_extra
 
-deb http://de.archive.ubuntu.com/ubuntu saucy main restricted universe multiverse
-deb http://de.archive.ubuntu.com/ubuntu saucy-updates main restricted universe multiverse
+deb http://ftp.belnet.be/ubuntu.com/ubuntu/ saucy main restricted universe multiverse 
+deb-src http://ftp.belnet.be/ubuntu.com/ubuntu/ saucy main restricted universe multiverse
+
+deb http://ftp.belnet.be/ubuntu.com/ubuntu/ saucy-updates main restricted universe multiverse 
+deb-src http://ftp.belnet.be/ubuntu.com/ubuntu/ saucy-updates main restricted universe multiverse
+
+#deb http://de.archive.ubuntu.com/ubuntu saucy main restricted universe multiverse
+#deb-src http://de.archive.ubuntu.com/ubuntu saucy main restricted universe multiverse
+#deb http://de.archive.ubuntu.com/ubuntu saucy-updates main restricted universe multiverse
+#deb-src http://de.archive.ubuntu.com/ubuntu saucy-updates main restricted universe multiverse
 
 deb http://security.ubuntu.com/ubuntu/ saucy-security main restricted universe multiverse
+deb-src http://security.ubuntu.com/ubuntu/ saucy-security main restricted universe multiverse
 deb http://archive.canonical.com/ubuntu/ saucy partner
