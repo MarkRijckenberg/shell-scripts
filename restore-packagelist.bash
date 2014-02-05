@@ -844,6 +844,9 @@ echo "http://vizier.u-strasbg.fr/viz-bin/VizieR?-source=%20PPMXL"
 echo "http://www.pnas.org/content/by/section/Astronomy"
 # following URL added on January 25, 2014:
 echo "http://science.time.com/category/space-2/"
+# following URL added on February 5, 2014:
+# Big Data algorithms and applications from Darpa published on github:
+echo "http://www.darpa.mil/OpenCatalog/index.html"
 
 
 ###############################################################################################
