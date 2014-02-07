@@ -847,6 +847,8 @@ echo "http://science.time.com/category/space-2/"
 # following URL added on February 5, 2014:
 # Big Data algorithms and applications from Darpa published on github:
 echo "http://www.darpa.mil/OpenCatalog/index.html"
+# following URL added on February 7, 2014:
+echo "http://video.fosdem.org/"
 
 
 ###############################################################################################
