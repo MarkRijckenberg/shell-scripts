@@ -220,6 +220,11 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:stebbins/handb
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install handbrake 
 
+# install qbittorrent client
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:hydr0g3n/qbittorrent-stable
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install qbittorrent
+
 # install desurium game client
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
