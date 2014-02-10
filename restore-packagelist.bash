@@ -221,6 +221,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install handbrake 
 
 # install qbittorrent client
+# import RSS feeds from http://showrss.info/?cs=feeds  into qbittorrent client
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:hydr0g3n/qbittorrent-stable
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install qbittorrent
