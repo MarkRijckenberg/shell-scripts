@@ -898,6 +898,14 @@ echo "https://startpage.com/"
 # following URL added on June 15, 2013:
 echo "http://www.opennicproject.org/nearest-servers/"
 
+###############################################################################################
+#     Math links for kids                                                                     #
+###############################################################################################
+# following URL added on February 10, 2014:
+echo "http://um.mendelu.cz/maw-html/index.php?lang=en"
+# following URL added on February 10, 2014:
+echo "http://doc.ubuntu-fr.org/logiciels_educatifs_pour_les_enfants"
+
 echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
 echo "Use texstudio Ubuntu package with AASTeX special macros (aastex is part of texlive-publishers package)"
 echo "to write new Astronomy book"
