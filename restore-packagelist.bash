@@ -905,7 +905,7 @@ echo "https://startpage.com/"
 echo "http://www.opennicproject.org/nearest-servers/"
 
 ###############################################################################################
-#     Math links for kids                                                                     #
+#     Math and language links for kids                                                                     #
 ###############################################################################################
 # following URL added on February 10, 2014:
 echo "http://um.mendelu.cz/maw-html/index.php?lang=en"
@@ -916,7 +916,15 @@ echo "http://www.pyromaths.org/enligne/"
 # following URL added on February 11, 2014 (requires W/A Pro account):
 echo "http://www.wolframalpha.com/problem-generator/"
 # following URL added on February 11, 2014:
+echo "http://www.gomaths.ch/liens_divers.php"
+# following URL added on February 11, 2014:
 echo "http://www.lasouris-web.org/lasouris/imprimer.html"
+# following URL added on February 11, 2014:
+echo "http://www.desmoulins.fr/index.php?pg=scripts!online!scolaire!francais!conjugaison"
+# following URL added on February 11, 2014:
+echo "http://www.desmoulins.fr/index.php?pg=scripts!online!feuilles!form_feuille_apprendre_ecriture"
+# following URL added on February 11, 2014:
+echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 
 ###############################################################################################
 #     Links for authors of books                                                              #
