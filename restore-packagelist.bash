@@ -905,7 +905,7 @@ echo "https://startpage.com/"
 echo "http://www.opennicproject.org/nearest-servers/"
 
 ###############################################################################################
-#     Math and language links for kids                                                                     #
+#     Math links for kids                                                                     #
 ###############################################################################################
 # following URL added on February 10, 2014:
 echo "http://um.mendelu.cz/maw-html/index.php?lang=en"
@@ -917,6 +917,12 @@ echo "http://www.pyromaths.org/enligne/"
 echo "http://www.wolframalpha.com/problem-generator/"
 # following URL added on February 11, 2014:
 echo "http://www.gomaths.ch/liens_divers.php"
+# following URL added on February 11, 2014:
+echo "http://www.xm1math.net/"
+
+###############################################################################################
+#     Language links for kids                                                                     #
+###############################################################################################
 # following URL added on February 11, 2014:
 echo "http://www.lasouris-web.org/lasouris/imprimer.html"
 # following URL added on February 11, 2014:
