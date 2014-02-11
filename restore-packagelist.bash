@@ -913,8 +913,10 @@ echo "http://um.mendelu.cz/maw-html/index.php?lang=en"
 echo "http://doc.ubuntu-fr.org/logiciels_educatifs_pour_les_enfants"
 # following URL added on February 10, 2014:
 echo "http://www.pyromaths.org/enligne/"
-# following URL added on February 11, 2014:
+# following URL added on February 11, 2014 (requires W/A Pro account):
 echo "http://www.wolframalpha.com/problem-generator/"
+# following URL added on February 11, 2014:
+echo "http://www.lasouris-web.org/lasouris/imprimer.html"
 
 ###############################################################################################
 #     Links for authors of books                                                              #
