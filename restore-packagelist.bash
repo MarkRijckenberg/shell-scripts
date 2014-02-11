@@ -791,6 +791,9 @@ echo "http://www.texdoc.net/"
 echo "https://github.com/search?q=documentclass+book+astronomy&nwo=pwl%2Fmaster&search_target=global&type=Code&ref=cmdform"
 # following URL added on May 14, 2013 - very handy when creating latex document in texstudio:
 echo "http://detexify.kirelabs.org/classify.html"
+# following URL added on February 11, 2014 - very handy when creating latex document in texstudio:
+# create formula in texstudio using handwriting
+echo "http://webdemo.visionobjects.com/home.html?locale=fr_FR#equation"
 # following URL added on January 15, 2014:
 echo "http://www.math.toronto.edu/mathit/symbols-letter.pdf"
 # following URL added on May 28, 2013 - very handy when creating latex document in texstudio:
