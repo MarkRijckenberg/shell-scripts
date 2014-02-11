@@ -220,6 +220,11 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:stebbins/handb
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install handbrake 
 
+# install SopCast webTV player
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:lyc256/sopcast-player-ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install sopcast-player 
+
 # install qbittorrent client
 # import RSS feeds from http://showrss.info/?cs=feeds  into qbittorrent client
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:hydr0g3n/qbittorrent-stable
