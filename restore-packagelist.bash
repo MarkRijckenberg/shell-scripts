@@ -924,6 +924,8 @@ echo "http://symbolab.com/solver"
 echo "http://www.gomaths.ch/liens_divers.php"
 # following URL added on February 11, 2014:
 echo "http://www.xm1math.net/"
+#  NOT REVIEWED YET: following URL added on February 11, 2014:
+echo "http://school.creuter.org/"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
