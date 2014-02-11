@@ -923,6 +923,8 @@ echo "http://symbolab.com/solver"
 # following URL added on February 11, 2014:
 echo "http://www.grundschulstoff.de/arbeitsblatt-generator/schulfaecher.html"
 # following URL added on February 11, 2014:
+echo "http://www.mathmaster.org/worksheet/"
+# following URL added on February 11, 2014:
 echo "http://www.math-aids.com/"
 # following URL added on February 11, 2014:
 echo "http://www.gomaths.ch/liens_divers.php"
