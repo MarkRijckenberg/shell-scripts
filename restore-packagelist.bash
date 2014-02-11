@@ -752,7 +752,7 @@ rm *.exe
 
 
 ###############################################################################################
-#     SHOW INTERESTING WEBBROWSER BOOKMARKS                                                   #
+#     Links for astronomers                                                                   #
 ###############################################################################################
 
 echo "Please add these Astronomy bookmarks into all 5 webbrowsers (chromium, firefox, konqueror, chrome, opera)"
@@ -915,6 +915,10 @@ echo "http://doc.ubuntu-fr.org/logiciels_educatifs_pour_les_enfants"
 echo "http://www.pyromaths.org/enligne/"
 # following URL added on February 11, 2014:
 echo "http://www.wolframalpha.com/problem-generator/"
+
+###############################################################################################
+#     Links for authors of books                                                              #
+###############################################################################################
 
 echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
 echo "Use texstudio Ubuntu package with AASTeX special macros (aastex is part of texlive-publishers package)"
