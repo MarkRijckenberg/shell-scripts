@@ -925,7 +925,7 @@ echo "http://www.opennicproject.org/nearest-servers/"
 #     Math links for kids                                                                     #
 ###############################################################################################
 # following URL added on February 10, 2014:
-echo "http://um.mendelu.cz/maw-html/index.php?lang=en"
+echo "http://um.mendelu.cz/maw-html/index.php?lang=fr"
 # following URL added on February 10, 2014:
 echo "http://doc.ubuntu-fr.org/logiciels_educatifs_pour_les_enfants"
 # following URL added on February 10, 2014:
