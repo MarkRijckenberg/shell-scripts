@@ -944,8 +944,8 @@ echo "http://www.math-aids.com/"
 echo "http://www.gomaths.ch/liens_divers.php"
 # following URL added on February 11, 2014:
 echo "http://www.xm1math.net/"
-#  NOT REVIEWED YET: following URL added on February 11, 2014:
-echo "http://school.creuter.org/"
+# following URL added on February 12, 2014:
+echo "https://nl.wikipedia.org/wiki/Hoofdpagina"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
