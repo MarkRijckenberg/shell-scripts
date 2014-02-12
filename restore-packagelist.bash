@@ -768,6 +768,9 @@ echo "http://arxiv.org/list/astro-ph/new"
 # to examine the original .tex file which uses the aastex class
 # decompress the extensionless source file using  the unp command
 echo "http://adsabs.harvard.edu/abstract_service.html"
+# following URL added on February 12, 2014:
+# INSPIRE High Energy Physics information system (search engine):
+echo "http://inspirehep.net/?ln=en"
 # excellent website added to this list on June 7, 2013
 echo "http://cdsweb.u-strasbg.fr/"
 echo "http://ned.ipac.caltech.edu/"
