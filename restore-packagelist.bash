@@ -165,6 +165,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install variety
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install google-talkplugin
 
+# install daily build of firefox-trunk (bleeding edge browser)
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-mozilla-daily/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install firefox-trunk
+
 # Install TLP - advanced power management command line tool for Linux
 # TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
