@@ -900,6 +900,8 @@ echo "http://science.time.com/category/space-2/"
 echo "http://www.darpa.mil/OpenCatalog/index.html"
 # following URL added on February 7, 2014:
 echo "http://video.fosdem.org/"
+# following URL added on February 12, 2014:
+echo "http://www.astro.ulb.ac.be/pmwiki/IAA/HomePage"
 
 
 ###############################################################################################
