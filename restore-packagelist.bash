@@ -908,7 +908,8 @@ echo "http://www.astro.ulb.ac.be/pmwiki/IAA/HomePage"
 # following URL added on February 12, 2014:
 # Linux astronomy distribution based on Ubuntu
 echo "http://www.distroastro.org/"
-
+# following URL added on February 12, 2014:
+echo "http://www.allesoversterrenkunde.nl/#!/actueel"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
