@@ -166,6 +166,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install variety
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install google-talkplugin
 
 # install daily build of firefox-trunk (bleeding edge browser)
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes purge firefox
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-mozilla-daily/ppa
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install firefox-trunk
