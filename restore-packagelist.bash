@@ -946,6 +946,8 @@ echo "http://www.gomaths.ch/liens_divers.php"
 echo "http://www.xm1math.net/"
 # following URL added on February 12, 2014:
 echo "https://nl.wikipedia.org/wiki/Hoofdpagina"
+# following URL added on February 13, 2014:
+echo "http://www.aplusclick.com/"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
