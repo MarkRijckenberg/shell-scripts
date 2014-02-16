@@ -540,21 +540,21 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  texmaker
 #install texstudio
-TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/amd64/"
-url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
+#TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_13.10/amd64/"
+#url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
+#dir=$(mktemp -dt)
+#cd "$dir"
 # Download the .deb file
-wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
+#wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
 # Install the package
-sudo dpkg -i `echo $url`
+#sudo dpkg -i `echo $url`
 # Clean up
-rm `echo $url`
-cd
-rm -rf "$dir"
-cd
-sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
+#rm `echo $url`
+#cd
+#rm -rf "$dir"
+#cd
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 else
   # 32-bit stuff here
@@ -583,21 +583,21 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   texmaker
 #install texstudio
-TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/"
-url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
+#TEXSTUDIOREMOTEDIR="http://download.opensuse.org/repositories/home:/jsundermeyer/xUbuntu_12.10/i386/"
+#url=$(wget -O- -q --no-check-certificate `echo $TEXSTUDIOREMOTEDIR` |  sed -ne 's/^.*"\([^"]*texstudio[^"]*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
+#dir=$(mktemp -dt)
+#cd "$dir"
 # Download the .deb file
-wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
+#wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
 # Install the package
-sudo dpkg -i `echo $url`
+#sudo dpkg -i `echo $url`
 # Clean up
-rm `echo $url`
-cd
-rm -rf "$dir"
-cd
-sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
+#rm `echo $url`
+#cd
+#rm -rf "$dir"
+#cd
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 fi
 
