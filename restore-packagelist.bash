@@ -932,7 +932,7 @@ echo "http://um.mendelu.cz/maw-html/index.php?lang=fr"
 echo "http://doc.ubuntu-fr.org/logiciels_educatifs_pour_les_enfants"
 # following URL added on February 10, 2014:
 echo "http://www.pyromaths.org/enligne/"
-# following URL added on February 11, 2014 (requires W/A Pro account):
+# following URL added on February 11, 2014 (requires paying for W/A Pro account):
 echo "http://www.wolframalpha.com/problem-generator/"
 # following URL added on February 11, 2014:
 echo "http://symbolab.com/solver"
@@ -950,6 +950,8 @@ echo "http://www.xm1math.net/"
 echo "https://nl.wikipedia.org/wiki/Hoofdpagina"
 # following URL added on February 13, 2014:
 echo "http://www.aplusclick.com/"
+# following URL added on February 18, 2014:
+echo "http://opensource.com/education/13/4/guide-open-source-education"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
