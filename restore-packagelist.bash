@@ -930,6 +930,8 @@ echo "http://www.opennicproject.org/nearest-servers/"
 echo "http://packages.ubuntu.com/saucy/edubuntu-desktop"
 # following URL added on February 18, 2014:
 echo "http://mathworld.wolfram.com/"
+# following URL added on February 12, 2014:
+echo "http://nl.wikipedia.org/wiki/Hoofdpagina"
 # following URL added on February 10, 2014:
 echo "http://um.mendelu.cz/maw-html/index.php?lang=fr"
 # following URL added on February 10, 2014:
@@ -950,8 +952,6 @@ echo "http://www.math-aids.com/"
 echo "http://www.gomaths.ch/liens_divers.php"
 # following URL added on February 11, 2014:
 echo "http://www.xm1math.net/"
-# following URL added on February 12, 2014:
-echo "https://nl.wikipedia.org/wiki/Hoofdpagina"
 # following URL added on February 13, 2014:
 echo "http://www.aplusclick.com/"
 # following URL added on February 18, 2014:
