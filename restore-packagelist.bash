@@ -926,6 +926,8 @@ echo "http://www.opennicproject.org/nearest-servers/"
 ###############################################################################################
 #     Math links for kids                                                                     #
 ###############################################################################################
+# following URL added on February 18, 2014:
+echo "http://packages.ubuntu.com/saucy/edubuntu-desktop"
 # following URL added on February 10, 2014:
 echo "http://um.mendelu.cz/maw-html/index.php?lang=fr"
 # following URL added on February 10, 2014:
