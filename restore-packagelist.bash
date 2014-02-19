@@ -990,9 +990,10 @@ echo "Get more information about latex package by using command   texdoc <packag
 ###############################################################################################
 
 # following URL added on February 19, 2014:
-echo "http://onepager.togaware.com/"
-# following URL added on February 19, 2014:
+# introduction to R and R-Studio for beginners
 echo "http://ischool.syr.edu/media/documents/2012/3/DataScienceBook1_1.pdf"
+# following URL added on February 19, 2014:
+echo "http://onepager.togaware.com/"
 # following URL added on February 19, 2014:
 echo "http://www.Rdocumentation.org"
 # following URL added on February 19, 2014:
