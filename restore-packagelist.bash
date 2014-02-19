@@ -990,5 +990,9 @@ echo "Get more information about latex package by using command   texdoc <packag
 echo "http://onepager.togaware.com/"
 # following URL added on February 19, 2014:
 echo "http://ischool.syr.edu/media/documents/2012/3/DataScienceBook1_1.pdf"
+# following URL added on February 19, 2014:
+echo "http://www.Rdocumentation.org"
+# following URL added on February 19, 2014:
+echo "http://www.r-bloggers.com/"
 
 
