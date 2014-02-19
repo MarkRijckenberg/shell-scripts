@@ -998,6 +998,8 @@ echo "http://www.Rdocumentation.org"
 # following URL added on February 19, 2014:
 echo "http://www.r-bloggers.com/"
 # following URL added on February 19, 2014:
+echo "http://www.rstudio.com/"
+# following URL added on February 19, 2014:
 # sample data is here:
 echo "http://dataferrett.census.gov/LaunchDFA.html"
 
