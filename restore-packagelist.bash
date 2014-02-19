@@ -1003,4 +1003,6 @@ echo "http://www.rstudio.com/"
 # following URL added on February 19, 2014:
 # sample data is here:
 echo "http://dataferrett.census.gov/LaunchDFA.html"
+# following URL added on February 19, 2014:
+echo "http://www.r-statistics.com/2013/07/analyzing-your-data-on-the-aws-cloud-with-r/"
 
