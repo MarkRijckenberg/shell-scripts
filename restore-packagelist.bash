@@ -981,3 +981,14 @@ echo "get bibliography citations at http://scholar.google.be using full title an
 echo "For example use - filetype:pdf author:'h karttunen'  -  as search term in http://scholar.google.be"
 echo "For example use - site:arxiv.org intext:"habitable zone" - as search term in http://www.google.be/"
 echo "Get more information about latex package by using command   texdoc <packagename> , for example: texdoc graphicx"
+
+###############################################################################################
+#     Links for data scientists                                                               #
+###############################################################################################
+
+# following URL added on February 19, 2014:
+echo "http://onepager.togaware.com/"
+# following URL added on February 19, 2014:
+echo "http://ischool.syr.edu/media/documents/2012/3/DataScienceBook1_1.pdf"
+
+
