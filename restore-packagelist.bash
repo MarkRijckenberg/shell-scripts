@@ -445,6 +445,7 @@ sudo cp /tmp/sources.list  /etc/apt/sources.list
 # Install yEd editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
 # Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
+# Allows easy creation of Entity Relationship (ER) diagrams (as part of data modeling by data scientist)
 wget http://www.yworks.com/products/yed/demo/`echo $YEDFILENAME`
 sh `echo $YEDFILENAME`
 
