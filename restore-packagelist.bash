@@ -342,12 +342,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
-sudo teamviewer --daemon enable
-cd /opt/teamviewer9/tv_bin/script  
-sudo cp teamviewerd.sysv /etc/init.d/   
+# teamviewer autostart fix procedure
+sudo -k teamviewer --daemon start
+cd /opt/teamviewer9/tv_bin/script
+sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
-/usr/bin/teamviewer --daemon start
+/opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
+# !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 else
   # 32-bit stuff here
@@ -406,12 +408,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
-sudo teamviewer --daemon enable
-cd /opt/teamviewer9/tv_bin/script  
-sudo cp teamviewerd.sysv /etc/init.d/   
+
+# teamviewer autostart fix procedure
+sudo -k teamviewer --daemon start
+cd /opt/teamviewer9/tv_bin/script
+sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
-/usr/bin/teamviewer --daemon start
+/opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
+# !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 fi
 
