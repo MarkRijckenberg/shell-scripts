@@ -1,0 +1,22 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+#
+# teamviewer 9 autostart fix script
+sudo -k teamviewer --daemon start
+cd /opt/teamviewer9/tv_bin/script
+sudo cp teamviewerd.sysv /etc/init.d/
+sudo chmod 755 /etc/init.d/teamviewerd.sysv
+sudo update-rc.d teamviewerd.sysv defaults
+/opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
+# !!!!!! Also add teamviewer program to KDE's Autostart (command to use: teamviewer)
+exit 0
