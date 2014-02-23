@@ -336,6 +336,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+sudo teamviewer  --daemon enable
+sudo /opt/teamviewer9/tv_bin/teamviewerd start
 # install newest wine version 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
@@ -390,6 +392,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+sudo teamviewer  --daemon enable
+sudo /opt/teamviewer9/tv_bin/teamviewerd start
 # install newest wine version 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f  ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
