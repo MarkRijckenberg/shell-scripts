@@ -342,7 +342,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
-# teamviewer autostart fix procedure
+# teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
 sudo -k teamviewer --daemon start
 cd /opt/teamviewer9/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
@@ -409,7 +409,7 @@ wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
-# teamviewer autostart fix procedure
+# teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
 sudo -k teamviewer --daemon start
 cd /opt/teamviewer9/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
