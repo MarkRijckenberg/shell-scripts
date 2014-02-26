@@ -1018,7 +1018,7 @@ echo "Get more information about latex package by using command   texdoc <packag
 
 # Reproducible, scientific, open-source report sharing procedure:
 # 1) install R, RStudio, texmaker and knitr
-# 2) Create R document using Texmaker+Knitr - Knitr is better than Sweave
+# 2) Create R document using texmaker+knitr - knitr is better than Sweave
 # 3) Share new R document on https://github.com/
 # knitr install procedure:
 # git clone https://github.com/yihui/knitr.git
@@ -1028,7 +1028,8 @@ echo "Get more information about latex package by using command   texdoc <packag
 # make check
 
 # following URL added on February 26, 2014:
-echo "http://yihui.name/knitr/"
+# Explanation on how to use texmaker with knitr:
+echo "http://yihui.name/knitr/demo/editors/"
 # following URL added on February 19, 2014:
 # introduction to R and R-Studio for beginners
 echo "http://jsresearch.net/"
