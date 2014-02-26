@@ -938,6 +938,9 @@ echo "http://www.distroastro.org/"
 echo "http://www.allesoversterrenkunde.nl/#!/actueel"
 # following URL added on February 18, 2014:
 echo "http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide"
+# following URL added on February 26, 2014:
+# OAD Open Data Repositories (including Repositories about Astronomy)
+echo "http://oad.simmons.edu/oadwiki/Data_repositories"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
