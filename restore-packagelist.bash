@@ -1000,12 +1000,12 @@ echo "http://www.desmoulins.fr/index.php?pg=scripts!online!feuilles!form_feuille
 echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 
 ###############################################################################################
-#     Links for authors of books                                                              #
+#     Links for authors of Astronomy books                                                    #
 ###############################################################################################
 
-echo "Check with book publisher in which format the digitized book needs to be sent to the publisher (preferably latex instead of Word, ODF, hybrid PDF-ODF format, etc...)"
-echo "Use texstudio Ubuntu package with AASTeX special macros (aastex is part of texlive-publishers package)"
-echo "to write new Astronomy book"
+echo "Check with book publisher in which format the digitized book needs to be sent to the publisher"
+echo "(preferably latex instead of hybrid PDF-ODF format, Word .docx format, etc...)"
+echo "create star maps using stellarium, save as png, and import into latex document"
 echo "get bibliography citations at http://www.ottobib.com  using ISBN number and convert info to bibtex plain text .bib file for use in Latex document"
 echo "get bibliography citations at http://scholar.google.be using full title and author and choose import to bibtex"
 echo "For example use - filetype:pdf author:'h karttunen'  -  as search term in http://scholar.google.be"
