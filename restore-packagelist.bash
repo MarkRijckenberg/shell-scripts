@@ -1019,7 +1019,8 @@ echo "Get more information about latex package by using command   texdoc <packag
 # Reproducible, scientific, open-source report sharing procedure:
 # 1) install R, RStudio, texmaker and knitr
 # 2) Create .Rnw document using texmaker+knitr - knitr is better than Sweave
-# 3) Share new .Rnw document and source .csv datafiles on https://github.com/
+# 3) Add an explanatory comment after each line of R code inside the .Rnw document
+# 4) Share new .Rnw document and source .csv datafiles on https://github.com/
 # knitr install procedure:
 # git clone https://github.com/yihui/knitr.git
 # R CMD build knitr
