@@ -1025,6 +1025,7 @@ echo "Get more information about latex package by using command   texdoc <packag
 # 3) Add an explanatory comment after each line of R code inside the .Rnw document
 # 4) Share new .Rnw document and source .csv datafiles on https://github.com/
 # knitr install procedure:
+# cd; rm knitr_*.tar.gz
 # git clone https://github.com/yihui/knitr.git
 # sudo apt-get update
 # sudo apt-get install texinfo
