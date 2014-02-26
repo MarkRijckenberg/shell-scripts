@@ -1026,6 +1026,9 @@ echo "Get more information about latex package by using command   texdoc <packag
 # 4) Share new .Rnw document and source .csv datafiles on https://github.com/
 # knitr install procedure:
 # git clone https://github.com/yihui/knitr.git
+# sudo apt-get update
+# sudo apt-get install texinfo
+# sudo apt-get install texlive-fonts-extra
 # R CMD build knitr
 # R CMD INSTALL knitr_*.tar.gz
 # cd knitr
