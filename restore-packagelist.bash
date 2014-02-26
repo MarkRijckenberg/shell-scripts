@@ -1021,10 +1021,11 @@ echo "Get more information about latex package by using command   texdoc <packag
 
 # Reproducible, scientific, open-source report sharing procedure:
 # 1) install R, RStudio, texmaker and knitr
-# 2) Create .Rnw document using texmaker+knitr - knitr is better than Sweave
+# 2) Create .Rnw document using texmaker+knitr - knitr is slightly better than Sweave
 # 3) Add an explanatory comment after each line of R code inside the .Rnw document
 # 4) Share new .Rnw document and source .csv datafiles on https://github.com/
 # knitr install procedure:
+
 # cd; rm knitr_*.tar.gz
 # git clone https://github.com/yihui/knitr.git
 # sudo apt-get update
@@ -1032,8 +1033,16 @@ echo "Get more information about latex package by using command   texdoc <packag
 # sudo apt-get install texlive-fonts-extra
 # R CMD build knitr
 # R CMD INSTALL knitr_*.tar.gz
+# sudo cp ~/knitr/inst/bin/knit /usr/bin/knit
 # cd knitr
 # make check
+# git clone https://github.com/MarkRijckenberg/book-template-for-texstudio.git
+# cd book-template-for-texstudio/
+# texmaker texmaker-knitr-sample-document.Rnw 
+# Configure texmaker version 4.1.1 or newer as follows:
+# Texmaker::Options::Configure Texmaker::Commands::R Sweave command should be  Rscript -e "library(knitr); knit('%.Rnw')"
+# Texmaker::Options::Configure Texmaker::Quick Build command option should be Sweave + pdflatex + View PDF
+# Then press F1 key once to compile from .Rnw to .tex to .pdf file and to preview it automatically.
 
 # following URL added on February 26, 2014:
 # Use Google Docs Forms or kwiksurveys.com to create online survey that allows free export of data into R or RStudio
