@@ -1016,6 +1016,19 @@ echo "Get more information about latex package by using command   texdoc <packag
 #     Links for data scientists                                                               #
 ###############################################################################################
 
+# Reproducible, scientific report sharing procedure:
+# 1) install R, RStudio, texmaker and knitr
+# 2) Create R document using Texmaker+Knitr - Knitr is better than Sweave
+# 3) Share new R document on github.com
+# knitr install procedure:
+# git clone https://github.com/yihui/knitr.git
+# R CMD build knitr
+# R CMD INSTALL knitr_*.tar.gz
+# cd knitr
+# make check
+
+# following URL added on February 26, 2014:
+echo "http://yihui.name/knitr/"
 # following URL added on February 19, 2014:
 # introduction to R and R-Studio for beginners
 echo "http://jsresearch.net/"
