@@ -1034,6 +1034,9 @@ echo "http://www.openintro.org/download.php?file=os2_lab_source&referrer=/stat/l
 # following URL added on February 26, 2014:
 # Explanation on how to use texmaker with knitr:
 echo "http://yihui.name/knitr/demo/editors/"
+# following URL added on February 26, 2014:
+# Data Sources for Data Scientists
+echo "http://www.noodletools.com/debbie/resources/math/stats.html"
 # following URL added on February 19, 2014:
 # introduction to R and R-Studio for beginners
 echo "http://jsresearch.net/"
