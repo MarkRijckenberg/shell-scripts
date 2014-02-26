@@ -1029,6 +1029,9 @@ echo "Get more information about latex package by using command   texdoc <packag
 # make check
 
 # following URL added on February 26, 2014:
+# texmaker/knitr source code (.Rnw files) for OpenIntro Labs is here:
+echo "http://www.openintro.org/download.php?file=os2_lab_source&referrer=/stat/labs.php"
+# following URL added on February 26, 2014:
 # Explanation on how to use texmaker with knitr:
 echo "http://yihui.name/knitr/demo/editors/"
 # following URL added on February 19, 2014:
