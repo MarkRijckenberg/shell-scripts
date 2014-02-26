@@ -1029,6 +1029,9 @@ echo "Get more information about latex package by using command   texdoc <packag
 # make check
 
 # following URL added on February 26, 2014:
+# Use Google Docs Forms or kwiksurveys.com to create online survey that allows free export of data into R or RStudio
+echo "https://www.ashrae.org/File%20Library/docLib/Public/20100301_how_2_app_googledocs.pdf"
+# following URL added on February 26, 2014:
 # texmaker/knitr source code (.Rnw files) for OpenIntro Labs is here:
 echo "http://www.openintro.org/download.php?file=os2_lab_source&referrer=/stat/labs.php"
 # following URL added on February 26, 2014:
