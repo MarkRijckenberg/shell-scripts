@@ -1084,4 +1084,7 @@ echo "http://dataferrett.census.gov/LaunchDFA.html"
 echo "http://www.r-statistics.com/2013/07/analyzing-your-data-on-the-aws-cloud-with-r/"
 # following URL added on February 26, 2014:
 echo "http://jeromyanglim.blogspot.be/search/label/R"
+# following URL added on February 28, 2014:
+# Free online Data Science courses here:
+echo "https://www.udacity.com/courses#!/Data%20Science"
 
