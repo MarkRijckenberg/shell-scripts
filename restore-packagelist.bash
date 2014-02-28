@@ -351,8 +351,19 @@ sudo update-rc.d teamviewerd.sysv defaults
 /opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
+# install youtube-to-mp3 program
+wget http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
+sudo dpkg -i sudo dpkg -i YouTubeToMP3.amd64.deb 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+
 else
   # 32-bit stuff here
+  
+# install youtube-to-mp3 program
+wget http://www.mediahuman.com/download/YouTubeToMP3.i386.deb
+sudo dpkg -i sudo dpkg -i YouTubeToMP3.i386.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
