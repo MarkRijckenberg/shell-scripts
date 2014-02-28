@@ -1064,8 +1064,12 @@ echo "http://oad.simmons.edu/oadwiki/Data_repositories"
 # introduction to R and R-Studio for beginners
 echo "http://jsresearch.net/"
 # following URL added on February 28, 2014:
+# Free PDF book "An Introduction to Statistical Learning with Applications in R"
+echo "http://www-bcf.usc.edu/~gareth/ISL/"
+# following URL added on February 28, 2014:
 echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=sr_1_1?ie=UTF8&qid=1393583397&sr=8-1&keywords=practical+data+science+with+r"
 # following URL added on February 19, 2014:
+# free guides
 echo "http://onepager.togaware.com/"
 # following URL added on February 19, 2014:
 echo "http://www.Rdocumentation.org"
