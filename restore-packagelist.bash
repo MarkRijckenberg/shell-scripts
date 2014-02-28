@@ -1038,11 +1038,11 @@ echo "Get more information about latex package by using command   texdoc <packag
 # make check
 # git clone https://github.com/MarkRijckenberg/book-template-for-texstudio.git
 # cd book-template-for-texstudio/
-# texmaker texmaker-knitr-sample-document.Rnw 
+# texmaker main.Rnw
 # Configure texmaker version 4.1.1 or newer as follows:
 # Texmaker::Options::Configure Texmaker::Commands::R Sweave command should be  Rscript -e "library(knitr); knit('%.Rnw')"
 # Texmaker::Options::Configure Texmaker::Quick Build command option should be Sweave + pdflatex + View PDF
-# Then press F1 key once to compile from .Rnw to .tex to .pdf file and to preview it automatically.
+# Then press F1,F12,F11,F1,F1 to compile from .Rnw to .tex to .pdf file and to preview it automatically.
 
 # following URL added on February 26, 2014:
 # Use Google Docs Forms (or kwiksurveys.com) to create online survey that allows free export of data into R or RStudio
