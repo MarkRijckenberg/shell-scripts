@@ -505,6 +505,7 @@ cd ~/rstudio/build
 cmake .. -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release
 sudo make
 sudo make install
+sudo ln -s /usr/local/lib/rstudio/bin/rstudio /usr/bin
 cd
 
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
