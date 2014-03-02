@@ -489,6 +489,24 @@ sh `echo $YEDFILENAME`
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 
+
+# install rstudio from source code:
+# Free disk space required: around 5 GB
+
+cd
+git clone https://github.com/rstudio/rstudio.git
+cd rstudio/
+mkdir build
+cd build/
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install   libboost-all-dev cmake libqt4-dev  build-essential libqtwebkit-dev
+bash ~/rstudio/dependencies/linux/install-dependencies-debian
+cd ~/rstudio/build
+cmake .. -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release
+sudo make
+sudo make install
+cd
+
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes ppa:texlive-backports/ppa
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
