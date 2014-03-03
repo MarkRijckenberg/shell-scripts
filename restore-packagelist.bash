@@ -1019,6 +1019,8 @@ echo "http://www.aplusclick.com/"
 echo "http://opensource.com/education/13/4/guide-open-source-education"
 # following URL added on February 21, 2014:
 echo "https://www.coursesites.com/webapps/Bb-sites-course-creation-BBLEARN/pages/mooccatalog.html"
+# following URL added on March 3, 2014:
+echo "https://www.oppia.org/learn"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
