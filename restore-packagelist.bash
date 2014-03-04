@@ -1095,6 +1095,9 @@ echo "http://oad.simmons.edu/oadwiki/Data_repositories"
 # following URL added on March 4, 2014:
 # NASA Data Sources for Data Scientists - data can be manually exported into .csv format
 echo "http://mynasadata.larc.nasa.gov/las/UI.vm"
+# following URL added on March 4, 2014:
+# How to import data into R from various types of data sources:
+echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
 # following URL added on February 19, 2014:
 # introduction to R and R-Studio for beginners
 echo "http://jsresearch.net/"
