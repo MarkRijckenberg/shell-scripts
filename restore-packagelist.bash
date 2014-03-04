@@ -1092,6 +1092,9 @@ echo "http://kbroman.github.io/knitr_knutshell/pages/latex.html"
 echo "http://www.noodletools.com/debbie/resources/math/stats.html"
 # OAD Open Data Repositories (including Repositories about Astronomy)
 echo "http://oad.simmons.edu/oadwiki/Data_repositories"
+# following URL added on March 4, 2014:
+# NASA Data Sources for Data Scientists - data can be manually exported into .csv format
+echo "http://mynasadata.larc.nasa.gov/las/UI.vm"
 # following URL added on February 19, 2014:
 # introduction to R and R-Studio for beginners
 echo "http://jsresearch.net/"
