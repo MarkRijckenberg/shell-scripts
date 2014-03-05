@@ -353,7 +353,7 @@ sudo update-rc.d teamviewerd.sysv defaults
 
 # install youtube-to-mp3 program
 wget http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
-sudo dpkg -i sudo dpkg -i YouTubeToMP3.amd64.deb 
+sudo dpkg -i YouTubeToMP3.amd64.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 else
@@ -361,7 +361,7 @@ else
   
 # install youtube-to-mp3 program
 wget http://www.mediahuman.com/download/YouTubeToMP3.i386.deb
-sudo dpkg -i sudo dpkg -i YouTubeToMP3.i386.deb
+sudo dpkg -i YouTubeToMP3.i386.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
