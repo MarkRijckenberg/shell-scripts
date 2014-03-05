@@ -811,6 +811,19 @@ sudo ln -s /usr/local/lib/rstudio/bin/rstudio /usr/bin
 cd
 
 
+# install knitr (used by texmaker) from source code:
+cd; rm knitr_*.tar.gz
+git clone https://github.com/yihui/knitr.git
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texinfo texmaker r-base-core r-base
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-fonts-extra
+R CMD build knitr
+R CMD INSTALL knitr_*.tar.gz
+sudo cp ~/knitr/inst/bin/knit /usr/bin/knit
+cd knitr
+make check
+
+
 ###############################################################################################
 #     Links for astronomers                                                                   #
 ###############################################################################################
