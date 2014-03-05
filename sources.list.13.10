@@ -1,48 +1,108 @@
-# See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
-## newer versions of the distribution.
+#############################################################
+################### OFFICIAL UBUNTU REPOS ###################
+#############################################################
 
-deb http://nl3.archive.ubuntu.com/ubuntu/ saucy main restricted multiverse
-deb-src http://nl3.archive.ubuntu.com/ubuntu/ saucy main restricted multiverse
+###### Ubuntu Main Repos
+deb http://be.archive.ubuntu.com/ubuntu/ saucy main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ saucy main restricted universe multiverse 
 
-## Major bug fix updates produced after the final release of the
-## distribution.
-deb http://nl3.archive.ubuntu.com/ubuntu/ saucy-updates main restricted multiverse
-deb-src http://nl3.archive.ubuntu.com/ubuntu/ saucy-updates main restricted multiverse
+###### Ubuntu Update Repos
+deb http://be.archive.ubuntu.com/ubuntu/ saucy-security main restricted universe multiverse 
+deb http://be.archive.ubuntu.com/ubuntu/ saucy-updates main restricted universe multiverse 
+deb http://be.archive.ubuntu.com/ubuntu/ saucy-proposed main restricted universe multiverse 
+deb http://be.archive.ubuntu.com/ubuntu/ saucy-backports main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ saucy-security main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ saucy-updates main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ saucy-proposed main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ saucy-backports main restricted universe multiverse 
 
-## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu
-## team. Also, please note that software in universe WILL NOT receive any
-## review or updates from the Ubuntu security team.
-deb http://nl3.archive.ubuntu.com/ubuntu/ saucy universe
-deb-src http://nl3.archive.ubuntu.com/ubuntu/ saucy universe
-deb http://nl3.archive.ubuntu.com/ubuntu/ saucy-updates universe
-deb-src http://nl3.archive.ubuntu.com/ubuntu/ saucy-updates universe
-
-## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu 
-## team, and may not be under a free licence. Please satisfy yourself as to 
-## your rights to use the software. Also, please note that software in 
-## multiverse WILL NOT receive any review or updates from the Ubuntu
-## security team.
-
-## Uncomment the following two lines to add software from the 'backports'
-## repository.
-## N.B. software from this repository may not have been tested as
-## extensively as that contained in the main release, although it includes
-## newer versions of some applications which may provide useful features.
-## Also, please note that software in backports WILL NOT receive any review
-## or updates from the Ubuntu security team.
-# deb http://nl3.archive.ubuntu.com/ubuntu/ saucy-backports main restricted universe multiverse
-# deb-src http://nl3.archive.ubuntu.com/ubuntu/ saucy-backports main restricted universe multiverse
-
-
-## Uncomment the following two lines to add software from Canonical's
-## 'partner' repository.
-## This software is not part of Ubuntu, but is offered by Canonical and the
-## respective vendors as a service to Ubuntu users.
+###### Ubuntu Partner Repo
 deb http://archive.canonical.com/ubuntu saucy partner
 deb-src http://archive.canonical.com/ubuntu saucy partner
 
-deb http://security.ubuntu.com/ubuntu saucy-security main restricted multiverse
-deb-src http://security.ubuntu.com/ubuntu saucy-security main restricted multiverse
-deb http://security.ubuntu.com/ubuntu saucy-security universe
-deb-src http://security.ubuntu.com/ubuntu saucy-security universe
+###### Ubuntu Extras Repo
+deb http://extras.ubuntu.com/ubuntu saucy main
+deb-src http://extras.ubuntu.com/ubuntu saucy main
+
+##############################################################
+##################### UNOFFICIAL  REPOS ######################
+##############################################################
+
+###### 3rd Party Binary Repos
+
+#### Google Chrome Browser - http://www.google.com/linuxrepositories/
+## Run this command: wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+deb http://dl.google.com/linux/chrome/deb/ stable main
+
+#### Kubuntu Backports PPA - https://edge.launchpad.net/~kubuntu-ppa/+archive/backports
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
+deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu saucy main
+
+#### Kubuntu Beta Backports PPA - https://launchpad.net/~kubuntu-ppa/+archive/beta
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
+deb http://ppa.launchpad.net/kubuntu-ppa/beta/ubuntu saucy main
+
+#### Kubuntu Updates PPA - https://edge.launchpad.net/~kubuntu-ppa/+archive/ppa
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
+deb http://ppa.launchpad.net/kubuntu-ppa/ppa/ubuntu saucy main 
+
+#### LibreOffice PPA - http://www.documentfoundation.org/download/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
+deb http://ppa.launchpad.net/libreoffice/ppa/ubuntu saucy main
+
+#### Mozilla Daily Build Team PPA - http://edge.launchpad.net/~ubuntu-mozilla-daily/+archive/ppa
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  247510BE
+deb http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu saucy main
+
+#### Opera - http://www.opera.com/
+## Run this command: sudo wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+deb http://deb.opera.com/opera/ stable non-free
+
+#### Samsung Unified Linux Driver Repository (SULDR) - http://www.bchemnet.com/suldr/index.html
+## Run this command: wget -O - http://www.bchemnet.com/suldr/suldr.gpg | apt-key add -
+deb http://www.bchemnet.com/suldr/ debian extra
+
+#### Steam for Linux - http://store.steampowered.com/about/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+
+#### Steam for Linux - http://store.steampowered.com/about/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+
+#### UNetbootin PPA - http://unetbootin.sourceforge.net/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu saucy main
+
+#### VirtualBox - http://www.virtualbox.org
+## Run this command: wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+deb http://download.virtualbox.org/virtualbox/debian saucy contrib
+
+
+####### 3rd Party Source Repos
+
+#### Kubuntu Backports PPA (Source) - https://edge.launchpad.net/~kubuntu-ppa/+archive/backports
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
+deb-src http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu saucy main
+
+#### Kubuntu Beta Backports PPA (Source) - https://launchpad.net/~kubuntu-ppa/+archive/beta
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
+deb-src http://ppa.launchpad.net/kubuntu-ppa/beta/ubuntu saucy main
+
+#### Kubuntu Updates PPA (Source) - https://edge.launchpad.net/~kubuntu-ppa/+archive/ppa
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
+deb-src http://ppa.launchpad.net/kubuntu-ppa/ppa/ubuntu saucy main 
+
+#### LibreOffice PPA (Source) - http://www.documentfoundation.org/download/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
+deb-src http://ppa.launchpad.net/libreoffice/ppa/ubuntu saucy main
+
+#### Mozilla Daily Build Team PPA (Source) - http://edge.launchpad.net/~ubuntu-mozilla-daily/+archive/ppa
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  247510BE
+deb-src http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu saucy main
+
+#### UNetbootin PPA (Source) - http://unetbootin.sourceforge.net/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
+deb-src http://ppa.launchpad.net/gezakovacs/ppa/ubuntu saucy main
+
 
