@@ -1111,14 +1111,11 @@ echo "http://mynasadata.larc.nasa.gov/las/UI.vm"
 # following URL added on March 4, 2014:
 # How to import data into R from various types of data sources:
 echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
-# following URL added on February 19, 2014:
-# introduction to R and R-Studio for beginners
-echo "http://jsresearch.net/"
+
 # following URL added on February 28, 2014:
 # Free PDF book "An Introduction to Statistical Learning with Applications in R"
 echo "http://www-bcf.usc.edu/~gareth/ISL/"
-# following URL added on February 28, 2014:
-echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=sr_1_1?ie=UTF8&qid=1393583397&sr=8-1&keywords=practical+data+science+with+r"
+
 # following URL added on February 19, 2014:
 # free guides
 echo "http://onepager.togaware.com/"
@@ -1138,4 +1135,16 @@ echo "http://jeromyanglim.blogspot.be/search/label/R"
 # following URL added on February 28, 2014:
 # Free online Data Science courses here:
 echo "https://www.udacity.com/courses#!/Data%20Science"
+# following URL added on February 19, 2014:
+# STEP 1: introduction to R and R-Studio for beginners
+echo "http://jsresearch.net/"
+# following URL added on March 7, 2014:
+# Step 2 Data Smart
+echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
+# following URL added on March 7, 2014:
+# Step 3 Sams Teach Yourself SQL in 10 Minutes (4th Edition)
+echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
+# following URL added on March 7, 2014:
+# STEP 4: following URL added on February 28, 2014:
+echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=sr_1_1?ie=UTF8&qid=1393583397&sr=8-1&keywords=practical+data+science+with+r"
 
