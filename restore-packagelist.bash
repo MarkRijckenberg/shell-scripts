@@ -496,22 +496,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-fonts-recommended texlive-binaries texlive-latex-base texlive-publishers
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-latex-extra biblatex
 
-
-# install texlive the only proper way so that tlmgr works correctly
-# procedure created on March 8, 2014:
-# install-tl-ubuntu script requires 4GB of free diskspace
-
-sudo DEBIAN_FRONTEND=noninteractive apt-get purge texlive-base texlive-binaries  texlive-fonts-recommended texlive-latex-base texlive-publishers
-git clone https://github.com/scottkosty/install-tl-ubuntu.git
-cd install-tl-ubuntu
-sudo bash install-tl-ubuntu --allow-small
-
-sudo texhash
-tlmgr init-usertree
-tlmgr update --all
-tlmgr install hyperref
-
-
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes --force-yes  ppa:aims/casapy
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
@@ -807,6 +791,21 @@ mv *.km? $KMZ
 mv *gz $TAR
 rm *.exe
 
+# install texlive the only proper way so that tlmgr also works correctly in Ubuntu 13.10
+# procedure created on March 8, 2014:
+# install-tl-ubuntu script requires 4GB of free diskspace
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge texlive-base texlive-binaries  texlive-fonts-recommended texlive-latex-base texlive-publishers
+git clone https://github.com/scottkosty/install-tl-ubuntu.git
+cd install-tl-ubuntu
+./install-tl-ubuntu --help
+sudo bash install-tl-ubuntu 
+
+sudo texhash
+tlmgr init-usertree
+tlmgr update --all
+tlmgr install hyperref
+
 
 # install rstudio / R-Studio from source code:
 # Free disk space required: around 5 GB
@@ -831,8 +830,7 @@ cd
 cd; rm knitr_*.tar.gz
 git clone https://github.com/yihui/knitr.git
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texinfo texmaker r-base-core r-base
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-fonts-extra
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 R CMD build knitr
 R CMD INSTALL knitr_*.tar.gz
 sudo cp ~/knitr/inst/bin/knit /usr/bin/knit
