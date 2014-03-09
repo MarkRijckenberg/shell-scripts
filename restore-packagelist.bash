@@ -800,6 +800,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get purge  texlive-common texlive-doc-ba
 git clone https://github.com/scottkosty/install-tl-ubuntu.git
 cd install-tl-ubuntu
 ./install-tl-ubuntu --help
+
+# following script tries to install Ubuntu package parallel which ONLY exists in Ubuntu 13.10
+# replace 'parallel' Ubuntu package with 'moreutils' package in install-tl-ubuntu package in order to make script
+# work in Ubuntu versions other than 13.10
 sudo bash install-tl-ubuntu 
 
 sudo texhash
