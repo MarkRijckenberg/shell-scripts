@@ -500,10 +500,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT
 # install texlive the only proper way so that tlmgr works correctly
 # procedure created on March 8, 2014:
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get purge 
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge texlive-base texlive-binaries  texlive-fonts-recommended texlive-latex-base texlive-publishers
 git clone https://github.com/scottkosty/install-tl-ubuntu.git
 cd install-tl-ubuntu
-sudo bash install-tl-ubuntu
+sudo bash install-tl-ubuntu --allow-small
 
 sudo texhash
 tlmgr init-usertree
