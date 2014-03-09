@@ -499,6 +499,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT
 
 # install texlive the only proper way so that tlmgr works correctly
 # procedure created on March 8, 2014:
+# install-tl-ubuntu script requires 4GB of free diskspace
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get purge texlive-base texlive-binaries  texlive-fonts-recommended texlive-latex-base texlive-publishers
 git clone https://github.com/scottkosty/install-tl-ubuntu.git
