@@ -490,11 +490,26 @@ sh `echo $YEDFILENAME`
 sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes ppa:texlive-backports/ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-latex-extra texlive-bibtex-extra latex-xcolor biber
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-fonts-recommended texlive-binaries texlive-latex-base texlive-publishers
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-latex-extra biblatex
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes ppa:texlive-backports/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-latex-extra texlive-bibtex-extra latex-xcolor biber
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-fonts-recommended texlive-binaries texlive-latex-base texlive-publishers
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  texlive-latex-extra biblatex
+
+
+# install texlive the only proper way so that tlmgr works correctly
+# procedure created on March 8, 2014:
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge 
+git clone https://github.com/scottkosty/install-tl-ubuntu.git
+cd install-tl-ubuntu
+sudo bash install-tl-ubuntu
+
+sudo texhash
+tlmgr init-usertree
+tlmgr update --all
+tlmgr install hyperref
+
 
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes --force-yes  ppa:aims/casapy
