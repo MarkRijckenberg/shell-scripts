@@ -811,6 +811,7 @@ tlmgr init-usertree
 tlmgr update --all
 tlmgr install hyperref
 sudo fmtutil-sys --all
+sudo update-texmf
 
 
 # install rstudio / R-Studio from source code:
