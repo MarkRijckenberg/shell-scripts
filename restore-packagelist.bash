@@ -810,6 +810,7 @@ sudo texhash
 tlmgr init-usertree
 tlmgr update --all
 tlmgr install hyperref
+sudo fmtutil-sys --all
 
 
 # install rstudio / R-Studio from source code:
