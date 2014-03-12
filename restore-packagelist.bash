@@ -1157,9 +1157,7 @@ echo "http://dataferrett.census.gov/LaunchDFA.html"
 echo "http://www.r-statistics.com/2013/07/analyzing-your-data-on-the-aws-cloud-with-r/"
 # following URL added on February 26, 2014:
 echo "http://jeromyanglim.blogspot.be/search/label/R"
-# following URL added on February 28, 2014:
-# Free online Data Science courses here:
-echo "https://www.udacity.com/courses#!/Data%20Science"
+
 # following URL added on February 19, 2014:
 # STEP 1: introduction to R and R-Studio for beginners
 echo "http://jsresearch.net/"
@@ -1176,5 +1174,14 @@ echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=s
 echo "https://www.edx.org/"
 # following URL added on March 12, 2014:
 echo "http://www.google.com/trends"
+
+# Free online courses:
 # free Stanford courses about R and other subjects
+# following URL added on March 12, 2014:
 echo "https://class.stanford.edu"
+# following URL added on February 28, 2014:
+# Free online Data Science courses here:
+echo "https://www.udacity.com/courses#!/Data%20Science"
+# Free online Data Science courses here:
+# following URL added on March 12, 2014:
+echo "https://courses.edx.org/dashboard"
