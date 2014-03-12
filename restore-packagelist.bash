@@ -1174,3 +1174,5 @@ echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF
 echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=sr_1_1?ie=UTF8&qid=1393583397&sr=8-1&keywords=practical+data+science+with+r"
 # following URL added on March 7, 2014:
 echo "https://www.edx.org/"
+# following URL added on March 12, 2014:
+echo "http://www.google.com/trends"
