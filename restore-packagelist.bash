@@ -1176,3 +1176,5 @@ echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=s
 echo "https://www.edx.org/"
 # following URL added on March 12, 2014:
 echo "http://www.google.com/trends"
+# free Stanford courses about R and other subjects
+echo "https://class.stanford.edu"
