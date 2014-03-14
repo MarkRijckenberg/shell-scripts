@@ -1185,3 +1185,5 @@ echo "https://www.udacity.com/courses#!/Data%20Science"
 # Free online Data Science courses here:
 # following URL added on March 12, 2014:
 echo "https://courses.edx.org/dashboard"
+# following URL added on March 14, 2014:
+echo "https://www.class-central.com/"
