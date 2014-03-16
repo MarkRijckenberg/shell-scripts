@@ -1164,6 +1164,12 @@ echo "http://jsresearch.net/"
 # following URL added on March 7, 2014:
 # Step 2 Data Smart
 echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
+# following URL added on March 16, 2014:
+# one of the authors of the Data Smart book:
+echo "http://www.evanmiller.org/"
+# following URL added on March 16, 2014:
+# spreadsheets used in Data Smart book:
+echo "http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111866146X.html"
 # following URL added on March 7, 2014:
 # Step 3 Sams Teach Yourself SQL in 10 Minutes (4th Edition)
 echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
