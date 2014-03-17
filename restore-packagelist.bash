@@ -824,6 +824,11 @@ mkdir build
 cd build/
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  libcurl4-gnutls-dev libboost-all-dev cmake libqt4-dev  build-essential libqtwebkit-dev
+
+cd ~/rstudio/dependencies/common
+bash install-common
+cd
+
 bash ~/rstudio/dependencies/linux/install-dependencies-debian
 cd ~/rstudio/build
 cmake .. -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release
