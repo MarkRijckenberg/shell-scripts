@@ -1185,6 +1185,9 @@ echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=s
 echo "https://www.edx.org/"
 # following URL added on March 12, 2014:
 echo "http://www.google.com/trends"
+# following URL added on March 18, 2014:
+# world news site for data scientists
+echo "http://fivethirtyeight.com/"
 
 # Free online courses:
 # free Stanford courses about R and other subjects
