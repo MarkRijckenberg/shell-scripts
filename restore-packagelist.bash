@@ -1,10 +1,13 @@
 #!/bin/bash
-# !!!!! WINDOWS 8 users should use ninite.com and avast! Internet Security's Software Updater
+# !!!!! WINDOWS 8.1 64-bit users should use ninite.com and avast! Premier Software Updater
 # !!!!! for semi-automated Windows application deployments and updates
-# !!!!! WINDOWS 8 users should install "Classic Start" Ninite.com utility
+# !!!!! WINDOWS 8.1 64-bit users should install "Classic Start" Ninite.com utility
 # !!!!! and disable Superfetch Windows service to avoid hard disk thrashing and excessive memory use
-# !!!!! WINDOWS 8 users should use http://www.pendrivelinux.com/yumi-multiboot-usb-creator/  to
+# !!!!! WINDOWS 8.1 64-bit users should use http://www.pendrivelinux.com/yumi-multiboot-usb-creator/  to
 # !!!!! to add operating systems one by one in a flexible manner onto a multi-boot multi-OS USB stick
+# !!!!! WINDOWS 8.1 64-bit users should install new games via Steam and via the Windows App Store
+# !!!!! WINDOWS 8.1 64-bit App Store URL: http://windows.microsoft.com/en-us/windows-8/apps#Cat=t1
+
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Linux Mint 16 Cinnamon 64-bit
 # REQUIRES: Linux Mint 16 Cinnamon 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
