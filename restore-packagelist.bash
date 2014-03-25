@@ -1143,6 +1143,8 @@ echo "http://mynasadata.larc.nasa.gov/las/UI.vm"
 # following URL added on March 7, 2014:
 # Flemish government's open data initiative uses JSON format for open data sources/sets instead of .csv format
 echo "http://data.opendataforum.info/"
+# following URL added on March 25, 2014:
+echo "https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/"
 
 # following URL added on March 4, 2014:
 # How to import data into R from various types of data sources:
