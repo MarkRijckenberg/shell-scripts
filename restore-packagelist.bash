@@ -1155,6 +1155,9 @@ echo "http://www-bcf.usc.edu/~gareth/ISL/"
 # following URL added on February 19, 2014:
 # free guides
 echo "http://onepager.togaware.com/"
+# following URL added on March 25, 2014:
+# R Reference Card 2.0
+echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
 # following URL added on February 19, 2014:
 echo "http://www.Rdocumentation.org"
 # following URL added on February 19, 2014:
