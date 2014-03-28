@@ -1211,5 +1211,8 @@ echo "https://courses.edx.org/dashboard"
 # Free PDF book "An Introduction to Statistical Learning with Applications in R"
 # Very handy book that complements the edX course "MITx: 15.071x The Analytics Edge"
 echo "http://www-bcf.usc.edu/~gareth/ISL/"
+# following URL added on March 28, 2014:
+# Systems approaches to improving data quality 
+echo "http://mitiq.mit.edu/ICIQ/Documents/IQ%20Conference%201996/Papers/SystemsApproachestoImprovingDataQuality.pdf"
 # following URL added on March 14, 2014:
 echo "https://www.class-central.com/"
