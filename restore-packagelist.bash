@@ -1150,9 +1150,6 @@ echo "https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/"
 # How to import data into R from various types of data sources:
 echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
 
-# following URL added on February 28, 2014:
-# Free PDF book "An Introduction to Statistical Learning with Applications in R"
-echo "http://www-bcf.usc.edu/~gareth/ISL/"
 
 # following URL added on February 19, 2014:
 # free guides
@@ -1210,5 +1207,9 @@ echo "https://www.udacity.com/courses#!/Data%20Science"
 # Free online Data Science courses here:
 # following URL added on March 12, 2014:
 echo "https://courses.edx.org/dashboard"
+# following URL added on February 28, 2014:
+# Free PDF book "An Introduction to Statistical Learning with Applications in R"
+# Very handy book that complements the edX course "MITx: 15.071x The Analytics Edge"
+echo "http://www-bcf.usc.edu/~gareth/ISL/"
 # following URL added on March 14, 2014:
 echo "https://www.class-central.com/"
