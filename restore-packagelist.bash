@@ -114,6 +114,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptab
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
+# rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-me
@@ -364,6 +365,8 @@ sudo update-rc.d teamviewerd.sysv defaults
 wget http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
 sudo dpkg -i YouTubeToMP3.amd64.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+# install dupeguru-me which can find and delete similar music filenames using fuzzy logic
+# rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
 else
   # 32-bit stuff here
@@ -372,6 +375,8 @@ else
 wget http://www.mediahuman.com/download/YouTubeToMP3.i386.deb
 sudo dpkg -i YouTubeToMP3.i386.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+# install dupeguru-me which can find and delete similar music filenames using fuzzy logic
+# rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
