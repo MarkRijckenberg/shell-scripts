@@ -1066,6 +1066,8 @@ echo "http://opensource.com/education/13/4/guide-open-source-education"
 echo "https://www.coursesites.com/webapps/Bb-sites-course-creation-BBLEARN/pages/mooccatalog.html"
 # following URL added on March 3, 2014:
 echo "https://www.oppia.org/learn"
+# following URL added on March 29, 2014:
+echo "http://www.mooc-list.com/"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
@@ -1198,6 +1200,11 @@ echo "http://www.google.com/trends"
 echo "http://fivethirtyeight.com/"
 
 # Free online courses:
+
+# following URL added on March 29, 2014:
+# list of online course, use search function in top right corner of page:
+echo "http://www.mooc-list.com/"
+
 # free Stanford courses about R and other subjects
 # following URL added on March 12, 2014:
 echo "https://class.stanford.edu"
