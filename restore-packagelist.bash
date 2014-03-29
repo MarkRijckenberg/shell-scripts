@@ -113,6 +113,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 
+# install dupeguru-me which can find similar filenames
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-me
+
 # Install razorqt desktop environment
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:razor-qt/ppa
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
