@@ -1211,6 +1211,9 @@ echo "http://fivethirtyeight.com/"
 # following URL added on March 29, 2014:
 # list of data visualisation tools
 echo "http://selection.datavisualization.ch/"
+# following URL added on March 29, 2014:
+# search engine for R
+echo "http://www.rseek.org/"
 
 # Free online courses:
 
