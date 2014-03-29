@@ -1208,6 +1208,9 @@ echo "http://www.google.com/trends"
 # following URL added on March 18, 2014:
 # world news site for data scientists
 echo "http://fivethirtyeight.com/"
+# following URL added on March 29, 2014:
+# list of data visualisation tools
+echo "http://selection.datavisualization.ch/"
 
 # Free online courses:
 
