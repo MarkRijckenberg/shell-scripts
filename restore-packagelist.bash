@@ -1230,6 +1230,8 @@ echo "https://www.udacity.com/courses#!/Data%20Science"
 # Free online Data Science courses here:
 # following URL added on March 12, 2014:
 echo "https://courses.edx.org/dashboard"
+# following URL added on March 30, 2014:
+echo "https://www.coursera.org/courses?orderby=upcoming&lngs=en&cats=cs-theory,cs-systems,cs-programming,cs-ai,stats"
 # following URL added on February 28, 2014:
 # Free PDF book "An Introduction to Statistical Learning with Applications in R"
 # Very handy book that complements the edX course "MITx: 15.071x The Analytics Edge"
