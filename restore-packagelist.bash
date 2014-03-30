@@ -1,5 +1,5 @@
 #!/bin/bash
-# !!!!! WINDOWS 8.1 64-bit users should use ninite.com and avast! Premier Software Updater
+# !!!!! WINDOWS 8.1 64-bit users should use ninite.com, Glary Utilities and avast! Premier Software Updater
 # !!!!! for semi-automated Windows application deployments and updates
 # !!!!! WINDOWS 8.1 64-bit users should install "Classic Start" Ninite.com utility
 # !!!!! and disable Superfetch Windows service to avoid hard disk thrashing and excessive memory use
