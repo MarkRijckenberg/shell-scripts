@@ -18,5 +18,6 @@ sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
 /opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
+sudo service teamviewerd.sysv start
 # !!!!!! Also add teamviewer program to KDE's Autostart (command to use: teamviewer)
 exit 0
