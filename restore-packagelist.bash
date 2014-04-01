@@ -5,7 +5,7 @@
 # !!!!! and disable Superfetch Windows service to avoid hard disk thrashing and excessive memory use
 # !!!!! WINDOWS 8.1 64-bit users should use http://www.pendrivelinux.com/yumi-multiboot-usb-creator/  to
 # !!!!! to add operating systems one by one in a flexible manner onto a multi-boot multi-OS USB stick
-# !!!!! WINDOWS 8.1 64-bit users should install new games via Steam and via the Windows App Store
+# !!!!! WINDOWS 8.1 64-bit users should install new games via Steam and via www.pokki.com
 # !!!!! WINDOWS 8.1 64-bit App Store URL: http://windows.microsoft.com/en-us/windows-8/apps#Cat=t1
 # !!!!! WINDOWS 8.1 64-bit Second App Store URL: http://www.pokki.com/
 
