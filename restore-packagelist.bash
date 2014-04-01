@@ -1145,22 +1145,7 @@ echo "http://yihui.name/knitr/demo/editors/"
 # Explanation on how to use .Rnw files and RStudio with knitr:
 echo "http://kbroman.github.io/knitr_knutshell/pages/latex.html"
 # following URL added on February 26, 2014:
-# Data Sources for Data Scientists
-echo "http://www.noodletools.com/debbie/resources/math/stats.html"
-# OAD Open Data Repositories (including Repositories about Astronomy)
-echo "http://oad.simmons.edu/oadwiki/Data_repositories"
-# following URL added on March 4, 2014:
-# NASA Data Sources for Data Scientists - data can be manually exported into .csv format
-echo "http://mynasadata.larc.nasa.gov/las/UI.vm"
-# following URL added on March 7, 2014:
-# Flemish government's open data initiative uses JSON format for open data sources/sets instead of .csv format
-echo "http://data.opendataforum.info/"
-# following URL added on March 25, 2014:
-echo "https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/"
 
-# following URL added on March 4, 2014:
-# How to import data into R from various types of data sources:
-echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
 
 
 # following URL added on February 19, 2014:
@@ -1244,3 +1229,25 @@ echo "https://www.class-central.com/"
 # following URL added on April 1, 2014:
 # Natural Language Processing - linked to Text Mining
 echo "https://www.youtube.com/results?search_query=1%20-%201%20Stanford%20NLP%20-%20Professor%20Dan%20&sm=3"
+
+
+###############################################################################################
+#     Open data formats and importing data into R                                             #
+###############################################################################################
+# Data Sources for Data Scientists
+echo "http://www.noodletools.com/debbie/resources/math/stats.html"
+# OAD Open Data Repositories (including Repositories about Astronomy)
+echo "http://oad.simmons.edu/oadwiki/Data_repositories"
+# following URL added on March 4, 2014:
+# NASA Data Sources for Data Scientists - data can be manually exported into .csv format
+echo "http://mynasadata.larc.nasa.gov/las/UI.vm"
+# following URL added on March 7, 2014:
+# Flemish government's open data initiative uses JSON format for open data sources/sets instead of .csv format
+echo "http://data.opendataforum.info/"
+# following URL added on March 25, 2014:
+echo "https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/"
+# following URL added on March 4, 2014:
+# How to import data into R from various types of data sources:
+echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
+# following URL added on April 1, 2014:
+echo "https://github.com/rOpenHealth"
