@@ -1241,3 +1241,6 @@ echo "http://www-bcf.usc.edu/~gareth/ISL/"
 echo "http://mitiq.mit.edu/ICIQ/Documents/IQ%20Conference%201996/Papers/SystemsApproachestoImprovingDataQuality.pdf"
 # following URL added on March 14, 2014:
 echo "https://www.class-central.com/"
+# following URL added on April 1, 2014:
+# Natural Language Processing - linked to Text Mining
+echo "https://www.youtube.com/results?search_query=1%20-%201%20Stanford%20NLP%20-%20Professor%20Dan%20&sm=3"
