@@ -805,7 +805,7 @@ mv *.km? $KMZ
 mv *gz $TAR
 rm *.exe
 
-# install texlive the only proper way so that tlmgr also works correctly in Ubuntu 13.10
+# install texlive the only proper way so that tlmgr also works correctly in Ubuntu 13.10 or Ubuntu 14.04 LTS
 # procedure created on March 8, 2014:
 # install-tl-ubuntu script requires 4GB of free diskspace
 
@@ -815,9 +815,9 @@ git clone https://github.com/scottkosty/install-tl-ubuntu.git
 cd install-tl-ubuntu
 ./install-tl-ubuntu --help
 
-# following script tries to install Ubuntu package parallel which ONLY exists in Ubuntu 13.10
+# following script tries to install Ubuntu package parallel which ONLY exists in Ubuntu 13.10 and Ubuntu 14.04 LTS
 # replace 'parallel' Ubuntu package with 'moreutils' package in install-tl-ubuntu package in order to make script
-# work in Ubuntu versions other than 13.10
+# work in Ubuntu versions other than 13.10/14.04 LTS
 sudo bash install-tl-ubuntu 
 
 sudo texhash
