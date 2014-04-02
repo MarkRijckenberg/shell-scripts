@@ -816,8 +816,6 @@ cd install-tl-ubuntu
 ./install-tl-ubuntu --help
 
 # following script tries to install Ubuntu package parallel which ONLY exists in Ubuntu 13.10 and Ubuntu 14.04 LTS
-# replace 'parallel' Ubuntu package with 'moreutils' package in install-tl-ubuntu package in order to make script
-# work in Ubuntu versions other than 13.10/14.04 LTS
 sudo bash install-tl-ubuntu 
 
 sudo texhash
