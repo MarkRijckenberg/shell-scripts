@@ -1219,6 +1219,9 @@ echo "https://www.coursera.org/courses?orderby=upcoming&lngs=en&cats=cs-theory,c
 # Free PDF book "An Introduction to Statistical Learning with Applications in R"
 # Very handy book that complements the edX course "MITx: 15.071x The Analytics Edge"
 echo "http://www-bcf.usc.edu/~gareth/ISL/"
+# following URL added on April 3, 2014:
+# book by Julian Faraway on CranR, written in July 2002:
+echo "http://cran.r-project.org/doc/contrib/Faraway-PRA.pdf"
 # following URL added on March 28, 2014:
 # Systems approaches to improving data quality 
 echo "http://mitiq.mit.edu/ICIQ/Documents/IQ%20Conference%201996/Papers/SystemsApproachestoImprovingDataQuality.pdf"
