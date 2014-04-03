@@ -828,6 +828,8 @@ sudo update-texmf
 
 # install rstudio / R-Studio from source code:
 # Free disk space required: around 5 GB
+# Mac OS X users should use RStudio-0.98.501.dmg instead of R to avoid the following UNIX child process forking error:
+# THE_PROCESS_HAS_FORKED_AND_YOU_CANNOT_USE_THIS_COREFOUNDATION_FUNCTIONALITY_YOU_MUST_EXEC__() to debug.
 
 cd
 git clone https://github.com/rstudio/rstudio.git
