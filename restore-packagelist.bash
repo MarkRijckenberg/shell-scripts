@@ -1232,7 +1232,9 @@ echo "https://www.class-central.com/"
 # following URL added on April 1, 2014:
 # Natural Language Processing - linked to Text Mining
 echo "https://www.youtube.com/results?search_query=1%20-%201%20Stanford%20NLP%20-%20Professor%20Dan%20&sm=3"
-
+# following URL added on April 4, 2014:
+# Supervised Learning Workflow / Data Analytics Workflow
+echo "http://statsguys.files.wordpress.com/2014/03/supervisedworkflow.png"
 
 ###############################################################################################
 #     Open data formats and importing data into R                                             #
