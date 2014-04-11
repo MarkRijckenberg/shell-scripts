@@ -106,3 +106,4 @@ deb-src http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu saucy main
 deb-src http://ppa.launchpad.net/gezakovacs/ppa/ubuntu saucy main
 
 
+deb http://cran.freestatistics.org/bin/linux/ubuntu saucy/
