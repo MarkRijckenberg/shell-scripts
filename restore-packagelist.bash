@@ -748,8 +748,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
-grep -v opera /etc/apt/sources.list  > /tmp/sources.list
-sudo cp /tmp/sources.list  /etc/apt/sources.list
+#grep -v opera /etc/apt/sources.list  > /tmp/sources.list
+#sudo cp /tmp/sources.list  /etc/apt/sources.list
 
 # wget http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
 # tar -zxvf simx-2.0.6.tar.gz
