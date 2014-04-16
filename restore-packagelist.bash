@@ -1197,6 +1197,9 @@ echo "http://selection.datavisualization.ch/"
 # following URL added on March 29, 2014:
 # search engine for R
 echo "http://www.rseek.org/"
+# following URL added on April 16, 2014:
+# how to create hybrid CART-logit model (CART-logistic regression model) in R:
+echo "www.casact.org/education/specsem/f2005/handouts/cart.ppt"
 
 # Free online courses:
 
