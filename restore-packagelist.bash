@@ -1208,6 +1208,9 @@ echo "www.casact.org/education/specsem/f2005/handouts/cart.ppt"
 # following URL added on April 17, 2014:
 # automated R model selection using glmulti R package as replacement for glm 
 echo "http://www.jstatsoft.org/v34/i12/paper"
+# following URL added on April 17, 2014:
+# Excellent examples of using glmulti R package as replacement for glm :
+echo "http://rstudio-pubs-static.s3.amazonaws.com/2897_9220b21cfc0c43a396ff9abf122bb351.html"
 
 
 # Free online courses:
