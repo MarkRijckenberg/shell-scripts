@@ -1197,9 +1197,18 @@ echo "http://selection.datavisualization.ch/"
 # following URL added on March 29, 2014:
 # search engine for R
 echo "http://www.rseek.org/"
+
+
+# R model generation and selection tools:
+
 # following URL added on April 16, 2014:
 # how to create hybrid CART-logit model (CART-logistic regression model) in R:
+# approach did not work well on real world data set full of missing values
 echo "www.casact.org/education/specsem/f2005/handouts/cart.ppt"
+# following URL added on April 17, 2014:
+# automated R model selection using glmulti R package as replacement for glm 
+echo "http://www.jstatsoft.org/v34/i12/paper"
+
 
 # Free online courses:
 
