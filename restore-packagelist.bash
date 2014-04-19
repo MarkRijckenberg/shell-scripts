@@ -1211,6 +1211,9 @@ echo "http://www.jstatsoft.org/v34/i12/paper"
 # following URL added on April 17, 2014:
 # Excellent examples of using glmulti R package as replacement for glm :
 echo "http://rstudio-pubs-static.s3.amazonaws.com/2897_9220b21cfc0c43a396ff9abf122bb351.html"
+# following URL added on April 19, 2014:
+# Feature selection using caret
+echo "http://caret.r-forge.r-project.org/featureselection.html"
 
 
 # Free online courses:
