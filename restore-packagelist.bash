@@ -1214,6 +1214,9 @@ echo "http://rstudio-pubs-static.s3.amazonaws.com/2897_9220b21cfc0c43a396ff9abf1
 # following URL added on April 19, 2014:
 # Feature selection using caret
 echo "http://caret.r-forge.r-project.org/featureselection.html"
+# select best algorithm by testing them on train data set in Weka Experimenter:
+echo "http://machinelearningmastery.com/design-and-run-your-first-experiment-in-weka/"
+
 
 
 # Free online courses:
