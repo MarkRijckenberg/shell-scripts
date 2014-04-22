@@ -1197,6 +1197,9 @@ echo "http://selection.datavisualization.ch/"
 # following URL added on March 29, 2014:
 # search engine for R
 echo "http://www.rseek.org/"
+# following URL added on April 22, 2014:
+# Cookbook for R
+echo "http://www.cookbook-r.com/"
 
 
 # R model generation and selection tools:
