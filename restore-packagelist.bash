@@ -1220,8 +1220,10 @@ echo "http://caret.r-forge.r-project.org/featureselection.html"
 echo "http://caret.r-forge.r-project.org/modelList.html"
 # select best algorithm by testing them on train data set in Weka Experimenter:
 echo "http://machinelearningmastery.com/design-and-run-your-first-experiment-in-weka/"
-
-
+# most powerful R feature selection method to create an accurate model:
+# Perform Hyperparameter optimization using libsvm as explained here:
+echo "https://en.wikipedia.org/wiki/Hyperparameter_optimization"
+echo "http://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf"
 
 # Free online courses:
 
