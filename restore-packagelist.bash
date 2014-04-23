@@ -1225,6 +1225,11 @@ echo "http://machinelearningmastery.com/design-and-run-your-first-experiment-in-
 echo "https://en.wikipedia.org/wiki/Hyperparameter_optimization"
 echo "http://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf"
 
+# liblinear is good model to use when number of train data rows (4600) > number of features/variables (110) 
+# -> so use liblinear R package -> computations via liblinear much quicker than via libsvm!
+# following URL added on April 23, 2014:
+echo "http://cran.r-project.org/web/packages/LiblineaR/LiblineaR.pdf"
+
 # Free online courses:
 
 # following URL added on March 29, 2014:
