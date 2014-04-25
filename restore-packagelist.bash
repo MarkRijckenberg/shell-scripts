@@ -1201,6 +1201,9 @@ echo "http://www.rseek.org/"
 # following URL added on April 22, 2014:
 # Cookbook for R
 echo "http://www.cookbook-r.com/"
+# Data Camp - online interactive tool that teaches how to use R
+# following URL added on April 25, 2014:
+echo "https://www.datacamp.com/courses/introduction-to-r"
 
 
 # R model generation and selection tools:
