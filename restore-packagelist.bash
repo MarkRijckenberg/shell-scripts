@@ -1232,9 +1232,14 @@ echo "http://tech.knime.org/files/KNIME_quickstart.pdf"
 # -> so use liblinear R package -> computations via liblinear much quicker than via libsvm!
 # following URL added on April 23, 2014:
 echo "http://cran.r-project.org/web/packages/LiblineaR/LiblineaR.pdf"
-# how to clean data and perform data imputation in R
+#######################################################
+# how to clean data and perform data imputation in R  #
+#######################################################
 # following URL added on April 25, 2014:
 echo "http://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf"
+# Data Cleaning for Beginners: Part 2
+# following URL added on April 25, 2014:
+echo "http://statsguys.wordpress.com/2014/01/11/data-analytics-for-beginners-pt-2/"
 
 # Free online courses:
 
