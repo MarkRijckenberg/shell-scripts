@@ -850,12 +850,14 @@ sudo make install
 sudo ln -s /usr/local/lib/rstudio/bin/rstudio /usr/bin
 cd
 
-
+# install R 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/rrutter
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/c2d4u
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 # install knitr (used by texmaker) from source code:
 cd; rm knitr_*.tar.gz
 git clone https://github.com/yihui/knitr.git
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 R CMD build knitr
 R CMD INSTALL knitr_*.tar.gz
 sudo cp ~/knitr/inst/bin/knit /usr/bin/knit
