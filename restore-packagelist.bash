@@ -816,7 +816,7 @@ cd install-tl-ubuntu
 ./install-tl-ubuntu --help
 
 # following script tries to install Ubuntu package parallel which ONLY exists in Ubuntu 13.10 and Ubuntu 14.04 LTS
-sudo bash install-tl-ubuntu 
+sudo bash install-tl-ubuntu  --allow-small
 
 sudo texhash
 tlmgr init-usertree
