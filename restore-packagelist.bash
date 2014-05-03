@@ -45,6 +45,7 @@ SCISOFTFILENAME="scisoft-7.7.0"
 SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
+WEKAFILENAME="weka-3-7-11.zip"
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
@@ -864,6 +865,13 @@ R CMD INSTALL knitr_*.tar.gz
 sudo cp ~/knitr/inst/bin/knit /usr/bin/knit
 cd knitr
 make check
+
+
+# install weka v3.7.11 - import preprocessed .csv from R into weka to perform significant
+# feature/variable selection for R models
+cd
+wget http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
+unzip `echo $WEKAFILENAME`
 
 
 ###############################################################################################
