@@ -319,9 +319,9 @@ wget `echo $url`
 sudo dpkg -i "${url##*/}"
 # Clean up
 rm "${url##*/}"
-cd
+cd $HOME
 rm -rf "$dir"
-cd
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
@@ -336,9 +336,9 @@ wget `echo $url`
 sudo dpkg -i "${url##*/}"
 # Clean up
 rm "${url##*/}"
-cd
+cd $HOME
 rm -rf "$dir"
-cd
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install Google Earth
@@ -399,9 +399,9 @@ wget `echo $url`
 sudo dpkg -i "${url##*/}"
 # Clean up
 rm "${url##*/}"
-cd
+cd $HOME
 rm -rf "$dir"
-cd
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
@@ -416,9 +416,9 @@ wget `echo $url`
 sudo dpkg -i "${url##*/}"
 # Clean up
 rm "${url##*/}"
-cd
+cd $HOME
 rm -rf "$dir"
-cd
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install Google Earth
@@ -583,9 +583,9 @@ wget `echo $SKYCHARTREMOTEDIR``echo $url`
 sudo dpkg -i $url
 # Clean up
 rm $url
-cd
+cd $HOME
 rm -rf "$dir"
-cd
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  texmaker
@@ -626,9 +626,9 @@ wget `echo $SKYCHARTREMOTEDIR``echo $url`
 sudo dpkg -i $url
 # Clean up
 rm $url
-cd
+cd $HOME
 rm -rf "$dir"
-cd
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   texmaker
@@ -840,17 +840,17 @@ cd build/
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  libcurl4-gnutls-dev libboost-all-dev cmake libqt4-dev  build-essential libqtwebkit-dev
 
-cd ~/rstudio/dependencies/common
+cd $HOME/rstudio/dependencies/common
 bash install-common
-cd
+cd $HOME
 
-bash ~/rstudio/dependencies/linux/install-dependencies-debian
-cd ~/rstudio/build
+bash $HOME/rstudio/dependencies/linux/install-dependencies-debian
+cd $HOME/rstudio/build
 cmake .. -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release
 sudo make
 sudo make install
 sudo ln -s /usr/local/lib/rstudio/bin/rstudio /usr/bin
-cd
+cd $HOME
 
 # install R 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/rrutter
@@ -858,18 +858,18 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/c2d4u
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 # install knitr (used by texmaker) from source code:
-cd; rm knitr_*.tar.gz
+cd $HOME; rm knitr_*.tar.gz
 git clone https://github.com/yihui/knitr.git
 R CMD build knitr
 R CMD INSTALL knitr_*.tar.gz
-sudo cp ~/knitr/inst/bin/knit /usr/bin/knit
+sudo cp $HOME/knitr/inst/bin/knit /usr/bin/knit
 cd knitr
 make check
 
 
 # install weka v3.7.11 - import preprocessed .csv from R into weka to perform significant
 # feature/variable selection for R models
-cd
+cd $HOME
 wget http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
 unzip `echo $WEKAFILENAME`
 
