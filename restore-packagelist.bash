@@ -498,6 +498,13 @@ sudo rm /etc/apt/sources.list.d/*
 wget http://www.yworks.com/products/yed/demo/`echo $YEDFILENAME`
 sh `echo $YEDFILENAME`
 
+
+# install Kruidvat fotoservice software
+cd $HOME
+wget http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservice.tgz
+tar -zxvf setup_Kruidvat_fotoservice.tgz 
+./install.pl 
+
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
 ###############################################################################################
