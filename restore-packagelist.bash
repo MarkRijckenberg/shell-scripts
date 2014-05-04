@@ -52,6 +52,7 @@ HOME=$(eval echo ~${SUDO_USER})
 SOURCE2=/etc/
 SOURCE3=/media/windows/rsync/
 
+
 #define target directories where backup will be stored
 TARGET1=/media/SAMSUNG/$HOME/
 TARGET2=/media/IOMEGA/$HOME/
@@ -70,6 +71,17 @@ mkdir $PDF
 mkdir $DEB
 mkdir $KMZ
 mkdir triatlas
+
+# clean up current directory
+cd $HOME
+echo "Performing file cleanup"
+mv *.zip $ZIP
+mv *.pdf $PDF
+mv *.deb $DEB
+mv *.km? $KMZ
+mv *gz $TAR
+rm *.exe
+
 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET1 $HOME 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET2 $HOME
