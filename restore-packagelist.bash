@@ -10,8 +10,8 @@
 # !!!!! WINDOWS 8.1 64-bit Second App Store URL: http://www.pokki.com/
 
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Linux Mint 16 Cinnamon 64-bit
-# REQUIRES: Linux Mint 16 Cinnamon 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
+# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Xubuntu 14.04 LTS 64-bit
+# REQUIRES: Xubuntu 14.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
 #           wget, apt-get, unp, wine, biber, biblatex
 # Use Cinnamon instead of Unity interface, because Unity causes Teamviewer sessions to slow down due to window 
 # animation in Unity
