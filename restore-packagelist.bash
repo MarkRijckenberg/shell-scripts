@@ -869,10 +869,17 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  libcurl4
 
 cd $HOME/rstudio/dependencies/common
 bash install-common
+bash install-pandoc
+bash install-rmarkdown
+bash install-mathjax
+bash install-gwt
+bash install-dictionaries
+bash install-cef
 cd $HOME
 
 bash $HOME/rstudio/dependencies/linux/install-dependencies-debian
 cd $HOME/rstudio/build
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install pandoc
 cmake .. -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release
 sudo make
 sudo make install
