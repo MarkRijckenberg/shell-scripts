@@ -238,6 +238,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-mus
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install spotify-client
 
+# install atom text editor with integrated github support
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:webupd8team/atom
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install atom
+
 # install kdenlive video editor
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
