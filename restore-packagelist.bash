@@ -1351,3 +1351,11 @@ echo "https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/"
 echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
 # following URL added on April 1, 2014:
 echo "https://github.com/rOpenHealth"
+
+#######################################################################################################
+#     Online data analytics challenges requiring use of R                                             #
+#######################################################################################################
+# Kaggle competitions
+echo "http://www.kaggle.com/"
+# Synapse challenges
+echo "https://www.synapse.org/#"
