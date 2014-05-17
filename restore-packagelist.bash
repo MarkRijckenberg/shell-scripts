@@ -1353,6 +1353,9 @@ echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
 echo "https://github.com/rOpenHealth"
 # following URL added on May 17, 2014:
 echo "http://www.infochimps.com/datasets/"
+# following URL added on May 17, 2014:
+# list of MySQL commands to use with RMySQL package in R:
+echo "http://www.pantz.org/software/mysql/mysqlcommands.html"
 
 
 #######################################################################################################
