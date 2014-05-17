@@ -1351,6 +1351,9 @@ echo "https://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder/"
 echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
 # following URL added on April 1, 2014:
 echo "https://github.com/rOpenHealth"
+# following URL added on May 17, 2014:
+echo "http://www.infochimps.com/datasets/"
+
 
 #######################################################################################################
 #     Online data analytics challenges requiring use of R                                             #
