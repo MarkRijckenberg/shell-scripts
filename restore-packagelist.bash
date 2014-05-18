@@ -1254,6 +1254,13 @@ echo "http://www.cookbook-r.com/"
 # Data Camp - online interactive tool that teaches how to use R
 # following URL added on April 25, 2014:
 echo "https://www.datacamp.com/courses/introduction-to-r"
+# time series analysis using R
+# following URL added on May 18, 2014:
+echo "http://www.statmethods.net/advstats/timeseries.html"
+echo "http://a-little-book-of-r-for-time-series.readthedocs.org/en/latest/src/timeseries.html"
+echo "https://www.otexts.org/fpp"
+echo "http://cran.r-project.org/doc/contrib/Ricci-refcard-ts.pdf"
+echo "http://www.statoek.wiso.uni-goettingen.de/veranstaltungen/zeitreihen/sommer03/ts_r_intro.pdf"
 
 
 # R model generation and selection tools:
@@ -1365,3 +1372,5 @@ echo "http://www.pantz.org/software/mysql/mysqlcommands.html"
 echo "http://www.kaggle.com/"
 # Synapse challenges
 echo "https://www.synapse.org/#"
+
+
