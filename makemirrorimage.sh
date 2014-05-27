@@ -5,7 +5,8 @@
 # REQUIRES: imagemagick, Ubuntu 12.04 LTS or newer
 # Copyright (c) 2009  Thomas Bruederli (thomasb), Project leader and head developer of the Roundcube webmail project.
 # REVISED: 20130404
-# Updated by: markrijckenberg@gmail.com
+# Updated by: Mark Rijckenberg
+
 
 infile=$1
 outfile=$2
