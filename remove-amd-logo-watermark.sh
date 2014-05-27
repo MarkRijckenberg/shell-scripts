@@ -4,7 +4,7 @@
 # REQUIRES: ksh, Ubuntu 13.04 or newer
 # REVISED: 20130403
 # AUTHOR: http://www.youtube.com/user/midfingr
-# UPDATED BY: markrijckenberg@gmail.com
+# Updated by: Mark Rijckenberg
 
 DRIVER=`find /usr/lib -name fglrx_drv.so`
 
