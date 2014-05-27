@@ -4,7 +4,7 @@
 # REQUIRES: bash, Ubuntu 12.04 LTS 32-bit/64-bit or Ubuntu 12.10 32-bit/64-bit or Ubuntu 13.04 32-bit/64-bit
 # Copyright (c) 2012  Savvas Radevic <vicedar@gmail.com>
 # REVISED: 20130323
-# Updated by: markrijckenberg@gmail.com
+# Updated by: Mark Rijckenberg
 
 sudo apt-get update
 sudo apt-get install python-bs4
