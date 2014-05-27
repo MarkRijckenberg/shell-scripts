@@ -7,8 +7,7 @@
 # SOFTWARE-VENDOR: http://www.temenos.com/
 # REQUIRES: ksh, Temenos  T24 V6, JBASE 4.1.5.10 or JBASE 4.1.5.22, AIX v5.3.9, java 1.4.2, perl modules, perl libraries
 # REVISED: 20130301
-# AUTHOR: markrijckenberg@gmail.com
-#
+# Updated by: Mark Rijckenberg
 
 ##For korn shell (or bash), use trap to set up the shell to catch the error and run a command. The simplest command to run is "exit" or "exit $?" so that the script is aborted. #The following command should be executed somewhere early in the script, and will apply to all following commands (which don't have their exit value checked by inbuilt shell #control structures (if && || ! etc.)
 
