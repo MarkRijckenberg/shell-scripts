@@ -301,6 +301,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove skype sky
 wget http://download.skype.com/linux/`echo $SKYPEFILENAME`
 sudo dpkg -i skype-ubuntu*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 sni-qt:i386
 
 # install Y PPA Manager
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
