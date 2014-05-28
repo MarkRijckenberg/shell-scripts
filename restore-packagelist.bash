@@ -36,7 +36,7 @@ MACHINE_TYPE=`uname -m`
 
 # define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
 SKYPEFILENAME="skype-ubuntu-precise_4.2.0.13-1_i386.deb"
-YEDFILENAME="yEd-3.11.1_32-bit_setup.sh"
+YEDFILENAME="yEd-3.12.2_32-bit_setup.sh"
 
 # define Astronomy filename variables
 DUFILENAME="DUv3_9pview.tgz"
