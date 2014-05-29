@@ -1240,6 +1240,8 @@ echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=s
 echo "https://www.edx.org/"
 # following URL added on March 12, 2014:
 echo "http://www.google.com/trends"
+# following URL added on May 29, 2014:
+echo "https://books.google.com/ngrams/graph?content=sabermetrics%2Csabermetric%2Csabermetrician&year_start=1978&year_end=2014&corpus=15&smoothing=3&share=&direct_url=t1%3B%2Csabermetrics%3B%2Cc0%3B.t1%3B%2Csabermetric%3B%2Cc0%3B.t1%3B%2Csabermetrician%3B%2Cc0"
 # following URL added on March 18, 2014:
 # world news site for data scientists
 echo "http://fivethirtyeight.com/"
