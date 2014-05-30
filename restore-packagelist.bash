@@ -147,6 +147,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-abou
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-notificationd    lxqt-policykit  lxqt-power  lxqt-powermanagement  lxqt-runner  lxqt-session
 
 # install base packages using basepackages file
+cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install aptitude
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
 
