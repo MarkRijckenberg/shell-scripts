@@ -535,7 +535,7 @@ tar -zxvf setup_Kruidvat_fotoservice.tgz
 wget https://download.zotero.org/extension/zotero-4.0.20.2.xpi
 gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 
-
+cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
 
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
