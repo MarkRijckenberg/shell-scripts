@@ -1382,3 +1382,8 @@ echo "http://www.kaggle.com/"
 echo "https://www.synapse.org/#"
 
 
+#######################################################################################################
+#     Online learning requirements                                                                    #
+#######################################################################################################
+echo "http://bigdatauniversity.com/wpcourses/"
+echo "Learn MySQL commands = de facto SQL (dialect) standard"
