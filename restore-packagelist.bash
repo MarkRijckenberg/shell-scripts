@@ -140,9 +140,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 
 # Install lxqt desktop environment => merge of lxde and razorqt desktops
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-metapackage lxqt-panel openbox
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  liblxqt0 libqtxdg0 libqtxdg-data 
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-metapackage pcmanfm-qt  lxsession lximage-qt   lxrandr-qt
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  pcmanfm-qt  lxsession lximage-qt   lxrandr-qt
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-about  lxqt-appswitcher  lxqt-config   lxqt-lightdm-greeter  
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-notificationd    lxqt-policykit  lxqt-power  lxqt-powermanagement  lxqt-runner  lxqt-session
 
