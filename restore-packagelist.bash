@@ -21,7 +21,13 @@
 # TOTAL AMOUNT OF REQUIRED DISKSPACE FOR LINUX MINT 16 + BASEPACKAGES + PPA PACKAGES
 # = 4 GB + 1.4 GB + 1.4 GB = 6.8 GB
 # COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon
-# thanks to cinnamon-bluetooth package, but not in Lubuntu 13.10 Razor-QT desktop
+# thanks to cinnamon-bluetooth package.
+# To make bluetooth speakers work in lxqt desktop, run these 3 Terminal commands:
+# 1) pactl list | grep -i module-bluetooth-discover
+# 2) pactl load-module module-bluetooth-discover
+# 3) pavucontrol   
+#  -> select bluetooth speakers as output in pavucontrol
+
 # INSTALL DURATION: 20 minutes for install of Linux Mint + 74 minutes for install of base packages and PPA packages
 # Author: Mark Rijckenberg
 # Copyright (c) 20120812
