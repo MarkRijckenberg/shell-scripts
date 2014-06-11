@@ -1248,6 +1248,8 @@ echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF
 echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=sr_1_1?ie=UTF8&qid=1393583397&sr=8-1&keywords=practical+data+science+with+r"
 # STEP 5: following URL added on June 11, 2014:
 echo "http://www.amazon.com/Analyzing-Baseball-Data-Chapman-Series/dp/1466570229/ref=sr_1_1?ie=UTF8&qid=1402506648&sr=8-1&keywords=analyzing+baseball+data+with+r"
+# following URL added on June 11, 2014:
+echo "http://baseballwithr.wordpress.com/2014/03/17/introduction-to-openwar/"
 # following URL added on March 7, 2014:
 echo "https://www.edx.org/"
 # following URL added on March 12, 2014:
