@@ -22,10 +22,11 @@
 # = 4 GB + 1.4 GB + 1.4 GB = 6.8 GB
 # COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon
 # thanks to cinnamon-bluetooth package.
-# To make bluetooth speakers work in lxqt desktop, run these 3 Terminal commands:
+# To make bluetooth speakers work in lxqt desktop, run these 4 Terminal commands:
 # 1) pactl list | grep -i module-bluetooth-discover
 # 2) pactl load-module module-bluetooth-discover
 # 3) pavucontrol   
+# 4) sudo apt-get remove blueman
 #  -> select bluetooth speakers as output in pavucontrol
 
 # INSTALL DURATION: 20 minutes for install of Linux Mint + 74 minutes for install of base packages and PPA packages
