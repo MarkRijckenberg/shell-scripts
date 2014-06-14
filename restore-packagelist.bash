@@ -132,6 +132,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
