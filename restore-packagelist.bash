@@ -1383,6 +1383,8 @@ echo "http://www.infochimps.com/datasets/"
 # following URL added on May 17, 2014:
 # list of MySQL commands to use with RMySQL package in R:
 echo "http://www.pantz.org/software/mysql/mysqlcommands.html"
+# list of different types of SQL joins
+echo "http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins"
 # following URL added on May 18, 2014:
 echo "https://datamarket.com/"
 
