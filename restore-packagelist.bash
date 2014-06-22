@@ -121,9 +121,42 @@ echo "alias d-u='sudo aptitude update && sudo aptitude dist-upgrade'" >> ~/.bash
 # turn off apport error/crash reporting
 sudo sed -i s/enabled=1/enabled=0/ /etc/default/apport
 
+##########################################################################################################
+# add PPA repositories
+##########################################################################################################
+
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:danielrichter2007/grub-customizer
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:i-nex-development-team/daily
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nemh/gambas3
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:webupd8team/atom
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:philip5/extra
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:openshot.developers/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stebbins/handbrake-releases
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lyc256/sopcast-player-ppa
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:surfernsk/internet-software
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noneed4anick/cuttlefish
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
+
+##########################################################################################################
 # refresh list of available packages in Ubuntu repositories
 sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
+##########################################################################################################
+
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
@@ -135,10 +168,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptab
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 
+##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
 # source 1:  http://ubuntuforums.org/showthread.php?t=2181903
 # source 2:  http://blog.vinnymac.org/?p=351
 # source 3:  https://help.ubuntu.com/community/CitrixICAClientHowTo
+##########################################################################################################
 cd $HOME
 sudo dpkg -P icaclient
 sudo dpkg --add-architecture i386 # only needed once
@@ -176,8 +211,8 @@ sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
 
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-me
 
 # Install razorqt desktop environment
@@ -186,48 +221,51 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install razorqt razorqt-desktop
 
 # Install lxqt desktop environment => merge of lxde and razorqt desktops
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-metapackage lxqt-panel openbox
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  liblxqt0 libqtxdg0 libqtxdg-data 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  pcmanfm-qt  lxsession lximage-qt   lxrandr-qt
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-about  lxqt-appswitcher  lxqt-config   lxqt-lightdm-greeter  
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-notificationd    lxqt-policykit  lxqt-power  lxqt-powermanagement  lxqt-runner  lxqt-session
 
+##########################################################################################################
 # install base packages using basepackages file
 cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install aptitude
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
+cd $HOME
+##########################################################################################################
 
 # create symbolic link to wkhtmltopdf in /usr/local/bin after installing base packages
 sudo ln -s /usr/bin/wkhtmltopdf /usr/local/bin/html2pdf
 
 # install grub customizer
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:danielrichter2007/grub-customizer
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:danielrichter2007/grub-customizer
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install grub-customizer
 
 # install newest version of Libreoffice
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libreoffice
 
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
 # Flash websites are supported in Lubuntu 13.10 or newer
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install hal
 
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:i-nex-development-team/daily
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:nemh/gambas3
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:i-nex-development-team/daily
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:nemh/gambas3
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install i-nex 
 
 # install Variety - cool wallpaper changer
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install variety
 
 #install pipelight which allows to run your favorite Silverlight application directly inside your Linux browser
@@ -250,23 +288,23 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install variety
 
 # Install TLP - advanced power management command line tool for Linux
 # TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install tlp tlp-rdw
 
 # Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install kazam
 
 # install hotshots Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install hotshots
 
 # install Final Term - excellent Terminal emulator in  Ubuntu 12.04 / 12.10 / 13.04
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
 
 # install Google Music Manager - sync local mp3s in Ubuntu with ios or Android device
@@ -289,40 +327,40 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-mus
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install spotify-client
 
 # install atom text editor with integrated github support
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:webupd8team/atom
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:webupd8team/atom
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install atom
 
 # install kdenlive video editor
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install kdenlive
 
 # install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:openshot.developers/ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:openshot.developers/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install openshot
 
 # install Handbrake - open source video transcoder - add Subtitles (VobSub, Closed Captions CEA-608, SSA, SRT)
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:stebbins/handbrake-releases
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:stebbins/handbrake-releases
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install handbrake 
 
 # install SopCast webTV player
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:lyc256/sopcast-player-ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:lyc256/sopcast-player-ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install sopcast-player 
 
 # install qbittorrent client
 # import RSS feeds from http://showrss.info/?cs=feeds  into qbittorrent client
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:surfernsk/internet-software
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:surfernsk/internet-software
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install qbittorrent
 
 
 # install desurium game client
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install desurium
 
 # install 64-bit compatible Steam client
@@ -337,13 +375,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes   install kubuntu-desktop
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noneed4anick/cuttlefish
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noneed4anick/cuttlefish
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cuttlefish 
 
 # Install Ubuntu Tweak to easily uninstall old kernel versions
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-tweak
 
 # install skype
@@ -354,8 +392,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 sni-qt:i386
 
 # install Y PPA Manager
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  y-ppa-manager
 
 # libdvdcss2, to play encrypted DVDs
@@ -418,8 +456,8 @@ sudo dpkg -i google-earth-stable_current_amd64.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install newest wine version 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1.6 winetricks wine1.6-amd64
 
 # install Teamviewer server + client which depends on wine1.6
@@ -498,8 +536,8 @@ sudo dpkg -i google-earth-stable_current_i386.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install newest wine version 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6-i386
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6 winetricks
 
@@ -526,8 +564,8 @@ fi
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install opera
 
 # Enable and upgrade the open-source graphics drivers for Intel, AMD Radeon, and Nouveau (NVIDIA)
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:oibaf/graphics-drivers
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:oibaf/graphics-drivers
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f dist-upgrade
 
 # OBSOLETE - install Multimedia codecs
@@ -587,6 +625,7 @@ gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 
 cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
+cd $HOME
 
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes ppa:texlive-backports/ppa
