@@ -61,6 +61,7 @@ SOURCE3=/media/windows/rsync/
 
 
 #define target directories where backup will be stored
+cd $HOME
 TARGET1=/media/SAMSUNG/$HOME/
 TARGET2=/media/IOMEGA/$HOME/
 TARGET3=/media/SAMSUNG/etc/
