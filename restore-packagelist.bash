@@ -1477,6 +1477,10 @@ echo "http://www.kaggle.com/"
 # Synapse challenges
 echo "https://www.synapse.org/#"
 
+#######################################################################################################
+#     Combine big data datasets with R, RStudio and Google Big Data infrastructure                    #
+#######################################################################################################
+echo "https://developers.google.com/bigquery/"
 
 #######################################################################################################
 #     Online learning requirements                                                                    #
