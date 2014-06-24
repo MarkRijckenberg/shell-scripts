@@ -1360,7 +1360,8 @@ echo "https://www.otexts.org/fpp"
 echo "http://cran.r-project.org/doc/contrib/Ricci-refcard-ts.pdf"
 echo "http://www.statoek.wiso.uni-goettingen.de/veranstaltungen/zeitreihen/sommer03/ts_r_intro.pdf"
 echo "https://onlinecourses.science.psu.edu/stat510/"
-
+# following URL added on June 24, 2014:
+echo "http://www.scoop.it/t/r-for-journalists"
 
 # R model generation and selection tools:
 
