@@ -158,6 +158,10 @@ RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolow
 sudo touch /etc/apt/sources.list.d/eid.list
 sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 
+# add repository for google music manager software package
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
 ##########################################################################################################
 # refresh list of available packages in Ubuntu repositories
 sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
@@ -356,9 +360,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install hotshots
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
 
 # install Google Music Manager - sync local mp3s in Ubuntu with ios or Android device
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager-beta
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager
 
