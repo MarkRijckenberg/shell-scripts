@@ -152,7 +152,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-p
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
 
-# add repository for eid-mw software package
+# add repository for eid-mw and eid-viewer software packages
 # RELEASE = saucy,trusty, etc...... = distribution codename
 RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
 sudo touch /etc/apt/sources.list.d/eid.list
@@ -223,7 +223,7 @@ sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
 
 # RELEASE = saucy,trusty, etc...... = distribution codename
 #RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
-#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
 #sudo touch /etc/apt/sources.list.d/eid.list
 #sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
