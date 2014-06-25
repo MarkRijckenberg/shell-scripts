@@ -211,9 +211,12 @@ sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
 
 
 ##########################################################################################################
-# install eid card reader middleware
+# install eid card reader middleware - replace codename (for example: trusty) with right Ubuntu codename
 ##########################################################################################################
 
+
+# RELEASE = saucy,trusty, etc...... = distribution codename
+RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
 sudo touch /etc/apt/sources.list.d/eid.list
 sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
