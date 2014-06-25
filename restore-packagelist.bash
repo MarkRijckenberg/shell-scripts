@@ -210,16 +210,54 @@ dpkg -b foo icaclient_amd64_fixed_for_14.04_LTS.deb
 sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
 
 
+##########################################################################################################
+# install eid card reader middleware
+##########################################################################################################
+
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
+sudo touch /etc/apt/sources.list.d/eid.list
+sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid 
+
+#Manually set the following values in Mozilla Firefox in about:config
+#security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
+#security.ssl.enable_false_start;true
+#security.ssl.renego_unrestricted_hosts;*.be
+
+#Manually replace the security.ssl.renego_unrestricted_hosts name
+#certif.belgium.be or *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be !!!
+#Download Belgium Root certificates here:
+#http://repository.eid.belgium.be/certificates.php?cert=Root&lang=en
+#Import Belgium Root certificates into Firefox.
+#The Belgium Root certificates are required if you want to use the applications of the FSP Finance (Belcotax, Intervat, Finprof, etc.).
+#Before you begin, make sure your identity card is in the card reader. Then:
+#Viewing certificates
+#For Linux: Go to Edit > Preferences > Advanced > Encryption and click ‘View certificates’.
+#Check-marking certificates
+#Follow the steps below for the ‘Belgium Root CA’ and ‘Belgium Root CA2’ certificates. Can you only find one certificate? Then you obviously only have to perform these steps once.
+#Find the ‘Belgium Root CA’ or ‘Belgium Root CA2’ certificate and click the line below the arrow.
+#Click ‘Edit…’.
+#Check ALL three boxes.
+#Click ‘OK’.
+#Ensure that there are absolutely NO add-ons or plugins installed in Mozilla Firefox.
+#Installing the Belgium eid Firefox add-on will NOT work in Ubuntu 13.10 64-bit and only make matters worse!
+#Disconnect the eid card reader from the PC.
+#Reconnect the eid card reader to the PC.
+#Insert eid card into card reader.
+#Reboot the PC.
+#Test eid card reader here:
+#http://test.eid.belgium.be/
+#Source: http://wiki.yobi.be/wiki/Belgian_eID
+
+
+
+
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-me
-
-# Install razorqt desktop environment
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:razor-qt/ppa
-#sudo DEBIAN_FRONTEND=noninteractive apt-get update
-#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install razorqt razorqt-desktop
 
 # Install lxqt desktop environment => merge of lxde and razorqt desktops
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
