@@ -152,6 +152,12 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-p
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
 
+# add repository for eid-mw software package
+# RELEASE = saucy,trusty, etc...... = distribution codename
+RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
+sudo touch /etc/apt/sources.list.d/eid.list
+sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
+
 ##########################################################################################################
 # refresh list of available packages in Ubuntu repositories
 sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
@@ -216,11 +222,11 @@ sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
 
 
 # RELEASE = saucy,trusty, etc...... = distribution codename
-RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
-sudo touch /etc/apt/sources.list.d/eid.list
-sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+#RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
+#sudo touch /etc/apt/sources.list.d/eid.list
+#sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid 
 
 #Manually set the following values in Mozilla Firefox in about:config
