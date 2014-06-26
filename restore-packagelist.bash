@@ -513,7 +513,7 @@ sudo rm GoogleEarth*
 sudo dpkg -P google-earth
 sudo dpkg -P googleearth
 #     install new Google Earth
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lib32nss-mdns multiarch-support lsb-core googleearth-package
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  libfreeimage3 lib32nss-mdns multiarch-support lsb-core googleearth-package
 sudo make-googleearth-package --force
 sudo dpkg -i googleearth*.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -605,7 +605,7 @@ sudo rm GoogleEarth*
 sudo dpkg -P google-earth
 sudo dpkg -P googleearth
 #     install new Google Earth
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lib32nss-mdns multiarch-support lsb-core googleearth-package
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  libfreeimage3 lib32nss-mdns multiarch-support lsb-core googleearth-package
 sudo make-googleearth-package --force
 sudo dpkg -i googleearth*.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
