@@ -502,10 +502,21 @@ rm -rf "$dir"
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
-# install Google Earth
-wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
-sudo dpkg -i google-earth-stable_current_amd64.deb
+# install Google Earth in Ubuntu 13.10 64-bit or newer
+#     uninstall old Google Earth
+cd $HOME
+rm -rf $HOME/.googleearth
+sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
+sudo rm googleearth*.deb
+sudo rm google-earth*.deb
+sudo dpkg -P google-earth
+sudo dpkg -P googleearth
+#     install new Google Earth
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lib32nss-mdns multiarch-support lsb-core googleearth-package
+sudo make-googleearth-package --force
+sudo dpkg -i googleearth*.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+
 
 # install newest wine version 
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
@@ -582,9 +593,19 @@ rm -rf "$dir"
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
-# install Google Earth
-wget http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
-sudo dpkg -i google-earth-stable_current_i386.deb
+# install Google Earth in Ubuntu 13.10 32-bit or newer
+#     uninstall old Google Earth
+cd $HOME
+rm -rf $HOME/.googleearth
+sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
+sudo rm googleearth*.deb
+sudo rm google-earth*.deb
+sudo dpkg -P google-earth
+sudo dpkg -P googleearth
+#     install new Google Earth
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lib32nss-mdns multiarch-support lsb-core googleearth-package
+sudo make-googleearth-package --force
+sudo dpkg -i googleearth*.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install newest wine version 
