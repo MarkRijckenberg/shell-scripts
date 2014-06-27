@@ -679,6 +679,7 @@ sudo rm /etc/apt/sources.list.d/*
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
 # Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
 # Allows easy creation of Entity Relationship (ER) diagrams (as part of data modeling by data scientist)
+# documentation:  http://www.linuxuser.co.uk/tutorials/create-flowcharts-with-yedcreate-flowcharts-with-yed
 cd $HOME
 wget http://www.yworks.com/products/yed/demo/`echo $YEDFILENAME`
 sh `echo $YEDFILENAME`
