@@ -358,14 +358,31 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install hotshots
 # install Final Term - excellent Terminal emulator in  Ubuntu 12.04 / 12.10 / 13.04
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install finalterm
+
+# install xiki shell - A shell console with GUI features 
+# http://xiki.org
+# source: https://github.com/trogdoro/xiki
+
+cd $HOME
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  ruby1.9.3 ruby-dev
+git clone git://github.com/trogdoro/xiki.git
+cd xiki
+sudo gem install bundler   # <- no "sudo" if using rvm
+bundle                # <- no "sudo" if using rvm
+sudo ruby etc/command/copy_xiki_command_to.rb /usr/bin/xiki
+xiki web/start
+# then navigate to http://localhost:8161/dbs
+# to view the locally installed mysql databases, tables and fields
+cd $HOME
+
 
 # install Google Music Manager - sync local mp3s in Ubuntu with ios or Android device
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager-beta
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager
 
 # install newest version of VLC player
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
