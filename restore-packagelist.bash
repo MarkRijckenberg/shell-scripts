@@ -1269,7 +1269,7 @@ echo "https://startpage.com/"
 # following URL added on June 15, 2013:
 echo "http://www.opennicproject.org/nearest-servers/"
 # following URL added on March 23, 2014:
-echo "https://7.hidemyass.com"
+echo "https://3.hidemyass.com"
 
 ###############################################################################################
 #     Math links for kids                                                                     #
