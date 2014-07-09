@@ -1385,15 +1385,11 @@ echo "http://kbroman.github.io/knitr_knutshell/pages/latex.html"
 # following URL added on February 19, 2014:
 # free guides
 echo "http://onepager.togaware.com/"
-# following URL added on March 25, 2014:
-# R Reference Card 2.0
-echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
 # following URL added on February 19, 2014:
 echo "http://www.Rdocumentation.org"
 # following URL added on February 19, 2014:
 echo "http://www.r-bloggers.com/"
-# following URL added on February 19, 2014:
-echo "http://www.rstudio.com/"
+
 # following URL added on February 19, 2014:
 # sample data is here:
 echo "http://dataferrett.census.gov/LaunchDFA.html"
@@ -1414,9 +1410,6 @@ echo "http://www.evanmiller.org/"
 # following URL added on March 16, 2014:
 # spreadsheets used in Data Smart book:
 echo "http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111866146X.html"
-# following URL added on March 7, 2014:
-# Step 3 Sams Teach Yourself SQL in 10 Minutes (4th Edition)
-echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
 # following URL added on March 7, 2014:
 # STEP 4: following URL added on February 28, 2014:
 echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=sr_1_1?ie=UTF8&qid=1393583397&sr=8-1&keywords=practical+data+science+with+r"
@@ -1530,9 +1523,6 @@ echo "https://www.youtube.com/results?search_query=1%20-%201%20Stanford%20NLP%20
 # following URL added on April 4, 2014:
 # Supervised Learning Workflow / Data Analytics Workflow
 echo "http://statsguys.files.wordpress.com/2014/03/supervisedworkflow.png"
-# following URL added on July 8, 2014:
-echo "http://www.codecademy.com/tracks/python"
-echo "https://developers.google.com/edu/python/"
 
 ###############################################################################################
 #     Open data formats and importing data into R                                             #
@@ -1579,7 +1569,18 @@ echo "https://www.synapse.org/#"
 echo "https://developers.google.com/bigquery/"
 
 #######################################################################################################
-#     Online learning requirements                                                                    #
+#     Data Science programming languages  learning requirements                                       #
 #######################################################################################################
+# following URL added on March 25, 2014:
+# R Reference Card 2.0
+echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
+# following URL added on February 19, 2014:
+echo "http://www.rstudio.com/"
 echo "http://bigdatauniversity.com/wpcourses/"
+# following URL added on March 7, 2014:
+# Step 3 Sams Teach Yourself SQL in 10 Minutes (4th Edition)
 echo "Learn MySQL commands = de facto SQL (dialect) standard"
+echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
+# following URL added on July 8, 2014:
+echo "http://www.codecademy.com/tracks/python"
+echo "https://developers.google.com/edu/python/"
