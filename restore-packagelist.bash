@@ -1553,7 +1553,7 @@ echo "https://datamarket.com/"
 
 
 #######################################################################################################
-#     Online data analytics challenges requiring use of R                                             #
+#     Online data analytics challenges requiring use of R or python                                   #
 #######################################################################################################
 # Kaggle competitions
 echo "http://www.kaggle.com/"
