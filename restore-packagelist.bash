@@ -1547,10 +1547,7 @@ echo "https://github.com/rOpenHealth"
 # following URL added on May 17, 2014:
 echo "http://www.infochimps.com/datasets/"
 # following URL added on May 17, 2014:
-# list of MySQL commands to use with RMySQL package in R:
-echo "http://www.pantz.org/software/mysql/mysqlcommands.html"
-# list of different types of SQL joins
-echo "http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins"
+
 # following URL added on May 18, 2014:
 echo "https://datamarket.com/"
 
@@ -1569,7 +1566,8 @@ echo "https://www.synapse.org/#"
 echo "https://developers.google.com/bigquery/"
 
 #######################################################################################################
-#     Data Science programming languages  learning requirements                                       #
+#     Data Science programming languages - learning requirements:                                      #
+#     R,RStudio,MySQL commands,python                                                                 #
 #######################################################################################################
 # following URL added on March 25, 2014:
 # R Reference Card 2.0
@@ -1577,10 +1575,16 @@ echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
 # following URL added on February 19, 2014:
 echo "http://www.rstudio.com/"
 echo "http://bigdatauniversity.com/wpcourses/"
+
+# list of MySQL commands to use with RMySQL package in R:
+echo "http://www.pantz.org/software/mysql/mysqlcommands.html"
+# list of different types of SQL joins
+echo "http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins"
 # following URL added on March 7, 2014:
 # Step 3 Sams Teach Yourself SQL in 10 Minutes (4th Edition)
 echo "Learn MySQL commands = de facto SQL (dialect) standard"
 echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
+
 # following URL added on July 8, 2014:
 echo "http://www.codecademy.com/tracks/python"
 echo "https://developers.google.com/edu/python/"
