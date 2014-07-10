@@ -1562,6 +1562,9 @@ echo "https://datamarket.com/"
 # following URL added on July 10, 2014:
 # Dryad Digital Repository 
 echo "http://datadryad.org"
+# following URL added on July 10, 2014:
+# Access Quandl open data sets using Quandl R package:
+echo "http://www.quandl.com/"
 
 #######################################################################################################
 #     Online data analytics challenges requiring use of R or python                                   #
