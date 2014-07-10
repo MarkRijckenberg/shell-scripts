@@ -1388,8 +1388,9 @@ echo "http://kbroman.github.io/knitr_knutshell/pages/latex.html"
 # following URL added on July 10, 2014:
 # RStudio Shiny Apps cheatsheet:
 echo "http://shiny.rstudio.com/articles/cheatsheet.html"
-# following URL added on February 26, 2014:
-
+# following URL added on February July 10, 2014:
+# principles and practice of reproducible research with R
+echo "http://statsteachr.org/modules/view/40"
 
 
 # following URL added on February 19, 2014:
