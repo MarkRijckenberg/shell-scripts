@@ -1237,8 +1237,7 @@ echo "http://dc.zah.uni-heidelberg.de/ppmxl/q/cone/form"
 echo "http://vizier.u-strasbg.fr/viz-bin/VizieR?-source=%20PPMXL"
 # following URL added on December 9, 2013:
 echo "http://www.pnas.org/content/by/section/Astronomy"
-# following URL added on February 25, 2014:
-echo "http://www.plos.org/publications/journals/"
+
 # following URL added on January 25, 2014:
 echo "http://science.time.com/category/space-2/"
 # following URL added on February 5, 2014:
@@ -1258,6 +1257,14 @@ echo "http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide"
 # following URL added on February 26, 2014:
 # OAD Open Data Repositories (including Repositories about Astronomy)
 echo "http://oad.simmons.edu/oadwiki/Data_repositories"
+
+###############################################################################################
+#     Open access journals                                                                    #
+###############################################################################################
+# following URL added on February 25, 2014:
+echo "http://www.plos.org/publications/journals/"
+# following URL added on July 10, 2014:
+echo "http://www.springeropen.com/journals"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
