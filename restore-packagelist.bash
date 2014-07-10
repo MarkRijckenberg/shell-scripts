@@ -1378,6 +1378,9 @@ echo "http://www.openintro.org/download.php?file=os2_lab_source&referrer=/stat/l
 echo "http://yihui.name/knitr/demo/editors/"
 # Explanation on how to use .Rnw files and RStudio with knitr:
 echo "http://kbroman.github.io/knitr_knutshell/pages/latex.html"
+# following URL added on July 10, 2014:
+# RStudio Shiny Apps cheatsheet:
+echo "http://shiny.rstudio.com/articles/cheatsheet.html"
 # following URL added on February 26, 2014:
 
 
