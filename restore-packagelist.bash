@@ -1593,7 +1593,9 @@ echo "http://www.codecademy.com/tracks/python"
 echo "https://developers.google.com/edu/python/"
 
 #######################################################################################################
-#    R User Conference  - presentations and slides about using R                                      #
+#    R User Conference  - presentations and slides about using R and applied predictive modeling      #
 #######################################################################################################
 # following URL added on July 10, 2014:
+# predictive modeling = machine learning
 echo "http://user2014.stat.ucla.edu/"
+echo "http://static.squarespace.com/static/51156277e4b0b8b2ffe11c00/t/53ad86e5e4b0b52e4e71cfab/1403881189332/Applied_Predictive_Modeling_in_R.pdf"
