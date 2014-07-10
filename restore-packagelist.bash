@@ -1591,3 +1591,9 @@ echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF
 # following URL added on July 8, 2014:
 echo "http://www.codecademy.com/tracks/python"
 echo "https://developers.google.com/edu/python/"
+
+#######################################################################################################
+#    R User Conference  - presentations and slides about using R                                      #
+#######################################################################################################
+# following URL added on July 10, 2014:
+echo "http://user2014.stat.ucla.edu/"
