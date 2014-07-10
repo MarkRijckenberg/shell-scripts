@@ -1556,11 +1556,11 @@ echo "http://cran.r-project.org/doc/manuals/r-release/R-data.pdf"
 echo "https://github.com/rOpenHealth"
 # following URL added on May 17, 2014:
 echo "http://www.infochimps.com/datasets/"
-# following URL added on May 17, 2014:
-
 # following URL added on May 18, 2014:
 echo "https://datamarket.com/"
-
+# following URL added on July 10, 2014:
+# Dryad Digital Repository 
+echo "http://datadryad.org"
 
 #######################################################################################################
 #     Online data analytics challenges requiring use of R or python                                   #
