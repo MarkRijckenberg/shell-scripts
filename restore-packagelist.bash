@@ -1574,6 +1574,9 @@ echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+
 echo "http://www.kaggle.com/"
 # Synapse challenges
 echo "https://www.synapse.org/#"
+# Coursolve challenges
+echo "https://www.coursolve.org"
+
 
 #######################################################################################################
 #     Combine big data datasets with R, RStudio and Google Big Data infrastructure                    #
