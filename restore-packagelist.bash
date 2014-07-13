@@ -1582,8 +1582,10 @@ echo "https://www.coursolve.org"
 
 
 #######################################################################################################
-#     Combine big data datasets with R, RStudio and Google Big Data infrastructure                    #
+#     Combine big data datasets with R, RStudio and Amazon EC2 or Google Big Data infrastructure      #
 #######################################################################################################
+
+echo "http://www.louisaslett.com/RStudio_AMI/"
 echo "https://developers.google.com/bigquery/"
 
 #######################################################################################################
