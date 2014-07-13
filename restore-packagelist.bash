@@ -1265,6 +1265,8 @@ echo "http://oad.simmons.edu/oadwiki/Data_repositories"
 echo "http://www.plos.org/publications/journals/"
 # following URL added on July 10, 2014:
 echo "http://www.springeropen.com/journals"
+# following URL added on July 13, 2014:
+echo "http://www.gigasciencejournal.com/"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
