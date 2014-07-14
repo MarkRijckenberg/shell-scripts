@@ -1538,6 +1538,9 @@ echo "https://www.youtube.com/results?search_query=1%20-%201%20Stanford%20NLP%20
 # following URL added on April 4, 2014:
 # Supervised Learning Workflow / Data Analytics Workflow
 echo "http://statsguys.files.wordpress.com/2014/03/supervisedworkflow.png"
+# NFL dataset for R users:
+echo "http://rpubs.com/rseiter/22093"
+
 
 ###############################################################################################
 #     Open data formats and importing data into R                                             #
