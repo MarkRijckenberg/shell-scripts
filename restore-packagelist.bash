@@ -439,10 +439,10 @@ sudo dpkg -i steam.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
  
 
-# install kde desktop environment
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:kubuntu-ppa/backports
+# install kde plasma 5 desktop environment
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:neon/kf5
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-#sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes   install kubuntu-desktop
+#sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes   install project-neon5-session project-neon5-utils project-neon5-konsole project-neon5-plasma-workspace-wallpapers project-neon5-breeze
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noneed4anick/cuttlefish
