@@ -1494,6 +1494,13 @@ echo "http://tech.knime.org/files/KNIME_quickstart.pdf"
 # -> so use liblinear R package -> computations via liblinear much quicker than via libsvm!
 # following URL added on April 23, 2014:
 echo "http://cran.r-project.org/web/packages/LiblineaR/LiblineaR.pdf"
+
+###############################################################################################
+#     Data Science magazines and journals                                                     #
+###############################################################################################
+# following URL added on July 18, 2014:
+echo "http://www.jds-online.com/"
+
 #######################################################
 # how to clean data and perform data imputation in R  #
 #######################################################
