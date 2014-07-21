@@ -1044,6 +1044,11 @@ tlmgr install hyperref
 sudo fmtutil-sys --all
 sudo update-texmf
 
+# install R 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/rrutter
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/c2d4u
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 
 # install rstudio / R-Studio from source code:
 # Free disk space required: around 5 GB
@@ -1077,11 +1082,6 @@ sudo make install
 sudo ln -s /usr/local/lib/rstudio/bin/rstudio /usr/bin
 cd $HOME
 
-# install R 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/rrutter
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/c2d4u
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 # install knitr (used by texmaker) from source code:
 cd $HOME; rm knitr_*.tar.gz
 git clone https://github.com/yihui/knitr.git
