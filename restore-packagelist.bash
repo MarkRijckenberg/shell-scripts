@@ -1061,14 +1061,14 @@ cd
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://download2.rstudio.org/`echo $RSTUDIOFILENAME`-amd64.deb
+wget http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-amd64.deb
 sudo dpkg -i `echo $RSTUDIOFILENAME`-amd64.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 else
   # 32-bit stuff here
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://download2.rstudio.org/`echo $RSTUDIOFILENAME`-i386.deb
+wget http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-i386.deb
 sudo dpkg -i `echo $RSTUDIOFILENAME`-i386.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
