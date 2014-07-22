@@ -53,7 +53,7 @@ SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
 WEKAFILENAME="weka-3-7-11.zip"
-RSTUDIOFILENAME="rstudio-server-0.98.978"
+RSTUDIOFILENAME="rstudio-0.98.978"
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
