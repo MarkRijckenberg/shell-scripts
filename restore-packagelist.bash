@@ -53,6 +53,7 @@ SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
 WEKAFILENAME="weka-3-7-11.zip"
+RSTUDIOFILENAME="rstudio-server-0.98.978"
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
@@ -1050,36 +1051,30 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/c2d4u
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 
-# install rstudio / R-Studio from source code:
+# install rstudio / R-Studio :
 # Free disk space required: around 5 GB
 # Mac OS X users should use RStudio-0.98.501.dmg instead of R to avoid the following UNIX child process forking error:
 # THE_PROCESS_HAS_FORKED_AND_YOU_CANNOT_USE_THIS_COREFOUNDATION_FUNCTIONALITY_YOU_MUST_EXEC__() to debug.
 
 cd
-git clone https://github.com/rstudio/rstudio.git
-cd rstudio/
-mkdir build
-cd build/
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  libcurl4-gnutls-dev libboost-all-dev cmake libqt4-dev  build-essential libqtwebkit-dev
 
-cd $HOME/rstudio/dependencies/common
-bash install-common
-bash install-pandoc
-bash install-rmarkdown
-bash install-mathjax
-bash install-gwt
-bash install-dictionaries
-bash install-cef
-cd $HOME
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+  # 64-bit stuff here
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libapparmor1 # Required only for Ubuntu, not Debian
+wget http://download2.rstudio.org/`echo $RSTUDIOFILENAME`-amd64.deb
+sudo dpkg -i `echo $RSTUDIOFILENAME`-amd64.deb
 
-bash $HOME/rstudio/dependencies/linux/install-dependencies-debian
-cd $HOME/rstudio/build
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install pandoc
-cmake .. -DRSTUDIO_TARGET=Desktop -DCMAKE_BUILD_TYPE=Release
-sudo make
-sudo make install
-sudo ln -s /usr/local/lib/rstudio/bin/rstudio /usr/bin
+else
+  # 32-bit stuff here
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libapparmor1 # Required only for Ubuntu, not Debian
+wget http://download2.rstudio.org/`echo $RSTUDIOFILENAME`-i386.deb
+sudo dpkg -i `echo $RSTUDIOFILENAME`-i386.deb
+
+
+fi
+
 cd $HOME
 
 # install knitr (used by texmaker) from source code:
