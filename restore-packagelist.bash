@@ -1592,7 +1592,8 @@ echo "https://www.coursolve.org"
 #######################################################################################################
 #     Combine big data datasets with R, RStudio and Amazon EC2 or Google Big Data infrastructure      #
 #######################################################################################################
-# use R,RStudio,PostGresql DB,MADlib to run MADlib in-database modeling functions in database, not in R
+# use R,RStudio,postgresql-9.3,postgresql-plr,MADlib,PivotalR to run MADlib in-database modeling 
+# functions in database, not in R
 echo "http://www.oscon.com/oscon2014/public/schedule/detail/37713"
 echo "http://www.louisaslett.com/RStudio_AMI/"
 echo "https://developers.google.com/bigquery/"
