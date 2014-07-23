@@ -1592,7 +1592,8 @@ echo "https://www.coursolve.org"
 #######################################################################################################
 #     Combine big data datasets with R, RStudio and Amazon EC2 or Google Big Data infrastructure      #
 #######################################################################################################
-
+# use R,RStudio,PostGresql DB,MADlib to run MADlib in-database modeling functions in database, not in R
+echo "http://www.oscon.com/oscon2014/public/schedule/detail/37713"
 echo "http://www.louisaslett.com/RStudio_AMI/"
 echo "https://developers.google.com/bigquery/"
 
@@ -1629,3 +1630,5 @@ echo "http://user2014.stat.ucla.edu/"
 echo "http://static.squarespace.com/static/51156277e4b0b8b2ffe11c00/t/53ad86e5e4b0b52e4e71cfab/1403881189332/Applied_Predictive_Modeling_in_R.pdf"
 # following paper describes dangers of overfitting and "curse of dimensionality":
 echo "http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf"
+# OSCON 2014
+echo "http://www.oscon.com/oscon2014/public/schedule/detail/37713"
