@@ -1637,3 +1637,5 @@ echo "http://static.squarespace.com/static/51156277e4b0b8b2ffe11c00/t/53ad86e5e4
 echo "http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf"
 # OSCON 2014
 echo "http://www.oscon.com/oscon2014/public/schedule/detail/37713"
+# Data Day Texas conference
+echo "http://datadaytexas.com/"
