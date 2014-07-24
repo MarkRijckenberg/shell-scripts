@@ -1636,11 +1636,12 @@ echo "https://developers.google.com/edu/python/"
 #######################################################################################################
 # following URL added on July 10, 2014:
 # predictive modeling = machine learning
+# The R User Conference:
 echo "http://user2014.stat.ucla.edu/"
 echo "http://static.squarespace.com/static/51156277e4b0b8b2ffe11c00/t/53ad86e5e4b0b52e4e71cfab/1403881189332/Applied_Predictive_Modeling_in_R.pdf"
 # following paper describes dangers of overfitting and "curse of dimensionality":
 echo "http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf"
-# OSCON 2014
+# OSCON 2014 conference
 echo "http://www.oscon.com/oscon2014/public/schedule/detail/37713"
 # Strata Oreilly conference
 echo "http://strataconf.com/strata2014/public/schedule/proceedings"
