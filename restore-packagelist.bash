@@ -1495,6 +1495,11 @@ echo "http://cdn.oreillystatic.com/en/assets/1/event/115/Data%20Workflows%20for%
 echo "http://cran.r-project.org/web/packages/LiblineaR/LiblineaR.pdf"
 
 ###############################################################################################
+#     Data Science toolkit virtual machine images                                             #
+###############################################################################################
+# following URL added on July 24, 2014:
+echo "http://www.datasciencetoolkit.org/developerdocs#setup"
+###############################################################################################
 #     Data Science magazines and journals                                                     #
 ###############################################################################################
 # following URL added on July 18, 2014:
