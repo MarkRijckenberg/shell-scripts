@@ -1481,9 +1481,13 @@ echo "http://machinelearningmastery.com/design-and-run-your-first-experiment-in-
 # Perform Hyperparameter optimization using libsvm as explained here:
 echo "https://en.wikipedia.org/wiki/Hyperparameter_optimization"
 echo "http://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf"
-# Alternative to R+Rstudio: KNIME (Konstanz Information Miner)
+# Alternative to R Markdown for Data Workflow Visualization: KNIME (Konstanz Information Miner)
+# KNIME is a Data Workflow Visualization tool
 # following URL added on April 25, 2014:
 echo "http://tech.knime.org/files/KNIME_quickstart.pdf"
+# following URL added on July 24, 2014:
+echo "http://cdn.oreillystatic.com/en/assets/1/event/115/Data%20Workflows%20for%20Machine%20Learning%20Presentation.pdf"
+
 
 # liblinear is good model to use when number of train data rows (4600) > number of features/variables (110) 
 # -> so use liblinear R package -> computations via liblinear much quicker than via libsvm!
