@@ -1630,6 +1630,9 @@ echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF
 # following URL added on July 8, 2014:
 echo "http://www.codecademy.com/tracks/python"
 echo "https://developers.google.com/edu/python/"
+# ipython notebook webserver in virtualbox VM configured using vagrant:
+# accessible on host server via http://localhost:8888
+echo "https://rawgit.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/master/ipynb/html/_Appendix%20A%20-%20Virtual%20Machine%20Experience.html"
 
 #######################################################################################################
 #    R User Conference  - presentations and slides about using R and applied predictive modeling      #
