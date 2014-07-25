@@ -1633,8 +1633,9 @@ echo "https://developers.google.com/edu/python/"
 # ipython notebook webserver in virtualbox VM configured using vagrant (configure time using chef in VM: 31 minutes)
 # accessible on host server via http://localhost:8888
 echo "https://rawgit.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/master/ipynb/html/_Appendix%20A%20-%20Virtual%20Machine%20Experience.html"
+echo "http://cloud.shogun-toolbox.org/"
 
-#######################################################################################################
+#####################################################################################################
 #    R User Conference  - presentations and slides about using R and applied predictive modeling      #
 #######################################################################################################
 # following URL added on July 10, 2014:
