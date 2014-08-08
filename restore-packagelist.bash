@@ -152,6 +152,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noobslab/apps
 
 # add repository for eid-mw and eid-viewer software packages
 # RELEASE = saucy,trusty, etc...... = distribution codename
@@ -390,6 +391,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-mus
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc
 
+# install newest version of minitube
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libqtgui4 libqt4-xml libqt4-network libqt4-dbus phonon-backend-vlc
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install minitube
 
 # install spotify - can sync mp3 files between Ubuntu 13.10 and ipod nano 6th generation
 #sudo DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
