@@ -15,11 +15,11 @@
 #           wget, apt-get, unp, wine, biber, biblatex
 # Use Cinnamon instead of Unity interface, because Unity causes Teamviewer sessions to slow down due to window 
 # animation in Unity
-# REQUIRED FREE DISKSPACE FOR LINUX MINT 16: 4 GB of free disk space in root partition
+# REQUIRED FREE DISKSPACE FOR Xubuntu 14.04 LTS: 5 GB of free disk space in root partition
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
 # REQUIRED FREE DISKSPACE FOR PPA PACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
-# TOTAL AMOUNT OF REQUIRED DISKSPACE FOR LINUX MINT 16 + BASEPACKAGES + PPA PACKAGES
-# = 4 GB + 1.4 GB + 1.4 GB = 6.8 GB
+# TOTAL AMOUNT OF REQUIRED DISKSPACE FOR Xubuntu 14.04 LTS + BASEPACKAGES + PPA PACKAGES
+# = 5 GB + 1.4 GB + 1.4 GB = 7.8 GB
 # COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon
 # thanks to cinnamon-bluetooth package.
 # To make bluetooth speakers work in lxqt desktop, run these 4 Terminal commands:
