@@ -166,6 +166,11 @@ sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/ap
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
+# add partner repository for skype software package
+sudo touch /etc/apt/sources.list.d/partner.list
+sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu trusty partner" >> /etc/apt/sources.list.d/partner.list'
+sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu trusty partner" >> /etc/apt/sources.list.d/partner.list'
+
 ##########################################################################################################
 # refresh list of available packages in Ubuntu repositories
 sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
@@ -176,7 +181,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # allpackages = basepackages + astropackages
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install `cat  allpackages` -o APT::Install-Suggests="false"
 
-# uninstall pulseaudio - pulseaudio can cause skype to malfunction with loss of microphone and sound output
 # commented out following line, because it will break bluetooth support in Linux Mint
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
@@ -463,8 +467,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-twe
 
 # install skype
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove skype skype-bin
-wget http://download.skype.com/linux/`echo $SKYPEFILENAME`
-sudo dpkg -i skype-ubuntu*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install skype
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 sni-qt:i386
 
