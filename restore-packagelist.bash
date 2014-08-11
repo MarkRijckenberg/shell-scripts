@@ -52,8 +52,10 @@ SCISOFTFILENAME="scisoft-7.7.0"
 SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
+
+# define Data Science filename variables
 WEKAFILENAME="weka-3-7-11.zip"
-RSTUDIOFILENAME="rstudio-0.98.978"
+RSTUDIOFILENAME="rstudio-0.98.994"
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
