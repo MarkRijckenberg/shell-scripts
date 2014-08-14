@@ -1596,6 +1596,8 @@ echo "http://datadryad.org"
 # Access Quandl open data sets using Quandl R package:
 echo "http://www.quandl.com/"
 echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+Sheet.pdf"
+# following URL added on August 14, 2014:
+echo "http://www.data.gov/"
 
 #######################################################################################################
 #     Online data analytics challenges requiring use of R or python                                   #
