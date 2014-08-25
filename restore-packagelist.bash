@@ -705,7 +705,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-len
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge  xscreensaver  xscreensaver-data gnome-screensaver
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge samba
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge evolution-data-server-common samba
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
