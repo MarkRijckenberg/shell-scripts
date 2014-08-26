@@ -55,7 +55,7 @@ AUDELAFILENAME="audela-2.0.0"
 
 # define Data Science filename variables
 WEKAFILENAME="weka-3-7-11.zip"
-RSTUDIOFILENAME="rstudio-0.98.994"
+RSTUDIOFILENAME="rstudio-0.98.1028"
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
