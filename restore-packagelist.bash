@@ -42,7 +42,8 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
-YEDFILENAME="yEd-3.12.2_32-bit_setup.sh"
+# updated on 2014-08-26
+YEDFILENAME="yEd-3.13_32-bit_setup.sh"
 
 # define Astronomy filename variables
 DUFILENAME="DUv3_9pview.tgz"
