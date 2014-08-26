@@ -335,7 +335,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install variety
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install pipelight
 
 # install google-talkplugin
-#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo DEBIAN_FRONTEND=noninteractive apt-key add - 
+#axel -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo DEBIAN_FRONTEND=noninteractive apt-key add - 
 #sudo sh -c 'echo "deb http://dl.google.com/linux/talkplugin/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install google-talkplugin
@@ -385,7 +385,7 @@ cd $HOME
 
 
 # install Google Music Manager - sync local mp3s in Ubuntu with ios or Android device
-#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#axel -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager-beta
@@ -444,7 +444,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install qbittorren
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install desurium
 
 # install 64-bit compatible Steam client
-wget -c media.steampowered.com/client/installer/steam.deb
+axel media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
  
@@ -490,7 +490,7 @@ sudo /usr/share/doc/libdvdread4/./install-css.sh
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 # install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+axel https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -502,7 +502,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+axel `echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -519,7 +519,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+axel `echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -552,7 +552,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1.6 winetricks wine1.6-amd64
 
 # install Teamviewer server + client which depends on wine1.6
-wget http://download.teamviewer.com/download/teamviewer_linux.deb
+axel http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
@@ -565,14 +565,14 @@ sudo update-rc.d teamviewerd.sysv defaults
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 # install youtube-to-mp3 program
-wget http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
+axel http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
 sudo dpkg -i YouTubeToMP3.amd64.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
 # install Viber program
-wget download.cdn.viber.com/cdn/desktop/Linux/viber.deb
+axel download.cdn.viber.com/cdn/desktop/Linux/viber.deb
 sudo dpkg -i viber.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
@@ -581,14 +581,14 @@ else
   # 32-bit stuff here
   
 # install youtube-to-mp3 program
-wget http://www.mediahuman.com/download/YouTubeToMP3.i386.deb
+axel http://www.mediahuman.com/download/YouTubeToMP3.i386.deb
 sudo dpkg -i YouTubeToMP3.i386.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+axel https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -600,7 +600,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+axel `echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -617,7 +617,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+axel `echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -650,7 +650,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6 winetricks
 
 # install Teamviewer server + client which depends on wine1.6
-wget http://download.teamviewer.com/download/teamviewer_linux.deb
+axel http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
@@ -677,12 +677,12 @@ fi
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f dist-upgrade
 
 # OBSOLETE - install Multimedia codecs
-# sudo -E wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update && sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update
+# sudo -E axel --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update && sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo DEBIAN_FRONTEND=noninteractive apt-get --quiet update
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install non-free-codecs libdvdcss
 
 # install Realplayer (latest version is from 2009)
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get install lsb
-#wget http://client-software.real.com/free/unix/RealPlayer11GOLD.deb
+#axel http://client-software.real.com/free/unix/RealPlayer11GOLD.deb
 #sudo dpkg -i RealPlayer11GOLD.deb
 
 # clean up current directory
@@ -716,13 +716,13 @@ sudo rm /etc/apt/sources.list.d/*
 # Allows easy creation of Entity Relationship (ER) diagrams (as part of data modeling by data scientist)
 # documentation:  http://www.linuxuser.co.uk/tutorials/create-flowcharts-with-yedcreate-flowcharts-with-yed
 cd $HOME
-wget http://www.yworks.com/products/yed/demo/`echo $YEDFILENAME`
+axel http://www.yworks.com/products/yed/demo/`echo $YEDFILENAME`
 sh `echo $YEDFILENAME`
 
 
 # install Kruidvat fotoservice software
 cd $HOME
-wget http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservice.tgz
+axel http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservice.tgz
 tar -zxvf setup_Kruidvat_fotoservice.tgz 
 ./install.pl 
 
@@ -731,7 +731,7 @@ tar -zxvf setup_Kruidvat_fotoservice.tgz
 ###############################################################################################
 
 # install zotero add-on for Mozilla Firefox
-wget https://download.zotero.org/extension/zotero-4.0.20.2.xpi
+axel https://download.zotero.org/extension/zotero-4.0.20.2.xpi
 gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 
 cd $HOME/shell-scripts
@@ -762,39 +762,39 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install sextractor
 
 # download CSC KML Interface to Sky in Google Earth
 echo "Downloading CSC KML Interface to Sky in Google Earth"
-wget http://cxc.harvard.edu/csc/googlecat/cxo_1.2.kml
+axel http://cxc.harvard.edu/csc/googlecat/cxo_1.2.kml
 echo "kml file can be opened using Google Earth"
 
 # download The Crab Nebula Explodes
 echo "Downloading The Crab Nebula Explodes"
-wget http://services.google.com/earth/kmz/crab_nebula_n.kmz
+axel http://services.google.com/earth/kmz/crab_nebula_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Multicolor Galaxies
 echo "Downloading Multicolor Galaxies"
-wget http://services.google.com/earth/kmz/aegis_n.kmz
+axel http://services.google.com/earth/kmz/aegis_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Images of Nearby Galaxies from the National Optical Astronomical Observatory
 echo "Downloading Images of Nearby Galaxies from the National Optical Astronomical Observatory"
-wget http://services.google.com/earth/kmz/noao_showcase_n.kmz
+axel http://services.google.com/earth/kmz/noao_showcase_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download The Sloan Digital Sky Survey catalog
 echo "Downloading The Sloan Digital Sky Survey catalog"
-wget http://services.google.com/earth/kmz/sdss_query_n.kmz
+axel http://services.google.com/earth/kmz/sdss_query_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Exoplanets
 echo "Downloading Exoplanets"
-wget http://services.google.com/earth/kmz/exo_planets_n.kmz
+axel http://services.google.com/earth/kmz/exo_planets_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 
 
 # download and install Audela
 echo "Downloading and installing Audela - free and open source astronomy software intended for digital observations"
-wget http://sourceforge.net/projects/audela/files/audela/`echo $AUDELAFILENAME`/`echo $AUDELAFILENAME`.deb
+axel http://sourceforge.net/projects/audela/files/audela/`echo $AUDELAFILENAME`/`echo $AUDELAFILENAME`.deb
 sudo dpkg -i  `echo $AUDELAFILENAME`.deb
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
@@ -802,7 +802,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 # download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
 # software system for the reduction and analysis of astronomical data
 echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
-wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86_64.tar.gz
+axel ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86_64.tar.gz
 unp iraf.lnux.x86_64.tar.gz
 
 echo "Downloading and installing skychart"
@@ -812,7 +812,7 @@ url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $SKYCHARTREMOTEDIR``echo $url`
+axel `echo $SKYCHARTREMOTEDIR``echo $url`
 # Install the package
 sudo dpkg -i $url
 # Clean up
@@ -830,7 +830,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  texmaker
 #dir=$(mktemp -dt)
 #cd "$dir"
 # Download the .deb file
-#wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
+#axel `echo $TEXSTUDIOREMOTEDIR``echo $url`
 # Install the package
 #sudo dpkg -i `echo $url`
 # Clean up
@@ -845,7 +845,7 @@ else
 # download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
 # software system for the reduction and analysis of astronomical data
 echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
-wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
+axel ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
 unp iraf.lnux.x86.tar.gz
 
 echo "Downloading and installing skychart"
@@ -855,7 +855,7 @@ url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $SKYCHARTREMOTEDIR``echo $url`
+axel `echo $SKYCHARTREMOTEDIR``echo $url`
 # Install the package
 sudo dpkg -i $url
 # Clean up
@@ -873,7 +873,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   texmaker
 #dir=$(mktemp -dt)
 #cd "$dir"
 # Download the .deb file
-#wget `echo $TEXSTUDIOREMOTEDIR``echo $url`
+#axel `echo $TEXSTUDIOREMOTEDIR``echo $url`
 # Install the package
 #sudo dpkg -i `echo $url`
 # Clean up
@@ -885,15 +885,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   texmaker
 
 fi
 
-wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
+axel http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
 sudo dpkg -i skychart-data-stars_3.8-2293_all.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
-wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-dso_3.8-2293_all.deb
+axel http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-dso_3.8-2293_all.deb
 sudo dpkg -i skychart-data-dso_3.8-2293_all.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
-wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-pictures_3.1-1466_all.deb
+axel http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-pictures_3.1-1466_all.deb
 sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
@@ -903,64 +903,64 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 ###############################################################################################
 #download Triatlas charts in PDF format from http://www.uv.es/jrtorres/triatlas.html
 echo "Downloading Triatlas charts (from jrtorres) in A4 format for Europe"
-wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
-wget http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
-wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
-wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
-wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
-wget http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
-wget http://www.uv.es/jrtorres/section_c/C01_001-030.pdf
-wget http://www.uv.es/jrtorres/section_c/C02_031-060.pdf
-wget http://www.uv.es/jrtorres/section_c/C03_061-090.pdf
-wget http://www.uv.es/jrtorres/section_c/C04_091-120.pdf
-wget http://www.uv.es/jrtorres/section_c/C05_121-150.pdf
-wget http://www.uv.es/jrtorres/section_c/C06_151-180.pdf
-wget http://www.uv.es/jrtorres/section_c/C07_181-210.pdf
-wget http://www.uv.es/jrtorres/section_c/C08_211-240.pdf
-wget http://www.uv.es/jrtorres/section_c/C09_241-270.pdf
-wget http://www.uv.es/jrtorres/section_c/C10_271-300.pdf
-wget http://www.uv.es/jrtorres/section_c/C11_301-330.pdf
-wget http://www.uv.es/jrtorres/section_c/C12_331-360.pdf
-wget http://www.uv.es/jrtorres/section_c/C13_361-390.pdf
-wget http://www.uv.es/jrtorres/section_c/C14_391-420.pdf
-wget http://www.uv.es/jrtorres/section_c/C15_421-450.pdf
-wget http://www.uv.es/jrtorres/section_c/C16_451-480.pdf
-wget http://www.uv.es/jrtorres/section_c/C17_481-510.pdf
-wget http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
-wget http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
-wget http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
+axel http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
+axel http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
+axel http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
+axel http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
+axel http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
+axel http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
+axel http://www.uv.es/jrtorres/section_c/C01_001-030.pdf
+axel http://www.uv.es/jrtorres/section_c/C02_031-060.pdf
+axel http://www.uv.es/jrtorres/section_c/C03_061-090.pdf
+axel http://www.uv.es/jrtorres/section_c/C04_091-120.pdf
+axel http://www.uv.es/jrtorres/section_c/C05_121-150.pdf
+axel http://www.uv.es/jrtorres/section_c/C06_151-180.pdf
+axel http://www.uv.es/jrtorres/section_c/C07_181-210.pdf
+axel http://www.uv.es/jrtorres/section_c/C08_211-240.pdf
+axel http://www.uv.es/jrtorres/section_c/C09_241-270.pdf
+axel http://www.uv.es/jrtorres/section_c/C10_271-300.pdf
+axel http://www.uv.es/jrtorres/section_c/C11_301-330.pdf
+axel http://www.uv.es/jrtorres/section_c/C12_331-360.pdf
+axel http://www.uv.es/jrtorres/section_c/C13_361-390.pdf
+axel http://www.uv.es/jrtorres/section_c/C14_391-420.pdf
+axel http://www.uv.es/jrtorres/section_c/C15_421-450.pdf
+axel http://www.uv.es/jrtorres/section_c/C16_451-480.pdf
+axel http://www.uv.es/jrtorres/section_c/C17_481-510.pdf
+axel http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
+axel http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
+axel http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
 mv *.pdf triatlas
 
 # download SAO/NASA ADS Help Pages
 echo "Downloading SAO/NASA ADS Help Pages"
-wget http://adsabs.harvard.edu/abs_doc/help_pages/adshelp.pdf
+axel http://adsabs.harvard.edu/abs_doc/help_pages/adshelp.pdf
 mv adshelp.pdf sao_nasa_ads_help_pages_July_9_2012.pdf
 
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
-wget http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
+axel http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
 mv aasguide.pdf American_Astronomical_Society_guidelines.pdf
 
 # download The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii
 echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii"
-wget http://tobi.oetiker.ch/lshort/lshort.pdf
+axel http://tobi.oetiker.ch/lshort/lshort.pdf
 mv lshort.pdf latex2-not-so-short-introduction.pdf
 
-wget http://kelder.zeus.ugent.be/~gaspard/latex/latex-cursus.pdf
+axel http://kelder.zeus.ugent.be/~gaspard/latex/latex-cursus.pdf
 
-wget http://latex-project.org/guides/lc2fr-apb.pdf
+axel http://latex-project.org/guides/lc2fr-apb.pdf
 mv lc2fr-apb.pdf‎detecting-solving-latex-issues.pdf
 
 echo "Downloading Springer monograph template"
-wget http://www.springer.com/cda/content/document/cda_downloaddocument/manuscript-guidelines-1.0.pdf
+axel http://www.springer.com/cda/content/document/cda_downloaddocument/manuscript-guidelines-1.0.pdf
 mv manuscript-guidelines-1.0.pdf Springer-book-manuscript-guidelines-1.0.pdf
-wget http://www.springer.com/cda/content/document/cda_downloaddocument/Key_Style_Points_1.0.pdf
+axel http://www.springer.com/cda/content/document/cda_downloaddocument/Key_Style_Points_1.0.pdf
 mv Key_Style_Points_1.0.pdf Springer-book-Key_Style_Points_1.0.pdf
-wget http://www.springer.com/cda/content/document/cda_downloaddocument/svmono.zip
+axel http://www.springer.com/cda/content/document/cda_downloaddocument/svmono.zip
 mv svmono.zip Springer-svmono-monograph-Latex-template.zip
 
 echo "Downloading awesome professional looking Legrand Orange Book template"
-wget http://www.latextemplates.com/templates/books/2/book_2.zip
+axel http://www.latextemplates.com/templates/books/2/book_2.zip
 mv book_2.zip Legrand_Orange_Book_template_book_2_excellent.zip
 
 # clean up current directory
@@ -988,7 +988,7 @@ sudo rm /etc/apt/sources.list.d/*
 #grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 #sudo cp /tmp/sources.list  /etc/apt/sources.list
 
-# wget http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
+# axel http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
 # tar -zxvf simx-2.0.6.tar.gz
 # cd simx-2.0.6/
 # sudo ./configure
@@ -1001,23 +1001,23 @@ sudo rm /etc/apt/sources.list.d/*
 
 # download and decompress Digital Universe and Partiview Resources
 echo "Downloading and decompressing Digital Universe and Partiview Resources"
-wget http://haydenplanetarium.org/downloads/universe/linux/`echo $DUFILENAME`
+axel http://haydenplanetarium.org/downloads/universe/linux/`echo $DUFILENAME`
 unp `echo $DUFILENAME`
 
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
 echo "Downloading and decompressing Nightshade"
-wget http://www.nightshadesoftware.org/attachments/download/6/`echo $NIGHTSHADEFILENAME`
+axel http://www.nightshadesoftware.org/attachments/download/6/`echo $NIGHTSHADEFILENAME`
 unp `echo $NIGHTSHADEFILENAME`
 
 # download and decompress scisoft utilities
 echo "Downloading and decompressing scisoft utilities"
-wget ftp://ftp.eso.org/scisoft/`echo $SCISOFTFILENAME`/linux/fedora11/tar/`echo $SCISOFTFILENAME`.tar.gz
+axel ftp://ftp.eso.org/scisoft/`echo $SCISOFTFILENAME`/linux/fedora11/tar/`echo $SCISOFTFILENAME`.tar.gz
 unp `echo $SCISOFTFILENAME`
 
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 echo "Downloading and compiling skyviewer from nasa website"
-wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/`echo $SKYVIEWERFILENAME`.tar.gz
+axel http://lambda.gsfc.nasa.gov/toolbox/skyviewer/`echo $SKYVIEWERFILENAME`.tar.gz
 unp `echo $SKYVIEWERFILENAME`.tar.gz
 cd `echo $SKYVIEWERFILENAME`
 sudo qmake
@@ -1027,7 +1027,7 @@ cd ..
 
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
-wget http://www.astrosurf.com/c2a/english/download/`echo $C2AFILENAME`
+axel http://www.astrosurf.com/c2a/english/download/`echo $C2AFILENAME`
 unp `echo $C2AFILENAME`
 wine setup.exe
 
@@ -1076,14 +1076,14 @@ cd
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-amd64.deb
+axel http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-amd64.deb
 sudo dpkg -i `echo $RSTUDIOFILENAME`-amd64.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 else
   # 32-bit stuff here
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-i386.deb
+axel http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-i386.deb
 sudo dpkg -i `echo $RSTUDIOFILENAME`-i386.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
@@ -1105,7 +1105,7 @@ make check
 # install weka v3.7.11 - import preprocessed .csv from R into weka to perform significant
 # feature/variable selection for R models
 cd $HOME
-wget http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
+axel http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
 unzip `echo $WEKAFILENAME`
 
 
