@@ -54,7 +54,6 @@ C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
 
 # define Data Science filename variables
-WEKAFILENAME="weka-3-7-11.zip"
 RSTUDIOFILENAME="rstudio-0.98.1028"
 
 #define source directories
@@ -1105,9 +1104,9 @@ make check
 
 # install weka v3.7.11 - import preprocessed .csv from R into weka to perform significant
 # feature/variable selection for R models
-cd $HOME
-axel http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
-unzip `echo $WEKAFILENAME`
+#cd $HOME
+#axel http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
+#unzip `echo $WEKAFILENAME`
 
 
 ###############################################################################################
