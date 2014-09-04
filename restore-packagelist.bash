@@ -697,8 +697,11 @@ rm *.exe
 # uninstall Java due to all the critical security issues in 2013
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-?.?-jre-headless
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-6-jre-headless
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-7-jre-headless
+
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-shopping
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
