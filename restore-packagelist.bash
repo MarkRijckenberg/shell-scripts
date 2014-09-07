@@ -1464,6 +1464,8 @@ echo "http://www.cookbook-r.com/"
 # Data Camp - online interactive tool that teaches how to use R
 # following URL added on April 25, 2014:
 echo "https://www.datacamp.com/courses/introduction-to-r"
+# following URL added on September 7, 2014:
+echo "https://www.codeschool.com/courses/try-r"
 # time series analysis using R
 # following URL added on May 18, 2014:
 echo "http://www.statmethods.net/advstats/timeseries.html"
