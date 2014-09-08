@@ -227,12 +227,23 @@ printf '[Desktop Entry]\nName=Citrix ICA client\nComment="Launch Citrix applicat
 dpkg -b foo icaclient_amd64_fixed_for_14.04_LTS.deb
 sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
 
+##########################################################################################################
+# install LGOGDownloader (unofficial downloader to GOG.com for Linux users) 
+# It uses the same API as the official GOGDownloader.
+##########################################################################################################
+cd $HOME
+rm -rf $HOME/lgogdownloader
+git clone https://github.com/Sude-/lgogdownloader.git
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  build-essential libcurl4-openssl-dev liboauth-dev libjsoncpp-dev libhtmlcxx-dev libboost-system-dev libboost-filesystem-dev libboost-regex-dev libboost-program-options-dev libboost-date-time-dev libtinyxml-dev librhash-dev help2man
+cd lgogdownloader
+sudo make release
+sudo make install
 
 ##########################################################################################################
 # install eid card reader middleware - replace codename (for example: trusty) with right Ubuntu codename
 ##########################################################################################################
 
-
+cd $HOME
 # RELEASE = saucy,trusty, etc...... = distribution codename
 #RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
