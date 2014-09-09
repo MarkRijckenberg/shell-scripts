@@ -1488,6 +1488,8 @@ echo "http://www.statoek.wiso.uni-goettingen.de/veranstaltungen/zeitreihen/somme
 echo "https://onlinecourses.science.psu.edu/stat510/"
 # following URL added on June 24, 2014:
 echo "http://www.scoop.it/t/r-for-journalists"
+# following URL added on September 9, 2014:
+echo "http://www.bioconductor.org/install/"
 
 ###############################################################################################
 #     Sabermetrics                                                                            #
