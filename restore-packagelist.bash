@@ -1452,6 +1452,7 @@ echo "http://www.evanmiller.org/"
 echo "http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111866146X.html"
 # following URL added on August 28, 2014:
 echo "http://swirlstats.com/students.html"
+echo "https://github.com/swirldev/swirl_courses#swirl-courses"
 # following URL added on March 7, 2014:
 # STEP 4: following URL added on February 28, 2014:
 echo "http://www.amazon.fr/Practical-Data-Science-Nina-Zumel/dp/1617291560/ref=sr_1_1?ie=UTF8&qid=1393583397&sr=8-1&keywords=practical+data+science+with+r"
