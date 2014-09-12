@@ -226,8 +226,11 @@ mkdir -p foo/usr/share/applications
 printf '[Desktop Entry]\nName=Citrix ICA client\nComment="Launch Citrix applications from .ica files"\nCategories=Network;\nExec=/opt/Citrix/ICAClient/wfica\nTerminal=false\nType=Application\nNoDisplay=true\nMimeType=application/x-ica' > foo/usr/share/applications/wfica.desktop
 dpkg -b foo icaclient_amd64_fixed_for_14.04_LTS.deb
 sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
-
-
+# Thank you Michael May for reminding me to add the following step:
+# Click on the “open menu” icon in the top right corner of the Mozilla Firefox interface.
+# Then click on the Add-ons icon
+# Click on Plugins and then on “Citrix Receiver for Linux”
+# Choose “Always activate” option next to “Citrix Receiver for Linux”
 
 ##########################################################################################################
 # install eid card reader middleware - replace codename (for example: trusty) with right Ubuntu codename
