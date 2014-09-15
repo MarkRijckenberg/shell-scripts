@@ -1494,13 +1494,15 @@ echo "https://onlinecourses.science.psu.edu/stat510/"
 echo "http://www.scoop.it/t/r-for-journalists"
 # following URL added on September 9, 2014:
 echo "http://www.bioconductor.org/install/"
-# # following URL added on September 9, 2014:
+# following URL added on September 9, 2014:
 # run R online:
 echo "http://statace.com/#features"
 echo "http://www.roncloud.com/"
 echo "http://www.compileonline.com/execute_r_online.php"
 echo "http://www.r-fiddle.org/"
 echo "http://pbil.univ-lyon1.fr/Rweb/Rweb.general.html"
+# following URL added on September 15, 2014:
+echo "http://www.rdatamining.com/docs"
 
 ###############################################################################################
 #     Sabermetrics                                                                            #
