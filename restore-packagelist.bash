@@ -1502,6 +1502,7 @@ echo "http://www.compileonline.com/execute_r_online.php"
 echo "http://www.r-fiddle.org/"
 echo "http://pbil.univ-lyon1.fr/Rweb/Rweb.general.html"
 # following URL added on September 15, 2014:
+# detailed examples of supervised and unsupervised learning and time series analysis in R:
 echo "http://www.rdatamining.com/docs"
 
 ###############################################################################################
