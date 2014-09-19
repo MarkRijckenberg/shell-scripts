@@ -1423,7 +1423,7 @@ echo "http://shiny.rstudio.com/articles/cheatsheet.html"
 # principles and practice of reproducible research with R
 echo "https://osf.io/s9tya/wiki/home/"
 echo "http://statsteachr.org/modules/view/40"
-
+echo "http://reproducibleresearch.net/links/"
 
 # following URL added on February 19, 2014:
 # free guides
