@@ -1126,6 +1126,10 @@ make check
 #axel http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
 #unzip `echo $WEKAFILENAME`
 
+# following URL added on September 20, 2014:
+# install Google Cloud SDK (to be able to use Big Query)
+curl https://sdk.cloud.google.com | bash
+
 
 ###############################################################################################
 #     Links for astronomers                                                                   #
