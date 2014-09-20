@@ -1672,6 +1672,9 @@ echo "https://www.coursolve.org"
 echo "http://www.oscon.com/oscon2014/public/schedule/detail/37713"
 echo "http://www.louisaslett.com/RStudio_AMI/"
 echo "https://developers.google.com/bigquery/"
+# following URL added on September 20, 2014:
+# Big Query and Data Analytics applied to soccer:
+echo "https://github.com/GoogleCloudPlatform/ipython-soccer-predictions"
 
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
