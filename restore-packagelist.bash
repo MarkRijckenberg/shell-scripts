@@ -1481,6 +1481,8 @@ echo "http://www.rseek.org/"
 # following URL added on April 22, 2014:
 # Cookbook for R
 echo "http://www.cookbook-r.com/"
+# R Graphics Cookbook - Practical Recipes for Visualizing Data - Winston Chang - 2012
+echo "http://shop.oreilly.com/product/0636920023135.do"
 # Data Camp - online interactive tool that teaches how to use R
 # following URL added on April 25, 2014:
 echo "https://www.datacamp.com/courses/introduction-to-r"
