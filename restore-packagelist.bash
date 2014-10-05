@@ -232,6 +232,8 @@ sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/c
 # Then click on the Add-ons icon
 # Click on Plugins and then on “Citrix Receiver for Linux”
 # Choose “Always activate” option next to “Citrix Receiver for Linux”
+# Attempt to access your Citrix site. If Firefox prompts you to open a .ica file, choose
+# to open it with /opt/Citrix/ICAClient/wfica.sh, and tell Firefox to remember that choice.
 
 ##########################################################################################################
 # install eid card reader middleware - replace codename (for example: trusty) with right Ubuntu codename
