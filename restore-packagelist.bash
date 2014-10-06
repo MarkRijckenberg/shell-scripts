@@ -747,6 +747,9 @@ wget http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservi
 tar -zxvf setup_Kruidvat_fotoservice.tgz 
 ./install.pl 
 
+# run shellshock test to see if bash is vulnerable
+wget https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
+
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
 ###############################################################################################
