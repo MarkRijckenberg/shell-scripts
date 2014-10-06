@@ -227,6 +227,8 @@ printf '[Desktop Entry]\nName=Citrix ICA client\nComment="Launch Citrix applicat
 dpkg -b foo icaclient_amd64_fixed_for_14.04_LTS.deb
 sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
 sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+sudo c_rehash /opt/Citrix/ICAClient/keystore/cacerts/
+
 # Thank you Michael May for reminding me to add the following step:
 # Click on the “open menu” icon in the top right corner of the Mozilla Firefox interface.
 # Then click on the Add-ons icon
