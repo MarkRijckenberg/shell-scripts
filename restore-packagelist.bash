@@ -748,6 +748,7 @@ tar -zxvf setup_Kruidvat_fotoservice.tgz
 ./install.pl 
 
 # run shellshock test to see if bash is vulnerable
+cd $HOME
 wget https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
 
 ###############################################################################################
