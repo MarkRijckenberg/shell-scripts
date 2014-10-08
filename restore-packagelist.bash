@@ -710,15 +710,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f dist-upgrade
 #wget http://client-software.real.com/free/unix/RealPlayer11GOLD.deb
 #sudo dpkg -i RealPlayer11GOLD.deb
 
-# clean up current directory
-echo "Performing file cleanup"
-mv *.zip $ZIP
-mv *.pdf $PDF
-mv *.deb $DEB
-mv *.km? $KMZ
-mv *gz $TAR
-rm *.exe
-
 # uninstall Java due to all the critical security issues in 2013
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
@@ -758,11 +749,27 @@ tar -zxvf setup_Kruidvat_fotoservice.tgz
 cd $HOME
 wget https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
 
+# clean up current directory
+echo "Performing file cleanup"
+cd $HOME
+rm *.zip
+rm *.pdf
+rm *.deb
+rm *.km?
+rm *gz
+rm *.exe
+rm google*
+rm *yEd*.sh
+rm .goutputstrea*
+rm *.cab
+rm *.xpi
+
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
 ###############################################################################################
 
 # install zotero add-on for Mozilla Firefox
+cd $HOME
 wget https://download.zotero.org/extension/zotero-4.0.20.2.xpi
 gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 
