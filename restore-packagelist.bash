@@ -253,7 +253,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge bei
 #sudo touch /etc/apt/sources.list.d/eid.list
 #sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev 
 
 #Manually set the following values in Mozilla Firefox in about:config
 #security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
