@@ -159,7 +159,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noobslab/apps
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-security-proposed/ppa
 
 # add repository for eid-mw and eid-viewer software packages
-# RELEASE = saucy,trusty, etc...... = distribution codename
+# replace codename (for example: trusty) with right Ubuntu codename
 RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
 sudo touch /etc/apt/sources.list.d/eid.list
 sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
@@ -169,6 +169,7 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 # add partner repository for skype software package
+# replace codename (for example: trusty) with right Ubuntu codename
 sudo touch /etc/apt/sources.list.d/partner.list
 sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu trusty partner" >> /etc/apt/sources.list.d/partner.list'
 sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu trusty partner" >> /etc/apt/sources.list.d/partner.list'
