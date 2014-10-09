@@ -244,10 +244,10 @@ xdg-mime default wfica.desktop application/x-ica
 
 ##########################################################################################################
 # install eid card reader middleware - replace codename (for example: trusty) with right Ubuntu codename
-# Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/supported.html
+# Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
 ##########################################################################################################
 
-# Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/supported.html
+# Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
 cd $HOME
 # RELEASE = saucy,trusty, etc...... = distribution codename
 #RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
