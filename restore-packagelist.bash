@@ -492,6 +492,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cuttlefish
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-tweak
 
 # install skype
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove skype skype-bin
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install skype
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -500,9 +501,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gtk2-engin
 # install Y PPA Manager
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  y-ppa-manager
 
 # libdvdcss2, to play encrypted DVDs
+cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libdvdcss2
 sudo /usr/share/doc/libdvdread4/./install-css.sh
 
@@ -579,6 +582,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1.6 winetricks wine1.6-amd64
 
 # install Teamviewer server + client which depends on wine1.6
+cd $HOME
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -592,6 +596,7 @@ sudo update-rc.d teamviewerd.sysv defaults
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 # install youtube-to-mp3 program
+cd $HOME
 wget http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
 sudo dpkg -i YouTubeToMP3.amd64.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -599,6 +604,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
 # install Viber program
+cd $HOME
 wget download.cdn.viber.com/cdn/desktop/Linux/viber.deb
 sudo dpkg -i viber.deb 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -608,6 +614,7 @@ else
   # 32-bit stuff here
   
 # install youtube-to-mp3 program
+cd $HOME
 wget http://www.mediahuman.com/download/YouTubeToMP3.i386.deb
 sudo dpkg -i YouTubeToMP3.i386.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -615,12 +622,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
+cd $HOME
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
+cd $HOME
 VIDEODOWNLOADERREMOTEDIR="https://code.google.com/p/4kdownload/"
 url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*tubetomp3[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
@@ -677,17 +686,20 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6 winetricks
 
 # install Teamviewer server + client which depends on wine1.6
+cd $HOME
 wget http://download.teamviewer.com/download/teamviewer_linux.deb
 sudo dpkg -i teamviewer_linux.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
+cd $HOME
 sudo -k teamviewer --daemon start
 cd /opt/teamviewer9/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
 /opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
+cd $HOME
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 fi
