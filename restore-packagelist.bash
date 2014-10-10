@@ -777,6 +777,7 @@ rm *yEd*.sh
 rm .goutputstrea*
 rm *.cab
 rm *.xpi
+rm ica_*
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
