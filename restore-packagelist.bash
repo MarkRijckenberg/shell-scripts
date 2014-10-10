@@ -1696,6 +1696,12 @@ echo "https://www.coursolve.org"
 #######################################################################################################
 #     Combine big data datasets with R, RStudio and Amazon EC2 or Google Big Data infrastructure      #
 #######################################################################################################
+# The data.table package is being increasingly used in fields such as finance, insurance and genomics, 
+# and it is making its name as the number one choice for handling large datasets (1Gb - 100GB) in R. 
+# Data.table provides you with an enhanced version of a data.frame. The speed and simplicity of using 
+# data.table will be a revelation. It reduces your programming and the computing time significantly. 
+# following URL added on October 10, 2014:
+echo "https://www.datacamp.com/courses/data-analysis-the-data-table-way?utm_source=Data.table%20launch%20email&utm_medium=email&utm_content=finance%20-%20zivot&utm_campaign=Data.table%20launch%20"
 # use R,RStudio,postgresql-9.3,postgresql-plr,MADlib,PivotalR to run MADlib in-database modeling 
 # functions in database, not in R
 echo "http://www.oscon.com/oscon2014/public/schedule/detail/37713"
