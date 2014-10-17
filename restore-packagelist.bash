@@ -32,7 +32,7 @@
 # INSTALL DURATION: 20 minutes for install of Linux Mint + 74 minutes for install of base packages and PPA packages
 # Author: Mark Rijckenberg
 # Copyright (c) 20120812
-# REVISION DATE: 20140112
+# REVISION DATE: 20141017
 # Updated by: markrijckenberg at gmail dot com
 
 #sudo su
