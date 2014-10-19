@@ -1099,8 +1099,9 @@ rm *.exe
 # procedure created on March 8, 2014:
 # install-tl-ubuntu script requires 4GB of free diskspace
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get purge texlive-base texlive-binaries  texlive-fonts-recommended
-sudo DEBIAN_FRONTEND=noninteractive apt-get purge  texlive-common texlive-doc-base texlive-latex-base texlive-publishers
+#sudo DEBIAN_FRONTEND=noninteractive apt-get purge texlive-base texlive-binaries  texlive-fonts-recommended
+#sudo DEBIAN_FRONTEND=noninteractive apt-get purge  texlive-common texlive-doc-base texlive-latex-base texlive-publishers
+sudo DEBIAN_FRONTEND=noninteractive apt-get install texlive-fonts-recommended
 git clone https://github.com/scottkosty/install-tl-ubuntu.git
 cd install-tl-ubuntu
 ./install-tl-ubuntu --help
