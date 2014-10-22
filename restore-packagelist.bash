@@ -197,6 +197,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 # source 3:  https://help.ubuntu.com/community/CitrixICAClientHowTo
 ##########################################################################################################
 cd $HOME
+mv $HOME/.ICAClient $HOME/.ICAClient_save 
 sudo dpkg -P icaclient
 rm -rf $HOME/foo
 sudo dpkg --add-architecture i386 # only needed once
