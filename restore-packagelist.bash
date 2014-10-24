@@ -279,6 +279,34 @@ cp prefs.js.nossl prefs.js
 
 cd $HOME
 
+rm *.crt*
+
+wget http://certs.eid.belgium.be/belgiumrs.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs -i belgiumrs.crt
+
+wget http://certs.eid.belgium.be/belgiumrs2.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs2 -i belgiumrs2.crt
+
+wget http://certs.eid.belgium.be/belgiumrs3.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
+
+wget http://certs.eid.belgium.be/belgiumrs4.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs4 -i belgiumrs4.crt
+
+
+sudo mkdir /usr/share/ca-certificates/extra
+
+sudo cp belgiumrs.crt /usr/share/ca-certificates/extra/belgiumrs.crt
+sudo cp belgiumrs2.crt /usr/share/ca-certificates/extra/belgiumrs2.crt
+sudo cp belgiumrs3.crt /usr/share/ca-certificates/extra/belgiumrs3.crt
+sudo cp belgiumrs4.crt /usr/share/ca-certificates/extra/belgiumrs4.crt
+
+sudo dpkg-reconfigure ca-certificates
+
+sudo certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
+
+
+
 #Manually set the following values in Mozilla Firefox in about:config
 #security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
 #security.ssl.enable_false_start;true
