@@ -13,18 +13,57 @@ sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/ap
 
 sudo apt-get update
 
-sudo apt-get install eid-archive eid-mw eid-viewer aptitude firefox pcscd default-jre
+sudo apt-get install  usbutils pciutils eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
+sudo update-pciids
+sudo update-usbids
 
-sudo apt-get install opensc libacr38u libacr38ucontrol0 libacsccid1 libccid
+cd $HOME/.mozilla/firefox/*.default
 
-Manually set the following values in Mozilla Firefox in about:config
+rm extensions*
+rm -rf extensions/*
+rm addons*
+sudo rm -rf /usr/lib/firefox/browser/extensions*
 
-security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
-security.ssl.enable_false_start;true
-security.ssl.renego_unrestricted_hosts;*.be
+cp prefs.js prefs.js_backup_`date -I`
+grep -v security.ssl prefs.js > prefs.js.nossl.1
+grep -v extensions.enabled prefs.js.nossl.1 > prefs.js.nossl 
 
-Manually replace the security.ssl.renego_unrestricted_hosts name
-certif.belgium.be or *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be !!!
+echo 'user_pref("security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref", true);' >> prefs.js.nossl
+echo 'user_pref("security.ssl.enable_false_start", true);' >> prefs.js.nossl
+echo 'user_pref("security.ssl.renego_unrestricted_hosts", "*.be");' >> prefs.js.nossl
+
+cp prefs.js.nossl prefs.js
+
+cd $HOME
+
+rm *.crt*
+
+wget http://certs.eid.belgium.be/belgiumrs.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs -i belgiumrs.crt
+
+wget http://certs.eid.belgium.be/belgiumrs2.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs2 -i belgiumrs2.crt
+
+wget http://certs.eid.belgium.be/belgiumrs3.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
+
+wget http://certs.eid.belgium.be/belgiumrs4.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs4 -i belgiumrs4.crt
+
+
+sudo mkdir /usr/share/ca-certificates/extra
+
+sudo cp belgiumrs.crt /usr/share/ca-certificates/extra/belgiumrs.crt
+sudo cp belgiumrs2.crt /usr/share/ca-certificates/extra/belgiumrs2.crt
+sudo cp belgiumrs3.crt /usr/share/ca-certificates/extra/belgiumrs3.crt
+sudo cp belgiumrs4.crt /usr/share/ca-certificates/extra/belgiumrs4.crt
+
+sudo dpkg-reconfigure ca-certificates
+
+sudo certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
+
+
+Manually replace the security.ssl.renego_unrestricted_hosts name value *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be
 
 Download Belgium Root CA, CA2, CA3 and CA4 certificates here:
 
@@ -34,7 +73,7 @@ Import Belgium Root CA, CA2, CA3 and CA4 certificates into Firefox.
 
 The Belgium Root certificates are required if you want to use the applications of the FSP Finance (Belcotax, Intervat, Finprof, etc.).
 
-Before you begin, make sure your identity card is in the card reader. Then:
+Before you begin, make sure your electronic identity card is in the card reader. Then go to following location in Mozilla Firefox browser:
 
 Viewing certificates
 For Linux: Go to Edit > Preferences > Advanced > Encryption and click ‘View certificates’.
@@ -47,16 +86,11 @@ Click ‘OK’.
 
 Perform the same steps for the CA2, CA3 and CA4 certificates as well.
 
-Ensure that there are absolutely NO add-ons or plugins installed in Mozilla Firefox.
+Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox webbrowser.
 
-Disconnect the eid card reader from the PC.
-Reconnect the eid card reader to the PC.
+The add-on PLUGINS like Citrix Receiver for Linux,OpenH264 and Shockwave Flash plugins can remain active in Firefox, as they do not seem to interfere with the eid card reader.
 
-Insert eid card into card reader.
-
-Reboot the PC.
-
-Test eid card reader here:
+Test eid card reader here using the Mozilla Firefox webbrowser:
 
 http://test.eid.belgium.be/
 
