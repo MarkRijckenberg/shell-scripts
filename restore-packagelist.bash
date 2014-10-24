@@ -259,6 +259,26 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge bei
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  usbutils pciutils eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools 
 sudo update-pciids
 sudo update-usbids
+
+cd $HOME/.mozilla/firefox/*.default
+
+rm extensions*
+rm -rf extensions/*
+rm addons*
+sudo rm -rf /usr/lib/firefox/browser/extensions*
+
+cp prefs.js prefs.js_backup_`date -I`
+grep -v security.ssl prefs.js > prefs.js.nossl.1
+grep -v extensions.enabled prefs.js.nossl.1 > prefs.js.nossl 
+
+echo 'user_pref("security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref", true);' >> prefs.js.nossl
+echo 'user_pref("security.ssl.enable_false_start", true);' >> prefs.js.nossl
+echo 'user_pref("security.ssl.renego_unrestricted_hosts", "*.be");' >> prefs.js.nossl
+
+cp prefs.js.nossl prefs.js
+
+cd $HOME
+
 #Manually set the following values in Mozilla Firefox in about:config
 #security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
 #security.ssl.enable_false_start;true
