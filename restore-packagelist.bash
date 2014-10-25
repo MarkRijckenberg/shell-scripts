@@ -282,16 +282,16 @@ cd $HOME
 rm *.crt*
 
 wget http://certs.eid.belgium.be/belgiumrs.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs -i belgiumrs.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs -i belgiumrs.crt
 
 wget http://certs.eid.belgium.be/belgiumrs2.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs2 -i belgiumrs2.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs2 -i belgiumrs2.crt
 
 wget http://certs.eid.belgium.be/belgiumrs3.crt
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
 
 wget http://certs.eid.belgium.be/belgiumrs4.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs4 -i belgiumrs4.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
 
 
 sudo mkdir /usr/share/ca-certificates/extra
@@ -303,7 +303,7 @@ sudo cp belgiumrs4.crt /usr/share/ca-certificates/extra/belgiumrs4.crt
 
 sudo dpkg-reconfigure ca-certificates
 
-sudo certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
+sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
 
 
 
