@@ -269,13 +269,13 @@ sudo rm -rf /usr/lib/firefox/browser/extensions*
 
 cp prefs.js prefs.js_backup_`date -I`
 grep -v security.ssl prefs.js > prefs.js.nossl.1
-# protect Mozilla Firefox v33 or lower against POODLE SSLv3 vulnerability:
 grep -v security.tls.version.min prefs.js.nossl.1 > prefs.js.nossl.2
 grep -v extensions.enabled prefs.js.nossl.2 > prefs.js.nossl 
 
 echo 'user_pref("security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref", true);' >> prefs.js.nossl
 echo 'user_pref("security.ssl.enable_false_start", true);' >> prefs.js.nossl
 echo 'user_pref("security.ssl.renego_unrestricted_hosts", "*.be");' >> prefs.js.nossl
+# protect Mozilla Firefox v33 or lower against POODLE SSLv3 vulnerability:
 echo 'user_pref("security.tls.version.min", "1");' >> prefs.js.nossl
 
 cp prefs.js.nossl prefs.js
