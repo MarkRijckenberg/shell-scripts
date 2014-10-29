@@ -1748,6 +1748,8 @@ echo "http://www.quandl.com/"
 echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+Sheet.pdf"
 # following URL added on August 14, 2014:
 echo "http://www.data.gov/"
+# following URL added on October 29, 2014:
+echo "http://opendata.stackexchange.com/"
 
 #######################################################################################################
 #     Online data analytics challenges requiring use of R or python                                   #
