@@ -16,7 +16,7 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "wget http://www.confusedbycode.com/curl/curl-7.38.0-win64-local.msi"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "msiexec /quiet /passive curl-7.38.0-win64-local.msi"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "msiexec /I  curl-7.38.0-win64-local.msi /quiet /passive"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Project"
  
