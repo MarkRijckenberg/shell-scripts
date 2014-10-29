@@ -74,6 +74,8 @@ REM show list of locally installed packages - installed using choco package mana
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install steam"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install teamviewer"
+
 REM show list of locally installed packages - installed using choco package manager for Windows:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
