@@ -1,4 +1,4 @@
-REM run following commands in Windows command line (using cmd, NOT powershell) with administrator privileges:
+REM Please run following commands in Windows command line (using cmd, NOT powershell) as administrator:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
  
