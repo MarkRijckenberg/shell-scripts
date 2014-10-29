@@ -1,7 +1,8 @@
 #!/bin/bash
-# !!!!! WINDOWS 8.1 64-bit users should use ninite.com, Glary Utilities and avast! Premier Software Updater
+# !!!!! WINDOWS 8.1 64-bit users should use 
+# !!!!! https://github.com/MarkRijckenberg/shell-scripts/blob/master/Windows-restore-packagelist.cmd
 # !!!!! for semi-automated Windows application deployments and updates
-# !!!!! WINDOWS 8.1 64-bit users should install "Classic Start" Ninite.com utility
+# !!!!! WINDOWS 8.1 64-bit users should install "Classic Start" utility
 # !!!!! and disable Superfetch Windows service to avoid hard disk thrashing and excessive memory use
 # !!!!! WINDOWS 8.1 64-bit users should use http://www.pendrivelinux.com/yumi-multiboot-usb-creator/  to
 # !!!!! to add operating systems one by one in a flexible manner onto a multi-boot multi-OS USB stick
