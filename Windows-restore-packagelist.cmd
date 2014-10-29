@@ -19,6 +19,8 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayerplugin"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Wget"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install git"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "wget http://www.confusedbycode.com/curl/curl-7.38.0-win64-local.msi"
 
