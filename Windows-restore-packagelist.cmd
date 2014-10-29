@@ -9,8 +9,14 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install chocolatey"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyGUI"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Firefox"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install GoogleChrome"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Opera"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayerplugin"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Wget"
  
@@ -27,10 +33,6 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.install"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayeractivex"
- 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Firefox"
- 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayerplugin"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install FoxitReader"
  
