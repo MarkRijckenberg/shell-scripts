@@ -1,3 +1,5 @@
+REM Following .cmd script has been tested and works in Windows 8.1 Pro 64-bit:
+
 REM Please run following commands in Windows command line (using cmd, NOT powershell) as administrator:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
