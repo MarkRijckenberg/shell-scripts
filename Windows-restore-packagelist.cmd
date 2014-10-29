@@ -71,3 +71,9 @@ REM show list of locally installed packages - installed using choco package mana
 REM show list of locally installed packages - installed using choco package manager for Windows:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
+
+echo "After running this script, please start RStudio. In the RStudio interface, please click on"
+
+echo "Help::Check for Updates::Quit and Download to get the newest version of RStudio"
+
+pause
