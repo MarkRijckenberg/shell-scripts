@@ -4,7 +4,7 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install binroot"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install powershell4"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install PowerShell"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install chocolatey"
  
@@ -29,6 +29,10 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Project"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Studio"
+
+REM show list of locally installed packages - installed using choco package manager for Windows:
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install javaruntime"
  
@@ -41,8 +45,6 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install vlc"
- 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install PowerShell"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ccleaner"
  
@@ -63,3 +65,7 @@ REM Please run following commands in Windows command line (using cmd, NOT powers
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install libreoffice"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install windirstat"
+
+REM show list of locally installed packages - installed using choco package manager for Windows:
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
