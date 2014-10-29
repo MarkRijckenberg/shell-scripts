@@ -2,6 +2,8 @@ REM Following .cmd Windows command script has been tested and works in Windows 8
 
 REM Please run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
 
+set CURLFILENAME=curl-7.38.0-win64-local.msi
+
 mkdir C:\temp
 cd c:\temp
 
@@ -27,9 +29,9 @@ cd c:\temp
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install git"
  
-wget http://www.confusedbycode.com/curl/curl-7.38.0-win64-local.msi
+wget http://www.confusedbycode.com/curl/%CURLFILENAME%
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "msiexec /I  curl-7.38.0-win64-local.msi /quiet /passive"
+msiexec /I  %CURLFILENAME% /quiet /passive
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Project"
  
