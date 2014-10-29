@@ -81,12 +81,16 @@ REM show list of locally installed packages - installed using choco package mana
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install teamviewer"
 
-REM show list of locally installed packages - installed using choco package manager for Windows:
+echo off
+
+echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
 
 echo "After running this script, please start RStudio. In the RStudio interface, please click on"
 
 echo "'Help', then click on 'Check for Updates' and then click on 'Quit and Download' to get the newest version of RStudio"
+
+echo on
 
 pause
