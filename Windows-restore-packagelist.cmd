@@ -111,6 +111,10 @@ REM install Android emulator:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install yumi"
 
+REM Get tool for updating drivers for Dell PC's
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install DellCommandUpdate"
+
 echo off
 
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
