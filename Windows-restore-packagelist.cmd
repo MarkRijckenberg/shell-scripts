@@ -5,6 +5,7 @@ REM Please run following commands in Windows command line (using cmd, NOT Powers
 set CURLFILENAME=curl-7.38.0-win64-local.msi
 
 mkdir C:\temp
+
 cd c:\temp
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
@@ -37,9 +38,15 @@ REM Get Internet download utilities:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install git"
  
+REM ############################################################################################### 
 REM Close .cmd command line window and open a new .cmd window to run the next commands.
 REM Run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
- 
+REM ############################################################################################### 
+
+set CURLFILENAME=curl-7.38.0-win64-local.msi
+
+cd c:\temp
+
 wget http://www.confusedbycode.com/curl/%CURLFILENAME%
 
 msiexec /I  %CURLFILENAME% /quiet /passive
