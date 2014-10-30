@@ -63,8 +63,6 @@ REM show list of locally installed packages - installed using choco package mana
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install vlc"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ccleaner"
- 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.commandline"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install filezilla"
@@ -98,6 +96,8 @@ REM install Android emulator:
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install teamviewer"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install HitmanProPortable_x64"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ccleaner"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install yumi"
 
