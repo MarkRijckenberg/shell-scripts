@@ -61,7 +61,7 @@ REM show list of locally installed packages - installed using choco package mana
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install javaruntime"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install jre8"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.install"
  
