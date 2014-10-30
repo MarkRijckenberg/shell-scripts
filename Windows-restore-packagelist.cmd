@@ -12,6 +12,8 @@ cd c:\temp
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install binroot"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install PowerShell"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install pscx"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install chocolatey"
  
