@@ -17,13 +17,19 @@ cd c:\temp
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyGUI"
 
+REM Get web browsers
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Firefox"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install GoogleChrome"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Opera"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install qupzilla"
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayerplugin"
+
+REM Get Internet download utilities:
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Wget"
 
@@ -32,6 +38,8 @@ cd c:\temp
 wget http://www.confusedbycode.com/curl/%CURLFILENAME%
 
 msiexec /I  %CURLFILENAME% /quiet /passive
+
+REM Get R and RStudio
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Project"
  
