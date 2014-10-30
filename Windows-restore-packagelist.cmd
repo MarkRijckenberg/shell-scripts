@@ -121,6 +121,8 @@ REM install Android emulator, which depends on Virtualbox:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install yumi"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install unetbootin"
+
 REM Get device driver management utilities:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install DellCommandUpdate"
