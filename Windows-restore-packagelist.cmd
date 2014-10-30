@@ -2,6 +2,10 @@ REM Following .cmd Windows command script has been tested and works in Windows 8
 
 REM Please run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
 
+mkdir C:\temp
+
+cd c:\temp
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install binroot"
