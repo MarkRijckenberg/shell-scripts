@@ -30,6 +30,8 @@ REM Get web browsers
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayerplugin"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install grepwin"
+
 REM Get Internet download utilities:
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Wget"
@@ -87,7 +89,9 @@ REM show list of locally installed packages - installed using choco package mana
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install virtualbox"
 
-REM install Android emulator:
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install VBoxGuestAdditions.install"
+
+REM install Android emulator, which depends on Virtualbox:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install andy"
  
@@ -111,9 +115,12 @@ REM install Android emulator:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install yumi"
 
-REM Get tool for updating drivers for Dell PC's
+REM Get device driver management utilities:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install DellCommandUpdate"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install drivergenius"
+
 
 echo off
 
