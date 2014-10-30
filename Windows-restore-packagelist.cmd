@@ -121,6 +121,10 @@ REM Get device driver management utilities:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install drivergenius"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install googleearth"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install bleachbit"
+
 
 echo off
 
