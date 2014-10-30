@@ -125,7 +125,7 @@ REM install Android emulator, which depends on Virtualbox:
 
 REM Get device driver management utilities:
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install DellCommandUpdate"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install DellCommandUpdate"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install drivergenius"
 
