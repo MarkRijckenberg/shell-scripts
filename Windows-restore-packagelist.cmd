@@ -76,6 +76,10 @@ REM show list of locally installed packages - installed using choco package mana
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install paint.net"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install virtualbox"
+
+REM install Android emulator:
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install andy"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install libreoffice"
 
