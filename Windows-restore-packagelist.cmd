@@ -37,6 +37,9 @@ REM Get Internet download utilities:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install git"
  
+REM Close .cmd command line window and open a new .cmd window to run the next commands.
+REM Run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
+ 
 wget http://www.confusedbycode.com/curl/%CURLFILENAME%
 
 msiexec /I  %CURLFILENAME% /quiet /passive
