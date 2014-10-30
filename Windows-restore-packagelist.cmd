@@ -43,6 +43,12 @@ REM Close .cmd command line window and open a new .cmd window to run the next co
 REM Run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
 REM ############################################################################################### 
 
+REM If you are using the 32-bit version of Windows, use 
+
+REM curl-7.38.0-win32-local.msi instead of
+ 
+REM curl-7.38.0-win64-local.msi
+
 set CURLFILENAME=curl-7.38.0-win64-local.msi
 
 mkdir C:\temp
