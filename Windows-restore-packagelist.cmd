@@ -78,6 +78,8 @@ REM show list of locally installed packages - installed using choco package mana
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install virtualbox"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install libreoffice"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install pdf24"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install windirstat"
 
