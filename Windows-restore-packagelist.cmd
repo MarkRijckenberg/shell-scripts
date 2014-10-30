@@ -81,6 +81,8 @@ REM show list of locally installed packages - installed using choco package mana
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install teamviewer"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install HitmanProPortable_x64"
+
 echo off
 
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
