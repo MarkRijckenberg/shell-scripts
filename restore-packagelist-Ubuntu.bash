@@ -36,10 +36,17 @@
 # REVISION DATE: 20141017
 # Updated by: markrijckenberg at gmail dot com
 
-# regarding the HP Laserjet 1020 in Berlin: get and run
-# http://hplipopensource.com/hplip-web/plugin/hplip-3.14.10-plugin.run
-# to install the hplip plugin before trying to install the newest hplip driver
-# http://prdownloads.sourceforge.net/hplip/hplip-3.14.10.run
+# regarding the HP Laserjet 1020 in Berlin:
+# procedure to install printer driver for HP Laserjet 1020 without needing access to openprinting.org website:
+# HPLIP=hplip-3.14.10
+# cd /tmp
+# rm hplip*
+# wget http://prdownloads.sourceforge.net/hplip/$HPLIP.run
+# bash $HPLIP.run
+# wget http://hplipopensource.com/hplip-web/plugin/$HPLIP-plugin.run
+# sudo bash $HPLIP-plugin.run
+# hp-setup
+
 
 #sudo su
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
