@@ -17,4 +17,4 @@ mv download hplip-$HPLIPVERSION.run
 bash hplip-$HPLIPVERSION.run
 wget http://hplipopensource.com/hplip-web/plugin/hplip-$HPLIPVERSION-plugin.run
 sudo bash hplip-$HPLIPVERSION-plugin.run
-hp-setup
+sudo hp-setup
