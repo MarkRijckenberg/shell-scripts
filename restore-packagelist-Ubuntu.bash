@@ -585,7 +585,7 @@ sudo dpkg -i google-chrome*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-VIDEODOWNLOADERREMOTEDIR="https://code.google.com/p/4kdownload/"
+VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
 url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*tubetomp3[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
 dir=$(mktemp -dt)
@@ -602,7 +602,7 @@ cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
-VIDEODOWNLOADERREMOTEDIR="https://code.google.com/p/4kdownload/"
+VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
 url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
 dir=$(mktemp -dt)
@@ -689,7 +689,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
 cd $HOME
-VIDEODOWNLOADERREMOTEDIR="https://code.google.com/p/4kdownload/"
+VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
 url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*tubetomp3[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
 dir=$(mktemp -dt)
@@ -706,7 +706,7 @@ cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
-VIDEODOWNLOADERREMOTEDIR="https://code.google.com/p/4kdownload/"
+VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
 url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
 dir=$(mktemp -dt)
