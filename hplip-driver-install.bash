@@ -12,7 +12,7 @@ HPLIPVERSION=`head download |grep label|cut -f2 -d" "`
 mv download hplip-$HPLIPVERSION.run
 # after running the following command, the following question will be asked:
 # 'Please choose the installation mode (a=automatic*, c=custom, q=quit) :' 
-# choose q to quit (hit <ENTER> key after hitting q key)
+# press <ENTER> to choose (a)utomatic install
 # then proceed with next Terminal commands:
 bash hplip-$HPLIPVERSION.run
 wget http://hplipopensource.com/hplip-web/plugin/hplip-$HPLIPVERSION-plugin.run
