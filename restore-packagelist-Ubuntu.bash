@@ -36,6 +36,11 @@
 # REVISION DATE: 20141017
 # Updated by: markrijckenberg at gmail dot com
 
+# regarding the HP Laserjet 1020 in Berlin: get and run
+# http://hplipopensource.com/hplip-web/plugin/hplip-3.14.10-plugin.run
+# to install the hplip plugin before trying to install the newest hplip driver
+# http://prdownloads.sourceforge.net/hplip/hplip-3.14.10.run
+
 #sudo su
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
