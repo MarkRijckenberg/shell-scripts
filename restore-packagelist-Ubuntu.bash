@@ -591,7 +591,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -608,7 +608,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -695,7 +695,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -712,7 +712,7 @@ url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget `echo $url`
+wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
