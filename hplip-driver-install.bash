@@ -4,6 +4,8 @@
 URL=http://sourceforge.net/projects/hplip/files/latest/download?source=files
 sudo apt-get update
 sudo apt-get install axel
+sudo apt-get purge hplip
+sudo rm -rf /usr/share/hplip
 cd /tmp
 rm hplip*
 rm download*
