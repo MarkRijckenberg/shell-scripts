@@ -583,13 +583,16 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
-# install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
-VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
-url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*tubetomp3[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+# install YouTubeToMP3 - Youtube playlist downloader
+cd $HOME
+VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download.html"
+url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*ube[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+url=`echo $url |cut -f2 -d"/"`
 # Create a temporary directory
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
+VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download/"
 wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
@@ -601,6 +604,7 @@ cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
+cd $HOME
 VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
 url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
@@ -653,11 +657,6 @@ sudo update-rc.d teamviewerd.sysv defaults
 /opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
-# install youtube-to-mp3 program
-cd $HOME
-wget http://www.mediahuman.com/download/YouTubeToMP3.amd64.deb
-sudo dpkg -i YouTubeToMP3.amd64.deb 
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
@@ -671,11 +670,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 else
   # 32-bit stuff here
   
-# install youtube-to-mp3 program
-cd $HOME
-wget http://www.mediahuman.com/download/YouTubeToMP3.i386.deb
-sudo dpkg -i YouTubeToMP3.i386.deb
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
@@ -686,14 +680,16 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
-# install 4kyoutubetomp3 - extremely fast Youtube playlist downloader
+# install YouTubeToMP3 - Youtube playlist downloader
 cd $HOME
-VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
-url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*tubetomp3[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
+VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download.html"
+url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*ube[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
+url=`echo $url |cut -f2 -d"/"`
 # Create a temporary directory
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
+VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download/"
 wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
