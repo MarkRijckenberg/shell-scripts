@@ -1177,22 +1177,28 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-c
 # Mac OS X users should use RStudio-0.98.501.dmg instead of R to avoid the following UNIX child process forking error:
 # THE_PROCESS_HAS_FORKED_AND_YOU_CANNOT_USE_THIS_COREFOUNDATION_FUNCTIONALITY_YOU_MUST_EXEC__() to debug.
 
-cd
+MACHINE_TYPE=`uname -m`
+
+cd /tmp
+rm rstudio*.deb
+rm index.html
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
+
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-amd64.deb
-sudo dpkg -i `echo $RSTUDIOFILENAME`-amd64.deb
+wget http://www.rstudio.com/products/rstudio/download/
+wget `cat index.html|grep -v tar|grep amd64\.deb|cut -d"\"" -f2`
+sudo dpkg -i rstudio*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 else
   # 32-bit stuff here
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://download1.rstudio.org/`echo $RSTUDIOFILENAME`-i386.deb
-sudo dpkg -i `echo $RSTUDIOFILENAME`-i386.deb
+wget http://www.rstudio.com/products/rstudio/download/
+wget `cat index.html|grep -v tar|grep i386\.deb|cut -d"\"" -f2`
+sudo dpkg -i rstudio*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
-
 
 fi
 
