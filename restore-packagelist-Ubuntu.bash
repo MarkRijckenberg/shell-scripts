@@ -58,9 +58,6 @@ SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
 
-# define Data Science filename variables
-RSTUDIOFILENAME="rstudio-0.98.1080"
-
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
 SOURCE2=/etc/
