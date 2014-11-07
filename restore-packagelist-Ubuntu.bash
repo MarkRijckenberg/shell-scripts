@@ -784,7 +784,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-6-j
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-7-jre-headless
 
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-shopping
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
@@ -1083,7 +1083,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-?.?-jre-headless
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?-jre-headless
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-shopping
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
