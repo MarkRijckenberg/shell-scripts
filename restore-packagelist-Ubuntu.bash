@@ -46,10 +46,6 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
 MACHINE_TYPE=`uname -m`
 
-# define basepackage filename variables - VERSION NUMBERS FREQUENTLY CHANGE!!
-# updated on 2014-08-26
-YEDFILENAME="yEd-3.13_32-bit_setup.sh"
-
 # define Astronomy filename variables
 DUFILENAME="DUv3_9pview.tgz"
 NIGHTSHADEFILENAME="nightshade-11.12.1.tar.gz"
@@ -794,15 +790,32 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 
-# Install yEd editor 
+# Install yEd graph editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
 # Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
 # Allows easy creation of Entity Relationship (ER) diagrams (as part of data modeling by data scientist)
 # documentation:  http://www.linuxuser.co.uk/tutorials/create-flowcharts-with-yedcreate-flowcharts-with-yed
-cd $HOME
-wget http://www.yworks.com/products/yed/demo/`echo $YEDFILENAME`
-sh `echo $YEDFILENAME`
+MACHINE_TYPE=`uname -m`
 
+cd /tmp
+rm *.sh
+rm *.html
+
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+  # 64-bit stuff here
+wget http://www.yworks.com/en/products_yed_download.html
+YEDVERSION=`cat products_yed_download.html |grep Download|grep yEd|cut -d" " -f3|cut -d"<" -f1`
+wget http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_64-bit_setup.sh
+sh yEd-`echo $YEDVERSION`_64-bit_setup.sh
+
+else
+  # 32-bit stuff here
+wget http://www.yworks.com/en/products_yed_download.html
+YEDVERSION=`cat products_yed_download.html |grep Download|grep yEd|cut -d" " -f3|cut -d"<" -f1`
+wget http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_32-bit_setup.sh
+sh yEd-`echo $YEDVERSION`_32-bit_setup.sh
+
+fi
 
 # install Kruidvat fotoservice software
 cd $HOME
