@@ -1135,6 +1135,8 @@ cd $HOME
 rm *.html
 rm *.tar.gz
 rm -rf nightshade*
+rm files
+rm Nightshade*.exe
 wget http://www.garret.ru/fastdb.html
 wget `cat fastdb.html |grep nix|cut -d"\"" -f2`
 unp fastdb*.tar.gz
@@ -1157,17 +1159,13 @@ sudo make install
 sudo ldconfig
 
 cd $HOME
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libgraphicsmagick++1-dev libsdl1.2-dev
 rm files
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libgraphicsmagick++1-dev libsdl1.2-dev
 wget http://www.nightshadesoftware.org/projects/nightshade/files
-wget http://www.nightshadesoftware.org`cat files|grep tar|grep night|grep 11|cut -d"\"" -f4`
-FILENAME=`cat files|grep tar|grep night|grep 11|cut -d"\"" -f4|cut -d"/" -f5`
-unp $FILENAME
-cd nightshade*
-sudo ./configure
-sudo make
-sudo make install
-sudo make clean
+wget http://www.nightshadesoftware.org`cat files|grep win32|cut -d"\"" -f4`
+FILENAME=`cat files|grep win32|cut -d"\"" -f4|cut -d"/" -f5`
+wine $FILENAME
+# this Windows version of Nightshade requires a videocard that supports OpenGL 3.0 or higher
 
 # download and decompress scisoft utilities
 echo "Downloading and decompressing scisoft utilities"
