@@ -47,7 +47,6 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define Astronomy filename variables
-DUFILENAME="DUv3_9pview.tgz"
 NIGHTSHADEFILENAME="nightshade-11.12.1.tar.gz"
 SCISOFTFILENAME="scisoft-7.7.0"
 SKYVIEWERFILENAME="skyviewer-1.0.0"
@@ -1119,8 +1118,15 @@ sudo rm /etc/apt/sources.list.d/*
 
 # download and decompress Digital Universe and Partiview Resources
 echo "Downloading and decompressing Digital Universe and Partiview Resources"
-wget http://haydenplanetarium.org/downloads/universe/linux/`echo $DUFILENAME`
-unp `echo $DUFILENAME`
+cd $HOME
+rm *.tgz
+rm DU*
+rm download-files
+wget http://www.amnh.org/our-research/hayden-planetarium/hayden-planetarium-promos/download-files
+wget `cat download-files |grep linux|grep undle|cut -d"\"" -f2`
+FILENAME=`cat download-files |grep linux|grep undle|cut -d"\"" -f2|cut -d"/" -f7`
+unp $FILENAME
+
 
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
