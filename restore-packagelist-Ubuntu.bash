@@ -1130,10 +1130,34 @@ unp $FILENAME
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
 echo "Downloading and decompressing Nightshade"
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libgraphicsmagick++1-dev libsdl1.2-dev
+# install libfastdb first, because nightshade depends on it
 cd $HOME
+rm *.html
 rm *.tar.gz
 rm -rf nightshade*
+wget http://www.garret.ru/fastdb.html
+wget `cat fastdb.html |grep nix|cut -d"\"" -f2`
+unp fastdb*.tar.gz
+cd fastdb*
+sudo ./configure
+sudo make
+sudo make install
+sudo ldconfig
+
+# install SDL_Pango first, because nightshade depends on it
+# but nightshade cannot find SDL_Pango library, even after installing it
+cd $HOME
+rm *.html
+wget http://downloads.sourceforge.net/project/sdlpango/SDL_Pango/0.1.2/SDL_Pango-0.1.2.tar.gz
+unp SDL_Pango-0.1.2.tar.gz
+cd SDL_Pango*
+sudo ./configure
+sudo make
+sudo make install
+sudo ldconfig
+
+cd $HOME
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libgraphicsmagick++1-dev libsdl1.2-dev
 rm files
 wget http://www.nightshadesoftware.org/projects/nightshade/files
 wget http://www.nightshadesoftware.org`cat files|grep tar|grep night|grep 11|cut -d"\"" -f4`
@@ -1144,7 +1168,6 @@ sudo ./configure
 sudo make
 sudo make install
 sudo make clean
-
 
 # download and decompress scisoft utilities
 echo "Downloading and decompressing scisoft utilities"
