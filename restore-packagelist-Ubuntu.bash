@@ -47,7 +47,6 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define Astronomy filename variables
-NIGHTSHADEFILENAME="nightshade-11.12.1.tar.gz"
 SCISOFTFILENAME="scisoft-7.7.0"
 SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
@@ -1131,8 +1130,21 @@ unp $FILENAME
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
 echo "Downloading and decompressing Nightshade"
-wget http://www.nightshadesoftware.org/attachments/download/6/`echo $NIGHTSHADEFILENAME`
-unp `echo $NIGHTSHADEFILENAME`
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libgraphicsmagick++1-dev libsdl1.2-dev
+cd $HOME
+rm *.tar.gz
+rm -rf nightshade*
+rm files
+wget http://www.nightshadesoftware.org/projects/nightshade/files
+wget http://www.nightshadesoftware.org`cat files|grep tar|grep night|grep 11|cut -d"\"" -f4`
+FILENAME=`cat files|grep tar|grep night|grep 11|cut -d"\"" -f4|cut -d"/" -f5`
+unp $FILENAME
+cd nightshade*
+sudo ./configure
+sudo make
+sudo make install
+sudo make clean
+
 
 # download and decompress scisoft utilities
 echo "Downloading and decompressing scisoft utilities"
