@@ -136,6 +136,12 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 echo off
 
+echo "Update all currently installed choco packages:"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyPackageUpdater"
+
+cup all
+
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
 choco list -lo
