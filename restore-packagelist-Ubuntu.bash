@@ -633,6 +633,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install newest wine version 
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge wine wine1.4 wine1.5 wine1.6 winetricks
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1.7 winetricks
 
 # install Teamviewer server + client which depends on wine1.6
