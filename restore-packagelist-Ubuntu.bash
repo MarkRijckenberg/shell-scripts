@@ -1837,6 +1837,9 @@ echo "https://developers.google.com/bigquery/"
 # following URL added on September 20, 2014:
 # Big Query and Data Analytics applied to soccer:
 echo "https://github.com/GoogleCloudPlatform/ipython-soccer-predictions"
+# following URL added on November 20, 2014:
+# combine SciDB (allow big data sets),RStudio (data analytics) and Shiny(interactive visualization)
+echo "http://illposed.net/scidb.pdf"
 
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
