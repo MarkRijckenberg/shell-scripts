@@ -1843,6 +1843,9 @@ echo "https://github.com/GoogleCloudPlatform/ipython-soccer-predictions"
 # following URL added on November 20, 2014:
 # combine SciDB (allow big data sets),RStudio (data analytics) and Shiny(interactive visualization)
 echo "http://illposed.net/scidb.pdf"
+# following URL added on November 28, 2014:
+# combine Apache Spark with Python using pyspark:
+echo "https://www.edx.org/course/introduction-to-big-data-with-apache-spark-uc-berkeleyx-cs100-1x"
 
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
