@@ -48,7 +48,6 @@ MACHINE_TYPE=`uname -m`
 
 # define Astronomy filename variables
 SCISOFTFILENAME="7.7.0"
-SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
 
@@ -1179,14 +1178,23 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install tcsh:i
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libxft2:i386 libxrandr2:i386 libxmu6:i386 libXss1:i386  libXtst6:i386  libcanberra-gtk3-module:i386
 
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
-echo "Downloading and compiling skyviewer from nasa website"
-wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/`echo $SKYVIEWERFILENAME`.tar.gz
-unp `echo $SKYVIEWERFILENAME`.tar.gz
-cd `echo $SKYVIEWERFILENAME`
-sudo qmake
-sudo make
-sudo make install
-cd ..
+# installation procedure updated on November 30, 2014
+cd $HOME
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install unp  libqglviewer-dev  libcfitsio3-dev qt4-dev-tools libglu1-mesa  libglu1-mesa-dev
+wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix0_3.11.4-2_amd64.deb
+sudo dpkg -i libchealpix0_3.11.4-2_amd64.deb
+wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix-dev_3.11.4-2_amd64.deb
+sudo dpkg -i libchealpix-dev_3.11.4-2_amd64.deb
+wget http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
+FILENAME=`grep Version tb_skyviewer_ov.cfm |grep kyviewer|cut -d"\"" -f2|cut -d"/" -f2|head -n1`
+wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$FILENAME
+unp $FILENAME
+cd skyviewer*
+qmake
+echo "LIBS = -L/usr/lib/x86_64-linux-gnu -L/usr/X11R6/lib64 -lcfitsio -lQGLViewer -lchealpix -L/usr/local/lib -lpthread -lQtXml -lQtOpenGL -lQtGui -lQtCore -lGL -lGLU" >> Makefile
+make
+cd $HOME
+rm tb_skyviewer_ov.cfm
 
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
