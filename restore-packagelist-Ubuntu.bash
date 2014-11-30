@@ -1181,6 +1181,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libxft
 # installation procedure updated on November 30, 2014
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install unp  libqglviewer-dev  libcfitsio3-dev qt4-dev-tools libglu1-mesa  libglu1-mesa-dev
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libchealpix0  libchealpix-dev
 wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix0_3.11.4-2_amd64.deb
 sudo dpkg -i libchealpix0_3.11.4-2_amd64.deb
 wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix-dev_3.11.4-2_amd64.deb
