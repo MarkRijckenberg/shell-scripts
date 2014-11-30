@@ -1172,8 +1172,8 @@ wine $FILENAME
 # download and decompress scisoft utilities
 # source: http://navtejblog.blogspot.be/2014/05/installing-eso-scisoft-on-ubuntu-1404.html
 echo "Downloading and decompressing scisoft utilities"
-wget ftp://ftp.eso.org/scisoft/`echo $SCISOFTFILENAME`/linux/fedora11/tar/`echo $SCISOFTFILENAME`.tar.gz
-unp `echo $SCISOFTFILENAME`
+wget ftp://ftp.eso.org/scisoft/scisoft`echo $SCISOFTFILENAME`/linux/fedora11/tar/scisoft-`echo $SCISOFTFILENAME`.tar.gz
+unp scisoft-`echo $SCISOFTFILENAME`.tar.gz
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libc6:i386 libncurses5:i386 libstdc++6:i386
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install tcsh:i386 libgfortran3:i386 libreadline5:i386 libsdl-image1.2:i386 libsdl-ttf2.0-0:i386 unixodbc:i386
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libxft2:i386 libxrandr2:i386 libxmu6:i386 libXss1:i386  libXtst6:i386  libcanberra-gtk3-module:i386
