@@ -47,7 +47,7 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 MACHINE_TYPE=`uname -m`
 
 # define Astronomy filename variables
-SCISOFTFILENAME="scisoft-7.7.0"
+SCISOFTFILENAME="7.7.0"
 SKYVIEWERFILENAME="skyviewer-1.0.0"
 C2AFILENAME="c2a_full_2_0_49.zip"
 AUDELAFILENAME="audela-2.0.0"
