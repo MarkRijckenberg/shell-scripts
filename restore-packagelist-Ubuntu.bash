@@ -1302,6 +1302,8 @@ echo "http://arxiv.org/list/astro-ph/new"
 # in arxiv.org: click on 'other' next to 'pdf' and choose to 'download source' using the wget command in a Terminal
 # to examine the original .tex file which uses the aastex class
 # decompress the extensionless source file using  the unp command
+# following URL added on December 2, 2014:
+echo "http://libgen.org/"
 echo "http://adsabs.harvard.edu/abstract_service.html"
 # following URL added on February 12, 2014:
 # INSPIRE High Energy Physics information system (search engine):
