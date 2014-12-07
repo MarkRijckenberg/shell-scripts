@@ -247,6 +247,7 @@ xdg-mime default wfica.desktop application/x-ica
 cd $HOME
 # RELEASE = saucy,trusty, etc...... = distribution codename
 #RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A35743EA6773D225
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
 #sudo touch /etc/apt/sources.list.d/eid.list
 #sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
