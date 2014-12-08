@@ -569,7 +569,17 @@ sudo /usr/share/doc/libdvdread4/./install-css.sh
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
+# install dolphin (Nintendo Wii emulator)
+cd /tmp
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libsdl2-2.0-0
+rm *.html
+wget https://dolphin-emu.org/download/
+wget `grep deb index.html |head -n 1|cut -d"\"" -f4`
+sudo dpkg -i dolphin*.deb
+  
+  
 # install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
+cd $HOME
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
