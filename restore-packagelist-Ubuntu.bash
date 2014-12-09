@@ -1925,9 +1925,10 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
-# ITIL v3 Foundation
 # OpenIntro Statistics 2nd edition
 echo "http://www.openintro.org/stat/textbook.php?stat_book=os"
+# study ggvis RStudio visualization package
+echo "http://ggvis.rstudio.com/"
 # SCRUM
 echo "http://mgmtplaza.com/downloads/Scrum%20Training%20Manual.pdf"
 # Agile
