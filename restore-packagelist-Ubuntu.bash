@@ -1929,6 +1929,7 @@ echo "http://datadaytexas.com/"
 echo "http://www.openintro.org/stat/textbook.php?stat_book=os"
 # study ggvis RStudio visualization package
 echo "http://ggvis.rstudio.com/"
+echo "https://www.datacamp.com/courses/ggvis/free-preview-ggvis?ex=2"
 # SCRUM
 echo "http://mgmtplaza.com/downloads/Scrum%20Training%20Manual.pdf"
 # Agile
