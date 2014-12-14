@@ -805,7 +805,8 @@ sudo rm /etc/apt/sources.list.d/*
 # procedure:  http://community.linuxmint.com/tutorial/view/1219
 # Use axel command line utility to download all the .iso images into the /tmp directory
 # then import each .iso image file one by one into multisystem
-# Multisystem can successfully boot Linux Mint, Knoppix, System Rescue CD and Hiren Boot CD from USB
+# multisystem can successfully boot Linux Mint, Knoppix, 
+# System Rescue CD and Hiren Boot CD from the same USB stick
 wget http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
 unp install-depot-multisystem.sh.tar.bz2
 ./install-depot-multisystem.sh
