@@ -801,8 +801,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 
-# install multisystem (multiboot USB stick creator for Ubuntu):
+# install multisystem tool (best multiboot USB stick creator for Ubuntu):
 # procedure:  http://community.linuxmint.com/tutorial/view/1219
+# Use axel command line utility to download all the .iso images into the /tmp directory
+# then import each .iso image file one by one into multisystem
+# Multisystem can successfully boot Linux Mint, Knoppix, System Rescue CD and Hiren Boot CD from USB
 wget http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
 unp install-depot-multisystem.sh.tar.bz2
 ./install-depot-multisystem.sh
