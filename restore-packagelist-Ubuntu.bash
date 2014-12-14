@@ -1295,6 +1295,10 @@ fi
 
 cd $HOME
 
+# troubleshooting information to check the rstudio installation:
+file /usr/lib/rstudio/bin/rstudio
+ldd `which rstudio`
+
 # install knitr (used by texmaker) from source code:
 cd $HOME; rm knitr_*.tar.gz
 git clone https://github.com/yihui/knitr.git
