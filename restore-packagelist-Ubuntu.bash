@@ -801,6 +801,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 sudo rm /etc/apt/sources.list.d/*
 
+# install multisystem (multiboot USB stick creator for Ubuntu):
+# procedure:  http://community.linuxmint.com/tutorial/view/1219
+wget http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
+unp install-depot-multisystem.sh.tar.bz2
+./install-depot-multisystem.sh
+
 # Install yEd graph editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
 # Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
