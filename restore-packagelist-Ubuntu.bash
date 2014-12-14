@@ -807,6 +807,8 @@ sudo rm /etc/apt/sources.list.d/*
 # then import each .iso image file one by one into multisystem
 # multisystem can successfully boot Linux Mint, Knoppix (4GB edition), 
 # System Rescue CD and Hiren Boot CD from the same USB stick
+# multisystem seems to work better than YUMI, because multisystem can successfully boot
+# Knoppix (4GB edition) but YUMI could not, when having multiple iso images on the same USB stick
 wget http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
 unp install-depot-multisystem.sh.tar.bz2
 ./install-depot-multisystem.sh
