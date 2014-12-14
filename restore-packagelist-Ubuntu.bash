@@ -854,7 +854,7 @@ rm *.km?
 rm *gz
 rm *.exe
 rm google*
-rm *yEd*.sh
+rm *.sh
 rm .goutputstrea*
 rm *.cab
 rm *.xpi
