@@ -149,6 +149,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-p
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noobslab/apps
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
 # very important security related PPA that was the first repository to fix the 
 # CVE-2014-6277 bash shellshock vulnerability on October 8, 2014: 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-security-proposed/ppa
