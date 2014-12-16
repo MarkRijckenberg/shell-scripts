@@ -800,7 +800,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge  xscreensa
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge evolution-data-server-common samba
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
-sudo rm /etc/apt/sources.list.d/*
 
 # install multisystem tool (best multiboot USB stick creator for Ubuntu):
 # procedure:  http://community.linuxmint.com/tutorial/view/1219
@@ -813,6 +812,8 @@ sudo rm /etc/apt/sources.list.d/*
 wget http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
 unp install-depot-multisystem.sh.tar.bz2
 ./install-depot-multisystem.sh
+rm *.sh
+rm *.html
 
 # Install yEd graph editor 
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
@@ -849,7 +850,11 @@ tar -zxvf setup_Kruidvat_fotoservice.tgz
 
 # run shellshock test to see if bash is vulnerable
 cd $HOME
+rm *.sh
+rm *.html
 wget https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
+rm *.sh
+rm *.html
 
 # clean up current directory
 echo "Performing file cleanup"
@@ -866,6 +871,7 @@ rm .goutputstrea*
 rm *.cab
 rm *.xpi
 rm ica_*
+sudo rm /etc/apt/sources.list.d/*
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
