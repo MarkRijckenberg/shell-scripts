@@ -1948,6 +1948,7 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
+# Microsoft SQL Server 2014 Business Intelligence Development Beginner's Guide
 # OpenIntro Statistics 2nd edition
 echo "http://www.openintro.org/stat/textbook.php?stat_book=os"
 # study ggvis RStudio visualization package
