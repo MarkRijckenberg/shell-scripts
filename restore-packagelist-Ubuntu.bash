@@ -1949,6 +1949,8 @@ echo "http://datadaytexas.com/"
 #     Personal study requirements                                                             #
 ###############################################################################################
 # Microsoft SQL Server 2014 Business Intelligence Development Beginner's Guide
+# Data Smart ('light' data analytics using Microsoft Excel)
+echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
 # OpenIntro Statistics 2nd edition
 echo "http://www.openintro.org/stat/textbook.php?stat_book=os"
 # study ggvis RStudio visualization package
