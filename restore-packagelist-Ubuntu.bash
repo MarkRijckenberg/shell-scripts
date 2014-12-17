@@ -1948,6 +1948,8 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
+# The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling Paperback – July 1, 2013
+# Kimball lifecycle
 # Microsoft SQL Server 2014 Business Intelligence Development Beginner's Guide
 # Data Smart ('light' data analytics using Microsoft Excel)
 echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
