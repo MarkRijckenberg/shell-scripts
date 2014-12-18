@@ -815,7 +815,7 @@ unp install-depot-multisystem.sh.tar.bz2
 rm *.sh
 rm *.html
 
-# Install yEd graph editor (is also a BPMN 2.0 tool (Business Process Modeling Notation diagram creation tool))
+# Install yEd graph editor (BPMN 2.0 addon is not free) (Business Process Modeling Notation diagram creation tool))
 # (powerful desktop application that can be used to quickly and effectively generate high-quality diagrams)
 # Save diagrams in .pdf format so they can be included as graphics in a new latex document in texmaker
 # Allows easy creation of Entity Relationship (ER) diagrams (as part of data modeling by data scientist)
