@@ -1950,6 +1950,7 @@ echo "http://datadaytexas.com/"
 #     Personal study requirements                                                             #
 ###############################################################################################
 # IBM Cognos Business Intelligence V10.1 Handbook:
+echo "http://www.redbooks.ibm.com/redbooks/pdfs/sg247912.pdf"
 echo "http://www.redbooks.ibm.com/redbooks.nsf/searchsite?SearchView&query=cognos"
 # The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling Paperback – July 1, 2013
 # Kimball lifecycle
