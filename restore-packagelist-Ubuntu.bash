@@ -648,19 +648,26 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge wine wine1.4 wine1.5 wine1.6 winetricks
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1.7 winetricks
 
-# install Teamviewer server + client which depends on wine1.6
-cd $HOME
-wget http://download.teamviewer.com/download/teamviewer_linux.deb
-sudo dpkg -i teamviewer_linux.deb
+# install Teamviewer server + client which depends on wine1.7
+cd /tmp
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer9
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
+sudo rm -rf /opt/teamviewer*
+rm *.deb
+wget https://www.teamviewer.com/en/download/linux.aspx
+wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
+sudo dpkg -i teamviewer*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
 sudo -k teamviewer --daemon start
-cd /opt/teamviewer9/tv_bin/script
+cd /opt/teamviewer/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
-/opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
+
+
 
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
@@ -744,21 +751,23 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6-i386
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.6 winetricks
 
-# install Teamviewer server + client which depends on wine1.6
-cd $HOME
-wget http://download.teamviewer.com/download/teamviewer_linux.deb
-sudo dpkg -i teamviewer_linux.deb
+# install Teamviewer server + client which depends on wine1.7
+cd /tmp
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer9
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
+sudo rm -rf /opt/teamviewer*
+rm *.deb
+wget https://www.teamviewer.com/en/download/linux.aspx
+wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
+sudo dpkg -i teamviewer*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
-
 # teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
-cd $HOME
 sudo -k teamviewer --daemon start
-cd /opt/teamviewer9/tv_bin/script
+cd /opt/teamviewer/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
-/opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
-cd $HOME
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 fi
