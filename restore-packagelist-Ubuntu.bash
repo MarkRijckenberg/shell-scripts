@@ -1,5 +1,5 @@
 #!/bin/bash
-# !!!!! WINDOWS 8.1 64-bit users should use 
+# !!!!! WINDOWS 8.1 64-bit users should use ninite.com and 
 # !!!!! https://github.com/MarkRijckenberg/shell-scripts/blob/master/Windows-restore-packagelist.cmd
 # !!!!! for semi-automated Windows application deployments and updates
 # !!!!! WINDOWS 8.1 64-bit users should install "Classic Start" utility
