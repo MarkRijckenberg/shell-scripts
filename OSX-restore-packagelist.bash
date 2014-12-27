@@ -7,7 +7,7 @@ sudo nvram SystemAudioVolume=" "
 
 # Install Apple CLI Dev tools, java and my preferred homebrew and cask software
 
-xcode-select --install # Works on Mavericks and hopfully above
+xcode-select --install # Works on Mavericks and hopefully above
 
 echo
 read -p "Please wait until CLI tools are installed and press enter"  < /dev/tty
@@ -60,14 +60,19 @@ brew install wine
 brew install winetricks
 #brew install z
 
-brew cask install adium
+brew cask install 4k-youtube-to-mp3
+#brew cask install adium
 brew cask install adobe-air
-brew cask install anki
+brew cask install adobe-reader
+#brew cask install anki
 #brew cask install arduino
 brew cask install atom
 #brew cask install bartender
 brew cask install caffeine
 brew cask install calibre
+brew cask install ccleaner
+brew cask install chromium
+brew cask install citrix-receiver
 #brew cask install chicken
 #brew cask install controlplane
 brew cask install dash
