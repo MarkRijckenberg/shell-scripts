@@ -2,6 +2,7 @@
 
 # first install git using this FAQ:
 # http://sourceforge.net/projects/git-osx-installer/files/
+# then clone this Github repository to your local home directory
 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
