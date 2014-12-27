@@ -10,7 +10,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Install Apple CLI Dev tools, java and my preferred homebrew and cask software
 
-xcode-select --install # Works on Mavericks and hopefully above
+#xcode-select --install # Works on Mavericks and hopefully above
 
 echo
 read -p "Please wait until CLI tools are installed and press enter"  < /dev/tty
