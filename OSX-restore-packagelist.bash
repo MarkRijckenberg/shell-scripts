@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-# first read this FAQ:
+# first install git using this FAQ:
 # http://sourceforge.net/projects/git-osx-installer/files/
 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
