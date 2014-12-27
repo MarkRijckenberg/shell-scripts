@@ -77,9 +77,11 @@ brew cask install citrix-receiver
 #brew cask install controlplane
 brew cask install dash
 #brew cask install dropbox
+brew cask install dupeguru
 #brew cask install eclipse-ide
-#brew cask install evernote
+brew cask install evernote
 brew cask install filezilla
+brew cask install firefox
 brew cask install flash
 brew cask install flip4mac
 #brew cask install flux
@@ -89,6 +91,7 @@ brew cask install gimp
 brew cask install gnucash
 brew cask install google-chrome
 #brew cask install google-drive
+brew cask install google-earth
 #brew cask install gpgtools
 #brew cask install iterm2
 brew cask install jdiskreport
