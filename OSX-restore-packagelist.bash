@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 
+# first read this FAQ:
+# http://sourceforge.net/projects/git-osx-installer/files/
+
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # sudo nvram SystemAudioVolume=" "
