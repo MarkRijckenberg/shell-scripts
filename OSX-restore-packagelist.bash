@@ -2,7 +2,7 @@
 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-sudo nvram SystemAudioVolume=" "
+# sudo nvram SystemAudioVolume=" "
 
 
 # Install Apple CLI Dev tools, java and my preferred homebrew and cask software
