@@ -66,6 +66,7 @@ brew install kdiff3
 brew install node
 brew install offline-imap
 brew install p7zip
+brew install python
 # brew install sqlite
 brew install ssh-copy-id
 #brew install svn
@@ -175,3 +176,6 @@ npm install -g keybase-installer
 #go get github.com/tools/godep
 #go get code.google.com/p/go.tools/cmd/goimports
 #echo Please add \"$GOBIN\" to your path
+
+pip install --upgrade distribute
+pip install --upgrade pip
