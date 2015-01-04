@@ -1960,6 +1960,7 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
+# Informatica PowerCenter ETL
 # IBM Cognos Business Intelligence V10.1 Handbook:
 echo "http://www.redbooks.ibm.com/redbooks/pdfs/sg247912.pdf"
 echo "http://www.redbooks.ibm.com/redbooks.nsf/searchsite?SearchView&query=cognos"
