@@ -1,6 +1,7 @@
 #!/bin/bash
-# !!!!! Mac OS X users should install and use homebrew cask command line tool to install software:
-# !!!!! https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
+# !!!!! Mac OS X users (v10.9 or newer) should install and use homebrew cask command line tool to install software:
+# !!!!! https://github.com/MarkRijckenberg/shell-scripts/blob/master/OSX-restore-packagelist.bash
+# !!!!! for semi-automated OS X application deployments and updates
 # !!!!! WINDOWS 8.1 64-bit users should use ninite.com and 
 # !!!!! https://github.com/MarkRijckenberg/shell-scripts/blob/master/Windows-restore-packagelist.cmd
 # !!!!! for semi-automated Windows application deployments and updates
