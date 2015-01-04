@@ -30,6 +30,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew tap staticfloat/julia
 
 brew update
 brew upgrade
@@ -57,6 +58,7 @@ brew install gnu-sed
 brew install go
 #brew install ispell
 brew install jdiskreport
+brew install --HEAD --64bit julia
 brew install kdiff3
 #brew install lua52
 #brew install mercurial
