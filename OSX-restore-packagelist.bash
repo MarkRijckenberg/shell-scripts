@@ -31,6 +31,10 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap caskroom/cask
 brew tap caskroom/versions
 
+brew update
+brew upgrade
+brew doctor #should say "Your system is ready to brew."
+
 brew install brew-cask
 
 brew cask install java
@@ -43,6 +47,7 @@ brew install ack
 brew install byacc
 brew install cabextract
 brew install coreutils
+brew install emacs --cocoa
 brew install findutils
 brew install flex
 brew install gawk
@@ -118,6 +123,7 @@ brew cask install libreoffice
 #brew cask install openscad
 brew cask install paintbrush
 #brew cask install quicksilver
+brew cask install r
 #brew cask install second-life-viewer
 #brew cask install sketchup
 brew cask install skype
