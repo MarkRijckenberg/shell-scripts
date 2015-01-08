@@ -156,6 +156,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opens
 # very important security related PPA that was the first repository to fix the 
 # CVE-2014-6277 bash shellshock vulnerability on October 8, 2014: 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-security-proposed/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
 
 # add repository for eid-mw and eid-viewer software packages
 # replace codename (for example: trusty) with right Ubuntu codename
@@ -359,6 +360,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-about  lxqt-appswitcher  lxqt-config   lxqt-lightdm-greeter  
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-notificationd    lxqt-policykit  lxqt-power  lxqt-powermanagement  lxqt-runner  lxqt-session
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-metapackage
+
+
+#install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
+# then click on Preferences::Appearance::Icons Theme::Numix Circle
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  numix-icon-theme-circle
 
 ##########################################################################################################
 # install base packages using basepackages file
