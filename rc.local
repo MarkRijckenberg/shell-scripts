@@ -11,13 +11,13 @@
 #
 # By default this script does nothing.
 #
-# teamviewer 9 autostart fix script
+# teamviewer 10 (or newer) autostart fix script
 sudo -k teamviewer --daemon start
-cd /opt/teamviewer9/tv_bin/script
+cd /opt/teamviewer/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
-/opt/teamviewer9/tv_bin/script/teamviewer --daemon start &
+/opt/teamviewer/tv_bin/script/teamviewer --daemon start &
 sudo service teamviewerd.sysv start
 # !!!!!! Also add teamviewer program to KDE's Autostart (command to use: teamviewer)
 exit 0
