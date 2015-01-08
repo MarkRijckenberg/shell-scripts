@@ -363,7 +363,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-meta
 
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
-# then click on Preferences::Appearance::Icons Theme::Numix Circle
+# then click on Preferences::Appearance::Icons Theme::Numix Circle Light
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  numix-icon-theme-circle
 
 ##########################################################################################################
