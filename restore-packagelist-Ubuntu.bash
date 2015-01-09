@@ -111,7 +111,11 @@ rm *.exe
 #     BASE PACKAGES SECTION                                                                   #
 ###############################################################################################
 
-# define aliases in ~/.bashrc file
+# delete old custom aliases in ~/.bashrc file
+egrep -v 'alias\ apt|alias\ d-u'  ~/.bashrc > ~/.bashrcBACKUP
+cp ~/.bashrcBACKUP ~/.bashrc
+
+# define custom aliases in ~/.bashrc file
 echo "alias apti='sudo aptitude update && sudo aptitude install '" >> ~/.bashrc
 echo "alias aptr='sudo aptitude remove '" >> ~/.bashrc
 echo "alias aptp='sudo aptitude purge '" >> ~/.bashrc
