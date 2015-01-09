@@ -853,14 +853,14 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 wget http://www.yworks.com/en/products_yed_download.html
 YEDVERSION=`cat products_yed_download.html |grep Download|grep yEd|cut -d" " -f3|cut -d"<" -f1`
-wget http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_64-bit_setup.sh
+wget http://live.yworks.com/yed-downloads/yEd-`echo $YEDVERSION`_64-bit_setup.sh
 sh yEd-`echo $YEDVERSION`_64-bit_setup.sh
 
 else
   # 32-bit stuff here
 wget http://www.yworks.com/en/products_yed_download.html
 YEDVERSION=`cat products_yed_download.html |grep Download|grep yEd|cut -d" " -f3|cut -d"<" -f1`
-wget http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_32-bit_setup.sh
+wget http://live.yworks.com/yed-downloads/yEd-`echo $YEDVERSION`_32-bit_setup.sh
 sh yEd-`echo $YEDVERSION`_32-bit_setup.sh
 
 fi
