@@ -553,7 +553,9 @@ sudo make
 sudo make test
 sudo checkinstall
 rm -rf ~/openssl
+sudo mv /usr/bin/c_rehash /usr/bin/c_rehashBACKUP
 sudo mv /usr/bin/openssl /usr/bin/opensslBACKUP
+sudo ln -s /usr/local/ssl/bin/c_rehash /usr/bin/c_rehash
 sudo ln -s /usr/local/ssl/bin/openssl /usr/bin/openssl
 openssl version
 apt-cache show openssl
