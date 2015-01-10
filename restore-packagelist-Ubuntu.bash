@@ -532,13 +532,31 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install LGOGDownloader game client (unofficial downloader to GOG.com for Linux users) 
 # It uses the same API as the official GOGDownloader.
 ##########################################################################################################
-cd $HOME
+cd
 rm -rf $HOME/lgogdownloader
 git clone https://github.com/Sude-/lgogdownloader.git
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  build-essential libcurl4-openssl-dev liboauth-dev libjsoncpp-dev libhtmlcxx-dev libboost-system-dev libboost-filesystem-dev libboost-regex-dev libboost-program-options-dev libboost-date-time-dev libtinyxml-dev librhash-dev help2man
 cd lgogdownloader
 sudo make release
 sudo make install
+
+#compile and install newest version of openssl in Ubuntu 14.04 LTS
+cd
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep openssl
+rm -rf ~/openssl
+git clone https://github.com/openssl/openssl.git
+cd openssl
+sudo ./config
+sudo make
+sudo make test
+sudo checkinstall
+rm -rf ~/openssl
+sudo mv /usr/bin/openssl /usr/bin/opensslBACKUP
+sudo ln -s /usr/local/ssl/bin/openssl /usr/bin/openssl
+openssl version
+apt-cache show openssl
 
 # install kde plasma 5 desktop environment
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:neon/kf5
@@ -548,6 +566,7 @@ sudo make install
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noneed4anick/cuttlefish
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
+cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cuttlefish 
 
 # Install Ubuntu Tweak to easily uninstall old kernel versions
