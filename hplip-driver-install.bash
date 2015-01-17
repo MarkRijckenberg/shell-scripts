@@ -21,6 +21,8 @@ sudo make install-hotplug
 system-config-printer
 # check /var/log/syslog for any errors related to foo2zjs driver:
 tail /var/log/syslog
+# then power cycle both your PC and your HP printer
+# then retest printing using the newly installed foo2zjs driver
 
 #HPLIPVERSION=`head download |grep label|cut -f2 -d" "`
 
