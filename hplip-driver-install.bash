@@ -21,3 +21,23 @@ wget http://hplipopensource.com/hplip-web/plugin/hplip-$HPLIPVERSION-plugin.run
 sudo bash hplip-$HPLIPVERSION-plugin.run
 sudo hp-setup
 touch ~/.cups/lpoptions
+
+#Troubleshooting
+
+#If the previous procedure does not allow Ubuntu to detect the printer using
+#a USB connection, then I suggest
+
+# turning off the printer
+# disconnect the printer's USB cable from the PC
+# reconnect the printer's USB cable to a different USB port on the PC
+# turn the printer back on
+# rerun "sudo hp-setup" (last command in previous procedure)
+
+# also try switching from the hpcups printer driver to the foomatic printer driver
+
+#If the previous procedure only allows the HP printer to print correctly for
+#a few days and then gives the error "Device Communication Error, code 5012",
+#please uninstall the hplip driver and install the foo2zjs printer driver, 
+#as explained in the following thread:
+
+# https://answers.launchpad.net/hplip/+question/249391
