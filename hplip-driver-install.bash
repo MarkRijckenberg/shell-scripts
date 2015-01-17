@@ -7,8 +7,7 @@ sudo apt-get remove hplip cups-filters cups hplip-data system-config-printer-ude
 sudo apt-get install build-essential tix groff dc axel cups cups-filters unp system-config-printer-gnome
 sudo rm -rf /usr/share/hplip
 cd /tmp
-rm hplip*
-rm download*
+rm foo*
 axel http://foo2zjs.rkkda.com/foo2zjs.tar.gz
 unp foo2zjs.tar.gz
 cd foo2zjs/
