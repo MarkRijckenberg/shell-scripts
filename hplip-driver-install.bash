@@ -50,5 +50,5 @@ tail /var/log/syslog
 
 # also try switching from the hpcups printer driver to the foomatic printer driver
 
-#This procedure should solve the error "Device Communication Error, code 5012"
-# Source: https://answers.launchpad.net/hplip/+question/249391
+ #This procedure should solve the hplip driver error "Device Communication Error, code 5012"
+ # Source: https://answers.launchpad.net/hplip/+question/249391
