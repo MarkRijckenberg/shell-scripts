@@ -29,6 +29,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 #Symlink into the normal place. Add this to login scripts as well
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+sudo xcodebuild -license
+
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap staticfloat/julia
