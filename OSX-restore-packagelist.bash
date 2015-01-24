@@ -50,6 +50,7 @@ brew install cabextract
 brew install coreutils
 brew install emacs --cocoa
 brew install findutils
+brew install fish
 brew install flex
 brew install gawk
 brew install gcc
@@ -147,6 +148,10 @@ brew cask install vlc
 
 brew cleanup
 brew cask cleanup
+
+#Make Fish your default shell:
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
 
 # Install Perlbrew
 
