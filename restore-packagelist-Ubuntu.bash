@@ -161,6 +161,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opens
 # CVE-2014-6277 bash shellshock vulnerability on October 8, 2014: 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-security-proposed/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/release-2
 
 # add repository for eid-mw and eid-viewer software packages
 # replace codename (for example: trusty) with right Ubuntu codename
