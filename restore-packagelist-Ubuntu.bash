@@ -919,26 +919,25 @@ echo "alias d-u='sudo aptitude update ; sudo aptitude dist-upgrade'" >> ~/.confi
 # run shellshock test to see if bash is vulnerable
 cd $HOME
 rm *.sh
-rm *.html
 wget https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
-rm *.sh
-rm *.html
 
 # clean up current directory
 echo "Performing file cleanup"
 cd $HOME
-rm *.zip
-rm *.pdf
-rm *.deb
-rm *.km?
-rm *gz
-rm *.exe
-rm google*
-rm *.sh
-rm .goutputstrea*
 rm *.cab
+rm *.crt
+rm *.deb
+rm *.exe
+rm .goutputstrea*
+rm *gz
+rm *.html
+rm *.km?
+rm *.pdf
+rm *.sh
 rm *.xpi
+rm *.zip
 rm ica_*
+rm google*
 sudo rm /etc/apt/sources.list.d/*
 
 ###############################################################################################
