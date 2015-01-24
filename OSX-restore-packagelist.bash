@@ -2,14 +2,15 @@
 
 # Prerequisites: Mac OS X 10.9 or newer, git, Xcode 6 or newer (=Apple CLI Dev tools)
 
-# first install git using this FAQ:
+# 1) install Mac OS X 10.9 or newer
+# 2) install git using this FAQ:
 # http://sourceforge.net/projects/git-osx-installer/files/
 # then clone this Github repository to your local home directory
 
-# then install Xcode 6 or newer via this link:
+# 3) install Xcode 6 or newer via this link:
 # https://developer.apple.com/xcode/
 
-# then execute the bash script below
+# 4) execute the bash script below
 
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
