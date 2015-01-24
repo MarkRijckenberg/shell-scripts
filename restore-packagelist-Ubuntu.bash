@@ -899,6 +899,8 @@ chsh -s /usr/bin/fish
 #chsh -s /bin/bash
 cd $HOME
 # customize fish shell using oh-my-fish
+mkdir ~/.config/fish/
+rm -rf ~/.oh-my-fish
 git clone git://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish
 cp ~/.oh-my-fish/templates/config.fish ~/.config/fish/config.fish
 
