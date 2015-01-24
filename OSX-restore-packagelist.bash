@@ -154,6 +154,7 @@ brew cask install unrarx
 brew cask install virtualbox
 brew cask install vlc
 # brew cask install vmware-fusion
+brew cask install xbmc
 
 brew cleanup
 brew cask cleanup
