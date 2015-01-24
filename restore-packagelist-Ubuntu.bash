@@ -902,6 +902,18 @@ cd $HOME
 git clone git://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish
 cp ~/.oh-my-fish/templates/config.fish ~/.config/fish/config.fish
 
+# delete old custom aliases in ~/.config/fish/config.fish file
+egrep -v 'alias\ apt|alias\ d-u'  ~/.config/fish/config.fish > ~/.config/fish/config.fishBACKUP
+cp ~/.config/fish/config.fishBACKUP ~/.config/fish/config.fish
+
+# define custom aliases in ~/.config/fish/config.fish file
+echo "alias apti='sudo aptitude update ; sudo aptitude install '" >> ~/.config/fish/config.fish
+echo "alias aptr='sudo aptitude remove '" >> ~/.config/fish/config.fish
+echo "alias aptp='sudo aptitude purge '" >> ~/.config/fish/config.fish
+echo "alias aptu='sudo aptitude update'" >> ~/.config/fish/config.fish
+echo "alias apts='sudo aptitude search '" >> ~/.config/fish/config.fish
+echo "alias d-u='sudo aptitude update ; sudo aptitude dist-upgrade'" >> ~/.config/fish/config.fish
+
 # run shellshock test to see if bash is vulnerable
 cd $HOME
 rm *.sh
@@ -932,9 +944,9 @@ sudo rm /etc/apt/sources.list.d/*
 ###############################################################################################
 
 # install zotero add-on for Mozilla Firefox
-cd $HOME
-wget https://download.zotero.org/extension/zotero-4.0.20.2.xpi
-gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
+#cd $HOME
+#wget https://download.zotero.org/extension/zotero-4.0.20.2.xpi
+#gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 
 cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive apt-get install  `cat  astropackages` -o APT::Install-Suggests="false"
