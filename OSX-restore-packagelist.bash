@@ -48,6 +48,14 @@ brew install python --framework
 brew install putty gtk+
 
 brew install ack
+
+# upgrade bash shell:
+brew install bash
+sudo sh -c 'echo "/usr/local/bin/bash" >> /etc/shells'
+chsh -s /usr/local/bin/bash
+sudo mv /bin/bash /bin/bash-backup
+sudo ln -s /usr/local/bin/bash /bin/bash
+
 brew install byacc
 brew install cabextract
 brew install coreutils
