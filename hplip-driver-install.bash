@@ -2,6 +2,10 @@
 # Copy-paste following Terminal commands one by one into the Terminal:
 # procedure to install printer driver for HP Laserjet 1020 without needing access to openprinting.org website:
 #URL=http://sourceforge.net/projects/hplip/files/latest/download?source=files
+
+# List of printers supported by foo2zjs printer driver:
+# http://foo2zjs.rkkda.com/
+
 sudo apt-get update
 sudo apt-get remove hplip cups-filters cups hplip-data system-config-printer-udev
 sudo apt-get install build-essential tix groff dc axel cups cups-filters unp system-config-printer-gnome
