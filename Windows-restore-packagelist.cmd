@@ -69,7 +69,8 @@ REM show list of locally installed packages - installed using choco package mana
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install jre8"
+REM jre8 installer hangs; so line below has been disabled
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install jre8"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.install"
  
