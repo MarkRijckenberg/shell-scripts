@@ -546,7 +546,7 @@ cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep openssl
-rm -rf ~/openssl
+sudo rm -rf ~/openssl
 git clone https://github.com/openssl/openssl.git
 cd openssl
 sudo ./config
