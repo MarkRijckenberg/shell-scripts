@@ -690,7 +690,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
 sudo rm -rf /opt/teamviewer*
 rm *.deb
-wget https://www.teamviewer.com/en/download/linux.aspx
+wget --no-check-certificate https://www.teamviewer.com/en/download/linux.aspx
 wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
 sudo dpkg -i teamviewer*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -793,7 +793,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
 sudo rm -rf /opt/teamviewer*
 rm *.deb
-wget https://www.teamviewer.com/en/download/linux.aspx
+wget --no-check-certificate https://www.teamviewer.com/en/download/linux.aspx
 wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
 sudo dpkg -i teamviewer*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
