@@ -553,7 +553,7 @@ sudo ./config
 sudo make
 sudo make test
 sudo checkinstall
-rm -rf ~/openssl
+sudo rm -rf ~/openssl
 sudo mv /usr/bin/c_rehash /usr/bin/c_rehashBACKUP
 sudo mv /usr/bin/openssl /usr/bin/opensslBACKUP
 sudo ln -s /usr/local/ssl/bin/c_rehash /usr/bin/c_rehash
