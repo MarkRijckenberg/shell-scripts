@@ -1011,6 +1011,7 @@ echo "kmz file can be opened using Google Earth"
 echo "Downloading and installing Audela - free and open source astronomy software intended for digital observations"
 wget http://sourceforge.net/projects/audela/files/audela/`echo $AUDELAFILENAME`/`echo $AUDELAFILENAME`.deb
 sudo dpkg -i  `echo $AUDELAFILENAME`.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
