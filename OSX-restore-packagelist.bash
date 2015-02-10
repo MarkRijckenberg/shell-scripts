@@ -163,10 +163,6 @@ brew cask install xbmc
 brew cleanup
 brew cask cleanup
 
-#Make Fish your default shell:
-echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
-
 # Install Perlbrew
 
 sudo cpan App::perlbrew
@@ -200,3 +196,7 @@ npm install -g keybase-installer
 
 pip install --upgrade distribute
 pip install --upgrade pip
+
+#Make Fish your default shell:
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
