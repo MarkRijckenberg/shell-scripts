@@ -34,10 +34,11 @@ brew tap caskroom/versions
 brew tap staticfloat/julia
 
 brew update
-brew upgrade
-brew doctor #should say "Your system is ready to brew."
-
 brew install brew-cask
+
+brew upgrade
+brew upgrade brew-cask
+brew doctor #should say "Your system is ready to brew."
 
 brew cask fetch java
 brew cask install java
