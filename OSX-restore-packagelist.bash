@@ -39,6 +39,7 @@ brew doctor #should say "Your system is ready to brew."
 
 brew install brew-cask
 
+brew cask fetch java
 brew cask install java
 brew cask install xquartz #Pre-req for some of the brew packages
 
@@ -136,6 +137,7 @@ brew cask install libreoffice
 #brew cask install openscad
 brew cask install paintbrush
 #brew cask install quicksilver
+brew cask fetch r
 brew cask install r
 #brew cask install second-life-viewer
 #brew cask install sketchup
@@ -145,6 +147,8 @@ brew cask install skype
 #brew cask install sourcetree
 #brew cask install steam
 brew cask install stellarium
+brew cask fetch teamviewer
+brew cask install teamviewer
 #brew cask install the-unarchiver
 #brew cask install thunderbird
 brew cask install transmission
