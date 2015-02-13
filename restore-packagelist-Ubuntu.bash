@@ -1697,6 +1697,8 @@ echo "https://osf.io/s9tya/wiki/home/"
 echo "http://statsteachr.org/modules/view/40"
 echo "http://reproducibleresearch.net/links/"
 
+# following URL added on February 13, 2015:
+echo "http://www.sthda.com/"
 # following URL added on February 19, 2014:
 # free guides
 echo "http://onepager.togaware.com/"
