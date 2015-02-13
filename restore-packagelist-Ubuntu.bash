@@ -2028,9 +2028,11 @@ echo "http://www.redbooks.ibm.com/redbooks.nsf/searchsite?SearchView&query=cogno
 # The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling Paperback – July 1, 2013
 # Kimball lifecycle
 # Microsoft SQL Server 2014 Business Intelligence Development Beginner's Guide
-# Data Smart ('light' data analytics using Microsoft Excel)
+# !!!! Data Smart ('light' data analytics using Microsoft Excel)
 echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
-# OpenIntro Statistics 2nd edition
+# !!!! An Introduction to Statistical Learning
+echo "http://www-bcf.usc.edu/~gareth/ISL/"
+# !!!! OpenIntro Statistics 2nd edition
 echo "http://www.openintro.org/stat/textbook.php?stat_book=os"
 # study ggvis RStudio visualization package
 echo "http://ggvis.rstudio.com/"
