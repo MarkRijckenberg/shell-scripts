@@ -1698,6 +1698,7 @@ echo "http://statsteachr.org/modules/view/40"
 echo "http://reproducibleresearch.net/links/"
 
 # following URL added on February 13, 2015:
+# detailed examples on how to use ggplot2:
 echo "http://www.sthda.com/"
 # following URL added on February 19, 2014:
 # free guides
