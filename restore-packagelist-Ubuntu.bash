@@ -127,7 +127,7 @@ echo "alias d-u='sudo aptitude update && sudo aptitude dist-upgrade'" >> ~/.bash
 sudo sed -i s/enabled=1/enabled=0/ /etc/default/apport
 
 ##########################################################################################################
-# add PPA repositories
+# add base PPA repositories
 ##########################################################################################################
 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
@@ -162,6 +162,14 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opens
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-security-proposed/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/release-2
+
+##########################################################################################################
+# add astronomy PPA repositories
+##########################################################################################################
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/astrometry.net
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
+
 
 # add repository for eid-mw and eid-viewer software packages
 # replace codename (for example: trusty) with right Ubuntu codename
