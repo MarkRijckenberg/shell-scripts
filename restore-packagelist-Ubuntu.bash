@@ -1298,23 +1298,23 @@ unp $FILENAME
 
 # install SDL_Pango first, because nightshade depends on it
 # but nightshade cannot find SDL_Pango library, even after installing it
-cd $HOME
-rm *.html
-wget http://downloads.sourceforge.net/project/sdlpango/SDL_Pango/0.1.2/SDL_Pango-0.1.2.tar.gz
-unp SDL_Pango-0.1.2.tar.gz
-cd SDL_Pango*
-sudo ./configure
-sudo make
-sudo make install
-sudo ldconfig
+#cd $HOME
+#rm *.html
+#wget http://downloads.sourceforge.net/project/sdlpango/SDL_Pango/0.1.2/SDL_Pango-0.1.2.tar.gz
+#unp SDL_Pango-0.1.2.tar.gz
+#cd SDL_Pango*
+#sudo ./configure
+#sudo make
+#sudo make install
+#sudo ldconfig
 
 cd $HOME
 rm files
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libgraphicsmagick++1-dev libsdl1.2-dev
-wget http://www.nightshadesoftware.org/projects/nightshade/files
-wget http://www.nightshadesoftware.org`cat files|grep win32|cut -d"\"" -f4`
-FILENAME=`cat files|grep win32|cut -d"\"" -f4|cut -d"/" -f5`
-wine $FILENAME
+#wget http://www.nightshadesoftware.org/projects/nightshade/files
+#wget http://www.nightshadesoftware.org`cat files|grep win32|cut -d"\"" -f4`
+#FILENAME=`cat files|grep win32|cut -d"\"" -f4|cut -d"/" -f5`
+#wine $FILENAME
 # this Windows version of Nightshade requires a videocard that supports OpenGL 3.0 or higher
 
 # download and decompress scisoft utilities
