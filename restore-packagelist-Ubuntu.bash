@@ -168,8 +168,6 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/rele
 ##########################################################################################################
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/astrometry.net
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
-
 
 # add repository for eid-mw and eid-viewer software packages
 # replace codename (for example: trusty) with right Ubuntu codename
