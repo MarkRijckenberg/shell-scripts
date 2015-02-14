@@ -1139,6 +1139,25 @@ fi
 ###############################################################################################
 #     DOWNLOAD TRIATLAS PDF FILES BEFORE ANY OTHER PDF FILES                                  #
 ###############################################################################################
+# clean up current directory
+echo "Performing file cleanup"
+cd $HOME
+mv *.deb $DEB
+rm *.exe
+mv *.km? $KMZ
+mv *.pdf $PDF
+mv *gz $TAR
+mv *.zip $ZIP
+rm *.cab
+rm *.crt
+rm .goutputstrea*
+rm *.html
+rm *.sh
+rm *.xpi
+rm ica_*
+rm google*
+
+
 #download Triatlas charts in PDF format from http://www.uv.es/jrtorres/triatlas.html
 echo "Downloading Triatlas charts (from jrtorres) in A4 format for Europe"
 wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
@@ -1203,12 +1222,21 @@ mv book_2.zip Legrand_Orange_Book_template_book_2_excellent.zip
 
 # clean up current directory
 echo "Performing file cleanup"
+cd $HOME
 mv *.deb $DEB
 rm *.exe
 mv *.km? $KMZ
 mv *.pdf $PDF
-mv *.zip $ZIP
 mv *gz $TAR
+mv *.zip $ZIP
+rm *.cab
+rm *.crt
+rm .goutputstrea*
+rm *.html
+rm *.sh
+rm *.xpi
+rm ica_*
+rm google*
 
 # uninstall Java due to all the critical security issues in 2013
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
@@ -1251,22 +1279,22 @@ unp $FILENAME
 
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
-echo "Downloading and decompressing Nightshade"
+#echo "Downloading and decompressing Nightshade"
 # install libfastdb first, because nightshade depends on it
-cd $HOME
-rm *.html
-rm *.tar.gz
-rm -rf nightshade*
-rm files
-rm Nightshade*.exe
-wget http://www.garret.ru/fastdb.html
-wget `cat fastdb.html |grep nix|cut -d"\"" -f2`
-unp fastdb*.tar.gz
-cd fastdb*
-sudo ./configure
-sudo make
-sudo make install
-sudo ldconfig
+#cd $HOME
+#rm *.html
+#rm *.tar.gz
+#rm -rf nightshade*
+#rm files
+#rm Nightshade*.exe
+#wget http://www.garret.ru/fastdb.html
+#wget `cat fastdb.html |grep nix|cut -d"\"" -f2`
+#unp fastdb*.tar.gz
+#cd fastdb*
+#sudo ./configure
+#sudo make
+#sudo make install
+#sudo ldconfig
 
 # install SDL_Pango first, because nightshade depends on it
 # but nightshade cannot find SDL_Pango library, even after installing it
