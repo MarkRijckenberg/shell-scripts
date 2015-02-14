@@ -641,7 +641,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   
 # install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
 cd $HOME
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget --no-check-certificate https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
@@ -746,7 +746,7 @@ else
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 cd $HOME
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+wget --no-check-certificate https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
