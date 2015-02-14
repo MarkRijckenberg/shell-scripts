@@ -169,6 +169,14 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/rele
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/astrometry.net
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/ppa
 
+# add repository for distroastro software packages
+# replace codename (for example: trusty) with right Ubuntu codename
+RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}' /etc/os-release| awk '{print tolower($0)}'`
+sudo touch /etc/apt/sources.list.d/distroastro.list
+sudo sh -c 'echo "deb http://packages.distroastro.org/distroastro juno free non-free" >> /etc/apt/sources.list.d/distroastro.list'
+sudo sh -c 'echo "deb-src http://packages.distroastro.org/distroastro juno free non-free" >> /etc/apt/sources.list.d/distroastro.list'
+wget -qO - http://packages.distroastro.org/key | sudo apt-key add -
+
 # add repository for eid-mw and eid-viewer software packages
 # replace codename (for example: trusty) with right Ubuntu codename
 RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
