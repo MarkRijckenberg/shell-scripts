@@ -121,7 +121,7 @@ sudo rm /etc/apt/sources.list.d/*
 ###############################################################################################
 
 # delete old custom aliases in ~/.bashrc file
-egrep -v 'alias\ apt|alias\ d-u'  ~/.bashrc > ~/.bashrcBACKUP
+egrep -v 'alias\ apt|alias\ d-u|wget'  ~/.bashrc > ~/.bashrcBACKUP
 cp ~/.bashrcBACKUP ~/.bashrc
 
 # define custom aliases in ~/.bashrc file
