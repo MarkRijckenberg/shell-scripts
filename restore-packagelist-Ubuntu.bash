@@ -81,14 +81,23 @@ mkdir $KMZ
 mkdir triatlas
 
 # clean up current directory
-cd $HOME
 echo "Performing file cleanup"
-mv *.zip $ZIP
-mv *.pdf $PDF
+cd $HOME
 mv *.deb $DEB
-mv *.km? $KMZ
-mv *gz $TAR
 rm *.exe
+mv *.km? $KMZ
+mv *.pdf $PDF
+mv *gz $TAR
+mv *.zip $ZIP
+rm *.cab
+rm *.crt
+rm .goutputstrea*
+rm *.html
+rm *.sh
+rm *.xpi
+rm ica_*
+rm google*
+sudo rm /etc/apt/sources.list.d/*
 
 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET1 $HOME 
@@ -938,21 +947,20 @@ wget https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
 # clean up current directory
 echo "Performing file cleanup"
 cd $HOME
+mv *.deb $DEB
+rm *.exe
+mv *.km? $KMZ
+mv *.pdf $PDF
+mv *gz $TAR
+mv *.zip $ZIP
 rm *.cab
 rm *.crt
-rm *.deb
-rm *.exe
 rm .goutputstrea*
-rm *gz
 rm *.html
-rm *.km?
-rm *.pdf
 rm *.sh
 rm *.xpi
-rm *.zip
 rm ica_*
 rm google*
-sudo rm /etc/apt/sources.list.d/*
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
@@ -1031,26 +1039,26 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 # download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
 # software system for the reduction and analysis of astronomical data
-echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
-wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86_64.tar.gz
-unp iraf.lnux.x86_64.tar.gz
+#echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
+#wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86_64.tar.gz
+#unp iraf.lnux.x86_64.tar.gz
 
-echo "Downloading and installing skychart"
-SKYCHARTREMOTEDIR="http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/"
-url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's/^.*"\([^"]*skychart[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+#echo "Downloading and installing skychart"
+#SKYCHARTREMOTEDIR="http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/"
+#url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's/^.*"\([^"]*skychart[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
+#dir=$(mktemp -dt)
+#cd "$dir"
 # Download the .deb file
-wget `echo $SKYCHARTREMOTEDIR``echo $url`
+#wget `echo $SKYCHARTREMOTEDIR``echo $url`
 # Install the package
-sudo dpkg -i $url
+#sudo dpkg -i $url
 # Clean up
-rm $url
-cd $HOME
-rm -rf "$dir"
-cd $HOME
-sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
+#rm $url
+#cd $HOME
+#rm -rf "$dir"
+#cd $HOME
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  texmaker
 #install texstudio
@@ -1074,26 +1082,26 @@ else
   # 32-bit stuff here
 # download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
 # software system for the reduction and analysis of astronomical data
-echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
-wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
-unp iraf.lnux.x86.tar.gz
+#echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
+#wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86.tar.gz
+#unp iraf.lnux.x86.tar.gz
 
-echo "Downloading and installing skychart"
-SKYCHARTREMOTEDIR="http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/"
-url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's/^.*"\([^"]*skychart[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
+#echo "Downloading and installing skychart"
+#SKYCHARTREMOTEDIR="http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/"
+#url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's/^.*"\([^"]*skychart[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
+#dir=$(mktemp -dt)
+#cd "$dir"
 # Download the .deb file
-wget `echo $SKYCHARTREMOTEDIR``echo $url`
+#wget `echo $SKYCHARTREMOTEDIR``echo $url`
 # Install the package
-sudo dpkg -i $url
+#sudo dpkg -i $url
 # Clean up
-rm $url
-cd $HOME
-rm -rf "$dir"
-cd $HOME
-sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
+#rm $url
+#cd $HOME
+#rm -rf "$dir"
+#cd $HOME
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   texmaker
 #install texstudio
@@ -1115,17 +1123,17 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install   texmaker
 
 fi
 
-wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
-sudo dpkg -i skychart-data-stars_3.8-2293_all.deb
-sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
+#wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
+#sudo dpkg -i skychart-data-stars_3.8-2293_all.deb
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
-wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-dso_3.8-2293_all.deb
-sudo dpkg -i skychart-data-dso_3.8-2293_all.deb
-sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
+#wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-dso_3.8-2293_all.deb
+#sudo dpkg -i skychart-data-dso_3.8-2293_all.deb
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
-wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-pictures_3.1-1466_all.deb
-sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
-sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
+#wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-pictures_3.1-1466_all.deb
+#sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -f install
 
 
 ###############################################################################################
@@ -1195,12 +1203,12 @@ mv book_2.zip Legrand_Orange_Book_template_book_2_excellent.zip
 
 # clean up current directory
 echo "Performing file cleanup"
-mv *.zip $ZIP
-mv *.pdf $PDF
 mv *.deb $DEB
-mv *.km? $KMZ
-mv *gz $TAR
 rm *.exe
+mv *.km? $KMZ
+mv *.pdf $PDF
+mv *.zip $ZIP
+mv *gz $TAR
 
 # uninstall Java due to all the critical security issues in 2013
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
@@ -1316,14 +1324,8 @@ wget http://www.astrosurf.com/c2a/english/download/`echo $C2AFILENAME`
 unp `echo $C2AFILENAME`
 wine setup.exe
 
-# clean up current directory
-echo "Performing file cleanup"
-mv *.zip $ZIP
-mv *.pdf $PDF
-mv *.deb $DEB
-mv *.km? $KMZ
-mv *gz $TAR
-rm *.exe
+
+
 
 # install texlive the only proper way so that tlmgr also works correctly in Ubuntu 13.10 or Ubuntu 14.04 LTS
 # procedure created on March 8, 2014:
@@ -1396,6 +1398,25 @@ R CMD INSTALL knitr_*.tar.gz
 sudo cp $HOME/knitr/inst/bin/knit /usr/bin/knit
 cd knitr
 make check
+
+# clean up current directory
+echo "Performing file cleanup"
+cd $HOME
+mv *.deb $DEB
+rm *.exe
+mv *.km? $KMZ
+mv *.pdf $PDF
+mv *gz $TAR
+mv *.zip $ZIP
+rm *.cab
+rm *.crt
+rm .goutputstrea*
+rm *.html
+rm *.sh
+rm *.xpi
+rm ica_*
+rm google*
+sudo rm /etc/apt/sources.list.d/*
 
 
 # install weka v3.7.11 - import preprocessed .csv from R into weka to perform significant
