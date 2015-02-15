@@ -177,8 +177,8 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/rele
 ##########################################################################################################
 # add astronomy PPA repositories
 ##########################################################################################################
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/astrometry.net
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/astrometry.net
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/ppa
 
 # add repository for distroastro software packages
 # replace codename (for example: trusty) with right Ubuntu codename
