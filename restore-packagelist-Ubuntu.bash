@@ -180,7 +180,9 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/rele
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/astrometry.net
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/ppa
 
-# add repository for distroastro software packages
+# Do NOT add repository for distroastro software packages
+# Distroastro v3.0.1 breaks the windowing functionality of metacity and does not work well
+# Distroastro mixes packages from Ubuntu and Linux Mint, causing severe issues
 # replace codename (for example: trusty) with right Ubuntu codename
 #RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}' /etc/os-release| awk '{print tolower($0)}'`
 #sudo touch /etc/apt/sources.list.d/distroastro.list
