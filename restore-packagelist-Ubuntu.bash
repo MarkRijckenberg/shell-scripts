@@ -2042,6 +2042,11 @@ echo "https://www.edx.org/course/introduction-to-big-data-with-apache-spark-uc-b
 # following URL added on November 28, 2014:
 # combine Apache Spark with R using SparkR:
 echo "https://www.youtube.com/watch?v=CUX1SG9zTkU&list=PL-x35fyliRwiuc6qy9z2erka2VX8LY53x"
+# following URL added on February 18, 2015:
+# Prerequisites:
+# CUDA toolkit, Python 2.7.x, numpy, pandas, matplotlib, and scikit-learn, lasagne
+# lasagne is a library for building Convolutional neural networks with Python and Theano
+echo "http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/"
 
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
