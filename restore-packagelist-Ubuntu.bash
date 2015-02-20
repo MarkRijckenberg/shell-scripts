@@ -1425,14 +1425,40 @@ cd $HOME
 file /usr/lib/rstudio/bin/rstudio
 ldd `which rstudio`
 
-# install knitr (used by texmaker) from source code:
-cd $HOME; rm knitr_*.tar.gz
+# install texmaker and knitr (used by texmaker) from source code:
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes texinfo texmaker r-base-core r-base
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes texlive-fonts-extra unp
+
+# install testit and rgl packages which are prerequisites
+# for the make check command below:
+cd
+rm -rf testit*
+git clone https://github.com/yihui/testit.git
+R CMD build testit
+R CMD INSTALL testit_*.tar.gz
+
+cd /tmp
+rm index.html
+wget http://cran.r-project.org/src/contrib/
+FILENAME=`grep \"rgl index.html |head -n 1|cut -d"\"" -f8`
+wget http://cran.r-project.org/src/contrib/`echo $FILENAME`
+unp rgl*
+R CMD build rgl
+R CMD INSTALL rgl_*.tar.gz
+
+# install knitr 1.9.3:
+cd
+rm -rf knit*
 git clone https://github.com/yihui/knitr.git
 R CMD build knitr
 R CMD INSTALL knitr_*.tar.gz
-sudo cp $HOME/knitr/inst/bin/knit /usr/bin/knit
+sudo cp ~/knitr/inst/bin/knit /usr/bin/knit
 cd knitr
 make check
+
+cd
+rm -rf knitr-examples*
+git clone https://github.com/yihui/knitr-examples
 
 # clean up current directory
 echo "Performing file cleanup"
