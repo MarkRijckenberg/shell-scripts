@@ -175,6 +175,8 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opens
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-security-proposed/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/release-2
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutter
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -1384,9 +1386,6 @@ sudo fmtutil-sys --all
 sudo update-texmf
 
 # install R 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/rrutter
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:marutter/c2d4u
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 
 # install rstudio / R-Studio :
