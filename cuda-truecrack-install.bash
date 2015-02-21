@@ -48,7 +48,7 @@ apt-cache show truecrack
 #Priority: extra
 #Section: checkinstall
 #Installed-Size: 276
-#Maintainer: root@ulysses-Latitude-E6500
+#Maintainer: root
 #Architecture: amd64
 #Version: 3.5-1
 #Provides: truecrack
