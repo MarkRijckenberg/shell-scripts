@@ -703,7 +703,7 @@ sudo rm GoogleEarth*
 sudo dpkg -P google-earth
 sudo dpkg -P googleearth
 # install new Google Earth
-sudo dpkg --add-architecture i386
+# sudo dpkg --add-architecture i386
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libcurl3:i386 libfreeimage3 lib32nss-mdns multiarch-support lsb-core googleearth-package
 sudo make-googleearth-package --force
 sudo dpkg -i googleearth*.deb
