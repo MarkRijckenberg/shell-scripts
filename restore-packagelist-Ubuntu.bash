@@ -741,10 +741,10 @@ sudo update-rc.d teamviewerd.sysv defaults
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 
 # install Viber program
-cd $HOME
-wget download.cdn.viber.com/cdn/desktop/Linux/viber.deb
-sudo dpkg -i viber.deb 
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+#cd $HOME
+#wget download.cdn.viber.com/cdn/desktop/Linux/viber.deb
+#sudo dpkg -i viber.deb 
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 
 else
