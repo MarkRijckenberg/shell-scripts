@@ -735,11 +735,6 @@ sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
-
-
-# install dupeguru-me which can find and delete similar music filenames using fuzzy logic
-# rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
-
 # install Viber program
 #cd $HOME
 #wget download.cdn.viber.com/cdn/desktop/Linux/viber.deb
@@ -750,9 +745,6 @@ sudo update-rc.d teamviewerd.sysv defaults
 else
   # 32-bit stuff here
   
-# install dupeguru-me which can find and delete similar music filenames using fuzzy logic
-# rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
-
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 cd $HOME
 wget --no-check-certificate https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
