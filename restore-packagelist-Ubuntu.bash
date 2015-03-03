@@ -1635,9 +1635,6 @@ echo "http://video.fosdem.org/"
 # following URL added on February 12, 2014:
 echo "http://www.astro.ulb.ac.be/pmwiki/IAA/HomePage"
 # following URL added on February 12, 2014:
-# Linux astronomy distribution based on Ubuntu
-echo "http://www.distroastro.org/"
-# following URL added on February 12, 2014:
 echo "http://www.allesoversterrenkunde.nl/#!/actueel"
 # following URL added on February 18, 2014:
 echo "http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide"
