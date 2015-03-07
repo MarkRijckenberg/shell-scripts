@@ -15,7 +15,8 @@ VERSION=`grep 1404 cuda-downloads |grep x86_64|head -n 1|cut -d"\"" -f4|cut -d"_
 wget `echo $URL`
 sudo dpkg -i --force-all cuda*.deb
 sudo aptitude update
-sudo aptitude install cuda nvidia-cuda-dev libopencv-core-dev libopencv-flann-dev libopencv-imgproc-dev
+sudo aptitude install cuda nvidia-cuda-dev libopencv-core-dev 
+sudo aptitude install libopencv-flann-dev libopencv-imgproc-dev libopencv-dev
 export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-`echo $VERSION`/lib64:$LD_LIBRARY_PATH
 echo "export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH" >> ~/.bashrc
