@@ -21,6 +21,7 @@ echo "export LD_LIBRARY_PATH=/usr/local/cuda-`echo $VERSION`/lib64:$LD_LIBRARY_P
 cd /usr/local/cuda-`echo $VERSION`/samples
 # Next compilation step will take at least 30 minutes:
 # Have a cup of coffee :-)
+sudo ln -s /usr/local/cuda-`echo $VERSION` /usr/local/cuda
 sudo make
 # Check if you have a graphics card that supports CUDA :
 /usr/local/cuda-`echo $VERSION`/samples/bin/x86_64/linux/release/deviceQuery
