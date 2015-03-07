@@ -2,8 +2,11 @@ How to get the eid electronic card reader ACR38U working in Ubuntu 14.04 64-bit
 
 Prerequisites: Ubuntu 14.04 64-bit, newest version of Mozilla Firefox, pcscd, default-jre, opensc, libacr38u,  libacr38ucontrol0, libacsccid1, libccid
 
-In a Terminal session, run the following commands:
+Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
 
+Copy-paste each command below one by one into the Terminal. Hit <ENTER> key between each command.
+
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A35743EA6773D225
 
 sudo apt-get remove --purge beid*
 
@@ -11,23 +14,42 @@ sudo touch /etc/apt/sources.list.d/eid.list
 
 sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
+
 sudo apt-get update
 
-sudo apt-get install  usbutils pciutils eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
+sudo apt-get install usbutils pciutils
+
 sudo update-pciids
+
 sudo update-usbids
+
+sudo apt-get install eid-archive eid-mw eid-viewer aptitude firefox pcscd default-jre
+
+sudo apt-get install opensc libacr38u libacr38ucontrol0 libacsccid1 libccid
+
+sudo apt-get install libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools
+
+sudo apt-get install libnss3-tools ca-certificates 
 
 cd $HOME/.mozilla/firefox/*.default
 
+# remove all Mozilla Firefox extensions to make sure eid card reader gets detected in Mozilla Firefox
 rm extensions*
+
 rm -rf extensions/*
+
 rm addons*
+
 sudo rm -rf /usr/lib/firefox/browser/extensions*
 
 cp prefs.js prefs.js_backup_`date -I`
+
+# delete old about:config configuration in Mozilla Firefox browser settings:
 grep -v security.ssl prefs.js > prefs.js.nossl.1
 grep -v extensions.enabled prefs.js.nossl.1 > prefs.js.nossl 
 
+# set correct about:config configuration in Mozilla Firefox browser settings:
 echo 'user_pref("security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref", true);' >> prefs.js.nossl
 echo 'user_pref("security.ssl.enable_false_start", true);' >> prefs.js.nossl
 echo 'user_pref("security.ssl.renego_unrestricted_hosts", "*.be");' >> prefs.js.nossl
@@ -39,16 +61,16 @@ cd $HOME
 rm *.crt*
 
 wget http://certs.eid.belgium.be/belgiumrs.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs -i belgiumrs.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs -i belgiumrs.crt
 
 wget http://certs.eid.belgium.be/belgiumrs2.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs2 -i belgiumrs2.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs2 -i belgiumrs2.crt
 
 wget http://certs.eid.belgium.be/belgiumrs3.crt
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
 
 wget http://certs.eid.belgium.be/belgiumrs4.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n belgiumrs4 -i belgiumrs4.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
 
 
 sudo mkdir /usr/share/ca-certificates/extra
@@ -60,9 +82,7 @@ sudo cp belgiumrs4.crt /usr/share/ca-certificates/extra/belgiumrs4.crt
 
 sudo dpkg-reconfigure ca-certificates
 
-sudo certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
-
-
+sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
 Manually replace the security.ssl.renego_unrestricted_hosts name value *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be
 
 Download Belgium Root CA, CA2, CA3 and CA4 certificates here:
