@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install unp build-essential checkinstall wget
 # Install cuda 6.5 first:
 cd /tmp
-rm cuda-downloads
+rm -rf cuda*
 wget --no-check-certificate   https://developer.nvidia.com/cuda-downloads
 URL=`grep 1404 cuda-downloads |grep x86_64|head -n 1|cut -d"\"" -f4`
 VERSION=`grep 1404 cuda-downloads |grep x86_64|head -n 1|cut -d"\"" -f4|cut -d"_" -f3|cut -d"-" -f1`
