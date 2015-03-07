@@ -5,7 +5,7 @@ sudo rm /etc/apt/trusted.gpg.d/*
 sudo apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre
 sudo rm -rf /etc/java-7-openjdk/*
 sudo apt-get update
-sudo apt-get install unp build-essential checkinstall wget
+sudo apt-get install unp build-essential checkinstall wget aptitude
 # Install cuda 6.5 first:
 cd /tmp
 rm -rf cuda*
@@ -15,7 +15,7 @@ VERSION=`grep 1404 cuda-downloads |grep x86_64|head -n 1|cut -d"\"" -f4|cut -d"_
 wget `echo $URL`
 sudo dpkg -i --force-all cuda*.deb
 sudo apt-get update
-sudo apt-get install cuda nvidia-cuda-dev
+sudo aptitude install cuda nvidia-cuda-dev libopencv-core-dev
 export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-`echo $VERSION`/lib64:$LD_LIBRARY_PATH
 echo "export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH" >> ~/.bashrc
