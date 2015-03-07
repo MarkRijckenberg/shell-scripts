@@ -56,3 +56,17 @@ apt-cache show truecrack
 #Description-md5: 556b8d22567101c7733f37ce6557412e
 truecrack
 
+sudo apt-get install  python-networkx python-skimage python-sklearn
+sudo apt-get install  python-matplotlib python-numpy python-pandas
+sudo apt-get install  python-jsonschema qupzilla openbox
+sudo apt-get install  spyder unp python-pip build-essential
+sudo pip install --upgrade networkx
+sudo pip install --upgrade scikit-image
+sudo pip install --upgrade scikit-learn
+sudo pip install --upgrade matplotlib
+sudo pip install --upgrade numpy
+sudo pip install --upgrade pandas
+sudo pip install --upgrade runipy
+sudo pip install --upgrade jsonschema
+sudo pip install --upgrade mistune
+
