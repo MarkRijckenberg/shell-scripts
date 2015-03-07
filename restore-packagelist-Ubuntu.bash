@@ -100,6 +100,7 @@ rm *.xpi
 rm ica_*
 rm google*
 sudo rm /etc/apt/sources.list.d/*
+sudo rm /etc/apt/trusted.gpg.d/*
 
 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET1 $HOME 
