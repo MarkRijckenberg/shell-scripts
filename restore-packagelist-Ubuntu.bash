@@ -1786,6 +1786,8 @@ echo "http://reproducibleresearch.net/links/"
 # following URL added on February 13, 2015:
 # detailed examples on how to use ggplot2:
 echo "http://www.sthda.com/"
+# following URL added on March 9, 2015:
+echo "http://www.sthda.com/english/wiki/principal-component-analysis-how-to-reveal-the-most-important-variables-in-your-data-r-software-and-data-mining?utm_content=buffer54310&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer"
 # following URL added on February 19, 2014:
 # free guides
 echo "http://onepager.togaware.com/"
