@@ -1,3 +1,4 @@
+#!/bin/bash
 # Required software: CUDA 6.5, in order to be able to compile truecrack 3.5 source code afterwards WITH Nvidia graphics card support
 # Required GNU/Linux distribution: Ubuntu 14.04 LTS 64-bit
 # Required free disk space: at least 5 gigabytes free disk space on your root (/) partition
