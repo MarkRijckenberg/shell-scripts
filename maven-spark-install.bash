@@ -1,3 +1,4 @@
+#!/bin/bash
 # Please make sure to close any web browser windows and any other 
 # memory hogging applications before running this memory intensive bash script.
 # Cleanup of previous install of Apache Spark:
