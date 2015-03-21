@@ -1,14 +1,17 @@
 #!/bin/bash
 # Purpose: this script will automatically compile and install
 # the newest version of maven and Apache Spark via the github sources
-# Minimum RAM requirements for this script: 2 Gigabytes of RAM 
+# Software requirements: Ubuntu 14.04 LTS 64-bit, git, build-essential,
+# ant, unp, python2.7, java 1.7.0 or higher
+# Minimum RAM requirements for this script: 2 Gigabytes of RAM (maybe even more) 
 # Please make sure to close any web browser windows and any other 
 # memory hogging applications before running this memory intensive bash script.
 # First uninstall any conflicting binary packages of maven and maven2:
 cd
 sudo apt-get update
 # Install tools required to build maven and Apache Spark:
-sudo apt-get install maven maven2 git build-essential ant unp python2.7
+sudo apt-get install maven maven2 git build-essential
+sudo apt-get install ant unp python2.7 openjdk-7-jre-headless 
 sudo apt-get purge maven maven2
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
@@ -38,7 +41,8 @@ cd spark
 # source: https://spark.apache.org/docs/1.1.0/building-with-maven.html
 export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
 mvn -DskipTests clean package
-# End result of mvn compilation process should look something like this (without any memory errors):
+# End result of Apache Spark build process should look
+# something like this (without any memory errors):
 # [INFO] ------------------------------------------------------------------------
 # [INFO] Reactor Summary:
 # [INFO] 
