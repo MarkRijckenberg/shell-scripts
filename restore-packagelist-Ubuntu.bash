@@ -1941,6 +1941,9 @@ echo "http://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to
 # Data Cleaning for Beginners: Part 2
 # following URL added on April 25, 2014:
 echo "http://statsguys.wordpress.com/2014/01/11/data-analytics-for-beginners-pt-2/"
+# following URL added on March 21, 2015: 
+echo "http://www.analyticbridge.com/group/books/forum/topics/free-ebook-practical-data-cleaning"
+
 
 # Free online courses:
 
