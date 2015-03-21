@@ -1,4 +1,5 @@
 #!/bin/bash
+# Based on: https://spark.apache.org/docs/1.1.0/building-with-maven.html
 # Purpose: this script will automatically compile and install
 # the newest version of maven and Apache Spark via the github sources
 # Software requirements: Ubuntu 14.04 LTS 64-bit, git, build-essential,
@@ -38,7 +39,6 @@ cd
 git clone git://github.com/apache/spark.git
 cd spark
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
-# source: https://spark.apache.org/docs/1.1.0/building-with-maven.html
 export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
 mvn -DskipTests clean package
 # End result of Apache Spark build process should look
