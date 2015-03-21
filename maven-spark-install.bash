@@ -31,8 +31,9 @@ mvn -v
 cd
 git clone git://github.com/apache/spark.git
 cd spark
-# increase MaxPermSize to 1024m to avoid out-of-memory errors during compile process:
-MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=1024m"
+# increase MaxPermSize to avoid out-of-memory errors during compile process:
+# source: https://spark.apache.org/docs/1.1.0/building-with-maven.html
+export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
 mvn -DskipTests clean package
 sudo addgroup spark
 sudo useradd -g spark spark
