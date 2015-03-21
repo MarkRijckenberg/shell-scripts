@@ -77,7 +77,7 @@ mvn -DskipTests clean package
 # [INFO] Final Memory: 83M/1292M
 # [INFO] ------------------------------------------------------------------------
 # Use following command to run pyspark using four CPU cores on the local machine:
-# source: https://spark.apache.org/docs/0.9.0/python-programming-guide.html
-MASTER=local[4] ~/spark/bin/pyspark -v
+# source: https://spark.apache.org/docs/1.3.0/programming-guide.html
+~/spark/bin/pyspark -v --master local[4]
 # Press CTRL-D to end the pyspark session
 
