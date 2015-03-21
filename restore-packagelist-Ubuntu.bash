@@ -2058,7 +2058,8 @@ echo "https://github.com/GoogleCloudPlatform/ipython-soccer-predictions"
 # combine SciDB (allow big data sets),RStudio (data analytics) and Shiny(interactive visualization)
 echo "http://illposed.net/scidb.pdf"
 # following URL added on November 28, 2014:
-# combine Apache Spark with Python using pyspark:
+# Combine Apache Spark with Python using pyspark:
+# Use tab completion and help function in ipython interactive shell to learn to use python:
 echo "https://www.edx.org/course/introduction-to-big-data-with-apache-spark-uc-berkeleyx-cs100-1x"
 # following URL added on November 28, 2014:
 # combine Apache Spark with R using SparkR:
