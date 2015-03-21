@@ -7,7 +7,7 @@
 # First uninstall any conflicting binary packages of maven and maven2:
 cd
 sudo apt-get update
-sudo apt-get install maven maven2 git build-essential ant unp
+sudo apt-get install maven maven2 git build-essential ant unp python2.7
 sudo apt-get purge maven maven2
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
