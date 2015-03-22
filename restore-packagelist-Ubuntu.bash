@@ -948,7 +948,7 @@ echo "alias d-u='sudo aptitude update ; sudo aptitude dist-upgrade'" >> ~/.confi
 # run shellshock test to see if bash is vulnerable
 cd $HOME
 rm *.sh
-wget https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
+wget --no-check-certificate https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
 
 # clean up current directory
 echo "Performing file cleanup"
