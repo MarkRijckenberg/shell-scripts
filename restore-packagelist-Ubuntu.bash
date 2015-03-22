@@ -734,6 +734,7 @@ cd /opt/teamviewer/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
+cd
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 # install Viber program
@@ -829,6 +830,7 @@ cd /opt/teamviewer/tv_bin/script
 sudo cp teamviewerd.sysv /etc/init.d/
 sudo chmod 755 /etc/init.d/teamviewerd.sysv
 sudo update-rc.d teamviewerd.sysv defaults
+cd
 # !!!!!! Also add teamviewer program to KDE's Autostart (autostart launch command to use: teamviewer)
 
 fi
@@ -879,6 +881,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 # System Rescue CD and Hiren Boot CD from the same USB stick
 # multisystem seems to work better than YUMI, because multisystem can successfully boot
 # Knoppix (4GB edition) but YUMI could not, when having multiple iso images on the same USB stick
+cd /tmp
 wget http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
 unp install-depot-multisystem.sh.tar.bz2
 ./install-depot-multisystem.sh
