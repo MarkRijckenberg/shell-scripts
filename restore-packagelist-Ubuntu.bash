@@ -1839,6 +1839,8 @@ echo "http://fivethirtyeight.com/"
 # following URL added on March 29, 2014:
 # list of data visualisation tools
 echo "http://selection.datavisualization.ch/"
+# data visualization - color guide for good visualization:
+echo "http://colorbrewer2.org/"
 # list of data visualisation tools
 # following URL added on November 27, 2014:
 echo "http://www.maartenlambrechts.be/category/datajournalistiek/"
