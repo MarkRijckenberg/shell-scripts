@@ -1557,6 +1557,8 @@ echo "http://www.krantenkoppen.be/?rub=koppen&cat=wetenschap&taal=EN"
 echo "http://www.krantenkoppen.be/?rub=koppen&cat=wetenschap&taal=NL"
 echo "http://www.economist.com/"
 echo "http://www.wired.com/"
+# following URL added on March 24, 2015:
+echo "http://www.flightradar24.com/"
 # following URL added on September 26, 2013:
 echo "http://www.nytimes.com/"
 # following URL added on June 12, 2013:
