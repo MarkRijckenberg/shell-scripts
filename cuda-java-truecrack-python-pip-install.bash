@@ -64,7 +64,7 @@ truecrack
 
 sudo apt-get install  python-networkx python-skimage python-sklearn
 sudo apt-get install  python-matplotlib python-numpy python-pandas
-sudo apt-get install  python-jsonschema openbox
+sudo apt-get install  python-jsonschema openbox ipython
 sudo apt-get install  spyder unp python-pip build-essential
 sudo pip install --upgrade networkx
 sudo pip install --upgrade scikit-image
