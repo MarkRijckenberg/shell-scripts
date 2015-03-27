@@ -1711,6 +1711,8 @@ echo "https://www.coursesites.com/webapps/Bb-sites-course-creation-BBLEARN/pages
 echo "https://www.oppia.org/learn"
 # following URL added on March 29, 2014:
 echo "http://www.mooc-list.com/"
+# following URL added on March 27, 2015:
+echo "https://openeducation.blackboard.com/mooc-catalog/courseDetails/view?course_id=_219_1"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
