@@ -32,6 +32,8 @@ REM Get web browsers
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install grepwin"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install geforce-game-ready-driver"
+
 REM Get Internet download utilities:
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Wget"
