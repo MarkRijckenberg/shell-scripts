@@ -12,7 +12,7 @@ cd
 sudo apt-get update
 # Install tools required to build maven and Apache Spark:
 sudo apt-get build-dep maven maven2
-sudo apt-get install git build-essential
+sudo apt-get install git build-essential python-protobuf protobuf-compiler
 sudo apt-get install ant unp python2.7 openjdk-7-jre-headless 
 sudo apt-get purge maven maven2
 # Also remove any previously installed versions of Apache Spark:
