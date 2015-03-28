@@ -2068,7 +2068,7 @@ echo "https://github.com/GoogleCloudPlatform/ipython-soccer-predictions"
 echo "http://illposed.net/scidb.pdf"
 # following URL added on November 28, 2014:
 # Combine Apache Spark with Python using pyspark:
-# Use tab completion and help function in ipython interactive shell to learn to use python:
+# Use tab completion and help function in "ipython notebook" to learn to use python:
 echo "https://www.edx.org/course/introduction-to-big-data-with-apache-spark-uc-berkeleyx-cs100-1x"
 # following URL added on November 28, 2014:
 # combine Apache Spark with R using SparkR:
