@@ -77,8 +77,25 @@ mvn -DskipTests clean package
 # [INFO] Finished at: 2015-03-21T02:19:07+01:00
 # [INFO] Final Memory: 83M/1292M
 # [INFO] ------------------------------------------------------------------------
-# Use following command to run pyspark using four CPU cores on the local machine:
+# As an example, load cars.csv from github into Apache Spark using pyspark and databricks package com.databricks:spark-csv_2.10:1.0.0
+# based on: https://github.com/databricks/spark-csv
+cd ~/spark
+rm cars.csv
+wget --no-check-certificate https://github.com/databricks/spark-csv/raw/master/src/test/resources/cars.csv
+# Use following command to run pyspark using four CPU cores on the local machine
+# while also loading the spark-csv databricks package:
 # source: https://spark.apache.org/docs/1.3.0/programming-guide.html
-~/spark/bin/pyspark -v --master local[4]
+# second source: https://github.com/databricks/spark-csv
+bin/pyspark -v --master local[4]  --packages com.databricks:spark-csv_2.10:1.0.0
+
+# manually copy-paste following commands into the pyspark Terminal session:
+from pyspark.sql import SQLContext
+sqlContext = SQLContext(sc)
+df = sqlContext.load("cars.csv", "com.databricks.spark.csv")
+df.select("year", "model").show()
+# output of last command should be similar to this:
+# year model
+# 2012 S    
+# 1997 E350 
 # Press CTRL-D to end the pyspark session
 
