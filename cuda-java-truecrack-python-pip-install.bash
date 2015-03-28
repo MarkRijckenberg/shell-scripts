@@ -3,10 +3,10 @@
 # Required GNU/Linux distribution: Ubuntu 14.04 LTS 64-bit
 # Required free disk space: at least 5 gigabytes free disk space on your root (/) partition
 sudo rm /etc/apt/trusted.gpg.d/*
-sudo apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre
-sudo rm -rf /etc/java-7-openjdk/*
+sudo apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
+sudo rm -rf /etc/java-*-openjdk/*
 sudo apt-get update
-sudo apt-get install unp build-essential checkinstall wget aptitude
+sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk
 # Install cuda 6.5 first:
 cd /tmp
 rm -rf cuda*
@@ -72,6 +72,7 @@ sudo pip install --upgrade mistune
 sudo pip install --upgrade networkx
 sudo pip install --upgrade numpy
 sudo pip install --upgrade pandas
+sudo pip install --upgrade py4j
 sudo pip install --upgrade runipy
 sudo pip install --upgrade scikit-image
 sudo pip install --upgrade scikit-learn
