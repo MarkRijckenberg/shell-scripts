@@ -895,25 +895,21 @@ rm *.html
 # documentation:  http://www.linuxuser.co.uk/tutorials/create-flowcharts-with-yedcreate-flowcharts-with-yed
 # other BPMN tools: https://en.wikipedia.org/wiki/Comparison_of_Business_Process_Modeling_Notation_tools
 MACHINE_TYPE=`uname -m`
-
 cd /tmp
-rm *.sh
+rm yEd*
 rm *.html
-
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
-wget http://www.yworks.com/en/products_yed_download.html
+wget --no-check-certificate http://www.yworks.com/en/products_yed_download.html
 YEDVERSION=`cat products_yed_download.html |grep Download|grep yEd|cut -d" " -f3|cut -d"<" -f1`
-wget http://live.yworks.com/yed-downloads/yEd-`echo $YEDVERSION`_64-bit_setup.sh
+wget --no-check-certificate http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_64-bit_setup.sh
 sh yEd-`echo $YEDVERSION`_64-bit_setup.sh
-
 else
   # 32-bit stuff here
-wget http://www.yworks.com/en/products_yed_download.html
+wget --no-check-certificate http://www.yworks.com/en/products_yed_download.html
 YEDVERSION=`cat products_yed_download.html |grep Download|grep yEd|cut -d" " -f3|cut -d"<" -f1`
-wget http://live.yworks.com/yed-downloads/yEd-`echo $YEDVERSION`_32-bit_setup.sh
+wget --no-check-certificate http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_32-bit_setup.sh
 sh yEd-`echo $YEDVERSION`_32-bit_setup.sh
-
 fi
 
 # install Kruidvat fotoservice software
