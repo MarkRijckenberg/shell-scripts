@@ -77,16 +77,19 @@ mvn -DskipTests clean package
 # [INFO] Finished at: 2015-03-21T02:19:07+01:00
 # [INFO] Final Memory: 83M/1292M
 # [INFO] ------------------------------------------------------------------------
-# As an example, load cars.csv from github into Apache Spark using pyspark and databricks package com.databricks:spark-csv_2.10:1.0.0
-# based on: https://github.com/databricks/spark-csv
+# First get the latest groupId, artifactId and version info about com.databricks:spark-csv here:
+# https://github.com/databricks/spark-csv
+# As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
+# com.databricks:spark-csv_2.11:1.0.1
+# Copy-paste the following commands into the bash Terminal:
 cd ~/spark
 rm cars.csv
 wget --no-check-certificate https://github.com/databricks/spark-csv/raw/master/src/test/resources/cars.csv
+VERSION="2.11:1.0.1"
 # Use following command to run pyspark using four CPU cores on the local machine
 # while also loading the spark-csv databricks package:
 # source: https://spark.apache.org/docs/1.3.0/programming-guide.html
-# second source: https://github.com/databricks/spark-csv
-bin/pyspark -v --master local[4]  --packages com.databricks:spark-csv_2.10:1.0.0
+bin/pyspark -v --master local[4]  --packages com.databricks:spark-csv_`echo $VERSION`
 
 # manually copy-paste following commands into the pyspark Terminal session:
 from pyspark.sql import SQLContext
@@ -98,4 +101,6 @@ df.select("year", "model").show()
 # 2012 S    
 # 1997 E350 
 # Press CTRL-D to end the pyspark session
+# useful link:  http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
+
 
