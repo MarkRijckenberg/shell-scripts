@@ -77,19 +77,26 @@ mvn -DskipTests clean package
 # [INFO] Finished at: 2015-03-21T02:19:07+01:00
 # [INFO] Final Memory: 83M/1292M
 # [INFO] ------------------------------------------------------------------------
-# First get the latest groupId, artifactId and version info about com.databricks:spark-csv here:
-# https://github.com/databricks/spark-csv
+# Based on: https://github.com/databricks/spark-csv
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
-# com.databricks:spark-csv_2.11:1.0.1
-# Copy-paste the following commands into the bash Terminal:
+# com.databricks:spark-csv
 cd ~/spark
+# first clean up any previously downloaded files:
 rm cars.csv
+rm spark-csv
 wget --no-check-certificate https://github.com/databricks/spark-csv/raw/master/src/test/resources/cars.csv
-VERSION="2.11:1.0.1"
+wget --no-check-certificate  https://github.com/databricks/spark-csv
+groupId=`grep groupId spark-csv|cut -d":" -f2`
+artifactId=`grep artifactId spark-csv|cut -d":" -f2`
+version=`grep version spark-csv|tail -n 1|cut -d":" -f2`
+# !!!!!!!  However, latest version 2.11:1.0.1 is currently broken (since 2015/3/28) !!!!!!
+# Using version 2.10:1.0.0 instead:
+artifactId="spark-csv_2.10"
+version="1.0.0"
 # Use following command to run pyspark using four CPU cores on the local machine
 # while also loading the spark-csv databricks package:
 # source: https://spark.apache.org/docs/1.3.0/programming-guide.html
-bin/pyspark -v --master local[4]  --packages com.databricks:spark-csv_`echo $VERSION`
+bin/pyspark -v --master local[4]  --packages `echo $groupId`:`echo $artifactId`:`echo $version`
 
 # manually copy-paste following commands into the pyspark Terminal session:
 from pyspark.sql import SQLContext
@@ -102,5 +109,3 @@ df.select("year", "model").show()
 # 1997 E350 
 # Press CTRL-D to end the pyspark session
 # useful link:  http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
-
-
