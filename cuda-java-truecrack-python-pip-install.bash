@@ -75,4 +75,5 @@ sudo pip install --upgrade pandas
 sudo pip install --upgrade runipy
 sudo pip install --upgrade jsonschema
 sudo pip install --upgrade mistune
+sudo pip install --upgrade ipython
 
