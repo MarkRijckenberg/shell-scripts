@@ -66,14 +66,17 @@ sudo apt-get install  python-networkx python-skimage python-sklearn
 sudo apt-get install  python-matplotlib python-numpy python-pandas
 sudo apt-get install  python-jsonschema openbox ipython
 sudo apt-get install  spyder unp python-pip build-essential
-sudo pip install --upgrade networkx
-sudo pip install --upgrade scikit-image
-sudo pip install --upgrade scikit-learn
+sudo pip install --upgrade ipython
 sudo pip install --upgrade matplotlib
+sudo pip install --upgrade mistune
+sudo pip install --upgrade networkx
 sudo pip install --upgrade numpy
 sudo pip install --upgrade pandas
 sudo pip install --upgrade runipy
+sudo pip install --upgrade scikit-image
+sudo pip install --upgrade scikit-learn
+sudo pip install --upgrade scipy
+sudo pip install --upgrade scipy-data_fitting
+sudo pip install --upgrade statsmodels
 sudo pip install --upgrade jsonschema
-sudo pip install --upgrade mistune
-sudo pip install --upgrade ipython
 
