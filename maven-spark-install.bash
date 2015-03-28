@@ -89,10 +89,6 @@ wget --no-check-certificate  https://github.com/databricks/spark-csv
 groupId=`grep groupId spark-csv|cut -d":" -f2`
 artifactId=`grep artifactId spark-csv|cut -d":" -f2`
 version=`grep version spark-csv|tail -n 1|cut -d":" -f2`
-# !!!!!!!  However, latest version 2.11:1.0.1 is currently broken (since 2015/3/28) !!!!!!
-# Using version 2.10:1.0.0 instead:
-artifactId="spark-csv_2.10"
-version="1.0.0"
 # Use following command to run pyspark using four CPU cores on the local machine
 # while also loading the spark-csv databricks package:
 # source: https://spark.apache.org/docs/1.3.0/programming-guide.html
@@ -101,7 +97,7 @@ bin/pyspark -v --master local[4]  --packages `echo $groupId`:`echo $artifactId`:
 # manually copy-paste following commands into the pyspark Terminal session:
 from pyspark.sql import SQLContext
 sqlContext = SQLContext(sc)
-df = sqlContext.load("cars.csv", "com.databricks.spark.csv")
+df = sqlContext.load(source = "com.databricks.spark.csv", header = "true",path = "cars.csv")
 df.select("year", "model").show()
 # output of last command should be similar to this:
 # year model
