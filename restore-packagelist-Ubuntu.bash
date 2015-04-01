@@ -1958,7 +1958,7 @@ echo "http://www.mooc-list.com/"
 
 # free Stanford courses about R and other subjects
 # following URL added on March 12, 2014:
-echo "https://class.stanford.edu"
+echo "https://lagunita.stanford.edu/"
 # following URL added on February 28, 2014:
 # Free online Data Science courses here:
 echo "https://www.udacity.com/courses#!/Data%20Science"
