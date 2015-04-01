@@ -62,23 +62,13 @@ apt-cache show truecrack
 #Description-md5: 556b8d22567101c7733f37ce6557412e
 truecrack
 
+sudo apt-get install build-essential libtiff4-dev libfftw3-dev libX11-dev libxt-dev libxaw7-dev phylip
 sudo apt-get install  python-networkx python-skimage python-sklearn
 sudo apt-get install  python-matplotlib python-numpy python-pandas
-sudo apt-get install  python-jsonschema openbox ipython
-sudo apt-get install  spyder unp python-pip build-essential
-sudo pip install --upgrade beautifulsoup4
-sudo pip install --upgrade ipython
-sudo pip install --upgrade matplotlib
-sudo pip install --upgrade mistune
-sudo pip install --upgrade networkx
-sudo pip install --upgrade numpy
-sudo pip install --upgrade pandas
-sudo pip install --upgrade py4j
-sudo pip install --upgrade runipy
-sudo pip install --upgrade scikit-image
-sudo pip install --upgrade scikit-learn
-sudo pip install --upgrade scipy
-sudo pip install --upgrade scipy-data_fitting
-sudo pip install --upgrade statsmodels
-sudo pip install --upgrade jsonschema
+sudo apt-get install  python-jsonschema openbox ipython python-scipy
+sudo apt-get install  spyder unp python-pip build-essential python-dev swig
+sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
+sudo pip install --upgrade ipython mistune networkx pandas py4j runipy
+sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
+sudo pip install --upgrade statsmodels jsonschema
 
