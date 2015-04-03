@@ -63,12 +63,12 @@ apt-cache show truecrack
 truecrack
 
 sudo apt-get install build-essential libtiff4-dev libfftw3-dev libX11-dev libxt-dev libxaw7-dev phylip
-sudo apt-get install  python-networkx python-skimage python-sklearn
+sudo apt-get install  python-bs4 python-networkx python-skimage python-sklearn
 sudo apt-get install  python-matplotlib python-numpy python-pandas
 sudo apt-get install  python-jsonschema openbox ipython python-scipy
 sudo apt-get install  spyder unp python-pip build-essential python-dev swig
 sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
 sudo pip install --upgrade ipython mistune networkx pandas py4j runipy
 sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
-sudo pip install --upgrade statsmodels jsonschema
+sudo pip install --upgrade statsmodels jsonschema pattern
 
