@@ -1670,7 +1670,8 @@ echo "https://3.hidemyass.com"
 #     Math links for kids                                                                     #
 ###############################################################################################
 # following URL added on February 18, 2014:
-echo "http://packages.ubuntu.com/saucy/edubuntu-desktop"
+echo "http://packages.ubuntu.com/trusty/edubuntu-desktop"
+echo "http://packages.ubuntu.com/trusty/ubuntu-edu-primary"
 # following URL added on February 18, 2014:
 echo "http://mathworld.wolfram.com/"
 # following URL added on February 12, 2014:
