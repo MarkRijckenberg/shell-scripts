@@ -1,0 +1,54 @@
+Here is a list of continuous delivery / DevOps tools that I have compiled that can be used to help 
+automate the provisioning and deployment of software onto GNU/Linux servers (Debian, Ubuntu, Red Hat, etc ...) :
+
+Keep in mind that this list is rapidly evolving and will need to be reviewed at least once a year.
+
+
+Continuous Delivery Toolchain in the Enterprise (rapidly evolving)
+
+======================================================
+
+main types of management tools:
+step 1) image generation (optional): boxgrinder, bitnami, Suse Studio, m23
+step 2) bootstrapping (optional): openstack, cloudstack, ubuntu server
+step 3) provisioning : Amazon AWS CloudFormation, openqrm (support for high-availability), seedBank (tool @github for proxmox), crowbar (tool @github for openstack), cobbler, foreman, maas, juju, razor, vagrant, docker, Packer, VeeWee, ansible, Salt Cloud, m23, Spacewalk, IBM® UrbanCode Deploy
+step 4) release Management + automation
+               4.1 Repository: pulp (yum repos), yum s3 plugin, artifactory, archiva
+               4.2 Artifact: Sonatype Nexus, eggs, gems, perlmod, rpm, deb, jar, war, ear, IBM® UrbanCode Deploy
+               4.3 Build: ant, jenkins (formally known as hudson; can manage pulp, git,rpm  and deployment lifecycle), maven, make, gradle (combines power of ant+maven)
+               4.4 SCM: git (can manage puppet manifests and modules), github, svn, cvs, hg, Perforce
+               4.5 Tracker: glpi (can integrate with nagios), bugzilla, mantis, trac
+step 5) configuration management: openqrm,ansible, foreman (can be data backend for puppet), puppet, geppetto, facter, hiera, chef solo, cfengine, ncf, saltstack, Spacewalk, RANCID, Fabric (python), IBM® UrbanCode Deploy
+step 6) orchestration/start-stop services: openqrm, foreman, capistrano, rundeck, fabric, func, mcollective, salt, ansible, IBM® UrbanCode Deploy
+step 7) monitoring, control and runbook automation
+               7.1 monitoring: openqrm, icinga, foreman, nagios (works well with puppet 3.0), zenoss, cacti
+               7.2 runbook automation: controltier, jobscheduler, openscheduler
+               7.3 Command line automation tools: cron, perl, python, bash/korn shell, rerun (@github), expect (interactive CLI automation)
+               7.4 resilience test tool: Netflix / SimianArmy (@github)
+               7.5 metrics/graphing/dashboards: StatsD+Graphite, Splunk, Grafana, New Relic, AppDynamics
+               7.6 logging: Logstash, Kibana, ElasticSearch, Splunk
+
+Essential reading (in my humble opinion):
+
+Gene Kim: The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win [Kindle Edition]
+http://www.amazon.com/gp/product/B00AZRBLHO/ref=oh_d__o00_details_o00__i00?ie=UTF8&psc=1
+
+Succeeding with Agile: Software Development Using Scrum
+Succeeding with Agile: Software Development Using Scrum: Mike Cohn: 9780321579362: Amazon.com: Books
+
+Deploying Rails: Automate, Deploy, Scale, Maintain, and Sleep at Night (The Facets of Ruby) [Paperback]
+http://www.amazon.com/Deploying-Rails-Automate-Deploy-Maintain/dp/1934356956/ref=sr_1_cc_1?s=aps&ie=UTF8&qid=1364822811&sr=1-1-catcorr&keywords=deploying+rails
+
+Release It!: Design and Deploy Production-Ready Software (Pragmatic Programmers) [Paperback]
+Antifragile: Things That Gain from Disorder [Hardcover]
+Thinking in Systems: A Primer [Paperback]
+
+Drift into Failure [Paperback]
+
+Collaboration Summit 2013 - Hitchhiker's Guide to the Open Cloud
+
+Collaboration Summit 2013 - Hitchhiker's Guide to the Open Cloud - YouTube
+
+To be released by Gene Kim in 2015:  DevOps Cookbook - Home page of RealGeneKim (Gene Kim): Tripwire founder and CTO, Visible Ops co-author, and more...
+
+Gene Kim: A conversation with Gene Kim on DevOps, waterfall development, and containers | The Enterprisers Project
