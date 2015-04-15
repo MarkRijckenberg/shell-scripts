@@ -2124,6 +2124,8 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
+# following URL added on April 15, 2015:
+echo "https://campus.datacamp.com/courses/r-programming-with-swirl/chapter-1-the-true-basics?ex=2"
 # Informatica PowerCenter ETL
 # IBM Cognos Business Intelligence V10.1 Handbook:
 echo "http://www.redbooks.ibm.com/redbooks/pdfs/sg247912.pdf"
