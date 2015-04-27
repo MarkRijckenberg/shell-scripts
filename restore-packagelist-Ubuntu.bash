@@ -178,6 +178,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/release-2
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutter
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stellarium/stellarium-releases
 
 ##########################################################################################################
 # add astronomy PPA repositories
