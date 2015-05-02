@@ -702,13 +702,14 @@ sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-
 sudo rm googleearth*.deb
 sudo rm google-earth*.deb
 sudo rm GoogleEarth*
-sudo dpkg -P google-earth
+sudo dpkg -P google-earth-stable
 sudo dpkg -P googleearth
+sudo dpkg -P googleearth-package
 # install new Google Earth
 # sudo dpkg --add-architecture i386
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libcurl3:i386 libfreeimage3 lib32nss-mdns multiarch-support lsb-core googleearth-package
-sudo make-googleearth-package --force
-sudo dpkg -i googleearth*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libcurl3:i386 libfreeimage3 lib32nss-mdns multiarch-support lsb-core
+wget --no-check-certificate https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+sudo dpkg -i google-earth*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 
@@ -800,12 +801,14 @@ sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-
 sudo rm googleearth*.deb
 sudo rm google-earth*.deb
 sudo rm GoogleEarth*
-sudo dpkg -P google-earth
+sudo dpkg -P google-earth-stable
 sudo dpkg -P googleearth
-#     install new Google Earth
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  libfreeimage3 lib32nss-mdns multiarch-support lsb-core googleearth-package
-sudo make-googleearth-package --force
-sudo dpkg -i googleearth*.deb 
+sudo dpkg -P googleearth-package
+# install new Google Earth
+# sudo dpkg --add-architecture i386
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libcurl3:i386 libfreeimage3 lib32nss-mdns multiarch-support lsb-core
+wget --no-check-certificate https://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
+sudo dpkg -i google-earth*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install newest wine version 
