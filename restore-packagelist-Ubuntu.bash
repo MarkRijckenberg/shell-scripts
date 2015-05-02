@@ -698,6 +698,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 #     uninstall old Google Earth
 cd $HOME
 rm -rf $HOME/.googleearth
+sudo rm -rf /opt/google/earth/
 sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
 sudo rm googleearth*.deb
 sudo rm google-earth*.deb
@@ -797,6 +798,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 #     uninstall old Google Earth
 cd $HOME
 rm -rf $HOME/.googleearth
+sudo rm -rf /opt/google/earth/
 sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
 sudo rm googleearth*.deb
 sudo rm google-earth*.deb
