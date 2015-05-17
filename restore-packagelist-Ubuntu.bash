@@ -2130,6 +2130,9 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
+# study SQL Server 2016 (which will include R integration)
+# source: http://developers.slashdot.org/story/15/05/16/1748232/in-database-r-coming-to-sql-server-2016
+echo "http://download.microsoft.com/download/F/D/3/FD33C34D-3B65-4DA9-8A9F-0B456656DE3B/SQL_Server_2016_datasheet.pdf"
 # following URL added on April 15, 2015:
 echo "https://campus.datacamp.com/courses/r-programming-with-swirl/chapter-1-the-true-basics?ex=2"
 # Informatica PowerCenter ETL
