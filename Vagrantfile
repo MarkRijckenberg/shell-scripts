@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Note the forward slashes used, even on Windows
     # config.vm.box_url =  "file:///D:/vagrant/rstudio-shiny-server-on-ubuntu/trusty/trusty64.box"
     config.vm.box_url =  "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
-    
+    config.vm.box_download_insecure = true
     # Port forwarding
     config.vm.network "forwarded_port", guest: 3838, host: 3838
     # RStudio
