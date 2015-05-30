@@ -143,7 +143,7 @@ echo "Update all currently installed choco packages:"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyPackageUpdater"
 
-cup all
+cup -y all
 
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
