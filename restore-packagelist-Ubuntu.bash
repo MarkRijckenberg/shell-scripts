@@ -180,6 +180,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutte
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stellarium/stellarium-releases
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:clipgrab-team/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable
 
 ##########################################################################################################
 # add astronomy PPA repositories
