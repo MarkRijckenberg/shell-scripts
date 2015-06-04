@@ -473,10 +473,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install tlp tlp-rd
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install kazam
 
-# install hotshots Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
+# install shutter Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install hotshots
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install shutter
 
 # install Final Term - excellent Terminal emulator in  Ubuntu 12.04 / 12.10 / 13.04
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
