@@ -436,7 +436,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install hal
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:i-nex-development-team/daily
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:nemh/gambas3
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install i-nex 
+#sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install i-nex 
 
 # install Variety - cool wallpaper changer
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
