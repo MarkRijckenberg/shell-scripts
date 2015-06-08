@@ -19,7 +19,7 @@ step 4) release Management + automation
                4.4 SCM: git (can manage puppet manifests and modules), github, svn, cvs, hg, Perforce
                4.5 Tracker: glpi (can integrate with nagios), bugzilla, mantis, trac
 step 5) configuration management: openqrm,ansible, foreman (can be data backend for puppet), puppet, geppetto, facter, hiera, chef solo, cfengine, ncf, saltstack, Spacewalk, RANCID, Fabric (python), IBM® UrbanCode Deploy
-step 6) orchestration/start-stop services: openqrm, foreman, capistrano, rundeck, fabric, func, mcollective, salt, ansible, IBM® UrbanCode Deploy
+step 6) orchestration/start-stop services: openqrm, foreman, capistrano, rundeck, fabric, func, mcollective, salt, ansible, IBM® UrbanCode Deploy, Kubernetes or Helios d(both are Docker orchestration tools)
 step 7) monitoring, control and runbook automation
                7.1 monitoring: openqrm, icinga, foreman, nagios (works well with puppet 3.0), zenoss, cacti
                7.2 runbook automation: controltier, jobscheduler, openscheduler
