@@ -2072,6 +2072,7 @@ echo "http://illposed.net/scidb.pdf"
 # Combine Apache Spark with Python using pyspark:
 # Use tab completion and help function in "ipython notebook" to learn to use python:
 echo "https://www.edx.org/course/introduction-to-big-data-with-apache-spark-uc-berkeleyx-cs100-1x"
+echo "https://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.RDD"
 # following URL added on November 28, 2014:
 # combine Apache Spark with R using SparkR:
 echo "https://www.youtube.com/watch?v=CUX1SG9zTkU&list=PL-x35fyliRwiuc6qy9z2erka2VX8LY53x"
