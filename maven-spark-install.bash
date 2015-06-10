@@ -25,6 +25,7 @@ cd maven
 ant -Dmaven.home="$HOME/apps/maven/apache-maven-SNAPSHOT"
 cd ~/maven/apache-maven/target
 unp apache-maven-*-bin.tar.gz
+sudo rm /usr/bin/mvn
 sudo ln -s ~/maven/apache-maven/target/apache-maven-*/bin/mvn  /usr/bin/mvn
 mvn -v
 # example of Terminal output:
