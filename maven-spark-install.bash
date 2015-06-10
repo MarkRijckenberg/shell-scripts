@@ -9,12 +9,15 @@
 # memory hogging applications before running this memory intensive bash script.
 # First uninstall any conflicting binary packages of maven and maven2:
 cd
-sudo apt-get update
-# Install tools required to build maven and Apache Spark:
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutter
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+# Install tools required to build maven and Apache Spark with sparkR support:
 sudo apt-get build-dep maven maven2
-sudo apt-get install git build-essential python-protobuf protobuf-compiler
-sudo apt-get install ant unp python2.7 openjdk-7-jre-headless 
-sudo apt-get purge maven maven2
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git build-essential python-protobuf protobuf-compiler
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 openjdk-7-jre-headless 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  purge maven maven2
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
