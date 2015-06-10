@@ -41,7 +41,7 @@ git clone git://github.com/apache/spark.git
 cd spark
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
 export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
-mvn -DskipTests clean package
+mvn -PsparkR -DskipTests clean package
 # End result of Apache Spark build process should look
 # something like this (without any memory errors):
 # [INFO] ------------------------------------------------------------------------
