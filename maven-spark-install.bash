@@ -44,7 +44,7 @@ rm -rf SparkR-pkg/
 git clone https://github.com/amplab-extras/SparkR-pkg.git
 cd SparkR-pkg/
 SPARK_VERSION=1.4.0 USE_MAVEN=1 ./install-dev.sh
-./sparkR examples/pi.R local[2]
+# ./sparkR examples/pi.R local[2]
 # install newest version of Apache Spark:
 cd
 git clone git://github.com/apache/spark.git
