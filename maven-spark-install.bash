@@ -38,7 +38,12 @@ mvn -v
 #Java home: /usr/lib/jvm/java-7-oracle/jre
 #Default locale: en_US, platform encoding: UTF-8
 #OS name: "linux", version: "4.0.0-040000rc3-lowlatency", arch: "amd64", family: "unix"
-
+# install SparkR-pkg
+cd
+rm -rf SparkR-pkg/
+git clone https://github.com/amplab-extras/SparkR-pkg.git
+cd SparkR-pkg/
+SPARK_VERSION=1.4.0 USE_MAVEN=1 ./install-dev.sh
 # install newest version of Apache Spark:
 cd
 git clone git://github.com/apache/spark.git
