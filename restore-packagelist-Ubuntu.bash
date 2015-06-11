@@ -2103,7 +2103,8 @@ echo "http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joi
 echo "Learn MySQL commands = de facto SQL (dialect) standard"
 echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
 
-# following URL added on July 8, 2014:
+# following URL added on June 11, 2015:
+echo "https://www.coursera.org/course/pythonlearn"
 echo "http://www.codecademy.com/tracks/python"
 echo "https://developers.google.com/edu/python/"
 # ipython notebook webserver in virtualbox VM configured using vagrant (configure time using chef in VM: 31 minutes)
