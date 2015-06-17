@@ -2132,6 +2132,9 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
+# !!!! Data Smart ('light' data analytics using Microsoft Excel)
+echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
+# study Scala (functional programming language) -> Apache Spark is an extension of Scala
 # study SQL Server 2016 (which will include R integration)
 # source: http://developers.slashdot.org/story/15/05/16/1748232/in-database-r-coming-to-sql-server-2016
 echo "http://download.microsoft.com/download/F/D/3/FD33C34D-3B65-4DA9-8A9F-0B456656DE3B/SQL_Server_2016_datasheet.pdf"
@@ -2144,8 +2147,6 @@ echo "http://www.redbooks.ibm.com/redbooks.nsf/searchsite?SearchView&query=cogno
 # The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling Paperback – July 1, 2013
 # Kimball lifecycle
 # Microsoft SQL Server 2014 Business Intelligence Development Beginner's Guide
-# !!!! Data Smart ('light' data analytics using Microsoft Excel)
-echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
 # !!!! An Introduction to Statistical Learning
 echo "http://www-bcf.usc.edu/~gareth/ISL/"
 # !!!! OpenIntro Statistics 2nd edition
