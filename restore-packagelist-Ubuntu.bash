@@ -2129,6 +2129,13 @@ echo "http://strataconf.com/strata2014/public/schedule/proceedings"
 # Data Day Texas conference
 echo "http://datadaytexas.com/"
 
+#######################################################################################################
+#     Data Science related mathematics - learning requirements:                                       #
+#     linear algebra, vector algebra, category theory and lambda calculus (monads and monoids are     #
+#     used as base element for functional programming and big data software like Apache Spark)        #
+#     Also important are lambda abstractions/anonymous functions                                      #
+#######################################################################################################
+
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
