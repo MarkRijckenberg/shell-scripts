@@ -485,7 +485,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install shutter
 # source: https://github.com/trogdoro/xiki
 
 cd $HOME
-rm -rf xiki
+sudo rm -rf xiki
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  ruby1.9.3 ruby-dev
 git clone git://github.com/trogdoro/xiki.git
 cd xiki
