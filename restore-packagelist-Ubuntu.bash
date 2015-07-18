@@ -1884,6 +1884,8 @@ echo "http://pbil.univ-lyon1.fr/Rweb/Rweb.general.html"
 echo "http://www.rdatamining.com/docs"
 # following URL added on July 17, 2015:
 echo "http://www.datasciencecentral.com/group/resources/forum/topics/the-best-of-our-weekly-digests"
+# following URL added on July 18, 2015:
+echo "https://www.youtube.com/user/TheLearnR/playlists"
 
 ###############################################################################################
 #     Sabermetrics                                                                            #
