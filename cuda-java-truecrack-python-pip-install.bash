@@ -69,7 +69,8 @@ sudo apt-get install  python-jsonschema openbox python-scipy
 sudo apt-get install  spyder unp python-pip build-essential python-dev swig
 sudo apt-get install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap
 
-sudo apt-get remove  ipython ipython-notebook 
+# install newest version of ipython notebook:
+sudo apt-get remove  ipython ipython-notebook python-tornado
 sudo pip install --upgrade ipython tornado 
 
 sudo pip install --upgrade setuptools seaborn
