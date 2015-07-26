@@ -75,7 +75,7 @@ sudo pip install --upgrade ipython tornado
 
 sudo pip install --upgrade setuptools seaborn
 sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
-sudo pip install --upgrade ipython tornado mistune networkx pandas py4j runipy
+sudo pip install --upgrade mistune networkx pandas py4j runipy
 sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
 sudo pip install --upgrade statsmodels jsonschema pattern 
 
