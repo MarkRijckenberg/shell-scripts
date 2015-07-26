@@ -5,6 +5,7 @@
 # Software requirements: Ubuntu 14.04 LTS 64-bit, git, build-essential,
 # ant, unp, python2.7, java 1.7.0 or higher
 # Minimum RAM requirements for this script: 2 Gigabytes of RAM (maybe even more) 
+# Minimum free disk space requirements for this script: 1 Gigabyte (maybe even more) 
 # Please make sure to close any web browser windows and any other 
 # memory hogging applications before running this memory intensive bash script.
 # First uninstall any conflicting binary packages of maven and maven2:
