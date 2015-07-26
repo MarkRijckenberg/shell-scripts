@@ -23,6 +23,7 @@ sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
 # install newest version of maven
 rm -rf maven*
+sudo rm -rf ~/apps/maven
 git clone https://github.com/apache/maven.git
 cd maven
 ant -Dmaven.home="$HOME/apps/maven/apache-maven-SNAPSHOT"
