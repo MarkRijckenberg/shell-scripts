@@ -22,6 +22,8 @@ REM  the chocolatey package manager currently has 15055 packages (July 31,2015)
 REM  the nuget package manager currently has 40065 packages (July 31,2015)
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install nuget.commandline"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install nugetpackageexplorer"
+
 REM Get web browsers
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install Firefox"
@@ -67,7 +69,7 @@ msiexec /I  %CURLFILENAME% /quiet /passive
 
 REM Get R and RStudio
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Project"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install r.project"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Studio"
 
@@ -80,17 +82,23 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.install"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install conemu"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install cmder.portable -pre"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayeractivex"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install FoxitReader"
+
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install alcohol52-free"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install daemontoolslite"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install aimp"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install vlc"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install clipgrab"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.commandline"
  
@@ -116,13 +124,19 @@ REM install Android emulator, which depends on Virtualbox:
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install libreoffice"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install visioviewer2013"
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install pdf24"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install windirstat"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install qbittorrent"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install nomacs"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install daemontoolslite"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install cpu-z"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install duplicatecommander -pre"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install qbittorrent"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install steam"
 
@@ -131,6 +145,8 @@ REM install Android emulator, which depends on Virtualbox:
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install HitmanProPortable_x64"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ccleaner"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install emsisoft-anti-malware"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install combofix"
 
