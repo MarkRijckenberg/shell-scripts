@@ -80,13 +80,15 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.install"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install conemu
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install conemu"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayeractivex"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install FoxitReader"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install aimp"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install vlc"
  
@@ -104,7 +106,9 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install virtualbox"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install VBoxGuestAdditions.install"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install VBoxGuestAdditions.install"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install virtualbox.extensionpack"
 
 REM install Android emulator, which depends on Virtualbox:
 
@@ -127,6 +131,10 @@ REM install Android emulator, which depends on Virtualbox:
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install HitmanProPortable_x64"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ccleaner"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install combofix"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install vagrant"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install yumi"
 
