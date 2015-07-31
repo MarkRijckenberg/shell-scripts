@@ -14,9 +14,13 @@ cd c:\temp
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install pscx"
  
+REM  the chocolatey package manager currently has 15055 packages (July 31,2015)
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install chocolatey"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyGUI"
+
+REM  the nuget package manager currently has 40065 packages (July 31,2015)
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install nuget.commandline"
 
 REM Get web browsers
 
@@ -75,6 +79,8 @@ REM jre8 installer hangs; so line below has been disabled
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install jre8"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install 7zip.install"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install conemu
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install flashplayeractivex"
  
