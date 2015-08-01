@@ -12,6 +12,18 @@ echo "Update all currently installed choco packages:"
 
 cup -y all
 
+echo "Show list of locally installed packages - installed using choco package manager for Windows:"
+
+choco list -lo
+
+echo "After running this script, please start RStudio. In the RStudio interface, please click on"
+
+echo "'Help', then click on 'Check for Updates' and then click on 'Quit and Download' to get the newest version of RStudio"
+
+echo on
+
+pause
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install binroot"
@@ -173,14 +185,6 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install bleachbit"
 
 
-echo off
-
-echo "Update all currently installed choco packages:"
-
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyPackageUpdater"
-
-cup -y all
-
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
 choco list -lo
@@ -192,3 +196,14 @@ echo "'Help', then click on 'Check for Updates' and then click on 'Quit and Down
 echo on
 
 pause
+
+
+echo off
+
+echo "Update all currently installed choco packages:"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyPackageUpdater"
+
+cup -y all
+
+
