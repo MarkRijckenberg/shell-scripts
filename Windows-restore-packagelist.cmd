@@ -6,6 +6,12 @@ mkdir C:\temp
 
 cd c:\temp
 
+echo "Update all currently installed choco packages:"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyPackageUpdater"
+
+cup -y all
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install binroot"
