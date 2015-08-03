@@ -121,4 +121,6 @@ df.select("year", "model").show()
 # |2015| Volt|
 
 # Press CTRL-D to end the pyspark session
-# useful link:  http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
+# useful links:  
+# http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
+# https://spark.apache.org/docs/1.1.1/api/python/pyspark.rdd.RDD-class.html
