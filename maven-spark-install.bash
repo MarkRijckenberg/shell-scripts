@@ -106,7 +106,7 @@ version=`grep version spark-csv|tail -n 1|cut -d":" -f2|cut -d" " -f2`
 
 # Use following command to run pyspark using four CPU cores on the local machine
 # while also loading the spark-csv databricks package:
-# source: https://spark.apache.org/docs/1.4.0/programming-guide.html
+# source: https://spark.apache.org/docs/latest/programming-guide.html
 bin/pyspark -v --master local[4]  --packages `echo $groupId`:`echo $artifactId`:`echo $version`
 
 # manually copy-paste following commands into the pyspark Terminal session:
