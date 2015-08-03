@@ -106,6 +106,8 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install FoxitReader"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install belgium-eid-middleware -version 407.7466"
+
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install alcohol52-free"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install daemontoolslite"
