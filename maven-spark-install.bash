@@ -117,6 +117,8 @@ df.select("year", "model").show()
 # output of last command should be similar to this:
 # year model
 # 2012 S    
-# 1997 E350 
+# 1997 E350
+# |2015| Volt|
+
 # Press CTRL-D to end the pyspark session
 # useful link:  http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
