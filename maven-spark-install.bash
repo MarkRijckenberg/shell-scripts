@@ -90,17 +90,20 @@ mvn -PsparkR -DskipTests clean package
 # [INFO] Final Memory: 83M/1292M
 # [INFO] ------------------------------------------------------------------------
 # Based on: https://github.com/databricks/spark-csv
+
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
 # com.databricks:spark-csv
 cd ~/spark
+
 # first clean up any previously downloaded files:
 rm cars.csv
 rm spark-csv
 wget --no-check-certificate https://github.com/databricks/spark-csv/raw/master/src/test/resources/cars.csv
 wget --no-check-certificate  https://github.com/databricks/spark-csv
-groupId=`grep groupId spark-csv|cut -d":" -f2`
-artifactId=`grep artifactId spark-csv|cut -d":" -f2`
-version=`grep version spark-csv|tail -n 1|cut -d":" -f2`
+groupId=`grep groupId spark-csv|cut -d":" -f2|cut -d" " -f2|tail -n 1`
+artifactId=`grep artifactId spark-csv|cut -d":" -f2|cut -d" " -f2|tail -n 1`
+version=`grep version spark-csv|tail -n 1|cut -d":" -f2|cut -d" " -f2`
+
 # Use following command to run pyspark using four CPU cores on the local machine
 # while also loading the spark-csv databricks package:
 # source: https://spark.apache.org/docs/1.3.0/programming-guide.html
