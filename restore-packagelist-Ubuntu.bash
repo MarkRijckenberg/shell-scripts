@@ -1935,6 +1935,8 @@ echo "http://cdn.oreillystatic.com/en/assets/1/event/115/Data%20Workflows%20for%
 # -> so use liblinear R package -> computations via liblinear much quicker than via libsvm!
 # following URL added on April 23, 2014:
 echo "http://cran.r-project.org/web/packages/LiblineaR/LiblineaR.pdf"
+# following URL added on August 5, 2015:
+echo "http://www.kdnuggets.com/2014/06/top-10-data-analysis-tools-business.html"
 
 ###############################################################################################
 #     Data Science toolkit virtual machine images                                             #
