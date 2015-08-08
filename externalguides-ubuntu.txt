@@ -1,3 +1,4 @@
+||<tablestyle="float:right; font-size: 0.9em; width:20%; background:#F1F1ED; background-repeat: no-repeat; background-position:  98% 0.5ex; margin: 0 0 1em 1em; padding: 0.5em;"><<TableOfContents>>||
 = Independent guides =
 
 These guides are independently maintained. Much of their content is included in the Ubuntu community help pages, but newer material in these guides may not be.
@@ -149,5 +150,9 @@ These guides are independently maintained. Much of their content is included in 
 * [[http://www.linuxrsp.ru/win-lin-soft/table-eng.html | The table of equivalents / replacements / analogs of Windows software in GNU/Linux]]
 
 * [[http://www.osalt.com/ | Open-source as alternative - Find open source software alternatives to well-known commercial software]]
+
+= Hardware database showing which hardware components work in GNU/Linux =
+
+* [[https://h-node.org/ | H-node]]
 ----
 CategoryDocumentation
