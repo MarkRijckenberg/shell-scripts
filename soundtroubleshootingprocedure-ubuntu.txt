@@ -1,0 +1,480 @@
+||<tablestyle="float:right; font-size: 0.9em; width:35%; background:#F1F1ED; margin: 0 0 1em 1em;" style="padding:0.5em;"><<TableOfContents(2)>>||
+
+You may want to follow this guide to '''gather essential troubleshooting information''' about your sound card. This information will be useful in posting a question to launchpad and getting help from volunteers who are monitoring the Launchpad forums:
+ * [[https://answers.launchpad.net/ubuntu/+source/alsa-driver/+addquestion | https://answers.launchpad.net/ubuntu/+source/alsa-driver/]]
+
+The various different pages about sound issues each serve a different purpose or different tastes.  !OpenSource systems are about freedom OF choice so it's good that people are able to choose which pages they use.  
+
+'''The only supported releases of Ubuntu are the ones that are NOT End of Life (EOL) in the following table:'''
+
+https://wiki.ubuntu.com/Releases
+
+
+= Step 1 =
+
+-----
+
+'''Please exercise caution when running these commands! Carefully read and understand what they do. For instance, the ` sudo apt-get install ` command includes the entire Ubuntu desktop. This will likely create problems for users of the other flavors of Ubuntu -- a Kubuntu user would not want the Unity interface installed. While the outcome of running the suggested command string below may indeed fix certain sound problems, be aware that it is a very blunt approach and could result in unintended consequences.'''
+
+-----
+
+#1A.  If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or later, try this first:  
+
+{{{
+killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*; ~/.config/pulse
+}}}
+
+wait ten seconds, then run this:  
+
+{{{
+pulseaudio -k 
+}}}
+
+#1B.  Should the approach above fail to correct the problem (it is only known to work on some variations), you can try this next.  If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or later: 
+
+{{{
+killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*; ~/.config/pulse
+}}}
+
+wait 10 seconds, '''then reboot''' (putting the machine to sleep is not enough -- fully power it off and then back on).  Make sure to save your work first.  
+
+#1C.  If that still did not help, please proceed...
+
+If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or Ubuntu 14.04 LTS (trusty), then execute this command '''and reboot''':
+
+{{{
+sudo apt-get update;sudo apt-get dist-upgrade; sudo apt-get install pavucontrol linux-sound-base alsa-base alsa-utils lightdm ubuntu-desktop  linux-image-`uname -r` libasound2; sudo apt-get -y --reinstall install linux-sound-base alsa-base alsa-utils lightdm ubuntu-desktop  linux-image-`uname -r` libasound2; killall pulseaudio; rm -r ~/.pulse*; ubuntu-support-status; sudo usermod -aG `cat /etc/group | grep -e '^pulse:' -e '^audio:' -e '^pulse-access:' -e '^pulse-rt:' -e '^video:' | awk -F: '{print $1}' | tr '\n' ',' | sed 's:,$::g'` `whoami`
+}}}
+
+Concerning Ubuntu releases older than Ubuntu 12.04 LTS (Precise), please read this:
+
+https://wiki.ubuntu.com/Releases
+
+<<Anchor(Step+2)>>
+= Step 2 =
+
+'''In the Ubuntu [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Terminal console]] , make sure that unlimited scrolling is enabled:
+ * click on Edit > Profiles > "Default" profile > Scrolling. Choose "Unlimited" as scrolling option. Click Close and Close again.'''
+
+If you are using the Gnome interface, open [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | the Terminal console]] via "Applications->Accessories->Terminal"
+
+If you are using the Unity interface, the easiest way to open the Terminal is to use the 'search' function on the dash.
+Or you can click on the 'More Apps' button, click on the 'See more results' by the installed section, and find it in that list of applications.
+A third way, available after you click on the 'More Apps' button, is to go to the search bar, and see that the far right end of it says 'All Applications'. You then click on that, and you'll see the full list. Then you can go to Accessories > Terminal after that.
+
+So the methods in Unity are:
+
+Press CTRL-ALT-T key combination.
+
+Dash > Search for Terminal
+
+Dash > More Apps > 'See More Results' > Terminal
+
+Dash > More Apps > Accessories > Terminal
+
+
+= Step 3 =
+Reboot your computer.  Then run the following 2 diagnostic commands.  
+
+~-Tip: If you have a wheel mouse or 3-button mouse, you do not need to type the commands into the Terminal. Instead, copy the commands from this web page and paste them into the terminal. To do this, move your mouse cursor over the start of the command written on the Web page. Then press the left mouse button and drag the mouse till the end of the command to highlight the whole command; then release the mouse button. Then press the middle mouse button or mouse wheel anywhere inside the Terminal. The command should now be printed in the Terminal without errors. Now press <Enter> to execute the command.-~
+
+{{{
+wget -O alsa-info.sh http://www.alsa-project.org/alsa-info.sh && chmod +x ./alsa-info.sh && ./alsa-info.sh
+}}}
+
+Post the full Terminal output after the script has actually run by [[https://answers.launchpad.net/ubuntu/+source/alsa-driver/+addquestion | creating a new question in launchpad]] then copy&paste the terminal output into your newly created question.  Carefully inspect the Terminal output of the ALSA Information script that was generated by the previous diagnostic command
+{{{
+bash alsa-info.sh --stdout
+}}}
+
+After upgrading ALSA and rebooting the computer make sure that the ALSA library version and utilities version are exactly the same version number.  
+
+The Terminal output after running the ALSA information script should contain something like this:
+
+# ALSA Version
+
+# Driver version:     1.0.25 (if you are running Ubuntu 12.04.3 LTS (Precise Pangolin))
+
+# Library version:    1.0.25 (if you are running Ubuntu 12.04.3 LTS (Precise Pangolin))
+
+# Utilities version:  1.0.25 (if you are running Ubuntu 12.04.3 LTS (Precise Pangolin))
+
+If the Library and Utilities version numbers are not equal, this is probably due to one or more of the following issues:
+
+1. One of the ALSA components was not successfully upgraded during step 1 in this procedure
+
+2. ALSA was correctly installed or upgraded, but a wrong / old kernel was booted instead of the most recent kernel version. In that case, boot the newest kernel version (that is available in the standard/default Ubuntu repositories) and then retest sound.
+
+For example: if you installed or upgraded to Ubuntu '''12.04 LTS''' (Precise), make sure the running kernel version is '''3.2.0-23-generic or higher'''. Or else sound output/input will not work!
+
+You can check the currently running kernel version by running this command:
+
+{{{
+uname -r
+}}}
+
+If the ALSA driver version number in the Terminal output does NOT contain anything at all, please execute the following commands, then reboot and retest sound output using headphones and speakers:
+
+If you are using GNU/Linux kernel version 3.2, 3.13 or 3.16, please run these 2 commands:
+
+{{{
+sudo apt-add-repository ppa:ubuntu-audio-dev/alsa-daily
+}}}
+{{{
+sudo apt-get update
+}}}
+
+If you are using Ubuntu 12.04 LTS or Ubuntu 14.04 LTS, please also run this extra command:
+
+{{{
+sudo apt-get install oem-audio-hda-daily-dkms
+}}}
+
+If you are using Ubuntu 14.10 (Utopic Unicorn), please also run this extra command:
+
+{{{
+sudo apt-get install  oem-audio-hda-daily-lts-utopic-dkms 
+}}}
+
+If you are using Ubuntu 15.04 (Vivid Vervet), please also run this extra command:
+
+{{{
+sudo apt-get install oem-audio-hda-daily-lts-vivid-dkms 
+}}}
+
+Then reboot and retest sound output.
+
+Source:  https://wiki.ubuntu.com/Audio/UpgradingAlsa/DKMS
+
+= Step 4 =
+
+Copy & paste the following diagnostic command into the Linux Terminal, then press <Enter>. The command starts with the command '''cat''' and ends with the word '''sound'''.  (Do not copy & paste this diagnostic command from an email message into the Terminal, as that will only copy part of the command.)  When asked for your password, type your normal user password (no stars are given as you type); then press <Enter> again.
+
+~-Tip: If you have a wheel mouse or 3-button mouse, you do not need to type the commands into the Terminal. Instead, copy the commands from this web page and paste them into the terminal. To do this, move your mouse cursor over the start of the command written on the Web page. Then press the left mouse button and drag the mouse till the end of the command to highlight the whole command; then release the mouse button. Then press the middle mouse button or mouse wheel anywhere inside the Terminal. The command should now be printed in the Terminal without errors. Now press <Enter> to execute the command.-~
+
+{{{
+cat /proc/asound/{version,cards,devices,hwdep,pcm,seq/clients}; sudo rm /etc/asound.conf; sudo rm -r ~/.pulse ~/.asound* ;sudo rm ~/.pulse-cookie; sudo apt-get update; sudo apt-get install aptitude; sudo aptitude install paman gnome-alsamixer libasound2-plugins padevchooser libsdl1.2debian-pulseaudio; sudo lshw -short;ls -lart /dev/snd;  cat /dev/sndstat; lspci -nn; lsusb; sudo which alsactl; sudo fuser -v /dev/dsp /dev/snd/* ; dpkg -S bin/slmodemd; dmesg | egrep 'EMU|probe|emu|ALSA|alsa|ac97|udi|snd|ound|irmware'; sudo /etc/init.d/sl-modem-daemon status; sudo grep model /etc/modprobe.d/* ; sudo dmidecode|egrep 'anufact|roduct|erial|elease'; lsmod | egrep 'snd|usb|midi|udio'; pacmd list-sinks; aplay -l; sudo alsa force-reload;  ubuntu-support-status ; sudo lshw -C sound
+}}}
+
+
+||<tablestyle="float:left; margin: 0em 2em 0em 0em;" border="0" style="padding:0.5em; border-left: 0px; border-right: 0px; border-top: 0px; border-bottom: 0px">{{attachment:IconsPage/warning.png}} ||
+
+ * Post the full Terminal output into the original question that you previously created at answers.launchpad.net
+
+ * Also mention how you want to generate sound output: analog output via desktop speakers, digital output via an HDMI connection to the TV, via headphones, etc ...
+
+= Step 5 =
+
+Reboot and retest sound using the headphones and the speakers. Do not run a Gnome session in "Gnome Failsafe" mode; speakers are disabled in "Gnome Failsafe" mode.
+
+||<tablestyle="float:left; margin: 0em 2em 2em 0em;" style="padding:0.5em; border-left: 0px; border-right: 0px; border-top: 0px; border-bottom: 0px">{{attachment:IconsPage/warning.png}} ||
+
+ * After rebooting, verify that you have posted the full Terminal output from step 3 and step 4 into the original question that you previously created at answers.launchpad.net
+
+ * Also mention how you want to generate sound output: analog output via desktop speakers, digital output via an HDMI connection to the TV, via headphones, etc ...
+
+= Step 6 =
+
+Sometimes the playback device is muted by default. To fix this problem, you need to run
+
+{{{
+sudo apt-get install pavucontrol
+}}}
+
+then run the pavucontrol program from a terminal or by pressing Alt-F2 and typing 
+
+{{{
+pavucontrol
+}}}
+
+in the box that appears. 
+
+In this application - PulseAudio Volume Control - look through the tabs and see if either the input or output device is muted. You can tell by whether the little mute icon appears depressed or not. 
+You may also need to change the ALSA plug setting from "Built-in Audio Analog Stereo" to an alternative audio device that is listed there.
+Switch to the "Playback" tab and increase System sounds volume to 100%.
+
+
+= Step 7 =
+Run the following command in a Terminal:
+
+{{{
+alsamixer
+}}}
+
+In this application, make sure to set all channels to high volume levels. Make sure the different speakers (especially 'Front', 'Master', and 'PCM") are NOT muted and NOT set to low volume levels in alsamixer. 
+Move with the left and right keys on your keyboard until the "Master" item is highlighted (in red). If the letters "MM" are displayed under the volume bar, press "M" to unmute. Repeat with the "Master Mono", "Headphone", "PCM", "Front", "Surround", "Center" and "LFE" items. Press Esc when finished.
+
+If HDMI output has stopped working, muting and then unmuting the SPDIF output in alsamixer can cause the sound to start working again 
+
+If you are not using HDMI at all for sound output or video output, try disabling HDMI in the BIOS. It might solve your analog audio output issue.
+
+On some Toshiba laptop models (T40, T43p, ... R51e ...), the audio is muted, if either Headphone or Line Jack are NOT muted in alsamixer. See also ALSA Wiki FAQ [1]. Also, if Headphone Sense or Line Jack Sense are unmuted, audio is dead (R52, X40). By default the Sense settings are not shown in GNOME. A channel is muted in alsamixer, if there is an "MM" under that specific channel/volume bar.
+
+On some Toshiba laptop models, setting the PCM channel volume higher than 70% in alsamixer, may result in clipping (for example: very "harsh" and distorted sound both on the internal speakers and on headphones plug), regardless of the Master channel. 
+
+[[http://www.thinkwiki.org/wiki/Problem_with_audio_clipping | Problem with audio clipping]]
+
+HP Laptops in the dv5, dv6, dv7 series and some HP Mini netbook computers have a strange problem in Ubuntu. When you plug in the headphones, you will hear sound via the headphones and speakers at the same time.
+The following link should provide a workaround for that issue:
+
+[[http://digitizor.com/2009/10/22/fix-headphone-sound-problem-hp-laptop-linux/ | Problem with headphones]]
+
+On the HP Compaq nx8220, you can solve the simultaneous speaker/headphone output issue by enabling the Headphone Jack Sense option in the alsamixer application.
+
+= Step 8 =
+Report if you cannot hear sound through the speakers, the headphones or cannot hear sound on both.
+
+
+= Step 9 =
+If you are using a dual boot system (even with Windows and Ubuntu installed on separate partitions), then make sure to set the sound volume in Windows to a high level before booting into Ubuntu.  Also make sure to use the special function keys in Windows to make sure the loudspeakers are physically switched ON and working properly in Windows before installing and testing Ubuntu. This step is necessary with certain Toshiba Tecra laptops.
+
+
+= Step 10 =
+Run the command gnome-volume-control and set the Sound Theme to "No sounds".  The Sound Theme tool is also accessible via 
+System > Preferences > Sound
+
+
+= Step 11 =
+Try connecting headphones to different audio jacks/ports on the back-panel of the sound-card until you hopefully hear sound. Make sure to test ALL audio jacks/ports at the front AND the back of your PC.
+
+If sound is not working in both Windows and Ubuntu, please check your motherboard's manual to see if any jumpers are badly configured or missing. Some motherboards require you to add or reconfigure the jumpers on the motherboard to allow the rear panel sound connections to work.
+
+If you are using a laptop, it is also possible that the headphone jack is broken. Try poking into the headphone jack with a toothpick to see if it helps getting sound output working via the speakers.
+
+
+= Step 12 =
+
+If ALSA is still not loading any driver for your soundcard (for example: a Soundblaster Audigy PCI card) after upgrading to the newest version of ALSA, try reseating the PCI audio card into a different PCI slot on your PC's motherboard.
+
+
+= Step 13 =
+Specify the exact model and make of your PC (if possible) in the new thread that you created at Launchpad Answers Forum.
+
+= Step 14 =
+If you want to enable S/PDIF audio output, then unmute and increase volume on the S/PDIF and S/PDIF playback channels in the alsamixer application. Use the M key to toggle between muted (MM) and unmuted (00) states.
+
+Alternative way to enable SPDIF output automatically on login (tested on !SoundBlaster Audigy): 
+add following lines to /etc/rc.local:
+ 
+{{{
+ # Use COAX-digital output
+ amixer set 'IEC958 Optical' 100 unmute
+ amixer set 'Audigy Analog/Digital Output Jack' on
+}}}
+
+You can see the name of your card's digital output with: 
+
+{{{
+amixer scontrols
+}}}
+
+
+If the optical/coaxial digital output of your motherboard/sound card is not working or stopped working, and you have already enabled and unmuted it in alsamixer, run 
+{{{
+sudo iecset audio on
+}}}
+
+You can also put this command in /etc/rc.local , as it may stop working after a reboot.
+
+= Step 15 =
+In the BIOS, reset the BIOS values to default values.
+
+If such an option exists, change the onboard audio setting in the BIOS from "auto" to "enabled".
+
+If such an option exists, make sure BIOS option "Speakers and Headphones" is set to "enabled"
+
+If you happen to have two sound-cards installed in your pc, one integrated into the motherboard - for example: an hda-intel audiochip -  and one inserted into a PCI slot, then try removing the PCI audio card, reboot your pc and retest sound using only the motherboard's on-board audio chip.
+
+If you absolutely need to get the PCI audio card working, try disabling the motherboard's on-board audio chip via the BIOS. Then retest sound in Ubuntu.
+
+Save the change in the BIOS and reboot.
+
+If this does not help, please update the BIOS to the newest version and then retest sound output.
+
+Updating the BIOS may help.
+
+= Step 16 =
+
+If the HDMI output of your motherboard/sound card is not working or stopped working, and have already enabled and unmuted it in alsamixer, try the following HDMI troubleshooting procedure:
+
+https://docs.google.com/document/d/1iTlJ8BfqXUjaHO__TEdlkvuqB1WLOkGaudngc5SFLMI/edit#bookmark=id.2rzn5uz8d2h4
+
+Query for Playback Devices: 
+
+{{{
+aplay -l
+}}}
+
+ **** List of PLAYBACK Hardware Devices ****
+ card 0: NVidia [HDA NVidia], device 0: ALC1200 Analog [ALC1200 Analog]
+   Subdevices: 1/1
+   Subdevice #0: subdevice #0
+ card 0: NVidia [HDA NVidia], device 1: ALC1200 Digital [ALC1200 Digital]
+   Subdevices: 1/1
+   Subdevice #0: subdevice #0
+ card 0: NVidia [HDA NVidia], device 3: NVIDIA HDMI [NVIDIA HDMI]
+   Subdevices: 0/1
+   Subdevice #0: subdevice #0
+
+Now that we have the info for the HDMI device, try a test, In the example below, 0 is the card number and 3 is the device number. 
+
+{{{
+aplay -D plughw:0,3 /usr/share/sounds/alsa/Front_Center.wav
+}}}
+
+If aplay does not output any errors, but still no sound is heared, "reboot" the receiver, monitor or tv set. Since the HDMI interface executes a handshake on connection, it might have noticed before that there was no audio stream embedded, and disabled audio decoding. 
+
+If the test is successful, edit/create /etc/asound.conf to set HDMI as the default audio device, reboot, and audio should now work. ~-(Is there a better way to do this?)-~
+ 
+{{{
+cat /etc/asound.conf
+}}}
+
+ pcm.!default {
+      type plug
+      slave.pcm {
+              type hw
+              card 0
+              device 3
+      }
+ }
+
+-----
+
+= Other Useful Information to Quote =
+
+The following configuration line needs to be added to the /etc/modprobe.d/alsa-base.conf file
+{{{
+options snd-hda-intel model=auto 
+}}}
+Valid model names (that replace model option 'auto')  depending on the codec chip, can be found in "[[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio.txt | HD-Audio ALSA documentation]]" and [[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio-Models.txt | HD-Audio-Models ALSA documentation]]".
+
+
+!!ONLY test one model option at a time in the /etc/modprobe.d/alsa-base.conf file!!
+
+First try adding the configuration line
+
+{{{
+options snd-hda-intel model=auto 
+}}}
+
+to the /etc/modprobe.d/alsa-base.conf file. Then reboot and retest audio.
+
+You can find your audio CODEC chip name by running this Terminal command:  
+{{{
+cat /proc/asound/car*/co* |  grep Codec
+}}}
+
+Please try the following command instead, if the previous command does not show the audio CODEC chip name:
+{{{
+cat /proc/asound/car*/co*/* |  head
+}}}
+
+You can find your audio MIXER name by running this Terminal command: 
+{{{
+cd ~; wget -O alsa-info.sh http://www.alsa-project.org/alsa-info.sh ; bash alsa-info.sh --stdout |grep "ixer name"
+}}}
+
+You can find your audio DEVICE name by running this Terminal command: 
+{{{
+lspci -nn|egrep 'ultimedia|udio|sound|AC97|ac97|EMU'
+}}}
+
+Each combination of audio codec, audio mixer and audio device name requires a very specific configuration in the alsa-base.conf file, if the audio chipset does not work out-of-the-box.
+
+To see if there is more than one alsactl executable in your path and to remove the wrong/oldest one, copy&paste the following command into a Terminal and press the <enter> key:
+{{{
+sudo which alsactl
+}}}
+Having more than one alsactl can cause your sound settings to be muted during every boot of the Ubuntu system.
+
+To understand the various hda_intel related errors that might be mentioned at the end of the ALSA Information script output that was uploaded to the Pastebin website, read the following documentation:
+
+[[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio.txt | HD-Audio ALSA documentation]]
+
+[[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio-Models.txt | HD-Audio-Models ALSA documentation]]
+
+Also compare the PCI subsystem ID (for example: 1028:0510) in the ALSA Terminal output with the SND_PCI_QUIRK values (for example: SND_PCI_QUIRK(0x1028, 0x0510, "Dell Vostro", CXT5066_IDEAPAD ) in the link below, in order to determine the right model option to use (for example: model=ideapad) in the /etc/modprobe.d/alsa-base.conf file:
+
+[[https://github.com/torvalds/linux/blob/master/sound/pci/hda/patch_conexant.c#L2937 | PCI quirk values for ALSA]]
+
+Also search for the VendorID (for example: 0x111d7695) of your sound card's codec by entering - for example - the search term
+
+0x111d7695 site:github.com
+
+in [[https://www.google.be | Google]] to see if the newest Linux kernel supports that specific audio codec.
+
+!!ONLY test one model option at a time in the /etc/modprobe.d/alsa-base.conf file!!
+
+-----
+= Debugging utilities for advanced users of Ubuntu 12.04.3 LTS (Precise Pangolin) (or newer versions) =
+
+http://voices.canonical.com/tag/pulseaudio/
+
+= External Links for advanced users =
+
+You can download and compile the newest alsa-lib, alsa-utils, alsa-tools, alsa-plugins, alsa-python versions (v1.0.27) here using "git clone":
+
+* http://www.alsa-project.org/main/index.php/GIT_Server
+
+Interesting details about the ALSA v1.0.27 components are here:
+
+* http://www.alsa-project.org/main/index.php/Changes_v1.0.26_v1.0.27
+
+Be sure to compile and test the hdajackretask tool, which is part of alsa-tools v1.0.26. Very handy correction tool if ALSA driver v1.0.25 does not correctly assign sound processing tasks to the hda pin nodes for your sound card's audio codec. 
+
+For some initial suggestions, also read the following pages
+
+* http://itsfoss.com/fix-sound-ubuntu-1304-quick-tip/
+
+* http://voices.canonical.com/tag/pulseaudio/
+
+* http://www.webupd8.org/2013/03/install-pulseaudio-with-built-in-system.html
+
+* http://voices.canonical.com/david.henningsson/2013/01/18/upcoming-changes-to-the-intel-hda-drivers/
+
+* http://www.matthartley.com/ubuntu-sound-not-working-troubleshooting-tips/
+
+* https://wiki.ubuntu.com/DebuggingSoundProblems
+
+* http://ubuntuguide.org/wiki/Ubuntu:Precise#Sound
+
+* https://wiki.ubuntu.com/Audio
+
+* https://help.ubuntu.com/community/SurroundSound
+
+* https://docs.google.com/document/d/1iTlJ8BfqXUjaHO__TEdlkvuqB1WLOkGaudngc5SFLMI/edit#bookmark=id.2rzn5uz8d2h4
+
+* https://help.ubuntu.com/community/HdaIntelSoundHowto
+
+* http://ubuntuforums.org/showthread.php?t=1455816
+
+* http://wiki.xbmc.org/?title=HOW-TO_set_up_HDMI_audio_on_nVidia_GeForce_G210,_GT220,_or_GT240
+
+* http://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture
+
+* http://drowninginbugs.blogspot.com/2009/10/caveats-for-audio-in-910.html
+
+* http://ubuntuforums.org/showthread.php?t=789578&highlight=audacity
+
+* http://ubuntuforums.org/showthread.php?t=205449
+
+* http://www.ubuntugeek.com/sound-solutions-for-ubuntu-904-jaunty-users.html
+
+* https://help.ubuntu.com/community/SoundTroubleshooting
+
+/!\ Check for correct /etc/modprobe.d/alsa-base.conf options on the following pages:
+
+* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/alsa/HD-Audio-Models.txt
+
+* http://www.mjmwired.net/kernel/Documentation/sound/alsa/HD-Audio-Models.txt
+
+* http://ubuntuforums.org/showthread.php?t=1043568
+
+* http://doc.ubuntu-fr.org/audio_intel_hda
+
+* http://kernel.ubuntu.com/git?p=ubuntu/ubuntu-trusty.git;a=blob_plain;f=Documentation/sound/alsa/ALSA-Configuration.txt
+
+
+-----
+CategoryAudio
