@@ -1,0 +1,365 @@
+||<tablestyle="float:right; font-size: 0.9em; width:15%; background:#F1F1ED; margin: 0 0 1em 1em;" style="padding:0.5em;"><<TableOfContents(2)>>||
+
+
+This guide will help gather information that would be useful when creating a single, new question at 
+ * https://answers.launchpad.net/ubuntu/+source/apt/+addquestion
+
+Please only create a NEW question at https://answers.launchpad.net/ubuntu if you do not have an open question about this issue yet. If you already have an open question at https://answers.launchpad.net/ubuntu     
+then please add the Terminal output below to the thread which was previously opened.
+
+In order to gather essential troubleshooting information about your apt-get or aptitude or synaptic package manager in Ubuntu, please follow this procedure.  
+
+= Step 0 First install a supported version of Ubuntu =
+
+'''The only supported releases of Ubuntu are the ones that are NOT End of Life (EOL) in the following table:'''
+
+https://wiki.ubuntu.com/Releases
+
+
+= Step 1 Switch to "Main Server" using Software Sources =
+
+First switch from the regional server (US, UK, Swiss, etc...) to the "Main Server" using the Software Sources window
+
+You can open up the Software Sources window by running the Update Manager.  If you are using the Gnome Classic desktop it can be found in the menu (System > Administration > Update Manager).  If you are Using Unity click the top icon in the dash and search for "update manager". In the update manager click on the Settings button at the lower-left corner of the window, and entering your password if prompted to do so.
+
+See here for details and a screenshot of the main tab of the Software Sources window:
+
+https://help.ubuntu.com/community/Repositories/Ubuntu#Download_Server
+
+'''If you are unable to start "Update Manager" or unable to access Software Sources or Ubuntu Software Center, please skip step 1 and step 2 and proceed to step 3.'''
+
+= Step 2 Disable all PPA repositories =
+
+
+Open "Ubuntu Software Center"
+- Edit Menu
+--- Select "Software Sources...", enter your password
+----- Select tab "Other Software"
+
+From the "Other Software" tab, disable all PPA repositories, leaving only the official Ubuntu repositories active. Enabling too many PPA repositories (which are non-official) can cause your package manager to become unstable. If you do decide to re-enable such a PPA repository, I strongly suggest only enabling ONE PPA repository at a time for stability reasons, not several at the same time.
+
+
+= Step 3 Close all open programs =
+
+VERY IMPORTANT! Please make sure to close all open programs, including all package managers like Synaptic, Update Manager, Software Center, Add/remove programs, etc ... No other package manager should be running while running the commands below.
+
+= Step 4 =
+
+Open a [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Command-line / Terminal console]] 
+
+=== In Gnome (classic) ===
+If you are using the Gnome interface, via "Applications->Accessories->Terminal"
+
+=== In Unity ===
+If you are using the Unity interface, the easiest way to open the Terminal is to use the 'search' function on the dash.
+Or you can click on the 'More Apps' button, click on the 'See more results' by the installed section, and find it in that list of applications.
+A third way, available after you click on the 'More Apps' button, is to go to the search bar, and see that the far right end of it says 'All Applications'. You then click on that, and you'll see the full list. Then you can go to Accessories > Terminal after that.  So, the methods in Unity are:
+
+Press CTRL-ALT-T key combination.
+
+Dash > Search for Terminal
+
+Dash > More Apps > 'See More Results' > Terminal
+
+Dash > More Apps > Accessories > Terminal
+
+= Step 5 List of Terminal commands to execute and send to Launchpad Answers forum =
+
+Please copy-paste the following commands one line at a time from the https://help.ubuntu.com/community/PackageManagerTroubleshootingProcedure  
+website using Chromium or Firefox into the Linux Terminal. 
+
+Tip: If you have a wheel mouse or 3 button mouse you do not need to type commands into the Terminal. Highlight each command on the page using the mouse. Move your cursor anywhere in the Terminal and press the wheel or middle button. Automatic Copy and paste! No spelling mistakes! No Typos! No other errors!
+
+{{{
+ubuntu-support-status
+}}}
+{{{
+cat /etc/dpkg/dpkg.cfg.d/multiarch
+}}}
+{{{
+dpkg --print-foreign-architectures
+}}}
+{{{
+sudo grep -R proxy /etc/apt/*
+}}}
+{{{
+grep proxy  /etc/environment
+}}}
+{{{
+echo $http_proxy
+}}}
+{{{
+echo $ftp_proxy
+}}}
+{{{
+grep proxy /etc/bash.bashrc
+}}}
+{{{
+grep proxy ~/.bashrc
+}}}
+{{{
+cat /etc/apt/apt.conf
+}}}
+{{{
+sudo fuser -vvv /var/lib/dpkg/lock
+}}}
+{{{
+sudo fuser -vvv /var/cache/apt/archives/lock
+}}}
+{{{
+cat /etc/lsb-release
+}}}
+{{{
+uname -a
+}}}
+{{{
+sudo rm /var/lib/apt/lists/lock 
+}}}
+{{{
+sudo rm  /var/cache/apt/archives/lock
+}}}
+{{{
+sudo rm /var/lib/dpkg/lock
+}}}
+{{{
+sudo cp -arf /var/lib/dpkg /var/lib/dpkg.backup
+}}}
+{{{
+sudo mv /var/lib/dpkg/status /var/lib/dpkg/status-bad
+}}}
+{{{
+sudo cp /var/lib/dpkg/status-old /var/lib/dpkg/status  ||  sudo cp /var/backups/apt.extended_states.0 /var/lib/dpkg/status
+}}}
+{{{
+sudo mv /var/lib/dpkg/available /var/lib/dpkg/available-bad
+}}}
+{{{
+sudo cp /var/lib/dpkg/available-old /var/lib/dpkg/available
+}}}
+{{{
+sudo rm -rf /var/lib/dpkg/updates/*
+}}}
+{{{
+sudo rm -rf /var/lib/apt/lists
+}}}
+{{{
+sudo rm /var/cache/apt/*.bin
+}}}
+{{{
+sudo mkdir /var/lib/apt/lists
+}}}
+{{{
+sudo mkdir /var/lib/apt/lists/partial
+}}}
+{{{
+LANG=C;sudo apt-get clean
+}}}
+{{{
+LANG=C;sudo apt-get autoclean
+}}}
+{{{
+sudo dpkg --configure -a
+}}}
+{{{
+sudo dpkg --clear-avail
+}}}
+{{{
+LANG=C;sudo apt-get -f install
+}}}
+{{{
+LANG=C;sudo apt-get --fix-missing install
+}}}
+{{{
+LANG=C;sudo apt-get --purge autoremove
+}}}
+{{{
+LANG=C;sudo apt-get --fix-missing update -o APT::Cache-Limit=100000000
+}}}
+{{{
+LANG=C;sudo apt-get update -o APT::Cache-Limit=100000000 && sudo apt-get dist-upgrade
+}}}
+{{{
+find /etc/apt -name '*.list' -exec bash -c 'echo -e "\n$1\n"; cat -n "$1"' _ '{}' \;
+}}}
+
+= Step 6 Please send us the Terminal output =
+
+Please do NOT attempt to send any attachment(s). Please copy/paste the full terminal output of the previous list of diagnostic commands at this location:
+https://answers.launchpad.net/ubuntu/+source/apt/+addquestion
+
+Please only create a NEW question at https://answers.launchpad.net/ubuntu if you do not have an open question about this issue yet. If you already have an open question at https://answers.launchpad.net/ubuntu     
+then please add the Terminal output below to the thread which was previously opened.
+
+The troubleshooters at Launchpad need to see the full Terminal output from running the previous list of diagnostic commands.
+
+= Step 7 Error occurs while trying to remove or upgrade a specific software package =
+
+If a package manager error occurs while trying to remove or upgrade a specific software package, please try the following workaround procedures:
+
+http://askubuntu.com/questions/91543/apt-get-update-fails-to-fetch-files-temporary-failure-resolving-error
+
+http://aziest.wordpress.com/2011/01/24/how-to-increase-your-apt-cache-limit/
+
+http://www.cyberciti.biz/tips/troubleshooting-debian-ubuntu-package-upgrades-removals.html
+
+http://www.ubuntugeek.com/package-installation-error-and-solution.html
+
+The troubleshooters at Launchpad need to see the full Terminal output from running the above command.
+
+If the previous apt-get update command returned any "404 Not Found" errors for certain Launchpad PPA's, then please open Software Sources via dash or System Settings and unmark/deactivate those failed Launchpad PPA's in Software Sources.
+
+= Step 8 =
+
+If you are using the 64-bit edition of Ubuntu and if you are still encountering issues when trying to install certain Ubuntu packages, I suggest executing the following commands:
+
+{{{
+sudo dpkg --add-architecture i386
+}}}
+{{{
+sudo apt-get update
+}}}
+
+
+= Step 9 Ubuntu Software Center fails to open  =
+
+If the Ubuntu Software Center fails to open, then please execute these Terminal commands:
+
+{{{
+sudo rm /usr/lib/python*/dist-packages/__pycache__/*pyc
+}}}
+{{{
+sudo apt-get install --reinstall python3-gi
+}}}
+{{{
+sudo apt-get purge software-center
+}}}
+{{{
+rm -rf ~/.cache/software-center
+}}}
+{{{
+rm -rf ~/.config/software-center
+}}}
+{{{
+rm -rf ~/.cache/update-manager-core
+}}}
+{{{
+sudo rm /var/lib/apt-xapian-index/cataloged_times.p
+}}}
+{{{
+sudo rm /var/lib/apt-xapian-index/values
+}}}
+{{{
+sudo update-apt-xapian-index --verbose --force
+}}}
+{{{
+sudo update-apt-xapian-index --force
+}}}
+{{{
+sudo apt-get update
+}}}
+{{{
+sudo apt-get dist-upgrade
+}}}
+{{{
+sudo apt-get install software-center ubuntu-desktop
+}}}
+{{{
+sudo dpkg-reconfigure software-center --force
+}}}
+{{{
+sudo update-software-center
+}}}
+{{{
+sudo apt-get install --reinstall software-center
+}}}
+
+Then reboot and retest.
+
+Sources:
+
+https://bugs.launchpad.net/ubuntu/+source/software-center/?field.searchtext=&orderby=-importance&field.status%3Alist=CONFIRMED&field.status%3Alist=TRIAGED&assignee_option=any&field.assignee=&field.bug_reporter=&field.bug_commenter=&field.subscriber=&field.tag=&field.tags_combinator=ANY&field.status_upstream-empty-marker=1&field.upstream_target=&field.has_cve.used=&field.omit_dupes.used=&field.omit_dupes=on&field.affects_me.used=&field.has_patch.used=&field.has_branches.used=&field.has_branches=on&field.has_no_branches.used=&field.has_no_branches=on&field.has_blueprints.used=&field.has_blueprints=on&field.has_no_blueprints.used=&field.has_no_blueprints=on&search=Search
+
+http://ubuntuforums.org/showthread.php?t=2033381
+
+http://askubuntu.com/questions/69034/software-center-will-not-open
+
+https://answers.launchpad.net/ubuntu/+source/software-center/+question/219728
+
+https://answers.launchpad.net/ubuntu/+source/update-manager/+question/213929
+
+= Step 10 You are using a proxy server to connect to the Internet  =
+
+If you are using a proxy server, please make sure the following changes have been made in Ubuntu:
+
+1) put the following configuration lines in the  '''/etc/bash.bashrc''' file:
+
+{{{
+export http_proxy=http://<username>:<password>@<proxy>:<port>/
+}}}
+{{{
+export https_proxy=https://<username>:<password>@<proxy>:<port>/
+}}}
+{{{
+export ftp_proxy=ftp://<username>:<password>@<proxy>:<port>/
+}}}
+
+but REPLACING the values for username, password, proxy and port number, of course.
+
+You can edit the '''/etc/bash.bashrc''' file using this command:
+
+{{{
+gksudo gedit /etc/bash.bashrc
+}}}
+
+2) put the following configuration lines in the  '''/etc/environment''' file:
+
+{{{
+http_proxy=http://<username>:<password>@<proxy>:<port>/
+}}}
+{{{
+https_proxy=https://<username>:<password>@<proxy>:<port>/
+}}}
+{{{
+ftp_proxy=ftp://<username>:<password>@<proxy>:<port>/
+}}}
+
+but REPLACING the values for username, password, proxy and port number, of course.
+
+You can edit the '''/etc/environment''' file using this command:
+
+{{{
+gksudo gedit /etc/environment 
+}}}
+
+3) put the following configuration lines in a new '''/etc/apt/apt.conf.d/80proxy''' file:
+
+{{{
+Acquire::http::proxy "http://<username>:<password>@<proxy>:<port>/";
+}}}
+{{{
+Acquire::ftp::proxy "ftp://<username>:<password>@<proxy>:<port>/";
+}}}
+{{{
+Acquire::https::proxy "https://<username>:<password>@<proxy>:<port>/";
+}}}
+
+but REPLACING the values for username, password, proxy and port number, of course.
+
+You can edit the '''/etc/apt/apt.conf.d/80proxy''' file using this command:
+
+{{{
+gksudo gedit /etc/apt/apt.conf.d/80proxy
+}}}
+
+= More documentation about the apt-get package manager =
+
+http://www.binarytides.com/apt-get-tutorial-package-management-ubuntu-commandline/
+
+http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/
+
+http://www.tuxarena.com/intro/ubuntu001.php
+
+
+= More documentation about the AppGrid Lightweight Software Center Alternative to Ubuntu Software Center, Available for Ubuntu 13.04 Raring =
+
+http://www.noobslab.com/2013/08/appgrid-lightweight-software-center.html
