@@ -1,0 +1,96 @@
+||<tablestyle="float:right; font-size: 0.9em; width:20%; background:#F1F1ED; background-repeat: no-repeat; background-position:  98% 0.5ex; margin: 0 0 1em 1em; padding: 0.5em;"><<TableOfContents>>||
+Wireless troubleshooting procedure to be followed while creating a single, new question at
+ * https://answers.launchpad.net/ubuntu/+source/gnome-nettool/+addquestion
+
+'''The following procedure applies to all supported releases of Ubuntu that are NOT End of Life (EOL) in the following table:'''
+
+https://wiki.ubuntu.com/Releases
+
+Please first connect your network card to the wireless router using an ethernet cable (also known as a LAN cable) and apply all updates.
+
+In order to gather essential troubleshooting information about your wireless card, please follow this procedure:
+
+= Step 1 =
+
+'''In the Ubuntu [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Terminal console]] , make sure that unlimited scrolling is enabled:
+ * click on Edit > Profiles > "Default" profile > Scrolling. Choose "Unlimited" as scrolling option. Click Close and Close again.'''
+
+If you are using the Gnome interface, open [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | the Terminal console]] via "Applications->Accessories->Terminal"
+
+If you are using the Unity interface (default graphical user interface in Ubuntu), use the 'search' function on the dash.
+Or you can click on the 'More Apps' button, click on the 'See more results' by the installed section, and find it in that list of applications.
+A third way, available after you click on the 'More Apps' button, is to go to the search bar, and see that the far right end of it says 'All Applications'. You then click on that, and you'll see the full list. Then you can go to Accessories > Terminal after that.
+
+So the methods in Unity are:
+
+Press CTRL-ALT-T key combination.
+
+Dash > Search for Terminal
+
+Dash > More Apps > 'See More Results' > Terminal
+
+Dash > More Apps > Accessories > Terminal
+
+= Step 2 =
+
+Please copy-paste the following diagnostic command from the 
+ * https://help.ubuntu.com/community/WirelessTroubleshootingProcedure 
+website using a web browser (like Google Chromium or Mozilla Firefox) into the Linux Terminal. The command STARTS with the word sudo and ENDS with the word '''lsmod'''. So please copy-paste the ENTIRE diagnostic command below from the web browser into a Terminal, press <enter>, then enter password when sudo asks for password, then press enter again.
+
+Tip: If you have a wheel mouse or 3 button mouse you do not need to type commands into the Terminal. Highlight the diagnostic command written on the page. Move your cursor anywhere in the Terminal and press the wheel or middle button. Automatic Copy and paste! No spelling mistakes! No Typos! No other errors!
+
+{{{
+sudo apt-get update; sudo apt-get install usbutils pciutils hwinfo grep rfkill; sudo lshw -C network; rfkill list; sudo iwlist scan | grep -Ei 'chan|ssid'; cat /etc/network/interfaces; cat /etc/lsb-release; lspci -nnk | grep -iA2 net; lsusb; nmcli nm status; sudo lshw -short; uname -a; sudo updatedb; dmesg | grep -E  '02:00|80211|acx|at76|ath|b43|bcm|brcm|CX|eth|ipw|ireless|irmware|isl|lbtf|orinoco|ndiswrapper|NPE|ound|p54|prism|rror|rtl|RTL|rt2|RT2|rt3|RT3|rt5|RT5|rt6|RT6|rt7|RT7|usb|witch|wl';sudo dmidecode|grep -E 'anufact|roduct|erial|elease'; iwconfig; grep -E '80211|acx|at76|ath|b43|bcm|brcm|CX|eth|ipw|irmware|isl|lbtf|orinoco|ndiswrapper|NPE|p54|prism|rtl|rt2|rt3|rt6|rt7|wmi|witch|wl' /etc/modprobe.d/*; cat /var/lib/NetworkManager/NetworkManager.state; sudo hwinfo --netcard ; ps -aux|grep -E 'wpa|icd|etwork'; netstat -rn ; cat /etc/resolv.conf; ls -lia /boot; grep tmpfs /etc/fstab; ubuntu-support-status; sudo update-pciids; sudo update-usbids; sudo lsmod
+}}}
+
+= Step 3 =
+
+Please do NOT attempt to send any attachment(s). Please copy/paste the full terminal output at this location: https://answers.launchpad.net/ubuntu/+source/gnome-nettool/+addquestion
+
+The troubleshooters at Launchpad need to see the full Terminal output from running the above diagnostic command.
+
+= Step 4 =
+
+Please also specify the exact model and make of your PC (if known) when creating the new Launchpad question. 
+
+Please also specify the name of the wireless access point that you are trying to connect to (not the model/make of your router). 
+
+= Step 5 =
+
+Please also clarify if you installed Ubuntu to the harddisk and are running from a harddisk install OR if you are only testing Ubuntu in a [[http://en.wikipedia.org/wiki/Live_CD | Live CD]] session.
+
+= Step 6 =
+
+Use the 
+{{{
+lspci -nn
+}}}
+command to discover the Vendor and Device ID for '''your''' wireless adapter.
+
+= Best practices when configuring your wireless router to obtain maximum compatibility with Ubuntu =
+
+* first connect your wireless adapter to your [[http://www.wikihow.com/Set-up-a-Wireless-Network-in-Linux | wireless router]] using a LAN/ethernet cable
+
+* browse to the homepage of your wireless router using a web browser
+
+* enable [[http://en.wikipedia.org/wiki/Service_set_(802.11_network) | SSID]] broadcasting in the web interface of your wireless router to make sure your wireless access point is not hidden (anymore)
+
+* force the wireless router to use wireless-G (54 Mbps) speeds for troubleshooting purposes
+
+* change the access point name ([[http://en.wikipedia.org/wiki/Service_set_(802.11_network) | SSID]]) to an [[http://en.wikipedia.org/wiki/Service_set_(802.11_network) | SSID]] name without any special characters or spaces in the [[http://en.wikipedia.org/wiki/Service_set_(802.11_network) | SSID]] name.
+
+* change wireless transmission channel to a wireless channel that is not used by any other wireless access points in the vicinity of your wireless router
+
+= Up-to-date Wireless adapter database =
+
+http://wikidevi.com/wiki/User:X64/Linux_kernel_wireless_device_support
+
+http://wikidevi.com/wiki/Main_Page
+
+= External links =
+
+http://www.datamation.com/open-source/tips-and-tricks-for-ubuntu-drivers.html
+
+http://wireless.kernel.org/en/users/Devices
+
+http://sourceforge.net/apps/mediawiki/ndiswrapper/index.php?title=Category:USB
