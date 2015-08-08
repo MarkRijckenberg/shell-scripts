@@ -87,6 +87,8 @@ http://wikidevi.com/wiki/User:X64/Linux_kernel_wireless_device_support
 
 http://wikidevi.com/wiki/Main_Page
 
+https://h-node.org/
+
 = External links =
 
 http://www.datamation.com/open-source/tips-and-tricks-for-ubuntu-drivers.html
