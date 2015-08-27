@@ -1875,6 +1875,7 @@ echo "http://www.bioconductor.org/install/"
 # following URL added on September 9, 2014:
 # run R online:
 echo "http://statace.com/#features"
+echo "https://www.getdatajoy.com/?utm_source=dc&utm_medium=email&utm_campaign=dc1"
 echo "http://www.roncloud.com/"
 echo "http://www.compileonline.com/execute_r_online.php"
 echo "http://www.r-fiddle.org/"
