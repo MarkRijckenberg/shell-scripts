@@ -655,6 +655,18 @@ sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
+# first remove old installation of seamonkey web browser
+cd /tmp
+rm index.html
+sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
+# install bleeding edge version of seamonkey web browser
+wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
+filename=`grep bz2 index.html|grep x86_64|tail -n 1|cut -d"\"" -f8`
+wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/`echo $filename`
+tar -xjvf `echo $filename`
+sudo cp -r seamonkey /opt/seamonkey
+sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
+
 # install YouTubeToMP3 - Youtube playlist downloader
 cd $HOME
 VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download.html"
@@ -755,6 +767,18 @@ wget --no-check-certificate https://dl.google.com/linux/direct/google-chrome-sta
 sudo dpkg -i google-chrome*.deb
 # fix the Google Chrome dependencies issue
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
+
+# first remove old installation of seamonkey web browser
+cd /tmp
+rm index.html
+sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
+# install bleeding edge version of seamonkey web browser
+wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
+filename=`grep bz2 index.html|grep i686|tail -n 1|cut -d"\"" -f8`
+wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/`echo $filename`
+tar -xjvf `echo $filename`
+sudo cp -r seamonkey /opt/seamonkey
+sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
 
 # install YouTubeToMP3 - Youtube playlist downloader
 cd $HOME
