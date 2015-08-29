@@ -2109,6 +2109,9 @@ echo "https://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.RDD"
 # following URL added on November 28, 2014:
 # combine Apache Spark with R using SparkR:
 echo "https://www.youtube.com/watch?v=CUX1SG9zTkU&list=PL-x35fyliRwiuc6qy9z2erka2VX8LY53x"
+# combine Apache Spark with GPU computing using HeteroSpark project:
+# following URL added on August 29, 2015:
+echo "http://cans.uml.edu/research/heterospark/"
 # following URL added on February 18, 2015:
 # Prerequisites:
 # CUDA toolkit, Python 2.7.x, numpy, pandas, matplotlib, and scikit-learn, lasagne
