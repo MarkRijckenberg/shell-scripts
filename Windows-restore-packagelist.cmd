@@ -42,7 +42,7 @@ REM  the nuget package manager currently has 40065 packages (July 31,2015)
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install nugetpackageexplorer"
 
-REM Get E-mail clients
+REM Get E-mail clients and utilities
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install thunderbird"
 
