@@ -397,12 +397,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  pcmanfm-qt  lxsession lximage-qt   lxrandr-qt
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-about  lxqt-appswitcher  lxqt-config   lxqt-lightdm-greeter  
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lxqt-notificationd    lxqt-policykit  lxqt-power  lxqt-powermanagement  lxqt-runner  lxqt-session
-sudo rm -rf /etc/xdg/lxlauncher
-sudo rm -rf /etc/xdg/lxpanel
-sudo rm -rf /etc/xdg/lxqt
-sudo rm -rf /etc/xdg/lxsession
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge lxqt-metapackage lxqt-common
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  lubuntu-next-core  lubuntu-next-desktop
+#sudo rm -rf /etc/xdg/lxlauncher
+#sudo rm -rf /etc/xdg/lxpanel
+#sudo rm -rf /etc/xdg/lxqt
+#sudo rm -rf /etc/xdg/lxsession
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install lxqt-metapackage lxqt-common
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
 # then click on Preferences::Appearance::Icons Theme::Numix Circle Light
