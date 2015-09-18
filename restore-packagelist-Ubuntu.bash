@@ -150,6 +150,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:danielrichter2007/grub-customizer
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:flexiondotorg/hal-flash
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nemh/gambas3
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
@@ -429,6 +430,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libreoff
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install hal
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libhal1-flash
 
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:i-nex-development-team/daily
