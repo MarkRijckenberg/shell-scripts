@@ -26,6 +26,7 @@
 # REQUIRED FREE DISKSPACE FOR PPA PACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
 # TOTAL AMOUNT OF REQUIRED DISKSPACE FOR Xubuntu 14.04 LTS + BASEPACKAGES + PPA PACKAGES
 # = 5 GB + 1.4 GB + 1.4 GB = 7.8 GB
+# INSTALLATION DURATION WITHOUT INSTALLING ASTRONOMY SOFTWARE: around 30 minutes on a modern laptop without SSD storage
 # COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon
 # thanks to cinnamon-bluetooth package.
 # To make bluetooth speakers work in lxqt desktop, run these 4 Terminal commands:
