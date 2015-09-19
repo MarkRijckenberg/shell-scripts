@@ -952,16 +952,20 @@ wget http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservi
 tar -zxvf setup_Kruidvat_fotoservice.tgz 
 ./install.pl 
 
+########################################################################################
+# Fish shell installation
+########################################################################################
 # set fish shell as default shell
 chsh -s /usr/bin/fish
 #To switch your default shell back, you can run:
 #chsh -s /bin/bash
 cd $HOME
 # customize fish shell using oh-my-fish
-mkdir ~/.config/fish/
-rm -rf ~/.oh-my-fish
-git clone git://github.com/bpinto/oh-my-fish.git ~/.oh-my-fish
+rm -rf ~/.oh-my-fish ~/.config/fish/ ~/.local/share/omf  
+git clone https://github.com/oh-my-fish/oh-my-fish ~/.oh-my-fish
 cp ~/.oh-my-fish/templates/config.fish ~/.config/fish/config.fish
+chmod +x ~/.oh-my-fish/bin/install
+~/.oh-my-fish/bin/install
 
 # delete old custom aliases in ~/.config/fish/config.fish file
 egrep -v 'alias\ apt|alias\ d-u'  ~/.config/fish/config.fish > ~/.config/fish/config.fishBACKUP
@@ -974,6 +978,14 @@ echo "alias aptp='sudo aptitude purge '" >> ~/.config/fish/config.fish
 echo "alias aptu='sudo aptitude update'" >> ~/.config/fish/config.fish
 echo "alias apts='sudo aptitude search '" >> ~/.config/fish/config.fish
 echo "alias d-u='sudo aptitude update ; sudo aptitude dist-upgrade'" >> ~/.config/fish/config.fish
+
+# install theme for fish shell
+omf update
+omf theme robbyrussell
+
+########################################################################################
+# End of Fish shell installation
+########################################################################################
 
 # run shellshock test to see if bash is vulnerable
 cd $HOME
