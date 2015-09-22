@@ -1931,6 +1931,8 @@ echo "http://www.datasciencecentral.com/group/resources/forum/topics/the-best-of
 echo "https://www.youtube.com/user/TheLearnR/playlists"
 # following URL added on August 6, 2015:
 echo "https://leanpub.com/regmods/read"
+# following URL added on September 22, 2015:
+echo "https://www.shortcutfoo.com"
 
 ###############################################################################################
 #     Sabermetrics                                                                            #
