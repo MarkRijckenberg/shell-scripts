@@ -1587,6 +1587,9 @@ echo "http://webdemo.visionobjects.com/home.html?locale=fr_FR#equation"
 echo "http://www.math.toronto.edu/mathit/symbols-letter.pdf"
 # following URL added on May 28, 2013 - very handy when creating latex document in texstudio:
 echo "http://www.latextemplates.com/"
+# following URL added on September 23, 2015:
+# asciidoc is easier to use than latex to write books
+echo "http://powerman.name/doc/asciidoc"
 echo "http://www.ottobib.com/"
 echo "http://scholar.google.be"
 # following URL added on April 23, 2013:
