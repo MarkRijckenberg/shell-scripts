@@ -157,7 +157,8 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:webupd8team/atom
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:webupd8team/atom
+sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:webupd8team/brackets
 sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:philip5/extra
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stebbins/handbrake-releases
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lyc256/sopcast-player-ppa
@@ -529,7 +530,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install smtube
 # install atom text editor with integrated github support
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:webupd8team/atom
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install atom
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install atom
+
+# install brackets text editor with support for asciidoc
+#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:webupd8team/atom
+#sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install brackets
 
 # install kdenlive video editor
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
