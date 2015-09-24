@@ -426,9 +426,22 @@ sudo ln -s /usr/bin/wkhtmltopdf /usr/local/bin/html2pdf
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install grub-customizer
 
 # install newest version of Libreoffice
+# https://wiki.documentfoundation.org/Feature_Comparison:_LibreOffice_-_Microsoft_Office/fr
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libreoffice
+
+
+# install following Libreoffice Calc extensions:
+# http://extensions.libreoffice.org/extension-center/multisave
+# http://extensions.libreoffice.org/extension-center/myparts
+# http://extensions.libreoffice.org/extension-center/neuronica
+# https://sites.google.com/site/vondorishi/advance-office-chart
+
+# install following Libreoffice Writer extensions:
+# http://extensions.libreoffice.org/extension-center/imath
+# http://extensions.libreoffice.org/extension-center/texmaths-1
+# http://extensions.libreoffice.org/extension-center/languagetool
 
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
 # Flash websites are supported in Lubuntu 13.10 or newer
