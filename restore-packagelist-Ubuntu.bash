@@ -1711,6 +1711,8 @@ echo "http://www.stellarium.org/wiki/index.php/Stellarium_User_Guide"
 # following URL added on February 26, 2014:
 # OAD Open Data Repositories (including Repositories about Astronomy)
 echo "http://oad.simmons.edu/oadwiki/Data_repositories"
+# following URL added on September 25, 2015:
+echo "https://iopscience.iop.org/journals"
 
 ###############################################################################################
 #     Open access journals                                                                    #
@@ -1803,6 +1805,7 @@ echo "get bibliography citations at http://scholar.google.be using full title an
 echo "For example use - filetype:pdf author:'h karttunen'  -  as search term in http://scholar.google.be"
 echo "For example use - site:arxiv.org intext:"habitable zone" - as search term in http://www.google.be/"
 echo "Get more information about latex package by using command   texdoc <packagename> , for example: texdoc graphicx"
+
 
 ###############################################################################################
 #     Links for data scientists                                                               #
