@@ -624,14 +624,20 @@ apt-cache show openssl
 # Then compile and install curl from github source in Ubuntu 14.04 LTS 64-bit
 cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential cmake rtmpdump
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge curl
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep curl
-sudo rm -rf curl
+sudo rm -rf curl curl-build
+mkdir curl-build
 git clone https://github.com/bagder/curl.git
 cd curl
 sudo ./buildconf
-sudo ./configure
-sudo make
+cd lib
+LIB=`pwd`
+cd ..
+sudo ./configure --without-librtmp --enable-shared=no --libdir=`echo $LIB`
+sudo make clean
+sudo make --enable-shared=no -I `echo $LIB`
 # sudo make check
 # result of sudo make check should be as follows:
 #============================================================================
@@ -657,11 +663,17 @@ apt-cache show curl
 #Installed-Size: 6020
 #Maintainer: root
 #Architecture: i386
-#Version: 7.46-1
+#Version: 7.45
 #Provides: curl
 #Description: Package created with checkinstall 1.6.2
 #Description-md5: 556b8d22567101c7733f37ce6557412e
 curl --version
+# result of curl --version should be as follows:
+# !!!! Make sure that curl and libcurl are both the newest version, in this case: version 7.45.0-DEV !!!!!!!!
+#curl 7.45.0-DEV (i686-pc-linux-gnu) libcurl/7.45.0-DEV OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28
+#Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtsp smb smbs smtp smtps telnet tftp 
+#Features: IDN IPv6 Largefile NTLM NTLM_WB SSL libz TLS-SRP UnixSockets 
+
 
 # install kde plasma 5 desktop environment
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:neon/kf5
