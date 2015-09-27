@@ -609,7 +609,7 @@ git clone https://github.com/openssl/openssl.git
 cd openssl
 sudo ./config
 sudo make
-sudo make test
+# sudo make test
 sudo checkinstall
 sudo rm -rf ~/openssl
 sudo mv /usr/bin/c_rehash /usr/bin/c_rehashBACKUP
@@ -618,6 +618,50 @@ sudo ln -s /usr/local/ssl/bin/c_rehash /usr/bin/c_rehash
 sudo ln -s /usr/local/ssl/bin/openssl /usr/bin/openssl
 openssl version
 apt-cache show openssl
+
+# Dependency to compile and install first: openssl
+# https://mark911.wordpress.com/2015/01/10/how-to-compile-and-install-newest-version-of-openssl-in-ubuntu-14-04-lts-64-bit-via-github/
+# Then compile and install curl from github source in Ubuntu 14.04 LTS 64-bit
+cd
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep curl
+sudo rm -rf curl
+git clone https://github.com/bagder/curl.git
+cd curl
+sudo ./buildconf
+sudo ./configure
+sudo make
+# sudo make check
+# result of sudo make check should be as follows:
+#============================================================================
+#Testsuite summary for curl -
+#============================================================================
+# TOTAL: 2
+# PASS:  2
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+#============================================================================
+sudo checkinstall
+# set checkinstall curl package version to 7.45 (most current version at this moment)
+# before proceeding with the creation of the checkinstall .deb package
+apt-cache show curl
+# output of 'apt-cache show curl' command should look like this:
+#Package: curl
+#Status: install ok installed
+#Priority: extra
+#Section: checkinstall
+#Installed-Size: 6020
+#Maintainer: root
+#Architecture: i386
+#Version: 7.46-1
+#Provides: curl
+#Description: Package created with checkinstall 1.6.2
+#Description-md5: 556b8d22567101c7733f37ce6557412e
+curl --version
 
 # install kde plasma 5 desktop environment
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:neon/kf5
