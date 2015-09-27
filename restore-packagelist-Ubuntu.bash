@@ -625,7 +625,7 @@ apt-cache show openssl
 cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential cmake rtmpdump
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge curl
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge curl
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep curl
 sudo rm -rf curl curl-build
 mkdir curl-build
