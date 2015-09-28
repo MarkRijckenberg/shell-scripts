@@ -637,7 +637,7 @@ LIB=`pwd`
 cd ..
 sudo ./configure --without-librtmp --enable-shared=no --libdir=`echo $LIB`
 sudo make clean
-sudo make --enable-shared=no -I `echo $LIB`
+sudo make -I `echo $LIB`
 # sudo make check
 # result of sudo make check should be as follows:
 #============================================================================
