@@ -553,7 +553,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install brackets
 # Lightworks 12.5 (professional non-linear video editing solution) is better than kdenlive and better than openshot
 # http://news.softpedia.com/news/professional-non-linear-video-editing-lightworks-12-5-released-with-4k-support-493587.shtml
 
-# install kdenlive video editor
+# DaVinci Resolve 12.0.1 Studio (video editor)
+# https://www.blackmagicdesign.com/products/davinciresolve
+
+# flowblade (video editor)
+# https://github.com/jliljebl/flowblade/blob/master/flowblade-trunk/docs/INSTALLING.md
+
+# install kdenlive video editor (one of the best video editors)
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install kdenlive
