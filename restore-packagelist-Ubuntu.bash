@@ -550,6 +550,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install smtube
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install brackets
 
+# Lightworks 12.5 (professional non-linear video editing solution) is better than kdenlive and better than openshot
+# http://news.softpedia.com/news/professional-non-linear-video-editing-lightworks-12-5-released-with-4k-support-493587.shtml
+
 # install kdenlive video editor
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
