@@ -21,7 +21,7 @@ https://wiki.ubuntu.com/Releases
 #1A.  If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or later, try this first:  
 
 {{{
-killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*; ~/.config/pulse
+killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*
 }}}
 
 wait ten seconds, then run this:  
@@ -33,7 +33,7 @@ pulseaudio -k
 #1B.  Should the approach above fail to correct the problem (it is only known to work on some variations), you can try this next.  If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or later: 
 
 {{{
-killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*; ~/.config/pulse
+killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*
 }}}
 
 wait 10 seconds, '''then reboot''' (putting the machine to sleep is not enough -- fully power it off and then back on).  Make sure to save your work first.  
@@ -433,8 +433,6 @@ For some initial suggestions, also read the following pages
 
 * http://voices.canonical.com/david.henningsson/2013/01/18/upcoming-changes-to-the-intel-hda-drivers/
 
-* http://www.matthartley.com/ubuntu-sound-not-working-troubleshooting-tips/
-
 * https://wiki.ubuntu.com/DebuggingSoundProblems
 
 * http://ubuntuguide.org/wiki/Ubuntu:Precise#Sound
@@ -465,15 +463,25 @@ For some initial suggestions, also read the following pages
 
 /!\ Check for correct /etc/modprobe.d/alsa-base.conf options on the following pages:
 
-* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/alsa/HD-Audio-Models.txt
+* https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio-Models.txt
 
 * http://www.mjmwired.net/kernel/Documentation/sound/alsa/HD-Audio-Models.txt
+
+* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/alsa/HD-Audio-Models.txt
+
+* https://www.kernel.org/doc/Documentation/sound/alsa/ALSA-Configuration.txt
+
+* http://www.mjmwired.net/kernel/Documentation/sound/alsa/ALSA-Configuration.txt
+
+* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/alsa/ALSA-Configuration.txt
+
+* https://www.kernel.org/doc/Documentation/sound/alsa/
+
+* http://www.mjmwired.net/kernel/Documentation/sound/alsa/
 
 * http://ubuntuforums.org/showthread.php?t=1043568
 
 * http://doc.ubuntu-fr.org/audio_intel_hda
-
-* http://kernel.ubuntu.com/git?p=ubuntu/ubuntu-trusty.git;a=blob_plain;f=Documentation/sound/alsa/ALSA-Configuration.txt
 
 
 -----
