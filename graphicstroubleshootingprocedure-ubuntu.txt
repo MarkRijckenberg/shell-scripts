@@ -1,0 +1,82 @@
+||<tablestyle="float:right; font-size: 0.9em; width:20%; background:#F1F1ED; background-repeat: no-repeat; background-position:  98% 0.5ex; margin: 0 0 1em 1em; padding: 0.5em;"><<TableOfContents>>||
+
+You may want to follow this guide to '''gather essential troubleshooting information''' about your graphics/video card. This information will be useful in posting a question to launchpad and getting help from volunteers who are monitoring the Launchpad forums:
+ * [[https://answers.launchpad.net/ubuntu/+addquestion | https://answers.launchpad.net/ubuntu/+addquestion]]
+
+The various different pages about graphics card issues each serve a different purpose or different tastes.  !OpenSource systems are about freedom OF choice so it's good that people are able to choose which pages they use.  
+
+'''The only supported releases of Ubuntu are the ones that are NOT End of Life (EOL) in the following table:'''
+
+https://wiki.ubuntu.com/Releases
+
+In order to gather essential troubleshooting information about your graphics card, please follow this procedure:
+
+= Step 1 =
+
+'''In the Ubuntu [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Terminal console]] , make sure that unlimited scrolling is enabled:
+ * click on Edit > Profiles > "Default" profile > Scrolling. Choose "Unlimited" as scrolling option. Click Close and Close again.'''
+
+If you are using the Gnome interface, open [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | the Terminal console]] via "Applications->Accessories->Terminal"
+
+If you are using the Unity interface, the easiest way to open the Terminal is to use the 'search' function on the dash.
+Or you can click on the 'More Apps' button, click on the 'See more results' by the installed section, and find it in that list of applications.
+A third way, available after you click on the 'More Apps' button, is to go to the search bar, and see that the far right end of it says 'All Applications'. You then click on that, and you'll see the full list. Then you can go to Accessories > Terminal after that.
+
+So the methods in Unity are:
+
+Press CTRL-ALT-T key combination.
+
+Dash > Search for Terminal
+
+Dash > More Apps > 'See More Results' > Terminal
+
+Dash > More Apps > Accessories > Terminal
+
+
+= Step 2 =
+
+Please copy-paste the following diagnostic command from the 
+ * https://help.ubuntu.com/community/GraphicsTroubleshootingProcedure
+website using a web browser (like Google Chromium or Mozilla Firefox) into the Linux Terminal. The command STARTS with the word '''lspci''' and ENDS with the word '''lsmod'''. So please copy-paste the ENTIRE diagnostic command below from the web browser into a Terminal, press <enter>, then enter password when sudo asks for password, then press enter again.
+
+Tip: If you have a wheel mouse or 3 button mouse you do not need to type commands into the Terminal. Highlight the diagnostic command written on the page. Move your cursor anywhere in the Terminal and press the wheel or middle button. Automatic Copy and paste! No spelling mistakes! No Typos! No other errors!
+
+{{{
+lspci -nnk | egrep -i '3d|aphics|display|nouveau|nvidia|radeon|trident|vesa|vga'; uname -a; Xorg -version; sudo apt-get update; sudo apt-get install mesa-utils hardinfo fbset nux-tools; sudo fbset -i; apt-cache show xserver-xorg | grep Version; xrandr; fglrxinfo; nvidia-settings -g |head -n 30 ; sudo lshw -short; sudo lshw -C display; dpkg -l | egrep -i 'fgl|intel|mesa|mesa-utils|nvidia|nouveau|radeon|trident|video-ati'; cat /etc/lsb-release; dmesg | egrep -i  'abort|ailed|bug|error|fail|fgl|GLX|GPU|intel|missing|nouveau|NVIDIA|radeon|segment|trident|VESA|VGA|wfb|\(EE\)|\(WW\)'; cat /proc/cpuinfo | grep -I model; cat /var/log/Xorg.0.log | egrep -i 'abort|ailed|bug|display|error|fail|fgl|GLX|GPU|intel|issing|nouveau|nvidia|radeon|segment|trident|VESA|VGA|wfb|\(EE\)|\(WW\)'; sudo dmidecode|egrep 'anufact|roduct|erial|elease'; cat /etc/X11/xorg.conf; /usr/lib/nux/unity_support_test -p; ubuntu-support-status ; sudo lsmod
+}}}
+
+= Step 3 =
+
+Please do NOT attempt to send any attachment(s). Please copy/paste the full terminal output at this location: https://answers.launchpad.net/ubuntu/+addquestion
+
+The troubleshooters at Launchpad need to see the full Terminal output from running the above diagnostic command.
+
+= Step 4 =
+
+Please also specify the exact model and make of your PC and external LCD/LED/CRT monitor (if known) when creating the new Launchpad question. 
+
+= Step 5 =
+
+Please also clarify if you installed Ubuntu to the harddisk and are running from a harddisk install OR if you are only testing Ubuntu in a LiveCD session.
+
+= External links =
+
+*  https://help.ubuntu.com/community/BinaryDriverHowto
+
+*  Troubleshooting Nvidia cards: http://nouveau.freedesktop.org/wiki/TroubleShooting/#index10h3
+
+*  http://www.mythtv.org/wiki/Modeline_Database
+
+*  https://wiki.ubuntu.com/X/Config/Resolution#Adding_undetected_resolutions
+
+*  https://help.ubuntu.com/community/HybridGraphics
+
+*  https://wiki.ubuntu.com/Kernel/Debugging/Backlight
+
+*  https://wiki.ubuntu.com/X/Troubleshooting/BlankScreen
+
+*  https://wiki.ubuntu.com/X/Troubleshooting/Freeze
+
+*  https://askubuntu.com/questions/454436/14-04-how-to-disable-discrete-graphics-card
+
+*  https://help.ubuntu.com/community/VideoDriverHowto
