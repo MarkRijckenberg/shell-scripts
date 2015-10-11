@@ -1,9 +1,11 @@
 .*
 .ccache
-build
 .java
 .gvfs
 .xsession-errors
 .cache/
+build
+maven/
 R/
 rstudio/
+spark/
