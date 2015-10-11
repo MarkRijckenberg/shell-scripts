@@ -2,12 +2,12 @@
 
 # Prerequisites: Mac OS X 10.9 or newer, git, Xcode 6 or newer (=Apple CLI Dev tools)
 
-# 1) install Mac OS X 10.9 or newer
+# 1) install Mac OS X 10.10.4 or later
 # 2) install git using this FAQ:
 # http://sourceforge.net/projects/git-osx-installer/files/
 # then clone this Github repository to your local home directory
 
-# 3) install Xcode 6 or newer via this link:
+# 3) install Xcode 7.0.1 or newer via this link:
 # https://developer.apple.com/xcode/
 
 # 4) execute the bash script below
