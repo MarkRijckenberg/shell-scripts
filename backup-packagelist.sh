@@ -38,9 +38,9 @@ sudo cp Repo.keys $TARGET4/Repo.keys
 sudo cp Repo.keys $TARGET5/Repo.keys
 sudo cp Repo.keys $TARGET6/Repo.keys
 
-sudo $HOME/rsync-time-backup/rsync_tmbackup.sh $HOME $TARGET1
-sudo $HOME/rsync-time-backup/rsync_tmbackup.sh $HOME $TARGET2
-sudo $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE2 $TARGET3
-sudo $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE2 $TARGET4
-sudo $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE3 $TARGET5
-sudo $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE3 $TARGET6
+sudo --exclude-from='$HOME/shell-scripts/exclude_me.txt' $HOME/rsync-time-backup/rsync_tmbackup.sh $HOME $TARGET1
+sudo --exclude-from='$HOME/shell-scripts/exclude_me.txt' $HOME/rsync-time-backup/rsync_tmbackup.sh $HOME $TARGET2
+sudo --exclude-from='$HOME/shell-scripts/exclude_me.txt' $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE2 $TARGET3
+sudo --exclude-from='$HOME/shell-scripts/exclude_me.txt' $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE2 $TARGET4
+sudo --exclude-from='$HOME/shell-scripts/exclude_me.txt' $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE3 $TARGET5
+sudo --exclude-from='$HOME/shell-scripts/exclude_me.txt' $HOME/rsync-time-backup/rsync_tmbackup.sh $SOURCE3 $TARGET6
