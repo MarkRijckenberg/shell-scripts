@@ -3,7 +3,9 @@
 # Version 2.0 - 2015-10-11
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
-#Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
+#Prerequisites: 
+# USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
+# https://github.com/laurent22/rsync-time-backup
 
 #define source directories
 HOME=/home/ulysses/
