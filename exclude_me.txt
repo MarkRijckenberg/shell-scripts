@@ -1,1 +1,9 @@
-.
+.*
+.ccache
+build
+.java
+.gvfs
+.xsession-errors
+.cache/
+R/
+rstudio/
