@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-# Prerequisites: Mac OS X 10.9 or newer, git, Xcode 6 or newer (=Apple CLI Dev tools)
+# Prerequisites: Mac OS X 10.10.4 or newer, git, Xcode 7.0.1 or newer (=Apple CLI Dev tools)
 
 # 1) install Mac OS X 10.10.4 or later
 # 2) install git using this FAQ:
