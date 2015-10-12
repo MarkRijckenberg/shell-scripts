@@ -2023,6 +2023,9 @@ echo "https://www.youtube.com/user/TheLearnR/playlists"
 echo "https://leanpub.com/regmods/read"
 # following URL added on September 22, 2015:
 echo "https://www.shortcutfoo.com"
+# following URL added on October 12, 2015:
+# Using R for Statistical Analysis:
+echo "https://www.youtube.com/user/swinvideos/playlists"
 
 ###############################################################################################
 #     Sabermetrics                                                                            #
