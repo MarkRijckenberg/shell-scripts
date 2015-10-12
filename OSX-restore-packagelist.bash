@@ -197,6 +197,8 @@ npm install -g keybase-installer
 
 pip install --upgrade distribute
 pip install --upgrade pip
+# https://courses.edx.org/asset-v1:DelftX+EX101x+3T2015+type@asset+block/xlwingsguide.pdf
+pip install --upgrade xlwings
 
 #Make Fish your default shell:
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
