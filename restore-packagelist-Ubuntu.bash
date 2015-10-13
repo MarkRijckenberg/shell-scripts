@@ -742,6 +742,8 @@ cd /tmp
 rm minitube*
 wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube64.deb
 sudo dpkg -i minitube64.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
+
   
 # install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
 cd $HOME
@@ -861,6 +863,7 @@ cd /tmp
 rm minitube*
 wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube.deb
 sudo dpkg -i minitube.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 cd $HOME
