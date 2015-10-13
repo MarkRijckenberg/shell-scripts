@@ -2031,6 +2031,8 @@ echo "http://pbil.univ-lyon1.fr/Rweb/Rweb.general.html"
 echo "http://www.rdatamining.com/docs"
 # following URL added on July 17, 2015:
 echo "http://www.datasciencecentral.com/group/resources/forum/topics/the-best-of-our-weekly-digests"
+# following URL added on October 13, 2015:
+echo "http://www.datasciencecentral.com/profiles/blog/show?id=6448529%3ABlogPost%3A334740"
 # following URL added on July 18, 2015:
 echo "https://www.youtube.com/user/TheLearnR/playlists"
 # following URL added on August 6, 2015:
