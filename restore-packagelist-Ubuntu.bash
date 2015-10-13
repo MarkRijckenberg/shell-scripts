@@ -737,6 +737,11 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 # wget `grep deb index.html |head -n 1|cut -d"\"" -f4`
 # sudo dpkg -i dolphin*.deb
   
+# install newest version of minitube
+cd /tmp
+rm minitube*
+wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube64.deb
+sudo dpkg -i minitube64.deb
   
 # install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
 cd $HOME
@@ -850,7 +855,13 @@ cd
 
 else
   # 32-bit stuff here
-  
+
+# install newest version of minitube
+cd /tmp
+rm minitube*
+wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube.deb
+sudo dpkg -i minitube.deb
+
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 cd $HOME
 wget --no-check-certificate https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
