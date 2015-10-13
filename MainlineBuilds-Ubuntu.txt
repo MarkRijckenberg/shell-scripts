@@ -1,0 +1,139 @@
+<<Include(Kernel/MenuBar)>>
+
+||<tablestyle="float:right; font-size: 0.9em; width:40%; background:#F1F1ED; margin: 0 0 1em 1em;" style="padding:0.5em;"><<TableOfContents>>||
+
+= Introduction =
+
+By default, Ubuntu systems run with the Ubuntu kernels provided by the Ubuntu repositories. However it is handy to be able to test with unmodified upstream kernels to help locate problems in the Ubuntu kernel patches, or to confirm that upstream has fixed a specific issue. To this end we now offer select upstream kernel builds. These kernels are made from unmodified kernel source but using the Ubuntu kernel configuration files. These are then packaged as Ubuntu .deb files for simple installation.
+
+These kernels are not supported and are not appropriate for production use.
+
+= Upstream kernels archive =
+
+The upstream kernels archive is located at the URL below. There is a directory for each build. Note, if you are testing for a bug, please do not use the daily folder, but use the latest mainline kernel at the top:
+
+  [[http://kernel.ubuntu.com/~kernel-ppa/mainline/?C=N;O=D|http://kernel.ubuntu.com/~kernel-ppa/mainline/?C=N;O=D]]
+
+The tagged releases (as made by Linus and the stable maintainers) are found under a directory matching their tag name and which kernel configuration they were built with (<tag>-<series>). Daily tip of the tree builds are found in the {{{daily}}} sub-directory named for the date they were made.
+
+Each build directory contains the header and image .deb files for the generic flavour i386 and amd64 architectures.
+
+= Preparing to install an upstream kernel =
+
+First, if one is using select proprietary or out-of-tree modules (ex. vitualbox, nvidia, fglrx, bcmwl, etc.) unless there is an '''extra''' package available for the version you are testing, you will need to uninstall the module first, in order to test the mainline kernel. If you do not uninstall these modules first, then the upstream kernel more than likely will not boot.
+
+= Installing upstream kernels using an automated python script from Github =
+
+{{{
+sudo apt-get update
+sudo apt-get install python-bs4 python python-all
+cd /tmp
+rm -rf medigeek-kmp*
+wget --no-check-certificate https://github.com/medigeek/kmp-downloader/tarball/master -O kmpd.tar.gz
+tar xzf kmpd.tar.gz
+cd medigeek-*
+python kmpd.py -d
+}}}
+
+= Installing upstream kernels (manually) =
+
+To boot into an upstream kernel you need to download and install the packages that corresponds to your architecture.
+
+For example, let us use [[http://kernel.ubuntu.com/~kernel-ppa/mainline/v3.14.4-utopic/]]. <<BR>> If you are using a 32-bit/i386 architecture, you would want those marked A. <<BR>> If you are using a 64-bit/amd64 architecture, B.
+<<BR>> (Use generic kernel unless the issue is only reproducible in a lowlatency kernel).
+
+{{{
+B  linux-headers-3.14.4-031404-generic_3.14.4-031404.201405130853_amd64.deb
+A  linux-headers-3.14.4-031404-generic_3.14.4-031404.201405130853_i386.deb
+   linux-headers-3.14.4-031404-lowlatency_3.14.4-031404.201405130853_amd64.deb
+   linux-headers-3.14.4-031404-lowlatency_3.14.4-031404.201405130853_i386.deb
+AB linux-headers-3.14.4-031404_3.14.4-031404.201405130853_all.deb
+B  linux-image-3.14.4-031404-generic_3.14.4-031404.201405130853_amd64.deb
+A  linux-image-3.14.4-031404-generic_3.14.4-031404.201405130853_i386.deb
+   linux-image-3.14.4-031404-lowlatency_3.14.4-031404.201405130853_amd64.deb
+   linux-image-3.14.4-031404-lowlatency_3.14.4-031404.201405130853_i386.deb
+}}}
+
+It is best to downloaded the files into a folder by themselves. Then, one may install all the packages simultaneously by executing the following in a terminal:
+{{{
+sudo dpkg -i *.deb
+}}}
+
+When this process completes you should have a new entry on your boot menu representing the upstream kernel. This will appear as an entry like this:
+{{{
+Ubuntu Trusty, kernel 3.14.4-031404-generic
+}}}
+
+The headers-<kernelname>_<architecture>.deb and headers-<kernelname>_all.deb packages allow one to build external modules.
+
+= Problems installing the upstream kernel =
+
+/!\ Some have found issues installing an upstream kernel due to an error. For example: {{{
+Error! Bad return status for module build on kernel: 3.7.0-030700rc2-generic (x86_64)
+Consult /var/lib/dkms/virtualbox/4.1.18/build/make.log for more information.
+}}} This is due to how one did not follow the previous directions of uninstalling out-of-tree modules, in this case virtualbox.
+
+= Uninstalling upstream kernels =
+
+The upstream kernels have their own ABI namespace, so they install side by side with the stock Ubuntu kernels (each kernel has a separate directory under /lib/modules/VERSION for example). This means that you can keep several mainline and Ubuntu stock kernels installed at the same time and select the one you need from the GRUB boot menu.
+
+If you would like to uninstall an upstream kernel anyway, execute the following to find the exact name of the kernel packages you want to uninstall:
+{{{
+dpkg -l | grep "linux\-[a-z]*\-"
+}}}
+
+and then execute the following to uninstall them:
+{{{
+sudo apt-get remove KERNEL_PACKAGES_TO_REMOVE
+}}}
+
+Remember that several packages can belong to one kernel version: common headers, architecture specific headers and the architecture specific image.
+
+Also, once the mainline packages are removed, one may still see entries for these via the above dpkg command. To purge these entries execute at a terminal: {{{
+sudo dpkg --purge ENTRY
+}}}
+
+= Mainline build tool chain =
+
+These kernels are built with the tool chain (gcc etc.) from the previous LTS (Ubuntu 8.04/10.04/12.04) depending on version. Therefore, out-of-tree kernel modules built with tools from other versions likely will not work. The file '''BUILD''' in later mainline builds details what was used.
+
+= Mainline kernel mapping to Ubuntu kernel =
+
+The Ubuntu kernel is not bit-for-bit the same as the mainline. However, one may find the upstream release that the Ubuntu kernel is based on via the [[http://people.canonical.com/~kernel/info/kernel-version-map.html|Ubuntu to mainline mapping]] table. 
+
+= Does the kernel team support the mainline kernel builds? =
+
+The mainline kernels builds are produced for debugging purposes and therefore come with no support.  Use them at your own risk.
+
+= Where can I get the source for these builds? =
+
+In each directory there is a COMMIT file which defines the base commit in Linus' master tree from which they were built.  The patches in the same directory ????-* are applied on top of this commit to make the build tree.  A mirror of Linus' tree is available from {{{git://kernel.ubuntu.com/virgin/linux.git}}}.
+
+First download the COMMIT and patch files ????-* from the mainline build in question to a temporary directory:
+
+    {{{
+git clone git://kernel.ubuntu.com/virgin/linux.git mainline
+cd mainline
+git checkout -b `cat ${MAINLINE}/COMMIT`
+git am ${MAINLINE}/????-*
+}}}
+
+= Verifying the mainline build binaries =
+
+In order to allow verification that the published builds are the builds made by the mainline build system the individual files are checksummed and the results of that published as CHECKSUMS in the same directory.  This file is in turn signed by the mainline builder using the GPG key below which can be obtained from the Ubuntu Keyserver:
+    {{{
+pub   2048R/17C622B0 2008-05-01
+      Key fingerprint = 60AA 7B6F 3043 4AE6 8E56  9963 E50C 6A09 17C6 22B0
+uid                  Kernel PPA <kernel-ppa@canonical.com>
+}}}
+
+= Upstream kernels in detail =
+
+We currently build five sets of upstream kernels. All formal tags from Linus' tree and from the stable trees, plus:
+ 1. the daily tip of [[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git|Linus' linux kernel source tree]],
+ 1. the tip of the [[http://cgit.freedesktop.org/~airlied/linux/log/?h=drm-next|drm-next]] head of Dave Airlie's [[http://cgit.freedesktop.org/~airlied/linux/|linux]] repository daily,
+ 1. the tip of the [[http://cgit.freedesktop.org/~keithp/linux/log/?h=drm-intel-next|drm-intel-next]] head of Keith Packard's [[http://cgit.freedesktop.org/~keithp/linux/|linux]] repository daily until 2012, after which it has been [[http://blog.ffwll.ch/2012/01/new-drm-intel-next-git-tree.html|taken over]] by Daniel Vetter at [[http://cgit.freedesktop.org/drm-intel/]], and in particular, the [[http://cgit.freedesktop.org/drm-intel/log/?h=drm-intel-next|drm-intel-next]] branch,
+ 1. the tip of the master branch of the debloat-testing tree daily,
+ 1. tags from the combined [[http://git.kernel.org/?p=linux/kernel/git/smb/linux-2.6.32.y-drm33.z.git;a=summary|v2.6.32.x.y]] tree (by StefanBader) which is v2.6.32.x with DRM from 2.6.33.y.
+
+This makes these kernels closer to the Lucid kernels which are based on 2.6.32 kernels with DRM backported from the 2.6.33 series.
