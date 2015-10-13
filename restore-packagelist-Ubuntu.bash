@@ -2142,7 +2142,8 @@ echo "https://www.youtube.com/results?search_query=1%20-%201%20Stanford%20NLP%20
 echo "http://statsguys.files.wordpress.com/2014/03/supervisedworkflow.png"
 # NFL dataset for R users in SQL format:
 echo "http://rpubs.com/rseiter/22093"
-
+# free courses
+echo "https://stacksocial.com/free"
 
 ###############################################################################################
 #     Open data formats and importing data into R                                             #
