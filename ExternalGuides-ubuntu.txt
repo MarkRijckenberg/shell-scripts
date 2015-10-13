@@ -19,6 +19,8 @@ These guides are independently maintained. Much of their content is included in 
 
 * [[http://tldp.org/guides.html | The GNU/Linux Documentation Project Guides]]
 
+* [[http://www.makelinux.net/kernel_map/ | Interactive map of GNU/Linux kernel]]
+
 * [[http://askubuntu.com/questions/36671/how-do-i-pre-install-ubuntu-for-someone-oem-install | How do I pre-install Ubuntu for someone else (= OEM install)?]]
 
 * [[http://futurist.se/gldt/ | GNU/Linux Distribution Timeline]]
@@ -60,6 +62,8 @@ These guides are independently maintained. Much of their content is included in 
 * [[https://help.ubuntu.com/community/ComposeKey|Compose Key Sequences]] - Compose Key Sequences
 
 = Free guides and free manuals for GNU/Linux beginners =
+
+* [[http://distrowatch.com/dwres.php?resource=glossary | Glossary of open-source terminology]]
 
 * [[http://en.wikibooks.org/wiki/Linux_For_Newbies/Command_Line | GNU/Linux for Newbies]]
 
