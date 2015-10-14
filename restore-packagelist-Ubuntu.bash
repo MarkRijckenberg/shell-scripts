@@ -231,6 +231,17 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 
 ##########################################################################################################
+# install newest version of WPS Office for Linux (MS Office compatible)
+cd /tmp
+rm download*
+rm wps-office*
+wget --no-check-certificate http://wps-community.org/downloads
+wget --no-check-certificate  `cat downloads |cut -d "\"" -f14| tail -n 1`
+sudo dpkg -i wps-office*.deb
+sudo apt-get install -f
+##########################################################################################################
+
+##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
 # source 1:  http://ubuntuforums.org/showthread.php?t=2181903
 # source 2:  http://blog.vinnymac.org/?p=351
@@ -425,14 +436,6 @@ sudo ln -s /usr/bin/wkhtmltopdf /usr/local/bin/html2pdf
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install grub-customizer
 
-# install newest version of WPS Office for Linux (MS Office compatible)
-cd /tmp
-rm download*
-rm wps-office*
-wget --no-check-certificate http://wps-community.org/downloads
-wget --no-check-certificate  `cat downloads |cut -d "\"" -f14| tail -n 1`
-sudo dpkg -i wps-office*.deb
-sudo apt-get install -f
 
 # install newest version of Libreoffice
 # https://wiki.documentfoundation.org/Feature_Comparison:_LibreOffice_-_Microsoft_Office/fr
