@@ -429,8 +429,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install grub-cus
 cd /tmp
 rm download*
 rm wps-office*
-wget http://wps-community.org/downloads
-wget `cat downloads |cut -d "\"" -f14| tail -n 1`
+wget --no-check-certificate http://wps-community.org/downloads
+wget --no-check-certificate  `cat downloads |cut -d "\"" -f14| tail -n 1`
 sudo dpkg -i wps-office*.deb
 sudo apt-get install -f
 
