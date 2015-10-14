@@ -425,6 +425,15 @@ sudo ln -s /usr/bin/wkhtmltopdf /usr/local/bin/html2pdf
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install grub-customizer
 
+# install newest version of WPS Office for Linux (MS Office compatible)
+cd /tmp
+rm download*
+rm wps-office*
+wget http://wps-community.org/downloads
+wget `cat downloads |cut -d "\"" -f14| tail -n 1`
+sudo dpkg -i wps-office*.deb
+sudo apt-get install -f
+
 # install newest version of Libreoffice
 # https://wiki.documentfoundation.org/Feature_Comparison:_LibreOffice_-_Microsoft_Office/fr
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
