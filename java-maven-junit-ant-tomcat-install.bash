@@ -54,7 +54,7 @@ cd
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle 
 source ~/.bashrc
 
-# install ant (=prerequisite for compiling tomcat)
+# install ant (ant version >= 1.9.5 is prerequisite for compiling tomcat)
 cd
 git clone https://github.com/apache/ant.git
 cd ant
@@ -62,6 +62,9 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ./build.sh
 sudo mv /usr/bin/ant /usr/bin/antBACKUP
 sudo ln -s ~/ant/dist/bin/ant  /usr/bin/ant
+ant -version
+# output should look like this:
+# Apache Ant(TM) version 1.9.7alpha compiled on October 16 2015
 
 # install tomcat
 cd
