@@ -181,6 +181,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stellarium/stellarium-releases
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:clipgrab-team/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:heyarje/libav-11
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -240,6 +241,9 @@ wget --no-check-certificate  `cat downloads |cut -d "\"" -f14| tail -n 1`
 sudo dpkg -i wps-office*.deb
 sudo apt-get install -f
 ##########################################################################################################
+
+# install newest version of avconf
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libav-tools
 
 ##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
