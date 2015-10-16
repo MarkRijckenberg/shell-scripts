@@ -10,12 +10,12 @@ cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install build-essential checkinstall
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install python-software-properties javahelper  libecj-java
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  lynx-cur  default-jdk unp git
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  purge tomcat6 tomcat7 junit4 junit
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  purge tomcat6 tomcat7 junit4 junit maven
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  build-dep tomcat7 ant
 
 # install newest version of maven (=prerequisite for junit)
 cd
-rm -rf maven*
+sudo rm -rf maven*
 sudo rm -rf ~/apps/maven
 git clone https://github.com/apache/maven.git
 cd maven
