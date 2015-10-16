@@ -4,6 +4,11 @@ cd
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes ppa:webupd8team/java
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install oracle-java8-installer
+java -version
+# Terminal output should look like this:
+# java version "1.8.0_60"
+# Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
+# Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
 
 # install prerequisites for tomcat
 cd
