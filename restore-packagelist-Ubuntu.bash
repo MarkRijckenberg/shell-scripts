@@ -2059,6 +2059,8 @@ echo "https://www.shortcutfoo.com"
 # following URL added on October 12, 2015:
 # Using R for Statistical Analysis:
 echo "https://www.youtube.com/user/swinvideos/playlists"
+# How to use neo4j and Cypher (graph DB plugin for MS Excel 2013) in Ubuntu without using a virtual Windows machine:
+echo "http://console.neo4j.org/"
 
 ###############################################################################################
 #     Sabermetrics                                                                            #
