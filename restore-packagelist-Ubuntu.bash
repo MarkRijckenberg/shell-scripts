@@ -2061,6 +2061,8 @@ echo "https://www.shortcutfoo.com"
 echo "https://www.youtube.com/user/swinvideos/playlists"
 # How to use neo4j and Cypher (graph DB plugin for MS Excel 2013) in Ubuntu without using a virtual Windows machine:
 echo "http://console.neo4j.org/"
+# Cypher cheat sheet (when using the console in neo4j)
+echo "http://assets.neo4j.org/download/Neo4j_CheatSheet_v3.pdf"
 
 ###############################################################################################
 #     Sabermetrics                                                                            #
