@@ -195,6 +195,7 @@ npm install -g keybase-installer
 #go get code.google.com/p/go.tools/cmd/goimports
 #echo Please add \"$GOBIN\" to your path
 
+sudo easy_install pip
 pip install --upgrade distribute
 pip install --upgrade pip
 # https://courses.edx.org/asset-v1:DelftX+EX101x+3T2015+type@asset+block/xlwingsguide.pdf
