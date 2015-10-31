@@ -3,26 +3,22 @@
 #############################################################
 
 ###### Ubuntu Main Repos
-deb http://be.archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse 
-deb-src http://be.archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse 
+deb http://be.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse 
 
 ###### Ubuntu Update Repos
-deb http://be.archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse 
-deb http://be.archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse 
-deb http://be.archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse 
-deb http://be.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse 
-deb-src http://be.archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse 
-deb-src http://be.archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse 
-deb-src http://be.archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse 
-deb-src http://be.archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse 
+deb http://be.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse 
+deb http://be.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse 
+deb-src http://be.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse 
 
 ###### Ubuntu Partner Repo
-deb http://archive.canonical.com/ubuntu trusty partner
-deb-src http://archive.canonical.com/ubuntu trusty partner
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
 
 ###### Ubuntu Extras Repo
-deb http://extras.ubuntu.com/ubuntu trusty main
-deb-src http://extras.ubuntu.com/ubuntu trusty main
+deb http://extras.ubuntu.com/ubuntu xenial main
+deb-src http://extras.ubuntu.com/ubuntu xenial main
 
 ##############################################################
 ##################### UNOFFICIAL  REPOS ######################
@@ -36,23 +32,23 @@ deb http://dl.google.com/linux/chrome/deb/ stable main
 
 #### Kubuntu Backports PPA - https://edge.launchpad.net/~kubuntu-ppa/+archive/backports
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
-deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu trusty main
+deb http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main
 
 #### Kubuntu Beta Backports PPA - https://launchpad.net/~kubuntu-ppa/+archive/beta
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
-deb http://ppa.launchpad.net/kubuntu-ppa/beta/ubuntu trusty main
+deb http://ppa.launchpad.net/kubuntu-ppa/beta/ubuntu xenial main
 
 #### Kubuntu Updates PPA - https://edge.launchpad.net/~kubuntu-ppa/+archive/ppa
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
-deb http://ppa.launchpad.net/kubuntu-ppa/ppa/ubuntu trusty main 
+deb http://ppa.launchpad.net/kubuntu-ppa/ppa/ubuntu xenial main 
 
 #### LibreOffice PPA - http://www.documentfoundation.org/download/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
-deb http://ppa.launchpad.net/libreoffice/ppa/ubuntu trusty main
+deb http://ppa.launchpad.net/libreoffice/ppa/ubuntu xenial main
 
 #### Mozilla Daily Build Team PPA - http://edge.launchpad.net/~ubuntu-mozilla-daily/+archive/ppa
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  247510BE
-deb http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu trusty main
+deb http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu xenial main
 
 #### Opera - http://www.opera.com/
 ## Run this command: sudo wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
@@ -72,38 +68,38 @@ deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
 
 #### UNetbootin PPA - http://unetbootin.sourceforge.net/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
-deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu trusty main
+deb http://ppa.launchpad.net/gezakovacs/ppa/ubuntu xenial main
 
 #### VirtualBox - http://www.virtualbox.org
 ## Run this command: wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-deb http://download.virtualbox.org/virtualbox/debian trusty contrib
+deb http://download.virtualbox.org/virtualbox/debian xenial contrib
 
 
 ####### 3rd Party Source Repos
 
 #### Kubuntu Backports PPA (Source) - https://edge.launchpad.net/~kubuntu-ppa/+archive/backports
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
-deb-src http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu trusty main
+deb-src http://ppa.launchpad.net/kubuntu-ppa/backports/ubuntu xenial main
 
 #### Kubuntu Beta Backports PPA (Source) - https://launchpad.net/~kubuntu-ppa/+archive/beta
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
-deb-src http://ppa.launchpad.net/kubuntu-ppa/beta/ubuntu trusty main
+deb-src http://ppa.launchpad.net/kubuntu-ppa/beta/ubuntu xenial main
 
 #### Kubuntu Updates PPA (Source) - https://edge.launchpad.net/~kubuntu-ppa/+archive/ppa
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8AC93F7A
-deb-src http://ppa.launchpad.net/kubuntu-ppa/ppa/ubuntu trusty main 
+deb-src http://ppa.launchpad.net/kubuntu-ppa/ppa/ubuntu xenial main 
 
 #### LibreOffice PPA (Source) - http://www.documentfoundation.org/download/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1378B444
-deb-src http://ppa.launchpad.net/libreoffice/ppa/ubuntu trusty main
+deb-src http://ppa.launchpad.net/libreoffice/ppa/ubuntu xenial main
 
 #### Mozilla Daily Build Team PPA (Source) - http://edge.launchpad.net/~ubuntu-mozilla-daily/+archive/ppa
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  247510BE
-deb-src http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu trusty main
+deb-src http://ppa.launchpad.net/ubuntu-mozilla-daily/ppa/ubuntu xenial main
 
 #### UNetbootin PPA (Source) - http://unetbootin.sourceforge.net/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
-deb-src http://ppa.launchpad.net/gezakovacs/ppa/ubuntu trusty main
+deb-src http://ppa.launchpad.net/gezakovacs/ppa/ubuntu xenial main
 
 
-deb http://cran.freestatistics.org/bin/linux/ubuntu trusty/
+deb http://cran.freestatistics.org/bin/linux/ubuntu xenial/
