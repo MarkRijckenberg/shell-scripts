@@ -209,5 +209,5 @@ pip install --upgrade xlwings
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
-# remove ruby 1.8 symbolic link used for find ruby in Mac OS X 10.10 or newer:
+# remove ruby 1.8 symbolic link used for finding ruby in Mac OS X 10.10 or newer:
 sudo rm /System/Library/Frameworks/Ruby.framework/Versions/1.8
