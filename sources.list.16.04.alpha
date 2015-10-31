@@ -60,11 +60,11 @@ deb http://www.bchemnet.com/suldr/ debian extra
 
 #### Steam for Linux - http://store.steampowered.com/about/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
-deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+deb [arch=i386] http://repo.steampowered.com/steam/ xenial steam
 
 #### Steam for Linux - http://store.steampowered.com/about/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
-deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+deb [arch=i386] http://repo.steampowered.com/steam/ xenial steam
 
 #### UNetbootin PPA - http://unetbootin.sourceforge.net/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FC91AE7E
