@@ -22,6 +22,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # echo
 # read -p "Please wait until CLI tools are installed and press enter"  < /dev/tty
 
+# Make sure ruby binary can be found in Mac OS X 10.10 or newer:
+cd /System/Library/Frameworks/Ruby.framework/Versions
+sudo ln -s Current 1.8
+
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Symlink into the normal place. Add this to login scripts as well
@@ -204,3 +208,6 @@ pip install --upgrade xlwings
 #Make Fish your default shell:
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
+
+# remove ruby 1.8 symbolic link used for find ruby in Mac OS X 10.10 or newer:
+sudo rm /System/Library/Frameworks/Ruby.framework/Versions/1.8
