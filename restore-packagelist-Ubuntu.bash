@@ -182,6 +182,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stellarium/stel
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:clipgrab-team/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:heyarje/libav-11
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:niko2040/e19
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -244,6 +245,9 @@ sudo apt-get install -f
 
 # install newest version of avconf
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libav-tools
+
+# install Enlightenment 19 (E19) GUI/desktop
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install enlightenment
 
 ##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
