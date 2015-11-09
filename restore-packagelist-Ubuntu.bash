@@ -2054,6 +2054,8 @@ echo "http://pbil.univ-lyon1.fr/Rweb/Rweb.general.html"
 # following URL added on September 15, 2014:
 # detailed examples of supervised and unsupervised learning and time series analysis in R:
 echo "http://www.rdatamining.com/docs"
+# following URL added on November 9, 2015:
+echo "http://www.datasciencecentral.com/profiles/blogs/10-great-books-about-r-1"
 # following URL added on July 17, 2015:
 echo "http://www.datasciencecentral.com/group/resources/forum/topics/the-best-of-our-weekly-digests"
 # following URL added on October 13, 2015:
