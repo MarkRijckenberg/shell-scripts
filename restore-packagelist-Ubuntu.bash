@@ -422,15 +422,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 #sudo rm -rf /etc/xdg/lxpanel
 #sudo rm -rf /etc/xdg/lxqt
 #sudo rm -rf /etc/xdg/lxsession
-sudo rm -rf /etc/xdg/razor
-rm -rf ~/.config/razor*
-rm -rf ~/.config/pcman*
-rm -rf ~/.config/compiz*
-rm -rf ~/.config/lxpanel
-rm -rf ~/.config/lxsession/
-rm -rf ~/.config/lxterminal/
-rm -rf ~/.config/openbox*
-rm -rf ~/.config/unity*
+#sudo rm -rf /etc/xdg/razor
+#rm -rf ~/.config/razor*
+#rm -rf ~/.config/pcman*
+#rm -rf ~/.config/compiz*
+#rm -rf ~/.config/lxpanel
+#rm -rf ~/.config/lxsession/
+#rm -rf ~/.config/lxterminal/
+#rm -rf ~/.config/openbox*
+#rm -rf ~/.config/unity*
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install lxqt-metapackage lxqt-common
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
