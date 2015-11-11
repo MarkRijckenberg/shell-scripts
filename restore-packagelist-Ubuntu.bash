@@ -422,6 +422,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 #sudo rm -rf /etc/xdg/lxpanel
 #sudo rm -rf /etc/xdg/lxqt
 #sudo rm -rf /etc/xdg/lxsession
+rm -rf ~/.config/razor*
+rm -rf ~/.config/pcman*
+rm -rf ~/.config/compiz*
+rm -rf ~/.config/lxpanel
+rm -rf ~/.config/lxsession/
+rm -rf ~/.config/lxterminal/
+rm -rf ~/.config/openbox*
+rm -rf ~/.config/unity*
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install lxqt-metapackage lxqt-common
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
@@ -856,6 +864,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer9
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
 sudo rm -rf /opt/teamviewer*
+rm -rf ~/.config/teamviewer8
+rm -rf ~/.config/teamviewer9
 rm *.deb
 wget --no-check-certificate https://www.teamviewer.com/en/download/linux.aspx
 wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
@@ -976,6 +986,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer9
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
 sudo rm -rf /opt/teamviewer*
+rm -rf ~/.config/teamviewer8
+rm -rf ~/.config/teamviewer9
 rm *.deb
 wget --no-check-certificate https://www.teamviewer.com/en/download/linux.aspx
 wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
