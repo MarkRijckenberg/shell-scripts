@@ -8,19 +8,18 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 # https://github.com/MarkRijckenberg/rsync-time-backup.git
 
 #define source directories
-HOMEUSER=`whoami`
-HOME=/home/`cat $HOMEUSER`/
+HOME=/home/ulysses/
 SOURCE2=/etc/
 SOURCE3=/media/windows/rsync/
 
 #define target directories where backup will be stored
 TARGET1=/media/SAMSUNG/$HOME/
 TARGET2=/media/IOMEGA/$HOME/
-TARGET7=/media/`cat $HOMEUSER`/BACKUP/$HOME/
+TARGET7=/media/ulysses/BACKUP/$HOME/
 
 TARGET3=/media/SAMSUNG/etc/
 TARGET4=/media/IOMEGA/etc/
-TARGET8=/media/`cat $HOMEUSER`/BACKUP/etc/
+TARGET8=/media/ulysses/BACKUP/etc/
 
 TARGET5=/media/SAMSUNG/media/windowsdata/rsync/
 TARGET6=/media/IOMEGA/media/windowsdata/rsync/
