@@ -1124,9 +1124,9 @@ omf theme robbyrussell
 ########################################################################################
 
 # run shellshock test to see if bash is vulnerable
-cd $HOME
-rm *.sh
-wget --no-check-certificate https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
+#cd $HOME
+#rm *.sh
+#wget --no-check-certificate https://shellshocker.net/shellshock_test.sh ; bash shellshock_test.sh
 
 # clean up current directory
 echo "Performing file cleanup"
