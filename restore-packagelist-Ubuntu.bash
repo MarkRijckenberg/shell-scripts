@@ -14,8 +14,8 @@
 # !!!!! WINDOWS 8.1 64-bit Second App Store URL: http://www.pokki.com/
 
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Xubuntu 14.04 LTS 64-bit
-# REQUIRES: Xubuntu 14.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
+# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu/Xubuntu 14.04 LTS 64-bit
+# REQUIRES: Lubuntu/Xubuntu 14.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
 #           wget, apt-get, unp, wine, biber, biblatex
 # CONFLICTS: with Kubuntu, Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
 # Ubuntu package repositories -> Linux Mint and DistroAstro packages destabilize the GUI interface
@@ -24,7 +24,7 @@
 # REQUIRED FREE DISKSPACE FOR Xubuntu 14.04 LTS: 5 GB of free disk space in root partition
 # REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
 # REQUIRED FREE DISKSPACE FOR PPA PACKAGES:  1.4 GB of free disk space in root partition after installing Linux Mint DVD
-# TOTAL AMOUNT OF REQUIRED DISKSPACE FOR Xubuntu 14.04 LTS + BASEPACKAGES + PPA PACKAGES
+# TOTAL AMOUNT OF REQUIRED DISKSPACE FOR Lubuntu/Xubuntu 14.04 LTS + BASEPACKAGES + PPA PACKAGES
 # = 5 GB + 1.4 GB + 1.4 GB = 7.8 GB
 # INSTALLATION DURATION WITHOUT INSTALLING ASTRONOMY SOFTWARE: around 30 minutes on a modern laptop without SSD storage
 # COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon
