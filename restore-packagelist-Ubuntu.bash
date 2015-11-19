@@ -17,7 +17,7 @@
 # PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Xubuntu 14.04 LTS 64-bit
 # REQUIRES: Xubuntu 14.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
 #           wget, apt-get, unp, wine, biber, biblatex
-# CONFLICTS: with Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
+# CONFLICTS: with Kubuntu, Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
 # Ubuntu package repositories -> Linux Mint and DistroAstro packages destabilize the GUI interface
 # Use Cinnamon instead of Unity interface, because Unity causes Teamviewer sessions to slow down due to window 
 # animation in Unity
