@@ -12,6 +12,9 @@
 # !!!!! WINDOWS 8.1 64-bit users should install new games via Steam and via www.pokki.com
 # !!!!! WINDOWS 8.1 64-bit App Store URL: http://windows.microsoft.com/en-us/windows-8/apps#Cat=t1
 # !!!!! WINDOWS 8.1 64-bit Second App Store URL: http://www.pokki.com/
+# !!!!! WINDOWS 10 64-bit: Method to boot Ubuntu 1GB USB stick in UEFI compatible mode in order to
+# !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI mode:
+# !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
 
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu/Xubuntu 14.04 LTS 64-bit
