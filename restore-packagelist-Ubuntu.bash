@@ -1043,6 +1043,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw mono-r
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge libmono-2.0-dev
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge  xscreensaver  xscreensaver-data gnome-screensaver
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge evolution-data-server-common samba
+sudo apt-get purge xfce4-notifyd lxqt-powermanagement
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 
