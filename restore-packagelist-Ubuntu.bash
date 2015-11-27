@@ -243,7 +243,7 @@ rm wps-office*
 wget --no-check-certificate http://wps-community.org/downloads
 wget --no-check-certificate  `cat downloads |cut -d "\"" -f14| tail -n 1`
 sudo dpkg -i wps-office*.deb
-sudo apt-get install -f
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 ##########################################################################################################
 
 # install newest version of avconf
