@@ -42,8 +42,8 @@
 
 # INSTALL DURATION: 20 minutes for install of Lubuntu/Xubuntu 14.04 LTS 64-bit  + 74 minutes for install of base packages and PPA packages
 # Author: Mark Rijckenberg
-# Copyright (c) 20120812
-# REVISION DATE: 20141017
+# INITIAL REVISION DATE: 20120812
+# LAST REVISION DATE: November 2015
 # Updated by: markrijckenberg at gmail dot com
 
 # regarding the HP Laserjet 1020 in Berlin:
