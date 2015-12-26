@@ -254,6 +254,7 @@ sudo dpkg -P icaclient
 sudo rm -rf $HOME/foo
 sudo dpkg --add-architecture i386 # only needed once
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install firefox apt-file git openssl ca-certificates
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install firefox apt-file git nspluginwrapper lib32z1 libc6-i386 libxml2:i386 libstdc++6:i386 libxerces-c3.1:i386 libcanberra-gtk-module:i386 libcurl3:i386 libasound2-plugins:i386 libgstreamer-plugins-base0.10-0:i386 openssl ca-certificates
 sudo apt-file update --architecture i386
 sudo apt-file update --architecture amd64
@@ -800,8 +801,8 @@ rm index.htm*
 sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
 # install bleeding edge version of seamonkey web browser
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
-filename=`grep bz2 index.html|grep x86_64|tail -n 1|cut -d"\"" -f2|cut -d"/" -f6`
-wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/`echo $filename`
+filename=`echo "http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/" | wget -O- -i- | hxnormalize -x  | hxselect -c -i "td" -s '\n' | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2|grep x86_64| tail -n 1|cut -c 8-`
+wget --no-check-certificate   http://ftp.mozilla.org`echo $filename`
 tar -xjvf `echo $filename`
 sudo cp -r seamonkey /opt/seamonkey
 sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
@@ -924,8 +925,8 @@ rm index.htm*
 sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
 # install bleeding edge version of seamonkey web browser
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
-filename=`grep bz2 index.html|grep i686|tail -n 1|cut -d"\"" -f2|cut -d"/" -f6`
-wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/`echo $filename`
+filename=`echo "http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/" | wget -O- -i- | hxnormalize -x  | hxselect -c -i "td" -s '\n' | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2|grep i686| tail -n 1|cut -c 8-`
+wget --no-check-certificate   http://ftp.mozilla.org`echo $filename`
 tar -xjvf `echo $filename`
 sudo cp -r seamonkey /opt/seamonkey
 sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
