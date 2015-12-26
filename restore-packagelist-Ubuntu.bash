@@ -443,7 +443,7 @@ cd /tmp
 rm download*
 rm wps-office*
 wget --no-check-certificate http://wps-community.org/downloads
-wget --no-check-certificate  `echo "http://wps-community.org/downloads" | wget -O- -i- | hxnormalize -x  | hxselect -c -i ul li:first-child | lynx -stdin -dump -hiddenlinks=listonly -nonumbers| tail -n 1`
+wget --no-check-certificate  `echo "http://wps-community.org/downloads" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i ul li:first-child | lynx -stdin -dump -hiddenlinks=listonly -nonumbers| tail -n 1`
 sudo dpkg -i wps-office*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 ##########################################################################################################
@@ -801,30 +801,18 @@ rm index.htm*
 sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
 # install bleeding edge version of seamonkey web browser
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
-filename=`echo "http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/" | wget -O- -i- | hxnormalize -x  | hxselect -c -i "td" -s '\n' | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2|grep x86_64| tail -n 1|cut -c 8-`
+filename=`echo "http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i "td" -s '\n' | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2|grep x86_64| tail -n 1|cut -c 8-`
 wget --no-check-certificate   http://ftp.mozilla.org`echo $filename`
 tar -xjvf `echo $filename`
 sudo cp -r seamonkey /opt/seamonkey
 sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
 
 # install YouTubeToMP3 - Youtube playlist downloader
-cd $HOME
-VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download.html"
-url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*ube[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
-url=`echo $url |cut -f2 -d"/"`
-# Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
-# Download the .deb file
-VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download/"
-wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
-# Install the package
-sudo dpkg -i "${url##*/}"
-# Clean up
-rm "${url##*/}"
-cd $HOME
-rm -rf "$dir"
-cd $HOME
+cd /tmp
+rm YouTube*
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f purge youtube-to-mp3
+wget --no-check-certificate  `echo "http://www.mediahuman.com/download.html" | wget -O- -i- --no-check-certificate | hxnormalize -x   | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep amd64|grep MP3`
+sudo dpkg -i YouTubeToMP3*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
@@ -873,16 +861,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1
 
 # install Teamviewer server + client which depends on wine1.7
 cd /tmp
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer9
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge teamviewer
 sudo rm -rf /opt/teamviewer*
 rm -rf ~/.config/teamviewer8
 rm -rf ~/.config/teamviewer9
+rm -rf ~/.config/teamviewer10
 rm *.deb
-wget --no-check-certificate https://www.teamviewer.com/en/download/linux.aspx
-wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
+wget --no-check-certificate `echo "https://www.teamviewer.com/en/download/linux.aspx" | wget -O- -i- --no-check-certificate | hxnormalize -x | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep i386`
 sudo dpkg -i teamviewer*.deb
+
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
 sudo -k teamviewer --daemon start
@@ -925,30 +912,18 @@ rm index.htm*
 sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
 # install bleeding edge version of seamonkey web browser
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
-filename=`echo "http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/" | wget -O- -i- | hxnormalize -x  | hxselect -c -i "td" -s '\n' | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2|grep i686| tail -n 1|cut -c 8-`
+filename=`echo "http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i "td" -s '\n' | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2|grep i686| tail -n 1|cut -c 8-`
 wget --no-check-certificate   http://ftp.mozilla.org`echo $filename`
 tar -xjvf `echo $filename`
 sudo cp -r seamonkey /opt/seamonkey
 sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
 
 # install YouTubeToMP3 - Youtube playlist downloader
-cd $HOME
-VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download.html"
-url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*ube[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
-url=`echo $url |cut -f2 -d"/"`
-# Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
-# Download the .deb file
-VIDEODOWNLOADERREMOTEDIR="http://www.mediahuman.com/download/"
-wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
-# Install the package
-sudo dpkg -i "${url##*/}"
-# Clean up
-rm "${url##*/}"
-cd $HOME
-rm -rf "$dir"
-cd $HOME
+cd /tmp
+rm YouTube*
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f purge youtube-to-mp3
+wget --no-check-certificate  `echo "http://www.mediahuman.com/download.html" | wget -O- -i- --no-check-certificate | hxnormalize -x   | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep i386|grep MP3`
+sudo dpkg -i YouTubeToMP3*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
@@ -995,16 +970,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install wine1.
 
 # install Teamviewer server + client which depends on wine1.7
 cd /tmp
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer9
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer8
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge  teamviewer
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge teamviewer
 sudo rm -rf /opt/teamviewer*
 rm -rf ~/.config/teamviewer8
 rm -rf ~/.config/teamviewer9
+rm -rf ~/.config/teamviewer10
 rm *.deb
-wget --no-check-certificate https://www.teamviewer.com/en/download/linux.aspx
-wget `grep deb linux.aspx |grep i386|cut -d"\"" -f6`
+wget --no-check-certificate `echo "https://www.teamviewer.com/en/download/linux.aspx" | wget -O- -i- --no-check-certificate | hxnormalize -x | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep i386`
 sudo dpkg -i teamviewer*.deb
+
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
 sudo -k teamviewer --daemon start
@@ -1086,13 +1060,13 @@ rm *.html
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 wget --no-check-certificate http://www.yworks.com/en/products_yed_download.html
-YEDVERSION=`echo "http://www.yworks.com/en/products_yed_download.html" | wget -O- -i- | hxnormalize -x  | hxselect -c -i "strong" -s '\n' |tail -n 1`
+YEDVERSION=`echo "http://www.yworks.com/en/products_yed_download.html" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i "strong" -s '\n' |tail -n 1`
 wget --no-check-certificate http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_64-bit_setup.sh
 sh yEd-`echo $YEDVERSION`_64-bit_setup.sh
 else
   # 32-bit stuff here
 wget --no-check-certificate http://www.yworks.com/en/products_yed_download.html
-YEDVERSION=`echo "http://www.yworks.com/en/products_yed_download.html" | wget -O- -i- | hxnormalize -x  | hxselect -c -i "strong" -s '\n' |tail -n 1`
+YEDVERSION=`echo "http://www.yworks.com/en/products_yed_download.html" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i "strong" -s '\n' |tail -n 1`
 wget --no-check-certificate http://www.yworks.com/products/yed/demo/yEd-`echo $YEDVERSION`_32-bit_setup.sh
 sh yEd-`echo $YEDVERSION`_32-bit_setup.sh
 fi
