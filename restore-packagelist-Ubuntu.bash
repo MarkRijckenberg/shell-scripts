@@ -236,26 +236,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptab
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 
-##########################################################################################################
-# install newest version of WPS Office for GNU/Linux (MS Office compatible)
-cd /tmp
-rm download*
-rm wps-office*
-wget --no-check-certificate http://wps-community.org/downloads
-wget --no-check-certificate  `cat downloads|grep i386|head -n 1|cut -d "\"" -f10`
-sudo dpkg -i wps-office*.deb
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
-##########################################################################################################
-# install proprietary TrueType fonts required by WPS Office for GNU/Linux
-sudo DEBIAN_FRONTEND=noninteractive apt-get install msttcorefonts gsfonts-x11
-sudo mkdir /usr/share/fonts/wps-office
-cd /tmp
-rm -rf settings*
-git clone https://github.com/tkboy/settings.git
-sudo mv settings/.fonts/*  /usr/share/fonts/wps-office
-sudo fc-cache -f -v 
-##########################################################################################################
-
 # install newest version of avconf
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libav-tools
 
@@ -456,6 +436,24 @@ cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install aptitude
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
 cd $HOME
+##########################################################################################################
+# install newest version of WPS Office for GNU/Linux (MS Office compatible)
+cd /tmp
+rm download*
+rm wps-office*
+wget --no-check-certificate http://wps-community.org/downloads
+wget --no-check-certificate  `echo "http://wps-community.org/downloads" | wget -O- -i- | hxnormalize -x  | hxselect -c -i ul li:first-child | lynx -stdin -dump -hiddenlinks=listonly | tail -n 1 | cut -c 7-`
+sudo dpkg -i wps-office*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
+##########################################################################################################
+# install proprietary TrueType fonts required by WPS Office for GNU/Linux
+sudo DEBIAN_FRONTEND=noninteractive apt-get install msttcorefonts gsfonts-x11
+sudo mkdir /usr/share/fonts/wps-office
+cd /tmp
+rm -rf settings*
+git clone https://github.com/tkboy/settings.git
+sudo mv settings/.fonts/*  /usr/share/fonts/wps-office
+sudo fc-cache -f -v 
 ##########################################################################################################
 
 # create symbolic link to wkhtmltopdf in /usr/local/bin after installing base packages
