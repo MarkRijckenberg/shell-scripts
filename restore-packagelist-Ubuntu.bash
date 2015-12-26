@@ -774,9 +774,9 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 cd /tmp
 rm minitube*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge minitube
-#wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube64.deb
-#sudo dpkg -i minitube64.deb
-sudo DEBIAN_FRONTEND=noninteractive apt-get install minitube
+wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube64.deb
+sudo dpkg -i minitube64.deb
+# sudo DEBIAN_FRONTEND=noninteractive apt-get install minitube
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 
   
@@ -899,9 +899,9 @@ else
 cd /tmp
 rm minitube*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge minitube
-#wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube.deb
-#sudo dpkg -i minitube.deb
-sudo DEBIAN_FRONTEND=noninteractive apt-get install minitube
+wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube.deb
+sudo dpkg -i minitube.deb
+# sudo DEBIAN_FRONTEND=noninteractive apt-get install minitube
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
