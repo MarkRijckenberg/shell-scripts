@@ -789,11 +789,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # first remove old installation of seamonkey web browser
 cd /tmp
-rm index.html
+rm index.htm*
 sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
 # install bleeding edge version of seamonkey web browser
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
-filename=`grep bz2 index.html|grep x86_64|tail -n 1|cut -d"\"" -f8`
+filename=`grep bz2 index.html|grep x86_64|tail -n 1|cut -d"\"" -f2|cut -d"/" -f6`
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/`echo $filename`
 tar -xjvf `echo $filename`
 sudo cp -r seamonkey /opt/seamonkey
@@ -913,11 +913,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 
 # first remove old installation of seamonkey web browser
 cd /tmp
-rm index.html
+rm index.htm*
 sudo rm -rf /opt/seamonkey /usr/bin/seamonkey  /tmp/seamonk*
 # install bleeding edge version of seamonkey web browser
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/
-filename=`grep bz2 index.html|grep i686|tail -n 1|cut -d"\"" -f8`
+filename=`grep bz2 index.html|grep i686|tail -n 1|cut -d"\"" -f2|cut -d"/" -f6`
 wget --no-check-certificate   http://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/latest-comm-aurora/`echo $filename`
 tar -xjvf `echo $filename`
 sudo cp -r seamonkey /opt/seamonkey
