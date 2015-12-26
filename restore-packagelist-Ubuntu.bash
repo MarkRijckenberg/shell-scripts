@@ -237,7 +237,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 
 ##########################################################################################################
-# install newest version of WPS Office for Linux (MS Office compatible)
+# install newest version of WPS Office for GNU/Linux (MS Office compatible)
 cd /tmp
 rm download*
 rm wps-office*
@@ -245,6 +245,15 @@ wget --no-check-certificate http://wps-community.org/downloads
 wget --no-check-certificate  `cat downloads|grep i386|head -n 1|cut -d "\"" -f10`
 sudo dpkg -i wps-office*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
+##########################################################################################################
+# install proprietary TrueType fonts required by WPS Office for GNU/Linux
+sudo DEBIAN_FRONTEND=noninteractive apt-get install msttcorefonts gsfonts-x11
+sudo mkdir /usr/share/fonts/wps-office
+cd /tmp
+rm -rf settings*
+git clone https://github.com/tkboy/settings.git
+sudo mv settings/.fonts/*  /usr/share/fonts/wps-office
+sudo fc-cache -f -v 
 ##########################################################################################################
 
 # install newest version of avconf
