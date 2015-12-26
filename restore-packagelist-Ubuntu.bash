@@ -1100,6 +1100,7 @@ fi
 
 # install Kruidvat fotoservice software
 cd $HOME
+rm *Kruidvat*
 wget http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservice.tgz
 tar -zxvf setup_Kruidvat_fotoservice.tgz 
 ./install.pl 
