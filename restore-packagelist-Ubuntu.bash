@@ -242,7 +242,7 @@ cd /tmp
 rm download*
 rm wps-office*
 wget --no-check-certificate http://wps-community.org/downloads
-wget --no-check-certificate  `cat downloads |cut -d "\"" -f14| tail -n 1`
+wget --no-check-certificate  `cat downloads|grep i386|head -n 1|cut -d "\"" -f10`
 sudo dpkg -i wps-office*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 ##########################################################################################################
