@@ -9,14 +9,14 @@ then please add the Terminal output below to the thread which was previously ope
 
 In order to gather essential troubleshooting information about your apt-get or aptitude or synaptic package manager in Ubuntu, please follow this procedure.  
 
-= Step 0 First install a supported version of Ubuntu =
+= Step 1 First install a supported version of Ubuntu =
 
 '''The only supported releases of Ubuntu are the ones that are NOT End of Life (EOL) in the following table:'''
 
 https://wiki.ubuntu.com/Releases
 
 
-= Step 1 Switch to "Main Server" using Software Sources =
+= Step 2 Switch to "Main Server" using Software Sources =
 
 First switch from the regional server (US, UK, Swiss, etc...) to the "Main Server" using the Software Sources window
 
@@ -28,7 +28,7 @@ https://help.ubuntu.com/community/Repositories/Ubuntu#Download_Server
 
 '''If you are unable to start "Update Manager" or unable to access Software Sources or Ubuntu Software Center, please skip step 1 and step 2 and proceed to step 3.'''
 
-= Step 2 Disable all PPA repositories =
+= Step 3 Disable all PPA repositories =
 
 
 Open "Ubuntu Software Center"
@@ -39,21 +39,24 @@ Open "Ubuntu Software Center"
 From the "Other Software" tab, disable all PPA repositories, leaving only the official Ubuntu repositories active. Enabling too many PPA repositories (which are non-official) can cause your package manager to become unstable. If you do decide to re-enable such a PPA repository, I strongly suggest only enabling ONE PPA repository at a time for stability reasons, not several at the same time.
 
 
-= Step 3 Close all open programs =
+= Step 4 Close all open programs =
 
 VERY IMPORTANT! Please make sure to close all open programs, including all package managers like Synaptic, Update Manager, Software Center, Add/remove programs, etc ... No other package manager should be running while running the commands below.
 
-= Step 4 =
+= Step 5 Enable unlimited scrolling in Terminal =
 
 Open a [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Command-line / Terminal console]] 
 
-=== In Gnome (classic) ===
-If you are using the Gnome interface, via "Applications->Accessories->Terminal"
+'''In the Ubuntu [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Terminal console]] , make sure that unlimited scrolling is enabled:
+ * click on Edit > Profiles > "Default" profile > Scrolling. Choose "Unlimited" as scrolling option. Click Close and Close again.'''
 
-=== In Unity ===
+If you are using the Gnome interface, open [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | the Terminal console]] via "Applications->Accessories->Terminal"
+
 If you are using the Unity interface, the easiest way to open the Terminal is to use the 'search' function on the dash.
 Or you can click on the 'More Apps' button, click on the 'See more results' by the installed section, and find it in that list of applications.
-A third way, available after you click on the 'More Apps' button, is to go to the search bar, and see that the far right end of it says 'All Applications'. You then click on that, and you'll see the full list. Then you can go to Accessories > Terminal after that.  So, the methods in Unity are:
+A third way, available after you click on the 'More Apps' button, is to go to the search bar, and see that the far right end of it says 'All Applications'. You then click on that, and you'll see the full list. Then you can go to Accessories > Terminal after that.
+
+So the methods in Unity are:
 
 Press CTRL-ALT-T key combination.
 
@@ -63,7 +66,8 @@ Dash > More Apps > 'See More Results' > Terminal
 
 Dash > More Apps > Accessories > Terminal
 
-= Step 5 List of Terminal commands to execute and send to Launchpad Answers forum =
+
+= Step 6 List of Terminal commands to execute and send to Launchpad Answers forum =
 
 Please copy-paste the following commands one line at a time from the https://help.ubuntu.com/community/PackageManagerTroubleshootingProcedure  
 website using Chromium or Firefox into the Linux Terminal. 
@@ -182,7 +186,7 @@ LANG=C;sudo apt-get update -o APT::Cache-Limit=100000000 && sudo apt-get dist-up
 find /etc/apt -name '*.list' -exec bash -c 'echo -e "\n$1\n"; cat -n "$1"' _ '{}' \;
 }}}
 
-= Step 6 Please send us the Terminal output =
+= Step 7 Please send us the Terminal output =
 
 Please do NOT attempt to send any attachment(s). Please copy/paste the full terminal output of the previous list of diagnostic commands at this location:
 https://answers.launchpad.net/ubuntu/+source/apt/+addquestion
@@ -192,7 +196,7 @@ then please add the Terminal output below to the thread which was previously ope
 
 The troubleshooters at Launchpad need to see the full Terminal output from running the previous list of diagnostic commands.
 
-= Step 7 Error occurs while trying to remove or upgrade a specific software package =
+= Step 8 Error occurs while trying to remove or upgrade a specific software package =
 
 If a package manager error occurs while trying to remove or upgrade a specific software package, please try the following workaround procedures:
 
@@ -208,7 +212,7 @@ The troubleshooters at Launchpad need to see the full Terminal output from runni
 
 If the previous apt-get update command returned any "404 Not Found" errors for certain Launchpad PPA's, then please open Software Sources via dash or System Settings and unmark/deactivate those failed Launchpad PPA's in Software Sources.
 
-= Step 8 =
+= Step 9 =
 
 If you are using the 64-bit edition of Ubuntu and if you are still encountering issues when trying to install certain Ubuntu packages, I suggest executing the following commands:
 
@@ -220,7 +224,7 @@ sudo apt-get update
 }}}
 
 
-= Step 9 Ubuntu Software Center fails to open  =
+= Step 10 Ubuntu Software Center fails to open  =
 
 If the Ubuntu Software Center fails to open, then please execute these Terminal commands:
 
@@ -287,7 +291,7 @@ https://answers.launchpad.net/ubuntu/+source/software-center/+question/219728
 
 https://answers.launchpad.net/ubuntu/+source/update-manager/+question/213929
 
-= Step 10 You are using a proxy server to connect to the Internet  =
+= Step 11 You are using a proxy server to connect to the Internet  =
 
 If you are using a proxy server, please make sure the following changes have been made in Ubuntu:
 
