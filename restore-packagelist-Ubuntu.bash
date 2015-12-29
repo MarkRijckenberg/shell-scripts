@@ -1425,7 +1425,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptab
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
-sudo rm /etc/apt/sources.list.d/*
+#sudo rm /etc/apt/sources.list.d/*
 #grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 #sudo cp /tmp/sources.list  /etc/apt/sources.list
 
@@ -1642,7 +1642,7 @@ rm *.sh
 rm *.xpi
 rm ica_*
 rm google*
-sudo rm /etc/apt/sources.list.d/*
+# sudo rm /etc/apt/sources.list.d/*
 
 
 # install weka v3.7.11 - import preprocessed .csv from R into weka to perform significant
