@@ -97,8 +97,8 @@ brew install winetricks
 
 brew cask install 4k-youtube-to-mp3
 #brew cask install adium
-brew cask install adobe-air
-brew cask install adobe-reader
+#brew cask install adobe-air 
+#brew cask install adobe-reader
 #brew cask install anki
 #brew cask install arduino
 brew cask install atom
