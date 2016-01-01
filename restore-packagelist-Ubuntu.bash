@@ -1079,9 +1079,28 @@ wget http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservi
 tar -zxvf setup_Kruidvat_fotoservice.tgz 
 ./install.pl 
 
-########################################################################################
+#############################################################################################
+# install and run newest version of bleachbit (cleanup utility) in Ubuntu 14.04 LTS 64-bit
+#############################################################################################
+# install prerequisites for bleachbit
+cd
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install build-essential unp git
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install lynx-cur html-xml-utils
+# install and run newest version of bleachbit (cleanup utility) in Ubuntu 14.04 LTS 64-bit
+cd
+rm *.deb
+rm download*
+sudo rm -rf bleachbit*
+URL=`echo "http://bleachbit.sourceforge.net/download/source" | wget -O- -i- --no-check-certificate | hxnormalize -x| lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2| tail -n 1`
+wget --no-check-certificate `echo $URL`
+tar xvjf bleachbit*tar.bz2 # unpack the archive
+cd bleachbit* # change directory
+make -C po local # build translations (optional)
+python bleachbit.py # start BleachBit GUI
+
+#############################################################################################
 # Fish shell installation
-########################################################################################
+#############################################################################################
 # set fish shell as default shell
 chsh -s /usr/bin/fish
 #To switch your default shell back, you can run:
@@ -1110,9 +1129,9 @@ echo "alias d-u='sudo aptitude update ; sudo aptitude dist-upgrade'" >> ~/.confi
 omf update
 omf theme robbyrussell
 
-########################################################################################
+#############################################################################################
 # End of Fish shell installation
-########################################################################################
+#############################################################################################
 
 # run shellshock test to see if bash is vulnerable
 #cd $HOME
