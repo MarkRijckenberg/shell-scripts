@@ -1088,7 +1088,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install build-ess
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install lynx-cur html-xml-utils
 # install and run newest version of bleachbit (cleanup utility) in Ubuntu 14.04 LTS 64-bit
 cd
-rm *.deb
+rm *.tar.bz2
 rm download*
 sudo rm -rf bleachbit*
 URL=`echo "http://bleachbit.sourceforge.net/download/source" | wget -O- -i- --no-check-certificate | hxnormalize -x| lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2| tail -n 1`
@@ -1421,6 +1421,7 @@ mv *.deb $DEB
 rm *.exe
 mv *.km? $KMZ
 mv *.pdf $PDF
+mv *.tar.bz2 $TAR
 mv *gz $TAR
 mv *.zip $ZIP
 rm *.cab
