@@ -485,7 +485,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libreoff
 # http://extensions.libreoffice.org/extension-center/languagetool
 
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
-# Flash websites are supported in Lubuntu 13.10 or newer
+# Flash websites like Hulu are supported in Lubuntu 13.10 or newer
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install hal
