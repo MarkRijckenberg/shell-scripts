@@ -1096,7 +1096,7 @@ wget --no-check-certificate `echo $URL`
 tar xvjf bleachbit*tar.bz2 # unpack the archive
 cd bleachbit* # change directory
 make -C po local # build translations (optional)
-python bleachbit.py # start BleachBit GUI
+sudo python bleachbit.py # start BleachBit GUI
 
 #############################################################################################
 # Fish shell installation
