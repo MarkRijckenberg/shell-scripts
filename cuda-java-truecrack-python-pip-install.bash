@@ -1,13 +1,15 @@
 #!/bin/bash
-# Required software: CUDA 6.5, in order to be able to compile truecrack 3.5 source code afterwards WITH Nvidia graphics card support
+# Required software: CUDA 6.5, in order to be able to compile truecrack 3.6 source code from Github.com
+# afterwards WITH Nvidia graphics card support
 # Required GNU/Linux distribution: Ubuntu 14.04 LTS 64-bit
 # Required free disk space: at least 5 gigabytes free disk space on your root (/) partition
+# last update: January 6, 2016
 sudo rm /etc/apt/trusted.gpg.d/*
 sudo apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
 sudo rm -rf /etc/java-*-openjdk/*
 sudo apt-get update
-sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk
-# Install cuda 6.5 first:
+sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk git
+# Install cuda 7.5 first:
 cd /tmp
 rm -rf cuda*
 wget --no-check-certificate   https://developer.nvidia.com/cuda-downloads
@@ -30,14 +32,11 @@ sudo make
 # Check if you have a graphics card that supports CUDA :
 /usr/local/cuda-`echo $VERSION`/samples/bin/x86_64/linux/release/deviceQuery
 /usr/local/cuda-`echo $VERSION`/samples/bin/x86_64/linux/release/bandwidthTest
-# Then install truecrack v3.5:
-cd /tmp
+# Then install truecrack v3.6:
+cd
 rm list
 rm truecrack*
-wget --no-check-certificate https://code.google.com/p/truecrack/downloads/list
-FILENAME=`grep gz list|head -n 1 | cut -d"\"" -f2|cut -d"/" -f5`
-wget --no-check-certificate truecrack.googlecode.com/files/`echo $FILENAME`
-unp truecrack*
+git clone https://github.com/lvaccaro/truecrack.git
 cd true*
 # use following ./configure line , if you do NOT have an Nvidia graphics card that supports CUDA:
 sudo ./configure --enable-cpu
@@ -45,7 +44,7 @@ sudo ./configure --enable-cpu
 # sudo ./configure 
 sudo make
 sudo checkinstall
-# Before building and installing the truecrack package, make sure to first set the 'Version' value to 3.5 during checkinstall configuration
+# Before building and installing the truecrack package, make sure to first set the 'Version' value to 3.6 during checkinstall configuration
 # checkinstall will fail to build the package if you do not set a valid Version first
 # Verify that truecrack is correctly installed:
 apt-cache show truecrack
@@ -56,7 +55,7 @@ apt-cache show truecrack
 #Installed-Size: 276
 #Maintainer: root
 #Architecture: amd64
-#Version: 3.5-1
+#Version: 3.6-1
 #Provides: truecrack
 #Description: Package created with checkinstall 1.6.2
 #Description-md5: 556b8d22567101c7733f37ce6557412e
