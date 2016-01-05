@@ -11,8 +11,8 @@ sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk
 cd /tmp
 rm -rf cuda*
 wget --no-check-certificate   https://developer.nvidia.com/cuda-downloads
-URL=`grep 1404 cuda-downloads |grep x86_64|head -n 1|cut -d"\"" -f4`
-VERSION=`grep 1404 cuda-downloads |grep x86_64|head -n 1|cut -d"\"" -f4|cut -d"_" -f3|cut -d"-" -f1`
+URL=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8`
+VERSION=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8|cut -d"_" -f3|cut -d"-" -f1`
 wget `echo $URL`
 sudo dpkg -i --force-all cuda*.deb
 sudo aptitude update
