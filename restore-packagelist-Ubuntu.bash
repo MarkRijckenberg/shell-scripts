@@ -2327,6 +2327,7 @@ echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF
 echo "https://www.coursera.org/course/pythonlearn"
 echo "http://www.codecademy.com/tracks/python"
 echo "https://developers.google.com/edu/python/"
+echo "http://ucanalytics.com/blogs/r-vs-python-comparison-and-awsome-books-free-pdfs-to-learn-them/"
 # ipython notebook webserver in virtualbox VM configured using vagrant (configure time using chef in VM: 31 minutes)
 # accessible on host server via http://localhost:8888
 echo "https://rawgit.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/master/ipynb/html/_Appendix%20A%20-%20Virtual%20Machine%20Experience.html"
