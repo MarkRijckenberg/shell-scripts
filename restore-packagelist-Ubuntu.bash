@@ -654,6 +654,11 @@ cd lgogdownloader
 sudo make
 sudo checkinstall
 
+# Added on January 16, 2016
+# Fix openssh on Linux (vulnerability CVE-2016-0777)
+# Source: http://www.cyberciti.biz/faq/howto-openssh-client-security-update-cve-0216-0777-cve-0216-0778/
+echo 'UseRoaming no' | sudo tee -a /etc/ssh/ssh_config
+
 #compile and install newest version of openssl in Ubuntu 14.04 LTS
 cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
