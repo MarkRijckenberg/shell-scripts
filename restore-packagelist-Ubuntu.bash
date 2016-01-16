@@ -640,14 +640,19 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 ##########################################################################################################
 # install LGOGDownloader game client (unofficial downloader to GOG.com for Linux users) 
 # It uses the same API as the official GOGDownloader.
+# Prerequisite: first create valid username and password at gog.com website
 ##########################################################################################################
 cd
-rm -rf $HOME/lgogdownloader
-git clone https://github.com/Sude-/lgogdownloader.git
+sudo rm -rf $HOME/lgogdownloader
+# install game client prerequisites:
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  build-essential libcurl4-openssl-dev liboauth-dev libjsoncpp-dev libhtmlcxx-dev libboost-system-dev libboost-filesystem-dev libboost-regex-dev libboost-program-options-dev libboost-date-time-dev libtinyxml-dev librhash-dev help2man
+# compile and install game client:
+git clone https://github.com/Sude-/lgogdownloader.git
 cd lgogdownloader
-sudo make release
-sudo make install
+#sudo make release
+#sudo make install
+sudo make
+sudo checkinstall
 
 #compile and install newest version of openssl in Ubuntu 14.04 LTS
 cd
