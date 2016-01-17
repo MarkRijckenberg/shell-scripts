@@ -1036,6 +1036,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw mono-r
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge libmono-2.0-dev
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge  xscreensaver  xscreensaver-data gnome-screensaver
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge evolution-data-server-common samba
+#sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes purge gcc-4.6 gcc-4.7 gcc-4.7-base gcc-4.8 gcc-4.8-base
+sudo apt-get purge gcc-4.6 gcc-4.7 gcc-4.7-base gcc-4.8 gcc-4.8-base
 # temporary workaround for ASUS Z170 Pro Gamer motherboards:
 sudo apt-get purge xfce4-notifyd lxqt-powermanagement
 # end of workaround.
@@ -1452,7 +1454,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw 
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 #sudo rm /etc/apt/sources.list.d/*
