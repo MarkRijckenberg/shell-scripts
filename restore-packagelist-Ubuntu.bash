@@ -17,9 +17,9 @@
 # !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
 
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu/Xubuntu 14.04 LTS 64-bit
+# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu 14.04.3 LTS 64-bit
 # RECOMMENDS: minimum of 2 gigabytes of RAM memory
-# REQUIRES: Lubuntu/Xubuntu 14.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
+# REQUIRES: Lubuntu 14.04.3 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
 #           wget, apt-get, unp, wine, biber, biblatex
 # CONFLICTS: with Kubuntu, Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
 # Ubuntu package repositories -> Linux Mint and DistroAstro packages destabilize the GUI interface
