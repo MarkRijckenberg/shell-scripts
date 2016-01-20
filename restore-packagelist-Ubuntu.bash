@@ -253,7 +253,7 @@ mv $HOME/.ICAClient $HOME/.ICAClient_save
 sudo dpkg -P icaclient
 sudo rm -rf $HOME/foo
 sudo dpkg --add-architecture i386 # only needed once
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+# sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install firefox apt-file git openssl ca-certificates
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install firefox apt-file git nspluginwrapper lib32z1 libc6-i386 libxml2:i386 libstdc++6:i386 libxerces-c3.1:i386 libcanberra-gtk-module:i386 libcurl3:i386 libasound2-plugins:i386 libgstreamer-plugins-base0.10-0:i386 openssl ca-certificates
 sudo apt-file update --architecture i386
@@ -661,7 +661,7 @@ echo 'UseRoaming no' | sudo tee -a /etc/ssh/ssh_config
 
 #compile and install newest version of openssl in Ubuntu 14.04 LTS
 cd
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
+# sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep openssl
 sudo rm -rf ~/openssl
