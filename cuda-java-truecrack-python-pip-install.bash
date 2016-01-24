@@ -79,3 +79,10 @@ sudo pip install --upgrade mistune networkx pandas py4j runipy
 sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
 sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
 sudo pip install --upgrade git+git://github.com/tensorflow/skflow.git
+
+#source: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation
+# Ubuntu/Linux 64-bit, CPU only:
+sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
+# Ubuntu/Linux 64-bit, GPU enabled:
+# sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
+
