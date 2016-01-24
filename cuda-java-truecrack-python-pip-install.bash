@@ -66,7 +66,9 @@ sudo apt-get install  python-bs4 python-networkx python-skimage python-sklearn l
 sudo apt-get install  python-matplotlib python-numpy python-pandas 
 sudo apt-get install  python3-matplotlib python3-numpy python3-pandas
 sudo apt-get install  python-jsonschema openbox python-scipy pandoc
-sudo apt-get install  spyder unp python-pip build-essential python-dev swig
+# use pip command from python-pip package to install pip packages for python 2.7
+# use pip3 command from python3-pip package to install pip packages for python3+
+sudo apt-get install  spyder unp python-pip python3-pip build-essential python-dev swig
 sudo apt-get install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap
 
 # install newest version of ipython notebook:
@@ -78,7 +80,6 @@ sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
 sudo pip install --upgrade mistune networkx pandas py4j runipy
 sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
 sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
-sudo pip install --upgrade git+git://github.com/tensorflow/skflow.git
 
 #source: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation
 # Ubuntu/Linux 64-bit, CPU only:
@@ -86,3 +87,4 @@ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/t
 # Ubuntu/Linux 64-bit, GPU enabled:
 # sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
 
+sudo pip install --upgrade git+git://github.com/tensorflow/skflow.git
