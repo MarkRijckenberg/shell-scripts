@@ -78,4 +78,4 @@ sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
 sudo pip install --upgrade mistune networkx pandas py4j runipy
 sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
 sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
-
+sudo pip install --upgrade git+git://github.com/tensorflow/skflow.git
