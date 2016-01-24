@@ -63,8 +63,9 @@ truecrack
 
 sudo apt-get install  build-essential libtiff4-dev libfftw3-dev libX11-dev libxt-dev libxaw7-dev phylip
 sudo apt-get install  python-bs4 python-networkx python-skimage python-sklearn libpng-dev libfreetype6-dev
-sudo apt-get install  python-matplotlib python-numpy python-pandas pandoc
-sudo apt-get install  python-jsonschema openbox python-scipy
+sudo apt-get install  python-matplotlib python-numpy python-pandas 
+sudo apt-get install  python3-matplotlib python3-numpy python3-pandas
+sudo apt-get install  python-jsonschema openbox python-scipy pandoc
 sudo apt-get install  spyder unp python-pip build-essential python-dev swig
 sudo apt-get install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap
 
