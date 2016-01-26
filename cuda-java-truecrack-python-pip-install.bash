@@ -63,7 +63,7 @@ truecrack
 
 sudo apt-get install  build-essential libtiff4-dev libfftw3-dev libX11-dev libxt-dev libxaw7-dev phylip
 sudo apt-get install  python-bs4 python-networkx python-skimage python-sklearn libpng-dev libfreetype6-dev
-sudo apt-get install  python-matplotlib python-numpy python-pandas python-simplegeneric
+sudo apt-get install  python-matplotlib python-numpy python-pandas
 sudo apt-get install  python3-matplotlib python3-numpy python3-pandas
 sudo apt-get install  python-jsonschema openbox python-scipy pandoc
 # use pip command from python-pip package to install pip packages for python 2.7
@@ -73,6 +73,7 @@ sudo apt-get install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap
 
 # install newest version of ipython notebook:
 sudo apt-get remove  ipython ipython-notebook python-tornado
+sudo apt-get install  ipython3 ipython3-notebook python-simplegeneric python3-simplegeneric python3-pip
 sudo pip install --upgrade ipython tornado 
 
 sudo pip install --upgrade setuptools seaborn
