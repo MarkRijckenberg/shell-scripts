@@ -136,6 +136,9 @@ df.select("year", "model").show()
 # You can use it directly from your Spark distribution. -> not working on Apache Spark 1.6.0 !!!
 # For example, if you have Spark version 1.5.0 and would like to use Sparkling Water version 1.5.2 and
 # launch example CraigslistJobTitlesStreamingApp, then you can use the following command:
+#  ~/sparkling-water/bin/sparkling-shell --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
+#  ~/sparkling-water/bin/sparkling-shell --conf "spark.executor.memory=6g"
+
 export SPARK_LOCAL_IP='127.0.0.1'
 export MASTER="local-cluster[3,4,2048]"
 export SPARK_HOME=~/spark
@@ -146,6 +149,3 @@ rm -rf sparkling-water*
 git clone https://github.com/h2oai/sparkling-water.git
 cd sparkling-water
 ./gradlew build --debug
-#  ~/sparkling-water/bin/sparkling-shell --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
-#  ~/sparkling-water/bin/sparkling-shell --conf "spark.executor.memory=6g"
-
