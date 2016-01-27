@@ -137,6 +137,7 @@ df.select("year", "model").show()
 export SPARK_LOCAL_IP='127.0.0.1'
 export MASTER="local-cluster[3,4,2048]"
 export SPARK_HOME=~/spark
+export PYSPARK_PYTHON="ipython" bin/pysparkling
 #IPYTHON_OPTS="notebook" $SPARK_HOME/bin/pyspark
 cd
 rm -rf sparkling-water*
