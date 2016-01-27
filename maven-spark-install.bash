@@ -3,7 +3,7 @@
 # Purpose: this script will automatically compile and install
 # the newest version of maven and Apache Spark via the github sources
 # Software requirements: Ubuntu 14.04 LTS 64-bit, git, build-essential,
-# ant, unp, python2.7, java 1.7.0 or higher
+# ant, unp, python2.7, java 1.7.0 or higher, openjdk-7-jdk
 # Minimum RAM requirements for this script: 2 Gigabytes of RAM (maybe even more) 
 # Minimum free disk space requirements for this script: 1 Gigabyte (maybe even more) 
 # Please make sure to close any web browser windows and any other 
@@ -17,7 +17,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo apt-get build-dep maven maven2
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git build-essential python-protobuf protobuf-compiler
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 openjdk-7-jre-headless 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 openjdk-7-jre-headless openjdk-7-jdk
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  purge maven maven2
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
