@@ -140,6 +140,6 @@ rm -rf sparkling-water*
 git clone https://github.com/h2oai/sparkling-water.git
 cd sparkling-water
 ./gradlew build --debug
-#  ~/sparkling-water/bin/sparkling-submit --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
+#  ~/sparkling-water/bin/sparkling-shell --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
 #  ~/sparkling-water/bin/sparkling-shell --conf "spark.executor.memory=6g"
 
