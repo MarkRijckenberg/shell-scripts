@@ -23,7 +23,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  purge maven maven
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
 # install newest version of maven
-rm -rf maven*
+sudo rm -rf maven*
 sudo rm -rf ~/apps/maven
 git clone https://github.com/apache/maven.git
 cd maven
@@ -45,11 +45,11 @@ cd
 rm -rf SparkR-pkg/
 git clone https://github.com/amplab-extras/SparkR-pkg.git
 cd SparkR-pkg/
-SPARK_VERSION=1.5.0 USE_MAVEN=1 ./install-dev.sh
+SPARK_VERSION=1.6.0 USE_MAVEN=1 ./install-dev.sh
 # ./sparkR examples/pi.R local[2]
 # install newest version of Apache Spark:
 cd
-git clone git://github.com/apache/spark.git
+git clone git://github.com/apache/spark.git -b branch-1.6
 cd spark
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
 export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
@@ -124,3 +124,9 @@ df.select("year", "model").show()
 # useful links:  
 # http://ramhiser.com/2015/02/01/configuring-ipython-notebook-support-for-pyspark/
 # https://spark.apache.org/docs/1.1.1/api/python/pyspark.rdd.RDD-class.html
+
+# source:https://github.com/h2oai/sparkling-water
+#Sparkling Water is also published as a Spark package. You can use it directly from your Spark distribution.
+#For example, if you have Spark version 1.5 and would like to use Sparkling Water version 1.5.2 and
+#launch example CraigslistJobTitlesStreamingApp, then you can use the following command:
+# $SPARK_HOME/bin/spark-submit --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
