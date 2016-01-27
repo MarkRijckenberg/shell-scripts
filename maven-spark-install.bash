@@ -18,7 +18,7 @@ sudo apt-get build-dep maven maven2
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git build-essential python-protobuf protobuf-compiler
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 openjdk-7-jre-headless openjdk-7-jdk
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  purge maven maven2
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install maven maven2
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
@@ -27,26 +27,21 @@ sudo rm -rf maven*
 sudo rm -rf ~/apps/maven
 git clone https://github.com/apache/maven.git
 cd maven
-ant -Dmaven.home="$HOME/apps/maven/apache-maven-SNAPSHOT"
+#obsolete in 2016: ant -Dmaven.home="$HOME/apps/maven/apache-maven-SNAPSHOT"
+mvn install
 cd ~/maven/apache-maven/target
 unp apache-maven-*-bin.tar.gz
-sudo rm /usr/bin/mvn
+sudo mv /usr/bin/mvn /usr/bin/mvnBACKUP
 sudo ln -s ~/maven/apache-maven/target/apache-maven-*/bin/mvn  /usr/bin/mvn
 mvn -v
 # example of Terminal output:
-#Apache Maven 3.3.2-SNAPSHOT
-#Maven home: $HOME/maven/apache-maven/target/apache-maven-3.3.2-SNAPSHOT
-#Java version: 1.7.0_76, vendor: Oracle Corporation
-#Java home: /usr/lib/jvm/java-7-oracle/jre
-#Default locale: en_US, platform encoding: UTF-8
-#OS name: "linux", version: "4.0.0-040000rc3-lowlatency", arch: "amd64", family: "unix"
-# install SparkR-pkg
-cd
-rm -rf SparkR-pkg/
-git clone https://github.com/amplab-extras/SparkR-pkg.git
-cd SparkR-pkg/
-SPARK_VERSION=1.6.0 USE_MAVEN=1 ./install-dev.sh
-# ./sparkR examples/pi.R local[2]
+# Apache Maven 3.4.0-SNAPSHOT (e37117e304d17e5b2defb4b2f7b2c67c0e2a1fe2; 2016-01-27T20:16:00+01:00)
+# Maven home: ~/maven/apache-maven/target/apache-maven-3.4.0-SNAPSHOT
+# Java version: 1.7.0_95, vendor: Oracle Corporation
+# Java home: /usr/lib/jvm/java-7-openjdk-amd64/jre
+# Default locale: en_US, platform encoding: UTF-8
+# OS name: "linux", version: "4.3.0-6-generic", arch: "amd64", family: "unix"
+
 # install newest version of Apache Spark:
 cd
 git clone git://github.com/apache/spark.git -b branch-1.6
@@ -90,6 +85,14 @@ mvn -PsparkR -DskipTests clean package
 # [INFO] Final Memory: 83M/1292M
 # [INFO] ------------------------------------------------------------------------
 # Based on: https://github.com/databricks/spark-csv
+
+# install SparkR-pkg
+cd
+rm -rf SparkR-pkg/
+git clone https://github.com/amplab-extras/SparkR-pkg.git
+cd SparkR-pkg/
+SPARK_VERSION=1.6.0 USE_MAVEN=1 ./install-dev.sh
+# ./sparkR examples/pi.R local[2]
 
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
 # com.databricks:spark-csv
