@@ -4,7 +4,7 @@
 # the newest version of maven and Apache Spark via the github sources
 # Software requirements: Ubuntu 14.04 LTS 64-bit, git, build-essential,
 # ant, unp, python2.7, java 1.7.0 or higher, openjdk-7-jdk
-# Dependencies: https://github.com/MarkRijckenberg/shell-scripts/blob/master/cuda-java-truecrack-python-pip-install.bash
+# Also required dependencies: https://github.com/MarkRijckenberg/shell-scripts/blob/master/cuda-java-truecrack-python-pip-install.bash
 # Minimum RAM requirements for this script: 2 Gigabytes of RAM (maybe even more) 
 # Minimum free disk space requirements for this script: 1 Gigabyte (maybe even more) 
 # Please make sure to close any web browser windows and any other 
