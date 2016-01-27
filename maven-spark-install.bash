@@ -129,7 +129,8 @@ df.select("year", "model").show()
 # https://spark.apache.org/docs/1.1.1/api/python/pyspark.rdd.RDD-class.html
 
 # source:https://github.com/h2oai/sparkling-water
-#Sparkling Water is also published as a Spark package. You can use it directly from your Spark distribution.
-#For example, if you have Spark version 1.5 and would like to use Sparkling Water version 1.5.2 and
-#launch example CraigslistJobTitlesStreamingApp, then you can use the following command:
-# $SPARK_HOME/bin/spark-submit --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
+# Sparkling Water (=Apache Spark + H2O machine learning algorithms) is also published as a Spark package. 
+# You can use it directly from your Spark distribution.
+# For example, if you have Spark version 1.5 and would like to use Sparkling Water version 1.5.2 and
+# launch example CraigslistJobTitlesStreamingApp, then you can use the following command:
+# ~/spark/bin/spark-submit --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
