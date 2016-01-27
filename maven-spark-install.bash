@@ -133,6 +133,7 @@ df.select("year", "model").show()
 # You can use it directly from your Spark distribution. -> not working on Apache Spark 1.6.0 !!!
 # For example, if you have Spark version 1.5 and would like to use Sparkling Water version 1.5.2 and
 # launch example CraigslistJobTitlesStreamingApp, then you can use the following command:
+export SPARK_LOCAL_IP='127.0.0.1'
 export MASTER="local-cluster[1,4,2048]"
 export SPARK_HOME=~/spark
 cd
