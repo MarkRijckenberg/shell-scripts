@@ -45,7 +45,7 @@ mvn -v
 
 # install newest version of Apache Spark:
 cd
-git clone git://github.com/apache/spark.git -b branch-1.6
+git clone git://github.com/apache/spark.git -b branch-1.5
 cd spark
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
 export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
@@ -92,7 +92,7 @@ cd
 rm -rf SparkR-pkg/
 git clone https://github.com/amplab-extras/SparkR-pkg.git
 cd SparkR-pkg/
-SPARK_VERSION=1.6.0 USE_MAVEN=1 ./install-dev.sh
+SPARK_VERSION=1.5.0 USE_MAVEN=1 ./install-dev.sh
 # ./sparkR examples/pi.R local[2]
 
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
@@ -130,9 +130,11 @@ df.select("year", "model").show()
 # https://spark.apache.org/docs/1.1.1/api/python/pyspark.rdd.RDD-class.html
 
 # source:https://github.com/h2oai/sparkling-water
+# http://www.h2o.ai/download/
 # Sparkling Water (=Apache Spark + H2O machine learning algorithms) is also published as a Spark package. 
+# REQUIRES: Apache Spark 1.3.0, 1.4.0 or 1.5.0 (not Apache 1.6.0, at least not yet)
 # You can use it directly from your Spark distribution. -> not working on Apache Spark 1.6.0 !!!
-# For example, if you have Spark version 1.5 and would like to use Sparkling Water version 1.5.2 and
+# For example, if you have Spark version 1.5.0 and would like to use Sparkling Water version 1.5.2 and
 # launch example CraigslistJobTitlesStreamingApp, then you can use the following command:
 export SPARK_LOCAL_IP='127.0.0.1'
 export MASTER="local-cluster[3,4,2048]"
