@@ -36,6 +36,8 @@ sudo xcodebuild -license
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap staticfloat/julia
+brew tap samueljohn/python
+brew tap homebrew/science
 
 brew update
 brew install brew-cask
@@ -204,6 +206,14 @@ pip install --upgrade distribute
 pip install --upgrade pip
 # https://courses.edx.org/asset-v1:DelftX+EX101x+3T2015+type@asset+block/xlwingsguide.pdf
 pip install --upgrade xlwings
+pip install --upgrade nose
+pip install --upgrade pyparsing
+pip install --upgrade python-dateutil
+pip install --upgrade pep8
+
+brew install numpy
+brew install scipy
+brew install matplotlib
 
 #Make Fish your default shell:
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
