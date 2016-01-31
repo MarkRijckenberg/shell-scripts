@@ -2,7 +2,7 @@
 
 # Prerequisites: Mac OS X 10.10.4 or newer, git, Xcode 7.0.1 or newer (=Apple CLI Dev tools)
 
-# 1) install Mac OS X 10.10.4 or later
+# 1) minimum version of Mac OS X required to install latest Xcode: https://en.wikipedia.org/wiki/Xcode
 # 2) install git using this FAQ:
 # http://sourceforge.net/projects/git-osx-installer/files/
 # then clone this Github repository to your local home directory
