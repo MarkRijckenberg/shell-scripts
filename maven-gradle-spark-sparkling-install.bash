@@ -24,11 +24,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install maven mav
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
 #install newest version of gradle (sparkling water depends on gradle during compile process)
-cd
-sudo rm -rf gradle
-git clone https://github.com/gradle/gradle
-cd gradle
-./gradlew build
+#cd
+#sudo rm -rf gradle
+#git clone https://github.com/gradle/gradle
+#cd gradle
+#./gradlew build
+
 # install newest version of maven (Apache Spark depends on maven during compile process)
 sudo rm -rf maven*
 sudo rm -rf ~/apps/maven
@@ -155,7 +156,7 @@ rm -rf sparkling-water*
 git clone https://github.com/h2oai/sparkling-water.git
 cd sparkling-water
 ./make-dist.sh
-~/gradle/gradlew build
+./gradlew build
 
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
