@@ -23,13 +23,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install maven mav
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
-#install newest version of gradle (sparkling water depends on gradle)
+#install newest version of gradle (sparkling water depends on gradle during compile process)
 cd
 sudo rm -rf gradle
 git clone https://github.com/gradle/gradle
 cd gradle
 ./gradlew build
-# install newest version of maven
+# install newest version of maven (Apache Spark depends on maven during compile process)
 sudo rm -rf maven*
 sudo rm -rf ~/apps/maven
 git clone https://github.com/apache/maven.git
