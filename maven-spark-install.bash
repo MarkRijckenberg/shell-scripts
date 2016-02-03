@@ -149,3 +149,8 @@ rm -rf sparkling-water*
 git clone https://github.com/h2oai/sparkling-water.git
 cd sparkling-water
 ./gradlew build --debug
+
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+sudo -H pip install --upgrade pip
+sudo -H pip3 install --upgrade pip
