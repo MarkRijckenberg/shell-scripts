@@ -148,6 +148,7 @@ cd
 rm -rf sparkling-water*
 git clone https://github.com/h2oai/sparkling-water.git
 cd sparkling-water
+./make-dist.sh
 ./gradlew build --debug
 
 wget https://bootstrap.pypa.io/get-pip.py
