@@ -31,12 +31,14 @@
      
     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ChocolateyGUI"
     
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install python"
+        
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install python2"
+    
     REM  the nuget package manager currently has 40065 packages (July 31,2015)
     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install nuget.commandline"
     
     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install nugetpackageexplorer"
-    
-    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install python"
     
     REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install numpy"
     
@@ -46,7 +48,7 @@
     
     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install pycharm-community"
     
-    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install miniconda3 "
+    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install miniconda3"
     
     
     python -m pip install -U pip
