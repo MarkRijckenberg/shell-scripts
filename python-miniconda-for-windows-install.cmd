@@ -55,15 +55,15 @@
     
     pip install -U virtualenv
     
+     conda update
+    
      conda update conda
     
      conda install numpy
      
-     conda install -f -n py33 matplotlib
+     conda install matplotlib
      
-     conda install -f -n py33 pyparsing
-     
-     conda install -f -n py33 numpy
+     conda install pyparsing
     
     echo "Update all currently installed choco packages:"
     
