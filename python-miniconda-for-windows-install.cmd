@@ -38,7 +38,7 @@
     
     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install python"
     
-    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install numpy"
+    REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install numpy"
     
     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install dreampie"
     
