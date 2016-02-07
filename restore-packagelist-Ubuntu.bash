@@ -475,7 +475,7 @@ cd /tmp
 rm download*
 rm wps-office*
 wget --no-check-certificate http://wps-community.org/downloads
-wget --no-check-certificate  `echo "http://wps-community.org/downloads" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i ul li:first-child | lynx -stdin -dump -hiddenlinks=listonly -nonumbers| tail -n 1`
+wget --no-check-certificate  `echo "http://wps-community.org/downloads" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i ul li:first-child | lynx -stdin -dump -hiddenlinks=listonly -nonumbers| grep kdl|head -n 1`
 sudo dpkg -i wps-office*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 ##########################################################################################################
