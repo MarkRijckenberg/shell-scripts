@@ -6,7 +6,6 @@
 # REQUIRES: bash, Ubuntu 12.04 LTS or newer
 # REVISED: 20130302
 # REVISED: 20130516
-# AUTHOR: mark rijckenberg at gmail dot com
 
    echo "Please press one of the 4 numbers below and then hit the <ENTER> key to execute"
 
@@ -27,7 +26,7 @@ select CHOICE in list-installed-kernels remove-a-specific-kernel remove-all-prev
      echo "Please enter kernel package to uninstall from your pc (for example: linux-image-3.9.0-030900rc5-generic) "
      read KERNELVERSION
      apt-cache search $KERNELVERSION|cut -d" " -f1|xargs sudo apt-get remove -y
-
+     sudo apt autoremove 
      ;;  
      remove-all-previous-kernels) 
      
