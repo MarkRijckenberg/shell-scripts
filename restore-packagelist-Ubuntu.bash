@@ -1528,6 +1528,14 @@ wget `cat download-files |grep linux|grep undle|cut -d"\"" -f2`
 FILENAME=`cat download-files |grep linux|grep undle|cut -d"\"" -f2|cut -d"/" -f7`
 unp $FILENAME
 
+# install Aladin v8.040 (java program)
+cd
+rm -rf Aladin
+wget http://aladin.u-strasbg.fr/java/download/Aladin.tar
+unp Aladin.tar
+# java -jar ~/Aladin/Aladin.jar
+
+
 
 # download and decompress Nightshade 
 # Nightshade is free, open source astronomy simulation and visualization software for teaching and exploring astronomy
@@ -1583,10 +1591,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libxft
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install unp  libqglviewer-dev  libcfitsio3-dev qt4-dev-tools libglu1-mesa  libglu1-mesa-dev
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f install libchealpix0  libchealpix-dev
-wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix0_3.11.4-2_amd64.deb
-sudo dpkg -i libchealpix0_3.11.4-2_amd64.deb
-wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix-dev_3.11.4-2_amd64.deb
-sudo dpkg -i libchealpix-dev_3.11.4-2_amd64.deb
+wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix0_3.11.4-2build1_amd64.deb
+sudo dpkg -i libchealpix0_3.11.4-2build1_amd64.deb
+wget http://mirrors.kernel.org/ubuntu/pool/universe/c/chealpix/libchealpix-dev_3.11.4-2build1_amd64.deb
+sudo dpkg -i libchealpix-dev_3.11.4-2build1_amd64.deb
 wget http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 FILENAME=`grep Version tb_skyviewer_ov.cfm |grep kyviewer|cut -d"\"" -f2|cut -d"/" -f2|head -n1`
 wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$FILENAME
@@ -1639,8 +1647,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-c
 MACHINE_TYPE=`uname -m`
 
 cd /tmp
-rm rstudio*.deb
-rm index.html
+sudo rm rstudio*.deb
+sudo rm index.html
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
