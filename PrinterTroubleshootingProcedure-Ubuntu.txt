@@ -1,0 +1,99 @@
+||<tablestyle="float:right; font-size: 0.9em; width:15%; background:#F1F1ED; margin: 0 0 1em 1em;" style="padding:0.5em;"><<TableOfContents(2)>>||
+
+
+This guide will help gather information that would be useful when creating a single, new question at 
+ * https://answers.launchpad.net/ubuntu/+source/apt/+addquestion
+
+Please only create a NEW question at https://answers.launchpad.net/ubuntu if you do not have an open question about this issue yet. If you already have an open question at https://answers.launchpad.net/ubuntu     
+then please add the Terminal output below to the thread which was previously opened.
+
+In order to gather essential troubleshooting information about your printer in Ubuntu, please follow this procedure.  
+
+= Step 1 First install a supported version of Ubuntu =
+
+'''The only supported releases of Ubuntu are the ones that are NOT End of Life (EOL) in the following table:'''
+
+https://wiki.ubuntu.com/Releases
+
+
+= Step 2 Switch to "Main Server" using Software Sources =
+
+First switch from the regional server (US, UK, Swiss, etc...) to the "Main Server" using the Software Sources window
+
+You can open up the Software Sources window by running the Update Manager.  If you are using the Gnome Classic desktop it can be found in the menu (System > Administration > Update Manager).  If you are Using Unity click the top icon in the dash and search for "update manager". In the update manager click on the Settings button at the lower-left corner of the window, and entering your password if prompted to do so.
+
+See here for details and a screenshot of the main tab of the Software Sources window:
+
+https://help.ubuntu.com/community/Repositories/Ubuntu#Download_Server
+
+= Step 3 Disable all PPA repositories =
+
+
+Open "Ubuntu Software Center"
+- Edit Menu
+--- Select "Software Sources...", enter your password
+----- Select tab "Other Software"
+
+From the "Other Software" tab, disable all PPA repositories, leaving only the official Ubuntu repositories active. Enabling too many PPA repositories (which are non-official) can cause your package manager to become unstable. If you do decide to re-enable such a PPA repository, I strongly suggest only enabling ONE PPA repository at a time for stability reasons, not several at the same time.
+
+= Step 4 Close all open programs =
+
+VERY IMPORTANT! Please make sure to close all open programs, including all package managers like Synaptic, Update Manager, Software Center, Add/remove programs, etc ... No other package manager should be running while running the commands below.
+
+= Step 5 Enable unlimited scrolling in Terminal =
+
+Open a [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Command-line / Terminal console]] 
+
+'''In the Ubuntu [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | Terminal console]] , make sure that unlimited scrolling is enabled:
+ * click on Edit > Profiles > "Default" profile > Scrolling. Choose "Unlimited" as scrolling option. Click Close and Close again.'''
+
+If you are using the Gnome interface, open [[https://help.ubuntu.com/community/UsingTheTerminal#Starting%20a%20Terminal | the Terminal console]] via "Applications->Accessories->Terminal"
+
+If you are using the Unity interface, the easiest way to open the Terminal is to use the 'search' function on the dash.
+Or you can click on the 'More Apps' button, click on the 'See more results' by the installed section, and find it in that list of applications.
+A third way, available after you click on the 'More Apps' button, is to go to the search bar, and see that the far right end of it says 'All Applications'. You then click on that, and you'll see the full list. Then you can go to Accessories > Terminal after that.
+
+So the methods in Unity are:
+
+Press CTRL-ALT-T key combination.
+
+Dash > Search for Terminal
+
+Dash > More Apps > 'See More Results' > Terminal
+
+Dash > More Apps > Accessories > Terminal
+
+
+= Step 6 List of Terminal commands to execute and send to Launchpad Answers forum =
+
+Please copy-paste the following commands one line at a time from the https://help.ubuntu.com/community/PrinterTroubleshootingProcedure  
+website using Chromium or Firefox into the Linux Terminal. 
+
+Tip: If you have a wheel mouse or 3 button mouse you do not need to type commands into the Terminal. Highlight each command on the page using the mouse. Move your cursor anywhere in the Terminal and press the wheel or middle button. Automatic Copy and paste! No spelling mistakes! No Typos! No other errors!
+
+{{{
+sudo apt-get update
+}}}
+{{{
+sudo apt-get install aptitude
+}}}
+{{{
+sudo aptitude install libcups2-dev cups-driver-gutenprint foomatic-db-compressed-ppds foomatic-db-gutenprint ijsgutenprint-ppds lsb-printing openprinting-ppds printer-driver-all printfilters-ppd avahi-utils libcups2 cups cups-bsd cups-client libcupsimage2-dev libdbus-1-dev build-essential ghostscript openssl libjpeg-dev libsnmp-dev snmp-mibs-downloader libtool wget policykit-1 policykit-1-gnome python3-dbus python3-gi python3-dev python3-notify2 python3-imaging python3-pyqt4 gtk2-engines-pixbuf python3-dbus.mainloop.qt python3-reportlab python3-lxml libsane libsane-dev sane-utils xsane libpython2.7-dev libpython-dev
+}}}
+{{{
+apt-cache show libpython2.7-dev ; cat /etc/lsb-release;uname -a;tail -n 10 /var/log/syslog ; lsmod | grep usb ; lsusb ; ls -l /dev/usb/lp* /dev/bus/usb/*/* ; lpinfo -v; sudo usb_printerid /dev/usb/lp0; dpkg -l | egrep 'cups|epson|hplip|ppd|printer' ; sudo dpkg --audit
+}}}
+{{{
+hp-info -i; hp-doctor
+}}}
+
+
+= Step 7 Please send us the Terminal output =
+
+Please do NOT attempt to send any attachment(s). Please copy/paste the full terminal output of the previous list of diagnostic commands at this location:
+https://answers.launchpad.net/ubuntu/+source/apt/+addquestion
+
+Please only create a NEW question at https://answers.launchpad.net/ubuntu if you do not have an open question about this issue yet. If you already have an open question at https://answers.launchpad.net/ubuntu     
+then please add the Terminal output below to the thread which was previously opened.
+
+The troubleshooters at Launchpad need to see the full Terminal output from running the previous list of diagnostic commands.
