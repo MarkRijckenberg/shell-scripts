@@ -691,6 +691,17 @@ sudo checkinstall
 # Source: http://www.cyberciti.biz/faq/howto-openssh-client-security-update-cve-0216-0777-cve-0216-0778/
 echo 'UseRoaming no' | sudo tee -a /etc/ssh/ssh_config
 
+# install lynis (formerly called rkhunter) 
+# Security auditing tool and assists with compliance testing (HIPAA/ISO27001/PCI DSS) and system hardening)
+cd
+sudo rm -rf $HOME/lynis
+git clone https://github.com/CISOfy/lynis.git
+cd lynis
+sudo chmod -R 640 ./include/*
+sudo chown root:root ./include/*
+sudo ./lynis --version
+# sudo ./lynis audit system
+
 #compile and install newest version of openssl in Ubuntu 14.04 LTS
 cd
 # sudo DEBIAN_FRONTEND=noninteractive apt-get update
