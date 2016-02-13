@@ -34,17 +34,17 @@ deb http://deb.opera.com/opera/ stable non-free
 
 #### Oracle Java (JDK) Installer PPA - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
-deb http://ppa.launchpad.net/webupd8team/java/ubuntu vivid main
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
 
 #### Steam for Linux - http://store.steampowered.com/about/
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
-deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+deb [arch=i386] http://repo.steampowered.com/steam/ xenial steam
 
 
 ####### 3rd Party Source Repos
 
 #### Oracle Java (JDK) Installer PPA (Source) - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
-deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu vivid main
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
 
 
