@@ -213,7 +213,7 @@ sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/ap
 # install newest version of wget from Github sources in order to solve following wget issue in Ubuntu 14.04 LTS : 
 # https://github.com/chapmanb/bcbio-nextgen/issues/1133
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libboost-all-dev cmake libqt4-dev build-essential libqtwebkit-dev checkinstall
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install flex libboost-all-dev cmake libqt4-dev build-essential libqtwebkit-dev checkinstall
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep wget
 cd
 sudo rm -rf wget
