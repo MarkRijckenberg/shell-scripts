@@ -210,38 +210,6 @@ RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolow
 sudo touch /etc/apt/sources.list.d/eid.list
 sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 
-# install newest version of wget from Github sources in order to solve following wget issue in Ubuntu 14.04 LTS : 
-# https://github.com/chapmanb/bcbio-nextgen/issues/1133
-sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install flex libboost-all-dev cmake libqt4-dev build-essential libqtwebkit-dev checkinstall
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep wget
-cd
-sudo rm -rf wget
-git clone https://github.com/mirror/wget.git
-cd wget
-./bootstrap
-./configure
-sudo make
-sudo checkinstall
-# Press 3 and ENTER and then set version to 1.17.1.13
-apt-cache show wget
-
-# Terminal output should look like this:
-# apt-cache show wget
-# Package: wget
-# Status: install ok installed
-# Priority: extra
-# Section: checkinstall
-# Installed-Size: 3864
-# Maintainer: root
-# Architecture: amd64
-# Version: 1.17.1.13-1
-# Provides: wget
-# Conffiles:
-#  /etc/wgetrc 618c05b4106ad20141dcf6deada2e87f obsolete
-# Description: Package created with checkinstall 1.6.2
-# Description-md5: 556b8d22567101c7733f37ce6557412e
-
 # add repository for google music manager software package
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
@@ -1158,6 +1126,38 @@ tar xvjf bleachbit*tar.bz2 # unpack the archive
 cd bleachbit* # change directory
 make -C po local # build translations (optional)
 sudo python bleachbit.py # start BleachBit GUI
+
+# install newest version of wget from Github sources in order to solve following wget issue in Ubuntu 14.04 LTS : 
+# https://github.com/chapmanb/bcbio-nextgen/issues/1133
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install flex libboost-all-dev cmake libqt4-dev build-essential libqtwebkit-dev checkinstall
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep wget
+cd
+sudo rm -rf wget
+git clone https://github.com/mirror/wget.git
+cd wget
+./bootstrap
+./configure
+sudo make
+sudo checkinstall
+# Press 3 and ENTER and then set version to 1.17.1.13
+apt-cache show wget
+
+# Terminal output should look like this:
+# apt-cache show wget
+# Package: wget
+# Status: install ok installed
+# Priority: extra
+# Section: checkinstall
+# Installed-Size: 3864
+# Maintainer: root
+# Architecture: amd64
+# Version: 1.17.1.13-1
+# Provides: wget
+# Conffiles:
+#  /etc/wgetrc 618c05b4106ad20141dcf6deada2e87f obsolete
+# Description: Package created with checkinstall 1.6.2
+# Description-md5: 556b8d22567101c7733f37ce6557412e
 
 #############################################################################################
 # Fish shell installation
