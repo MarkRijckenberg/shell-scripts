@@ -438,7 +438,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install aptitude
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
 cd $HOME
 ##########################################################################################################
-# install LastPass Universal Linux Installer (password vault, chosen in February 2016)
+# install LastPass:
 cd /tmp
 wget https://lastpass.com/lplinux.tar.bz2
 unp lplinux*
