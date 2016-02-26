@@ -768,7 +768,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cuttlefish
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-tweak
 
-# install skype
+# install Skype (Video Conferencing software)
+# better Video Conferencing software: Firefox Hello (using WebRTC)
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove skype skype-bin
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install skype
