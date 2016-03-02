@@ -1055,7 +1055,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge libmono-2.
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge  xscreensaver  xscreensaver-data gnome-screensaver
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge evolution-data-server-common samba
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes purge gcc-4.6 gcc-4.7 gcc-4.7-base gcc-4.8 gcc-4.8-base
-sudo apt-get purge gcc-4.6 gcc-4.7 gcc-4.7-base gcc-4.8 gcc-4.8-base
+sudo apt-get purge gcc-4.6 gcc-4.7 gcc-4.7-base
 # temporary workaround for ASUS Z170 Pro Gamer motherboards:
 sudo apt-get purge xfce4-notifyd lxqt-powermanagement
 # end of workaround.
