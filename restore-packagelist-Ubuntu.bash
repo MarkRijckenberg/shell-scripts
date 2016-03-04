@@ -1128,6 +1128,16 @@ cd bleachbit* # change directory
 make -C po local # build translations (optional)
 sudo python bleachbit.py # start BleachBit GUI
 
+#############################################################################################
+# install new secure /etc/hosts file to block malware websites
+#############################################################################################
+cd 
+sudo rm -rf hosts
+sudo cp /etc/hosts /etc/hostsBACKUP
+git clone https://github.com/StevenBlack/hosts.git
+cd hosts
+python3 updateHostsFile.py -a -r
+
 # install newest version of wget from Github sources in order to solve following wget issue in Ubuntu 14.04 LTS : 
 # https://github.com/chapmanb/bcbio-nextgen/issues/1133
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
