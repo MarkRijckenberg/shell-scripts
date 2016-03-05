@@ -51,7 +51,7 @@
 # see https://github.com/MarkRijckenberg/shell-scripts/blob/master/hplip-driver-install.bash
 
 #sudo su
-PATH=/usr/sbin:/usr/bin:/sbin:/bin
+PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
 
 MACHINE_TYPE=`uname -m`
