@@ -1136,7 +1136,8 @@ sudo rm -rf hosts
 sudo cp /etc/hosts /etc/hostsBACKUP
 git clone https://github.com/StevenBlack/hosts.git
 cd hosts
-python3 updateHostsFile.py -a -r
+sudo python3 updateHostsFile.py -a -r
+sudo chmod 400 /etc/hosts
 
 #############################################################################################
 # install Soundcloud Music Playlist Downloader
@@ -1145,7 +1146,7 @@ cd
 sudo rm -rf scdl
 git clone https://github.com/flyingrub/scdl.git
 cd scdl
-python3 setup.py install
+sudo python3 setup.py install
 #############################################################################################
 # install newest version of wget from Github sources in order to solve following wget issue in Ubuntu 14.04 LTS : 
 # https://github.com/chapmanb/bcbio-nextgen/issues/1133
