@@ -1137,7 +1137,7 @@ sudo cp /etc/hosts /etc/hostsBACKUP
 git clone https://github.com/StevenBlack/hosts.git
 cd hosts
 sudo python3 updateHostsFile.py -a -r
-sudo chmod 400 /etc/hosts
+sudo chmod 444 /etc/hosts
 
 #############################################################################################
 # install Soundcloud Music Playlist Downloader
