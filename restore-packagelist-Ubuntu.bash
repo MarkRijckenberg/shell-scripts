@@ -220,6 +220,10 @@ sudo touch /etc/apt/sources.list.d/partner.list
 sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu trusty partner" >> /etc/apt/sources.list.d/partner.list'
 sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu trusty partner" >> /etc/apt/sources.list.d/partner.list'
 
+# add repository for Google Chrome browser
+sudo touch /etc/apt/sources.list.d/googlechrome.list
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/googlechrome.list'
+
 ##########################################################################################################
 # refresh list of available packages in Ubuntu repositories
 sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
