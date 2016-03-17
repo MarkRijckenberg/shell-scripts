@@ -187,6 +187,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:clipgrab-team/p
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:heyarje/libav-11
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:niko2040/e19
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
 
 ##########################################################################################################
 # add astronomy PPA repositories
