@@ -137,7 +137,7 @@ echo "alias apti='sudo aptitude update && sudo aptitude install '" >> ~/.bashrc
 echo "alias aptr='sudo aptitude remove '" >> ~/.bashrc
 echo "alias aptp='sudo aptitude purge '" >> ~/.bashrc
 echo "alias aptu='sudo aptitude update'" >> ~/.bashrc
-echo "alias apts='sudo aptitude search '" >> ~/.bashrc
+echo "alias apts='aptitude search '" >> ~/.bashrc
 echo "alias d-u='sudo aptitude update && sudo aptitude dist-upgrade'" >> ~/.bashrc
 echo "alias wget='wget --no-check-certificate'" >> ~/.bashrc
 alias wget="wget --no-check-certificate"
@@ -1211,7 +1211,7 @@ echo "alias apti='sudo aptitude update ; sudo aptitude install '" >> ~/.config/f
 echo "alias aptr='sudo aptitude remove '" >> ~/.config/fish/config.fish
 echo "alias aptp='sudo aptitude purge '" >> ~/.config/fish/config.fish
 echo "alias aptu='sudo aptitude update'" >> ~/.config/fish/config.fish
-echo "alias apts='sudo aptitude search '" >> ~/.config/fish/config.fish
+echo "alias apts='aptitude search '" >> ~/.config/fish/config.fish
 echo "alias d-u='sudo aptitude update ; sudo aptitude dist-upgrade'" >> ~/.config/fish/config.fish
 
 # install theme for fish shell
