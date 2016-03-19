@@ -16,6 +16,8 @@
 # !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI mode:
 # !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
 
+# Run this script using this command:   bash restore-packagelist-Ubuntu.bash 2>error.log
+
 # TYPE: Bash Shell script.
 # PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu 14.04.3 LTS 64-bit
 # RECOMMENDS: minimum of 2 gigabytes of RAM memory
