@@ -898,6 +898,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  --install-rec
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install winehq-staging
 
 # install Teamviewer server + client which depends on wine1.7
+# Direct download URL:  http://download.teamviewer.com/download/teamviewer_i386.deb
 cd /tmp
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge teamviewer
 sudo rm -rf /opt/teamviewer*
