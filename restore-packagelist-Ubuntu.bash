@@ -894,7 +894,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 winetricks 
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  --install-recommends install wine-staging winetricks
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  --install-recommends install wine-staging
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install winehq-staging
 
 # install Teamviewer server + client which depends on wine1.7
