@@ -173,7 +173,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desuri
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntuhandbook1/apps
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa 
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:wine/wine-builds
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noobslab/apps
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
@@ -892,8 +893,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 # install newest wine version 
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge wine wine1.4 wine1.5 wine1.6 winetricks
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  install wine1.7 winetricks
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 winetricks 
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f  --install-recommends install wine-staging winetricks
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install winehq-staging
 
 # install Teamviewer server + client which depends on wine1.7
 cd /tmp
