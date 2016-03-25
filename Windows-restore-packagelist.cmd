@@ -81,11 +81,11 @@ REM ############################################################################
 
 REM If you are using the 32-bit version of Windows, use 
 
-REM curl-7.38.0-win32-local.msi instead of
+REM curl-7.46.0-win32-local.msi instead of
  
-REM curl-7.38.0-win64-local.msi
+REM curl-7.46.0-win64-local.msi
 
-set CURLFILENAME=curl-7.38.0-win64-local.msi
+set CURLFILENAME=curl-7.46.0-win64-local.msi
 
 mkdir C:\temp
 
@@ -196,6 +196,15 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install bleachbit"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install classic-shell"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install javaruntime"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install citrix-receiver"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ie11"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install adblockplusie"
 
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
