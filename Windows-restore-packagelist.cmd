@@ -190,7 +190,7 @@ REM Get device driver management utilities:
 
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install DellCommandUpdate"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install drivergenius"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install driverbooster"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install googleearth"
 
