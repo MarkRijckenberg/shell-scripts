@@ -172,7 +172,7 @@ REM install Android emulator, which depends on Virtualbox:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install teamviewer"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install HitmanProPortable_x64"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install hitmanpro"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ccleaner"
 
