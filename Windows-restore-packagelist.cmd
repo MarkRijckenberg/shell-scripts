@@ -178,7 +178,7 @@ REM install Android emulator, which depends on Virtualbox:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install emsisoft-anti-malware"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install combofix"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install combofix"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install vagrant"
 
