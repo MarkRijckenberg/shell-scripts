@@ -140,7 +140,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install DotNet4.5"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install paint.net"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install paint.net"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install virtualbox"
 
@@ -164,7 +164,7 @@ REM install Android emulator, which depends on Virtualbox:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install cpu-z"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install duplicatecommander -pre"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install duplicatecommander -pre"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install qbittorrent"
 
