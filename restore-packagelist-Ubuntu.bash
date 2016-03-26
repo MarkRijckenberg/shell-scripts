@@ -565,7 +565,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install shutter
 
 cd $HOME
 sudo rm -rf xiki
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  ruby1.9.3 ruby-dev
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  ruby2.3 ruby2.3-dev
 git clone git://github.com/trogdoro/xiki.git
 cd xiki
 sudo gem install bundler   # <- no "sudo" if using rvm
@@ -581,7 +581,7 @@ cd $HOME
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager-beta
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager-beta
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install google-musicmanager
 
 # install newest version of VLC player
