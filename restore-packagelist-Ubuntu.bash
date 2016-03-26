@@ -18,22 +18,22 @@
 # !!!!! WINDOWS 10 64-bit: to avoid memory leaks in svchost process: disable the BITS (background intelligent transfer 
 # !!!!! service) and Windows Superfetch/prefetch service in services.msc !!!
 
-# Run this script using this command:   bash restore-packagelist-Ubuntu.bash 2>error.log
+# Run this script using this command:   time bash restore-packagelist-Ubuntu.bash
 
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu 14.04.3 LTS 64-bit
+# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu 16.04 LTS 64-bit
 # RECOMMENDS: minimum of 2 gigabytes of RAM memory
-# REQUIRES: Lubuntu 14.04.3 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
+# REQUIRES: Lubuntu 16.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
 #           wget, apt-get, unp, wine, biber, biblatex
 # CONFLICTS: with Kubuntu, Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
 # Ubuntu package repositories -> Linux Mint and DistroAstro packages destabilize the GUI interface
 # Use Cinnamon instead of Unity interface, because Unity causes Teamviewer sessions to slow down due to window 
 # animation in Unity
-# REQUIRED FREE DISKSPACE FOR Xubuntu 14.04 LTS: 5 GB of free disk space in root partition
-# REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  1.4 GB of free disk space in root partition after installing Lubuntu/Xubuntu 14.04 LTS 64-bit 
-# REQUIRED FREE DISKSPACE FOR PPA PACKAGES:  1.4 GB of free disk space in root partition after installing Lubuntu/Xubuntu 14.04 LTS 64-bit 
-# TOTAL AMOUNT OF REQUIRED DISKSPACE FOR Lubuntu/Xubuntu 14.04 LTS + BASEPACKAGES + PPA PACKAGES
-# = 5 GB + 1.4 GB + 1.4 GB = 7.8 GB
+# REQUIRED FREE DISKSPACE FOR Lubuntu 16.04 LTS 64-bit : 2.7 GB of free disk space in root partition
+# REQUIRED FREE DISKSPACE FOR BASEPACKAGES:  6.4 GB of free disk space in root partition after installing Lubuntu 16.04 LTS 64-bit 
+# REQUIRED FREE DISKSPACE FOR ASTRONOMY PACKAGES:  2.340 GB of free disk space in root partition after installing Lubuntu/Xubuntu 14.04 LTS 64-bit 
+# TOTAL REQUIRED DISKSPACE IN ROOT (/) WITHOUT INSTALLING ASTRONOMY SOFTWARE: 2.7 GB + 6.4 GB  = 9.1 GB
+# TOTAL REQUIRED DISKSPACE IN ROOT (/) WHEN INSTALLING BASEPACKAGES + ASTRONOMY SOFTWARE: 9.1 GB + 2.340 GB = 11.44 GB
 # INSTALLATION DURATION WITHOUT INSTALLING ASTRONOMY SOFTWARE: around 30 minutes on a modern laptop without SSD storage
 # COMPATIBILITY WITH WIRELESS BLUETOOTH SPEAKERS: bluetooth speakers fully work in Linux Mint 16 Cinnamon
 # thanks to cinnamon-bluetooth package.
