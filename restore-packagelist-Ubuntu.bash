@@ -453,6 +453,7 @@ cd $HOME
 cd /tmp
 wget https://lastpass.com/lplinux.tar.bz2
 unp lplinux*
+cd lplinux
 ./install_lastpass.sh 
 
 # install newest version of WPS Office for GNU/Linux (MS Office compatible)
