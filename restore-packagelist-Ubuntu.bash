@@ -15,6 +15,8 @@
 # !!!!! WINDOWS 10 64-bit: Method to boot Ubuntu 1GB USB stick in UEFI compatible mode in order to
 # !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI mode:
 # !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
+# !!!!! WINDOWS 10 64-bit: to avoid memory leaks in svchost process: disable the BITS (background intelligent transfer 
+# !!!!! service) and Windows prefetch service in services.msc !!!
 
 # Run this script using this command:   bash restore-packagelist-Ubuntu.bash 2>error.log
 
