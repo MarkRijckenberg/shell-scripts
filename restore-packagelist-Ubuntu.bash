@@ -434,7 +434,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 #rm -rf ~/.config/lxterminal/
 #rm -rf ~/.config/openbox*
 #rm -rf ~/.config/unity*
-sudo apt-get install lxqt-metapackage
+#  sudo apt-get install lxqt-metapackage
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
 # then click on Preferences::Appearance::Icons Theme::Numix Circle Light
