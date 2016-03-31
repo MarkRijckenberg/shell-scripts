@@ -1152,6 +1152,9 @@ git clone https://github.com/StevenBlack/hosts.git
 cd hosts
 sudo python3 updateHostsFile.py -a -r
 sudo chmod 444 /etc/hosts
+# copy new hosts file to Windows partition as well:
+sudo mv /media/windows/Windows/System32/Drivers/etc/hosts  /media/windows/Windows/System32/Drivers/etc/hostsBACKUP
+sudo cp  /etc/hosts  /media/windows/Windows/System32/Drivers/etc/hosts
 
 #############################################################################################
 # install Soundcloud Music Playlist Downloader
