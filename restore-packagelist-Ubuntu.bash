@@ -1070,9 +1070,18 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge  xscreensa
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge evolution-data-server-common samba
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes purge gcc-4.6 gcc-4.7 gcc-4.7-base gcc-4.8 gcc-4.8-base
 sudo apt-get purge gcc-4.6 gcc-4.7 gcc-4.7-base
+
+###############################################################################################
+#     WORKAROUNDS FOR BUGS / ISSUES / CPU / MEMORY OVERCONSUMPTION                                                            #
+###############################################################################################
+
 # temporary workaround for ASUS Z170 Pro Gamer motherboards:
 sudo apt-get purge xfce4-notifyd lxqt-powermanagement
 # end of workaround.
+# April 3, 2016: temporary workaround for issue/problem where pcscd process is using 97% of CPU all the time:
+sudo apt-get purge pcscd
+# end of workaround.
+
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 
