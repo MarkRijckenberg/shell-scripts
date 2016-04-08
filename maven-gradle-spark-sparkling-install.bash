@@ -42,7 +42,7 @@ sudo rm -rf /usr/local/spark*
 sudo rm -rf maven*
 sudo rm -rf ~/apps/maven
 git clone https://github.com/apache/maven.git
-cd maven
+cd ~/maven/apache-maven
 #obsolete in 2016: ant -Dmaven.home="$HOME/apps/maven/apache-maven-SNAPSHOT"
 mvn install
 cd ~/maven/apache-maven/target
