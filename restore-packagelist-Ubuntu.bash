@@ -441,7 +441,9 @@ sudo apt-get purge lxqt-metapackage lxqt-common lximage-qt  pcmanfm-qt
 sudo apt-get install lxqt-metapackage lxqt-common 
 
 # Install budgie desktop environment with excellent font management (even on 40 inch Full HD TV screen)
+dconf reset -f /com/solus-project/budgie-panel/
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install budgie-desktop
+dconf reset -f /com/solus-project/budgie-panel/
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
 # then click on Preferences::Appearance::Icons Theme::Numix Circle Light
