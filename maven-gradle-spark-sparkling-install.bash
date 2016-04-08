@@ -28,6 +28,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git buil
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  maven
 sudo apt-get --yes --force-yes  install  openjdk-8-jdk openjdk-8-jre openjdk-8-jre-headless
+sudo apt-get install oracle-java8-installer oracle-java8-set-default
 
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
