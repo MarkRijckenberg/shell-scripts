@@ -13,7 +13,9 @@
 cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
 sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk*
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge maven
 sudo rm -rf /etc/java-*-openjdk/*
+sudo rm -rf .m2/
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutter
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/java
