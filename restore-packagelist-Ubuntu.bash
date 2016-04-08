@@ -193,6 +193,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:qbittorrent-tea
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:heyarje/libav-11
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:niko2040/e19
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:budgie-remix/ppa
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -437,6 +438,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-m
 #rm -rf ~/.config/openbox*
 #rm -rf ~/.config/unity*
 #  sudo apt-get install lxqt-metapackage
+
+# Install budgie desktop environment with excellent font management (even on 40 inch Full HD TV screen)
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install budgie-desktop
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
 # then click on Preferences::Appearance::Icons Theme::Numix Circle Light
