@@ -60,10 +60,11 @@ mvn -v
 
 # install newest version of Apache Spark:
 cd
-git clone git://github.com/apache/spark.git -b branch-1.6
+git clone git://github.com/apache/spark.git -b branch-1.5
 cd spark
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
-export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
+# export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
+export MAVEN_OPTS="-Xmx2g -XX:ReservedCodeCacheSize=512m"
 mvn -PsparkR -DskipTests clean package
 # End result of Apache Spark build process should look
 # something like this (without any memory errors):
@@ -161,7 +162,7 @@ export SPARK_HOME=~/spark
 #IPYTHON_OPTS="notebook" $SPARK_HOME/bin/pyspark
 cd
 rm -rf sparkling-water*
-git clone https://github.com/h2oai/sparkling-water.git -b rel-1.6
+git clone https://github.com/h2oai/sparkling-water.git -b rel-1.5
 cd sparkling-water
 ./make-dist.sh
 ./gradlew build
