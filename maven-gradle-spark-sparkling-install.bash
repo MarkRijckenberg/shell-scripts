@@ -34,12 +34,12 @@ sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
 
 #install newest version of gradle (sparkling water depends on gradle during compile process)
-cd
-sudo rm -rf gradle
-git clone https://github.com/gradle/gradle
-cd gradle
-sudo apt-get build-dep gradle
-./gradlew build
+#cd
+#sudo rm -rf gradle
+#git clone https://github.com/gradle/gradle
+#cd gradle
+#sudo apt-get build-dep gradle
+#./gradlew build
 
 # install newest version of maven (Apache Spark depends on maven during compile process)
 # sudo rm -rf maven*
