@@ -41,6 +41,7 @@ sudo rm -rf /usr/local/spark*
 #cd gradle
 #sudo apt-get build-dep gradle
 #./gradlew build
+#./gradlew 
 
 # install newest version of maven (Apache Spark depends on maven during compile process)
 # sudo rm -rf maven*
@@ -169,7 +170,7 @@ rm -rf sparkling-water*
 git clone https://github.com/h2oai/sparkling-water.git -b rel-1.6
 cd sparkling-water
 ./make-dist.sh
-./gradlew build
+~/gradle/gradlew build
 
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
