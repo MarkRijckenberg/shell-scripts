@@ -145,8 +145,8 @@ df.select("year", "model").show()
 # source:https://github.com/h2oai/sparkling-water
 # http://www.h2o.ai/download/
 # Sparkling Water (=Apache Spark + H2O machine learning algorithms) is also published as a Spark package. 
-# REQUIRES: Apache Spark 1.3.0, 1.4.0 or 1.5.0 (not Apache 1.6.0, at least not yet)
-# You can use it directly from your Spark distribution. -> not working on Apache Spark 1.6.0 !!!
+# REQUIRES: Apache Spark 1.3.0, 1.4.0, 1.5.0 or 1.6.0
+# You can use it directly from your Spark distribution.
 # For example, if you have Spark version 1.5.0 and would like to use Sparkling Water version 1.5.2 and
 # launch example CraigslistJobTitlesStreamingApp, then you can use the following command:
 #  ~/sparkling-water/bin/sparkling-shell --packages ai.h2o:sparkling-water-core_2.10:1.5.2,ai.h2o:sparkling-water-examples_2.10:1.5.2 --class org.apache.spark.examples.h2o.CraigslistJobTitlesStreamingApp /dev/null
