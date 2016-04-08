@@ -9,17 +9,23 @@
 # Minimum free disk space requirements for this script: 1 Gigabyte (maybe even more) 
 # Please make sure to close any web browser windows and any other 
 # memory hogging applications before running this memory intensive bash script.
-# First uninstall any conflicting binary packages of maven and maven2:
+# First uninstall any conflicting binary packages of maven and maven2 and java:
 cd
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk*
+sudo rm -rf /etc/java-*-openjdk/*
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutter
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/java
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # Install tools required to build maven and Apache Spark with sparkR support:
 sudo apt-get build-dep maven maven2
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git build-essential python-protobuf protobuf-compiler
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 openjdk-7-jre-headless openjdk-7-jdk
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install maven maven2
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  maven maven2
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  oracle-java9-installer 
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  oracle-java9-set-default
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
@@ -52,7 +58,7 @@ mvn -v
 
 # install newest version of Apache Spark:
 cd
-git clone git://github.com/apache/spark.git -b branch-1.5
+git clone git://github.com/apache/spark.git -b branch-1.6
 cd spark
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
 export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
@@ -153,7 +159,7 @@ export SPARK_HOME=~/spark
 #IPYTHON_OPTS="notebook" $SPARK_HOME/bin/pyspark
 cd
 rm -rf sparkling-water*
-git clone https://github.com/h2oai/sparkling-water.git
+git clone https://github.com/h2oai/sparkling-water.git -b rel-1.6
 cd sparkling-water
 ./make-dist.sh
 ./gradlew build
