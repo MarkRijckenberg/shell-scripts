@@ -34,6 +34,7 @@ sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
 
 #install newest version of gradle (sparkling water depends on gradle during compile process)
+# DEPENDS: openjdk-8-jdk, openjdk-8-jre, openjdk-8-jre-headless
 #cd
 #sudo rm -rf gradle
 #git clone https://github.com/gradle/gradle
