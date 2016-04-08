@@ -31,25 +31,27 @@ sudo apt-get --yes --force-yes  install  oracle-java9-set-default
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
+
 #install newest version of gradle (sparkling water depends on gradle during compile process)
-#cd
-#sudo rm -rf gradle
-#git clone https://github.com/gradle/gradle
-#cd gradle
-#./gradlew build
+cd
+sudo rm -rf gradle
+git clone https://github.com/gradle/gradle
+cd gradle
+sudo apt-get build-dep gradle
+./gradlew build
 
 # install newest version of maven (Apache Spark depends on maven during compile process)
-sudo rm -rf maven*
-sudo rm -rf ~/apps/maven
-git clone https://github.com/apache/maven.git
-cd ~/maven/apache-maven
+# sudo rm -rf maven*
+# sudo rm -rf ~/apps/maven
+# git clone https://github.com/apache/maven.git
+# cd ~/maven/apache-maven
 #obsolete in 2016: ant -Dmaven.home="$HOME/apps/maven/apache-maven-SNAPSHOT"
-mvn install
-cd ~/maven/apache-maven/target
-unp apache-maven-*-bin.tar.gz
-sudo mv /usr/bin/mvn /usr/bin/mvnBACKUP
-sudo ln -s ~/maven/apache-maven/target/apache-maven-*/bin/mvn  /usr/bin/mvn
-mvn -v
+# mvn install
+# cd ~/maven/apache-maven/target
+# unp apache-maven-*-bin.tar.gz
+# sudo mv /usr/bin/mvn /usr/bin/mvnBACKUP
+# sudo ln -s ~/maven/apache-maven/target/apache-maven-*/bin/mvn  /usr/bin/mvn
+# mvn -v
 # example of Terminal output:
 # Apache Maven 3.4.0-SNAPSHOT (e37117e304d17e5b2defb4b2f7b2c67c0e2a1fe2; 2016-01-27T20:16:00+01:00)
 # Maven home: ~/maven/apache-maven/target/apache-maven-3.4.0-SNAPSHOT
