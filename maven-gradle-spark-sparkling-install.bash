@@ -2,8 +2,8 @@
 # Based on: https://spark.apache.org/docs/1.1.0/building-with-maven.html
 # Purpose: this script will automatically compile and install
 # the newest version of maven and Apache Spark via the github sources
-# Software requirements: Ubuntu 14.04 LTS 64-bit, git, build-essential,
-# ant, unp, python2.7, java 1.7.0 or higher, openjdk-7-jdk
+# Software requirements: Ubuntu 16.04 LTS 64-bit, git, build-essential,
+# ant, unp, python2.7, openjdk-8-jdk, openjdk-8-jre, openjdk-8-jre-headless (oracle-java9-installer NOT compatible!!!!)
 # Also required dependencies: https://github.com/MarkRijckenberg/shell-scripts/blob/master/cuda-java-truecrack-python-pip-install.bash
 # Minimum RAM requirements for this script: 2 Gigabytes of RAM (maybe even more) 
 # Minimum free disk space requirements for this script: 1 Gigabyte (maybe even more) 
@@ -11,8 +11,8 @@
 # memory hogging applications before running this memory intensive bash script.
 # First uninstall any conflicting binary packages of maven and java:
 cd
-sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
-sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk*
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common 
+sudo DEBIAN_FRONTEND=noninteractive apt-get purge openjdk* oracle-java9-installer oracle-java9-set-default
 sudo DEBIAN_FRONTEND=noninteractive apt-get purge maven
 sudo rm -rf /etc/java-*-openjdk/*
 sudo rm -rf .m2/
@@ -20,14 +20,15 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutte
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/java
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
+
 # Install tools required to build maven and Apache Spark with sparkR support:
 sudo apt-get build-dep maven
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git build-essential python-protobuf protobuf-compiler
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  maven
-sudo apt-get --yes --force-yes  install  oracle-java9-installer 
-sudo apt-get --yes --force-yes  install  oracle-java9-set-default
+sudo apt-get --yes --force-yes  install  openjdk-8-jdk openjdk-8-jre openjdk-8-jre-headless
+
 # Also remove any previously installed versions of Apache Spark:
 sudo rm -rf spark*
 sudo rm -rf /usr/local/spark*
@@ -62,7 +63,7 @@ sudo apt-get build-dep gradle
 
 # install newest version of Apache Spark:
 cd
-git clone git://github.com/apache/spark.git -b branch-1.5
+git clone git://github.com/apache/spark.git -b branch-1.6
 cd spark
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
 # export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
@@ -110,7 +111,7 @@ cd
 rm -rf SparkR-pkg/
 git clone https://github.com/amplab-extras/SparkR-pkg.git
 cd SparkR-pkg/
-SPARK_VERSION=1.5.0 USE_MAVEN=1 ./install-dev.sh
+SPARK_VERSION=1.6.0 USE_MAVEN=1 ./install-dev.sh
 # ./sparkR examples/pi.R local[2]
 
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
@@ -164,7 +165,7 @@ export SPARK_HOME=~/spark
 #IPYTHON_OPTS="notebook" $SPARK_HOME/bin/pyspark
 cd
 rm -rf sparkling-water*
-git clone https://github.com/h2oai/sparkling-water.git -b rel-1.5
+git clone https://github.com/h2oai/sparkling-water.git -b rel-1.6
 cd sparkling-water
 ./make-dist.sh
 ./gradlew build
