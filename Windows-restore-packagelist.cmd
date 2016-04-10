@@ -95,6 +95,14 @@ wget http://www.confusedbycode.com/curl/%CURLFILENAME%
 
 msiexec /I  %CURLFILENAME% /quiet /passive
 
+REM get sha256sum.exe to check SHA256SUM values of downloaded .iso image files:
+
+mkdir C:\temp
+
+cd c:\temp
+
+wget  http://www.labtestproject.com/files/sha256sum/sha256sum.exe
+
 REM Get R and RStudio
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install r.project"
