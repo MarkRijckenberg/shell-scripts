@@ -2490,6 +2490,8 @@ echo "http://datadaytexas.com/"
 ###############################################################################################
 #     Personal study requirements                                                             #
 ###############################################################################################
+# Job involving Google Analytics platform can help an I.T. freelancer make 800 EUR per day
+echo "https://analyticsacademy.withgoogle.com/"
 # !!!! Data Smart ('light' data analytics using Microsoft Excel)
 echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
 # presentations about data analysis using Excel  ('light' data analytics using Microsoft Excel)
