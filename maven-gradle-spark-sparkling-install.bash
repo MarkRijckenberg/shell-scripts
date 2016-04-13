@@ -25,8 +25,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo apt-get build-dep maven
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git build-essential python-protobuf protobuf-compiler
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  maven
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 pkg-config libssl-dev
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  maven autoconf automake libtool cmake zlib1g-dev   
 sudo apt-get --yes --force-yes  install  openjdk-8-jdk openjdk-8-jre openjdk-8-jre-headless
 sudo apt-get install oracle-java8-installer oracle-java8-set-default
 
@@ -64,7 +64,7 @@ sudo rm -rf /usr/local/spark*
 # Default locale: en_US, platform encoding: UTF-8
 # OS name: "linux", version: "4.3.0-6-generic", arch: "amd64", family: "unix"
 
-# install newest version of Apache Spark:
+# install newest version of Apache Spark from Github.com:
 cd
 git clone git://github.com/apache/spark.git -b branch-1.6
 cd spark
@@ -116,6 +116,17 @@ git clone https://github.com/amplab-extras/SparkR-pkg.git
 cd SparkR-pkg/
 SPARK_VERSION=1.6.0 USE_MAVEN=1 ./install-dev.sh
 # ./sparkR examples/pi.R local[2]
+
+
+# install newest version of Apache Hadoop from Github.com:
+cd
+git clone https://github.com/apache/hadoop
+cd hadoop
+# increase MaxPermSize to avoid out-of-memory errors during compile process:
+# export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
+export MAVEN_OPTS="-Xmx2g -XX:ReservedCodeCacheSize=512m"
+mvn -PsparkR -DskipTests clean package
+
 
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
 # com.databricks:spark-csv
