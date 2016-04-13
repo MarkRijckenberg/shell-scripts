@@ -25,7 +25,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo apt-get build-dep maven
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  r-base-core r-base
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  git build-essential python-protobuf protobuf-compiler
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 pkg-config libssl-dev
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  ant unp python2.7 pkg-config libssl-dev krb5-user
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes  install  maven autoconf automake libtool cmake zlib1g-dev   
 sudo apt-get --yes --force-yes  install  openjdk-8-jdk openjdk-8-jre openjdk-8-jre-headless
 sudo apt-get install oracle-java8-installer oracle-java8-set-default
@@ -126,6 +126,7 @@ cd hadoop
 # export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
 export MAVEN_OPTS="-Xmx2g -XX:ReservedCodeCacheSize=512m"
 # mvn -DskipTests clean package
+klist purge
 mvn clean package
 
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
