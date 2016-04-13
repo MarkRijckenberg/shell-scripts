@@ -125,8 +125,8 @@ cd hadoop
 # increase MaxPermSize to avoid out-of-memory errors during compile process:
 # export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
 export MAVEN_OPTS="-Xmx2g -XX:ReservedCodeCacheSize=512m"
-mvn -PsparkR -DskipTests clean package
-
+# mvn -DskipTests clean package
+mvn clean package
 
 # As an example, load cars.csv from github into Apache Spark using pyspark and databricks package
 # com.databricks:spark-csv
