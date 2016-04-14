@@ -250,8 +250,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 # install newest version of avconf
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libav-tools
 
-# install Enlightenment 19 (E19) GUI/desktop
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install enlightenment
+# install Enlightenment 17 (e17) GUI/desktop
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install e17
 
 ##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
