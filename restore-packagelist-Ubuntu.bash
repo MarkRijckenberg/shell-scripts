@@ -149,6 +149,15 @@ alias wget="wget --no-check-certificate"
 # turn off apport error/crash reporting
 sudo sed -i s/enabled=1/enabled=0/ /etc/default/apport
 
+# lower swappiness value to 10
+# Decrease swap usage to a more reasonable level
+rm /tmp/sysctl.conf
+rm /tmp/sysctl.conf.1
+cp /etc/sysctl.conf /tmp/sysctl.conf
+grep -v vm.swappiness /tmp/sysctl.conf > /tmp/sysctl.conf.1
+echo 'vm.swappiness=10' >> /tmp/sysctl.conf.1
+sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
+
 ##########################################################################################################
 # add base PPA repositories
 ##########################################################################################################
