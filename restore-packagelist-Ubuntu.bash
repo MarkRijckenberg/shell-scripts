@@ -327,7 +327,7 @@ cd $HOME
 #RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  A35743EA6773D225   F9FDA6BED73CDC22 3B4FE6ACC0B21F32  4E940D7FDD7FB8CC  A040830F7FAC5991 16126D3A3E5C1192 
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove --purge beid*
 #sudo touch /etc/apt/sources.list.d/eid.list
 #sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
@@ -1070,11 +1070,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f dist-upgrade
 #sudo dpkg -i RealPlayer11GOLD.deb
 
 # uninstall Java due to all the critical security issues in 2013
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre-headless
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-jre-headless
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre-headless
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-jre-headless
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?
 
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
@@ -1095,7 +1095,7 @@ sudo apt-get purge gcc-4.6 gcc-4.7 gcc-4.7-base
 sudo apt-get purge xfce4-notifyd lxqt-powermanagement
 # end of workaround.
 # April 3, 2016: temporary workaround for issue/problem where pcscd process is using 97% of CPU all the time:
-sudo apt-get purge pcscd
+# sudo apt-get purge pcscd
 # end of workaround.
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
@@ -1563,10 +1563,10 @@ rm ica_*
 rm google*
 
 # uninstall Java due to all the critical security issues in 2013
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-?.?-jre-headless
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove java-common
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove default-jre
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove gcj-?.?-jre-headless
+#sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes remove openjdk-?
 #sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes remove mysql-server-core-?.?
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
