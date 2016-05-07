@@ -44,13 +44,13 @@ REM  the nuget package manager currently has 40065 packages (July 31,2015)
 
 REM Get E-mail clients and utilities
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install thunderbird"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install thunderbird"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install mozbackup"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install mozbackup"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install outlookviewer"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install outlookviewer"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install outlookconverter"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install outlookconverter"
 
 REM Get web browsers
 
@@ -105,9 +105,9 @@ wget  http://www.labtestproject.com/files/sha256sum/sha256sum.exe
 
 REM Get R and RStudio
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install r.project"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install r.project"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Studio"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install R.Studio"
 
 REM show list of locally installed packages - installed using choco package manager for Windows:
 
@@ -124,7 +124,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install FoxitReader"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install belgium-eid-middleware -version 407.7466"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install belgium-eid-middleware -version 407.7466"
 
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install alcohol52-free"
 
@@ -213,6 +213,12 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install ie11"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install adblockplusie"
+
+REM CD Burning software
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install win32diskimager"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install cdburnerxp"
 
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
