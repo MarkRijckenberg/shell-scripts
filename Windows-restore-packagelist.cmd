@@ -60,7 +60,7 @@ REM Get web browsers
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y Opera"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y qupzilla"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y qupzilla"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y flashplayerplugin"
 
@@ -128,7 +128,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y alcohol52-free"
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y daemontoolslite"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y daemontoolslite"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 7zip"
 
@@ -142,7 +142,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y filezilla"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y dropbox"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y dropbox"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y skype"
  
