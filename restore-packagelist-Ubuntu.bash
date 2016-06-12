@@ -204,6 +204,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:heyarje/libav-1
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:niko2040/e19
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:budgie-remix/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/webupd8
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -262,6 +263,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libav-tool
 
 # install Enlightenment 17 (e17) GUI/desktop
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install e17
+
+# Make A Bootable Windows 10 USB Install Stick On Linux using WinUSB Fork from Github
+# source: https://github.com/slacka/WinUSB
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  winusb
 
 ##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
