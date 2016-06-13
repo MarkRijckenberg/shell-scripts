@@ -655,7 +655,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install openshot
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install handbrake 
 
-# install SopCast webTV player
+# install SopCast webTV player = highest quality sport streaming service for Ubuntu
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:lyc256/sopcast-player-ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install sopcast-player 
