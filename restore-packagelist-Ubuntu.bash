@@ -205,6 +205,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:niko2040/e19
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:budgie-remix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/webupd8
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:strukturag/libde265
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -610,6 +611,10 @@ cd $HOME
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc
+
+# install  libde265, which is an open source implementation of the h.265 video codec in order 
+# to support playing HVEC codec using vlc player
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install vlc-plugin-libde265
 
 # install newest version of smtube (Youtube player)
 #sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install libqtgui4 libqt4-xml libqt4-network libqt4-dbus phonon-backend-vlc
