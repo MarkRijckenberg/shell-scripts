@@ -4,6 +4,8 @@ REM Following .cmd Windows command script has been tested and works in Windows 8
 
 REM Please run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
 
+pause
+
 mkdir C:\temp
 
 cd c:\temp
