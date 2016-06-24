@@ -1,4 +1,6 @@
-REM Following .cmd Windows command script has been tested and works in Windows 8.1 Pro 64-bit:
+REM This script installs 62 Windows applications and requires 11 GB of free disk space to install
+
+REM Following .cmd Windows command script has been tested and works in Windows 8.1 or Windows 10 Pro 64-bit:
 
 REM Please run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
 
