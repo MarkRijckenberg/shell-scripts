@@ -431,6 +431,9 @@ sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 
 #sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install dupeguru-me
 
+# install clipgrab, a friendly downloader for YouTube and other sites
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install clipgrab
+
 # Install lxqt desktop environment => merge of lxde and razorqt desktops
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
