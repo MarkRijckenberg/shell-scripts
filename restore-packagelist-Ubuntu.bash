@@ -21,9 +21,10 @@
 # Run this script using this command:   time bash restore-packagelist-Ubuntu.bash
 
 # TYPE: Bash Shell script.
-# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of Lubuntu 16.04 LTS 64-bit
+# PURPOSE: This bash shell script allows you to easily restore packages into a clean install of 
+# neon-useredition-20160630-1018-amd64.iso or Lubuntu 16.04 LTS 64-bit:
 # RECOMMENDS: minimum of 2 gigabytes of RAM memory
-# REQUIRES: Lubuntu 16.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
+# REQUIRES: neon-useredition-20160630-1018-amd64.iso or Lubuntu 16.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
 #           wget, apt-get, unp, wine, biber, biblatex
 # CONFLICTS: with Kubuntu, Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
 # Ubuntu package repositories -> Linux Mint and DistroAstro packages destabilize the GUI interface
