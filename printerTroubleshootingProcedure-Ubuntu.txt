@@ -78,7 +78,7 @@ sudo apt-get update
 sudo apt-get install aptitude
 }}}
 {{{
-sudo aptitude install libcups2-dev cups-driver-gutenprint foomatic-db-compressed-ppds foomatic-db-gutenprint ijsgutenprint-ppds lsb-printing openprinting-ppds printer-driver-all printfilters-ppd avahi-utils libcups2 cups cups-bsd cups-client libcupsimage2-dev libdbus-1-dev build-essential ghostscript openssl libjpeg-dev libsnmp-dev snmp-mibs-downloader libtool wget policykit-1 policykit-1-gnome python3-dbus python3-gi python3-dev python3-notify2 python3-imaging python3-pyqt4 gtk2-engines-pixbuf python3-dbus.mainloop.qt python3-reportlab python3-lxml libsane libsane-dev sane-utils xsane libpython2.7-dev libpython-dev
+sudo aptitude install libcups2-dev foomatic-db-compressed-ppds foomatic-db-gutenprint ijsgutenprint lsb-printing openprinting-ppds printer-driver-all printfilters-ppd avahi-utils libcups2 cups cups-bsd cups-client libcupsimage2-dev libdbus-1-dev build-essential ghostscript openssl libjpeg-dev libsnmp-dev snmp-mibs-downloader libtool wget policykit-1 policykit-1-gnome python3-dbus python3-gi python3-dev python3-notify2 python-imaging python3-pyqt4 gtk2-engines-pixbuf python3-dbus.mainloop.qt python3-reportlab python3-lxml libsane libsane-dev sane-utils xsane libpython2.7-dev libpython-dev
 }}}
 {{{
 apt-cache show libpython2.7-dev ; cat /etc/lsb-release;uname -a;tail -n 10 /var/log/syslog ; lsmod | grep usb ; lsusb ; ls -l /dev/usb/lp* /dev/bus/usb/*/* ; lpinfo -v; sudo usb_printerid /dev/usb/lp0; sudo usb_printerid /dev/usb/lp1; dpkg -l | egrep 'cups|epson|hplip|ppd|printer' ; sudo dpkg --audit
