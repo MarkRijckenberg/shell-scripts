@@ -12,7 +12,7 @@ sudo apt-get remove --purge beid*
 
 sudo touch /etc/apt/sources.list.d/eid.list
 
-sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
+sudo sh -c 'echo "deb http://files.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
 
