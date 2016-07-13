@@ -236,9 +236,9 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" 
 
 # add partner repository for skype software package
 # replace codename (for example: trusty) with right Ubuntu codename
-sudo touch /etc/apt/sources.list.d/partner.list
-sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
-sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
+#sudo touch /etc/apt/sources.list.d/partner.list
+#sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
+#sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
 
 # add repository for Google Chrome browser
 sudo touch /etc/apt/sources.list.d/googlechrome.list
@@ -814,8 +814,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-twe
 # install Skype (Video Conferencing software)
 # better Video Conferencing software: Firefox Hello (using WebRTC)
 cd $HOME
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove skype skype-bin
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install skype
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge skype skype-bin
+#sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install skype
+wget https://go.skype.com/skypeforlinux-64-alpha.deb
+sudo dpkg -i skypeforlinux-64-alpha.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 sni-qt:i386
 
