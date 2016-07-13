@@ -812,7 +812,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install cuttlefish
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install ubuntu-tweak
 
 # install Skype (Video Conferencing software)
-# better alternative: access https://web.skype.com via Mozilla Firefox webbrowser in Ubuntu 16.04 LTS
+# better alternative: access https://web.skype.com via Chromium webbrowser in Ubuntu 16.04 LTS
+# Only Chromium webbrowser seems to be compatible with web.skype.com, not Firefox or Google Chrome
 # better Video Conferencing software: Firefox Hello (using WebRTC)
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge skype skype-bin
