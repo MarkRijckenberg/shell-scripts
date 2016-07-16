@@ -166,6 +166,7 @@ if [ `echo $HOSTNAME|grep ulysses` == ""   ]
 then
      echo "not my PC"
 else
+    sudo rm /tmp/blacklist-elan_i2c.conf
     sudo rm /etc/modprobe.d/blacklist-elan_i2c.conf
     sudo touch /etc/modprobe.d/blacklist-elan_i2c.conf
     echo 'blacklist elan_i2c' >> /tmp/blacklist-elan_i2c.conf
