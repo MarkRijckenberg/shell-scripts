@@ -160,6 +160,19 @@ echo 'vm.swappiness=10' >> /tmp/sysctl.conf.1
 sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
 
 ##########################################################################################################
+# only disable touchpad on certain PC
+##########################################################################################################
+if [ `echo $HOSTNAME|grep ulysses` == ""   ] 
+then
+     echo "not my PC"
+else
+    sudo rm /etc/modprobe.d/blacklist-elan_i2c.conf
+    echo 'blacklist elan_i2c' >> /tmp/blacklist-elan_i2c.conf
+    cp /tmp/blacklist-elan_i2c.conf /etc/modprobe.d/blacklist-elan_i2c.conf
+    echo "customized for specific pc"
+fi
+
+##########################################################################################################
 # add base PPA repositories
 ##########################################################################################################
 
