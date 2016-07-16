@@ -169,7 +169,7 @@ else
     sudo rm /etc/modprobe.d/blacklist-elan_i2c.conf
     sudo touch /etc/modprobe.d/blacklist-elan_i2c.conf
     echo 'blacklist elan_i2c' >> /tmp/blacklist-elan_i2c.conf
-    cp /tmp/blacklist-elan_i2c.conf /etc/modprobe.d/blacklist-elan_i2c.conf
+    sudo cp /tmp/blacklist-elan_i2c.conf /etc/modprobe.d/blacklist-elan_i2c.conf
     echo "customized for specific pc"
 fi
 
