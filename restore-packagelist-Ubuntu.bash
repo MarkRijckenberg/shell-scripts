@@ -2018,6 +2018,8 @@ echo "https://iopscience.iop.org/journals"
 ###############################################################################################
 #     Open access journals                                                                    #
 ###############################################################################################
+# following URL added on July 18, 2016:
+echo "https://doaj.org/"
 # following URL added on February 25, 2014:
 echo "http://www.plos.org/publications/journals/"
 # following URL added on July 10, 2014:
