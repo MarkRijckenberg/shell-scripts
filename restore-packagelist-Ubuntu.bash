@@ -255,6 +255,7 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" 
 #sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
 #sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
 
+
 # add repository for Google Chrome browser
 sudo touch /etc/apt/sources.list.d/googlechrome.list
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/googlechrome.list'
@@ -837,6 +838,7 @@ wget https://go.skype.com/skypeforlinux-64-alpha.deb
 sudo dpkg -i skypeforlinux-64-alpha.deb
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 sni-qt:i386
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install pidgin pidgin-skypeweb purple-skypeweb
 
 # install Y PPA Manager
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
