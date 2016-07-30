@@ -70,7 +70,7 @@ brew install findutils
 brew install fish
 brew install flex
 brew install gawk
-brew install gcc
+brew install gcc # requires Xcode CLT (command line tools) to be installed first
 brew install git
 brew install gnu-sed
 brew install go
