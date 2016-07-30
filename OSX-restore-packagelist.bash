@@ -40,10 +40,10 @@ brew tap samueljohn/python
 brew tap homebrew/science
 
 brew update
-brew install brew-cask
+#brew install brew-cask
 
 brew upgrade
-brew upgrade brew-cask
+#brew upgrade brew-cask
 brew doctor #should say "Your system is ready to brew."
 
 brew cask fetch java
