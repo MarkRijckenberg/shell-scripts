@@ -65,7 +65,7 @@ sudo ln -s /usr/local/bin/bash /bin/bash
 brew install byacc
 brew install cabextract
 brew install coreutils
-brew install emacs --cocoa
+brew install emacs --with-cocoa
 brew install findutils
 brew install fish
 brew install flex
