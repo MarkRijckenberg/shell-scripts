@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 # Prerequisites: Mac OS X El Capitan (version 10.11) or newer, git, Xcode 7.3.1 or newer (=Apple CLI Dev tools)
-# Minimum free disk space to install Mac OS X and the applications below: 26 GB
+# Minimum free disk space to install Mac OS X and the applications below: 30 GB
 
 # 1) minimum version of Mac OS X required to install latest Xcode: https://en.wikipedia.org/wiki/Xcode
 # 2) install git using this FAQ:
