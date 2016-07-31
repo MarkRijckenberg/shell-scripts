@@ -25,7 +25,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Make sure ruby binary can be found in Mac OS X 10.10 or newer:
 cd /System/Library/Frameworks/Ruby.framework/Versions
-sudo ln -s Current 1.8
+# sudo ln -s Current 1.8
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
