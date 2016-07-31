@@ -147,6 +147,7 @@ brew cask install paintbrush
 #brew cask install quicksilver
 brew cask fetch r
 brew cask install r
+brew cask install rstudio
 #brew cask install second-life-viewer
 #brew cask install sketchup
 brew cask install skype
