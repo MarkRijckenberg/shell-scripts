@@ -173,7 +173,7 @@ brew cask cleanup
 
 # Install Perlbrew
 
-sudo cpan App::perlbrew
+cpan App::perlbrew
 perlbrew init
 source $HOME/perl5/perlbrew/etc/bashrc
 perlbrew install perl-stable
