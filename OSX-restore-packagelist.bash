@@ -173,11 +173,10 @@ brew cask cleanup
 
 # Install Perlbrew
 curl -L https://install.perlbrew.pl | bash
-cpan App::perlbrew
-curl -L https://install.perlbrew.pl | bash
 # add following source line into ~/.bash_profile file:
 source $HOME/perl5/perlbrew/etc/bashrc
 # open new Terminal and run following commands:
+cpan App::perlbrew
 perlbrew init
 perlbrew install perl-stable
 perlbrew install-cpanm
