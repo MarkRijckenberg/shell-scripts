@@ -214,7 +214,7 @@ pip install --upgrade pep8
 
 brew install numpy
 brew install scipy
-brew install matplotlib
+brew install homebrew/python/matplotlib
 
 #Make Fish your default shell:
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
