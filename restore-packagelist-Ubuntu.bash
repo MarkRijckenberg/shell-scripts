@@ -621,7 +621,8 @@ sudo gem install bundler   # <- no "sudo" if using rvm
 bundle                # <- no "sudo" if using rvm
 ln -s misc etc
 sudo ruby misc/command/copy_xiki_command_to.rb /usr/bin/xiki
-xiki web/start
+~/xiki/bin/xsh
+# xiki web/start
 # then navigate to http://localhost:8161/dbs
 # to view the locally installed mysql databases, tables and fields
 cd $HOME
