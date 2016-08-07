@@ -627,7 +627,6 @@ sudo ruby misc/command/copy_xiki_command_to.rb /usr/bin/xiki
 # to view the locally installed mysql databases, tables and fields
 cd $HOME
 
-
 # install Google Music Manager - sync local mp3s in Ubuntu with ios or Android device
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
