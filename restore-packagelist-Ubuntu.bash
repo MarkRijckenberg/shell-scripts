@@ -608,9 +608,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install shutter
 
 cd $HOME
 sudo rm -rf xiki
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  ruby2.3 ruby2.3-dev
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  ruby ruby2.3 ruby2.3-dev
 git clone git://github.com/trogdoro/xiki.git
 cd xiki
+sudo update-ca-certificates
+sudo gem sources -r https://rubygems.org/
+sudo gem sources -a http://rubygems.org/
+sudo gem update --system
+sudo gem sources -r http://rubygems.org/
+sudo gem sources -a https://rubygems.org/
 sudo gem install bundler   # <- no "sudo" if using rvm
 bundle                # <- no "sudo" if using rvm
 sudo ruby etc/command/copy_xiki_command_to.rb /usr/bin/xiki
