@@ -2036,7 +2036,7 @@ echo "http://www.springeropen.com/journals"
 # following URL added on July 13, 2014:
 echo "http://www.gigasciencejournal.com/"
 # following URL added on August 18, 2016:
-echo "https://www.nihms.nih.gov/db/sub.cgi"
+echo "http://preview.ncbi.nlm.nih.gov/pmc/?term=%22nasa+funded%22%5BFilter%5D"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
