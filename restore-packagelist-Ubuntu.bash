@@ -2035,6 +2035,8 @@ echo "http://www.plos.org/publications/journals/"
 echo "http://www.springeropen.com/journals"
 # following URL added on July 13, 2014:
 echo "http://www.gigasciencejournal.com/"
+# following URL added on August 18, 2016:
+echo "https://www.nihms.nih.gov/db/sub.cgi"
 
 ###############################################################################################
 #     Anti-NSA measures - PRISM Break anonymizing websites                                                        #
