@@ -328,6 +328,7 @@ mkdir -p foo/usr/share/applications
 printf '[Desktop Entry]\nName=Citrix ICA client\nComment="Launch Citrix applications from .ica files"\nCategories=Network;\nExec=/opt/Citrix/ICAClient/wfica\nTerminal=false\nType=Application\nNoDisplay=true\nMimeType=application/x-ica' > foo/usr/share/applications/wfica.desktop
 dpkg -b foo icaclient_amd64_fixed_for_14.04_LTS.deb
 sudo dpkg -i icaclient_amd64_fixed_for_14.04_LTS.deb
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -f
 sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
 sudo c_rehash /opt/Citrix/ICAClient/keystore/cacerts/
 xdg-mime default wfica.desktop application/x-ica
