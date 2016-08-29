@@ -770,18 +770,18 @@ cd
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes update
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install checkinstall build-essential cmake rtmpdump
 # sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes purge curl
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep curl
-sudo rm -rf curl curl-build
-mkdir curl-build
-git clone https://github.com/bagder/curl.git
-cd curl
-sudo ./buildconf
-cd lib
-LIB=`pwd`
-cd ..
-sudo ./configure --without-librtmp --enable-shared=no --libdir=`echo $LIB`
-sudo make clean
-sudo make -I `echo $LIB`
+# sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes build-dep curl
+# sudo rm -rf curl curl-build
+# mkdir curl-build
+# git clone https://github.com/bagder/curl.git
+# cd curl
+# sudo ./buildconf
+# cd lib
+# LIB=`pwd`
+# cd ..
+# sudo ./configure --without-librtmp --enable-shared=no --libdir=`echo $LIB`
+# sudo make clean
+# sudo make -I `echo $LIB`
 # sudo make check
 # result of sudo make check should be as follows:
 #============================================================================
@@ -795,10 +795,10 @@ sudo make -I `echo $LIB`
 # XPASS: 0
 # ERROR: 0
 #============================================================================
-sudo checkinstall
+# sudo checkinstall
 # set checkinstall curl package version to 7.45 (most current version at this moment)
 # before proceeding with the creation of the checkinstall .deb package
-apt-cache show curl
+# apt-cache show curl
 # output of 'apt-cache show curl' command should look like this:
 #Package: curl
 #Status: install ok installed
@@ -811,7 +811,7 @@ apt-cache show curl
 #Provides: curl
 #Description: Package created with checkinstall 1.6.2
 #Description-md5: 556b8d22567101c7733f37ce6557412e
-curl --version
+# curl --version
 # result of curl --version should be as follows:
 # !!!! Make sure that curl and libcurl are both the newest version, in this case: version 7.45.0-DEV !!!!!!!!
 #curl 7.45.0-DEV (i686-pc-linux-gnu) libcurl/7.45.0-DEV OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28
