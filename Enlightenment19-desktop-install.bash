@@ -70,6 +70,8 @@
 #~ 2015-04-20 add comment.
 #~ 2015-04-21 more comments.
 #~ 2014-04-22 add libxkbfile-dev and linux-tools-common to dependencies.
+sudo apt-get update
+sudo apt-get install zenity
 
 trap '{ printf "\n$bdr%s $off%s\n\n" " KEYBOARD INTERRUPT."; exit 130; }' INT
 
