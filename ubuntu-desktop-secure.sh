@@ -1,7 +1,8 @@
 #!/bin/sh
 #
 # Ubuntu Server Secure script v0.1 alpha by The Fan Club - May 2012
-# 
+# Extra instructions about using this script - September 7, 2016: 
+# http://www.ostechnix.com/ubuntu-server-secure-script-secure-harden-ubuntu/
 # - Zenity GUI installer version
 #
 echo
