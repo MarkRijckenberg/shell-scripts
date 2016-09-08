@@ -59,6 +59,7 @@
 PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin
 #Prerequisites: USB drives SAMSUNG and IOMEGA need to be mounted correctly in order for this script to work correctly!
 
+LogDay=`date -I`
 MACHINE_TYPE=`uname -m`
 
 # define Astronomy filename variables
@@ -126,7 +127,7 @@ sudo rm /etc/apt/trusted.gpg.d/*
 #sudo dpkg --set-selections < Package.list
 #sudo dselect
 
-#sudo cp /etc/apt/sources.list  /etc/apt/sources.list.backup
+#sudo cp /etc/apt/sources.list  /etc/apt/sources.list.$LogDay.backup
 #sudo cp sources.list.12.04 /etc/apt/sources.list
 
 ###############################################################################################
@@ -134,8 +135,8 @@ sudo rm /etc/apt/trusted.gpg.d/*
 ###############################################################################################
 
 # delete old custom aliases in ~/.bashrc file
-egrep -v 'alias\ apt|alias\ d-u|wget'  ~/.bashrc > ~/.bashrcBACKUP
-cp ~/.bashrcBACKUP ~/.bashrc
+egrep -v 'alias\ apt|alias\ d-u|wget'  ~/.bashrc > ~/.bashrc.$LogDay.backup
+cp ~/.bashrc.$LogDay.backup ~/.bashrc
 
 # define custom aliases in ~/.bashrc file
 echo "alias apti='sudo aptitude update && sudo aptitude install '" >> ~/.bashrc
@@ -367,7 +368,7 @@ rm -rf extensions/*
 rm addons*
 sudo rm -rf /usr/lib/firefox/browser/extensions*
 
-cp prefs.js prefs.js_backup_`date -I`
+cp prefs.js prefs.js.$LogDay.backup
 grep -v security.ssl prefs.js > prefs.js.nossl.1
 grep -v security.tls.version.min prefs.js.nossl.1 > prefs.js.nossl.2
 grep -v extensions.enabled prefs.js.nossl.2 > prefs.js.nossl 
@@ -756,8 +757,8 @@ sudo make
 # sudo make test
 sudo checkinstall
 sudo rm -rf ~/openssl
-sudo mv /usr/bin/c_rehash /usr/bin/c_rehashBACKUP
-sudo mv /usr/bin/openssl /usr/bin/opensslBACKUP
+sudo mv /usr/bin/c_rehash /usr/bin/c_rehash.$LogDay.backup
+sudo mv /usr/bin/openssl /usr/bin/openssl.$LogDay.backup
 sudo ln -s /usr/local/bin/c_rehash /usr/bin/c_rehash
 sudo ln -s /usr/local/bin/openssl /usr/bin/openssl
 openssl version
@@ -1215,14 +1216,14 @@ sudo python bleachbit.py # start BleachBit GUI
 #############################################################################################
 cd 
 sudo rm -rf hosts
-sudo cp /etc/hosts /etc/hostsBACKUP
+sudo cp /etc/hosts /etc/hosts.$LogDay.backup
 git clone https://github.com/StevenBlack/hosts.git
 cd hosts
 sudo python3 updateHostsFile.py -a -r
 sudo chmod 444 /etc/hosts
 # copy new hosts file to Windows partition as well:
-sudo mv /media/windows/Windows/System32/Drivers/etc/hosts  /media/windows/Windows/System32/Drivers/etc/hostsBACKUP
-sudo mv /media/windows/Windows/System32/drivers/etc/hosts  /media/windows/Windows/System32/drivers/etc/hostsBACKUP
+sudo mv /media/windows/Windows/System32/Drivers/etc/hosts  /media/windows/Windows/System32/Drivers/etc/hosts.$LogDay.backup
+sudo mv /media/windows/Windows/System32/drivers/etc/hosts  /media/windows/Windows/System32/drivers/etc/hosts.$LogDay.backup
 sudo cp  /etc/hosts  /media/windows/Windows/System32/Drivers/etc/hosts
 sudo cp  /etc/hosts  /media/windows/Windows/System32/drivers/etc/hosts
 
@@ -1284,8 +1285,8 @@ chmod +x ~/.oh-my-fish/bin/install
 ~/.oh-my-fish/bin/install
 
 # delete old custom aliases in ~/.config/fish/config.fish file
-egrep -v 'alias\ apt|alias\ d-u'  ~/.config/fish/config.fish > ~/.config/fish/config.fishBACKUP
-cp ~/.config/fish/config.fishBACKUP ~/.config/fish/config.fish
+egrep -v 'alias\ apt|alias\ d-u'  ~/.config/fish/config.fish > ~/.config/fish/config.fish.$LogDay.backup
+cp ~/.config/fish/config.fish.$LogDay.backup ~/.config/fish/config.fish
 
 # define custom aliases in ~/.config/fish/config.fish file
 echo "alias apti='sudo aptitude update ; sudo aptitude install '" >> ~/.config/fish/config.fish
