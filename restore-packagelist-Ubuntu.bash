@@ -274,7 +274,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get update
 # commented out following line, because it will break bluetooth support in Lubuntu/Xubuntu 14.04 LTS 64-bit 
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
+#sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge blueman
 
 # install newest version of avconf
@@ -1125,7 +1125,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes -f dist-upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw mono-runtime
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge mono-runtime
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge libmono-2.0-dev
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge  xscreensaver  xscreensaver-data gnome-screensaver
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge evolution-data-server-common samba snapd
@@ -1615,7 +1615,7 @@ rm google*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
 # sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge pulseaudio*
 sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge arno-iptables-firewall
-sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw 
+# sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  purge ufw 
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 #sudo rm /etc/apt/sources.list.d/*
