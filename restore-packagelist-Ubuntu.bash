@@ -1214,6 +1214,7 @@ sudo python bleachbit.py # start BleachBit GUI
 #############################################################################################
 # install new secure /etc/hosts file to block malware websites
 #############################################################################################
+LogDay=`date -I`
 cd 
 sudo rm -rf hosts
 sudo cp /etc/hosts /etc/hosts.$LogDay.backup
@@ -1222,9 +1223,7 @@ cd hosts
 sudo python3 updateHostsFile.py -a -r
 sudo chmod 444 /etc/hosts
 # copy new hosts file to Windows partition as well:
-sudo mv /media/windows/Windows/System32/Drivers/etc/hosts  /media/windows/Windows/System32/Drivers/etc/hosts.$LogDay.backup
 sudo mv /media/windows/Windows/System32/drivers/etc/hosts  /media/windows/Windows/System32/drivers/etc/hosts.$LogDay.backup
-sudo cp  /etc/hosts  /media/windows/Windows/System32/Drivers/etc/hosts
 sudo cp  /etc/hosts  /media/windows/Windows/System32/drivers/etc/hosts
 
 #############################################################################################
