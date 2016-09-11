@@ -1225,6 +1225,8 @@ sudo chmod 444 /etc/hosts
 # copy new hosts file to Windows partition as well:
 sudo mv /media/windows/Windows/System32/drivers/etc/hosts  /media/windows/Windows/System32/drivers/etc/hosts.$LogDay.backup
 sudo cp  /etc/hosts  /media/windows/Windows/System32/drivers/etc/hosts
+# convert line breaks from UNIX to DOS format:
+sudo unix2dos -o /media/windows/Windows/System32/drivers/etc/hosts
 
 #############################################################################################
 # install Soundcloud Music Playlist Downloader
