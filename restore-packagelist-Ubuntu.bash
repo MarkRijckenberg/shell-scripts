@@ -725,7 +725,9 @@ git clone https://github.com/Sude-/lgogdownloader.git
 cd lgogdownloader
 #sudo make release
 #sudo make install
+sudo make clean
 sudo cmake .
+sudo make
 sudo checkinstall
 
 # Added on January 16, 2016
