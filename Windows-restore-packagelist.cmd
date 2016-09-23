@@ -77,6 +77,8 @@ REM Get Internet download utilities:
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y Wget"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y git"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y hostsman"
  
 REM ############################################################################################### 
 REM Close .cmd command line window and open a new .cmd window to run the next commands.
