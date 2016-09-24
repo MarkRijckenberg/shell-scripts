@@ -8,3 +8,4 @@ for keyfile in ~/.ssh/id_*; do ssh-keygen -l -f "${keyfile}"; done | uniq > ~/ss
 #Ed25519: wow cool, but are you brute-force safe?
 rm -rf ~/.ssh
 ssh-keygen -o -a 100 -t ed25519
+for keyfile in ~/.ssh/id_*; do ssh-keygen -l -f "${keyfile}"; done | uniq
