@@ -1,4 +1,5 @@
 #!/bin/bash
+cd
 for keyfile in ~/.ssh/id_*; do ssh-keygen -l -f "${keyfile}"; done | uniq > ~/ssh-key-security-status
 # DSA or RSA 1024 bits: red flag. Unsafe.
 #RSA 2048: yellow recommended to change
