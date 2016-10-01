@@ -8,7 +8,7 @@ sudo rm /etc/apt/trusted.gpg.d/*
 sudo apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
 sudo rm -rf /etc/java-*-openjdk/*
 sudo apt-get update
-sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk git
+sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk git cmake pkg-config
 # Install cuda 7.5 first:
 cd /tmp
 rm -rf cuda*
@@ -18,7 +18,7 @@ VERSION=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8|cut -d"_" -f3|cut -d"
 wget `echo $URL`
 sudo dpkg -i --force-all cuda*.deb
 sudo aptitude update
-sudo aptitude install cuda nvidia-cuda-dev libopencv-core-dev 
+sudo aptitude install cuda nvidia-cuda-dev libopencv-core-dev checkinstall
 sudo aptitude install libopencv-flann-dev libopencv-imgproc-dev libopencv-dev
 export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-`echo $VERSION`/lib64:$LD_LIBRARY_PATH
@@ -63,13 +63,14 @@ truecrack
 
 sudo apt-get install  build-essential libtiff4-dev libfftw3-dev libX11-dev libxt-dev libxaw7-dev phylip
 sudo apt-get install  python-bs4 python-networkx python-skimage python-sklearn libpng-dev libfreetype6-dev
-sudo apt-get install  python-matplotlib python-numpy python-pandas
-sudo apt-get install  python3-matplotlib python3-numpy python3-pandas
-sudo apt-get install  python-jsonschema openbox python-scipy pandoc
+sudo apt-get install  python-matplotlib python-numpy python-pandas libprotobuf-dev libleveldb-dev libsnappy-dev
+sudo apt-get install  python3-matplotlib python3-numpy python3-pandas libhdf5-serial-dev protobuf-compiler
+sudo apt-get install  python-jsonschema openbox python-scipy pandoc libatlas-base-dev libboost-all-dev
+sudo apt-get install  libgflags-dev libgoogle-glog-dev liblmdb-dev python3-dev python3-scipy kate
 # use pip command from python-pip package to install pip packages for python 2.7
 # use pip3 command from python3-pip package to install pip packages for python3+
 sudo apt-get install  spyder unp python-pip python3-pip build-essential python-dev swig
-sudo apt-get install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap
+sudo apt-get install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap  libopencv-dev
 
 # install newest version of ipython notebook:
 sudo apt-get remove  ipython ipython-notebook python-tornado
