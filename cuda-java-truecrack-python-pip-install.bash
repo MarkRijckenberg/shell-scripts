@@ -9,7 +9,7 @@ sudo apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-commo
 sudo rm -rf /etc/java-*-openjdk/*
 sudo apt-get update
 sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk git cmake pkg-config
-# Install cuda 7.5 first:
+# Install cuda 8 first:
 cd /tmp
 rm -rf cuda*
 #wget --no-check-certificate   https://developer.nvidia.com/cuda-downloads
@@ -19,7 +19,7 @@ rm -rf cuda*
 wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local_8.0.44-1_amd64-deb
 sudo dpkg -i --force-all cuda*deb
 sudo aptitude update
-sudo aptitude install cuda nvidia-cuda-dev libopencv-core-dev checkinstall
+sudo aptitude install libopencv-core-dev checkinstall
 sudo aptitude install libopencv-flann-dev libopencv-imgproc-dev libopencv-dev
 export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-`echo $VERSION`/lib64:$LD_LIBRARY_PATH
@@ -86,7 +86,7 @@ sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
 
 #source: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation
 # Ubuntu/Linux 64-bit, CPU only:
-sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
+#######sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
 # Ubuntu/Linux 64-bit, GPU enabled:
 # sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
 
