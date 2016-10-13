@@ -12,6 +12,6 @@ After installing Miniconda3, run the following commands on the command line:
 
 conda update conda
 
-conda install numpy matplotlib scipy pandas
+conda install numpy matplotlib scipy pandas spyder
 
 python
