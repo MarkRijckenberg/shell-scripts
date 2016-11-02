@@ -1654,6 +1654,20 @@ wget http://aladin.u-strasbg.fr/java/download/Aladin.tar
 unp Aladin.tar
 # java -jar ~/Aladin/Aladin.jar
 
+# 20161102: check this section about nightfall for coding errors
+# Compile and install nightfall - program that can handle calculations involving binary star systems.
+cd
+rm -rf nightfall
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libgtk2.0-0 libgtk2.0-dev gnuplot
+sudo DEBIAN_FRONTEND=noninteractive apt-get  --yes --force-yes  install libgl1-mesa-dev freeglut3-dev libgtkgl2.0-dev libjpeg62-dev
+wget http://www.la-samhna.de/nightfall/nightfall-1.88.tar.gz
+unp nightfall*.tar.gz
+cd nightfall
+sudo ./configure --enable-openmp
+sudo make
+sudo checkinstall
+# nightfall -U
+# The -U option is necessary to force the GUI to be used interactively.
 
 
 # download and decompress Nightshade 
