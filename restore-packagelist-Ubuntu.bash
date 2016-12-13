@@ -1187,11 +1187,15 @@ sh yEd-`echo $YEDVERSION`_32-bit_setup.sh
 fi
 
 
-# install Kruidvat fotoservice software
+# install Pixum fotoservice software (cheaper than Albelli and Kruidvat - December 2016)
 cd $HOME
-rm *Kruidvat*
-wget http://dls.photoprintit.com/download/Data/1287/hps/setup_Kruidvat_fotoservice.tgz
-tar -zxvf setup_Kruidvat_fotoservice.tgz 
+rm Kruidvat*
+rm Pixum*
+rm install.pl
+rm linux
+cd /tmp
+wget https://dls.photoprintit.com/api/getClient/12455/hps/c303030303030303030303030303030303030303030303030343936323539307/linux 
+tar -zxvf linux
 ./install.pl 
 
 #############################################################################################
