@@ -1189,8 +1189,8 @@ fi
 
 # install Pixum fotoservice software (cheaper than Albelli and Kruidvat - December 2016)
 cd $HOME
-rm Kruidvat*
-rm Pixum*
+rm -rf Kruidvat*
+rm -rf Pixum*
 rm install.pl
 rm linux
 cd /tmp
