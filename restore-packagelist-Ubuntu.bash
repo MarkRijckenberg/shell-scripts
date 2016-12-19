@@ -1277,6 +1277,11 @@ apt-cache show wget
 # Description-md5: 556b8d22567101c7733f37ce6557412e
 
 #############################################################################################
+#   install gdm3 login manager to avoid problem getting to login screen in Ubuntu 16.04 LTS
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  gdm gdm3
+#############################################################################################
+
+#############################################################################################
 # Fish shell installation
 #############################################################################################
 # set fish shell as default shell
