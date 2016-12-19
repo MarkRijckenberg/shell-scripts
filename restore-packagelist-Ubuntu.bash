@@ -1156,7 +1156,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get clean
 # multisystem seems to work better than YUMI, because multisystem can successfully boot
 # Knoppix (4GB edition) but YUMI could not, when having multiple iso images on the same USB stick
 cd /tmp
-wget http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
+wget --no-check-certificate http://liveusb.info/multisystem/install-depot-multisystem.sh.tar.bz2
 unp install-depot-multisystem.sh.tar.bz2
 ./install-depot-multisystem.sh
 rm *.sh
@@ -1194,7 +1194,7 @@ rm -rf Pixum*
 rm install.pl
 rm linux
 cd /tmp
-wget https://dls.photoprintit.com/api/getClient/12455/hps/c303030303030303030303030303030303030303030303030343936323539307/linux 
+wget --no-check-certificate https://dls.photoprintit.com/api/getClient/12455/hps/c303030303030303030303030303030303030303030303030343936323539307/linux 
 tar -zxvf linux
 ./install.pl 
 
@@ -1516,7 +1516,7 @@ fi
 
 
 ###############################################################################################
-#     DOWNLOAD TRIATLAS PDF FILES BEFORE ANY OTHER PDF FILES                                  #
+#     DOWNLOAD STAR ATLAS PDF FILES BEFORE ANY OTHER PDF FILES                                  #
 ###############################################################################################
 # clean up current directory
 echo "Performing file cleanup"
@@ -1537,66 +1537,71 @@ rm ica_*
 rm google*
 
 
-#download Triatlas charts in PDF format from http://www.uv.es/jrtorres/triatlas.html
-echo "Downloading Triatlas charts (from jrtorres) in A4 format for Europe"
-wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
-wget http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
-wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
-wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
-wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
-wget http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
-wget http://www.uv.es/jrtorres/section_c/C01_001-030.pdf
-wget http://www.uv.es/jrtorres/section_c/C02_031-060.pdf
-wget http://www.uv.es/jrtorres/section_c/C03_061-090.pdf
-wget http://www.uv.es/jrtorres/section_c/C04_091-120.pdf
-wget http://www.uv.es/jrtorres/section_c/C05_121-150.pdf
-wget http://www.uv.es/jrtorres/section_c/C06_151-180.pdf
-wget http://www.uv.es/jrtorres/section_c/C07_181-210.pdf
-wget http://www.uv.es/jrtorres/section_c/C08_211-240.pdf
-wget http://www.uv.es/jrtorres/section_c/C09_241-270.pdf
-wget http://www.uv.es/jrtorres/section_c/C10_271-300.pdf
-wget http://www.uv.es/jrtorres/section_c/C11_301-330.pdf
-wget http://www.uv.es/jrtorres/section_c/C12_331-360.pdf
-wget http://www.uv.es/jrtorres/section_c/C13_361-390.pdf
-wget http://www.uv.es/jrtorres/section_c/C14_391-420.pdf
-wget http://www.uv.es/jrtorres/section_c/C15_421-450.pdf
-wget http://www.uv.es/jrtorres/section_c/C16_451-480.pdf
-wget http://www.uv.es/jrtorres/section_c/C17_481-510.pdf
-wget http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
-wget http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
-wget http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
-mv *.pdf triatlas
+#OBSOLETE: download Triatlas charts in PDF format from http://www.uv.es/jrtorres/triatlas.html
+#OBSOLETE:echo "Downloading Triatlas charts (from jrtorres) in A4 format for Europe"
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C01_001-030.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C02_031-060.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C03_061-090.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C04_091-120.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C05_121-150.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C06_151-180.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C07_181-210.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C08_211-240.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C09_241-270.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C10_271-300.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C11_301-330.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C12_331-360.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C13_361-390.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C14_391-420.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C15_421-450.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C16_451-480.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C17_481-510.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
+#OBSOLETE:wget http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
+mkdir $HOME/astronomy
+cd $HOME/astronomy
+
+# Get Deep-Sky Hunter Star Atlas (2013)
+# Source: http://www.deepskywatch.com/deep-sky-hunter-atlas.html
+wget --no-check-certificate http://www.deepskywatch.com/files/deepsky-atlas/Deep-Sky-Hunter-atlas-full.pdf
 
 # download SAO/NASA ADS Help Pages
 echo "Downloading SAO/NASA ADS Help Pages"
-wget http://adsabs.harvard.edu/abs_doc/help_pages/adshelp.pdf
+wget --no-check-certificate http://adsabs.harvard.edu/abs_doc/help_pages/adshelp.pdf
 mv adshelp.pdf sao_nasa_ads_help_pages_July_9_2012.pdf
 
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
-wget http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
+wget --no-check-certificate  http://ctan.mackichan.com/macros/latex/contrib/aastex/docs/aasguide.pdf
 mv aasguide.pdf American_Astronomical_Society_guidelines.pdf
 
 # download The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii
 echo "Downloading The Not So Short Introduction to LaTeX2e by Tobias Oetiker et alii"
-wget http://tobi.oetiker.ch/lshort/lshort.pdf
+wget --no-check-certificate  http://tobi.oetiker.ch/lshort/lshort.pdf
 mv lshort.pdf latex2-not-so-short-introduction.pdf
 
-wget http://kelder.zeus.ugent.be/~gaspard/latex/latex-cursus.pdf
+wget --no-check-certificate  http://kelder.zeus.ugent.be/~gaspard/latex/latex-cursus.pdf
 
-wget http://latex-project.org/guides/lc2fr-apb.pdf
-mv lc2fr-apb.pdf‎detecting-solving-latex-issues.pdf
+wget --no-check-certificate  http://latex-project.org/guides/lc2fr-apb.pdf
+mv lc2fr-apb.pdf detecting-solving-latex-issues.pdf
 
 echo "Downloading Springer monograph template"
-wget http://www.springer.com/cda/content/document/cda_downloaddocument/manuscript-guidelines-1.0.pdf
+wget --no-check-certificate  http://www.springer.com/cda/content/document/cda_downloaddocument/manuscript-guidelines-1.0.pdf
 mv manuscript-guidelines-1.0.pdf Springer-book-manuscript-guidelines-1.0.pdf
-wget http://www.springer.com/cda/content/document/cda_downloaddocument/Key_Style_Points_1.0.pdf
+wget --no-check-certificate  http://www.springer.com/cda/content/document/cda_downloaddocument/Key_Style_Points_1.0.pdf
 mv Key_Style_Points_1.0.pdf Springer-book-Key_Style_Points_1.0.pdf
-wget http://www.springer.com/cda/content/document/cda_downloaddocument/svmono.zip
+wget --no-check-certificate  http://www.springer.com/cda/content/document/cda_downloaddocument/svmono.zip
 mv svmono.zip Springer-svmono-monograph-Latex-template.zip
 
 echo "Downloading awesome professional looking Legrand Orange Book template"
-wget http://www.latextemplates.com/templates/books/2/book_2.zip
+wget --no-check-certificate  http://www.latextemplates.com/templates/books/2/book_2.zip
 mv book_2.zip Legrand_Orange_Book_template_book_2_excellent.zip
 
 # clean up current directory
@@ -1651,15 +1656,15 @@ cd $HOME
 rm *.tgz
 rm DU*
 rm download-files
-wget http://www.amnh.org/our-research/hayden-planetarium/hayden-planetarium-promos/download-files
-wget `cat download-files |grep linux|grep undle|cut -d"\"" -f2`
+wget --no-check-certificate http://www.amnh.org/our-research/hayden-planetarium/hayden-planetarium-promos/download-files
+wget --no-check-certificate `cat download-files |grep linux|grep undle|cut -d"\"" -f2`
 FILENAME=`cat download-files |grep linux|grep undle|cut -d"\"" -f2|cut -d"/" -f7`
 unp $FILENAME
 
 # install Aladin v8.040 (java program)
 cd
 rm -rf Aladin
-wget http://aladin.u-strasbg.fr/java/download/Aladin.tar
+wget --no-check-certificate http://aladin.u-strasbg.fr/java/download/Aladin.tar
 unp Aladin.tar
 # java -jar ~/Aladin/Aladin.jar
 
