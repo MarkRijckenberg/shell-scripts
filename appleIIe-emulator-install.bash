@@ -7,7 +7,8 @@ cd
 sudo rm -rf apple2
 sudo rm -rf linapple
 # git clone https://github.com/mauiaaron/apple2.git
-git clone https://github.com/timob/linapple.git
+# git clone https://github.com/timob/linapple.git
+git clone https://github.com/LasDesu/linapple.git
 mkdir ~/linapple/disks
 cd ~/linapple/src
 sudo make
