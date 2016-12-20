@@ -6,12 +6,6 @@ cd
 sudo rm -rf apple2
 git clone https://github.com/mauiaaron/apple2.git
 cd ~/apple2
-cp Makefile.am Makefile
-cp configure.ac configure
-./reconf.sh
-sudo ./configure
-sudo make
-sudo checkinstall
 # Get ProDOS User Guide
 wget --no-check-certificate  http://www.applelogic.org/files/PRODOSUM.pdf
 # Get Apple IIe ROM
@@ -27,3 +21,11 @@ wget --no-check-certificate  http://www.virtualapple.org/apple2/Galaxian.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
 unp *.zip
 mv *.dsk ~/apple2/disks/
+sudo make clean
+cp Makefile.am Makefile
+cp configure.ac configure
+./reconf.sh
+sudo ./configure
+sudo make
+sudo checkinstall
+
