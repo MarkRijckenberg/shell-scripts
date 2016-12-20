@@ -21,6 +21,7 @@ wget --no-check-certificate  ftp://ftp.apple.asimov.net/pub/apple_II/emulators/r
 # get newest ProDOS 2.4.1 operating system for Apple IIe (release date: September 2016!)
 wget --no-check-certificate https://archive.org/download/ProDOS_2_4_1/ProDOS_2_4_1.dsk
 # get Apple II games
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Breakout_Chipout_Hi-Res_Breakout.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Galaxian.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
 unp *.zip
