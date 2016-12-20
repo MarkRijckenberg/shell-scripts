@@ -1,11 +1,16 @@
 #!/bin/bash
 # Apple IIe emulator
 sudo apt-get update
-sudo apt-get install git unp build-essential checkinstall libopenal-dev freeglut3-dev gawk
+sudo apt-get install git unp build-essential checkinstall libopenal-dev 
+sudo apt-get install freeglut3-dev gawk libsdl1.2-dev libcurl4-openssl-dev zlib1g-dev libzip-dev
 cd
 sudo rm -rf apple2
-git clone https://github.com/mauiaaron/apple2.git
-cd ~/apple2
+sudo rm -rf linapple
+# git clone https://github.com/mauiaaron/apple2.git
+git clone https://github.com/timob/linapple.git
+cd ~/linapple/src
+sudo make
+cd ..
 # Get ProDOS User Guide
 wget --no-check-certificate  http://www.applelogic.org/files/PRODOSUM.pdf
 # Get Apple IIe ROM
