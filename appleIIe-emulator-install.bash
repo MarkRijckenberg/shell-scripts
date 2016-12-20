@@ -1,13 +1,14 @@
 #!/bin/bash
 # Apple IIe emulator
 sudo apt-get update
-sudo apt-get install git unp build-essential checkinstall
+sudo apt-get install git unp build-essential checkinstall libopenal-dev freeglut3-dev gawk
 cd
 sudo rm -rf apple2
 git clone https://github.com/mauiaaron/apple2.git
 cd ~/apple2
 cp Makefile.am Makefile
 cp configure.ac configure
+./reconf.sh
 sudo ./configure
 sudo make
 sudo checkinstall
