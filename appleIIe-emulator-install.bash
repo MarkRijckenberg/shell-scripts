@@ -26,5 +26,6 @@ wget --no-check-certificate https://archive.org/download/ProDOS_2_4_1/ProDOS_2_4
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Breakout_Chipout_Hi-Res_Breakout.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Galaxian.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Karateka.zip
 unp *.zip
 mv *.dsk ~/linapple/disks/
