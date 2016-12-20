@@ -22,5 +22,6 @@ wget --no-check-certificate  ftp://ftp.apple.asimov.net/pub/apple_II/emulators/r
 wget --no-check-certificate https://archive.org/download/ProDOS_2_4_1/ProDOS_2_4_1.dsk
 # get Apple II games
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Galaxian.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
 unp *.zip
 mv *.dsk ~/apple2/disks/
