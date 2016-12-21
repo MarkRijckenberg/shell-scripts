@@ -31,4 +31,4 @@ unp *.zip
 mv *.dsk ~/linapple/disks/
 ~/linapple/linapple
 # Press F3 in linapple and navigate to ~/linapple/disks and select the game to load
-# press CTRL-SHIFT-F2 to restart the linapple emulator and load the game
+# Then press CTRL-SHIFT-F2 to restart the linapple emulator and load the game
