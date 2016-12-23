@@ -223,6 +223,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:budgie-remix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/webupd8
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:strukturag/libde265
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:twodopeshaggy/jarun
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -286,6 +287,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install e17
 # Make A Bootable Windows 10 USB Install Stick On Linux using WinUSB Fork from Github
 # source: https://github.com/slacka/WinUSB
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  winusb
+
+# install googler - A Command Line Tool to Do ‘Google Search’ from Linux Terminal
+# source: http://www.tecmint.com/google-commandline-search-terminal/#
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  googler
 
 ##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
