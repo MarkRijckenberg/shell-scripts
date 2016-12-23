@@ -146,6 +146,7 @@ echo "alias aptu='sudo aptitude update'" >> ~/.bashrc
 echo "alias apts='aptitude search '" >> ~/.bashrc
 echo "alias d-u='sudo aptitude update && sudo aptitude dist-upgrade'" >> ~/.bashrc
 echo "alias wget='wget --no-check-certificate'" >> ~/.bashrc
+echo "alias g='googler -n 10 -c be -x '" >> ~/.bashrc
 alias wget="wget --no-check-certificate"
 
 # turn off apport error/crash reporting
@@ -1308,12 +1309,15 @@ egrep -v 'alias\ apt|alias\ d-u'  ~/.config/fish/config.fish > ~/.config/fish/co
 cp ~/.config/fish/config.fish.$LogDay.backup ~/.config/fish/config.fish
 
 # define custom aliases in ~/.config/fish/config.fish file
-echo "alias apti='sudo aptitude update ; sudo aptitude install '" >> ~/.config/fish/config.fish
+echo "alias apti='sudo aptitude update && sudo aptitude install '" >> ~/.config/fish/config.fish
 echo "alias aptr='sudo aptitude remove '" >> ~/.config/fish/config.fish
 echo "alias aptp='sudo aptitude purge '" >> ~/.config/fish/config.fish
 echo "alias aptu='sudo aptitude update'" >> ~/.config/fish/config.fish
 echo "alias apts='aptitude search '" >> ~/.config/fish/config.fish
-echo "alias d-u='sudo aptitude update ; sudo aptitude dist-upgrade'" >> ~/.config/fish/config.fish
+echo "alias d-u='sudo aptitude update && sudo aptitude dist-upgrade'" >> ~/.config/fish/config.fish
+echo "alias wget='wget --no-check-certificate'" >> ~/.config/fish/config.fish
+echo "alias g='googler -n 10 -c be -x '" >> ~/.config/fish/config.fish
+alias wget="wget --no-check-certificate"
 
 # install theme for fish shell
 omf update
