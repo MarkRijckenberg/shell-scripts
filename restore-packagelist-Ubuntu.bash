@@ -288,10 +288,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install e17
 # source: https://github.com/slacka/WinUSB
 sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  winusb
 
-# install googler - A Command Line Tool to Do ‘Google Search’ from Linux Terminal
-# source: http://www.tecmint.com/google-commandline-search-terminal/#
-sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  googler
-
 ##########################################################################################################
 # install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
 # source 1:  http://ubuntuforums.org/showthread.php?t=2181903
@@ -499,6 +495,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install aptitude
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
 cd $HOME
 ##########################################################################################################
+
+# install googler - A Command Line Tool to Do ‘Google Search’ from Linux Terminal
+# source: http://www.tecmint.com/google-commandline-search-terminal/#
+# requires: python3 which is part of basepackages file
+sudo DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install  googler python3
+
 # install LastPass:
 cd /tmp
 wget https://lastpass.com/lplinux.tar.bz2
