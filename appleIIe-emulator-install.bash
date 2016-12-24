@@ -28,7 +28,7 @@ wget --no-check-certificate  http://www.virtualapple.org/apple2/AppleInvaders_Ga
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Aztec.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/BATTLEZONE.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Bilestoad,The.zip
-wget --no-check-certificate  http://www.virtualapple.org/apple2/CastleWolfenstein(fixed).zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/CastleWolfenstein\(fixed\).zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/ChampionshipLodeRunner.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Choplifter.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/DawnPatrol.zip
