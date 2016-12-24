@@ -23,10 +23,23 @@ wget --no-check-certificate  ftp://ftp.apple.asimov.net/pub/apple_II/emulators/r
 # get newest ProDOS 2.4.1 operating system for Apple IIe (release date: September 2016!)
 wget --no-check-certificate https://archive.org/download/ProDOS_2_4_1/ProDOS_2_4_1.dsk
 # get Apple II games
+wget --no-check-certificate  http://www.virtualapple.org/apple2/AliBaba.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/AppleInvaders_GalaxyWars_Invasion_StellarInv_SuperInv.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Aztec.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/BATTLEZONE.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Bilestoad,The.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Breakout_Chipout_Hi-Res_Breakout.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/CastleWolfenstein(fixed).zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/ChampionshipLodeRunner.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Choplifter.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/DawnPatrol.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Defender.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Decathalon.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/DinoEggs.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Frogger.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Galaxian.zip
-wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Karateka.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
 unp *.zip
 mv *.dsk ~/linapple/disks/
 ~/linapple/linapple
