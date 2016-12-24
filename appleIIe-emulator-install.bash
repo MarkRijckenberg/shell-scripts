@@ -28,7 +28,6 @@ wget --no-check-certificate  http://www.virtualapple.org/apple2/AppleInvaders_Ga
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Aztec.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/BATTLEZONE.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Bilestoad,The.zip
-wget --no-check-certificate  http://www.virtualapple.org/apple2/Breakout_Chipout_Hi-Res_Breakout.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/CastleWolfenstein(fixed).zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/ChampionshipLodeRunner.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Choplifter.zip
@@ -38,6 +37,8 @@ wget --no-check-certificate  http://www.virtualapple.org/apple2/Decathalon.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/DinoEggs.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Frogger.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Galaxian.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/HardHatMack.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Hi-ResBreakout.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Karateka.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
 unp *.zip
