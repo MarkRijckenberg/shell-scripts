@@ -40,6 +40,8 @@ wget --no-check-certificate  http://www.virtualapple.org/apple2/Galaxian.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/HardHatMack.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Hi-ResBreakout.zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/Karateka.zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Mr.RobotandHisFactory\(Disk1of2\).zip
+wget --no-check-certificate  http://www.virtualapple.org/apple2/Mr.RobotandHisFactory\(Disk2of2\).zip
 wget --no-check-certificate  http://www.virtualapple.org/apple2/SantaParaviaandFiumaccio.zip
 unp *.zip
 mv *.dsk ~/linapple/disks/
