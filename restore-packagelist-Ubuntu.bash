@@ -1086,6 +1086,7 @@ sudo rm -rf /opt/teamviewer*
 rm -rf ~/.config/teamviewer8
 rm -rf ~/.config/teamviewer9
 rm -rf ~/.config/teamviewer10
+rm -rf ~/.config/teamviewer11
 rm *.deb
 wget --no-check-certificate `echo "https://www.teamviewer.com/en/download/linux.aspx" | wget -O- -i- --no-check-certificate | hxnormalize -x | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep i386`
 sudo dpkg -i teamviewer*.deb
