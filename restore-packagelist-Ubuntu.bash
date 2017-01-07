@@ -1335,11 +1335,12 @@ omf theme robbyrussell
 # clean up current directory
 echo "Performing file cleanup"
 cd $HOME
-mv *.deb $DEB
+rm *.deb
 rm *.exe
 mv *.km? $KMZ
 mv *.pdf $PDF
-mv *gz $TAR
+rm *gz
+rm *tar*
 mv *.zip $ZIP
 rm *.cab
 rm *.crt
