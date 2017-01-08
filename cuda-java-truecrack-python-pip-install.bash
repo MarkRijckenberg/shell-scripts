@@ -5,10 +5,10 @@
 # Required free disk space: at least 5 gigabytes free disk space on your root (/) partition
 # last update: January 6, 2016
 sudo rm /etc/apt/trusted.gpg.d/*
-sudo apt-get purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
+sudo apt purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
 sudo rm -rf /etc/java-*-openjdk/*
-sudo apt-get update
-sudo apt-get install unp build-essential checkinstall wget aptitude default-jdk git cmake pkg-config
+sudo apt update
+sudo apt install unp build-essential checkinstall wget apt default-jdk git cmake pkg-config
 # Install cuda 8 first:
 cd /tmp
 rm -rf cuda*
@@ -18,9 +18,9 @@ rm -rf cuda*
 ##wget `echo $URL`
 wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local_8.0.44-1_amd64-deb
 sudo dpkg -i --force-all cuda*deb
-sudo aptitude update
-sudo aptitude install libopencv-core-dev checkinstall
-sudo aptitude install libopencv-flann-dev libopencv-imgproc-dev libopencv-dev
+sudo apt update
+sudo apt install libopencv-core-dev checkinstall
+sudo apt install libopencv-flann-dev libopencv-imgproc-dev libopencv-dev
 export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-`echo $VERSION`/lib64:$LD_LIBRARY_PATH
 echo "export PATH=/usr/local/cuda-`echo $VERSION`/bin:$PATH" >> ~/.bashrc
@@ -62,20 +62,20 @@ apt-cache show truecrack
 #Description-md5: 556b8d22567101c7733f37ce6557412e
 truecrack
 
-sudo apt-get install  build-essential libfftw3-dev libX11-dev libxt-dev libxaw7-dev phylip
-sudo apt-get install  python-bs4 python-networkx python-skimage python-sklearn libpng-dev libfreetype6-dev
-sudo apt-get install  python-matplotlib python-numpy python-pandas libprotobuf-dev libleveldb-dev libsnappy-dev
-sudo apt-get install  python3-matplotlib python3-numpy python3-pandas libhdf5-serial-dev protobuf-compiler
-sudo apt-get install  python-jsonschema openbox python-scipy pandoc libatlas-base-dev libboost-all-dev
-sudo apt-get install  libgflags-dev libgoogle-glog-dev liblmdb-dev python3-dev python3-scipy kate
+sudo apt install  build-essential libfftw3-dev libX11-dev libxt-dev libxaw7-dev phylip
+sudo apt install  python-bs4 python-networkx python-skimage python-sklearn libpng-dev libfreetype6-dev
+sudo apt install  python-matplotlib python-numpy python-pandas libprotobuf-dev libleveldb-dev libsnappy-dev
+sudo apt install  python3-matplotlib python3-numpy python3-pandas libhdf5-serial-dev protobuf-compiler
+sudo apt install  python-jsonschema openbox python-scipy pandoc libatlas-base-dev libboost-all-dev
+sudo apt install  libgflags-dev libgoogle-glog-dev liblmdb-dev python3-dev python3-scipy kate
 # use pip command from python-pip package to install pip packages for python 2.7
 # use pip3 command from python3-pip package to install pip packages for python3+
-sudo apt-get install  spyder unp python-pip python3-pip build-essential python-dev swig
-sudo apt-get install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap  libopencv-dev
+sudo apt install  spyder unp python-pip python3-pip build-essential python-dev swig
+sudo apt install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap  libopencv-dev
 
 # install newest version of ipython notebook:
-sudo apt-get remove  ipython ipython-notebook python-tornado
-sudo apt-get install  ipython3 ipython3-notebook python-simplegeneric python3-simplegeneric python3-pip
+sudo apt remove  ipython ipython-notebook python-tornado
+sudo apt install  ipython3 ipython3-notebook python-simplegeneric python3-simplegeneric python3-pip
 sudo pip install --upgrade ipython tornado 
 
 sudo pip install --upgrade setuptools seaborn
