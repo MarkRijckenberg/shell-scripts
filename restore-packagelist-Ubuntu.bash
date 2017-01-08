@@ -139,12 +139,12 @@ egrep -v 'alias\ apt|alias\ d-u|wget'  ~/.bashrc > ~/.bashrc.$LogDay.backup
 cp ~/.bashrc.$LogDay.backup ~/.bashrc
 
 # define custom aliases in ~/.bashrc file
-echo "alias apti='sudo aptitude update && sudo aptitude install '" >> ~/.bashrc
-echo "alias aptr='sudo aptitude remove '" >> ~/.bashrc
-echo "alias aptp='sudo aptitude purge '" >> ~/.bashrc
-echo "alias aptu='sudo aptitude update'" >> ~/.bashrc
-echo "alias apts='aptitude search '" >> ~/.bashrc
-echo "alias d-u='sudo aptitude update && sudo aptitude upgrade'" >> ~/.bashrc
+echo "alias apti='sudo apt update && sudo apt install '" >> ~/.bashrc
+echo "alias aptr='sudo apt remove '" >> ~/.bashrc
+echo "alias aptp='sudo apt purge '" >> ~/.bashrc
+echo "alias aptu='sudo apt update'" >> ~/.bashrc
+echo "alias apts='apt search '" >> ~/.bashrc
+echo "alias d-u='sudo apt update && sudo apt upgrade'" >> ~/.bashrc
 echo "alias wget='wget --no-check-certificate'" >> ~/.bashrc
 echo "alias g='googler -n 10 -c be -x '" >> ~/.bashrc
 alias wget="wget --no-check-certificate"
@@ -359,7 +359,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  
 #sudo touch /etc/apt/sources.list.d/eid.list
 #sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install  usbutils pciutils eid-mw eid-viewer aptitude  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install  usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
 sudo update-pciids
 sudo update-usbids
 
@@ -492,8 +492,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install  numix-icon-th
 ##########################################################################################################
 # install base packages using basepackages file
 cd $HOME/shell-scripts
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install aptitude
-sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install apt
+sudo DEBIAN_FRONTEND=noninteractive apt install `cat basepackages` -o APT::Install-Suggests="false"
 cd $HOME
 ##########################################################################################################
 
@@ -1308,12 +1308,12 @@ egrep -v 'alias\ apt|alias\ d-u'  ~/.config/fish/config.fish > ~/.config/fish/co
 cp ~/.config/fish/config.fish.$LogDay.backup ~/.config/fish/config.fish
 
 # define custom aliases in ~/.config/fish/config.fish file
-echo "alias apti='sudo aptitude update ; sudo aptitude install '" >> ~/.config/fish/config.fish
-echo "alias aptr='sudo aptitude remove '" >> ~/.config/fish/config.fish
-echo "alias aptp='sudo aptitude purge '" >> ~/.config/fish/config.fish
-echo "alias aptu='sudo aptitude update'" >> ~/.config/fish/config.fish
-echo "alias apts='aptitude search '" >> ~/.config/fish/config.fish
-echo "alias d-u='sudo aptitude update ; sudo aptitude upgrade'" >> ~/.config/fish/config.fish
+echo "alias apti='sudo apt update ; sudo apt install '" >> ~/.config/fish/config.fish
+echo "alias aptr='sudo apt remove '" >> ~/.config/fish/config.fish
+echo "alias aptp='sudo apt purge '" >> ~/.config/fish/config.fish
+echo "alias aptu='sudo apt update'" >> ~/.config/fish/config.fish
+echo "alias apts='apt search '" >> ~/.config/fish/config.fish
+echo "alias d-u='sudo apt update ; sudo apt upgrade'" >> ~/.config/fish/config.fish
 echo "alias wget='wget --no-check-certificate'" >> ~/.config/fish/config.fish
 echo "alias g='googler -n 10 -c be -x '" >> ~/.config/fish/config.fish
 alias wget="wget --no-check-certificate"
@@ -1350,7 +1350,7 @@ rm *.xpi
 rm ica_*
 rm google*
 
-aptitude versions '?Upgradable' | head -n 12
+apt versions '?Upgradable' | head -n 12
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
@@ -1362,7 +1362,7 @@ aptitude versions '?Upgradable' | head -n 12
 #gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 
 cd $HOME/shell-scripts
-sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat astropackages` -o APT::Install-Suggests="false"
+sudo DEBIAN_FRONTEND=noninteractive apt install `cat astropackages` -o APT::Install-Suggests="false"
 cd $HOME
 
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
