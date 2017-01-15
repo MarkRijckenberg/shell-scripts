@@ -252,6 +252,12 @@ sudo sh -c 'echo "deb http://files.eid.belgium.be/debian xenial main" >> /etc/ap
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/musicmanager/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
+# 1. Add the Spotify repository signing key to be able to verify downloaded packages
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+# 2. Add the Spotify repository
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
+
 # add partner repository for skype software package
 # replace codename (for example: trusty) with right Ubuntu codename
 #sudo touch /etc/apt/sources.list.d/partner.list
@@ -443,8 +449,8 @@ sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 
 #http://test.eid.belgium.be/
 #Source: http://wiki.yobi.be/wiki/Belgian_eID
 
-
-
+# Install Spotify
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install spotify-client
 
 # install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
