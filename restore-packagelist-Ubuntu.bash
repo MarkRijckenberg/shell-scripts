@@ -10,7 +10,8 @@
 # !!!!! in an Ubuntu LiveUSB session and then following these instructions:
 # !!!!! https://www.lifewire.com/fix-uefi-bootloader-issues-when-dual-booting-2200655
 # !!!!! Also try changing the OS boot loader order in the UEFI settings screen after installing Ubuntu
-# !!!!! in UEFI+SecureBoot mode
+# !!!!! in UEFI+SecureBoot mode. Make sure Ubuntu EFI bootloader is put above the Windows EFI bootloader.
+# !!!!! Disable QuickBoot/FastBoot and Intel Smart Response Technology (SRT) in the UEFI settings screen.
 #######################################################################################################
 
 # !!!!! Mac OS X users (v10.9 or newer) should install and use homebrew cask command line tool to install software:
