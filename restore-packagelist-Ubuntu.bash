@@ -1,12 +1,16 @@
 #!/bin/bash
+#######################################################################################################
 # UEFI guidelines,tips and tricks (updated January 2017):
-# !!!!! WINDOWS 10 64-bit: Method to boot Ubuntu 1GB USB stick in UEFI compatible mode in order to
+#######################################################################################################
+# !!!!! STEP 1) WINDOWS 10 64-bit: Method to boot Ubuntu 1GB USB stick in UEFI compatible mode in order to
 # !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI+SecureBoot mode:
 # !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
-# !!!!! Fix UEFI boot loader issues where Windows 10 skips the Ubuntu EFI bootloader
+# !!!!! STEP 2) Fix UEFI boot loader issues where Windows 10 skips the Ubuntu EFI bootloader
 # !!!!! by using BCDEdit in Windows 10 or by installing efibootmgr Ubuntu package 
 # !!!!! in an Ubuntu LiveUSB session and then following these instructions:
 # !!!!! https://www.lifewire.com/fix-uefi-bootloader-issues-when-dual-booting-2200655
+# !!!!! Also try changing the OS boot loader order in the UEFI settings screen.
+#######################################################################################################
 
 # !!!!! Mac OS X users (v10.9 or newer) should install and use homebrew cask command line tool to install software:
 # !!!!! https://github.com/MarkRijckenberg/shell-scripts/blob/master/OSX-restore-packagelist.bash
