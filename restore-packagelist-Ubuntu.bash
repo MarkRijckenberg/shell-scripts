@@ -1,4 +1,13 @@
 #!/bin/bash
+# UEFI guidelines,tips and tricks (updated January 2017):
+# !!!!! WINDOWS 10 64-bit: Method to boot Ubuntu 1GB USB stick in UEFI compatible mode in order to
+# !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI+SecureBoot mode:
+# !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
+# !!!!! Fix UEFI boot loader issues where Windows 10 skips the Ubuntu EFI bootloader
+# !!!!! by using BCDEdit in Windows 10 or by installing efibootmgr Ubuntu package 
+# !!!!! in an Ubuntu LiveUSB session and then following these instructions:
+# !!!!! https://www.lifewire.com/fix-uefi-bootloader-issues-when-dual-booting-2200655
+
 # !!!!! Mac OS X users (v10.9 or newer) should install and use homebrew cask command line tool to install software:
 # !!!!! https://github.com/MarkRijckenberg/shell-scripts/blob/master/OSX-restore-packagelist.bash
 # !!!!! for semi-automated OS X application deployments and updates
@@ -12,9 +21,6 @@
 # !!!!! WINDOWS 8.1 64-bit users should install new games via Steam and via www.pokki.com
 # !!!!! WINDOWS 8.1 64-bit App Store URL: http://windows.microsoft.com/en-us/windows-8/apps#Cat=t1
 # !!!!! WINDOWS 8.1 64-bit Second App Store URL: http://www.pokki.com/
-# !!!!! WINDOWS 10 64-bit: Method to boot Ubuntu 1GB USB stick in UEFI compatible mode in order to
-# !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI mode:
-# !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
 # !!!!! WINDOWS 10 64-bit: to avoid memory leaks in svchost process: disable the BITS (background intelligent transfer 
 # !!!!! service) and Windows Superfetch/prefetch service in services.msc !!!
 
