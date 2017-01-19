@@ -510,8 +510,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install  numix-icon-th
 ##########################################################################################################
 # install base packages using basepackages file
 cd $HOME/shell-scripts
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install apt
-sudo DEBIAN_FRONTEND=noninteractive apt install `cat basepackages` -o APT::Install-Suggests="false"
+sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
+sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
 cd $HOME
 ##########################################################################################################
 
@@ -1380,7 +1380,7 @@ apt versions '?Upgradable' | head -n 12
 #gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 
 cd $HOME/shell-scripts
-sudo DEBIAN_FRONTEND=noninteractive apt install `cat astropackages` -o APT::Install-Suggests="false"
+sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat astropackages` -o APT::Install-Suggests="false"
 cd $HOME
 
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
