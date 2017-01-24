@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-# Prerequisites: Mac OS X El Capitan (version 10.11) or newer, git, Xcode 7.3.1 or newer (=Apple CLI Dev tools)
+# Prerequisites: Mac OS X El Sierra (version 10.12.2) or newer, git, Xcode 8.2.1 or newer (=Apple CLI Dev tools)
 # Minimum free disk space to install Mac OS X and the applications below: 30 GB
 
 # 1) minimum version of Mac OS X required to install latest Xcode: https://en.wikipedia.org/wiki/Xcode
@@ -8,7 +8,7 @@
 # http://sourceforge.net/projects/git-osx-installer/files/
 # then clone this Github repository to your local home directory
 
-# 3) install Xcode 7.3.1 or newer via this link:
+# 3) install Xcode 8.2.1 or newer via this link:
 # https://itunes.apple.com/be/app/xcode/id497799835?mt=12
 
 # 4) execute the bash script below
