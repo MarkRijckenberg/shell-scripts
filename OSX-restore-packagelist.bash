@@ -8,7 +8,7 @@
 # http://sourceforge.net/projects/git-osx-installer/files/
 # then clone this Github repository to your local home directory
 
-# 3) install Xcode 8.2.1 or newer via this link:
+# 3) install Xcode via this link:
 # https://itunes.apple.com/be/app/xcode/id497799835?mt=12
 
 # 4) execute the bash script below
