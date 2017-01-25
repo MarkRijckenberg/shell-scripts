@@ -146,6 +146,10 @@ sudo rm /etc/apt/trusted.gpg.d/*
 #     BASE PACKAGES SECTION                                                                   #
 ###############################################################################################
 
+# show filelist before installing
+cd
+comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u) > filelist-before-installing.txt
+
 # delete old custom aliases in ~/.bashrc file
 egrep -v 'alias\ apt|alias\ d-u|wget'  ~/.bashrc > ~/.bashrc.$LogDay.backup
 cp ~/.bashrc.$LogDay.backup ~/.bashrc
@@ -1369,7 +1373,13 @@ rm *.xpi
 rm ica_*
 rm google*
 
-apt versions '?Upgradable' | head -n 12
+# show list of extra installed files:
+cd
+comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u) > filelist-after-installing.txt
+echo "Here is the list of extra installed files using this bash script:"
+sdiff -s filelist-before-installing.txt  filelist-after-installing.txt
+sdiff -s filelist-before-installing.txt  filelist-after-installing.txt > filelist-delta.txt
+read -p "Press <ENTER> key to continue with Astronomy section or CTRL-C to abort"
 
 ###############################################################################################
 #     ASTRONOMY SOFTWARE SECTION                                                              #
@@ -1379,7 +1389,7 @@ apt versions '?Upgradable' | head -n 12
 #cd $HOME
 #wget https://download.zotero.org/extension/zotero-4.0.20.2.xpi
 #gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
-
+echo "proceed with Astronomy section of script...."
 cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat astropackages` -o APT::Install-Suggests="false"
 cd $HOME
