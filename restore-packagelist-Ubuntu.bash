@@ -519,6 +519,8 @@ sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::
 cd $HOME
 ##########################################################################################################
 
+sudo npm install -g bower gulp
+
 # install googler - A Command Line Tool to Do ‘Google Search’ from Linux Terminal
 # source: http://www.tecmint.com/google-commandline-search-terminal/#
 # requires: python3 which is part of basepackages file
