@@ -991,8 +991,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 # install newest wine version 
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 #sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge winehq-staging wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge winehq-staging wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 wine1.9
 sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f  --install-recommends install wine-staging
+sudo ln -s /opt/wine-staging/bin/wine  /usr/bin/wine
 
 # install Teamviewer server + client which depends on wine1.7
 # Direct download URL:  http://download.teamviewer.com/download/teamviewer_i386.deb
@@ -1102,7 +1103,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 # install newest wine version 
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 #sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install winetricks
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge winehq-staging wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 wine1.9
+sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f  --install-recommends install wine-staging
+sudo ln -s /opt/wine-staging/bin/wine  /usr/bin/wine
 
 # install Teamviewer server + client which depends on wine1.7
 cd /tmp
