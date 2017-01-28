@@ -519,7 +519,7 @@ sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::
 cd $HOME
 ##########################################################################################################
 
-sudo npm install -g bower gulp
+sudo npm install -g bower gulp  minimatch graceful-fs minimatch uuid lodash   
 
 # install googler - A Command Line Tool to Do ‘Google Search’ from Linux Terminal
 # source: http://www.tecmint.com/google-commandline-search-terminal/#
