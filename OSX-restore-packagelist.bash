@@ -49,9 +49,11 @@ brew doctor #should say "Your system is ready to brew."
 
 brew cask fetch java
 brew cask install java
+brew cask reinstall java
 brew cask install xquartz #Pre-req for some of the brew packages
-
+brew cask reinstall xquartz
 brew install python --framework
+brew cask reinstall python --framework
 brew install putty gtk+
 
 brew install ack
@@ -94,8 +96,8 @@ brew install ssh-copy-id
 #brew install the_silver_searcher
 #brew install tmux
 brew install wget
-brew install wine
-brew install winetricks
+brew remove wine winetricks
+brew cask reinstall wine-staging
 #brew install z
 
 brew cask install 4k-youtube-to-mp3
