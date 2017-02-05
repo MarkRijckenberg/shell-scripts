@@ -70,7 +70,7 @@ brew reinstall findutils
 brew reinstall fish
 brew reinstall flex
 brew reinstall gawk
-brew reinstall gcc # requires Xcode CLT (command line tools) to be installed first
+# brew reinstall gcc # requires Xcode CLT (command line tools) to be installed first
 brew reinstall git
 brew reinstall gnu-sed
 brew reinstall go
@@ -178,8 +178,8 @@ source $HOME/perl5/perlbrew/etc/bashrc
 # open new Terminal and run following commands:
 # cpan App::perlbrew
 perlbrew init
-perlbrew reinstall perl-stable
-perlbrew reinstall-cpanm
+perlbrew install perl-stable
+perlbrew install-cpanm
 cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 # cpanm install CPAN::Mini
 # minicpan -l ~/perl5/minicpan -r http://mirror.internode.on.net/pub/cpan/
