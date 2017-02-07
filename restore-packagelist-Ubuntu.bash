@@ -1315,7 +1315,7 @@ apt-cache show wget
 #  install gdm3 display manager to avoid problem getting to login screen in Ubuntu 16.04 LTS
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes install  gdm gdm3
 #############################################################################################
-
+sudo apt dist-upgrade
 #############################################################################################
 # Fish shell installation
 #############################################################################################
