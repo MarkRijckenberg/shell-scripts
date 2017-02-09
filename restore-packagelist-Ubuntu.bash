@@ -2073,6 +2073,7 @@ echo "http://www.dlr.de/dlr/en/desktopdefault.aspx/tabid-10079/"
 echo "http://7timer.y234.cn/"
 # following URL added on November 15, 2013:
 echo "http://news.sciencemag.org/category/space"
+echo "http://science.sciencemag.org/collection/astronomy"
 # following URL added on November 18, 2013:
 # PPMXL catalog contains largest list of proper motions for 900 million objects
 echo "http://dc.zah.uni-heidelberg.de/ppmxl/q/cone/form"
