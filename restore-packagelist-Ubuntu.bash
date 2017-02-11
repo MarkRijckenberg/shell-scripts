@@ -1283,7 +1283,7 @@ sudo python3 setup.py install
 #############################################################################################
 sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   flex libboost-all-dev cmake libqt4-dev build-essential libqtwebkit-dev checkinstall
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes build-dep wget
+sudo DEBIAN_FRONTEND=noninteractive apt build-dep --yes --force-yes wget
 cd
 sudo rm -rf wget
 git clone https://github.com/mirror/wget.git
