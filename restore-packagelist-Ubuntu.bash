@@ -296,10 +296,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt update
 # sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   `cat  allpackages` -o APT::Install-Suggests="false"
 
 # commented out following line, because it will break bluetooth support in Lubuntu/Xubuntu 14.04 LTS 64-bit 
-# sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge pulseaudio*
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge arno-iptables-firewall
-#sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge ufw
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge blueman
+# sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   pulseaudio*
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   arno-iptables-firewall
+#sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   ufw
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   blueman
 
 # install newest version of avconf
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libav-tools
@@ -610,7 +610,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  variety
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  google-talkplugin
 
 # install daily build of firefox-trunk (bleeding edge browser)
-#sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes purge firefox
+#sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes  firefox
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-mozilla-daily/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   firefox-trunk
@@ -804,7 +804,7 @@ apt-cache show openssl
 cd
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   checkinstall build-essential cmake rtmpdump
-# sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge curl
+# sudo DEBIAN_FRONTEND=noninteractive apt purge --yes --force-yes  curl
 # sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes build-dep curl
 # sudo rm -rf curl curl-build
 # mkdir curl-build
@@ -875,7 +875,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   ubuntu-twe
 # Only Chromium webbrowser seems to be compatible with web.skype.com, not Firefox or Google Chrome
 # better Video Conferencing software: Firefox Hello (using WebRTC)
 cd $HOME
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge skype skype-bin
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   skype skype-bin
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  skype
 wget https://go.skype.com/skypeforlinux-64-alpha.deb
 sudo dpkg -i skypeforlinux-64-alpha.deb
@@ -916,7 +916,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 # install newest version of minitube
 cd /tmp
 rm minitube*
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge minitube
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   minitube
 wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube64.deb
 sudo dpkg -i minitube64.deb
 # sudo DEBIAN_FRONTEND=noninteractive apt install minitube
@@ -991,14 +991,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 # install newest wine version 
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 #sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge winehq-staging wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 wine1.9
+sudo DEBIAN_FRONTEND=noninteractive apt purge --yes --force-yes  winehq-staging wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 wine1.9
 sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f  --install-recommends install wine-staging
 sudo ln -s /opt/wine-staging/bin/wine  /usr/bin/wine
 
 # install Teamviewer server + client which depends on wine1.7
 # Direct download URL:  http://download.teamviewer.com/download/teamviewer_i386.deb
 cd /tmp
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge teamviewer
+sudo DEBIAN_FRONTEND=noninteractive apt purge --yes --force-yes  teamviewer
 sudo rm -rf /opt/teamviewer*
 rm -rf ~/.config/teamviewer8
 rm -rf ~/.config/teamviewer9
@@ -1031,7 +1031,7 @@ else
 # install newest version of minitube
 cd /tmp
 rm minitube*
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge minitube
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   minitube
 wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube.deb
 sudo dpkg -i minitube.deb
 # sudo DEBIAN_FRONTEND=noninteractive apt install minitube
@@ -1103,13 +1103,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 # install newest wine version 
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:ubuntu-wine/ppa 
 #sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge winehq-staging wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 wine1.9
+sudo DEBIAN_FRONTEND=noninteractive apt purge --yes --force-yes  winehq-staging wine wine1.4 wine1.5 wine1.6 wine1.7 wine1.8 wine1.9
 sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f  --install-recommends install wine-staging
 sudo ln -s /opt/wine-staging/bin/wine  /usr/bin/wine
 
 # install Teamviewer server + client which depends on wine1.7
 cd /tmp
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes purge teamviewer
+sudo DEBIAN_FRONTEND=noninteractive apt purge --yes --force-yes  teamviewer
 sudo rm -rf /opt/teamviewer*
 rm -rf ~/.config/teamviewer8
 rm -rf ~/.config/teamviewer9
@@ -1160,13 +1160,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f upgrade
 
 #sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes remove mysql-server-core-?.?
 sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
-# sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge pulseaudio*
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge arno-iptables-firewall
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge mono-runtime
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge libmono-2.0-dev
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge  xscreensaver  xscreensaver-data gnome-screensaver
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge evolution-data-server-common samba snapd
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge gcc-4.6 gcc-4.7 gcc-4.7-base
+# sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   pulseaudio*
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   arno-iptables-firewall
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   mono-runtime
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   libmono-2.0-dev
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes    xscreensaver  xscreensaver-data gnome-screensaver
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   evolution-data-server-common samba snapd
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   gcc-4.6 gcc-4.7 gcc-4.7-base
 
 ###############################################################################################
 #     WORKAROUNDS FOR BUGS / ISSUES / CPU / MEMORY OVERCONSUMPTION                                                            #
@@ -1675,9 +1675,9 @@ rm google*
 #sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes remove openjdk-?
 #sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes remove mysql-server-core-?.?
 sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  remove unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video
-# sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge pulseaudio*
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge arno-iptables-firewall
-# sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes  purge ufw 
+# sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   pulseaudio*
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   arno-iptables-firewall
+# sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   ufw 
 sudo DEBIAN_FRONTEND=noninteractive apt autoclean
 sudo DEBIAN_FRONTEND=noninteractive apt clean
 #sudo rm /etc/apt/sources.list.d/*
