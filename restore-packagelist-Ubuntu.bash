@@ -741,7 +741,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   desurium
 # install 64-bit compatible Steam client
 wget media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
+sudo DEBIAN_FRONTEND=noninteractive apt install  --yes --force-yes -f
 
 ##########################################################################################################
 # install LGOGDownloader game client (unofficial downloader to GOG.com for Linux users) 
