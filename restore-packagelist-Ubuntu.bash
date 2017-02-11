@@ -782,7 +782,7 @@ sudo ./lynis --version
 cd
 # sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   checkinstall build-essential
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes build-dep openssl
+sudo DEBIAN_FRONTEND=noninteractive apt build-dep --yes --force-yes openssl
 sudo rm -rf ~/openssl
 git clone https://github.com/openssl/openssl.git
 cd openssl
@@ -802,7 +802,7 @@ apt-cache show openssl
 # https://mark911.wordpress.com/2015/01/10/how-to-compile-and-install-newest-version-of-openssl-in-ubuntu-14-04-lts-64-bit-via-github/
 # Then compile and install curl from github source in Ubuntu 14.04 LTS 64-bit
 cd
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes update
+sudo DEBIAN_FRONTEND=noninteractive apt update --yes --force-yes 
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   checkinstall build-essential cmake rtmpdump
 # sudo DEBIAN_FRONTEND=noninteractive apt purge --yes --force-yes  curl
 # sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes build-dep curl
