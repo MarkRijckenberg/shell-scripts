@@ -27,6 +27,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 cd /System/Library/Frameworks/Ruby.framework/Versions
 # sudo ln -s Current 1.8
 
+
+# list of homebrew packages:  http://braumeister.org/
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #Symlink into the normal place. Add this to login scripts as well
