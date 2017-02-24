@@ -2195,6 +2195,8 @@ echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 echo "http://opencourselibrary.org/course/"
 echo "http://oyc.yale.edu/courses"
 echo "https://ocw.mit.edu/courses/"
+echo "https://openstax.org/subjects"
+echo "https://open.umn.edu/opentextbooks/"
 
 ###############################################################################################
 #     Links for authors of Astronomy books                                                    #
