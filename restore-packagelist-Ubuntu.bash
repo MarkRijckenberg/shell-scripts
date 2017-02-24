@@ -2187,6 +2187,13 @@ echo "http://www.desmoulins.fr/index.php?pg=scripts!online!feuilles!form_feuille
 # following URL added on February 11, 2014:
 echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 
+
+###############################################################################################
+#     Free course material for unhiversity students                                                                     #
+###############################################################################################
+# following URL added on February 24, 2017:
+echo "http://opencourselibrary.org/course/"
+
 ###############################################################################################
 #     Links for authors of Astronomy books                                                    #
 ###############################################################################################
