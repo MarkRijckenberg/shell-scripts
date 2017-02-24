@@ -2193,6 +2193,8 @@ echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 ###############################################################################################
 # following URL added on February 24, 2017:
 echo "http://opencourselibrary.org/course/"
+echo "http://oyc.yale.edu/courses"
+echo "https://ocw.mit.edu/courses/"
 
 ###############################################################################################
 #     Links for authors of Astronomy books                                                    #
