@@ -2189,7 +2189,7 @@ echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 
 
 ###############################################################################################
-#     Free course material for unhiversity students                                                                     #
+#     Free course material for university students                                                                     #
 ###############################################################################################
 # following URL added on February 24, 2017:
 echo "http://opencourselibrary.org/course/"
