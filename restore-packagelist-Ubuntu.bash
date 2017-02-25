@@ -149,6 +149,8 @@ sudo rm /etc/apt/trusted.gpg.d/*
 # show filelist before installing
 cd
 comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u) > filelist-before-installing.txt
+# store start time when running script
+start=$(date +%s)
 
 # delete old custom aliases in ~/.bashrc file
 egrep -v 'alias\ apt|alias\ d-u|wget'  ~/.bashrc > ~/.bashrc.$LogDay.backup
@@ -1377,6 +1379,11 @@ rm *.sh
 rm *.xpi
 rm ica_*
 rm google*
+
+# show total installation duration:
+end=$(date +%s)
+runtime=$(python -c "print '%u:%02u' % ((${end} - ${start})/60, (${end} - ${start})%60)")
+echo "Runtime was $runtime (minutes+seconds)"
 
 # show list of extra installed files:
 cd
