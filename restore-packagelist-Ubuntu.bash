@@ -239,7 +239,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:qbittorrent-tea
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:heyarje/libav-11
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:niko2040/e19
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:budgie-remix/ppa
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:budgie-remix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/webupd8
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:strukturag/libde265
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:twodopeshaggy/jarun
@@ -504,10 +504,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   clipgrab
 sudo apt purge lxqt-metapackage lxqt-common lximage-qt  pcmanfm-qt 
 sudo apt install lxqt-metapackage lxqt-common 
 
+# installing budgie desktop causes serious issues on mother's desktop pc
 # Install budgie desktop environment with excellent font management (even on 40 inch Full HD TV screen)
-dconf reset -f /com/solus-project/budgie-panel/
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   budgie-desktop
-dconf reset -f /com/solus-project/budgie-panel/
+#dconf reset -f /com/solus-project/budgie-panel/
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   budgie-desktop
+#dconf reset -f /com/solus-project/budgie-panel/
 
 #install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
 # then click on Preferences::Appearance::Icons Theme::Numix Circle Light
