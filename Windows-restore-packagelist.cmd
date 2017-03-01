@@ -70,6 +70,13 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y grepwin"
 
+REM ############################################################################################### 
+REM xboot in Windows is similar to multisystem in Ubuntu
+REM xboot is an easy-to-use utility for creating Multiboot USB/ISO
+REM ############################################################################################### 
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y xboot"
+
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y geforce-game-ready-driver"
 
 REM Get Internet download utilities:
