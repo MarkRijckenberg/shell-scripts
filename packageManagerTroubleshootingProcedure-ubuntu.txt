@@ -84,10 +84,10 @@ cat /etc/dpkg/dpkg.cfg.d/multiarch
 dpkg --print-foreign-architectures
 }}}
 {{{
-sudo grep -R proxy /etc/apt/*
+sudo grep -R roxy /etc/apt/*
 }}}
 {{{
-grep proxy  /etc/environment
+grep roxy  /etc/environment
 }}}
 {{{
 echo $http_proxy
@@ -96,10 +96,10 @@ echo $http_proxy
 echo $ftp_proxy
 }}}
 {{{
-grep proxy /etc/bash.bashrc
+grep roxy /etc/bash.bashrc
 }}}
 {{{
-grep proxy ~/.bashrc
+grep roxy ~/.bashrc
 }}}
 {{{
 cat /etc/apt/apt.conf
@@ -185,6 +185,9 @@ LANG=C;sudo apt-get update -o APT::Cache-Limit=100000000 && sudo apt-get dist-up
 {{{
 find /etc/apt -name '*.list' -exec bash -c 'echo -e "\n$1\n"; cat -n "$1"' _ '{}' \;
 }}}
+{{{
+sudo dpkg --audit
+}}}
 
 = Step 7 Please send us the Terminal output =
 
@@ -235,7 +238,7 @@ sudo rm /usr/lib/python*/dist-packages/__pycache__/*pyc
 sudo apt-get install --reinstall python3-gi
 }}}
 {{{
-sudo apt-get purge software-center
+sudo apt-get purge software-center gnome-software
 }}}
 {{{
 rm -rf ~/.cache/software-center
@@ -245,6 +248,9 @@ rm -rf ~/.config/software-center
 }}}
 {{{
 rm -rf ~/.cache/update-manager-core
+}}}
+{{{
+rm ~/.local/share/gnome-software/*
 }}}
 {{{
 sudo rm /var/lib/apt-xapian-index/cataloged_times.p
@@ -265,7 +271,7 @@ sudo apt-get update
 sudo apt-get dist-upgrade
 }}}
 {{{
-sudo apt-get install software-center ubuntu-desktop
+sudo apt-get install software-center gnome-software
 }}}
 {{{
 sudo dpkg-reconfigure software-center --force
@@ -274,7 +280,7 @@ sudo dpkg-reconfigure software-center --force
 sudo update-software-center
 }}}
 {{{
-sudo apt-get install --reinstall software-center
+sudo apt-get install --reinstall software-center gnome-software
 }}}
 
 Then reboot and retest.
@@ -290,6 +296,8 @@ http://askubuntu.com/questions/69034/software-center-will-not-open
 https://answers.launchpad.net/ubuntu/+source/software-center/+question/219728
 
 https://answers.launchpad.net/ubuntu/+source/update-manager/+question/213929
+
+https://askubuntu.com/questions/853705/gnome-software-centre-crashes-in-ubuntu-16-04
 
 = Step 11 You are using a proxy server to connect to the Internet  =
 
