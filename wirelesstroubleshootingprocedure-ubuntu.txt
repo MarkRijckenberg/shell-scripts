@@ -96,3 +96,5 @@ http://www.datamation.com/open-source/tips-and-tricks-for-ubuntu-drivers.html
 http://wireless.kernel.org/en/users/Devices
 
 http://sourceforge.net/apps/mediawiki/ndiswrapper/index.php?title=Category:USB
+
+https://freedompenguin.com/articles/how-to/ubuntu-wireless-internet-drop-off-fix/
