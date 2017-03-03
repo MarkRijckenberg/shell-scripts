@@ -18,7 +18,7 @@ https://wiki.ubuntu.com/Releases
 
 -----
 
-#1A.  If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or later, try this first:  
+#1A.  If you are using Ubuntu 14.04 LTS or newer, try this first:  
 
 {{{
 killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*
@@ -30,7 +30,7 @@ wait ten seconds, then run this:
 pulseaudio -k 
 }}}
 
-#1B.  Should the approach above fail to correct the problem (it is only known to work on some variations), you can try this next.  If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or later: 
+#1B.  Should the approach above fail to correct the problem (it is only known to work on some variations), you can try this next.  If you are using Ubuntu 14.04 LTS or later: 
 
 {{{
 killall pulseaudio; rm -r ~/.config/pulse/* ; rm -r ~/.pulse*
@@ -40,13 +40,13 @@ wait 10 seconds, '''then reboot''' (putting the machine to sleep is not enough -
 
 #1C.  If that still did not help, please proceed...
 
-If you are using Ubuntu 12.04.3 LTS (Precise Pangolin) or Ubuntu 14.04 LTS (trusty), then execute this command '''and reboot''':
+If you are using Ubuntu 14.04 LTS or Ubuntu 16.04 LTS, then please execute this command '''and reboot''':
 
 {{{
 sudo apt-get update;sudo apt-get dist-upgrade; sudo apt-get install pavucontrol linux-sound-base alsa-base alsa-utils lightdm ubuntu-desktop  linux-image-`uname -r` libasound2; sudo apt-get -y --reinstall install linux-sound-base alsa-base alsa-utils lightdm ubuntu-desktop  linux-image-`uname -r` libasound2; killall pulseaudio; rm -r ~/.pulse*; ubuntu-support-status; sudo usermod -aG `cat /etc/group | grep -e '^pulse:' -e '^audio:' -e '^pulse-access:' -e '^pulse-rt:' -e '^video:' | awk -F: '{print $1}' | tr '\n' ',' | sed 's:,$::g'` `whoami`
 }}}
 
-Concerning Ubuntu releases older than Ubuntu 12.04 LTS (Precise), please read this:
+Concerning Ubuntu releases other than Ubuntu 14.04 LTS or Ubuntu 16.04 LTS, please read this:
 
 https://wiki.ubuntu.com/Releases
 
@@ -93,11 +93,11 @@ The Terminal output after running the ALSA information script should contain som
 
 # ALSA Version
 
-# Driver version:     1.0.25 (if you are running Ubuntu 12.04.3 LTS (Precise Pangolin))
+# Driver version:     k4.8.0-30-generic (if you are running Ubuntu 16.04.2 LTS and installed the newest official Ubuntu kernel)
 
-# Library version:    1.0.25 (if you are running Ubuntu 12.04.3 LTS (Precise Pangolin))
+# Library version:    1.1.0 (if you are running Ubuntu 16.04.2 LTS)
 
-# Utilities version:  1.0.25 (if you are running Ubuntu 12.04.3 LTS (Precise Pangolin))
+# Utilities version:  1.1.0 (if you are running Ubuntu 16.04.2 LTS)
 
 If the Library and Utilities version numbers are not equal, this is probably due to one or more of the following issues:
 
@@ -105,7 +105,7 @@ If the Library and Utilities version numbers are not equal, this is probably due
 
 2. ALSA was correctly installed or upgraded, but a wrong / old kernel was booted instead of the most recent kernel version. In that case, boot the newest kernel version (that is available in the standard/default Ubuntu repositories) and then retest sound.
 
-For example: if you installed or upgraded to Ubuntu '''12.04 LTS''' (Precise), make sure the running kernel version is '''3.2.0-23-generic or higher'''. Or else sound output/input will not work!
+For example: if you installed or upgraded to Ubuntu '''16.04 LTS''' (Xenial), make sure the running kernel version is '''4.4.0-62-generic or higher'''. Or else sound output/input will not work!
 
 You can check the currently running kernel version by running this command:
 
@@ -115,31 +115,20 @@ uname -r
 
 If the ALSA driver version number in the Terminal output does NOT contain anything at all, please execute the following commands, then reboot and retest sound output using headphones and speakers:
 
-If you are using GNU/Linux kernel version 3.2, 3.13 or 3.16, please run these 2 commands:
-
 {{{
 sudo apt-add-repository ppa:ubuntu-audio-dev/alsa-daily
 }}}
 {{{
 sudo apt-get update
 }}}
-
-If you are using Ubuntu 12.04 LTS or Ubuntu 14.04 LTS, please also run this extra command:
-
+{{{
+sudo apt-get install linux-image-extra-`uname -r`
+}}}
+{{{
+sudo apt-get install --reinstall linux-image-extra-`uname -r`  
+}}}
 {{{
 sudo apt-get install oem-audio-hda-daily-dkms
-}}}
-
-If you are using Ubuntu 14.10 (Utopic Unicorn), please also run this extra command:
-
-{{{
-sudo apt-get install  oem-audio-hda-daily-lts-utopic-dkms 
-}}}
-
-If you are using Ubuntu 15.04 (Vivid Vervet), please also run this extra command:
-
-{{{
-sudo apt-get install oem-audio-hda-daily-lts-vivid-dkms 
 }}}
 
 Then reboot and retest sound output.
@@ -153,7 +142,7 @@ Copy & paste the following diagnostic command into the Linux Terminal, then pres
 ~-Tip: If you have a wheel mouse or 3-button mouse, you do not need to type the commands into the Terminal. Instead, copy the commands from this web page and paste them into the terminal. To do this, move your mouse cursor over the start of the command written on the Web page. Then press the left mouse button and drag the mouse till the end of the command to highlight the whole command; then release the mouse button. Then press the middle mouse button or mouse wheel anywhere inside the Terminal. The command should now be printed in the Terminal without errors. Now press <Enter> to execute the command.-~
 
 {{{
-cat /proc/asound/{version,cards,devices,hwdep,pcm,seq/clients}; sudo rm /etc/asound.conf; sudo rm -r ~/.pulse ~/.asound* ;sudo rm ~/.pulse-cookie; sudo apt-get update; sudo apt-get install aptitude; sudo aptitude install paman gnome-alsamixer libasound2-plugins padevchooser libsdl1.2debian-pulseaudio; sudo lshw -short;ls -lart /dev/snd; find /lib/modules/`uname -r` | grep snd ;cat /dev/sndstat; lspci -nn; lsusb; sudo which alsactl; sudo fuser -v /dev/dsp /dev/snd/* ; dpkg -S bin/slmodemd; dmesg | egrep 'EMU|probe|emu|ALSA|alsa|ac97|udi|snd|ound|irmware'; sudo /etc/init.d/sl-modem-daemon status; sudo grep model /etc/modprobe.d/* ; sudo dmidecode|egrep 'anufact|roduct|erial|elease'; lsmod | egrep 'snd|usb|midi|udio'; pacmd list-sinks; aplay -l; sudo alsa force-reload;  ubuntu-support-status ; sudo lshw -C sound
+cat /proc/asound/{version,cards,devices,hwdep,pcm,seq/clients}; ls -l /usr/share/pulseaudio/alsa-mixer/paths/; sudo rm /etc/asound.conf; sudo rm -r ~/.pulse ~/.asound* ;sudo rm ~/.pulse-cookie; sudo apt-get update; sudo apt-get install aptitude; sudo aptitude install paman gnome-alsamixer libasound2-plugins padevchooser libsdl1.2debian-pulseaudio; sudo lshw -short;ls -lart /dev/snd; find /lib/modules/`uname -r` | grep snd ;cat /dev/sndstat; lspci -nn; lsusb; sudo which alsactl; sudo fuser -v /dev/dsp /dev/snd/* ; dpkg -S bin/slmodemd; dmesg | egrep 'EMU|probe|emu|ALSA|alsa|ac97|udi|snd|ound|irmware'; sudo /etc/init.d/sl-modem-daemon status; sudo grep model /etc/modprobe.d/* ; sudo dmidecode|egrep 'anufact|roduct|erial|elease'; lsmod | egrep 'snd|usb|midi|udio'; pacmd list-sinks; aplay -l; sudo alsa force-reload;  ubuntu-support-status ; sudo lshw -C sound
 }}}
 
 
@@ -347,8 +336,7 @@ The following configuration line needs to be added to the /etc/modprobe.d/alsa-b
 {{{
 options snd-hda-intel model=auto 
 }}}
-Valid model names (that replace model option 'auto')  depending on the codec chip, can be found in "[[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio.txt | HD-Audio ALSA documentation]]" and [[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio-Models.txt | HD-Audio-Models ALSA documentation]]".
-
+Valid model names (that replace model option 'auto')  depending on the codec chip, can be found in "[[https://www.kernel.org/doc/html/latest/sound/hd-audio/models.html | HD-Audio ALSA documentation]]"  and in "[[https://www.mjmwired.net/kernel/Documentation/sound/alsa/HD-Audio-Models.txt | HD-Audio ALSA documentation 2]]"
 
 !!ONLY test one model option at a time in the /etc/modprobe.d/alsa-base.conf file!!
 
@@ -390,9 +378,7 @@ Having more than one alsactl can cause your sound settings to be muted during ev
 
 To understand the various hda_intel related errors that might be mentioned at the end of the ALSA Information script output that was uploaded to the Pastebin website, read the following documentation:
 
-[[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio.txt | HD-Audio ALSA documentation]]
-
-[[https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio-Models.txt | HD-Audio-Models ALSA documentation]]
+[[https://www.kernel.org/doc/html/latest/sound/hd-audio/models.html | HD-Audio ALSA documentation]]
 
 Also compare the PCI subsystem ID (for example: 1028:0510) in the ALSA Terminal output with the SND_PCI_QUIRK values (for example: SND_PCI_QUIRK(0x1028, 0x0510, "Dell Vostro", CXT5066_IDEAPAD ) in the link below, in order to determine the right model option to use (for example: model=ideapad) in the /etc/modprobe.d/alsa-base.conf file:
 
@@ -404,24 +390,27 @@ Also search for the VendorID (for example: 0x111d7695) of your sound card's code
 
 in [[https://www.google.be | Google]] to see if the newest Linux kernel supports that specific audio codec.
 
+Also search for the VendorID (for example: 8086) and DeviceID (for example: a170) of the audio card in
+[[http://cateee.net/lkddb/web-lkddb/SND_HDA_INTEL.html | Cateee.net]] to see which Linux kernel versions support that audio card's VendorID-DeviceID.
+
 !!ONLY test one model option at a time in the /etc/modprobe.d/alsa-base.conf file!!
 
 -----
-= Debugging utilities for advanced users of Ubuntu 12.04.3 LTS (Precise Pangolin) (or newer versions) =
+= Debugging utilities for advanced users of Ubuntu 16.04.1 LTS (or newer versions) =
 
 http://voices.canonical.com/tag/pulseaudio/
 
 = External Links for advanced users =
 
-You can download and compile the newest alsa-lib, alsa-utils, alsa-tools, alsa-plugins, alsa-python versions (v1.0.27) here using "git clone":
+You can download and compile the newest alsa-lib, alsa-utils, alsa-tools, alsa-plugins, alsa-python versions  here using "git clone":
 
 * http://www.alsa-project.org/main/index.php/GIT_Server
 
-Interesting details about the ALSA v1.0.27 components are here:
+Interesting details about the ALSA components are here:
 
-* http://www.alsa-project.org/main/index.php/Changes_v1.0.26_v1.0.27
+* http://www.alsa-project.org/main/index.php/Main_Page
 
-Be sure to compile and test the hdajackretask tool, which is part of alsa-tools v1.0.26. Very handy correction tool if ALSA driver v1.0.25 does not correctly assign sound processing tasks to the hda pin nodes for your sound card's audio codec. 
+Be sure to compile and test the hdajackretask tool, which is part of alsa-tools. Very handy correction tool if the ALSA driver does not correctly assign sound processing tasks to the hda pin nodes for your sound card's audio codec. 
 
 For some initial suggestions, also read the following pages
 
@@ -451,8 +440,6 @@ For some initial suggestions, also read the following pages
 
 * http://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture
 
-* http://drowninginbugs.blogspot.com/2009/10/caveats-for-audio-in-910.html
-
 * http://ubuntuforums.org/showthread.php?t=789578&highlight=audacity
 
 * http://ubuntuforums.org/showthread.php?t=205449
@@ -463,21 +450,13 @@ For some initial suggestions, also read the following pages
 
 /!\ Check for correct /etc/modprobe.d/alsa-base.conf options on the following pages:
 
-* https://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio-Models.txt
-
 * http://www.mjmwired.net/kernel/Documentation/sound/alsa/HD-Audio-Models.txt
 
-* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/alsa/HD-Audio-Models.txt
+* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/hd-audio/models.rst
 
-* https://www.kernel.org/doc/Documentation/sound/alsa/ALSA-Configuration.txt
+* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/alsa-configuration.rst
 
 * http://www.mjmwired.net/kernel/Documentation/sound/alsa/ALSA-Configuration.txt
-
-* https://git.kernel.org/cgit/linux/kernel/git/tiwai/sound.git/tree/Documentation/sound/alsa/ALSA-Configuration.txt
-
-* https://www.kernel.org/doc/Documentation/sound/alsa/
-
-* http://www.mjmwired.net/kernel/Documentation/sound/alsa/
 
 * http://ubuntuforums.org/showthread.php?t=1043568
 
