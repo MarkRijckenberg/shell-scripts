@@ -2139,13 +2139,20 @@ echo "https://3.hidemyass.com"
 ###############################################################################################
 #     Math links for kids                                                                     #
 ###############################################################################################
+
+# following URL added on February 10, 2014:
+echo "http://www.pyromaths.org/enligne/"
+# following URL added on March 6, 2017
+# Awesome Homework math tutor for kids and students (includes A.I.) running on iOS:
+echo "https://itunes.apple.com/be/app/socratic-homework-answers/id1014164514?l=nl&mt=8"
+# following URL added on February 18, 2014:
+echo "http://mathworld.wolfram.com/"
+
 # following URL added on March 12, 2016 (free competitor to Mathematica):
 echo "https://cloud.sagemath.com/"
 # following URL added on February 18, 2014:
 echo "http://packages.ubuntu.com/trusty/edubuntu-desktop"
 echo "http://packages.ubuntu.com/trusty/ubuntu-edu-primary"
-# following URL added on February 18, 2014:
-echo "http://mathworld.wolfram.com/"
 # following URL added on February 12, 2014:
 echo "http://nl.wikipedia.org/wiki/Hoofdpagina"
 # following URL added on February 19, 2014:
@@ -2154,8 +2161,6 @@ echo "https://fr.khanacademy.org/"
 echo "http://um.mendelu.cz/maw-html/index.php?lang=fr"
 # following URL added on February 10, 2014:
 echo "http://doc.ubuntu-fr.org/logiciels_educatifs_pour_les_enfants"
-# following URL added on February 10, 2014:
-echo "http://www.pyromaths.org/enligne/"
 # following URL added on February 11, 2014 (requires paying for W/A Pro account):
 echo "http://www.wolframalpha.com/problem-generator/"
 # following URL added on February 11, 2014:
