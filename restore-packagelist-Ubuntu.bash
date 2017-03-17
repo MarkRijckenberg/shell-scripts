@@ -2595,8 +2595,12 @@ echo "http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to
 
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
-#     R,RStudio,MySQL commands,python                                                                 #
+#     R,RStudio,MySQL commands,python,SAS                                                                 #
 #######################################################################################################
+# following URL added on March 17, 2017:
+# SAS cheat sheet 1.2c (2009)
+echo "http://www.theprogrammerscabin.com/SASCheat.pdf"
+
 # following URL added on March 25, 2014:
 # R Reference Card 2.0
 echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
