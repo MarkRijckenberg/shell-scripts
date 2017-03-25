@@ -243,6 +243,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/webupd8
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:strukturag/libde265
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:twodopeshaggy/jarun
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -470,7 +471,10 @@ sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 
 # Install Spotify
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   spotify-client
 
-# install dupeguru-me which can find and delete similar music filenames using fuzzy logic
+# Install Live Wallpaper
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   livewallpaper  livewallpaper-config livewallpaper-indicator
+
+# Install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
