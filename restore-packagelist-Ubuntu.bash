@@ -881,11 +881,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   ubuntu-twe
 # better alternative: access https://web.skype.com via Chromium webbrowser in Ubuntu 16.04 LTS
 # Only Chromium webbrowser seems to be compatible with web.skype.com, not Firefox or Google Chrome
 # better Video Conferencing software: Firefox Hello (using WebRTC)
-cd $HOME
+cd /tmp
+rm skype*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   skype skype-bin
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  skype
-wget https://go.skype.com/skypeforlinux-64-alpha.deb
-sudo dpkg -i skypeforlinux-64-alpha.deb
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo dpkg -i skypeforlinux-64.deb
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 sni-qt:i386
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   pidgin pidgin-skypeweb purple-skypeweb
