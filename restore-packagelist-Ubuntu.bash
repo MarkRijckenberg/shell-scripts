@@ -527,6 +527,14 @@ cd $HOME
 ##########################################################################################################
 
 sudo npm install -g bower gulp  minimatch graceful-fs minimatch uuid lodash   
+# install open-source VOIP and end-to-end encrypted messenger program called "Wire" for iOS,Android,Linux,Windows,MacOSX:
+cd
+sudo rm -rf wire-desktop/
+cd wire-desktop/
+git clone https://github.com/wireapp/wire-desktop
+npm install
+#run following command to start the wire desktop client
+# npm start
 
 # install googler - A Command Line Tool to Do ‘Google Search’ from Linux Terminal
 # source: http://www.tecmint.com/google-commandline-search-terminal/#
@@ -647,26 +655,26 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   shutter
 # http://xiki.org
 # source: https://github.com/trogdoro/xiki
 
-cd $HOME
-sudo rm -rf xiki
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    ruby ruby2.3 ruby2.3-dev
-git clone git://github.com/trogdoro/xiki.git
-cd xiki
-sudo update-ca-certificates
-sudo gem sources -r https://rubygems.org/
-sudo gem sources -a http://rubygems.org/
-sudo gem update --system
-sudo gem sources -r http://rubygems.org/
-sudo gem sources -a https://rubygems.org/
-sudo gem install bundler   # <- no "sudo" if using rvm
-bundle                # <- no "sudo" if using rvm
-ln -s misc etc
-sudo ruby misc/command/copy_xiki_command_to.rb /usr/bin/xiki
-~/xiki/bin/xsh
+#cd $HOME
+#sudo rm -rf xiki
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    ruby ruby2.3 ruby2.3-dev
+#git clone git://github.com/trogdoro/xiki.git
+#cd xiki
+#sudo update-ca-certificates
+#sudo gem sources -r https://rubygems.org/
+#sudo gem sources -a http://rubygems.org/
+#sudo gem update --system
+#sudo gem sources -r http://rubygems.org/
+#sudo gem sources -a https://rubygems.org/
+#sudo gem install bundler   # <- no "sudo" if using rvm
+#bundle                # <- no "sudo" if using rvm
+#ln -s misc etc
+#sudo ruby misc/command/copy_xiki_command_to.rb /usr/bin/xiki
+#~/xiki/bin/xsh
 # xiki web/start
 # then navigate to http://localhost:8161/dbs
 # to view the locally installed mysql databases, tables and fields
-cd $HOME
+#cd $HOME
 
 # install Google Music Manager - sync local mp3s in Ubuntu with ios or Android device
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
