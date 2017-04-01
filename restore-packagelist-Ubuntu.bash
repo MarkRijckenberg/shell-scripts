@@ -530,8 +530,8 @@ sudo npm install -g bower gulp  minimatch graceful-fs minimatch uuid lodash
 # install open-source VOIP and end-to-end encrypted messenger program called "Wire" for iOS,Android,Linux,Windows,MacOSX:
 cd
 sudo rm -rf wire-desktop/
-cd wire-desktop/
 git clone https://github.com/wireapp/wire-desktop
+cd wire-desktop/
 npm install
 #run following command to start the wire desktop client
 # npm start
