@@ -243,6 +243,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/webupd8
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:strukturag/libde265
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:twodopeshaggy/jarun
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor-browser
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
 
 ##########################################################################################################
@@ -482,6 +483,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   dupeguru-m
 
 # install clipgrab, a friendly downloader for YouTube and other sites
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   clipgrab
+
+# install Tor browser
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tor-browser
 
 # Install lxqt desktop environment => merge of lxde and razorqt desktops
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
