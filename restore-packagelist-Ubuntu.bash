@@ -929,17 +929,15 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 # wget `grep deb index.html |head -n 1|cut -d"\"" -f4`
 # sudo dpkg -i dolphin*.deb
   
-# install newest version of minitube (require personal API key from 
-# https://console.developers.google.com/apis/credentials
-cd /tmp
-rm minitube*
-sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   minitube
-#wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube64.deb
-#sudo dpkg -i minitube64.deb
-wget -O minitube.sh http://drive.noobslab.com/data/apps/minitube/minitube.sh
-bash minitube.sh
-# sudo DEBIAN_FRONTEND=noninteractive apt install minitube
-sudo DEBIAN_FRONTEND=noninteractive apt install -f
+# install newest version of minitube (requires personal API key from 
+# https://console.developers.google.com/apis/credentials )
+# my personal API key does not work with minitube in April 2017
+# cd /tmp
+# rm minitube*
+# sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   minitube
+# wget -O minitube.sh http://drive.noobslab.com/data/apps/minitube/minitube.sh
+# bash minitube.sh
+# sudo DEBIAN_FRONTEND=noninteractive apt install -f
 
   
 # install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
