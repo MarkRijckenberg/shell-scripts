@@ -244,6 +244,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/we
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:strukturag/libde265
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:twodopeshaggy/jarun
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor-browser
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:openshot.developers/ppa
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
 
 ##########################################################################################################
