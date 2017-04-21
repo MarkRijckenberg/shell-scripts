@@ -2614,7 +2614,7 @@ echo "http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to
 
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
-#     R,RStudio,MySQL commands,python,SAS                                                                 #
+#     R,RStudio,MySQL commands,python,SAS,MatLab (non-free)/Octave(open source)                                                                #
 #######################################################################################################
 # following URL added on March 17, 2017:
 # SAS cheat sheet 1.2c (2009)
@@ -2625,9 +2625,16 @@ echo "http://www.theprogrammerscabin.com/SASCheat.pdf"
 # Includes separate cheat sheet for SparklyR
 echo "https://www.rstudio.com/resources/cheatsheets/"
 
+# following URL added on April 21, 2017:
+# MatLab cheat sheets:
+echo "http://www.econ.ku.dk/pajhede/Cheatsheet.pdf"
+echo "http://steventhornton.ca/a-matlab-cheat-sheet/"
+echo "https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB"
+
 # following URL added on March 25, 2014:
 # R Reference Card 2.0
 echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
+
 # following URL added on February 19, 2014:
 echo "http://www.rstudio.com/"
 echo "http://bigdatauniversity.com/wpcourses/"
