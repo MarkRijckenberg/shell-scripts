@@ -2620,6 +2620,11 @@ echo "http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to
 # SAS cheat sheet 1.2c (2009)
 echo "http://www.theprogrammerscabin.com/SASCheat.pdf"
 
+# following URL added on April 21, 2017:
+# One R cheat sheet per data science processing step:
+# Includes separate cheat sheet for SparklyR
+echo "https://www.rstudio.com/resources/cheatsheets/"
+
 # following URL added on March 25, 2014:
 # R Reference Card 2.0
 echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
