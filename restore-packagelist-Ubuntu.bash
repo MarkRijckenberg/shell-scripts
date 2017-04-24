@@ -2621,9 +2621,12 @@ echo "http://www.econ.ku.dk/pajhede/Cheatsheet.pdf"
 echo "http://steventhornton.ca/a-matlab-cheat-sheet/"
 echo "https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB"
 
+# Octave Reference Card
+echo "http://folk.ntnu.no/joern/itgk/refcard-a4.pdf"
+
 # python data science cheat sheets:
 # following URL added on April 24, 2017:
-echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience+(1).pdf"
+echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf"
 
