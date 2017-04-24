@@ -2284,11 +2284,8 @@ echo "http://www.openintro.org/download.php?file=os2_lab_source&referrer=/stat/l
 echo "http://yihui.name/knitr/demo/editors/"
 # Explanation on how to use .Rnw files and RStudio with knitr:
 echo "http://kbroman.github.io/knitr_knutshell/pages/latex.html"
-# Data Wrangling Cheat Sheet using dplyr and tidyr packages:
-echo "http://www.rstudio.com/resources/cheatsheets/"
 # following URL added on July 10, 2014:
-# RStudio Shiny Apps cheatsheet:
-echo "http://shiny.rstudio.com/articles/cheatsheet.html"
+
 # following URL added on February July 10, 2014:
 # principles and practice of reproducible research with R
 echo "https://osf.io/s9tya/wiki/home/"
@@ -2557,7 +2554,7 @@ echo "http://datadryad.org"
 # following URL added on July 10, 2014:
 # Access Quandl open data sets using Quandl R package:
 echo "http://www.quandl.com/"
-echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+Sheet.pdf"
+
 # following URL added on August 14, 2014:
 echo "http://www.data.gov/"
 # following URL added on October 29, 2014:
@@ -2613,27 +2610,51 @@ echo "http://cans.uml.edu/research/heterospark/"
 echo "http://danielnouri.org/notes/2014/12/17/using-convolutional-neural-nets-to-detect-facial-keypoints-tutorial/"
 
 #######################################################################################################
-#     Data Science programming languages - learning requirements:                                      #
-#     R,RStudio,MySQL commands,python,SAS,MatLab (non-free)/Octave(open source)                                                                #
+#     Data Science cheat sheets (2017):                                                               #
+#     MATLAB (non-free)/Octave(open source),python,R,SAS,RStudio,MySQL commands                                                             #
 #######################################################################################################
-# following URL added on March 17, 2017:
-# SAS cheat sheet 1.2c (2009)
-echo "http://www.theprogrammerscabin.com/SASCheat.pdf"
 
-# following URL added on April 21, 2017:
-# One R cheat sheet per data science processing step:
-# Includes separate cheat sheet for SparklyR
-echo "https://www.rstudio.com/resources/cheatsheets/"
-
+# MATLAB
 # following URL added on April 21, 2017:
 # MatLab cheat sheets:
 echo "http://www.econ.ku.dk/pajhede/Cheatsheet.pdf"
 echo "http://steventhornton.ca/a-matlab-cheat-sheet/"
 echo "https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB"
 
-# following URL added on March 25, 2014:
-# R Reference Card 2.0
-echo "http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf"
+# python data science cheat sheets:
+# following URL added on April 24, 2017:
+echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience+(1).pdf"
+echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf"
+echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf"
+
+# Quandl for R
+echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+Sheet.pdf"
+
+# R
+# following URL added on April 21, 2017:
+# One R cheat sheet per data science processing step:
+# Includes separate cheat sheet for SparklyR, dplyr and tidyr
+echo "https://www.rstudio.com/resources/cheatsheets/"
+
+# R
+# following URL added on April 24, 2017:
+# R Reference Card
+echo "https://github.com/jonasstein/R-Reference-Card/blob/master/R-refcard.pdf"
+
+# RStudio Shiny Apps cheatsheet:
+echo "http://shiny.rstudio.com/articles/cheatsheet.html"
+
+# SAS
+# following URL added on March 17, 2017:
+# SAS cheat sheet 1.2c (2009)
+echo "http://www.theprogrammerscabin.com/SASCheat.pdf"
+
+#######################################################################################################
+#     Data Science programming languages - learning requirements:                                      #
+#     R,RStudio,MySQL commands,python,SAS,MatLab (non-free)/Octave(open source)                                                                #
+#######################################################################################################
+
+
 
 # following URL added on February 19, 2014:
 echo "http://www.rstudio.com/"
