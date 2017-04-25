@@ -2624,7 +2624,7 @@ echo "https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octav
 # Octave Reference Card
 echo "http://folk.ntnu.no/joern/itgk/refcard-a4.pdf"
 
-# python data science cheat sheets:
+# Python data science cheat sheets:
 # following URL added on April 24, 2017:
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf"
@@ -2654,10 +2654,8 @@ echo "http://www.theprogrammerscabin.com/SASCheat.pdf"
 
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
-#     R,RStudio,MySQL commands,python,SAS,MatLab (non-free)/Octave(open source)                                                                #
+#     R,RStudio,MySQL commands,python,SAS,MatLab (non-free)/Octave(open source), Wolfram                                                                #
 #######################################################################################################
-
-
 
 # following URL added on February 19, 2014:
 echo "http://www.rstudio.com/"
@@ -2681,6 +2679,8 @@ echo "http://ucanalytics.com/blogs/r-vs-python-comparison-and-awsome-books-free-
 # accessible on host server via http://localhost:8888
 echo "https://rawgit.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/master/ipynb/html/_Appendix%20A%20-%20Virtual%20Machine%20Experience.html"
 echo "http://cloud.shogun-toolbox.org/"
+# following URL added on April 25, 2017:
+echo "http://reference.wolfram.com/language/guide/MachineLearning.html"
 
 #####################################################################################################
 #    R User Conference  - presentations and slides about using R and applied predictive modeling      #
