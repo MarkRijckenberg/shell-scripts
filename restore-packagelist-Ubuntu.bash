@@ -2677,10 +2677,13 @@ echo "https://developers.google.com/edu/python/"
 echo "http://ucanalytics.com/blogs/r-vs-python-comparison-and-awsome-books-free-pdfs-to-learn-them/"
 # ipython notebook webserver in virtualbox VM configured using vagrant (configure time using chef in VM: 31 minutes)
 # accessible on host server via http://localhost:8888
-echo "https://rawgit.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/master/ipynb/html/_Appendix%20A%20-%20Virtual%20Machine%20Experience.html"
+echo "https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition"
 echo "http://cloud.shogun-toolbox.org/"
 # following URL added on April 25, 2017:
 echo "http://reference.wolfram.com/language/guide/MachineLearning.html"
+# following URL added on April 25, 2017:
+# Wolfram Language Computable Workbook:
+echo "https://sandbox.open.wolframcloud.com"
 
 #####################################################################################################
 #    R User Conference  - presentations and slides about using R and applied predictive modeling      #
