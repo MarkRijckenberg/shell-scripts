@@ -2652,6 +2652,11 @@ echo "http://shiny.rstudio.com/articles/cheatsheet.html"
 # SAS cheat sheet 1.2c (2009)
 echo "http://www.theprogrammerscabin.com/SASCheat.pdf"
 
+# SQL
+# following URL added on April 27, 2017:
+# SQL cheat sheet:
+echo "http://www.sql-tutorial.net/sql-cheat-sheet.pdf"
+
 #######################################################################################################
 #     Data Science programming languages - learning requirements:                                      #
 #     R,RStudio,MySQL commands,python,SAS,MatLab (non-free)/Octave(open source), Wolfram                                                                #
