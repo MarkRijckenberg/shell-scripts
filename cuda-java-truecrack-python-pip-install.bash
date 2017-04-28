@@ -1,9 +1,9 @@
 #!/bin/bash
-# Required software: CUDA 6.5, in order to be able to compile truecrack 3.6 source code from Github.com
+# Required software: CUDA 8.0 or newer, in order to be able to compile truecrack 3.6 source code from Github.com
 # afterwards WITH Nvidia graphics card support
 # Required GNU/Linux distribution: Ubuntu 14.04 LTS 64-bit
 # Required free disk space: at least 5 gigabytes free disk space on your root (/) partition
-# last update: January 6, 2016
+# last update: April 28, 2017
 sudo rm /etc/apt/trusted.gpg.d/*
 sudo apt purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
 sudo rm -rf /etc/java-*-openjdk/*
@@ -16,7 +16,8 @@ rm -rf cuda*
 #URL=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8`
 #VERSION=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8|cut -d"_" -f3|cut -d"-" -f1`
 ##wget `echo $URL`
-wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local_8.0.44-1_amd64-deb
+wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
 sudo dpkg -i --force-all cuda*deb
 sudo apt update
 sudo apt install libopencv-core-dev checkinstall
@@ -40,9 +41,9 @@ rm truecrack*
 git clone https://github.com/lvaccaro/truecrack.git
 cd true*
 # use following ./configure line , if you do NOT have an Nvidia graphics card that supports CUDA:
-sudo ./configure --enable-cpu
+#sudo ./configure --enable-cpu
 # use following ./configure line instead, if you DO have an Nvidia graphics card that supports CUDA:
-# sudo ./configure 
+sudo ./configure 
 sudo make
 sudo checkinstall
 # Before building and installing the truecrack package, make sure to first set the 'Version' value to 3.6 during checkinstall configuration
@@ -81,7 +82,7 @@ sudo pip install --upgrade ipython tornado
 
 sudo pip install --upgrade setuptools seaborn
 sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
-sudo pip install --upgrade sklearn jupyter
+sudo pip install --upgrade sklearn jupyter 
 sudo pip install --upgrade mistune networkx pandas py4j runipy socli
 sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
 sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
@@ -92,4 +93,5 @@ sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
 # Ubuntu/Linux 64-bit, GPU enabled:
 # sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
 
+sudo pip install --upgrade tensorflow-gpu
 sudo pip install --upgrade git+git://github.com/tensorflow/skflow.git
