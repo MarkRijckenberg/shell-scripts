@@ -2629,6 +2629,8 @@ echo "http://folk.ntnu.no/joern/itgk/refcard-a4.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf"
+# Keras deep learning library - Scikit-learn - Tensorflow GPU - python framework cheatsheet:
+echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf" 
 
 # Quandl for R
 echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+Sheet.pdf"
