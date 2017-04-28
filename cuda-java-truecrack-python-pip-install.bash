@@ -16,8 +16,7 @@ rm -rf cuda*
 #URL=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8`
 #VERSION=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8|cut -d"_" -f3|cut -d"-" -f1`
 ##wget `echo $URL`
-wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
-wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
+wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
 sudo dpkg -i --force-all cuda*deb
 sudo apt update
 sudo apt install libopencv-core-dev checkinstall
