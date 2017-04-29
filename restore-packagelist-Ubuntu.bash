@@ -1853,12 +1853,13 @@ unp skyviewer-1.0.0-windows.zip
 # rm tb_skyviewer_ov.cfm
 
 # download C2A Planetarium Software for Windows platform
+cd /tmp
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
 wget --no-check-certificate  http://www.astrosurf.com/c2a/english/download/`echo $C2AFILENAME`
 unp `echo $C2AFILENAME`
 wine setup.exe
 
-# get hnsky (v3.3.3) software for Windows platform
+# get hnsky software for Windows platform
 cd $HOME
 sudo rm -rf hnsky*
 echo "Downloading semi-professional free planetarium program HNSKY for MS Windows - use wine application"
