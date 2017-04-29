@@ -1826,14 +1826,15 @@ sudo make
 sudo make install
 
 # download and decompress VStar
-cd
-sudo rm -rf vstar*
-wget --no-check-certificate https://downloads.sourceforge.net/project/vstar/2.18.0/vstar-2.18.0-win32.zip
-unp vstar*.zip
+#cd
+#sudo rm -rf vstar*
+#wget --no-check-certificate https://downloads.sourceforge.net/project/vstar/2.18.0/vstar-2.18.0-win32.zip
+#unp vstar*.zip
 
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 # installation procedure updated on November 30, 2014
 cd $HOME
+sudo rm -rf skyviewer*
 wget --no-check-certificate  https://lambda.gsfc.nasa.gov/toolbox/skyviewer/skyviewer-1.0.0-windows.zip
 unp skyviewer-1.0.0-windows.zip
 
@@ -1857,7 +1858,9 @@ wget --no-check-certificate  http://www.astrosurf.com/c2a/english/download/`echo
 unp `echo $C2AFILENAME`
 wine setup.exe
 
-# get hnsky software for Windows platform
+# get hnsky (v3.3.3) software for Windows platform
+cd $HOME
+sudo rm -rf hnsky*
 echo "Downloading semi-professional free planetarium program HNSKY for MS Windows - use wine application"
 wget --no-check-certificate  http://www.hnsky.org/hnsky_setup.exe
 wine hnsky_setup.exe
