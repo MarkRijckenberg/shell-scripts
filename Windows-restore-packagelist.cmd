@@ -179,6 +179,8 @@ REM install Android emulator, which depends on Virtualbox:
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y libreoffice"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y wps-office-free"
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y visioviewer2013"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y pdf24"
