@@ -147,6 +147,10 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y vlc"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y mpc-hc"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y k-litecodecpackmega"
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y clipgrab"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 7zip.commandline"
