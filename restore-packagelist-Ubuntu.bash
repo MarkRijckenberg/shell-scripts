@@ -1426,6 +1426,8 @@ cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat astropackages` -o APT::Install-Suggests="false"
 cd $HOME
 
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   stellarium
+
 # install texlive 2012.201206 packages (will upgrade texlive 2009 to texlive 2012.201206 in Ubuntu 12.04)
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes ppa:texlive-backports/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
