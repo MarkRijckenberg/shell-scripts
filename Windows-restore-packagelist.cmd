@@ -149,6 +149,8 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y mpc-hc"
 
+REM Use http://madshi.net/madVR.zip  as DirectShow video renderer for mpc-hc video player when watching 4K movies
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y k-litecodecpackmega"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y clipgrab"
