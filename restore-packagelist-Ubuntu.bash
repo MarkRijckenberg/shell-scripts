@@ -1811,9 +1811,25 @@ sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install libgraphic
 echo "Downloading and decompressing scisoft utilities"
 wget ftp://ftp.eso.org/scisoft/scisoft`echo $SCISOFTFILENAME`/linux/fedora11/tar/scisoft-`echo $SCISOFTFILENAME`.tar.gz
 unp scisoft-`echo $SCISOFTFILENAME`.tar.gz
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install libc6:i386 libncurses5:i386 libstdc++6:i386
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install tcsh:i386 libgfortran3:i386 libreadline5:i386 libsdl-image1.2:i386 libsdl-ttf2.0-0:i386 unixodbc:i386
-sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install libxft2:i386 libxrandr2:i386 libxmu6:i386 libXss1:i386  libXtst6:i386  libcanberra-gtk3-module:i386
+sudo DEBIAN_FRONTEND=noninteractive apt  install libc6:i386 libncurses5:i386 libstdc++6:i386
+sudo DEBIAN_FRONTEND=noninteractive apt  install tcsh:i386 libgfortran3:i386 libreadline5:i386 libsdl-image1.2:i386 libsdl-ttf2.0-0:i386 unixodbc:i386
+sudo DEBIAN_FRONTEND=noninteractive apt  install libxft2:i386 libxrandr2:i386 libxmu6:i386 libXss1:i386  libXtst6:i386  libcanberra-gtk3-module:i386
+
+# download and decompress heasoft utilities
+cd
+sudo rm -rf heasoft*
+wget --no-check-certificate https://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/release/heasoft-6.21src_no_xspec_modeldata.tar.gz
+unp heasoft*.tar.gz
+cd heasoft*/BUILD_DIR
+sudo ./configure
+sudo make
+sudo make install
+
+# download and decompress VStar
+cd
+sudo rm -rf vstar*
+wget --no-check-certificate https://downloads.sourceforge.net/project/vstar/2.18.0/vstar-2.18.0-win32.zip
+unp vstar*.zip
 
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 # installation procedure updated on November 30, 2014
