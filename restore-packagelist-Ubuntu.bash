@@ -1461,27 +1461,27 @@ echo "kml file can be opened using Google Earth"
 
 # download The Crab Nebula Explodes
 echo "Downloading The Crab Nebula Explodes"
-wget --no-check-certificate http://services.google.com/earth/kmz/crab_nebula_n.kmz
+wget --no-check-certificate https://services.google.com/earth/kmz/crab_nebula_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Multicolor Galaxies
 echo "Downloading Multicolor Galaxies"
-wget --no-check-certificate http://services.google.com/earth/kmz/aegis_n.kmz
+wget --no-check-certificate https://services.google.com/earth/kmz/aegis_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Images of Nearby Galaxies from the National Optical Astronomical Observatory
 echo "Downloading Images of Nearby Galaxies from the National Optical Astronomical Observatory"
-wget --no-check-certificate http://services.google.com/earth/kmz/noao_showcase_n.kmz
+wget --no-check-certificate https://services.google.com/earth/kmz/noao_showcase_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download The Sloan Digital Sky Survey catalog
 echo "Downloading The Sloan Digital Sky Survey catalog"
-wget --no-check-certificate http://services.google.com/earth/kmz/sdss_query_n.kmz
+wget --no-check-certificate https://services.google.com/earth/kmz/sdss_query_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Exoplanets
 echo "Downloading Exoplanets"
-wget --no-check-certificate http://services.google.com/earth/kmz/exo_planets_n.kmz
+wget --no-check-certificate https://services.google.com/earth/kmz/exo_planets_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 
