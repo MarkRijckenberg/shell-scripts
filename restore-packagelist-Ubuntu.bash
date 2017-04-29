@@ -76,8 +76,9 @@ MACHINE_TYPE=`uname -m`
 
 # define Astronomy filename variables
 SCISOFTFILENAME="7.7.0"
-C2AFILENAME="c2a_full_2_1_2.zip"
+C2AFILENAME="c2a_full_2_1_3.zip"
 AUDELAFILENAME="audela-2.1.0"
+WEKAFILENAME=
 
 #define source directories
 HOME=$(eval echo ~${SUDO_USER})
@@ -414,16 +415,16 @@ cd $HOME
 
 rm *.crt*
 
-wget http://certs.eid.belgium.be/belgiumrs.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs.crt
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs -i belgiumrs.crt
 
-wget http://certs.eid.belgium.be/belgiumrs2.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs2.crt
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs2 -i belgiumrs2.crt
 
-wget http://certs.eid.belgium.be/belgiumrs3.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs3.crt
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
 
-wget http://certs.eid.belgium.be/belgiumrs4.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs4.crt
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
 
 
@@ -548,7 +549,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    googler p
 
 # install LastPass:
 cd /tmp
-wget https://lastpass.com/lplinux.tar.bz2
+wget --no-check-certificate  https://lastpass.com/lplinux.tar.bz2
 unp lplinux*
 cd lplinux
 ./install_lastpass.sh 
@@ -898,7 +899,7 @@ cd /tmp
 rm skype*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   skype skype-bin
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  skype
-wget https://go.skype.com/skypeforlinux-64.deb
+wget --no-check-certificate  https://go.skype.com/skypeforlinux-64.deb
 sudo dpkg -i skypeforlinux-64.deb
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   gtk2-engines-murrine:i386 gtk2-engines-pixbuf:i386 sni-qt:i386
@@ -930,7 +931,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 # cd /tmp
 # sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libsdl2-2.0-0
 # rm *.html
-# wget https://dolphin-emu.org/download/
+# wget --no-check-certificate  https://dolphin-emu.org/download/
 # wget `grep deb index.html |head -n 1|cut -d"\"" -f4`
 # sudo dpkg -i dolphin*.deb
   
@@ -1170,7 +1171,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f upgrade
 
 # install Realplayer (latest version is from 2009)
 #sudo DEBIAN_FRONTEND=noninteractive apt update && sudo DEBIAN_FRONTEND=noninteractive apt install lsb
-#wget http://client-software.real.com/free/unix/RealPlayer11GOLD.deb
+#wget --no-check-certificate  http://client-software.real.com/free/unix/RealPlayer11GOLD.deb
 #sudo dpkg -i RealPlayer11GOLD.deb
 
 # uninstall Java due to all the critical security issues in 2013
@@ -1419,7 +1420,7 @@ read -p "Press <ENTER> key to continue with Astronomy section or CTRL-C to abort
 
 # install zotero add-on for Mozilla Firefox
 #cd $HOME
-#wget https://download.zotero.org/extension/zotero-4.0.20.2.xpi
+#wget --no-check-certificate  https://download.zotero.org/extension/zotero-4.0.20.2.xpi
 #gksudo firefox -install-global-extension zotero-4.0.20.2.xpi
 echo "proceed with Astronomy section of script...."
 cd $HOME/shell-scripts
@@ -1436,12 +1437,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   stellarium
 #sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes  install  texlive-latex-extra biblatex
 
 # install casapy-upstream-binary  - Common Astronomy Software Applications package provided by NRAO, python bindings
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes --force-yes  ppa:aims/casapy
-sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   casapy-upstream-binary
+# uses more than 4 GB of free disk space!
+#cd
+#mkdir casa
+#cd casa
+#wget --no-check-certificate  https://casa.nrao.edu/download/distro/linux/release/el7/casa-release-4.7.2-el7.tar.gz
 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes --force-yes  ppa:olebole/astro-quantal
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes   ppa:olebole/astro-xenial
 sudo DEBIAN_FRONTEND=noninteractive apt update
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   aladin
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   casacore 
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   cpl
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   esorex
@@ -1452,51 +1456,53 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   sextractor
 
 # download CSC KML Interface to Sky in Google Earth
 echo "Downloading CSC KML Interface to Sky in Google Earth"
-wget http://cxc.harvard.edu/csc/googlecat/cxo_1.2.kml
+wget --no-check-certificate http://cxc.harvard.edu/csc/googlecat/cxo_1.2.kml
 echo "kml file can be opened using Google Earth"
 
 # download The Crab Nebula Explodes
 echo "Downloading The Crab Nebula Explodes"
-wget http://services.google.com/earth/kmz/crab_nebula_n.kmz
+wget --no-check-certificate http://services.google.com/earth/kmz/crab_nebula_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Multicolor Galaxies
 echo "Downloading Multicolor Galaxies"
-wget http://services.google.com/earth/kmz/aegis_n.kmz
+wget --no-check-certificate http://services.google.com/earth/kmz/aegis_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Images of Nearby Galaxies from the National Optical Astronomical Observatory
 echo "Downloading Images of Nearby Galaxies from the National Optical Astronomical Observatory"
-wget http://services.google.com/earth/kmz/noao_showcase_n.kmz
+wget --no-check-certificate http://services.google.com/earth/kmz/noao_showcase_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download The Sloan Digital Sky Survey catalog
 echo "Downloading The Sloan Digital Sky Survey catalog"
-wget http://services.google.com/earth/kmz/sdss_query_n.kmz
+wget --no-check-certificate http://services.google.com/earth/kmz/sdss_query_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 # download Exoplanets
 echo "Downloading Exoplanets"
-wget http://services.google.com/earth/kmz/exo_planets_n.kmz
+wget --no-check-certificate http://services.google.com/earth/kmz/exo_planets_n.kmz
 echo "kmz file can be opened using Google Earth"
 
 
-
-# download and install Audela
-echo "Downloading and installing Audela - free and open source astronomy software intended for digital observations"
-wget http://sourceforge.net/projects/audela/files/audela/`echo $AUDELAFILENAME`/`echo $AUDELAFILENAME`.deb
-sudo dpkg -i  `echo $AUDELAFILENAME`.deb
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 # download and decompress IRAF - Image Reduction and Analysis Facility, a general purpose
 # software system for the reduction and analysis of astronomical data
+# IRAF software not updated since 2012!
 #echo "Downloading and decompressing IRAF - Image Reduction and Analysis Facility"
 #wget ftp://iraf.noao.edu/iraf/v216/PCIX/iraf.lnux.x86_64.tar.gz
 #unp iraf.lnux.x86_64.tar.gz
 
-#echo "Downloading and installing skychart"
+# download and install Audela 64-bit
+cd /tmp
+echo "Downloading and installing Audela - free and open source astronomy software intended for digital observations"
+wget --no-check-certificate https://downloads.sourceforge.net/project/audela/audela/current-development/audela-3.0.0b3-amd64.deb
+sudo dpkg -i  audela*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt --yes  -f install
+
+#download and install Skychart 64-bit which depends on installation of libpasastro
 #SKYCHARTREMOTEDIR="http://sourceforge.net/projects/skychart/files/1-%20cdc-skychart/version_3.8/"
 #url=$(wget -O- -q --no-check-certificate `echo $SKYCHARTREMOTEDIR` |  sed -ne 's/^.*"\([^"]*skychart[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
@@ -1512,6 +1518,28 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 #rm -rf "$dir"
 #cd $HOME
 #sudo DEBIAN_FRONTEND=noninteractive apt -f install
+cd /tmp
+sudo rm skychart*.deb
+wget --no-check-certificate https://sourceforge.net/projects/libpasastro/files/version%201.1/libpasastro_1.1-14_amd64.deb
+sudo dpkg -i libpasastro*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
+cd /tmp
+wget --no-check-certificate https://sourceforge.net/projects/skychart/files/1-software/version_4.0/skychart_4.0-3575b_amd64.deb
+sudo dpkg -i skychart*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt --yes  -f install
+cd /tmp
+wget --no-check-certificate https://downloads.sourceforge.net/project/skychart/2-catalogs/Stars/skychart-data-stars_4.0-3421_all.deb
+sudo dpkg -i skychart-data-stars*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt -f install
+cd /tmp
+wget --no-check-certificate https://downloads.sourceforge.net/project/skychart/2-catalogs/Nebulea/skychart-data-pictures_4.0-3421_all.deb
+sudo dpkg -i skychart-data-pictures*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt -f install
+cd /tmp
+wget --no-check-certificate https://downloads.sourceforge.net/project/skychart/2-catalogs/Nebulea/skychart-data-dso_4.0-3431_all.deb
+sudo dpkg -i skychart-data-dso*.deb
+sudo DEBIAN_FRONTEND=noninteractive apt -f install
+
 
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    texmaker
 #install texstudio
@@ -1576,19 +1604,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes     texmaker
 
 fi
 
-#wget http://sourceforge.net/projects/skychart/files/2-catalogs/Stars/skychart-data-stars_3.8-2293_all.deb
-#sudo dpkg -i skychart-data-stars_3.8-2293_all.deb
-#sudo DEBIAN_FRONTEND=noninteractive apt -f install
-
-#wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-dso_3.8-2293_all.deb
-#sudo dpkg -i skychart-data-dso_3.8-2293_all.deb
-#sudo DEBIAN_FRONTEND=noninteractive apt -f install
-
-#wget http://sourceforge.net/projects/skychart/files/2-catalogs/Nebulea/skychart-data-pictures_3.1-1466_all.deb
-#sudo dpkg -i skychart-data-pictures_3.1-1466_all.deb
-#sudo DEBIAN_FRONTEND=noninteractive apt -f install
-
-
 ###############################################################################################
 #     DOWNLOAD STAR ATLAS PDF FILES BEFORE ANY OTHER PDF FILES                                  #
 ###############################################################################################
@@ -1613,32 +1628,32 @@ rm google*
 
 #OBSOLETE: download Triatlas charts in PDF format from http://www.uv.es/jrtorres/triatlas.html
 #OBSOLETE:echo "Downloading Triatlas charts (from jrtorres) in A4 format for Europe"
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C01_001-030.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C02_031-060.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C03_061-090.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C04_091-120.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C05_121-150.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C06_151-180.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C07_181-210.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C08_211-240.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C09_241-270.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C10_271-300.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C11_301-330.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C12_331-360.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C13_361-390.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C14_391-420.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C15_421-450.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C16_451-480.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C17_481-510.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
-#OBSOLETE:wget http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_a/Triatlas_2ed_A.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/TriAtlas_A_Index.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B1.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B2.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_b/Triatlas_2ed_B3.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/TriAtlas_B_Index.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C01_001-030.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C02_031-060.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C03_061-090.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C04_091-120.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C05_121-150.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C06_151-180.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C07_181-210.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C08_211-240.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C09_241-270.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C10_271-300.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C11_301-330.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C12_331-360.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C13_361-390.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C14_391-420.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C15_421-450.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C16_451-480.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C17_481-510.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C18_511-540.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/section_c/C19_541-571.pdf
+#OBSOLETE:wget --no-check-certificate  http://www.uv.es/jrtorres/TriAtlas_C_Index.pdf
 mkdir $HOME/astronomy
 cd $HOME/astronomy
 
@@ -1649,7 +1664,7 @@ wget --no-check-certificate http://www.deepskywatch.com/files/deepsky-atlas/Deep
 # download SAO/NASA ADS Help Pages
 echo "Downloading SAO/NASA ADS Help Pages"
 wget --no-check-certificate http://adsabs.harvard.edu/abs_doc/help_pages/adshelp.pdf
-mv adshelp.pdf sao_nasa_ads_help_pages_July_9_2012.pdf
+mv adshelp.pdf sao_nasa_ads_help_pages_April_17_2017.pdf
 
 # download American Astronomical Society manuscript preparation guidelines 
 echo "Downloading American Astronomical Society manuscript preparation guidelines"
@@ -1713,7 +1728,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt clean
 #grep -v opera /etc/apt/sources.list  > /tmp/sources.list
 #sudo cp /tmp/sources.list  /etc/apt/sources.list
 
-# wget http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
+# wget --no-check-certificate  http://hea-www.harvard.edu/simx/simx-2.0.6.tar.gz
 # tar -zxvf simx-2.0.6.tar.gz
 # cd simx-2.0.6/
 # sudo ./configure
@@ -1735,22 +1750,15 @@ wget --no-check-certificate `cat download-files |grep linux|grep undle|cut -d"\"
 FILENAME=`cat download-files |grep linux|grep undle|cut -d"\"" -f2|cut -d"/" -f7`
 unp $FILENAME
 
-# install Aladin v8.040 (java program)
-cd
-rm -rf Aladin
-wget --no-check-certificate http://aladin.u-strasbg.fr/java/download/Aladin.tar
-unp Aladin.tar
-# java -jar ~/Aladin/Aladin.jar
-
 # 20161102: check this section about nightfall for coding errors
 # Compile and install nightfall - program that can handle calculations involving binary star systems.
 cd
 rm -rf nightfall
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libgtk2.0-0 libgtk2.0-dev gnuplot
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libgl1-mesa-dev freeglut3-dev libgtkgl2.0-dev libjpeg62-dev
-wget http://www.la-samhna.de/nightfall/nightfall-1.88.tar.gz
+wget --no-check-certificate  http://www.la-samhna.de/nightfall/nightfall-1.88.tar.gz
 unp nightfall*.tar.gz
-cd nightfall
+cd nightfall*
 sudo ./configure --enable-openmp
 sudo make
 sudo checkinstall
@@ -1768,8 +1776,8 @@ sudo checkinstall
 #rm -rf nightshade*
 #rm files
 #rm Nightshade*.exe
-#wget http://www.garret.ru/fastdb.html
-#wget `cat fastdb.html |grep nix|cut -d"\"" -f2`
+#wget --no-check-certificate  http://www.garret.ru/fastdb.html
+#wget --no-check-certificate  `cat fastdb.html |grep nix|cut -d"\"" -f2`
 #unp fastdb*.tar.gz
 #cd fastdb*
 #sudo ./configure
@@ -1781,7 +1789,7 @@ sudo checkinstall
 # but nightshade cannot find SDL_Pango library, even after installing it
 #cd $HOME
 #rm *.html
-#wget http://downloads.sourceforge.net/project/sdlpango/SDL_Pango/0.1.2/SDL_Pango-0.1.2.tar.gz
+#wget --no-check-certificate  http://downloads.sourceforge.net/project/sdlpango/SDL_Pango/0.1.2/SDL_Pango-0.1.2.tar.gz
 #unp SDL_Pango-0.1.2.tar.gz
 #cd SDL_Pango*
 #sudo ./configure
@@ -1792,8 +1800,8 @@ sudo checkinstall
 cd $HOME
 rm files
 sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install libgraphicsmagick++1-dev libsdl1.2-dev
-#wget http://www.nightshadesoftware.org/projects/nightshade/files
-#wget http://www.nightshadesoftware.org`cat files|grep win32|cut -d"\"" -f4`
+#wget --no-check-certificate  http://www.nightshadesoftware.org/projects/nightshade/files
+#wget --no-check-certificate  http://www.nightshadesoftware.org`cat files|grep win32|cut -d"\"" -f4`
 #FILENAME=`cat files|grep win32|cut -d"\"" -f4|cut -d"/" -f5`
 #wine $FILENAME
 # this Windows version of Nightshade requires a videocard that supports OpenGL 3.0 or higher
@@ -1810,15 +1818,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install libxft2:i3
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 # installation procedure updated on November 30, 2014
 cd $HOME
-wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/skyviewer-1.0.0-windows.zip
+wget --no-check-certificate  http://lambda.gsfc.nasa.gov/toolbox/skyviewer/skyviewer-1.0.0-windows.zip
 unp skyviewer-1.0.0-windows.zip
 
 # sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install unp  libqglviewer-dev  libcfitsio3-dev qt4-dev-tools libglu1-mesa  libglu1-mesa-dev
 # sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install libchealpix0  libchealpix-dev
 
-# wget http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
+# wget --no-check-certificate  http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 # FILENAME=`grep Version tb_skyviewer_ov.cfm |grep kyviewer|cut -d"\"" -f2|cut -d"/" -f2|head -n1`
-# wget http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$FILENAME
+# wget --no-check-certificate  http://lambda.gsfc.nasa.gov/toolbox/skyviewer/$FILENAME
 # unp $FILENAME
 # cd skyviewer*
 # qmake
@@ -1829,13 +1837,13 @@ unp skyviewer-1.0.0-windows.zip
 
 # download C2A Planetarium Software for Windows platform
 echo "Downloading C2A Planetarium Software for Windows platform - use wine application"
-wget http://www.astrosurf.com/c2a/english/download/`echo $C2AFILENAME`
+wget --no-check-certificate  http://www.astrosurf.com/c2a/english/download/`echo $C2AFILENAME`
 unp `echo $C2AFILENAME`
 wine setup.exe
 
 # get hnsky software for Windows platform
 echo "Downloading semi-professional free planetarium program HNSKY for MS Windows - use wine application"
-wget http://www.hnsky.org/hnsky_setup.exe
+wget --no-check-certificate  http://www.hnsky.org/hnsky_setup.exe
 wine hnsky_setup.exe
 
 # install texlive the only proper way so that tlmgr also works correctly in Ubuntu 13.10 or Ubuntu 14.04 LTS
@@ -1845,9 +1853,9 @@ wine hnsky_setup.exe
 #sudo DEBIAN_FRONTEND=noninteractive apt purge texlive-base texlive-binaries  texlive-fonts-recommended
 #sudo DEBIAN_FRONTEND=noninteractive apt purge  texlive-common texlive-doc-base texlive-latex-base texlive-publishers
 sudo DEBIAN_FRONTEND=noninteractive apt install texlive-fonts-recommended
-git clone https://github.com/scottkosty/install-tl-ubuntu.git
-cd install-tl-ubuntu
-./install-tl-ubuntu --help
+#git clone https://github.com/scottkosty/install-tl-ubuntu.git
+#cd install-tl-ubuntu
+#./install-tl-ubuntu --help
 
 # following script tries to install Ubuntu package parallel which ONLY exists in Ubuntu 13.10 and Ubuntu 14.04 LTS
 sudo bash install-tl-ubuntu  --allow-small
@@ -1877,7 +1885,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
 
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://www.rstudio.com/products/rstudio/download/
+wget --no-check-certificate  http://www.rstudio.com/products/rstudio/download/
 wget `cat index.html|grep -v tar|grep amd64\.deb|cut -d"\"" -f2`
 sudo dpkg -i rstudio*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
@@ -1885,7 +1893,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 else
   # 32-bit stuff here
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   gdebi-core pandoc libssl0.9.8 libapparmor1
-wget http://www.rstudio.com/products/rstudio/download/
+wget --no-check-certificate  http://www.rstudio.com/products/rstudio/download/
 wget `cat index.html|grep -v tar|grep i386\.deb|cut -d"\"" -f2`
 sudo dpkg -i rstudio*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
@@ -1912,9 +1920,9 @@ R CMD INSTALL testit_*.tar.gz
 
 cd /tmp
 rm index.html
-wget http://cran.r-project.org/src/contrib/
+wget --no-check-certificate  http://cran.r-project.org/src/contrib/
 FILENAME=`grep \"rgl index.html |head -n 1|cut -d"\"" -f8`
-wget http://cran.r-project.org/src/contrib/`echo $FILENAME`
+wget --no-check-certificate  http://cran.r-project.org/src/contrib/`echo $FILENAME`
 unp rgl*
 R CMD build rgl
 R CMD INSTALL rgl_*.tar.gz
@@ -1953,16 +1961,16 @@ rm google*
 # sudo rm /etc/apt/sources.list.d/*
 
 
-# install weka v3.7.11 - import preprocessed .csv from R into weka to perform significant
+# install weka - import preprocessed .csv from R into weka to perform significant
 # feature/variable selection for R models
-#cd $HOME
-#wget http://prdownloads.sourceforge.net/weka/`echo $WEKAFILENAME`
-#unzip `echo $WEKAFILENAME`
+cd $HOME
+rm weka*.zip
+wget --no-check-certificate  https://downloads.sourceforge.net/project/weka/weka-3-9/3.9.1/weka-3-9-1.zip
+unp weka*.zip
 
 # following URL added on September 20, 2014:
 # install Google Cloud SDK (to be able to use Big Query)
 curl https://sdk.cloud.google.com | bash
-
 
 ###############################################################################################
 #     Links for astronomers                                                                   #
