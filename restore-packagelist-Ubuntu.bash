@@ -1818,7 +1818,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install libxft2:i3
 # download and compile skyviewer from http://lambda.gsfc.nasa.gov/toolbox/tb_skyviewer_ov.cfm
 # installation procedure updated on November 30, 2014
 cd $HOME
-wget --no-check-certificate  http://lambda.gsfc.nasa.gov/toolbox/skyviewer/skyviewer-1.0.0-windows.zip
+wget --no-check-certificate  https://lambda.gsfc.nasa.gov/toolbox/skyviewer/skyviewer-1.0.0-windows.zip
 unp skyviewer-1.0.0-windows.zip
 
 # sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes -f install unp  libqglviewer-dev  libcfitsio3-dev qt4-dev-tools libglu1-mesa  libglu1-mesa-dev
