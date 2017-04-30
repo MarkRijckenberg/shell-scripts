@@ -524,6 +524,8 @@ sudo apt install lxqt-metapackage lxqt-common
 # then click on Preferences::Appearance::Icons Theme::Numix Circle Light
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    numix-icon-theme-circle
 
+sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    chromium-codecs-ffmpeg-extra
+
 ##########################################################################################################
 # install base packages using basepackages file
 cd $HOME/shell-scripts
