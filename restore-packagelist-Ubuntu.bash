@@ -645,7 +645,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  variety
 # TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
 #sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tlp tlp-rdw
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tlp tlp-rdw
 
 # Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
