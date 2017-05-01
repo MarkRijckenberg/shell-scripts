@@ -513,8 +513,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tor-browse
 #rm -rf ~/.config/lxterminal/
 #rm -rf ~/.config/openbox*
 #rm -rf ~/.config/unity*
-sudo apt purge lxqt-metapackage lxqt-common lximage-qt  pcmanfm-qt 
-sudo apt install lxqt-metapackage lxqt-common 
+# the following lxqt commands are dangerous and can cause network-manager to get uninstalled!
+#sudo apt purge lxqt-metapackage lxqt-common lximage-qt  pcmanfm-qt 
+#sudo apt install lxqt-metapackage lxqt-common 
 
 # installing budgie desktop causes serious issues on mother's desktop pc
 # Install budgie desktop environment with excellent font management (even on 40 inch Full HD TV screen)
@@ -1200,7 +1201,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   gcc-4.6 gcc-4
 ###############################################################################################
 
 # temporary workaround for ASUS Z170 Pro Gamer motherboards:
-sudo apt purge xfce4-notifyd lxqt-powermanagement
+# sudo apt purge xfce4-notifyd lxqt-powermanagement
 # end of workaround.
 # April 3, 2016: temporary workaround for issue/problem where pcscd process is using 97% of CPU all the time:
 # sudo apt purge pcscd
