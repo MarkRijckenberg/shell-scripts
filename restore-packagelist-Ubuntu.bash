@@ -389,7 +389,8 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  
 #sudo touch /etc/apt/sources.list.d/eid.list
 #sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
 #sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
+sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
+sudo aptitude install usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
 sudo update-pciids
 sudo update-usbids
 
@@ -529,6 +530,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    numix-ico
 
 sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    chromium-codecs-ffmpeg-extra
 
+# Install TLP - advanced power management command line tool for Linux
+# TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
+#sudo DEBIAN_FRONTEND=noninteractive apt update
+sudo apt install  tlp
+sudo apt install  tlp-rdw
+
 ##########################################################################################################
 # install base packages using basepackages file
 cd $HOME/shell-scripts
@@ -641,11 +649,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  variety
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   firefox-trunk
 
-# Install TLP - advanced power management command line tool for Linux
-# TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
-#sudo DEBIAN_FRONTEND=noninteractive apt update
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tlp tlp-rdw
+
 
 # Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
