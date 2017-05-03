@@ -530,6 +530,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    numix-ico
 
 sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    chromium-codecs-ffmpeg-extra
 
+sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    kaccounts-providers
+
 # Install TLP - advanced power management command line tool for Linux
 # TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
