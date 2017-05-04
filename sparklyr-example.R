@@ -18,7 +18,8 @@ set.seed(100)
 config <- spark_config()
 # number of CPU cores to use:
 config$spark.executor.cores <- 6
-config$spark.executor.memory <- "4G"
+config$spark.driver.memory <- "12G"
+config$spark.executor.memory <- "2G"
 # Connect to local version:
 sc <- spark_connect (master = "local",
                      config = config, version = "2.0.2")
