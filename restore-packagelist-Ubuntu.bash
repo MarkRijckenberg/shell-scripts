@@ -2208,6 +2208,8 @@ echo "https://itunes.apple.com/be/app/socratic-homework-answers/id1014164514?l=n
 # following URL added on February 18, 2014:
 echo "http://mathworld.wolfram.com/"
 
+# free Wolfram CDF player (added on May 7, 2017):
+echo "https://www.wolfram.com/cdf-player/"
 # following URL added on March 12, 2016 (free competitor to Mathematica):
 echo "https://cloud.sagemath.com/"
 # following URL added on February 18, 2014:
