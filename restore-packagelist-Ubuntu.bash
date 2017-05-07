@@ -2662,7 +2662,7 @@ echo "http://www.econ.ku.dk/pajhede/Cheatsheet.pdf"
 echo "http://steventhornton.ca/a-matlab-cheat-sheet/"
 echo "https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB"
 
-# Octave Reference Card
+# Octave (mostly compatible with MATLAB) Reference Card
 echo "http://folk.ntnu.no/joern/itgk/refcard-a4.pdf"
 
 # Python data science cheat sheets:
