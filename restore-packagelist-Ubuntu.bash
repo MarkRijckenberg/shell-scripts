@@ -247,6 +247,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:twodopeshaggy/j
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor-browser
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:openshot.developers/ppa
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:jonathonf/vlc
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -308,6 +309,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   arno-iptables-firewall
 #sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   ufw
 sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   blueman
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   vlc vlc-nox
 
 # install newest version of avconf
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libav-tools
