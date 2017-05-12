@@ -2509,7 +2509,7 @@ echo "http://www.datasciencetoolkit.org/developerdocs#setup"
 ###############################################################################################
 # following URL added on July 18, 2014:
 echo "http://www.jds-online.com/"
-echo "http://radar.oreilly.com/data"
+echo "https://www.oreilly.com/topics/data"
 #######################################################
 # how to clean data and perform data imputation in R  #
 #######################################################
