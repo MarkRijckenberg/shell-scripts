@@ -309,7 +309,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   arno-iptables-firewall
 #sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   ufw
 sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   blueman
-sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   vlc vlc-nox vlc-bin   browser-plugin-vlc sopcast-player
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   vlc-data vlc vlc-nox vlc-bin   browser-plugin-vlc sopcast-player
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   vlc vlc-nox
 
 # install newest version of avconf
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libav-tools
