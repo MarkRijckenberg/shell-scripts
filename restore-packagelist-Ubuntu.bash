@@ -2737,7 +2737,8 @@ echo "http://reference.wolfram.com/language/guide/MachineLearning.html"
 # following URL added on April 25, 2017:
 # Wolfram Language Computable Workbook:
 echo "https://sandbox.open.wolframcloud.com"
-
+# Free book "Physical Modeling in MATLAB" - for absolute beginners:
+echo "https://open.umn.edu/opentextbooks/BookDetail.aspx?bookId=82"
 #####################################################################################################
 #    R User Conference  - presentations and slides about using R and applied predictive modeling      #
 #######################################################################################################
