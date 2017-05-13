@@ -81,7 +81,7 @@ REM ############################################################################
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y xboot"
 
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y geforce-game-ready-driver"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y geforce-game-ready-driver"
 
 REM Get Internet download utilities:
  
