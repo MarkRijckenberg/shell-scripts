@@ -270,3 +270,6 @@ echo "Update all currently installed choco packages:"
 
 cup -y all
 
+echo "Show list of locally installed packages - installed using choco package manager for Windows:"
+
+choco list -lo
