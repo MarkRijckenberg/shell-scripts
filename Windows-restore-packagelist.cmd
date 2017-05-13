@@ -100,15 +100,19 @@ REM curl-7.46.0-win32-local.msi instead of
  
 REM curl-7.46.0-win64-local.msi
 
-set CURLFILENAME=curl-7.46.0-win64-local.msi
+REM set CURLFILENAME=curl-7.46.0-win64-local.msi
 
-mkdir C:\temp
+REM mkdir C:\temp
 
-cd c:\temp
+REM cd c:\temp
 
-wget http://www.confusedbycode.com/curl/%CURLFILENAME%
+REM wget http://www.confusedbycode.com/curl/%CURLFILENAME%
 
-msiexec /I  %CURLFILENAME% /quiet /passive
+REM msiexec /I  %CURLFILENAME% /quiet /passive
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y curl"
+
+REM ############################################################################################### 
 
 REM get sha256sum.exe to check SHA256SUM values of downloaded .iso image files:
 
@@ -117,6 +121,8 @@ mkdir C:\temp
 cd c:\temp
 
 wget  http://www.labtestproject.com/files/sha256sum/sha256sum.exe
+
+REM ############################################################################################### 
 
 REM Get R and RStudio
  
