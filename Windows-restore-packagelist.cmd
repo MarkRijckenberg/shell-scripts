@@ -64,7 +64,7 @@ REM Get web browsers
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y Firefox"
  
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y google-chrome-x64"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y GoogleChrome"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y Opera"
 
