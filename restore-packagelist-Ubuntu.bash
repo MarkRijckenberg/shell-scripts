@@ -1043,8 +1043,8 @@ rm -rf ~/.config/teamviewer10
 rm -rf ~/.config/teamviewer11
 rm *.deb
 wget --no-check-certificate `echo "https://www.teamviewer.com/en/download/linux.aspx" | wget -O- -i- --no-check-certificate | hxnormalize -x | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep i386|grep deb|head -n 1`
+rm team*host*.deb
 sudo dpkg -i teamviewer*.deb
-
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 # teamviewer autostart fix procedure - add configuration lines below to /etc/rc.local
 sudo -k teamviewer --daemon start
@@ -1154,6 +1154,7 @@ rm -rf ~/.config/teamviewer10
 rm -rf ~/.config/teamviewer11
 rm *.deb
 wget --no-check-certificate `echo "https://www.teamviewer.com/en/download/linux.aspx" | wget -O- -i- --no-check-certificate | hxnormalize -x | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep i386`
+rm team*host*.deb
 sudo dpkg -i teamviewer*.deb
 
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
