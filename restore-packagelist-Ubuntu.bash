@@ -2253,6 +2253,8 @@ echo "https://www.oppia.org/learn"
 echo "http://www.mooc-list.com/"
 # following URL added on March 27, 2015:
 echo "https://openeducation.blackboard.com/mooc-catalog/courseDetails/view?course_id=_219_1"
+# advanced online Desmos graphing calculator (free):
+echo "https://www.desmos.com/calculator"
 
 ###############################################################################################
 #     Language links for kids                                                                     #
