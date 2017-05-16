@@ -2679,6 +2679,7 @@ echo "http://folk.ntnu.no/joern/itgk/refcard-a4.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf"
+echo "http://www.datasciencefree.com/cheatsheets.html"
 # PySpark cheat sheet:
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf"
 # Keras deep learning library - Scikit-learn - Tensorflow GPU - python framework cheatsheet:
@@ -2692,6 +2693,9 @@ echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+
 # One R cheat sheet per data science processing step:
 # Includes separate cheat sheet for SparklyR, dplyr and tidyr
 echo "https://www.rstudio.com/resources/cheatsheets/"
+
+# R
+echo "http://www.datasciencefree.com/cheatsheets.html"
 
 # R
 # following URL added on April 24, 2017:
