@@ -87,6 +87,7 @@ brew reinstall kdiff3
 #brew reinstall mutt
 brew reinstall node
 brew reinstall offline-imap
+brew reinstall osquery
 brew reinstall p7zip
 brew reinstall python
 # brew reinstall sqlite
