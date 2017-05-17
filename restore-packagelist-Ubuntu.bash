@@ -248,6 +248,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:openshot.developers/ppa
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:jonathonf/vlc
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/xenial xenial main"
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -282,6 +283,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB31
 # 2. Add the Spotify repository
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
+# add osquery repository signing key to be able to verify downloaded packages
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B
 
 # add partner repository for skype software package
 # replace codename (for example: trusty) with right Ubuntu codename
@@ -303,6 +306,9 @@ sudo DEBIAN_FRONTEND=noninteractive apt update
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
 # sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   `cat  allpackages` -o APT::Install-Suggests="false"
+
+# install osquery
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   osquery
 
 # commented out following line, because it will break bluetooth support in Lubuntu/Xubuntu 14.04 LTS 64-bit 
 # sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   pulseaudio*
