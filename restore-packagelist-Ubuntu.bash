@@ -557,6 +557,7 @@ cd $HOME
 ##########################################################################################################
 
 # install streamlink, which is replacement for minitube Youtube streamer:
+# https://www.ostechnix.com/streamlink-watch-online-video-streams-command-line/
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  streamlink
 
 sudo npm install -g bower gulp  minimatch graceful-fs minimatch uuid lodash   
