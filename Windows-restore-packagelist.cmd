@@ -74,6 +74,9 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y grepwin"
 
+REM streamlink is replacement for Minitube and allows streaming of Youtube video to VLC player:
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y streamlink"
+
 REM ############################################################################################### 
 REM xboot in Windows is similar to multisystem in Ubuntu
 REM xboot is an easy-to-use utility for creating Multiboot USB/ISO
@@ -147,7 +150,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y FoxitReader"
 
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y belgium-eid-middleware -version 407.7466"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y eid-belgium"
 
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y alcohol52-free"
 
