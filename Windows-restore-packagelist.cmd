@@ -150,7 +150,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y FoxitReader"
 
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y eid-belgium"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y eid-belgium"
 
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y alcohol52-free"
 
