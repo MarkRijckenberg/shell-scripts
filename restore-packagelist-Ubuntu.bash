@@ -556,8 +556,9 @@ sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::
 cd $HOME
 ##########################################################################################################
 
-# install streamlink, which is replacement for minitube Youtube streamer:
+# install streamlink, which is replacement for minitube Youtube streamer and which uses less CPU:
 # https://www.ostechnix.com/streamlink-watch-online-video-streams-command-line/
+# example of valid command:  streamlink https://www.youtube.com/watch?v=Czy0pXRRZcs  best --player=mplayer
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  streamlink
 
 sudo npm install -g bower gulp  minimatch graceful-fs minimatch uuid lodash   
