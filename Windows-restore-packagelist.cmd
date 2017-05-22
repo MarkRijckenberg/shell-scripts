@@ -136,6 +136,8 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y r.studio"
 
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y microsoft-r-open"
+
 REM show list of locally installed packages - installed using choco package manager for Windows:
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco list -lo"
