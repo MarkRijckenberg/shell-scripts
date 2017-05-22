@@ -118,22 +118,23 @@ REM msiexec /I  %CURLFILENAME% /quiet /passive
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y curl"
 
 REM ############################################################################################### 
-
 REM get sha256sum.exe to check SHA256SUM values of downloaded .iso image files:
-
-mkdir C:\temp
-
-cd c:\temp
-
-wget  http://www.labtestproject.com/files/sha256sum/sha256sum.exe
-
+REM mkdir C:\temp
+REM cd c:\temp
+REM wget  http://www.labtestproject.com/files/sha256sum/sha256sum.exe
 REM ############################################################################################### 
+
+REM https://github.com/gurnec/HashCheck
+REM https://chocolatey.org/packages/hashcheck
+REM The HashCheck Shell Extension makes it easy for anyone to calculate and 
+REM verify checksums and hashes from Windows Explorer
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y hashcheck"
 
 REM Get R and RStudio
  
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y r.project"
  
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y R.Studio"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y r.studio"
 
 REM show list of locally installed packages - installed using choco package manager for Windows:
 
