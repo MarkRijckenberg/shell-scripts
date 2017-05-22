@@ -556,6 +556,9 @@ sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::
 cd $HOME
 ##########################################################################################################
 
+# install streamlink, which is replacement for minitube Youtube streamer:
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  streamlink
+
 sudo npm install -g bower gulp  minimatch graceful-fs minimatch uuid lodash   
 # install open-source VOIP and end-to-end encrypted messenger program called "Wire" for iOS,Android,Linux,Windows,MacOSX:
 cd
