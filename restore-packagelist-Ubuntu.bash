@@ -1072,13 +1072,13 @@ else
   # 32-bit stuff here
 
 # install newest version of minitube
-cd /tmp
-rm minitube*
-sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   minitube
-wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube.deb
-sudo dpkg -i minitube.deb
+#cd /tmp
+#rm minitube*
+#sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   minitube
+#wget --no-check-certificate http://flavio.tordini.org/files/minitube/minitube.deb
+#sudo dpkg -i minitube.deb
 # sudo DEBIAN_FRONTEND=noninteractive apt install minitube
-sudo DEBIAN_FRONTEND=noninteractive apt install -f
+#sudo DEBIAN_FRONTEND=noninteractive apt install -f
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 cd $HOME
