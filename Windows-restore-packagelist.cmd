@@ -1,3 +1,7 @@
+REM Last modification date: 2017/05/22
+
+REM Recommended to run this script on SSDs, not on conventional hard disks....
+
 REM This script installs 62 Windows applications and requires 11 GB of free disk space to install
 
 REM Following .cmd Windows command script has been tested and works in Windows 8.1 or Windows 10 Pro 64-bit:
@@ -136,6 +140,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y r.studio"
 
+REM https://mran.microsoft.com/download/
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y microsoft-r-open"
 
 REM show list of locally installed packages - installed using choco package manager for Windows:
