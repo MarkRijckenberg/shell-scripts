@@ -1,6 +1,6 @@
 #!/bin/bash
 # TYPE: Bash Shell script.
-# PURPOSE: Scan gray scale documents on Epson scanner to PDF file. Can unite multiple PDF files in work directory, automatically send united PDF to your Email account, and then automatically archive them.
+# PURPOSE: Scan documents on Epson scanner to PDF file. Can unite multiple PDF files in work directory, automatically send united PDF to your Email account, and then automatically archive them.
 # REQUIRES: Ubuntu 16.04 LTS 64-bit or newer
 # REQUIRES: ksh sane-utils tesseract-ocr tesseract-ocr-eng tesseract-ocr-nld tesseract-ocr-fra
 # tesseract-ocr-deu msmtp heirloom-mailx imagemagick pdfunite
@@ -11,6 +11,45 @@
 # sudo apt update
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-nld tesseract-ocr-fra tesseract-ocr-deu msmtp heirloom-mailx sane-utils
 
+ function cleanup {
+  rm -rf /tmp/*
+  }
+  
+
+function setdefaultvalues {
+LANGUAGESETTING="eng"
+RESOLUTIONSETTING="300"
+EMAIL=""
+COLORSETTING="Gray"
+}
+
+# 2017/5/25: scan2email function currently not working correctly...
+function scan2email {
+
+        if  [[ $pdfquantity -gt 1 ]];then
+		    pdfunite *.pdf  `echo $dateunitedpdf``echo $pdfname`	           
+		    # First create and configure the files ~/.msmtprc  and ~/.mailrc
+		    # The file ~/.msmtprc should contain the line   set sendmail=/usr/bin/msmtp
+		    # Replace emailaddress@somewhere.com with the correct destination Email address
+		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $dateunitedpdf``echo $pdfname` $EMAIL
+		    mkdir `echo $dateunitedpdf`
+		    mv *.pdf `echo $dateunitedpdf`
+        fi
+	           
+        if  [[ $pdfquantity -eq 1 ]];then
+	           
+		    # First create and configure the files ~/.msmtprc  and ~/.mailrc
+		    # The file ~/.msmtprc should contain the line   set sendmail=/usr/bin/msmtp
+		    # Replace emailaddress@somewhere.com with the correct destination Email address
+		    mv *.pdf  `echo $dateunitedpdf``echo $pdfname`
+		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $dateunitedpdf``echo $pdfname` $EMAIL
+		    mkdir `echo $dateunitedpdf`
+		    mv *.pdf `echo $dateunitedpdf`
+        fi
+
+}
+
+function setlanguage {
 
   echo "Press 1 to scan English document"
   echo "Press 2 to scan Dutch document"
@@ -18,30 +57,32 @@
   echo "Press 4 to scan German document"
   read LANG
   
-  if [ $LANG -eq 1 ]
-    then
+  if [ $LANG -eq 1 ];then
     echo "English chosen"
     LANGUAGESETTING="eng"
+    mainmenu
   fi
  
-  if [ $LANG -eq 2 ]
-    then
+  if [ $LANG -eq 2 ];then
     echo "Dutch chosen"
     LANGUAGESETTING="nld"
+    mainmenu
   fi
  
-  if [ $LANG -eq 3 ]
-    then
+  if [ $LANG -eq 3 ];then
     echo "French chosen"
     LANGUAGESETTING="fra"
+    mainmenu
   fi
  
-   if [ $LANG -eq 4 ]
-     then
+  if [ $LANG -eq 4 ];then
      echo "German chosen"
      LANGUAGESETTING="deu"
-   fi
-   
+     mainmenu
+  fi
+ } 
+ 
+ function setresolution {
    
   echo "Press 1 to scan at 300 dpi"
   echo "Press 2 to scan at 600 dpi"
@@ -52,27 +93,54 @@
     then
     echo "300 dpi chosen"
     RESOLUTIONSETTING="300"
+    mainmenu
   fi
  
   if [ $RES -eq 2 ]
     then
     echo "600 dpi chosen"
     RESOLUTIONSETTING="600"
+    mainmenu
   fi
  
   if [ $RES -eq 3 ]
     then
     echo "1200 dpi chosen"
     RESOLUTIONSETTING="1200"
+    mainmenu
   fi
+ }
  
+ function setemail {
 
  echo "Which Email address should the scanned document(s) be sent to?"
  read EMAIL
+ mainmenu
+ }
+ 
+  function setcolor {
+   
+  echo "Press 1 to scan document in Gray only"
+  echo "Press 2 to scan document in Color"
+  read COLOR
   
-  rm -rf /tmp/*
+  if [ $COLOR -eq 1 ]
+    then
+    echo "Gray chosen"
+    COLORSETTING="Gray"
+    mainmenu
+  fi
+ 
+  if [ $COLOR -eq 2 ]
+    then
+    echo "Color chosen"
+    COLORSETTING="Color"
+    mainmenu
+  fi
+ } 
+
+function mainmenu {
   
-while [[ $ACTION -ne 3 ]]; do
   WORKDIR=/tmp
   tiffname=scannedfile.tiff
   pdfname=scannedfile.pdf
@@ -83,13 +151,18 @@ while [[ $ACTION -ne 3 ]]; do
   echo "Language selected: $LANGUAGESETTING"
   echo "Resolution selected: $RESOLUTIONSETTING"
   echo "Email address selected: $EMAIL"
+  echo "Color selected: $COLORSETTING"
   echo "Press 1 to scan single document and save it in your work directory as a PDF"
   echo "Press 2 to unite multiple PDF files in your work directory, send united PDF to your Email account, and then archive them"
   echo "Press 3 to exit shell program"  
+  echo "Press 4 to set language" 
+  echo "Press 5 to set resolution"   
+  echo "Press 6 to set email"   
+  echo "Press 7 to set color" 
   read ACTION
 
   
-      if [[ $ACTION -eq 1 ]]; then   
+if [[ $ACTION -eq 1 ]]; then   
       
 SOURCE=""
  
@@ -121,13 +194,12 @@ cd /tmp
 mkdir $tmpdir
 cd $tmpdir
 echo "################## Scanning ###################"
-scanimage -x 210 -y 297 --batch=out%02d.tif --format=tiff --mode Gray --resolution $RESOLUTIONSETTING $SOURCE
+scanimage -x 210 -y 297 --batch=out%02d.tif --format=tiff --mode $COLORSETTING --resolution $RESOLUTIONSETTING $SOURCE
  
 start=1
 cnt=1
 sc=$(echo "$pbreak" | cut -d"," -f1-99 --output-delimiter=" " | wc -w)
-for pb in $(echo "$pbreak" | cut -d "," -f1-99 --output-delimiter=" ")
-do
+for pb in $(echo "$pbreak" | cut -d "," -f1-99 --output-delimiter=" "); do
 ende=$(expr $start + $pb - 1)
 pnr=0
 i=1
@@ -172,39 +244,41 @@ fi
  
 start=$(expr $start + $pb)
 cnt=$(expr $cnt + 1)
- 
+
 done
- 
+
 cd ..
 echo "################ Cleaning Up ################"
 rm -rf $tmpdir
 cd $startdir
 mv  \.pdf `echo $datepdf``echo $pdfname`
 rm \.txt
-      
+fi
 
-	    elif [[ $ACTION -eq 2 ]]; then
-		    if  [[ $pdfquantity -gt 1 ]];then
-		    pdfunite *.pdf  `echo $dateunitedpdf``echo $pdfname`	           
-		    # First create and configure the files ~/.msmtprc  and ~/.mailrc
-		    # The file ~/.msmtprc should contain the line   set sendmail=/usr/bin/msmtp
-		    # Replace emailaddress@somewhere.com with the correct destination Email address
-		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $dateunitedpdf``echo $pdfname` $EMAIL
-		    mkdir `echo $dateunitedpdf`
-		    mv *.pdf `echo $dateunitedpdf`
-	           fi
-		    if  [[ $pdfquantity -eq 1 ]];then
-	           
-		    # First create and configure the files ~/.msmtprc  and ~/.mailrc
-		    # The file ~/.msmtprc should contain the line   set sendmail=/usr/bin/msmtp
-		    # Replace emailaddress@somewhere.com with the correct destination Email address
-		    mv *.pdf  `echo $dateunitedpdf``echo $pdfname`
-		    echo "Hi, here are my scanned files from `echo $dateunitedpdf`" | mail -s `echo $dateunitedpdf``echo $pdfname` -a `echo $dateunitedpdf``echo $pdfname` $EMAIL
-		    mkdir `echo $dateunitedpdf`
-		    mv *.pdf `echo $dateunitedpdf`
-	           fi
+if [[ $ACTION -eq 2 ]]; then
+ scan2email
+fi
+
+if [[ $ACTION -eq 4 ]]; then
+ setlanguage
+fi
+
+if [[ $ACTION -eq 5 ]]; then
+ setresolution
+fi
+
+if [[ $ACTION -eq 6 ]]; then
+ setemail
+fi  
+
+if [[ $ACTION -eq 7 ]]; then
+ setcolor
+fi
 
 
-      fi
+           
+}
 
-done
+cleanup
+setdefaultvalues
+mainmenu
