@@ -422,6 +422,9 @@ echo 'user_pref("security.ssl.renego_unrestricted_hosts", "*.be");' >> prefs.js.
 echo 'user_pref("security.tls.version.min", "1");' >> prefs.js.nossl
 
 cp prefs.js.nossl prefs.js
+# Change on ISO date 2017/05/25:
+# Ensure Mozilla Firefox cannot change new prefs.js contents when closing Mozilla Firefox browser window:
+sudo chattr +i prefs.js
 
 cd $HOME
 
