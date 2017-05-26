@@ -410,6 +410,7 @@ rm -rf extensions/*
 rm addons*
 sudo rm -rf /usr/lib/firefox/browser/extensions*
 
+sudo chattr -i prefs.js
 cp prefs.js prefs.js.$LogDay.backup
 grep -v security.ssl prefs.js > prefs.js.nossl.1
 grep -v security.tls.version.min prefs.js.nossl.1 > prefs.js.nossl.2
