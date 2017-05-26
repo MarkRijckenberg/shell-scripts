@@ -166,7 +166,14 @@ echo "alias apts='apt search '" >> ~/.bashrc
 echo "alias d-u='sudo apt update && sudo apt upgrade'" >> ~/.bashrc
 echo "alias wget='wget --no-check-certificate'" >> ~/.bashrc
 echo "alias g='googler -n 10 -c be -x '" >> ~/.bashrc
+echo "alias s='streamlink'" >> ~/.bashrc
 alias wget="wget --no-check-certificate"
+
+
+# define custom config in .streamlinkrc file
+rm ~/.streamlinkrc
+touch ~/.streamlinkrc
+echo "player=vlc" >> ~/.streamlinkrc
 
 # turn off apport error/crash reporting
 sudo sed -i s/enabled=1/enabled=0/ /etc/default/apport
@@ -563,6 +570,7 @@ cd $HOME
 # install streamlink, which is replacement for minitube Youtube streamer and which uses less CPU:
 # https://www.ostechnix.com/streamlink-watch-online-video-streams-command-line/
 # example of valid command:  streamlink https://www.youtube.com/watch?v=Czy0pXRRZcs  best --player=mplayer
+# using ~/.streamlinkrc and ~/.bashrc: s https://www.youtube.com/watch?v=Czy0pXRRZcs 1080p
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  streamlink
 
 sudo npm install -g bower gulp  minimatch graceful-fs minimatch uuid lodash   
