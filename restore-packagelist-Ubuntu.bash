@@ -470,7 +470,7 @@ sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 
 #security.ssl.renego_unrestricted_hosts;*.be
 
 #Manually replace the security.ssl.renego_unrestricted_hosts name
-#certif.belgium.be or *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be !!!
+# *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be !!!
 #Download Belgium Root certificates here:
 #http://repository.eid.belgium.be/certificates.php?cert=Root&lang=en
 #Import Belgium Root certificates into Firefox.
@@ -485,7 +485,6 @@ sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 
 #Check ALL three boxes.
 #Click ‘OK’.
 #Ensure that there are absolutely NO add-ons or plugins installed in Mozilla Firefox.
-#Installing the Belgium eid Firefox add-on will NOT work in Ubuntu 13.10 64-bit and only make matters worse!
 #Disconnect the eid card reader from the PC.
 #Reconnect the eid card reader to the PC.
 #Insert eid card into card reader.
