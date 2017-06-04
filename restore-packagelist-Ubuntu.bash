@@ -566,6 +566,10 @@ sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::
 cd $HOME
 ##########################################################################################################
 
+# install newest version of smtube (Youtube player using few CPU resources, better than streamlink)
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libqtgui4 libqt4-xml libqt4-network libqt4-dbus phonon-backend-vlc
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   smtube
+
 # install streamlink, which is replacement for minitube Youtube streamer and which uses less CPU:
 # https://www.ostechnix.com/streamlink-watch-online-video-streams-command-line/
 # example of valid command:  streamlink https://www.youtube.com/watch?v=Czy0pXRRZcs  best --player=mplayer
@@ -733,10 +737,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   shutter
 # install  libde265, which is an open source implementation of the h.265 video codec in order 
 # to support playing HVEC codec using vlc player
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   vlc-plugin-libde265
-
-# install newest version of smtube (Youtube player)
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libqtgui4 libqt4-xml libqt4-network libqt4-dbus phonon-backend-vlc
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   smtube
 
 # install spotify - can sync mp3 files between Ubuntu 13.10 and ipod nano 6th generation
 #sudo DEBIAN_FRONTEND=noninteractive apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
