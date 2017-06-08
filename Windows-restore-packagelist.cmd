@@ -131,7 +131,7 @@ REM ############################################################################
 REM https://github.com/gurnec/HashCheck
 REM https://chocolatey.org/packages/hashcheck
 REM The HashCheck Shell Extension makes it easy for anyone to calculate and 
-REM verify checksums and hashes from Windows Explorer
+REM verify checksums and hashes (SHA3-256 and SHA3-512) from Windows Explorer
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y hashcheck"
 
 REM Get R and RStudio
