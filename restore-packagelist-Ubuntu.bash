@@ -434,50 +434,72 @@ cp prefs.js.nossl prefs.js
 # Ensure Mozilla Firefox cannot change new prefs.js contents when closing Mozilla Firefox browser window:
 sudo chattr +i prefs.js
 
-cd $HOME
+# install certificates in Mozilla Firefox:
 
-rm *.crt*
+cd ~/.mozilla/firefox/*.default
 
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs -i belgiumrs.crt
-
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs2.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs2 -i belgiumrs2.crt
-
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs3.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
-
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs4.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
-
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca -i belgiumrca.crt
-
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca2.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca2 -i belgiumrca2.crt
-
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca3.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca3 -i belgiumrca3.crt
-
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca4.crt
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca4 -i belgiumrca4.crt
-
+# download newest citizen eid certificate:
 citizenVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep citizen|tail -n 1|cut -d"\"" -f2 `
 wget --no-check-certificate  http://certs.eid.belgium.be/$citizenVERSION
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $citizenVERSION -i $citizenVERSION
-
+# download newest foreigner eid certificate:
 FOREIGNERVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep foreigner|tail -n 1|cut -d"\"" -f2 `
 wget --no-check-certificate  http://certs.eid.belgium.be/$FOREIGNERVERSION
+
+
+cd ~/.mozilla/firefox/*.default
+rm *.crt
+rm *.db
+certutil -N -d .
+
+certutil -L -d .
+
+# certutil -D -n belgiumrs -d .
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs -i belgiumrs.crt
+certutil -A -n "belgiumrs" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs2 -i belgiumrs2.crt
+certutil -A -n "belgiumrs2" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs2.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
+certutil -A -n "belgiumrs3" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs3.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
+certutil -A -n "belgiumrs4" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs4.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca -i belgiumrca.crt
+certutil -A -n "belgiumrca" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca2 -i belgiumrca2.crt
+certutil -A -n "belgiumrca2" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca2.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "TCPc,TCPc,TCPc" -n belgiumrca3 -i belgiumrca3.crt
+certutil -A -n "belgiumrca3" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca3.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca4 -i belgiumrca4.crt
+certutil -A -n "belgiumrca4" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca4.crt -d .
+
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $citizenVERSION -i $citizenVERSION
+certutil -A -n $citizenVERSION -t "TCPuw,TCPuw,TCPuw" -i $citizenVERSION -d .
+
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $FOREIGNERVERSION -i $FOREIGNERVERSION
+certutil -A -n $FOREIGNERVERSION -t "TCPuw,TCPuw,TCPuw" -i $FOREIGNERVERSION -d .
 
 sudo mkdir /usr/share/ca-certificates/extra
-
 sudo cp *.crt /usr/share/ca-certificates/extra/
-
 sudo dpkg-reconfigure ca-certificates
+sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates.crt  -i /etc/ssl/certs/ca-certificates.crt
+certutil -A -n ca-certificates.crt -t "TCPuw,TCPuw,TCPuw" -i /etc/ssl/certs/ca-certificates.crt -d .
 
-sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2017 -i /etc/ssl/certs/ca-certificates.crt
-
+certutil -L -d .
+cd
 
 
 #Manually set the following values in Mozilla Firefox in about:config
