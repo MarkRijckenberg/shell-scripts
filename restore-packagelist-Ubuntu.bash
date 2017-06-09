@@ -275,7 +275,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] h
 
 # add repository for eid-mw and eid-viewer software packages
 # replace codename (for example: trusty) with right Ubuntu codename
-RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
+RELEASE=`cat /etc/os-release |tail -n 1|cut -d"=" -f2`
 sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
 sudo sh -c 'echo "deb http://files.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
