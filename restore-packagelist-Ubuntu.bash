@@ -450,17 +450,33 @@ certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs4.crt
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
 
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca -i belgiumrca.crt
+
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca2.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca2 -i belgiumrca2.crt
+
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca3.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca3 -i belgiumrca3.crt
+
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca4.crt
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca4 -i belgiumrca4.crt
+
+citizenVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep citizen|tail -n 1|cut -d"\"" -f2 `
+wget --no-check-certificate  http://certs.eid.belgium.be/$citizenVERSION
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $citizenVERSION -i $citizenVERSION
+
+FOREIGNERVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep foreigner|tail -n 1|cut -d"\"" -f2 `
+wget --no-check-certificate  http://certs.eid.belgium.be/$FOREIGNERVERSION
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $FOREIGNERVERSION -i $FOREIGNERVERSION
 
 sudo mkdir /usr/share/ca-certificates/extra
 
-sudo cp belgiumrs.crt /usr/share/ca-certificates/extra/belgiumrs.crt
-sudo cp belgiumrs2.crt /usr/share/ca-certificates/extra/belgiumrs2.crt
-sudo cp belgiumrs3.crt /usr/share/ca-certificates/extra/belgiumrs3.crt
-sudo cp belgiumrs4.crt /usr/share/ca-certificates/extra/belgiumrs4.crt
+sudo cp *.crt /usr/share/ca-certificates/extra/
 
 sudo dpkg-reconfigure ca-certificates
 
-sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
+sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2017 -i /etc/ssl/certs/ca-certificates.crt
 
 
 
