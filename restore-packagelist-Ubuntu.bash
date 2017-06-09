@@ -60,8 +60,7 @@
 # INSTALL DURATION: 20 minutes for install of Lubuntu/Xubuntu 14.04 LTS 64-bit  + 74 minutes for install of base packages and PPA packages
 # Author: Mark Rijckenberg
 # INITIAL REVISION DATE: 20120812
-# LAST REVISION DATE: April 2017
-# Updated by: markrijckenberg at gmail dot com
+# LAST REVISION DATE: June 2017
 
 # regarding the HP Laserjet 1020 in Berlin:
 # procedure to install printer driver for HP Laserjet 1020 without needing access to openprinting.org website:
