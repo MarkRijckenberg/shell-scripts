@@ -437,6 +437,8 @@ sudo chattr +i prefs.js
 # install certificates in Mozilla Firefox:
 
 cd ~/.mozilla/firefox/*.default
+rm *.crt
+rm *.db
 
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs.crt
 wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs2.crt
@@ -455,10 +457,7 @@ wget --no-check-certificate  http://certs.eid.belgium.be/$FOREIGNERVERSION
 
 
 cd ~/.mozilla/firefox/*.default
-rm *.crt
-rm *.db
 certutil -N -d .
-
 certutil -L -d .
 
 # certutil -D -n belgiumrs -d .
