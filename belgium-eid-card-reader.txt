@@ -4,7 +4,7 @@ Prerequisites: Ubuntu 16.04 64-bit, newest version of Mozilla Firefox, pcscd, de
 
 Supported CCID readers:   <a href="http://pcsclite.alioth.debian.org/ccid/section.html">http://pcsclite.alioth.debian.org/ccid/section.html</a>
 
-Copy-paste each command below one by one into the Terminal. Hit key between each command.
+Copy-paste all the commands below into a temporary file. Then execute the file as a bash script. The Terminal command to execute this script is similar to “bash name-of-temporary-file”
 <pre><code># add repository for eid-mw and eid-viewer software packages
 sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
