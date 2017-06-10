@@ -1,111 +1,103 @@
-How to get the eid electronic card reader ACR38U working in Ubuntu 14.04 64-bit
+How to get the eid electronic card reader ACR38U working in Ubuntu 16.04 64-bit
 
-Prerequisites: Ubuntu 14.04 64-bit, newest version of Mozilla Firefox, pcscd, default-jre, opensc, libacr38u,  libacr38ucontrol0, libacsccid1, libccid
+Prerequisites: Ubuntu 16.04 64-bit, newest version of Mozilla Firefox, pcscd, default-jre, opensc, libacr38u,  libacr38ucontrol0, libacsccid1, libccid
 
-Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
+Supported CCID readers:   <a href="http://pcsclite.alioth.debian.org/ccid/section.html">http://pcsclite.alioth.debian.org/ccid/section.html</a>
 
-Copy-paste each command below one by one into the Terminal. Hit <ENTER> key between each command.
-
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A35743EA6773D225
-
-sudo apt-get remove --purge beid*
-
+Copy-paste each command below one by one into the Terminal. Hit key between each command.
+<pre><code># add repository for eid-mw and eid-viewer software packages
+sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
-
 sudo sh -c 'echo "deb http://files.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
-
+sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
+cd $HOME
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  A35743EA6773D225   F9FDA6BED73CDC22 3B4FE6ACC0B21F32  4E940D7FDD7FB8CC  A040830F7FAC5991 16126D3A3E5C1192 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
-
-sudo apt-get update
-
-sudo apt-get install usbutils pciutils
-
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes remove --purge beid*
+sudo DEBIAN_FRONTEND=noninteractive apt update
+sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
+sudo aptitude install usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
 sudo update-pciids
-
 sudo update-usbids
-
-sudo apt-get install eid-archive eid-mw eid-viewer aptitude firefox pcscd default-jre
-
-sudo apt-get install opensc libacr38u libacr38ucontrol0 libacsccid1 libccid
-
-sudo apt-get install libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools
-
-sudo apt-get install libnss3-tools ca-certificates 
-
-cd /tmp
-
-rm index.html
-
-wget http://eid.belgium.be/nl/je_eid_gebruiken/de_eid-middleware_installeren/linux/
-
-URL=`grep \.deb index.html |cut -d"\"" -f36`
-
-wget http://eid.belgium.be`echo $URL`
-
-sudo dpkg -i eid-archive*
-
 cd $HOME/.mozilla/firefox/*.default
-
-# remove all Mozilla Firefox extensions to make sure eid card reader gets detected in Mozilla Firefox
 rm extensions*
-
 rm -rf extensions/*
-
 rm addons*
-
 sudo rm -rf /usr/lib/firefox/browser/extensions*
-
-cp prefs.js prefs.js_backup_`date -I`
-
-# delete old about:config configuration in Mozilla Firefox browser settings:
+sudo chattr -i prefs.js
+cp prefs.js prefs.js.$LogDay.backup
 grep -v security.ssl prefs.js > prefs.js.nossl.1
-grep -v extensions.enabled prefs.js.nossl.1 > prefs.js.nossl 
-
-# set correct about:config configuration in Mozilla Firefox browser settings:
+grep -v security.tls.version.min prefs.js.nossl.1 > prefs.js.nossl.2
+grep -v extensions.enabled prefs.js.nossl.2 > prefs.js.nossl 
 echo 'user_pref("security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref", true);' >> prefs.js.nossl
 echo 'user_pref("security.ssl.enable_false_start", true);' >> prefs.js.nossl
 echo 'user_pref("security.ssl.renego_unrestricted_hosts", "*.be");' >> prefs.js.nossl
-
+# protect Mozilla Firefox v33 or lower against POODLE SSLv3 vulnerability:
+echo 'user_pref("security.tls.version.min", "1");' >> prefs.js.nossl
 cp prefs.js.nossl prefs.js
-
-cd $HOME
-
-rm *.crt*
-
-wget http://certs.eid.belgium.be/belgiumrs.crt
+# Change on ISO date 2017/05/25:
+# Ensure Mozilla Firefox cannot change new prefs.js contents when closing Mozilla Firefox browser window:
+sudo chattr +i prefs.js
+# install certificates in Mozilla Firefox:
+cd ~/.mozilla/firefox/*.default
+rm *.crt
+rm *.db
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs2.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs3.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs4.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca2.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca3.crt
+wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca4.crt
+# download newest citizen eid certificate:
+citizenVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep citizen|tail -n 1|cut -d"\"" -f2 `
+wget --no-check-certificate  http://certs.eid.belgium.be/$citizenVERSION
+# download newest foreigner eid certificate:
+FOREIGNERVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep foreigner|tail -n 1|cut -d"\"" -f2 `
+wget --no-check-certificate  http://certs.eid.belgium.be/$FOREIGNERVERSION
+cd ~/.mozilla/firefox/*.default
+certutil -N -d .
+certutil -L -d .
+# certutil -D -n belgiumrs -d .
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs -i belgiumrs.crt
-
-wget http://certs.eid.belgium.be/belgiumrs2.crt
+certutil -A -n "belgiumrs" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs.crt -d .
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs2 -i belgiumrs2.crt
-
-wget http://certs.eid.belgium.be/belgiumrs3.crt
+certutil -A -n "belgiumrs2" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs2.crt -d .
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
-
-wget http://certs.eid.belgium.be/belgiumrs4.crt
+certutil -A -n "belgiumrs3" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs3.crt -d .
 certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
-
-
+certutil -A -n "belgiumrs4" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs4.crt -d .
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca -i belgiumrca.crt
+certutil -A -n "belgiumrca" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca.crt -d .
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca2 -i belgiumrca2.crt
+certutil -A -n "belgiumrca2" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca2.crt -d .
+certutil -d sql:$HOME/.pki/nssdb -A -t "TCPc,TCPc,TCPc" -n belgiumrca3 -i belgiumrca3.crt
+certutil -A -n "belgiumrca3" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca3.crt -d .
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca4 -i belgiumrca4.crt
+certutil -A -n "belgiumrca4" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca4.crt -d .
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $citizenVERSION -i $citizenVERSION
+certutil -A -n $citizenVERSION -t "TCPuw,TCPuw,TCPuw" -i $citizenVERSION -d .
+certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $FOREIGNERVERSION -i $FOREIGNERVERSION
+certutil -A -n $FOREIGNERVERSION -t "TCPuw,TCPuw,TCPuw" -i $FOREIGNERVERSION -d .
 sudo mkdir /usr/share/ca-certificates/extra
-
-sudo cp belgiumrs.crt /usr/share/ca-certificates/extra/belgiumrs.crt
-sudo cp belgiumrs2.crt /usr/share/ca-certificates/extra/belgiumrs2.crt
-sudo cp belgiumrs3.crt /usr/share/ca-certificates/extra/belgiumrs3.crt
-sudo cp belgiumrs4.crt /usr/share/ca-certificates/extra/belgiumrs4.crt
-
+sudo cp *.crt /usr/share/ca-certificates/extra/
 sudo dpkg-reconfigure ca-certificates
-
-sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates-new-2014 -i /etc/ssl/certs/ca-certificates.crt
-Manually replace the security.ssl.renego_unrestricted_hosts name value *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be
+sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates.crt  -i /etc/ssl/certs/ca-certificates.crt
+certutil -A -n ca-certificates.crt -t "TCPuw,TCPuw,TCPuw" -i /etc/ssl/certs/ca-certificates.crt -d .
+certutil -L -d .
+cd</pre>
+Manually replace the security.ssl.renego_unrestricted_hosts name value *.be in about:config,  if you want to authenticate on a DIFFERENT site than <a href="http://www.cm.be/" target="_blank" rel="noopener">www.cm.be</a> or <a href="http://test.eid.belgium.be/" target="_blank" rel="noopener">test.eid.belgium.be</a>
 
 Download Belgium Root CA, CA2, CA3 and CA4 certificates here:
 
-http://repository.eid.belgium.be/certificates.php?cert=Root&lang=en
+<a href="http://repository.eid.belgium.be/certificates.php?cert=Root&lang=en" target="_blank" rel="noopener">http://repository.eid.belgium.be/certificates.php?cert=Root&lang=en</a>
 
 Import Belgium Root CA, CA2, CA3 and CA4 certificates into Firefox.
 
 The Belgium Root certificates are required if you want to use the applications of the FSP Finance (Belcotax, Intervat, Finprof, etc.).
 
-Before you begin, make sure your electronic identity card is in the card reader. Then go to following location in Mozilla Firefox browser:
+Before you begin, make sure your electronic identity card is in the card reader. Then go to following location in Mozilla Firefox browser:
 
 Viewing certificates
 For Linux: Go to Edit > Preferences > Advanced > Encryption and click ‘View certificates’.
@@ -118,15 +110,15 @@ Click ‘OK’.
 
 Perform the same steps for the CA2, CA3 and CA4 certificates as well.
 
-Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox webbrowser.
+Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox webbrowser.
 
 The add-on PLUGINS like Citrix Receiver for Linux,OpenH264 and Shockwave Flash plugins can remain active in Firefox, as they do not seem to interfere with the eid card reader.
 
-Test eid card reader here using the Mozilla Firefox webbrowser:
+Test eid card reader here using the Mozilla Firefox webbrowser:
 
-http://test.eid.belgium.be/
+<a href="http://test.eid.belgium.be/" target="_blank" rel="noopener">http://test.eid.belgium.be/</a>
 
-Source: http://wiki.yobi.be/wiki/Belgian_eID
+Source: <a href="http://wiki.yobi.be/wiki/Belgian_eID" target="_blank" rel="noopener">http://wiki.yobi.be/wiki/Belgian_eID</a>
 
 [contact-form subject='mark911.wordpress.com feedback'][contact-field label='Name' type='name' required='1'/][contact-field label='Website' type='url'/][contact-field label='Comment' type='textarea' required='1'/][/contact-form]
 ===============================================================================
