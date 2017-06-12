@@ -2841,6 +2841,9 @@ echo "https://analyticsacademy.withgoogle.com/"
 echo "http://www.amazon.fr/Data-Smart-Science-Transform-Information/dp/111866146X/ref=sr_1_1?ie=UTF8&qid=1394192108&sr=8-1&keywords=Data+Smart%3A+Using+Data+Science+to+Transform+Information+into+Insight"
 # presentations about data analysis using Excel  ('light' data analytics using Microsoft Excel)
 echo "http://www.felienne.com/presentations"
+# added on 2017/6/12:
+# free training material (April 2017) about using MS Excel 2013 for Social Sciences:
+echo "http://dlab.berkeley.edu/training"
 # study Scala (functional programming language) -> Apache Spark is an extension of Scala
 # study SQL Server 2016 (which will include R integration)
 # source: http://developers.slashdot.org/story/15/05/16/1748232/in-database-r-coming-to-sql-server-2016
