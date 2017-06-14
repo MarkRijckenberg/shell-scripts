@@ -265,6 +265,8 @@ REM CD Burning software
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y win32diskimager"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y rufus"
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y cdburnerxp"
 
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
