@@ -1,6 +1,6 @@
 #!/bin/bash
 #######################################################################################################
-# UEFI guidelines,tips and tricks (updated January 2017):
+# UEFI guidelines,tips and tricks (updated in June 2017):
 #######################################################################################################
 # !!!!! STEP 1) Method to boot 2GB USB stick in UEFI compatible mode in order to
 # !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI+SecureBoot mode:
