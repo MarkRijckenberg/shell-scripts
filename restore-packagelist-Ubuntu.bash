@@ -2,9 +2,12 @@
 #######################################################################################################
 # UEFI guidelines,tips and tricks (updated January 2017):
 #######################################################################################################
-# !!!!! STEP 1) WINDOWS 10 64-bit: Method to boot Ubuntu 1GB USB stick in UEFI compatible mode in order to
+# !!!!! STEP 1) Method to boot 2GB USB stick in UEFI compatible mode in order to
 # !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI+SecureBoot mode:
-# !!!!! http://www.everydaylinuxuser.com/2015/11/how-to-create-ubuntu-1510-usb-drive.html
+# !!!!! Install Rufus USB utility in Windows 10 64-bit using chocolatey. Format USB stick in FAT32 disk format. 
+# !!!!! Write .iso image to USB stick in Rufus using GPT partitioning (not MBR partitioning) to ensure 
+# !!!!! it can boot in UEFI SecureBoot mode. Reboot into UEFI BIOS settings. Make sure to move new
+# !!!!! UEFI USB partition to top of UEFI boot list.Save change to UEFI BIOS settings.
 # !!!!! STEP 2) Fix UEFI boot loader issues where Windows 10 skips the Ubuntu EFI bootloader
 # !!!!! by using BCDEdit in Windows 10 or by installing efibootmgr Ubuntu package 
 # !!!!! in an Ubuntu LiveUSB session and then following these instructions:
