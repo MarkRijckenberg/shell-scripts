@@ -392,6 +392,80 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    winusb
 # Attempt to access your Citrix site. If Firefox prompts you to open a .ica file, choose
 # to open it with /opt/Citrix/ICAClient/wfica.sh, and tell Firefox to remember that choice.
 
+
+# Install Spotify
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   spotify-client
+
+# Install Live Wallpaper
+# sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   livewallpaper  livewallpaper-config livewallpaper-indicator
+
+# Install dupeguru-me which can find and delete similar music filenames using fuzzy logic
+# rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt update
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   dupeguru-me
+
+# install clipgrab, a friendly downloader for YouTube and other sites
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   clipgrab
+
+# install Tor browser
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tor-browser
+
+# Install lxqt desktop environment => merge of lxde and razorqt desktops
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
+#sudo DEBIAN_FRONTEND=noninteractive apt update
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    lxqt-metapackage lxqt-panel openbox
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    liblxqt0 libqtxdg0 libqtxdg-data 
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    pcmanfm-qt  lxsession lximage-qt   lxrandr-qt
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    lxqt-about  lxqt-appswitcher  lxqt-config   lxqt-lightdm-greeter  
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    lxqt-notificationd    lxqt-policykit  lxqt-power  lxqt-powermanagement  lxqt-runner  lxqt-session
+#sudo rm -rf /etc/xdg/lxlauncher
+#sudo rm -rf /etc/xdg/lxpanel
+#sudo rm -rf /etc/xdg/lxqt
+#sudo rm -rf /etc/xdg/lxsession
+#sudo rm -rf /etc/xdg/razor
+#rm -rf ~/.config/razor*
+#rm -rf ~/.config/pcman*
+#rm -rf ~/.config/compiz*
+#rm -rf ~/.config/lxpanel
+#rm -rf ~/.config/lxsession/
+#rm -rf ~/.config/lxterminal/
+#rm -rf ~/.config/openbox*
+#rm -rf ~/.config/unity*
+# the following lxqt commands are dangerous and can cause network-manager to get uninstalled!
+#sudo apt purge lxqt-metapackage lxqt-common lximage-qt  pcmanfm-qt 
+#sudo apt install lxqt-metapackage lxqt-common 
+
+# installing budgie desktop causes serious issues on mother's desktop pc
+# Install budgie desktop environment with excellent font management (even on 40 inch Full HD TV screen)
+#dconf reset -f /com/solus-project/budgie-panel/
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   budgie-desktop
+#dconf reset -f /com/solus-project/budgie-panel/
+
+#install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
+# then click on Preferences::Appearance::Icons Theme::Numix Circle Light
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    numix-icon-theme-circle
+
+sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    chromium-codecs-ffmpeg-extra
+
+sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    kaccounts-providers
+
+# Install TLP - advanced power management command line tool for Linux
+# TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
+#sudo DEBIAN_FRONTEND=noninteractive apt update
+sudo apt install  tlp
+sudo apt install  tlp-rdw
+
+##########################################################################################################
+# install base packages using basepackages file
+cd $HOME/shell-scripts
+sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
+sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
+cd $HOME
+##########################################################################################################
+
 ##########################################################################################################
 # install eid card reader middleware - replace codename (for example: trusty) with right Ubuntu codename
 # Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
@@ -532,78 +606,6 @@ cd
 #http://test.eid.belgium.be/
 #Source: http://wiki.yobi.be/wiki/Belgian_eID
 
-# Install Spotify
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   spotify-client
-
-# Install Live Wallpaper
-# sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   livewallpaper  livewallpaper-config livewallpaper-indicator
-
-# Install dupeguru-me which can find and delete similar music filenames using fuzzy logic
-# rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
-#sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   dupeguru-me
-
-# install clipgrab, a friendly downloader for YouTube and other sites
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   clipgrab
-
-# install Tor browser
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tor-browser
-
-# Install lxqt desktop environment => merge of lxde and razorqt desktops
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
-#sudo DEBIAN_FRONTEND=noninteractive apt update
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    lxqt-metapackage lxqt-panel openbox
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    liblxqt0 libqtxdg0 libqtxdg-data 
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    pcmanfm-qt  lxsession lximage-qt   lxrandr-qt
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    lxqt-about  lxqt-appswitcher  lxqt-config   lxqt-lightdm-greeter  
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    lxqt-notificationd    lxqt-policykit  lxqt-power  lxqt-powermanagement  lxqt-runner  lxqt-session
-#sudo rm -rf /etc/xdg/lxlauncher
-#sudo rm -rf /etc/xdg/lxpanel
-#sudo rm -rf /etc/xdg/lxqt
-#sudo rm -rf /etc/xdg/lxsession
-#sudo rm -rf /etc/xdg/razor
-#rm -rf ~/.config/razor*
-#rm -rf ~/.config/pcman*
-#rm -rf ~/.config/compiz*
-#rm -rf ~/.config/lxpanel
-#rm -rf ~/.config/lxsession/
-#rm -rf ~/.config/lxterminal/
-#rm -rf ~/.config/openbox*
-#rm -rf ~/.config/unity*
-# the following lxqt commands are dangerous and can cause network-manager to get uninstalled!
-#sudo apt purge lxqt-metapackage lxqt-common lximage-qt  pcmanfm-qt 
-#sudo apt install lxqt-metapackage lxqt-common 
-
-# installing budgie desktop causes serious issues on mother's desktop pc
-# Install budgie desktop environment with excellent font management (even on 40 inch Full HD TV screen)
-#dconf reset -f /com/solus-project/budgie-panel/
-#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   budgie-desktop
-#dconf reset -f /com/solus-project/budgie-panel/
-
-#install  numix-icon-theme-circle (choose numix circle icon theme via lxqt start menu button
-# then click on Preferences::Appearance::Icons Theme::Numix Circle Light
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    numix-icon-theme-circle
-
-sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    chromium-codecs-ffmpeg-extra
-
-sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    kaccounts-providers
-
-# Install TLP - advanced power management command line tool for Linux
-# TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
-#sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo apt install  tlp
-sudo apt install  tlp-rdw
-
-##########################################################################################################
-# install base packages using basepackages file
-cd $HOME/shell-scripts
-sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
-sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
-cd $HOME
-##########################################################################################################
 
 # install newest version of smtube (Youtube player using few CPU resources, better than streamlink)
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libqtgui4 libqt4-xml libqt4-network libqt4-dbus phonon-backend-vlc
