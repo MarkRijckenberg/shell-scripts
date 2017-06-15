@@ -207,7 +207,7 @@ fi
 ##########################################################################################################
 # add base PPA repositories
 ##########################################################################################################
-
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   software-properties-common
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
