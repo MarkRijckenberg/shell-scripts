@@ -263,7 +263,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 REM CD Burning software
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y win32diskimager"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y win32diskimager"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y rufus"
 
