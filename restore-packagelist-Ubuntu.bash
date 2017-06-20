@@ -337,8 +337,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   e17
 # source: https://github.com/slacka/WinUSB
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    winusb
 
+# status: 20170620:
 ##########################################################################################################
-# install Citrix Receiver icaclient in Ubuntu 14.04 LTS - only works using Mozilla Firefox, not using Google Chrome
+# install Citrix Receiver icaclient version 13.4.0.10109380 in Ubuntu 16.04.2 64-bit
+# Citrix Receiver icaclient version 13.5 and above cause SSL error 4 when trying to connect to corporate
+# website
+# Only works using Mozilla Firefox, not using Google Chrome
 # source 1:  http://ubuntuforums.org/showthread.php?t=2181903
 # source 2:  http://blog.vinnymac.org/?p=351
 # source 3:  https://help.ubuntu.com/community/CitrixICAClientHowTo
