@@ -584,8 +584,7 @@ cd
 modutil -dbdir sql:.pki/nssdb -add "Belgium eID" -libfile /usr/lib/x86_64-linux-gnu/libbeidpkcs11.so.0
 modutil -dbdir sql:.pki/nssdb/ -list
 
-# uninstall eid Chrome extension in Google Chrome
-# install eid Chrome OS (extension) in Google Chrome (which is more recent)
+# no eid extensions/addons should be installed in Mozilla Firefox or Google Chrome.
 
 #Manually set the following values in Mozilla Firefox in about:config
 #security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
@@ -607,7 +606,7 @@ modutil -dbdir sql:.pki/nssdb/ -list
 #Click ‘Edit…’.
 #Check ALL three boxes.
 #Click ‘OK’.
-#Ensure that there are absolutely NO add-ons or plugins installed in Mozilla Firefox.
+#Ensure that there are absolutely NO add-ons or plugins installed in Mozilla Firefox or Google Chrome.
 #Disconnect the eid card reader from the PC.
 #Reconnect the eid card reader to the PC.
 #Insert eid card into card reader.
