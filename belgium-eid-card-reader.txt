@@ -91,6 +91,7 @@ cd
 # add support for Google Chrome browser (64-bit):
 modutil -dbdir sql:.pki/nssdb -add "Belgium eID" -libfile /usr/lib/x86_64-linux-gnu/libbeidpkcs11.so.0
 modutil -dbdir sql:.pki/nssdb/ -list
+# no eid extensions/addons should be installed in Mozilla Firefox or Google Chrome.
 </pre>
 Manually replace the security.ssl.renego_unrestricted_hosts name value *.be in about:config,  if you want to authenticate on a DIFFERENT site than <a href="http://www.cm.be/" target="_blank" rel="noopener">www.cm.be</a> or <a href="http://test.eid.belgium.be/" target="_blank" rel="noopener">test.eid.belgium.be</a>
 
