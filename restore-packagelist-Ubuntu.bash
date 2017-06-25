@@ -580,6 +580,12 @@ certutil -A -n ca-certificates.crt -t "TCPuw,TCPuw,TCPuw" -i /etc/ssl/certs/ca-c
 certutil -L -d .
 cd
 
+# add support for Google Chrome browser (64-bit):
+modutil -dbdir sql:.pki/nssdb -add "Belgium eID" -libfile /usr/lib/x86_64-linux-gnu/libbeidpkcs11.so.0
+modutil -dbdir sql:.pki/nssdb/ -list
+
+# uninstall eid Chrome extension in Google Chrome
+# install eid Chrome OS (extension) in Google Chrome (which is more recent)
 
 #Manually set the following values in Mozilla Firefox in about:config
 #security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
