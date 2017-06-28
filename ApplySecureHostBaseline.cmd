@@ -1,8 +1,9 @@
 REM ApplySecureHostBaseline.cmd 
 REM For Windows 10 64-bit machines only
-REM Run in Powershell as Administrator
-
+REM Run following powershell command in cmd shell as Administrator:
 powershell -NoProfile -ExecutionPolicy unrestricted
+
+REM Copy paste following commands into the unrestricted powershell session:
 mkdir c:\temp
 cd c:\temp
 rmdir .\Secure* -Recurse -force
