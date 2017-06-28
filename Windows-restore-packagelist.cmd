@@ -157,6 +157,10 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 7zip.install"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y axel"
+
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 7zip.portable"
+
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y cmder.portable -pre"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y flashplayeractivex"
