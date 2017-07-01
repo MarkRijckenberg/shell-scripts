@@ -1443,7 +1443,7 @@ chmod +x ~/.oh-my-fish/bin/install
 ~/.oh-my-fish/bin/install
 
 # delete old custom aliases in ~/.config/fish/config.fish file
-egrep -v 'alias\ apt|alias\ d-u'  ~/.config/fish/config.fish > ~/.config/fish/config.fish.$LogDay.backup
+egrep -v 'apt|d-u|wget|googler|streamlink'  ~/.config/fish/config.fish > ~/.config/fish/config.fish.$LogDay.backup
 cp ~/.config/fish/config.fish.$LogDay.backup ~/.config/fish/config.fish
 
 # define custom aliases in ~/.config/fish/config.fish file
