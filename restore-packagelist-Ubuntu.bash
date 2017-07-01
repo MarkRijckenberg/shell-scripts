@@ -156,16 +156,16 @@ comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-
 start=$(date +%s)
 
 # delete old custom aliases in ~/.bashrc file
-egrep -v 'alias\ apt|alias\ d-u|wget'  ~/.bashrc > ~/.bashrc.$LogDay.backup
+egrep -v 'apt|d-u|wget|googler|streamlink'  ~/.bashrc > ~/.bashrc.$LogDay.backup
 cp ~/.bashrc.$LogDay.backup ~/.bashrc
 
 # define custom aliases in ~/.bashrc file
-echo "alias apti='sudo apt update && sudo apt install '" >> ~/.bashrc
+echo "alias apti='sudo apt update;sudo apt install '" >> ~/.bashrc
 echo "alias aptr='sudo apt remove '" >> ~/.bashrc
 echo "alias aptp='sudo apt purge '" >> ~/.bashrc
 echo "alias aptu='sudo apt update'" >> ~/.bashrc
 echo "alias apts='apt search '" >> ~/.bashrc
-echo "alias d-u='sudo apt update && sudo apt upgrade'" >> ~/.bashrc
+echo "alias d-u='sudo apt update;sudo apt upgrade'" >> ~/.bashrc
 echo "alias wget='wget --no-check-certificate'" >> ~/.bashrc
 echo "alias g='googler -n 10 -c be -x '" >> ~/.bashrc
 echo "alias s='streamlink'" >> ~/.bashrc
@@ -1082,7 +1082,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 cd $HOME
 rm -rf $HOME/.googleearth
 sudo rm -rf /opt/google/earth/
-sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
+sudo rm -rf /opt/google-earth;sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
 sudo rm googleearth*.deb
 sudo rm google-earth*.deb
 sudo rm GoogleEarth*
@@ -1195,7 +1195,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 cd $HOME
 rm -rf $HOME/.googleearth
 sudo rm -rf /opt/google/earth/
-sudo rm -rf /opt/google-earth && sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
+sudo rm -rf /opt/google-earth;sudo rm /usr/share/mime/application/vnd.google-earth.* /usr/share/mimelnk/application/vnd.google-earth.* /usr/share/applnk/Google-googleearth.desktop /usr/share/mime/packages/googleearth-mimetypes.xml /usr/share/gnome/apps/Google-googleearth.desktop /usr/share/applications/Google-googleearth.desktop /usr/local/bin/googleearth
 sudo rm googleearth*.deb
 sudo rm google-earth*.deb
 sudo rm GoogleEarth*
