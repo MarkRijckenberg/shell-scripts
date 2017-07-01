@@ -257,6 +257,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:openshot.developers/ppa
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:jonathonf/vlc
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mc3man/mpv-tests
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/xenial xenial main"
 
 ##########################################################################################################
