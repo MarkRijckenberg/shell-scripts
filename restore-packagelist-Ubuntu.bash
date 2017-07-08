@@ -476,116 +476,23 @@ cd $HOME
 # Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
 ##########################################################################################################
 
+# Prerequisites: Ubuntu 16.04.2 LTS 64-bit or newer (LiveUSB session or installed on HD/SSD), newest version of Mozilla Firefox (version 54.0 or newer), Ubuntu packages in procedure below
+# install prerequisites for compiling eid-mw from Github
 # Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
-cd $HOME
-# RELEASE = saucy,trusty, etc...... = distribution codename
-#RELEASE=`awk -F'[" ]' '/VERSION=/{print $3}'  /etc/os-release| awk '{print tolower($0)}'`
+sudo rm /etc/apt/sources.list.d/eid.list
+sudo touch /etc/apt/sources.list.d/eid.list
+sudo sh -c 'echo "deb http://files.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
+sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
+cd
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  A35743EA6773D225   F9FDA6BED73CDC22 3B4FE6ACC0B21F32  4E940D7FDD7FB8CC  A040830F7FAC5991 16126D3A3E5C1192 
-
-#sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes remove --purge beid*
-#sudo touch /etc/apt/sources.list.d/eid.list
-#sudo sh -c 'echo "deb http://files.eid.belgium.be/debian trusty main" >> /etc/apt/sources.list.d/eid.list'
-#sudo DEBIAN_FRONTEND=noninteractive apt update
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes remove --purge beid*
+sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
-sudo aptitude install usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
+sudo aptitude install usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools ca-certificates libtool autoconf automake checkinstall git libgtk-3-dev libxml++2.6-dev libproxy-dev openssl libssl-dev libcurl4-openssl-dev
 sudo update-pciids
 sudo update-usbids
-
-cd $HOME/.mozilla/firefox/*.default
-
-rm extensions*
-rm -rf extensions/*
-rm addons*
-sudo rm -rf /usr/lib/firefox/browser/extensions*
-
-sudo chattr -i prefs.js
-cp prefs.js prefs.js.$LogDay.backup
-grep -v security.ssl prefs.js > prefs.js.nossl.1
-grep -v security.tls.version.min prefs.js.nossl.1 > prefs.js.nossl.2
-grep -v extensions.enabled prefs.js.nossl.2 > prefs.js.nossl 
-
-echo 'user_pref("security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref", true);' >> prefs.js.nossl
-echo 'user_pref("security.ssl.enable_false_start", true);' >> prefs.js.nossl
-echo 'user_pref("security.ssl.renego_unrestricted_hosts", "*.be");' >> prefs.js.nossl
-# protect Mozilla Firefox v33 or lower against POODLE SSLv3 vulnerability:
-echo 'user_pref("security.tls.version.min", "1");' >> prefs.js.nossl
-
-cp prefs.js.nossl prefs.js
-# Change on ISO date 2017/05/25:
-# Ensure Mozilla Firefox cannot change new prefs.js contents when closing Mozilla Firefox browser window:
-sudo chattr +i prefs.js
-
-# install certificates in Mozilla Firefox:
-
-cd ~/.mozilla/firefox/*.default
-rm *.crt
-rm *.db
-
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs.crt
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs2.crt
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs3.crt
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrs4.crt
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca.crt
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca2.crt
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca3.crt
-wget --no-check-certificate  http://certs.eid.belgium.be/belgiumrca4.crt
-# download newest citizen eid certificate:
-citizenVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep citizen|tail -n 1|cut -d"\"" -f2 `
-wget --no-check-certificate  http://certs.eid.belgium.be/$citizenVERSION
-# download newest foreigner eid certificate:
-FOREIGNERVERSION=`echo "http://certs.eid.belgium.be/" | wget -O- -i- --no-check-certificate |  hxnormalize -x  |grep foreigner|tail -n 1|cut -d"\"" -f2 `
-wget --no-check-certificate  http://certs.eid.belgium.be/$FOREIGNERVERSION
-
-
-cd ~/.mozilla/firefox/*.default
-certutil -N -d .
-certutil -L -d .
-
-# certutil -D -n belgiumrs -d .
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs -i belgiumrs.crt
-certutil -A -n "belgiumrs" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs2 -i belgiumrs2.crt
-certutil -A -n "belgiumrs2" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs2.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs3 -i belgiumrs3.crt
-certutil -A -n "belgiumrs3" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs3.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrs4 -i belgiumrs4.crt
-certutil -A -n "belgiumrs4" -t "TCPuw,TCPuw,TCPuw" -i belgiumrs4.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca -i belgiumrca.crt
-certutil -A -n "belgiumrca" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca2 -i belgiumrca2.crt
-certutil -A -n "belgiumrca2" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca2.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "TCPc,TCPc,TCPc" -n belgiumrca3 -i belgiumrca3.crt
-certutil -A -n "belgiumrca3" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca3.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n belgiumrca4 -i belgiumrca4.crt
-certutil -A -n "belgiumrca4" -t "TCPuw,TCPuw,TCPuw" -i belgiumrca4.crt -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $citizenVERSION -i $citizenVERSION
-certutil -A -n $citizenVERSION -t "TCPuw,TCPuw,TCPuw" -i $citizenVERSION -d .
-
-certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n $FOREIGNERVERSION -i $FOREIGNERVERSION
-certutil -A -n $FOREIGNERVERSION -t "TCPuw,TCPuw,TCPuw" -i $FOREIGNERVERSION -d .
-
-sudo mkdir /usr/share/ca-certificates/extra
-sudo cp *.crt /usr/share/ca-certificates/extra/
-sudo dpkg-reconfigure ca-certificates
-sudo certutil -d sql:$HOME/.pki/nssdb -A -t "c,T,C" -n ca-certificates.crt  -i /etc/ssl/certs/ca-certificates.crt
-certutil -A -n ca-certificates.crt -t "TCPuw,TCPuw,TCPuw" -i /etc/ssl/certs/ca-certificates.crt -d .
-
-certutil -L -d .
-cd
-
-# add support for Google Chrome browser (64-bit):
-modutil -dbdir sql:.pki/nssdb -add "Belgium eID" -libfile /usr/lib/x86_64-linux-gnu/libbeidpkcs11.so.0
-modutil -dbdir sql:.pki/nssdb/ -list
-# no eid extensions/addons should be installed in Mozilla Firefox or Google Chrome.
-# install newest version of eid-mw using Github
+# compile and install newest version of eid-mw using Github
 cd
 sudo rm -rf eid-mw
 git clone https://github.com/Fedict/eid-mw.git
@@ -594,38 +501,11 @@ autoreconf -i
 ./configure
 make
 sudo checkinstall
-# press 2 and change package name to  eid-mw
-# press 3 and change version to 4.2.6
-
-
-#Manually set the following values in Mozilla Firefox in about:config
-#security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
-#security.ssl.enable_false_start;true
-#security.ssl.renego_unrestricted_hosts;*.be
-
-#Manually replace the security.ssl.renego_unrestricted_hosts name
-# *.be in about:config,  if you want to authenticate on a DIFFERENT site than www.cm.be or test.eid.belgium.be !!!
-#Download Belgium Root certificates here:
-#http://repository.eid.belgium.be/certificates.php?cert=Root&lang=en
-#Import Belgium Root certificates into Firefox.
-#The Belgium Root certificates are required if you want to use the applications of the FSP Finance (Belcotax, Intervat, Finprof, etc.).
-#Before you begin, make sure your identity card is in the card reader. Then:
-#Viewing certificates
-#For Linux: Go to Edit > Preferences > Advanced > Encryption and click ‘View certificates’.
-#Check-marking certificates
-#Follow the steps below for the ‘Belgium Root CA’ and ‘Belgium Root CA2’ certificates. Can you only find one certificate? Then you obviously only have to perform these steps once.
-#Find the ‘Belgium Root CA’ or ‘Belgium Root CA2’ certificate and click the line below the arrow.
-#Click ‘Edit…’.
-#Check ALL three boxes.
-#Click ‘OK’.
-#Ensure that there are absolutely NO add-ons or plugins installed in Mozilla Firefox or Google Chrome.
-#Disconnect the eid card reader from the PC.
-#Reconnect the eid card reader to the PC.
-#Insert eid card into card reader.
-#Reboot the PC.
-#Test eid card reader here:
-#http://test.eid.belgium.be/
-#Source: http://wiki.yobi.be/wiki/Belgian_eID
+# press 2 and change eid package name to  eid-mw and hit <ENTER> key
+# press 3 and change version to 4.2.10 and hit <ENTER> key
+# Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox webbrowser
+# The add-on PLUGINS like Citrix Receiver for Linux,OpenH264 and Shockwave Flash plugins can remain active in Mozilla Firefox, as they do not seem to interfere with the eid card reader.
+# Close all web browser windows. Restart Mozilla Firefox browser and test eid card reader.
 
 
 # install newest version of smtube (Youtube player using few CPU resources, better than streamlink)
