@@ -1,10 +1,10 @@
 How to get the eid electronic card reader ACR38U working in Ubuntu 16.04 64-bit
 
-Prerequisites: Ubuntu 16.04 64-bit, newest version of Mozilla Firefox, pcscd, default-jre, opensc, libacr38u,  libacr38ucontrol0, libacsccid1, libccid
+Prerequisites: Ubuntu 16.04.2 LTS 64-bit or newer, newest version of Mozilla Firefox OR newest version of 64-bit Google Chrome browser, pcscd, default-jre, opensc, libacr38u,  libacr38ucontrol0, libacsccid1, libccid
 
 Supported CCID readers:   <a href="http://pcsclite.alioth.debian.org/ccid/section.html">http://pcsclite.alioth.debian.org/ccid/section.html</a>
 
-Copy-paste all the commands below into a temporary file. Then execute the file as a bash script. The Terminal command to execute this script is similar to “bash name-of-temporary-file”
+Copy-paste all the commands below into a temporary file. Then execute the file as a bash script. The Terminal command to execute this script is similar to "bash name-of-temporary-file"
 <pre><code># add repository for eid-mw and eid-viewer software packages
 sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
@@ -19,7 +19,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
 sudo aptitude install usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libudev-dev libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools  libnss3-tools ca-certificates
 sudo update-pciids
 sudo update-usbids
-# add support for Mozilla Firefow browser:
 cd $HOME/.mozilla/firefox/*.default
 rm extensions*
 rm -rf extensions/*
@@ -92,6 +91,17 @@ cd
 modutil -dbdir sql:.pki/nssdb -add "Belgium eID" -libfile /usr/lib/x86_64-linux-gnu/libbeidpkcs11.so.0
 modutil -dbdir sql:.pki/nssdb/ -list
 # no eid extensions/addons should be installed in Mozilla Firefox or Google Chrome.
+# install newest version of eid-mw using Github
+cd
+sudo rm -rf eid-mw
+git clone https://github.com/Fedict/eid-mw.git
+cd eid-mw/
+autoreconf -i
+./configure
+make
+sudo checkinstall
+# press 2 and change package name to  eid-mw
+# press 3 and change version to 4.2.6
 </pre>
 Manually replace the security.ssl.renego_unrestricted_hosts name value *.be in about:config,  if you want to authenticate on a DIFFERENT site than <a href="http://www.cm.be/" target="_blank" rel="noopener">www.cm.be</a> or <a href="http://test.eid.belgium.be/" target="_blank" rel="noopener">test.eid.belgium.be</a>
 
@@ -116,15 +126,13 @@ Click ‘OK’.
 
 Perform the same steps for the CA2, CA3 and CA4 certificates as well.
 
-Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox webbrowser.
+Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox and 64-bit Google Chrome webbrowsers.
 
-The add-on PLUGINS like Citrix Receiver for Linux,OpenH264 and Shockwave Flash plugins can remain active in Firefox, as they do not seem to interfere with the eid card reader.
+The add-on PLUGINS like Citrix Receiver for Linux,OpenH264 and Shockwave Flash plugins can remain active in Mozilla Firefox, as they do not seem to interfere with the eid card reader.
 
 Test eid card reader here using the Mozilla Firefox webbrowser:
 
 <a href="http://test.eid.belgium.be/" target="_blank" rel="noopener">http://test.eid.belgium.be/</a>
-
-Source: <a href="http://wiki.yobi.be/wiki/Belgian_eID" target="_blank" rel="noopener">http://wiki.yobi.be/wiki/Belgian_eID</a>
 
 [contact-form subject='mark911.wordpress.com feedback'][contact-field label='Name' type='name' required='1'/][contact-field label='Website' type='url'/][contact-field label='Comment' type='textarea' required='1'/][/contact-form]
 ===============================================================================
