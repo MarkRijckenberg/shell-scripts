@@ -584,8 +584,19 @@ cd
 # add support for Google Chrome browser (64-bit):
 modutil -dbdir sql:.pki/nssdb -add "Belgium eID" -libfile /usr/lib/x86_64-linux-gnu/libbeidpkcs11.so.0
 modutil -dbdir sql:.pki/nssdb/ -list
-
 # no eid extensions/addons should be installed in Mozilla Firefox or Google Chrome.
+# install newest version of eid-mw using Github
+cd
+sudo rm -rf eid-mw
+git clone https://github.com/Fedict/eid-mw.git
+cd eid-mw/
+autoreconf -i
+./configure
+make
+sudo checkinstall
+# press 2 and change package name to  eid-mw
+# press 3 and change version to 4.2.6
+
 
 #Manually set the following values in Mozilla Firefox in about:config
 #security.ssl.allow_unrestricted_renego_everywhere__temporarily_available_pref;true
