@@ -79,7 +79,7 @@ These guides are independently maintained. Much of their content is included in 
 
 * [[http://www.ee.surrey.ac.uk/Teaching/Unix/ | Teaching UNIX]]
 
-* [[http://www.jus.uio.no/sisu/the_cathedral_and_the_bazaar.eric_s_raymond/landscape.a4.pdf | Around 26 pages: The Cathedral and the Bazaar - Eric S. Raymond]]
+* [[https://creatingaction.stanford.edu/pdf/cathedral-bazaar.pdf | Around 26 pages: The Cathedral and the Bazaar - Eric S. Raymond]]
 
 * [[http://manuals.makeuseof.com.s3.amazonaws.com/for-mobile/Ubuntu_Beginners_Guide_-_MakeUseOf.com.pdf | Around 32 pages - Ubuntu_Beginners_Guide_-_MakeUseOf.com.pdf - Courtney Loo]]
 
@@ -102,7 +102,7 @@ These guides are independently maintained. Much of their content is included in 
 
 * [[http://keithcu.com/wordpress/?page_id=407 | Around 303 pages: After the Software Wars - Keith Curtis]]
 
-* [[https://www.jus.uio.no/sisu/free_for_all.peter_wayner/landscape.a5.pdf | Around 385 pages: Free For All - How GNU/Linux and the Free Software Movement Undercut the High Tech Titans - Peter Wayner]]
+* [[http://www.wayner.org/books/ffa/ffa-2002-12-13-mod.pdf | Around 385 pages: Free For All - How GNU/Linux and the Free Software Movement Undercut the High Tech Titans - Peter Wayner]]
 
 * [[http://twobits.net/pub/Kelty-TwoBits.pdf | Around 396 pages: Two Bits - The cultural significance of free software - by Christopher M. Kelty]]
 
