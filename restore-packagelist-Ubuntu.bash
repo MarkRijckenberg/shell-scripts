@@ -951,15 +951,15 @@ wget --no-check-certificate  `echo "http://www.mediahuman.com/download.html" | w
 sudo dpkg -i YouTubeToMP3*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 
-# install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
+# install 4kyoutubetomp3 that converts personal Youtube playlists to Youtube mp3s
 cd $HOME
-VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
-url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+VIDEODOWNLOADERREMOTEDIR="https://www.4kdownload.com/download"
+url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*4kyoutubetomp3[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
 dir=$(mktemp -dt)
 cd "$dir"
 # Download the .deb file
-wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
+wget `echo $url`
 # Install the package
 sudo dpkg -i "${url##*/}"
 # Clean up
@@ -968,6 +968,7 @@ cd $HOME
 rm -rf "$dir"
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
+
 
 # install Google Earth in Ubuntu 13.10 64-bit or newer
 #     uninstall old Google Earth
