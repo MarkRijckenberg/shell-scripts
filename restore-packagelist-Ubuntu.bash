@@ -41,6 +41,7 @@
 # RECOMMENDS: minimum of 2 gigabytes of RAM memory
 # REQUIRES: neon-useredition-20160630-1018-amd64.iso or Lubuntu 16.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
 #           wget, apt, unp, wine, biber, biblatex
+# REQUIRES: kernel version 4.9 or newer
 # CONFLICTS: with Kubuntu, Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
 # Ubuntu package repositories -> Linux Mint and DistroAstro packages destabilize the GUI interface
 # Use Cinnamon instead of Unity interface, because Unity causes Teamviewer sessions to slow down due to window 
@@ -188,6 +189,15 @@ cp /etc/sysctl.conf /tmp/sysctl.conf
 grep -v vm.swappiness /tmp/sysctl.conf > /tmp/sysctl.conf.1
 echo 'vm.swappiness=10' >> /tmp/sysctl.conf.1
 sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
+
+# https://www.cyberciti.biz/cloud-computing/increase-your-linux-server-internet-speed-with-tcp-bbr-congestion-control/
+# REQUIRES: kernel version 4.9 or newer
+rm /tmp/10-custom-kernel-bbr.conf
+touch /tmp/10-custom-kernel-bbr.conf
+echo 'net.core.default_qdisc=fq' >> /tmp/10-custom-kernel-bbr.conf
+echo 'net.ipv4.tcp_congestion_control=bbr' >> /tmp/10-custom-kernel-bbr.conf
+sudo cp /tmp/10-custom-kernel-bbr.conf /etc/sysctl.d/10-custom-kernel-bbr.conf
+sudo sysctl --system
 
 ##########################################################################################################
 # only disable touchpad on certain PC
