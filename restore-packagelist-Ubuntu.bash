@@ -323,6 +323,18 @@ sudo DEBIAN_FRONTEND=noninteractive apt-key add Repo.keys
 sudo DEBIAN_FRONTEND=noninteractive apt update
 ##########################################################################################################
 
+##########################################################################################################
+# install base packages using basepackages and basepackages-extra file
+cd $HOME/shell-scripts
+sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
+# following aptitude command works in Ubuntu 16.04 LTS, but not in Ubuntu 17.04 or higher:
+sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
+# following apt command works in Ubuntu 17.04:
+sudo DEBIAN_FRONTEND=noninteractive apt install `cat basepackages-extra`
+cd $HOME
+##########################################################################################################
+
+
 # install list of packages defined in packages files
 # allpackages = basepackages + astropackages
 # sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   `cat  allpackages` -o APT::Install-Suggests="false"
@@ -472,14 +484,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    kaccounts-
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo apt install  tlp
 sudo apt install  tlp-rdw
-
-##########################################################################################################
-# install base packages using basepackages file
-cd $HOME/shell-scripts
-sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
-sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
-cd $HOME
-##########################################################################################################
 
 ##########################################################################################################
 # install eid card reader middleware - replace codename (for example: trusty) with right Ubuntu codename
