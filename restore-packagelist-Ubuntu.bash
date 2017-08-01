@@ -524,7 +524,13 @@ sudo checkinstall
 
 # install newest version of smtube (Youtube player using few CPU resources, better than streamlink)
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libqtgui4 libqt4-xml libqt4-network libqt4-dbus phonon-backend-vlc
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   smtube
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   smtube
+
+# install lightweight GTK-based Youtube viewer (inspired by XenialDog 64-bit LiveUSB distro)
+# source: https://github.com/trizen/youtube-viewer
+# Ubuntu/Linux Mint: sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  youtube-viewer
+# then run this Terminal command to launch: gtk-youtube-viewer
 
 # install streamlink, which is replacement for minitube Youtube streamer and which uses less CPU:
 # https://www.ostechnix.com/streamlink-watch-online-video-streams-command-line/
