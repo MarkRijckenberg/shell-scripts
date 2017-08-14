@@ -974,7 +974,7 @@ wget --no-check-certificate   http://ftp.mozilla.org/pub/seamonkey/nightly/lates
 filename=`echo "http://ftp.mozilla.org/pub/seamonkey/nightly/latest-comm-aurora/" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i "td" -s '\n' | lynx -stdin -dump -hiddenlinks=listonly -nonumbers|grep bz2|grep x86_64| tail -n 1|cut -c 8-`
 wget --no-check-certificate   http://ftp.mozilla.org`echo $filename`
 tar -xjvf seamonkey*
-sudo cp -r seamonkey /opt/seamonkey
+wget --no-check-certificate  https://vivaldi.com/download/sudo cp -r seamonkey /opt/seamonkey
 sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
 
 # install YouTubeToMP3 - Youtube playlist downloader
@@ -1077,7 +1077,7 @@ else
 cd /tmp
 rm *.deb
 wget --no-check-certificate  https://vivaldi.com/download/
-wget `grep deb index.html |grep amd64|cut -d"\"" -f4`
+wget --no-check-certificate  `grep deb index.html |grep i386|cut -d"\"" -f4`
 sudo dpkg -i vivaldi*.deb
 sudo apt-get install -f
 
