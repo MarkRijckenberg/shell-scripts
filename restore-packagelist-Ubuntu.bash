@@ -949,6 +949,14 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 # bash minitube.sh
 # sudo DEBIAN_FRONTEND=noninteractive apt install -f
 
+# install Vivaldi web browser
+cd /tmp
+rm *.deb
+wget --no-check-certificate  https://vivaldi.com/download/
+wget `grep deb index.html |grep amd64|cut -d"\"" -f4`
+sudo dpkg -i vivaldi*.deb
+sudo apt-get install -f
+
   
 # install Google Chrome browser which includes newest version of Adobe Flash - other browsers do not
 cd $HOME
@@ -1064,6 +1072,14 @@ else
 #sudo dpkg -i minitube.deb
 # sudo DEBIAN_FRONTEND=noninteractive apt install minitube
 #sudo DEBIAN_FRONTEND=noninteractive apt install -f
+
+# install Vivaldi web browser
+cd /tmp
+rm *.deb
+wget --no-check-certificate  https://vivaldi.com/download/
+wget `grep deb index.html |grep amd64|cut -d"\"" -f4`
+sudo dpkg -i vivaldi*.deb
+sudo apt-get install -f
 
 # install Google Chrome browser which has better support for Flash websites (Youtube, ...)
 cd $HOME
