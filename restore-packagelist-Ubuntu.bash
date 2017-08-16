@@ -2422,7 +2422,9 @@ echo "https://www.codeschool.com/courses/try-r"
 # following URL added on May 18, 2014:
 echo "http://www.statmethods.net/advstats/timeseries.html"
 echo "http://a-little-book-of-r-for-time-series.readthedocs.org/en/latest/src/timeseries.html"
-echo "https://www.otexts.org/fpp"
+# following URL added on August 16, 2017:
+# Forecasting: principles and practice using R:
+echo "https://www.otexts.org/book/fpp"
 echo "http://cran.r-project.org/doc/contrib/Ricci-refcard-ts.pdf"
 echo "http://www.statoek.wiso.uni-goettingen.de/veranstaltungen/zeitreihen/sommer03/ts_r_intro.pdf"
 echo "https://onlinecourses.science.psu.edu/stat510/"
