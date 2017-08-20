@@ -987,22 +987,22 @@ sudo dpkg -i YouTubeToMP3*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 
 # install 4kyoutubetomp3 that converts personal Youtube playlists to Youtube mp3s
-cd $HOME
-VIDEODOWNLOADERREMOTEDIR="https://www.4kdownload.com/download"
-url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*4kyoutubetomp3[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
+#cd $HOME
+#VIDEODOWNLOADERREMOTEDIR="https://www.4kdownload.com/download"
+#url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*4kyoutubetomp3[^"]*amd64*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
+#dir=$(mktemp -dt)
+#cd "$dir"
 # Download the .deb file
-wget `echo $url`
+#wget `echo $url`
 # Install the package
-sudo dpkg -i "${url##*/}"
+#sudo dpkg -i "${url##*/}"
 # Clean up
-rm "${url##*/}"
-cd $HOME
-rm -rf "$dir"
-cd $HOME
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
+#rm "${url##*/}"
+#cd $HOME
+#rm -rf "$dir"
+#cd $HOME
+#sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 
 
 # install Google Earth in Ubuntu 13.10 64-bit or newer
@@ -1110,21 +1110,21 @@ sudo dpkg -i YouTubeToMP3*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 
 # install 4kvideodownloader that converts personal Youtube playlists to Youtube mp3s
-VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
-url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
+#VIDEODOWNLOADERREMOTEDIR="http://downloads.4kdownload.com/app/"
+#url=$(wget -O- -q --no-check-certificate `echo $VIDEODOWNLOADERREMOTEDIR` |  sed -ne 's/^.*"\([^"]*videodownloader[^"]*i386*\.deb\)".*/\1/p' | sort -r | head -1) 
 # Create a temporary directory
-dir=$(mktemp -dt)
-cd "$dir"
+#dir=$(mktemp -dt)
+#cd "$dir"
 # Download the .deb file
-wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
+#wget $VIDEODOWNLOADERREMOTEDIR`echo $url`
 # Install the package
-sudo dpkg -i "${url##*/}"
+#sudo dpkg -i "${url##*/}"
 # Clean up
-rm "${url##*/}"
-cd $HOME
-rm -rf "$dir"
-cd $HOME
-sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
+#rm "${url##*/}"
+#cd $HOME
+#rm -rf "$dir"
+#cd $HOME
+#sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f install
 
 # install Google Earth in Ubuntu 13.10 32-bit or newer
 #     uninstall old Google Earth
