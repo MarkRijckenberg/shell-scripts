@@ -977,7 +977,8 @@ tar -xjvf seamonkey*
 wget --no-check-certificate  https://vivaldi.com/download/sudo cp -r seamonkey /opt/seamonkey
 sudo ln -sf /opt/seamonkey/seamonkey /usr/bin/seamonkey
 
-# install YouTubeToMP3 - Youtube playlist downloader
+# install YouTubeToMP3 - Youtube playlist downloader with no limit on number of downloaded mp3 files
+# still works correctly in August 2017
 cd /tmp
 rm YouTube*
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes -f purge youtube-to-mp3
