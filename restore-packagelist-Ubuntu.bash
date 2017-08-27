@@ -1177,11 +1177,12 @@ cd
 
 fi
 
-# install Opera browser (including WhatsApp and built-in free Opera VPN client)
+# install opera-developer browser (including WhatsApp and built-in free Opera VPN client)
 wget -O- http://deb.opera.com/archive.key | sudo DEBIAN_FRONTEND=noninteractive apt-key add -
 sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list'
 sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   opera
+sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes remove opera
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   opera-developer
 
 # Enable and upgrade the open-source graphics drivers for Intel, AMD Radeon, and Nouveau (NVIDIA)
 #sudo DEBIAN_FRONTEND=noninteractive add-apt-repository  --yes --force-yes -f ppa:oibaf/graphics-drivers
