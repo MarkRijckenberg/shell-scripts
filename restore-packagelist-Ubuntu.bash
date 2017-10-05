@@ -247,7 +247,10 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntuhandbook1
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:wine/wine-builds
+# deprecated: sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:wine/wine-builds
+wget -nc https://dl.winehq.org/wine-builds/Release.key
+sudo apt-key add Release.key
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes https://dl.winehq.org/wine-builds/ubuntu/
 # disable oibaf PPA which wants to install newer linux-image package that kills wireless on new Asus N551VW laptop!
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noobslab/apps
