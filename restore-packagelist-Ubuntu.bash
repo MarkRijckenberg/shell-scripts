@@ -511,8 +511,13 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes remove --purge beid*
 sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
-sudo aptitude install usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libusb-1.0-0 libpcsclite1 libpcsclite-dev pcsc-tools ca-certificates libtool autoconf automake checkinstall git libgtk-3-dev libxml++2.6-dev libproxy-dev openssl libssl-dev libcurl4-openssl-dev
+sudo DEBIAN_FRONTEND=noninteractive apt install  aptitude
+sudo DEBIAN_FRONTEND=noninteractive apt install  usbutils pciutils eid-mw eid-viewer apt  firefox pcscd  default-jre 
+sudo DEBIAN_FRONTEND=noninteractive apt install  opensc libacr38u libacr38ucontrol0 libacsccid1  libccid libusb-1.0-0 
+sudo DEBIAN_FRONTEND=noninteractive apt install  libpcsclite1 libpcsclite-dev pcsc-tools ca-certificates libtool autoconf 
+sudo DEBIAN_FRONTEND=noninteractive apt install  automake checkinstall git libgtk-3-dev libxml++2.6-dev libproxy-dev 
+sudo DEBIAN_FRONTEND=noninteractive apt install  openssl libssl-dev libcurl4-openssl-dev
+sudo DEBIAN_FRONTEND=noninteractive apt install  libgtk2.0-0 libgtk2.0-dev
 sudo update-pciids
 sudo update-usbids
 # compile and install newest version of eid-mw using Github
