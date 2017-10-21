@@ -580,6 +580,10 @@ rm download*
 rm wps-office*
 wget --no-check-certificate http://wps-community.org/downloads
 wget --no-check-certificate  `echo "http://wps-community.org/downloads" | wget -O- -i- --no-check-certificate | hxnormalize -x  | hxselect -c -i ul li:first-child | lynx -stdin -dump -hiddenlinks=listonly -nonumbers| grep kdl|head -n 1`
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libsm6
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libsm6:i386 
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libpng12-0
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libpng12-0:i386
 sudo dpkg -i wps-office*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt install -f
 ##########################################################################################################
