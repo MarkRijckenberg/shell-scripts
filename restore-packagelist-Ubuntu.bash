@@ -1349,8 +1349,10 @@ sudo python3 setup.py install
 # https://github.com/chapmanb/bcbio-nextgen/issues/1133
 #############################################################################################
 sudo DEBIAN_FRONTEND=noninteractive apt update
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   flex libboost-all-dev cmake libqt4-dev build-essential libqtwebkit-dev checkinstall
-sudo DEBIAN_FRONTEND=noninteractive apt build-dep --yes --force-yes wget
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   flex libboost-all-dev cmake libqt4-dev 
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   build-essential libqtwebkit-dev checkinstall
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   libgnutls28-dev libgnutls-openssl27
+sudo DEBIAN_FRONTEND=noninteractive apt build-dep --yes --force-yes   wget
 cd
 sudo rm -rf wget
 git clone https://github.com/mirror/wget.git
