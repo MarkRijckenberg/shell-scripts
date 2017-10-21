@@ -972,7 +972,7 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 cd /tmp
 rm *.deb
 wget --no-check-certificate  https://vivaldi.com/download/
-wget `grep deb index.html |grep amd64|cut -d"\"" -f4`
+wget --no-check-certificate   `grep deb index.html |grep amd64|cut -d"\"" -f4`
 sudo dpkg -i vivaldi*.deb
 sudo apt-get install -f
 
