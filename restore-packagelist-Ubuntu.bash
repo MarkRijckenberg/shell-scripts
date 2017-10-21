@@ -788,7 +788,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt install  --yes --force-yes -f
 cd
 sudo rm -rf $HOME/lgogdownloader
 # install game client prerequisites:
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    libtinyxml2-dev build-essential libcurl4-openssl-dev liboauth-dev libjsoncpp-dev libhtmlcxx-dev libboost-system-dev libboost-filesystem-dev libboost-regex-dev libboost-program-options-dev libboost-date-time-dev libtinyxml-dev librhash-dev help2man
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    libtinyxml2-dev build-essential
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libcurl4-openssl-dev liboauth-dev libjsoncpp-dev 
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libhtmlcxx-dev libboost-system-dev 
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libboost-filesystem-dev libboost-regex-dev 
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libboost-program-options-dev libboost-date-time-dev 
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libtinyxml-dev librhash-dev help2man
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libboost-iostreams1.63-dev
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libboost-iostreams-dev
 # compile and install game client:
 git clone https://github.com/Sude-/lgogdownloader.git
 cd lgogdownloader
