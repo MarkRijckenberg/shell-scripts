@@ -2235,6 +2235,8 @@ echo "https://3.hidemyass.com"
 #     Math links for kids                                                                     #
 ###############################################################################################
 
+# following URL added on October 22, 2017
+echo "www.brilliant.org"
 # following URL added on February 10, 2014:
 echo "http://www.pyromaths.org/enligne/"
 # following URL added on March 6, 2017
