@@ -2768,6 +2768,7 @@ echo "http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joi
 # Step 3 Sams Teach Yourself SQL in 10 Minutes (4th Edition)
 echo "Learn MySQL commands = de facto SQL (dialect) standard"
 echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
+echo "http://www.markmcilroy.com/downloads/sql_essentials.pdf"
 
 # following URL added on June 11, 2015:
 echo "https://www.coursera.org/course/pythonlearn"
