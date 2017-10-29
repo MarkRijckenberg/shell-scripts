@@ -1,4 +1,6 @@
-REM Works in Windows HVM in Qubes OS 3.2 or newer or in normal install of Windows 7/8/10 without Qubes OS
+REM Following .cmd Windows command script has been tested and works in Windows HVM in Qubes 
+
+REM OS 3.2 or in normal install of Windows 7/8.1/10 Pro 64-bit without Qubes OS
 
 REM In Qubes OS, connections to TCP ports 80 and 443 need to be open in Windows HVM
 
@@ -9,8 +11,6 @@ REM Last modification date: 2017/05/22
 REM Recommended to run this script on SSDs, not on conventional hard disks....
 
 REM This script installs 62 Windows applications and requires 11 GB of free disk space to install
-
-REM Following .cmd Windows command script has been tested and works in Windows 8.1 or Windows 10 Pro 64-bit:
 
 REM Please run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
 
