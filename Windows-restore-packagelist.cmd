@@ -1,3 +1,9 @@
+REM Works in Windows HVM in Qubes OS 3.2 or newer or in normal install of Windows 7/8/10 without Qubes OS
+
+REM In Qubes OS, connections to TCP ports 80 and 443 need to be open in Windows HVM
+
+REM Furthermore, Windows HVM needs to use sys-firewall as NetVM, not whonix
+
 REM Last modification date: 2017/05/22
 
 REM Recommended to run this script on SSDs, not on conventional hard disks....
