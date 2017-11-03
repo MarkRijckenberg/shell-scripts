@@ -9,7 +9,7 @@ sudo rm /etc/apt/trusted.gpg.d/*
 sudo apt purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
 sudo rm -rf /etc/java-*-openjdk/*
 sudo apt update
-sudo apt install unp build-essential checkinstall wget apt default-jdk git cmake pkg-config
+sudo apt install unp build-essential checkinstall wget apt default-jdk git cmake pkg-config virtualenv
 # Install cuda 8 first:
 cd /tmp
 rm -rf cuda*
