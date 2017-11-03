@@ -2319,6 +2319,7 @@ echo "http://oyc.yale.edu/courses"
 echo "https://ocw.mit.edu/courses/"
 echo "https://openstax.org/subjects"
 echo "https://open.umn.edu/opentextbooks/"
+echo "http://www.textbookrevolution.org/index.php/Book:Lists/Subjects"
 
 ###############################################################################################
 #     Links for authors of Astronomy books                                                    #
