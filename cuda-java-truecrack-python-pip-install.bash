@@ -4,6 +4,7 @@
 # Required GNU/Linux distribution: Ubuntu 14.04 LTS 64-bit
 # Required free disk space: at least 5 gigabytes free disk space on your root (/) partition
 # last update: April 28, 2017
+VERSION=9.0
 sudo rm /etc/apt/trusted.gpg.d/*
 sudo apt purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
 sudo rm -rf /etc/java-*-openjdk/*
@@ -16,7 +17,7 @@ rm -rf cuda*
 #URL=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8`
 #VERSION=`grep 1404 cuda-downloads |head -n 1|cut -d"'" -f8|cut -d"_" -f3|cut -d"-" -f1`
 ##wget `echo $URL`
-wget https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
+wget https://developer.nvidia.com/compute/cuda/`echo $VERSION`/Prod/local_installers/cuda-repo-ubuntu1704-9-0-local_`echo $VERSION`.176-1_amd64-deb
 sudo dpkg -i --force-all cuda*deb
 sudo apt update
 sudo apt install libopencv-core-dev checkinstall
