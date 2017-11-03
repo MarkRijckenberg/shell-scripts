@@ -2303,6 +2303,14 @@ echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 
 
 ###############################################################################################
+#     Free course material for high school students                                           #
+###############################################################################################
+echo "http://www.openculture.com/free_textbooks"
+echo "https://www.ck12.org/"
+echo "https://www.oercommons.org/"
+echo "https://www.saylor.org/books/"
+
+###############################################################################################
 #     Free course material for university students                                                                     #
 ###############################################################################################
 # following URL added on February 24, 2017:
