@@ -2730,6 +2730,8 @@ echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Chea
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf"
 echo "http://www.datasciencefree.com/cheatsheets.html"
 echo "https://github.com/ehmatthes/pcc/releases/download/v1.0.0/beginners_python_cheat_sheet_pcc_all.pdf"
+# Matplotlib (visualisation for Python) cheat sheet:
+echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf"
 # PySpark cheat sheet:
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf"
 # Keras deep learning library - Scikit-learn - Tensorflow GPU - python framework cheatsheet:
