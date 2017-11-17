@@ -216,6 +216,8 @@ rm /tmp/resolved.conf
 rm /tmp/resolved.conf.1
 cp /etc/systemd/resolved.conf /tmp/resolved.conf
 grep -v DNS  /tmp/resolved.conf > /tmp/resolved.conf.1
+# enable new Quad9 (9.9.9.9) DNS and DNSSEC service
+# https://arstechnica.com/information-technology/2017/11/new-quad9-dns-service-blocks-malicious-domains-for-everyone/
 echo 'DNS=9.9.9.9' >> /tmp/resolved.conf.1
 echo 'DNSSEC=yes' >> /tmp/resolved.conf.1
 sudo cp /tmp/resolved.conf.1 /etc/systemd/resolved.conf
