@@ -196,6 +196,38 @@ grep -v vm.swappiness /tmp/sysctl.conf > /tmp/sysctl.conf.1
 echo 'vm.swappiness=10' >> /tmp/sysctl.conf.1
 sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
 
+#######################################################################################################################
+# DNS fixes related to systemd issues :-(
+#######################################################################################################################
+# adapt /etc/resolv.conf symlink in order to get DNSSEC support working again:
+sudo rm /etc/resolv.conf
+sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+
+# enable systemd caching DNS resolver
+rm /tmp/nsswitch.conf
+rm /tmp/nsswitch.conf.1
+cp /etc/nsswitch.conf /tmp/nsswitch.conf
+grep -v hosts  /tmp/nsswitch.conf > /tmp/nsswitch.conf.1
+echo 'hosts:          files mdns4_minimal [NOTFOUND=return] resolv myhostname' >> /tmp/nsswitch.conf.1
+sudo cp /tmp/nsswitch.conf.1 /etc/nsswitch.conf
+
+# set DNS server to 9.9.9.9
+rm /tmp/resolved.conf
+rm /tmp/resolved.conf.1
+cp /etc/systemd/resolved.conf /tmp/resolved.conf
+grep -v DNS  /tmp/resolved.conf > /tmp/resolved.conf.1
+echo 'DNS=9.9.9.9' >> /tmp/resolved.conf.1
+echo 'DNSSEC=yes' >> /tmp/resolved.conf.1
+sudo cp /tmp/resolved.conf.1 /etc/systemd/resolved.conf
+sudo systemd-resolve --flush-caches
+sudo systemctl restart systemd-resolved
+sudo systemd-resolve --flush-caches
+sudo systemd-resolve  --status
+# test DNSSEC validation using dig command-line tool
+# see: https://docs.menandmice.com/display/MM/How+to+test+DNSSEC+validation
+dig pir.org +dnssec +multi
+
+#######################################################################################################################
 # https://www.cyberciti.biz/cloud-computing/increase-your-linux-server-internet-speed-with-tcp-bbr-congestion-control/
 # REQUIRES: kernel version 4.9 or newer
 rm /tmp/10-custom-kernel-bbr.conf
