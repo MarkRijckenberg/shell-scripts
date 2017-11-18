@@ -199,6 +199,7 @@ sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
 #######################################################################################################################
 # DNS fixes related to systemd issues :-(
 #######################################################################################################################
+sudo apt purge unbound
 # adapt /etc/resolv.conf symlink in order to get DNSSEC support working again:
 sudo rm /etc/resolv.conf
 sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
