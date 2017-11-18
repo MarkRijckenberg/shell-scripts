@@ -208,7 +208,8 @@ rm /tmp/nsswitch.conf
 rm /tmp/nsswitch.conf.1
 cp /etc/nsswitch.conf /tmp/nsswitch.conf
 grep -v hosts  /tmp/nsswitch.conf > /tmp/nsswitch.conf.1
-echo 'hosts:          files mdns4_minimal [NOTFOUND=return] resolv myhostname' >> /tmp/nsswitch.conf.1
+# dns must be mentioned in next line, or else wget does not work
+echo 'hosts: files mdns4_minimal [NOTFOUND=return] resolv dns myhostname' >> /tmp/nsswitch.conf.1
 sudo cp /tmp/nsswitch.conf.1 /etc/nsswitch.conf
 
 # set DNS server to 9.9.9.9
