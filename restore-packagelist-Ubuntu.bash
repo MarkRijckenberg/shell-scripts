@@ -200,8 +200,9 @@ sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
 # DNS fixes related to systemd issues :-(
 #######################################################################################################################
 sudo apt purge unbound
-# adapt /etc/resolv.conf symlink in order to get DNSSEC support working again:
+# replace DNS resolution via /etc/resolv.conf by DNS resolution via systemd in order to use DNS server 9.9.9.9:
 sudo rm /etc/resolv.conf
+# comment out the next line to avoid breaking DNS resolution in Ubuntu/Fedora running in Qubes OS 3.2
 sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 # enable systemd caching DNS resolver
