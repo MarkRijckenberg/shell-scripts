@@ -203,7 +203,7 @@ sudo apt purge unbound
 # replace DNS resolution via /etc/resolv.conf by DNS resolution via systemd in order to use DNS server 9.9.9.9:
 sudo rm /etc/resolv.conf
 # comment out the next line to avoid breaking DNS resolution in Ubuntu/Fedora running in Qubes OS 3.2
-sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+#sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
 # enable systemd caching DNS resolver
 rm /tmp/nsswitch.conf
