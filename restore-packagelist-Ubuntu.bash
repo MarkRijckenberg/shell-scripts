@@ -208,7 +208,7 @@ cp /etc/systemd/resolved.conf $HOME/resolved.conf_$LogTime
 
 sudo update-rc.d resolvconf remove
 cp /etc/resolv.conf /tmp/resolv.conf
-grep -v nameserver  /tmp/resolv.conf > /tmp/resolved.conf.1
+grep -v nameserver  /tmp/resolv.conf > /tmp/resolv.conf.1
 echo 'nameserver 9.9.9.9' >> /tmp/resolv.conf.1
 sudo cp /tmp/resolv.conf.1  /etc/resolv.conf
 
@@ -242,7 +242,8 @@ sudo systemd-resolve --flush-caches
 sudo systemd-resolve  --status
 
 # It is probably also necessary to manually set
-# the DNS server to 9.9.9.9 in the NetworkManager GUI
+# the DNS server to 9.9.9.9 in the router's configuration
+# and in the NetworkManager GUI
 
 # test DNSSEC validation using dig command-line tool
 # see: https://docs.menandmice.com/display/MM/How+to+test+DNSSEC+validation
