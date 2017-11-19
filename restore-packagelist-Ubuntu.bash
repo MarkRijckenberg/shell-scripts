@@ -200,6 +200,11 @@ sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
 # DNS fixes related to systemd issues :-(
 #######################################################################################################################
 sudo apt purge unbound
+LogTime=$(date '+%Y-%m-%d_%Hh%Mm%Ss')
+cp /etc/resolv.conf $HOME/resolv.conf_$LogTime
+cp /etc/nsswitch.conf $HOME/nsswitch.conf_$LogTime
+cp /etc/systemd/resolved.conf $HOME/resolved.conf_$LogTime
+
 # replace DNS resolution via /etc/resolv.conf by DNS resolution via systemd in order to use DNS server 9.9.9.9:
 # sudo rm /etc/resolv.conf
 # comment out the next line to avoid breaking DNS resolution in Ubuntu/Fedora running in Qubes OS 3.2
