@@ -39,9 +39,11 @@
 # PURPOSE: This bash shell script allows you to easily restore packages into a clean install of 
 # neon-useredition-20160630-1018-amd64.iso or Lubuntu 16.04 LTS 64-bit:
 # RECOMMENDS: minimum of 2 gigabytes of RAM memory
-# REQUIRES: neon-useredition-20160630-1018-amd64.iso or Lubuntu 16.04 LTS 64-bit (to support UEFI+SecureBoot+biber+bibtex+bluetooth), cinnamon-bluetooth, 
-#           wget, apt, unp, wine, biber, biblatex
-# REQUIRES: kernel version 4.9 or newer
+# REQUIRES: Lubuntu 17.10 64-bit or newer
+# (to support UEFI+SecureBoot+biber+bibtex+bluetooth), 
+# cinnamon-bluetooth, 
+# wget, apt, unp, wine, biber, biblatex
+# REQUIRES: kernel version 4.10 or newer
 # CONFLICTS: with Kubuntu, Linux Mint and DistroAstro packages!!!!!!! Do not use any package repository except for
 # Ubuntu package repositories -> Linux Mint and DistroAstro packages destabilize the GUI interface
 # Use Cinnamon instead of Unity interface, because Unity causes Teamviewer sessions to slow down due to window 
@@ -196,9 +198,8 @@ grep -v vm.swappiness /tmp/sysctl.conf > /tmp/sysctl.conf.1
 echo 'vm.swappiness=10' >> /tmp/sysctl.conf.1
 sudo cp /tmp/sysctl.conf.1 /etc/sysctl.conf
 
-#######################################################################################################################
-# DNS fixes related to systemd issues :-(
-#######################################################################################################################
+# enable new Quad9 (9.9.9.9) DNS and DNSSEC service 
+# in Ubuntu 17.10 64-bit using a bash shell script
 sudo apt purge unbound
 LogTime=$(date '+%Y-%m-%d_%Hh%Mm%Ss')
 cp /etc/resolv.conf $HOME/resolv.conf_$LogTime
@@ -233,6 +234,10 @@ sudo systemd-resolve --flush-caches
 sudo systemctl restart systemd-resolved
 sudo systemd-resolve --flush-caches
 sudo systemd-resolve  --status
+
+# It is probably also necessary to manually set
+# the DNS server to 9.9.9.9 in the NetworkManager GUI
+
 # test DNSSEC validation using dig command-line tool
 # see: https://docs.menandmice.com/display/MM/How+to+test+DNSSEC+validation
 dig pir.org +dnssec +multi
