@@ -206,11 +206,13 @@ cp /etc/resolv.conf $HOME/resolv.conf_$LogTime
 cp /etc/nsswitch.conf $HOME/nsswitch.conf_$LogTime
 cp /etc/systemd/resolved.conf $HOME/resolved.conf_$LogTime
 
+sudo service resolvconf stop
 sudo update-rc.d resolvconf remove
 cp /etc/resolv.conf /tmp/resolv.conf
 grep -v nameserver  /tmp/resolv.conf > /tmp/resolv.conf.1
 echo 'nameserver 9.9.9.9' >> /tmp/resolv.conf.1
 sudo cp /tmp/resolv.conf.1  /etc/resolv.conf
+sudo service resolvconf start
 
 # replace DNS resolution via /etc/resolv.conf by DNS resolution via systemd in order to use DNS server 9.9.9.9:
 # sudo rm /etc/resolv.conf
