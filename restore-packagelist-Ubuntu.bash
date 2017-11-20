@@ -205,14 +205,29 @@ LogTime=$(date '+%Y-%m-%d_%Hh%Mm%Ss')
 cp /etc/resolv.conf $HOME/resolv.conf_$LogTime
 cp /etc/nsswitch.conf $HOME/nsswitch.conf_$LogTime
 cp /etc/systemd/resolved.conf $HOME/resolved.conf_$LogTime
+cp /etc/network/interfaces $HOME/interfaces_$LogTime
 
 sudo service resolvconf stop
 sudo update-rc.d resolvconf remove
 cp /etc/resolv.conf /tmp/resolv.conf
 grep -v nameserver  /tmp/resolv.conf > /tmp/resolv.conf.1
 echo 'nameserver 9.9.9.9' >> /tmp/resolv.conf.1
+echo 'nameserver 2620:fe::fe' >> /tmp/resolv.conf.1
+echo 'domain dnsknowledge.com' >> /tmp/resolv.conf.1
+echo 'options rotate' >> /tmp/resolv.conf.1
 sudo cp /tmp/resolv.conf.1  /etc/resolv.conf
 sudo service resolvconf start
+
+# configure DNS server on Ubuntu 16.04 LTS:
+cp /etc/network/interfaces /tmp/interfaces
+grep -v nameservers  /tmp/interfaces > /tmp/interfaces.1
+grep -v search  /tmp/interfaces.1 > /tmp/interfaces.2
+grep -v options  /tmp/interfaces.2 > /tmp/interfaces.3
+echo 'dns-nameservers 9.9.9.9 2620:fe::fe' >> /tmp/interfaces.3
+echo 'dns-search dnsknowledge.com' >> /tmp/interfaces.3
+echo 'dns-options rotate' >> /tmp/interfaces.3
+sudo cp /tmp/interfaces.3  /etc/network/interfaces
+
 
 # replace DNS resolution via /etc/resolv.conf by DNS resolution via systemd in order to use DNS server 9.9.9.9:
 # sudo rm /etc/resolv.conf
@@ -250,6 +265,7 @@ sudo systemd-resolve  --status
 # test DNSSEC validation using dig command-line tool
 # see: https://docs.menandmice.com/display/MM/How+to+test+DNSSEC+validation
 dig pir.org +dnssec +multi
+host dnsknowledge.com
 
 #######################################################################################################################
 # https://www.cyberciti.biz/cloud-computing/increase-your-linux-server-internet-speed-with-tcp-bbr-congestion-control/
