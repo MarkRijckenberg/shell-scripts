@@ -34,7 +34,7 @@ REM
 REM     [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
 REM }
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "unzip C:\temp\LGPO.zip .\LGPO"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "unzip C:\temp\LGPO.zip c:\temp\LGPO"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "Invoke-ApplySecureHostBaseline -Path '.\Secure-Host-Baseline' -PolicyNames 'Adobe Reader','AppLocker','Certificates','Chrome','EMET','Internet Explorer','Office 2013','Office 2016','Windows','Windows Firewall' -ToolPath '.\LGPO\lgpo.exe'"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd Secure-Host-Baseline\Compliance\Scripts"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path '..\..\Adobe Reader\Compliance\AdobeReaderDC.audit' -Verbose | Out-File ComplianceReport.txt"
