@@ -78,6 +78,12 @@ REM  the nuget package manager currently has 40065 packages (July 31,2015)
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y nugetpackageexplorer"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y axel"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y curl"
+
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y unzip"
+
 REM Install Internet security suite
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 360ts"
@@ -135,24 +141,6 @@ REM Close .cmd command line window and open a new .cmd window to run the next co
 REM Run following commands in Windows command line (using cmd, NOT Powershell) as administrator:
 REM ############################################################################################### 
 
-REM If you are using the 32-bit version of Windows, use 
-
-REM curl-7.46.0-win32-local.msi instead of
- 
-REM curl-7.46.0-win64-local.msi
-
-REM set CURLFILENAME=curl-7.46.0-win64-local.msi
-
-REM mkdir C:\temp
-
-REM cd c:\temp
-
-REM wget http://www.confusedbycode.com/curl/%CURLFILENAME%
-
-REM msiexec /I  %CURLFILENAME% /quiet /passive
-
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y curl"
-
 REM ############################################################################################### 
 REM get sha256sum.exe to check SHA256SUM values of downloaded .iso image files:
 REM mkdir C:\temp
@@ -188,8 +176,6 @@ REM jre8 installer hangs; so line below has been disabled
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y jre8"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 7zip.install"
-
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y axel"
 
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 7zip.portable"
 
