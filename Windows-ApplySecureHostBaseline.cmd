@@ -32,13 +32,13 @@ REM
 REM     [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
 REM }
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd C:\temp;unzip C:\temp\LGPO.zip"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Invoke-ApplySecureHostBaseline -Path 'c:\temp\Secure-Host-Baseline' -PolicyNames 'Adobe Reader','AppLocker','Certificates','Chrome','EMET','Internet Explorer','Office 2013','Office 2016','Windows','Windows Firewall' -ToolPath '.\lgpo.exe'"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd C:\temp;unzip C:\temp\LGPO.zip; mkdir c:\temp\LGPO;copy LGPO*.* c:\temp\LGPO"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Invoke-ApplySecureHostBaseline -Path 'c:\temp\Secure-Host-Baseline' -PolicyNames 'Adobe Reader','AppLocker','Certificates','Chrome','EMET','Internet Explorer','Office 2013','Office 2016','Windows','Windows Firewall' -ToolPath 'c:\temp\LGPO\lgpo.exe'"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd c:\temp\Secure-Host-Baseline\Compliance\Scripts"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path '..\..\Adobe Reader\Compliance\AdobeReaderDC.audit' -Verbose | Out-File ComplianceReport.txt"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path '..\..\Chrome\Compliance\GoogleChrome.audit' -Verbose >ComplianceReport.txt"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path '..\..\EMET\Compliance\EMET_5.5.audit' -Verbose >ComplianceReport.txt"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path '..\..\Internet Explorer\Compliance\InternetExplorer11.audit' -Verbose >>ComplianceReport.txt"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path '..\..\Windows\Compliance\Windows10.audit' -Verbose >ComplianceReport.txt"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path 'C:\temp\Secure-Host-Baseline\Adobe Reader\Compliance\AdobeReaderDC.audit' -Verbose | Out-File ComplianceReport.txt"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path 'C:\temp\Secure-Host-Baseline\Chrome\Compliance\GoogleChrome.audit' -Verbose >ComplianceReport.txt"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path 'C:\temp\Secure-Host-Baseline\EMET\Compliance\EMET_5.5.audit' -Verbose >ComplianceReport.txt"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path 'C:\temp\Secure-Host-Baseline\Internet Explorer\Compliance\InternetExplorer11.audit' -Verbose >>ComplianceReport.txt"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "Test-Compliance -Path 'C:\temp\Secure-Host-Baseline\Windows\Compliance\Windows10.audit' -Verbose >ComplianceReport.txt"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "Select-String -Path .\ComplianceReport.txt -Pattern 'FAILED'"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "Select-String -Path .\ComplianceReport.txt -Pattern 'WARN'"
