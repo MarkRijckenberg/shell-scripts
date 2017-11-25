@@ -16,15 +16,13 @@ REM  the chocolatey package manager currently has 15055 packages (July 31,2015)
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y axel"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y curl"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y unzip"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "mkdir c:\temp"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd c:\temp"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "rmdir .\Secure* -Recurse -force"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "rmdir .\LGPO* -Recurse -force"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "rmdir c:\temp\Secure* -Recurse -force"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "rmdir c:\temp\LGPO* -Recurse -force"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "git clone https://github.com/iadgov/Secure-Host-Baseline"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "Get-ChildItem -Path '.\Secure-Host-Baseline' -Recurse -Include '*.ps1','*.psm1' | Unblock-File -Verbose"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "Import-Module -Name .\Secure-Host-Baseline\Scripts\GroupPolicy.psm1"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "Import-Module -Name .\Secure-Host-Baseline\Compliance\Scripts\Compliance.psm1"
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd c:\temp && axel https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/telligent.evolution.components.attachments/01/4062/00/00/03/65/94/11/LGPO.zip"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd c:\temp ; axel https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/telligent.evolution.components.attachments/01/4062/00/00/03/65/94/11/LGPO.zip"
 
 REM Add-Type -AssemblyName System.IO.Compression.FileSystem
 REM function Unzip
