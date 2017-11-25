@@ -30,9 +30,15 @@ echo "Show list of locally installed packages - installed using choco package ma
 
 choco list -lo
 
-echo "After running this script, please start RStudio. In the RStudio interface, please click on"
+echo "TO DO: In the RStudio interface, please click on"
 
 echo "'Help', then click on 'Check for Updates' and then click on 'Quit and Download' to get the newest version of RStudio"
+
+echo "TO DO:Replace 127.0.0.1 with 0.0.0.0 in Windows hosts file after running HostsMan application"
+
+echo "in C:\ProgramData\chocolatey\lib\hostsman\"
+
+echo "TO DO:Manually Configure network adapter to use Quad9 DNS server 9.9.9.9"
 
 echo on
 
@@ -60,15 +66,9 @@ REM Install Internet security suite
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y 360ts"
 
-REM Get E-mail clients and utilities
+REM install Hostsman hosts file updater
 
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y thunderbird"
-
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y mozbackup"
-
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y outlookviewer"
-
-REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y outlookconverter"
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y hostsman"
 
 REM Get web browsers
 
@@ -81,6 +81,16 @@ REM Get web browsers
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y qupzilla"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y flashplayerplugin"
+
+REM Get E-mail clients and utilities
+
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y thunderbird"
+
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y mozbackup"
+
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y outlookviewer"
+
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y outlookconverter"
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y grepwin"
 
@@ -213,7 +223,7 @@ REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install
 
 REM install Android emulator, which depends on Virtualbox:
 
-@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y andy"
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y andy"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y libreoffice"
 
@@ -283,9 +293,15 @@ echo "Show list of locally installed packages - installed using choco package ma
 
 choco list -lo
 
-echo "After running this script, please start RStudio. In the RStudio interface, please click on"
+echo "TO DO: In the RStudio interface, please click on"
 
 echo "'Help', then click on 'Check for Updates' and then click on 'Quit and Download' to get the newest version of RStudio"
+
+echo "TO DO:Replace 127.0.0.1 with 0.0.0.0 in Windows hosts file after running HostsMan application"
+
+echo "in C:\ProgramData\chocolatey\lib\hostsman\"
+
+echo "TO DO:Manually Configure network adapter to use Quad9 DNS server 9.9.9.9"
 
 echo on
 
@@ -303,3 +319,15 @@ cup -y all
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
 choco list -lo
+
+echo "TO DO: In the RStudio interface, please click on"
+
+echo "'Help', then click on 'Check for Updates' and then click on 'Quit and Download' to get the newest version of RStudio"
+
+echo "TO DO:Replace 127.0.0.1 with 0.0.0.0 in Windows hosts file after running HostsMan application"
+
+echo "in C:\ProgramData\chocolatey\lib\hostsman\"
+
+echo "TO DO:Manually Configure network adapter to use Quad9 DNS server 9.9.9.9"
+
+echo on
