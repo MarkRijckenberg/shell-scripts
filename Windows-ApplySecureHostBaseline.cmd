@@ -1,6 +1,8 @@
 REM ApplySecureHostBaseline.cmd 
 REM For Windows 10 64-bit machines only
+REM #########################################################################################################################
 REM Run following powershell command in cmd shell as Administrator:
+REM #########################################################################################################################
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "mkdir c:\temp"
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd c:\temp"
@@ -32,7 +34,9 @@ REM }
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "cd C:\temp;unzip C:\temp\LGPO.zip; mkdir c:\temp\LGPO;copy LGPO*.* c:\temp\LGPO"
 
 REM #########################################################################################################################
-REM Run in Powershell session as Administrator :
+REM Run following commands manually in Powershell session as Administrator :
+REM #########################################################################################################################
+Set-ExecutionPolicy Unrestricted
 cd c:\temp
 Get-ChildItem -Path '.\Secure-Host-Baseline' -Recurse -Include '*.ps1','*.psm1' | Unblock-File -Verbose
 Import-Module -Name .\Secure-Host-Baseline\Scripts\GroupPolicy.psm1
@@ -47,7 +51,7 @@ function Unzip
     [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
 }
 
-unzip LGPO.zip .\LGPO
+cd c:\temp;unzip LGPO.zip c:\temp\LGPO
 
 Invoke-ApplySecureHostBaseline -Path 'c:\temp\Secure-Host-Baseline' -PolicyNames 'Adobe Reader','AppLocker','Certificates','Chrome','EMET','Internet Explorer','Office 2013','Office 2016','Windows','Windows Firewall' -ToolPath '.\LGPO\lgpo.exe'
 
@@ -59,5 +63,4 @@ Test-Compliance -Path '..\..\Internet Explorer\Compliance\InternetExplorer11.aud
 Test-Compliance -Path '..\..\Windows\Compliance\Windows10.audit' -Verbose >ComplianceReport.txt
 Select-String -Path .\ComplianceReport.txt -Pattern 'FAILED'
 Select-String -Path .\ComplianceReport.txt -Pattern 'WARN'
-
 
