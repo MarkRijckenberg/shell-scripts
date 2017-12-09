@@ -1,0 +1,37 @@
+#############################################################################################################################
+# Procedure for installing ReactOS in stand-alone HVM in Qubes OS 3.2
+#############################################################################################################################
+# Prerequisites: Qubes OS 3.2, PC with at least 4 GB of RAM
+#############################################################################################################################
+# In dom0, first create a stand-alone HVM called reactos using this command:
+qvm-create -H -m 1024 --label=blue reactos
+#############################################################################################################################
+# Inside AppVM <name_of_AppVM> in Qubes OS 3.2, download following compressed ReactOS installation iso file to /tmp directory:
+cd /tmp; wget https://iso.reactos.org/bootcd/reactos-bootcd-0.4.8-dev-99-g23bc0b5-x86-gcc-lin-dbg.7z
+# decompress .7z file using unp or another tool that can decompress 7zip files:
+unp /tmp/reactos-bootcd-0.4.8-dev-99-g23bc0b5-x86-gcc-lin-dbg.7z
+mv /tmp/reactos-bootcd-0.4.8-dev-99-g23bc0b5-x86-gcc-lin-dbg.iso  /tmp/reactos.iso
+#############################################################################################################################
+# in dom0, run this command, replacing <name_of_AppVM> with actual name of AppVM where ReactOS .iso image was downloaded:
+qvm-start reactOS --cdrom <name_of_AppVM>:/tmp/reactos.iso
+# Keep VESA display resolution at 800x600x32 during install to avoid boot issues later on
+# Make sure to select the optimal keyboard layout settings for your country and keyboard
+#############################################################################################################################
+# To increase the security of the ReactOS HVM, apply following firewall settings to the reactos HVM:
+# Deny all network access,except for DNS queries, https via tcp and http via tcp
+#############################################################################################################################
+# !!! Do NOT manually install any Windows PV drivers from xenproject.org, as it will cause boot errors in the ReactOS HVM !!!
+#############################################################################################################################
+# Issues:
+############################################################################################################################# 
+# Sound output not working
+# Mouse tracking issue where mouse pointer position is not synchronized with Dom0 mouse pointer
+# Excessive CPU usage when using newest Opera web browser, but Youtube works using Opera and 4 virtual CPU cores
+# Mozilla Firefox crashes when trying to access Youtube website (severe bug)
+# Install of Windows PV drivers from xenproject.org within reactos HVM -> causes boot errors in ReactOS HVM -> so don't do it
+# Choosing a lower RAM setting than 1024 MB for the ReactOS HVM or choosing a screen resolution higher than 800x600x32 
+# during install may cause ReactOS to fail to boot or show any icons on the desktop
+# Only attempt to increase screen resolution via ReactOS control panel (not any other way) after install is finished
+# Etc...
+#############################################################################################################################
+
