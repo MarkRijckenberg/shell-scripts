@@ -16,6 +16,8 @@ REM Please run following commands in Windows command line (using cmd, NOT Powers
 
 echo "Show list of locally installed packages - installed using choco package manager for Windows:"
 
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco feature enable -n useFipsCompliantChecksums"
+
 choco list -lo
 
 echo "TO DO: In the RStudio interface, please click on"
@@ -62,6 +64,8 @@ pause
 
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
  
+@powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco feature enable -n useFipsCompliantChecksums" 
+
 REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y binroot"
  
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "choco install -y PowerShell"
