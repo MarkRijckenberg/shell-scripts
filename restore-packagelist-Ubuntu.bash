@@ -1342,6 +1342,7 @@ rm *.html
 # documentation:  http://www.linuxuser.co.uk/tutorials/create-flowcharts-with-yedcreate-flowcharts-with-yed
 # other BPMN tools: https://en.wikipedia.org/wiki/Comparison_of_Business_Process_Modeling_Notation_tools
 # online version of program: https://www.yworks.com/yed-live/
+# online alternative program: https://www.draw.io/
 MACHINE_TYPE=`uname -m`
 cd /tmp
 rm yEd*
