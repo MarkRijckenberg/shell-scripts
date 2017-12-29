@@ -1341,6 +1341,7 @@ rm *.html
 # Allows easy creation of Entity Relationship (ER) diagrams (as part of data modeling by data scientist)
 # documentation:  http://www.linuxuser.co.uk/tutorials/create-flowcharts-with-yedcreate-flowcharts-with-yed
 # other BPMN tools: https://en.wikipedia.org/wiki/Comparison_of_Business_Process_Modeling_Notation_tools
+# online version of program: https://www.yworks.com/yed-live/
 MACHINE_TYPE=`uname -m`
 cd /tmp
 rm yEd*
