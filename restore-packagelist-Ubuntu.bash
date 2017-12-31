@@ -841,6 +841,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  sopcast-pla
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   qbittorrent
 
+# install frostwire mp3 client
+#cd
+#sudo rm -rf frostwire
+#git clone https://github.com/frostwire/frostwire
+#cd frostwire/desktop
+#gradle build
+wget --no-check-certificate http://dl.frostwire.com/frostwire/6.6.1/frostwire-6.6.1.all.deb
+sudo dpkg -i frostwire-6.6.1.all.deb 
+sudo DEBIAN_FRONTEND=noninteractive apt install  --yes --force-yes -f
 
 # install desurium game client
 #sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
@@ -848,7 +857,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   qbittorren
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   desurium
 
 # install 64-bit compatible Steam client
-wget media.steampowered.com/client/installer/steam.deb
+wget --no-check-certificate media.steampowered.com/client/installer/steam.deb
 sudo dpkg -i steam.deb
 sudo DEBIAN_FRONTEND=noninteractive apt install  --yes --force-yes -f
 
