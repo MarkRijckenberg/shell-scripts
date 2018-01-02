@@ -154,9 +154,11 @@ sudo rm /etc/apt/trusted.gpg.d/*
 
 # 20170805: disable systemd service / timer which causes apt-get update to fail in AppVM or TemplateVM
 # running Ubuntu 17.04 on Xen hypervisor in Qubes OS
-
 sudo systemctl disable apt-daily.service # disable run when system boot
 sudo systemctl disable apt-daily.timer   # disable timer run
+
+# https://www.maketecheasier.com/fix-windows-linux-show-different-times/
+timedatectl set-local-rtc 1 --adjust-system-clock
 
 # show filelist before installing
 cd
