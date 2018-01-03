@@ -2812,6 +2812,8 @@ echo "https://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octav
 echo "http://folk.ntnu.no/joern/itgk/refcard-a4.pdf"
 
 # Python data science cheat sheets:
+# following URL added on January 3, 2018:
+echo "https://www.datacamp.com/community/data-science-cheatsheets"
 # following URL added on April 24, 2017:
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf"
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Numpy_Python_Cheat_Sheet.pdf"
@@ -2829,6 +2831,8 @@ echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet
 echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+Sheet.pdf"
 
 # R
+# following URL added on January 3, 2018:
+echo "https://www.datacamp.com/community/data-science-cheatsheets"
 # following URL added on April 21, 2017:
 # One R cheat sheet per data science processing step:
 # Includes separate cheat sheet for SparklyR, dplyr and tidyr
