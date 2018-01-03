@@ -849,8 +849,11 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   qbittorren
 #git clone https://github.com/frostwire/frostwire
 #cd frostwire/desktop
 #gradle build
-wget --no-check-certificate http://dl.frostwire.com/frostwire/6.6.1/frostwire-6.6.1.all.deb
-sudo dpkg -i frostwire-6.6.1.all.deb 
+cd /tmp
+rm frostwire*.deb
+FROSTWIREVERSION=`echo "http://www.frostwire.com/download/?os=ubuntu" | wget -O- -i- --no-check-certificate | hxnormalize -x| grep \.deb |cut -d"\"" -f2`
+wget --no-check-certificate `echo $FROSTWIREVERSION`
+sudo dpkg -i frostwire*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt install  --yes --force-yes -f
 
 # install desurium game client
