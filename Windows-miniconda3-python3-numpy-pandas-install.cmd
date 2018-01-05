@@ -1,3 +1,5 @@
+REM Last update to this script on January 5, 2018
+
 REM Prerequisite: Windows 10 64-bit
 
 REM https://chocolatey.org/install
