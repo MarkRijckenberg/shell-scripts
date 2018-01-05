@@ -21,3 +21,5 @@ REM via Start/Programs/Anaconda3/Anaconda command line prompt:
 conda install anaconda conda  matplotlib numpy pandas scipy  spyder
 
 conda update anaconda conda  matplotlib numpy pandas scipy  spyder
+
+conda update anaconda conda  matplotlib numpy pandas scipy  spyder
