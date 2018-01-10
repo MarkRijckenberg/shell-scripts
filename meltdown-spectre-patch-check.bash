@@ -1,3 +1,5 @@
+#sudo apt update
+#sudo apt install git
 cd
 rm -rf spectre-meltdown-checker
 git clone https://github.com/speed47/spectre-meltdown-checker.git
