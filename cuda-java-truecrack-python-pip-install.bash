@@ -77,9 +77,9 @@ sudo apt install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap  li
 # install newest version of ipython notebook:
 sudo apt remove  ipython ipython-notebook python-tornado
 sudo apt install  ipython3 ipython3-notebook python-simplegeneric python3-simplegeneric python3-pip
-sudo pip install --upgrade pip dvc
+sudo pip install --upgrade pip
+sudo pip install --upgrade dvc
 sudo pip install --upgrade ipython tornado 
-
 sudo pip install --upgrade setuptools seaborn
 sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
 sudo pip install --upgrade sklearn jupyter streamlink
