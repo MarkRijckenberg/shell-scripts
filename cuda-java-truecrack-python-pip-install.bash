@@ -86,6 +86,9 @@ sudo pip install --upgrade sklearn jupyter streamlink
 sudo pip install --upgrade mistune networkx pandas py4j runipy socli
 sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
 sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
+sudo pip install --upgrade fire boto3 mock pytest pytest-mock bcolz configobj 
+sudo pip install --upgrade ipywidgets nibabel Pillow-SIMD qgrid tqdm traitlets 
+sudo pip install --upgrade visdom filelock spectral elasticsearch
 
 #source: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation
 # Ubuntu/Linux 64-bit, CPU only:
