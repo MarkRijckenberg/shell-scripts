@@ -2827,6 +2827,9 @@ echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_She
 # Keras deep learning library - Scikit-learn - Tensorflow GPU - python framework cheatsheet:
 echo "https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf" 
 echo "https://www.datasciencecentral.com/profiles/blogs/learn-python-in-3-days-step-by-step-guide"
+# following URL added on January 11, 2018:
+# PyTorch cheat sheet (pytorch uses CPU+GPU!)
+echo "https://github.com/Tgaaly/pytorch-cheatsheet"
 
 # Quandl for R
 echo "https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+R+Cheat+Sheet.pdf"
