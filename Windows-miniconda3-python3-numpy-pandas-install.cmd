@@ -22,7 +22,9 @@ conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder p
 
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
 
-pip install --upgrade pip dvc
+pip install --upgrade pip
+
+pip install --upgrade dvc
 
 pip install --upgrade ipython tornado 
 
