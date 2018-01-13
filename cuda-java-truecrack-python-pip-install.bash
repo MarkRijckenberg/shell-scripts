@@ -78,18 +78,6 @@ sudo apt install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap  li
 sudo apt remove  ipython ipython-notebook python-tornado
 
 sudo apt install  ipython3 ipython3-notebook python-simplegeneric python3-simplegeneric python3-pip
-sudo pip install --upgrade pip
-sudo pip install --upgrade dvc
-sudo pip install --upgrade ipython tornado 
-sudo pip install --upgrade setuptools seaborn
-sudo pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
-sudo pip install --upgrade sklearn jupyter streamlink
-sudo pip install --upgrade mistune networkx pandas py4j runipy socli
-sudo pip install --upgrade scikit-image scikit-learn scipy-data_fitting
-sudo pip install --upgrade statsmodels jsonschema pattern instantmusic
-sudo pip install --upgrade fire boto3 mock pytest pytest-mock bcolz configobj 
-sudo pip install --upgrade ipywidgets nibabel Pillow-SIMD qgrid tqdm traitlets 
-sudo pip install --upgrade visdom filelock spectral elasticsearch
 
 #source: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#pip-installation
 # Ubuntu/Linux 64-bit, CPU only:
@@ -97,10 +85,11 @@ sudo pip install --upgrade visdom filelock spectral elasticsearch
 # Ubuntu/Linux 64-bit, GPU enabled:
 # sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
 
-sudo pip install --upgrade tensorflow-gpu
+# sudo pip install --upgrade tensorflow-gpu
 # sudo pip install --upgrade git+git://github.com/tensorflow/skflow.git
 
-# install miniconda (in classic Ubuntu install or in Qubes AppVM):
+# install miniconda3 (in classic Ubuntu install or in Qubes AppVM):
+# miniconda3 is compatible with spyder, python3.6+ and conda
 cd
 rm Miniconda*.sh
 rm -rf miniconda*
@@ -109,7 +98,49 @@ bash Miniconda3*.sh
 
 ##########################################################################
 # exit Terminal and open new Terminal before running following commands:
+# only use conda in combination with spyder and python3.6+
+# never use pip to upgrade python packages to avoid corrupting spyder install
 ##########################################################################
 conda install anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
+conda install dvc
+conda install ipython 
+conda install tornado 
+conda install setuptools 
+conda install seaborn
+conda install beautifulsoup4 
+conda install argparse
+conda install sklearn 
+conda install jupyter 
+conda install streamlink
+conda install mistune 
+conda install networkx 
+conda install py4j 
+conda install runipy 
+conda install socli
+conda install scikit-image 
+conda install scikit-learn 
+conda install scipy-data_fitting
+conda install statsmodels 
+conda install jsonschema 
+conda install pattern 
+conda install instantmusic
+conda install fire 
+conda install boto3 
+conda install mock 
+conda install pytest 
+conda install pytest-mock 
+conda install bcolz 
+conda install configobj 
+conda install ipywidgets 
+conda install nibabel 
+conda install Pillow-SIMD 
+conda install qgrid 
+conda install tqdm 
+conda install traitlets 
+conda install visdom 
+conda install filelock 
+conda install spectral 
+conda install elasticsearch 
+conda install tensorflow-gpu
