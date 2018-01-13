@@ -76,6 +76,7 @@ sudo apt install  python-mpltoolkits.basemap-data python-mpltoolkits.basemap  li
 
 # install newest version of ipython notebook:
 sudo apt remove  ipython ipython-notebook python-tornado
+
 sudo apt install  ipython3 ipython3-notebook python-simplegeneric python3-simplegeneric python3-pip
 sudo pip install --upgrade pip
 sudo pip install --upgrade dvc
@@ -98,3 +99,17 @@ sudo pip install --upgrade visdom filelock spectral elasticsearch
 
 sudo pip install --upgrade tensorflow-gpu
 # sudo pip install --upgrade git+git://github.com/tensorflow/skflow.git
+
+# install miniconda (in classic Ubuntu install or in Qubes AppVM):
+cd
+rm Miniconda*.sh
+rm -rf miniconda*
+wget  --no-check-certificate  https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3*.sh
+
+##########################################################################
+# exit Terminal and open new Terminal before running following commands:
+##########################################################################
+conda install anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
+conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
+conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
