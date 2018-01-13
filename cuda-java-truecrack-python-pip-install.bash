@@ -127,7 +127,8 @@ conda install scikit-learn
 conda install scipy-data_fitting
 conda install statsmodels 
 conda install jsonschema 
-conda install pattern 
+# disabled because it causes downgrade of anaconda
+# and python package versions: conda install pattern 
 conda install instantmusic
 conda install fire 
 conda install boto3 
@@ -146,7 +147,8 @@ conda install visdom
 conda install filelock 
 conda install spectral 
 conda install elasticsearch 
-conda install tensorflow-gpu
+# following package requires at least 700 MB of free disk space:
+# conda install tensorflow-gpu
 
 REM Check if all dependencies are installed by inspecting
 
