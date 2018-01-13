@@ -1,9 +1,9 @@
 #!/bin/bash
 # Required software: CUDA 8.0 or newer, in order to be able to compile truecrack 3.6 source code from Github.com
 # afterwards WITH Nvidia graphics card support
-# Required GNU/Linux distribution: Ubuntu 14.04 LTS 64-bit
+# Required GNU/Linux distribution: Ubuntu 17.10 64-bit
 # Required free disk space: at least 5 gigabytes free disk space on your root (/) partition
-# last update: April 28, 2017
+# last update: January 13, 2018
 VERSION=9.0
 sudo rm /etc/apt/trusted.gpg.d/*
 sudo apt purge openjdk-6-jre openjdk-7-jre-headless openjdk-7-jre java-common
