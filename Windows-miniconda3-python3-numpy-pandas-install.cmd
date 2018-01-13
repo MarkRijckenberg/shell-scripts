@@ -16,37 +16,55 @@ REM run the following commands with Administrator privileges
 
 REM via Start menu/Programs/Anaconda3/Anaconda command line prompt:
 
+##########################################################################
+# only use conda in combination with spyder and python3.6+
+# never use pip to install spyder application
+# use conda to install spyder application
+# never use pip to upgrade python packages to avoid corrupting spyder install
+##########################################################################
 conda install anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
-
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
-
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
-
-pip install --upgrade pip
-
-pip install --upgrade dvc
-
-pip install --upgrade ipython tornado 
-
-pip install --upgrade setuptools seaborn
-
-pip install --upgrade beautifulsoup4 numpy scipy matplotlib argparse
-
-pip install --upgrade sklearn jupyter streamlink
-
-pip install --upgrade mistune networkx pandas py4j runipy socli
-
-pip install --upgrade scikit-image scikit-learn scipy-data_fitting
-
-pip install --upgrade statsmodels jsonschema pattern instantmusic
-
-pip install --upgrade fire boto3 mock pytest pytest-mock bcolz configobj 
-
-pip install --upgrade ipywidgets nibabel Pillow-SIMD qgrid tqdm traitlets 
-
-pip install --upgrade visdom filelock spectral elasticsearch
-
-pip install --upgrade tensorflow-gpu
+conda install dvc
+conda install ipython 
+conda install tornado 
+conda install setuptools 
+conda install seaborn
+conda install beautifulsoup4 
+conda install argparse
+conda install sklearn 
+conda install jupyter 
+conda install streamlink
+conda install mistune 
+conda install networkx 
+conda install py4j 
+conda install runipy 
+conda install socli
+conda install scikit-image 
+conda install scikit-learn 
+conda install scipy-data_fitting
+conda install statsmodels 
+conda install jsonschema 
+conda install pattern 
+conda install instantmusic
+conda install fire 
+conda install boto3 
+conda install mock 
+conda install pytest 
+conda install pytest-mock 
+conda install bcolz 
+conda install configobj 
+conda install ipywidgets 
+conda install nibabel 
+conda install Pillow-SIMD 
+conda install qgrid 
+conda install tqdm 
+conda install traitlets 
+conda install visdom 
+conda install filelock 
+conda install spectral 
+conda install elasticsearch 
+conda install tensorflow-gpu
 
 REM Check if all dependencies are installed by inspecting
 
