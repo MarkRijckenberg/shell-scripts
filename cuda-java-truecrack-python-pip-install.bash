@@ -127,7 +127,7 @@ conda install scikit-learn
 conda install scipy-data_fitting
 conda install statsmodels 
 conda install jsonschema 
-# disabled because it causes downgrade of anaconda
+# do not install pattern package, because it causes severe downgrade of anaconda
 # and python package versions: conda install pattern 
 conda install instantmusic
 conda install fire 
