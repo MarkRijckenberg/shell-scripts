@@ -98,7 +98,10 @@ bash Miniconda3*.sh
 
 ##########################################################################
 # exit Terminal and open new Terminal before running following commands:
+##########################################################################
 # only use conda in combination with spyder and python3.6+
+# never use pip to install spyder application
+# use conda to install spyder application
 # never use pip to upgrade python packages to avoid corrupting spyder install
 ##########################################################################
 conda install anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
@@ -144,3 +147,8 @@ conda install filelock
 conda install spectral 
 conda install elasticsearch 
 conda install tensorflow-gpu
+
+REM Check if all dependencies are installed by inspecting
+
+REM Spyder/Help/Dependencies window in Spyder application
+
