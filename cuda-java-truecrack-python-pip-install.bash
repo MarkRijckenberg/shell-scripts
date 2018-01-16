@@ -148,7 +148,10 @@ conda install filelock
 conda install spectral 
 conda install elasticsearch 
 # following package requires at least 700 MB of free disk space:
+# conda config --add channels conda-forge
 # conda install tensorflow-gpu
+# conda install tensorflow
+# conda install tensorfx
 
 REM Check if all dependencies are installed by inspecting
 
