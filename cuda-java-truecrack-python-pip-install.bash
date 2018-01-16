@@ -152,6 +152,7 @@ conda install elasticsearch
 # conda install tensorflow-gpu
 # conda install tensorflow
 # conda install tensorfx
+# conda install keras
 
 REM Check if all dependencies are installed by inspecting
 
