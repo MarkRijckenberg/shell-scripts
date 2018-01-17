@@ -107,6 +107,7 @@ bash Miniconda3*.sh
 conda install anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
+conda install jupyter 
 conda install dvc
 conda install ipython 
 conda install tornado 
@@ -115,7 +116,6 @@ conda install seaborn
 conda install beautifulsoup4 
 conda install argparse
 conda install sklearn 
-conda install jupyter 
 conda install streamlink
 conda install mistune 
 conda install networkx 
