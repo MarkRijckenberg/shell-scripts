@@ -17,14 +17,15 @@ REM run the following commands with Administrator privileges
 REM via Start menu/Programs/Anaconda3/Anaconda command line prompt:
 
 ##########################################################################
-# only use conda in combination with spyder and python3.6+
-# never use pip to install spyder application
-# use conda to install spyder application
+# Never use pip to install spyder application.
 # never use pip to upgrade python packages to avoid corrupting spyder install
+# Instead, use conda to install spyder application.
+# Only use conda in combination with spyder and python3.6+
 ##########################################################################
 conda install anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
 conda update anaconda conda cython matplotlib numpy pandas scipy  sympy spyder pip
+conda install jupyter 
 conda install dvc
 conda install ipython 
 conda install tornado 
@@ -33,7 +34,6 @@ conda install seaborn
 conda install beautifulsoup4 
 conda install argparse
 conda install sklearn 
-conda install jupyter 
 conda install streamlink
 conda install mistune 
 conda install networkx 
@@ -66,7 +66,11 @@ conda install filelock
 conda install spectral 
 conda install elasticsearch 
 # following package requires at least 700 MB of free disk space:
+# conda config --add channels conda-forge
 # conda install tensorflow-gpu
+# conda install tensorflow
+# conda install tensorfx
+# conda install keras
 
 REM Check if all dependencies are installed by inspecting
 
