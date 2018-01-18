@@ -1,7 +1,6 @@
 # Latest revision date: January 18, 2018:
 #sudo apt update
-#sudo apt install git
-sudo apt install wget xterm
+sudo apt install git wget xterm
 cd
 rm -rf spectre-meltdown-checker
 git clone https://github.com/speed47/spectre-meltdown-checker.git
