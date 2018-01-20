@@ -1,6 +1,10 @@
 # Latest revision date: January 18, 2018:
-#sudo apt update
-sudo apt install git wget xterm
+sudo apt update
+sudo apt install git wget xterm iucode-tool intel-microcode
+/usr/sbin/iucode_tool -tb -lS /lib/firmware/intel-ucode/*
+
+read -rsp $'Press any key to continue...\n' -n1 key
+
 cd
 rm -rf spectre-meltdown-checker
 git clone https://github.com/speed47/spectre-meltdown-checker.git
