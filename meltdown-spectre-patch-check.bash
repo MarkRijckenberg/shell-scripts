@@ -14,9 +14,9 @@ sudo ./spectre-meltdown-checker.sh
 
 read -rsp $'Press any key to continue...\n' -n1 key
 
-grep CONFIG_PAGE_TABLE_ISOLATION=y /boot/config-`uname -r` && echo "patched :)" || echo "unpatched :("
-grep cpu_insecure /proc/cpuinfo && echo "patched :)" || echo "unpatched :("
-dmesg | grep "Kernel/User page tables isolation: enabled" && echo "patched :)" || echo "unpatched :("
+grep CONFIG_PAGE_TABLE_ISOLATION=y /boot/config-`uname -r` && echo "CONFIG_PAGE_TABLE_ISOLATION patched :)" || echo "CONFIG_PAGE_TABLE_ISOLATION unpatched :("
+grep cpu_insecure /proc/cpuinfo && echo "cpu_insecure /proc/cpuinfo -> patched :)" || echo "cpu_insecure /proc/cpuinfo -> unpatched :("
+dmesg | grep "Kernel/User page tables isolation: enabled" && echo "Kernel/User page tables isolation -> patched :)" || echo "Kernel/User page tables isolation -> unpatched :("
 uname -a
 
 read -rsp $'Press any key to continue...\n' -n1 key
