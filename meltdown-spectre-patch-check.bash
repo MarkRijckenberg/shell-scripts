@@ -1,4 +1,4 @@
-# Latest revision date: January 18, 2018:
+# Latest revision date: January 20, 2018:
 sudo apt update
 sudo apt install git wget xterm iucode-tool intel-microcode
 /usr/sbin/iucode_tool -tb -lS /lib/firmware/intel-ucode/*
