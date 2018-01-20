@@ -2882,6 +2882,8 @@ echo "Learn MySQL commands = de facto SQL (dialect) standard"
 echo "http://www.amazon.fr/Sams-Teach-Yourself-Minutes-Edition-ebook/dp/B009XDGF2C/ref=sr_1_1?ie=UTF8&qid=1394192160&sr=8-1&keywords=Sams+Teach+Yourself+SQL+in+10+Minutes+%284th+Edition%29"
 echo "http://www.markmcilroy.com/downloads/sql_essentials.pdf"
 
+# following URL added on January 20, 2018:
+echo "https://courses.edx.org/courses/course-v1:MITx+6.00.1x+2T2017_2/courseware/c77f2cc9fb2a42589f0d723e8fefbd35/c58684c1812443db80c4b0028aba9bc3/?child=first"
 # following URL added on June 11, 2015:
 echo "https://www.coursera.org/course/pythonlearn"
 echo "http://www.codecademy.com/tracks/python"
