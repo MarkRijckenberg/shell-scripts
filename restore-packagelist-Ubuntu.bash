@@ -1,7 +1,7 @@
 #!/bin/bash
 #######################################################################################################
 # UEFI guidelines,tips and tricks (updated in June 2017):
-#######################################################################################################
+EULA#######################################################################################################
 # !!!!! STEP 1) Method to boot 2GB USB stick in UEFI compatible mode in order to
 # !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI+SecureBoot mode:
 # !!!!! Install Rufus USB utility in Windows 10 64-bit using chocolatey. Format USB stick in FAT32 disk format. 
@@ -1388,7 +1388,7 @@ rm linux
 #tar -zxvf linux
 #./install.pl 
 chmod +x ~/shell-scripts/pixum-install.pl
-bash ~/shell-scripts/pixum-install.pl
+perl ~/shell-scripts/pixum-install.pl
 
 #############################################################################################
 # install and run newest version of bleachbit (cleanup utility) in Ubuntu 14.04 LTS 64-bit
