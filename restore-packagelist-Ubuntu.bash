@@ -1386,7 +1386,7 @@ rm linux
 cd /tmp
 wget --no-check-certificate https://dls.photoprintit.com/api/getClient/12455/hps/c3303030303030303030303030303030303030303030303030353933333036366/linux 
 tar -zxvf linux
-#./install.pl 
+./install.pl 
 #chmod +x ~/shell-scripts/pixum-install.pl
 #perl ~/shell-scripts/pixum-install.pl
 
