@@ -1383,10 +1383,12 @@ rm -rf Kruidvat*
 rm -rf Pixum*
 rm install.pl
 rm linux
-cd /tmp
-wget --no-check-certificate https://dls.photoprintit.com/api/getClient/12455/hps/c303030303030303030303030303030303030303030303030343936323539307/linux 
-tar -zxvf linux
-./install.pl 
+#cd /tmp
+#wget --no-check-certificate https://dls.photoprintit.com/api/getClient/12455/hps/c303030303030303030303030303030303030303030303030343936323539307/linux 
+#tar -zxvf linux
+#./install.pl 
+chmod +x ~/shell-scripts/pixum-install.pl
+bash ~/shell-scripts/pixum-install.pl
 
 #############################################################################################
 # install and run newest version of bleachbit (cleanup utility) in Ubuntu 14.04 LTS 64-bit
