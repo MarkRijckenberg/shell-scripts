@@ -1,50 +1,102 @@
-#------------------------------------------------------------------------------#
-#                            OFFICIAL UBUNTU REPOS                             #
-#------------------------------------------------------------------------------#
 
-
-###### Ubuntu Main Repos
-deb http://de.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse 
-deb-src http://de.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse 
-
-###### Ubuntu Update Repos
-deb http://de.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse 
-deb http://de.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse 
-deb-src http://de.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse 
-deb-src http://de.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse 
 
 #------------------------------------------------------------------------------#
-#                           UNOFFICIAL UBUNTU REPOS                            #
+
+#                            OFFICIAL UBUNTU REPOS                             #
+
 #------------------------------------------------------------------------------#
 
+ 
+
+ 
+
+######Ubuntu Main Repos
+
+deb http://de.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse 
+
+deb-src http://de.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse 
+
+ 
+
+######Ubuntu Update Repos
+
+deb http://de.archive.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse 
+
+deb http://de.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse 
+
+deb-src http://de.archive.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse 
+
+deb-src http://de.archive.ubuntu.com/ubuntu/ bionic-updates main restricted universe multiverse 
+
+ 
+
+#------------------------------------------------------------------------------#
+
+#                          UNOFFICIAL UBUNTU REPOS                            #
+
+#------------------------------------------------------------------------------#
+
+ 
+
+ 
 
 ###### 3rd Party Binary Repos
 
+ 
+
 #### Google Chrome Browser - http://www.google.com/linuxrepositories/
+
 ## Run this command: wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+
 deb http://dl.google.com/linux/chrome/deb/ stable main
 
+ 
+
 #### Google Earth - http://www.google.com/linuxrepositories/
+
 ## Run this command: wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+
 deb http://dl.google.com/linux/earth/deb/ stable main
 
+ 
+
 #### Opera - http://www.opera.com/
-## Run this command: sudo wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+
+## Run this command: sudo wget -O -http://deb.opera.com/archive.key | sudo apt-key add -
+
 deb http://deb.opera.com/opera/ stable non-free
 
+ 
+
 #### Oracle Java (JDK) Installer PPA - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+
 ## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
-deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
+
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu bionic main
+
+ 
 
 #### Steam for Linux - http://store.steampowered.com/about/
-## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
-deb [arch=i386] http://repo.steampowered.com/steam/ xenial steam
 
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+
+deb [arch=i386] http://repo.steampowered.com/steam/ bionic steam
+
+ 
+
+ 
 
 ####### 3rd Party Source Repos
 
-#### Oracle Java (JDK) Installer PPA (Source) - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
-## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
-deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
+ 
 
+#### Oracle Java (JDK) Installer PPA (Source) - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu bionic main
+
+ 
+
+ 
 
