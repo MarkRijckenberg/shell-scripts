@@ -321,6 +321,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntuhandbook1
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
 # deprecated: sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:wine/wine-builds
 wget -nc https://dl.winehq.org/wine-builds/Release.key
 sudo apt-key add Release.key
