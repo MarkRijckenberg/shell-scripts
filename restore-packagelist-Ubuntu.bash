@@ -131,6 +131,8 @@ rm google*
 # sudo rm /etc/apt/sources.list.d/*
 sudo rm /etc/apt/trusted.gpg.d/*
 
+# clean up old install of vlc player:
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes  libvlccore8 libvlccore9
 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET1 $HOME 
 #sudo /usr/bin/rsync -quvra   --exclude='.*' --exclude "$HOME.gvfs"  --max-size='100M' $TARGET2 $HOME
