@@ -1,7 +1,7 @@
 #!/bin/bash
 #######################################################################################################
 # UEFI guidelines,tips and tricks (updated in June 2017):
-EULA#######################################################################################################
+#######################################################################################################
 # !!!!! STEP 1) Method to boot 2GB USB stick in UEFI compatible mode in order to
 # !!!!! create dual boot install where both Windows 10 and Ubuntu are booting in UEFI+SecureBoot mode:
 # !!!!! Install Rufus USB utility in Windows 10 64-bit using chocolatey. Format USB stick in FAT32 disk format. 
@@ -410,13 +410,15 @@ sudo DEBIAN_FRONTEND=noninteractive apt update
 ##########################################################################################################
 
 ##########################################################################################################
-# install base packages using basepackages and basepackages-extra file
+# install base packages using basepackages files
 cd $HOME/shell-scripts
 sudo DEBIAN_FRONTEND=noninteractive apt install aptitude
 # following aptitude command works in Ubuntu 16.04 LTS, but not in Ubuntu 17.04 or higher:
 sudo DEBIAN_FRONTEND=noninteractive aptitude install `cat basepackages` -o APT::Install-Suggests="false"
 # following apt command works in Ubuntu 17.04:
 sudo DEBIAN_FRONTEND=noninteractive apt install `cat basepackages-extra`
+# following apt command works in Debian 9:
+sudo DEBIAN_FRONTEND=noninteractive apt install `cat basepackages-debian`
 cd $HOME
 ##########################################################################################################
 
