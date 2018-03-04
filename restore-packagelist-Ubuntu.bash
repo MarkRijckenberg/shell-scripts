@@ -224,13 +224,13 @@ sudo service resolvconf start
 
 # configure DNS server on Ubuntu 16.04 LTS:
 cp /etc/network/interfaces /tmp/interfaces
-grep -v nameservers  /tmp/interfaces > /tmp/interfaces.1
-grep -v search  /tmp/interfaces.1 > /tmp/interfaces.2
-grep -v options  /tmp/interfaces.2 > /tmp/interfaces.3
+grep -v nameservers  /tmp/interfaces > /tmp/interfaces.1
+grep -v search  /tmp/interfaces.1 > /tmp/interfaces.2
+grep -v options  /tmp/interfaces.2 > /tmp/interfaces.3
 echo 'dns-nameservers 9.9.9.9 2620:fe::fe' >> /tmp/interfaces.3
 echo 'dns-search dnsknowledge.com' >> /tmp/interfaces.3
 echo 'dns-options rotate' >> /tmp/interfaces.3
-sudo cp /tmp/interfaces.3  /etc/network/interfaces
+sudo cp /tmp/interfaces.3  /etc/network/interfaces
 
 
 # replace DNS resolution via /etc/resolv.conf by DNS resolution via systemd in order to use DNS server 9.9.9.9:
@@ -354,7 +354,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor
 # sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:jonathonf/vlc
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mc3man/mpv-tests
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/xenial xenial main"
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/bionic bionic main"
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -377,8 +377,8 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] h
 RELEASE=`cat /etc/os-release |tail -n 1|cut -d"=" -f2`
 sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
-sudo sh -c 'echo "deb http://files.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
-sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
+sudo sh -c 'echo "deb http://files.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
+sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
 
 # add repository for google music manager software package
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -395,8 +395,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 1484120AC
 # add partner repository for skype software package
 # replace codename (for example: trusty) with right Ubuntu codename
 #sudo touch /etc/apt/sources.list.d/partner.list
-#sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
-#sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list.d/partner.list'
+#sudo sh -c 'echo "deb http://archive.canonical.com/ubuntu bionic partner" >> /etc/apt/sources.list.d/partner.list'
+#sudo sh -c 'echo "deb-src http://archive.canonical.com/ubuntu bionic partner" >> /etc/apt/sources.list.d/partner.list'
 
 
 # add repository for Google Chrome browser
@@ -583,8 +583,8 @@ sudo apt install  tlp-rdw
 # Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
 sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
-sudo sh -c 'echo "deb http://files.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
-sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian xenial main" >> /etc/apt/sources.list.d/eid.list'
+sudo sh -c 'echo "deb http://files.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
+sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
 cd
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  A35743EA6773D225   F9FDA6BED73CDC22 3B4FE6ACC0B21F32  4E940D7FDD7FB8CC  A040830F7FAC5991 16126D3A3E5C1192 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
@@ -610,7 +610,7 @@ make
 sudo checkinstall
 # press 2 and change eid package name to  eid-mw and hit <ENTER> key
 # press 3 and change version to 4.2.10 and hit <ENTER> key
-# Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox webbrowser
+# Ensure that there are absolutely NO add-on EXTENSIONS installed in the Mozilla Firefox webbrowser
 # The add-on PLUGINS like Citrix Receiver for Linux,OpenH264 and Shockwave Flash plugins can remain active in Mozilla Firefox, as they do not seem to interfere with the eid card reader.
 # Close all web browser windows. Restart Mozilla Firefox browser and test eid card reader.
 
@@ -1584,7 +1584,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   stellarium
 #cd casa
 #wget --no-check-certificate  https://casa.nrao.edu/download/distro/linux/release/el7/casa-release-4.7.2-el7.tar.gz
 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes   ppa:olebole/astro-xenial
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes   ppa:olebole/astro-bionic
 sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   aladin
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   casacore 
@@ -2402,7 +2402,7 @@ echo "http://www.thatquiz.org/fr-D-z2/vocabulaire/Francais/"
 
 
 ###############################################################################################
-#     Free course material for high school students                                           #
+#     Free course material for high school students                                           #
 ###############################################################################################
 echo "http://www.openculture.com/free_textbooks"
 echo "https://www.ck12.org/"
