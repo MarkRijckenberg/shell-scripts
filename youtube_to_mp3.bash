@@ -1,5 +1,5 @@
 # Procedure to copy mp3 files from Youtube playlist to Android smartphone
-# Prerequisites: Ubuntu 17.10 or Ubuntu 18.04, bash shell, mp3gain
+# Prerequisites: Ubuntu 17.10 or Ubuntu 18.04, bash shell, mp3gain, parallel (to use multi-core processors)
 
 #VARIABLES
 TOOL=youtube-dl
@@ -12,6 +12,14 @@ sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install --yes --force-yes   aacgain mp3gain
   else
   echo "mp3gain installed"
+fi
+
+# install parallel (if not installed)
+if ! type "parallel" > /dev/null; then
+sudo DEBIAN_FRONTEND=noninteractive apt update
+sudo DEBIAN_FRONTEND=noninteractive apt install --yes --force-yes   parallel
+  else
+  echo "parallel installed"
 fi
 
 mkdir $INSTALLDIR
@@ -29,6 +37,6 @@ cd $INSTALLDIR/$PLAYLISTDIR
 $INSTALLDIR/$TOOL --postprocessor-args "-threads 6" --no-check-certificate -v  --extract-audio --audio-format mp3 -i  $URL
 # normalize volume
 mp3gain
-mp3gain -r -T *.mp3
+find . -type f | parallel -X "xargs mp3gain -r -T"
 
 # then copy mp3 files to Android smartphone using AirDroid Android application
