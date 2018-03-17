@@ -29,7 +29,7 @@ chmod +x $INSTALLDIR/$TOOL
 
 echo -n "Enter Youtube playlist to convert to mp3: " 
 read URL
-PLAYLISTNAME=`$INSTALLDIR/$TOOL --flat-playlist --no-check-certificate  $URL | egrep "Downloading playlist" | head -n1 | cut -d":" -f2`
+PLAYLISTNAME=`$INSTALLDIR/$TOOL --flat-playlist --no-check-certificate  $URL | egrep -v "just" | egrep "Downloading playlist" | head -n1 | cut -d":" -f2`
 PLAYLISTDIR=$(echo $PLAYLISTNAME | tr -d ' '| tr -d '&')
 
 mkdir $INSTALLDIR/$PLAYLISTDIR
