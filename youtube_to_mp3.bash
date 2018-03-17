@@ -22,7 +22,7 @@ playlistdir=$(echo $playlistname | tr -d ' '| tr -d '&')
 
 mkdir ~/youtube-dl/$playlistdir
 cd ~/youtube-dl/$playlistdir
-~/youtube-dl/youtube-dl --no-check-certificate -v  --extract-audio --audio-format mp3 -i  $url
+~/youtube-dl/youtube-dl --postprocessor-args "-threads 6" --no-check-certificate -v  --extract-audio --audio-format mp3 -i  $url
 # normalize volume
 mp3gain -r -T *.mp3
 
