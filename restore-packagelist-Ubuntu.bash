@@ -355,6 +355,7 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:jonathonf/vlc
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mc3man/mpv-tests
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/bionic bionic main"
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:flexiondotorg/audio
 
 ##########################################################################################################
 # add astronomy PPA repositories
@@ -429,6 +430,9 @@ cd $HOME
 
 # install osquery
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   osquery
+
+# install mp3gain and aacgain
+sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   aacgain mp3gain
 
 # commented out following line, because it will break bluetooth support in Lubuntu/Xubuntu 14.04 LTS 64-bit 
 # sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes   pulseaudio*
