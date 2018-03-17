@@ -35,8 +35,9 @@ PLAYLISTDIR=$(echo $PLAYLISTNAME | tr -d ' '| tr -d '&')
 mkdir $INSTALLDIR/$PLAYLISTDIR
 cd $INSTALLDIR/$PLAYLISTDIR
 $INSTALLDIR/$TOOL --postprocessor-args "-threads 6" --no-check-certificate -v  --extract-audio --audio-format mp3 -i  $URL
-# normalize volume
-mp3gain
+# normalize volume (run 3 times in case of errors during first 2 attempts)
+find . -type f | parallel -X "xargs mp3gain -r -T"
+find . -type f | parallel -X "xargs mp3gain -r -T"
 find . -type f | parallel -X "xargs mp3gain -r -T"
 
 # then copy mp3 files to Android smartphone using AirDroid Android application
