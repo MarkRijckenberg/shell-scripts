@@ -1,5 +1,6 @@
 # Procedure to copy mp3 files from Youtube playlist to Android smartphone
 # Prerequisites: Ubuntu 17.10 or Ubuntu 18.04, bash shell, mp3gain, parallel (to use multi-core processors)
+# Prerequisites: Google Chrome Web browser in Ubuntu, AirDroid on Android smartphone
 
 #VARIABLES
 TOOL=youtube-dl
@@ -40,4 +41,5 @@ find . -type f | parallel -X "xargs mp3gain -r -T"
 find . -type f | parallel -X "xargs mp3gain -r -T"
 find . -type f | parallel -X "xargs mp3gain -r -T"
 
-# then copy mp3 files to Android smartphone using AirDroid Android application
+echo "Temporarily disable all extensions in Google Chrome webbrowser and reboot your Android smartphone before attempting the .mp3 file transfer from Ubuntu to Android via AirDroid"
+echo "The Mozilla Firefox web browser is not (yet) compatible with AirDroid. You have to use Google Chrome."
