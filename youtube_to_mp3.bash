@@ -17,7 +17,7 @@ chmod +x ~/youtube-dl/youtube-dl
 
 echo -n "Enter Youtube playlist to convert to mp3: " 
 read url
-playlistname=`~/youtube-dl/youtube-dl --flat-playlist --no-check-certificate  $url |grep download|head -n1|cut -d":" -f2`
+playlistname=`~/youtube-dl/youtube-dl --flat-playlist --no-check-certificate  $url | egrep "Downloading playlist" | head -n1 | cut -d":" -f2`
 playlistdir=$(echo $playlistname | tr -d ' '| tr -d '&')
 
 mkdir ~/youtube-dl/$playlistdir
