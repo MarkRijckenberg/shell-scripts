@@ -1,10 +1,14 @@
 # Procedure to copy mp3 files from Youtube playlist to Android smartphone
 # Prerequisites: Ubuntu 17.10 or Ubuntu 18.04, bash shell, mp3gain
 
-# install mp3gain and aacgain
+# install mp3gain (if not installed)
+if ! type "mp3gain" > /dev/null; then
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:flexiondotorg/audio
 sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install --yes --force-yes   aacgain mp3gain
+  else
+  echo "mp3gain installed"
+fi
 
 mkdir ~/youtube-dl
 rm ~/youtube-dl/youtube-dl
