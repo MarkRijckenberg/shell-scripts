@@ -378,8 +378,8 @@ sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:flexiondotorg/a
 RELEASE=`cat /etc/os-release |tail -n 1|cut -d"=" -f2`
 sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
-sudo sh -c 'echo "deb http://files.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
-sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
+#sudo sh -c 'echo "deb http://files.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
+#sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
 
 # add repository for google music manager software package
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
