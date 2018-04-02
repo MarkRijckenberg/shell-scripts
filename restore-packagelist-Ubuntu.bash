@@ -300,68 +300,68 @@ fi
 # add base PPA repositories
 ##########################################################################################################
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   software-properties-common
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:danielrichter2007/grub-customizer
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:flexiondotorg/hal-flash
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nemh/gambas3
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:webupd8team/atom
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:webupd8team/brackets
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:philip5/extra
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stebbins/handbrake-releases
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lyc256/sopcast-player-ppa
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:surfernsk/internet-software
-sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntuhandbook1/apps
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-wine/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
-# deprecated: sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:wine/wine-builds
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:hsoft/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:lubuntu-dev/lubuntu-daily
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:gilir/q-project
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:danielrichter2007/grub-customizer
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:libreoffice/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:mjblenner/ppa-hal
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:flexiondotorg/hal-flash
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:nemh/gambas3
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:peterlevi/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:linrunner/tlp
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:kazam-team/stable-series
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:dhor/myway
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:webupd8team/atom
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:webupd8team/brackets
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:philip5/extra
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:stebbins/handbrake-releases
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:lyc256/sopcast-player-ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:surfernsk/internet-software
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:makson96/desurium
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:ubuntuhandbook1/apps
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:tualatrix/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:webupd8team/y-ppa-manager
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:ubuntu-wine/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:videolan/master-daily
+# deprecated: sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:wine/wine-builds
 wget -nc https://dl.winehq.org/wine-builds/Release.key
 sudo apt-key add Release.key
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes https://dl.winehq.org/wine-builds/ubuntu/
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n https://dl.winehq.org/wine-builds/ubuntu/
 # disable oibaf PPA which wants to install newer linux-image package that kills wireless on new Asus N551VW laptop!
-# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:oibaf/graphics-drivers
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noobslab/apps
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:oibaf/graphics-drivers
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:noobslab/apps
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:gertvdijk/opensc-backports
 # very important security related PPA that was the first repository to fix the 
 # CVE-2014-6277 bash shellshock vulnerability on October 8, 2014: 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-security-proposed/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:numix/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fish-shell/release-2
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/rrutter
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:marutter/c2d4u
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:stellarium/stellarium-releases
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:clipgrab-team/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:heyarje/libav-11
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:niko2040/e19
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:git-core/ppa
-# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:budgie-remix/ppa
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:nilarimogard/webupd8
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:strukturag/libde265
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:twodopeshaggy/jarun
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/tor-browser
-# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:openshot.developers/ppa
-# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:fyrmir/livewallpaper-daily
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:jonathonf/vlc
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mc3man/mpv-tests
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes "deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/bionic bionic main"
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:flexiondotorg/audio
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:ubuntu-security-proposed/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:numix/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:fish-shell/release-2
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:marutter/rrutter
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:marutter/c2d4u
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:stellarium/stellarium-releases
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:clipgrab-team/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:qbittorrent-team/qbittorrent-stable
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:heyarje/libav-11
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:niko2040/e19
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:git-core/ppa
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:budgie-remix/ppa
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:nilarimogard/webupd8
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:strukturag/libde265
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:twodopeshaggy/jarun
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:webupd8team/tor-browser
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:openshot.developers/ppa
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:fyrmir/livewallpaper-daily
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:jonathonf/vlc
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:mc3man/mpv-tests
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n "deb [arch=amd64] https://osquery-packages.s3.amazonaws.com/bionic bionic main"
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:flexiondotorg/audio
 
 ##########################################################################################################
 # add astronomy PPA repositories
 ##########################################################################################################
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/astrometry.net
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mutlaqja/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:mutlaqja/astrometry.net
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:mutlaqja/ppa
 
 # Do NOT add repository for distroastro software packages
 # Distroastro v3.0.1 breaks the windowing functionality of metacity and does not work well
@@ -520,7 +520,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   spotify-cl
 
 # Install dupeguru-me which can find and delete similar music filenames using fuzzy logic
 # rerun dupeguru-me on /media/IOMEGA/downloads/Youtube-playlists  after each mp3 conversion using YouTubeToMP3
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:hsoft/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:hsoft/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   dupeguru-me
 
@@ -531,8 +531,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   clipgrab
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   tor-browser
 
 # Install lxqt desktop environment => merge of lxde and razorqt desktops
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:lubuntu-dev/lubuntu-daily
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gilir/q-project
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:lubuntu-dev/lubuntu-daily
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:gilir/q-project
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    lxqt-metapackage lxqt-panel openbox
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    liblxqt0 libqtxdg0 libqtxdg-data 
@@ -572,7 +572,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt remove   --yes --force-yes    kaccounts-
 
 # Install TLP - advanced power management command line tool for Linux
 # TLP saves more laptop power than standard Ubuntu package laptop-mode-tools
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:linrunner/tlp
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:linrunner/tlp
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo apt install  tlp
 sudo apt install  tlp-rdw
@@ -591,7 +591,7 @@ sudo touch /etc/apt/sources.list.d/eid.list
 #sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
 cd
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  A35743EA6773D225   F9FDA6BED73CDC22 3B4FE6ACC0B21F32  4E940D7FDD7FB8CC  A040830F7FAC5991 16126D3A3E5C1192 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:gertvdijk/opensc-backports
 sudo DEBIAN_FRONTEND=noninteractive apt --yes --force-yes remove --purge beid*
 sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install  aptitude
@@ -684,14 +684,14 @@ sudo fc-cache -f -v
 sudo ln -s /usr/bin/wkhtmltopdf /usr/local/bin/html2pdf
 
 # install grub customizer
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:danielrichter2007/grub-customizer
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:danielrichter2007/grub-customizer
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  grub-customizer
 
 
 # install newest version of Libreoffice
 # https://wiki.documentfoundation.org/Feature_Comparison:_LibreOffice_-_Microsoft_Office/fr
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:libreoffice/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:libreoffice/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libreoffice
 
@@ -709,19 +709,19 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libreoffice
 
 #install deprecated, obsolete hal package so that fluendo content and DRM-demanding
 # Flash websites like Hulu are supported in Lubuntu 13.10 or newer
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:mjblenner/ppa-hal
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:mjblenner/ppa-hal
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  hal
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  libhal1-flash
 
 #install i-nex - I-nex is similar to CPU-Z in Windows, it uses the same interface to display your hardware information.
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:i-nex-development-team/daily
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:nemh/gambas3
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:i-nex-development-team/daily
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n  ppa:nemh/gambas3
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  i-nex 
 
 # install Variety - cool wallpaper changer
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:peterlevi/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:peterlevi/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  variety
 
@@ -739,24 +739,24 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  variety
 
 # install daily build of firefox-trunk (bleeding edge browser)
 #sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes  firefox
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:ubuntu-mozilla-daily/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:ubuntu-mozilla-daily/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   firefox-trunk
 
 
 
 # Install kazam screen recording tool for Ubuntu 12.04 / 12.10 / 13.04
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:kazam-team/stable-series
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:kazam-team/stable-series
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   kazam
 
 # install shutter Screen Capture Tool In Ubuntu 12.04 / 12.10 / 13.04
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:dhor/myway
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:dhor/myway
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   shutter
 
 # install Final Term - excellent Terminal emulator in  Ubuntu 12.04 / 12.10 / 13.04
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:finalterm/daily
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:finalterm/daily
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   finalterm
 
@@ -793,7 +793,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   shutter
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   google-musicmanager
 
 # install newest version of VLC player
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:videolan/master-daily
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:videolan/master-daily
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   vlc
 
@@ -808,12 +808,12 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   vlc-plugin
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   spotify-client
 
 # install atom text editor with integrated github support
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:webupd8team/atom
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n  ppa:webupd8team/atom
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   atom
 
 # install brackets text editor with support for asciidoc
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:webupd8team/atom
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n  ppa:webupd8team/atom
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   brackets
 
@@ -827,28 +827,28 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   brackets
 # https://github.com/jliljebl/flowblade/blob/master/flowblade-trunk/docs/INSTALLING.md
 
 # install kdenlive video editor (one of the best video editors)
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes  ppa:philip5/extra
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n  ppa:philip5/extra
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   kdenlive
 
 # install openshot which is a simple and easy to use video editor, like a good substitute for the windows movie maker
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:openshot.developers/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:openshot.developers/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   openshot
 
 # install Handbrake - open source video transcoder - add Subtitles (VobSub, Closed Captions CEA-608, SSA, SRT)
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:stebbins/handbrake-releases
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n  ppa:stebbins/handbrake-releases
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  handbrake 
 
 # install SopCast webTV player = highest quality sport streaming service for Ubuntu
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:lyc256/sopcast-player-ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n  ppa:lyc256/sopcast-player-ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  sopcast-player 
 
 # install qbittorrent client
 # import RSS feeds from http://showrss.info/?cs=feeds  into qbittorrent client
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:surfernsk/internet-software
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:surfernsk/internet-software
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   qbittorrent
 
@@ -866,7 +866,7 @@ sudo dpkg -i frostwire*.deb
 sudo DEBIAN_FRONTEND=noninteractive apt install  --yes --force-yes -f
 
 # install desurium game client
-#sudo DEBIAN_FRONTEND=noninteractive apt-add-repository --yes ppa:makson96/desurium
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:makson96/desurium
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   desurium
 
@@ -994,18 +994,18 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   checkinsta
 
 
 # install kde plasma 5 desktop environment
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes  ppa:neon/kf5
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n  ppa:neon/kf5
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 #sudo DEBIAN_FRONTEND=noninteractive apt  --yes --force-yes   install project-neon5-session project-neon5-utils project-neon5-konsole project-neon5-plasma-workspace-wallpapers project-neon5-breeze
 
 # Cuttlefish is an ingenious little tool. It allows you to define a set of actions that occur when a certain stimulus is activated.
-# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:noneed4anick/cuttlefish
+# sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:noneed4anick/cuttlefish
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 cd
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   cuttlefish 
 
 # Install Ubuntu Tweak to easily uninstall old kernel versions
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:tualatrix/ppa
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:tualatrix/ppa
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   ubuntu-tweak
 
@@ -1024,7 +1024,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   gtk2-engin
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   pidgin pidgin-skypeweb purple-skypeweb
 
 # install Y PPA Manager
-#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:webupd8team/y-ppa-manager
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n ppa:webupd8team/y-ppa-manager
 #sudo DEBIAN_FRONTEND=noninteractive apt update
 cd $HOME
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes    y-ppa-manager
@@ -1588,7 +1588,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   stellarium
 #cd casa
 #wget --no-check-certificate  https://casa.nrao.edu/download/distro/linux/release/el7/casa-release-4.7.2-el7.tar.gz
 
-sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes   ppa:olebole/astro-bionic
+sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes -n   ppa:olebole/astro-bionic
 sudo DEBIAN_FRONTEND=noninteractive apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   aladin
 sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes   casacore 
