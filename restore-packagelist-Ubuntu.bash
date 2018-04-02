@@ -587,8 +587,8 @@ sudo apt install  tlp-rdw
 # Supported CCID readers:   http://pcsclite.alioth.debian.org/ccid/section.html
 sudo rm /etc/apt/sources.list.d/eid.list
 sudo touch /etc/apt/sources.list.d/eid.list
-sudo sh -c 'echo "deb http://files.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
-sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
+#sudo sh -c 'echo "deb http://files.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
+#sudo sh -c 'echo "deb http://files2.eid.belgium.be/debian bionic main" >> /etc/apt/sources.list.d/eid.list'
 cd
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63F7D4AFF6D61D45  A35743EA6773D225   F9FDA6BED73CDC22 3B4FE6ACC0B21F32  4E940D7FDD7FB8CC  A040830F7FAC5991 16126D3A3E5C1192 
 sudo DEBIAN_FRONTEND=noninteractive add-apt-repository --yes ppa:gertvdijk/opensc-backports
