@@ -131,6 +131,9 @@ rm google*
 # sudo rm /etc/apt/sources.list.d/*
 sudo rm /etc/apt/trusted.gpg.d/*
 
+# uninstall packagekit because packagekitd consumes too much CPU
+sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes packagekit
+
 # clean up old install of vlc player:
 sudo DEBIAN_FRONTEND=noninteractive apt  purge --yes --force-yes  libvlccore8 libvlccore9
 
