@@ -645,14 +645,15 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9D6D8F6BC857C9
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 8B48AD6246925553
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7638D0442B90D010
 sudo apt update
-sudo apt install git libncurses5-dev libtinfo-dev libreadline-dev
+sudo apt install git libncurses5-dev libtinfo-dev libreadline-dev pkg-config libgtk2.0-dev
 sudo rm -rf youtube-viewer
 git clone https://github.com/trizen/youtube-viewer
 cd youtube-viewer
-sudo cpan install CPAN Module::Build inc::latest PAR::Dist Term::ReadLine::Gnu::XS Unicode::GCString 
+sudo cpan install CPAN ExtUtils::PkgConfig Module::Build inc::latest PAR::Dist Term::ReadLine::Gnu::XS Unicode::GCString LWP::Protocol::https Data::Dump JSON Gtk2 File::ShareDir
 perl Build.PL --gtk
 sudo ./Build installdeps
 sudo ./Build install
+# for best playback performance, choose mplayer as video player backend for gtk-youtube-viewer program
 
 # install streamlink, which is replacement for minitube Youtube streamer and which uses less CPU:
 # https://www.ostechnix.com/streamlink-watch-online-video-streams-command-line/
