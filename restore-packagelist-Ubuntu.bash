@@ -635,8 +635,24 @@ sudo checkinstall
 # install lightweight GTK-based Youtube viewer (inspired by XenialDog 64-bit LiveUSB distro)
 # source: https://github.com/trizen/youtube-viewer
 # Ubuntu/Linux Mint: sudo add-apt-repository ppa:nilarimogard/webupd8
-sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  youtube-viewer
+#sudo DEBIAN_FRONTEND=noninteractive apt install   --yes --force-yes  youtube-viewer
 # then run this Terminal command to launch: gtk-youtube-viewer
+cd
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv ED75B5A4483DA07C
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9A2FD067A2E3EF7B
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EA8F35793D8809A
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9D6D8F6BC857C906
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 8B48AD6246925553
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7638D0442B90D010
+sudo apt update
+sudo apt install git libncurses5-dev libtinfo-dev libreadline-dev
+sudo rm -rf youtube-viewer
+git clone https://github.com/trizen/youtube-viewer
+cd youtube-viewer
+sudo cpan install CPAN Module::Build inc::latest PAR::Dist Term::ReadLine::Gnu::XS Unicode::GCString 
+perl Build.PL --gtk
+sudo ./Build installdeps
+sudo ./Build install
 
 # install streamlink, which is replacement for minitube Youtube streamer and which uses less CPU:
 # https://www.ostechnix.com/streamlink-watch-online-video-streams-command-line/
